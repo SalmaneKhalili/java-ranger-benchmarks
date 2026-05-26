@@ -1,0 +1,9 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	java-ranger-regression	java-ranger-regression	java-ranger-regression	java-ranger-regression
+results/java-ranger-regression/	status	cputime (s)	walltime (s)	memory (MB)
+LoopCharAt	incorrect	18.769000	18.769000	0.000000
+TCAS_prop1	correct	2.371000	2.371000	0.000000
+TCAS_prop2	correct	5.274000	5.274000	0.000000
+TCAS_prop3	correct	5.287000	5.287000	0.000000
+apachecli_eqchk	correct	21.978000	21.978000	0.000000
+schedule_eqchk	correct	2.515000	2.515000	0.000000

@@ -1,0 +1,14 @@
+results/*.log
+results/*.logfiles.zip
+results/**/*.results.xml.bz2
+results/**/*.results.html
+results/**/*.results.csv
+results/**/all-suites.table.*
+results/results.csv
+results/summary.txt
+.DS_Store
+*.swp
+AGENTS.md
+COMMANDS.md
+gsoc2026/fpsupport/DISCUSSION-*.md
+gsoc2026/fpsupport/PLAN-*.md

@@ -1,0 +1,43 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	algorithms	algorithms	algorithms	algorithms
+results/algorithms/	status	cputime (s)	walltime (s)	memory (MB)
+BellmanFord-FunSat01	correct	0.591000	0.591000	0.000000
+BellmanFord-FunSat02	unknown	0.511000	0.511000	0.000000
+BellmanFord-FunUnsat01	incorrect	0.583000	0.583000	0.000000
+BellmanFord-FunUnsat02	unknown	0.510000	0.510000	0.000000
+BellmanFord-MemSat01	correct	0.601000	0.601000	0.000000
+BellmanFord-MemSat02	unknown	0.513000	0.513000	0.000000
+BellmanFord-MemUnsat01	incorrect	0.578000	0.578000	0.000000
+BellmanFord-MemUnsat02	unknown	0.501000	0.501000	0.000000
+BinaryTreeSearch-FunSat01	correct	2.779000	2.779000	0.000000
+BinaryTreeSearch-FunUnsat01	correct	0.706000	0.706000	0.000000
+BinaryTreeSearch-MemSat01	correct	4.239000	4.239000	0.000000
+BinaryTreeSearch-MemUnsat01	correct	0.630000	0.630000	0.000000
+BinaryTreeSearch-MemUnsat02	correct	0.625000	0.625000	0.000000
+InsertionSort-FunSat01	correct	0.581000	0.581000	0.000000
+InsertionSort-FunSat02	correct	0.591000	0.591000	0.000000
+InsertionSort-FunUnsat01	incorrect	0.625000	0.625000	0.000000
+InsertionSort-MemSat01	correct	0.575000	0.575000	0.000000
+InsertionSort-MemUnsat01	unknown	0.633000	0.633000	0.000000
+MergeSortIterative-FunSat01	correct	0.573000	0.573000	0.000000
+MergeSortIterative-FunSat02	correct	0.567000	0.567000	0.000000
+MergeSortIterative-FunUnsat01	incorrect	0.603000	0.603000	0.000000
+MergeSortIterative-MemSat01	incorrect	0.588000	0.588000	0.000000
+MergeSortIterative-MemUnsat01	incorrect	0.581000	0.581000	0.000000
+RedBlackTree-FunSat01	correct	0.776000	0.776000	0.000000
+RedBlackTree-FunUnsat01	correct	0.699000	0.699000	0.000000
+RedBlackTree-MemSat01	correct	3.134000	3.134000	0.000000
+RedBlackTree-MemUnsat01	unknown	0.982000	0.982000	0.000000
+SortedListInsert-FunSat01	correct	3.107000	3.107000	0.000000
+SortedListInsert-FunSat02	correct	4.616000	4.616000	0.000000
+SortedListInsert-FunUnsat01	correct	0.896000	0.896000	0.000000
+SortedListInsert-MemSat01	correct	1.905000	1.905000	0.000000
+SortedListInsert-MemUnsat01	correct	0.529000	0.529000	0.000000
+Trie-FunSat01	correct	0.517000	0.517000	0.000000
+Trie-FunUnsat01	correct	0.608000	0.608000	0.000000
+Trie-MemSat01	correct	0.520000	0.520000	0.000000
+Trie-MemUnsat01	correct	0.596000	0.596000	0.000000
+Tsp-FunSat01	unknown	0.515000	0.515000	0.000000
+Tsp-FunUnsat01	unknown	0.510000	0.510000	0.000000
+Tsp-MemSat01	unknown	0.532000	0.532000	0.000000
+Tsp-MemUnsat01	unknown	0.503000	0.503000	0.000000

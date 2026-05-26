@@ -1,0 +1,26 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	jayhorn-recursive	jayhorn-recursive	jayhorn-recursive	jayhorn-recursive
+results/jayhorn-recursive/	status	cputime (s)	walltime (s)	memory (MB)
+Ackermann01	correct	0.666000	0.666000	0.000000
+Addition	correct	0.672000	0.672000	0.000000
+InfiniteLoop	correct	0.614000	0.614000	0.000000
+SatAckermann01	correct	11.618000	11.618000	0.000000
+SatAckermann02	correct	11.643000	11.643000	0.000000
+SatAckermann03	correct	11.316000	11.316000	0.000000
+SatAddition01	correct	0.856000	0.856000	0.000000
+SatEvenOdd01	correct	0.592000	0.592000	0.000000
+SatFibonacci01	correct	1.019000	1.019000	0.000000
+SatFibonacci02	correct	0.474000	0.474000	0.000000
+SatFibonacci03	correct	1.339000	1.339000	0.000000
+SatGcd	unknown	60.000000	60.000000	0.000000
+SatHanoi01	correct	3.130000	3.130000	0.000000
+SatMccarthy91	unknown	60.000000	60.000000	0.000000
+SatMultCommutative01	correct	0.831000	0.831000	0.000000
+SatPrimes01	unknown	60.000000	60.000000	0.000000
+UnsatAckermann01	correct	0.658000	0.658000	0.000000
+UnsatAddition01	correct	0.639000	0.639000	0.000000
+UnsatAddition02	incorrect	0.928000	0.928000	0.000000
+UnsatEvenOdd01	correct	0.622000	0.622000	0.000000
+UnsatFibonacci01	correct	0.698000	0.698000	0.000000
+UnsatFibonacci02	correct	0.941000	0.941000	0.000000
+UnsatMccarthy91	correct	0.629000	0.629000	0.000000

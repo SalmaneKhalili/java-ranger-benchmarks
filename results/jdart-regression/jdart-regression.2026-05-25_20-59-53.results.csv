@@ -1,0 +1,19 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	jdart-regression	jdart-regression	jdart-regression	jdart-regression
+results/jdart-regression/	status	cputime (s)	walltime (s)	memory (MB)
+OverapproximationString01	correct	0.583000	0.583000	0.000000
+URLDecoder01	unknown	0.462000	0.462000	0.000000
+URLDecoder02	unknown	0.480000	0.480000	0.000000
+addition01	incorrect	0.653000	0.653000	0.000000
+array-iteration01	unknown	0.741000	0.741000	0.000000
+boundcheck100	correct	1.469000	1.469000	0.000000
+boundcheck200	correct	2.633000	2.633000	0.000000
+boundcheck30	correct	0.830000	0.830000	0.000000
+double2long	incorrect	0.515000	0.515000	0.000000
+float	incorrect	0.490000	0.490000	0.000000
+list2	correct	41.053000	41.053000	0.000000
+radians	incorrect	0.493000	0.493000	0.000000
+shifting	correct	0.625000	0.625000	0.000000
+shifting2	correct	0.610000	0.610000	0.000000
+shifting3	correct	0.591000	0.591000	0.000000
+startswith	correct	0.605000	0.605000	0.000000

@@ -1,0 +1,357 @@
+name: Java Ranger Benchmarks
+
+on:
+  push:                     # Trigger on pushes to this repo
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * *'   # Daily at midnight
+  workflow_dispatch:        # Manual trigger
+    inputs:
+      jr_ref:
+        description: 'Java Ranger ref (branch/commit)'
+        required: false
+        default: 'svcomp'
+  repository_dispatch:      # Triggered from java-ranger pushes
+    types: [java-ranger-push]
+
+env:
+  JR_REPO: SalmaneKhalili/java-ranger
+  SV_BENCH_REPO: https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks.git
+  JR_REF: svcomp
+  BENCH_SUITES: algorithms argv-tasks autostub float-nonlinear-calculation float_unboundedloop java-ranger-regression jayhorn-recursive jbmc-regression jdart-regression jpf-regression MinePump objects rtems-lock-model securibench
+
+jobs:
+  benchmarks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [algorithms, argv-tasks, autostub, float-nonlinear-calculation, float_unboundedloop, java-ranger-regression, jayhorn-recursive, jbmc-regression, jdart-regression, jpf-regression, MinePump, objects, rtems-lock-model, securibench]
+
+    steps:
+      # Checkout this repo (for scripts/configs)
+      - name: Checkout benchmarks repo
+        uses: actions/checkout@v4
+        with:
+          path: benchmarks
+
+      # Checkout java-ranger
+      - name: Checkout java-ranger
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.JR_REPO }}
+          token: ${{ secrets.BENCHMARK_PAT }}
+          ref: ${{ github.event.client_payload.ref || env.JR_REF }}
+          path: java-ranger
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Unshallow submodules (needed by git-version plugin)
+        run: git -C java-ranger/jpf-core fetch --unshallow 2>/dev/null || true
+
+      # Cache sv-benchmarks (big repo, sparse checkout is expensive)
+      - name: Cache sv-benchmarks
+        id: cache-sv-benchmarks
+        uses: actions/cache@v4
+        with:
+          path: sv-benchmarks
+          key: sv-benchmarks-v2
+
+      # Checkout sv-benchmarks (minimal: only java/ directory)
+      # Always updates even on cache hit — cache is just a seed to avoid full clone
+      - name: Checkout sv-benchmarks
+        run: |
+          if [ -d "sv-benchmarks/.git" ]; then
+            cd sv-benchmarks
+            git remote set-url origin ${{ env.SV_BENCH_REPO }}
+            git fetch --depth=1 origin main
+          else
+            git clone --depth=1 --filter=tree:0 \
+              ${{ env.SV_BENCH_REPO }} \
+              "${{ github.workspace }}/sv-benchmarks"
+            cd "${{ github.workspace }}/sv-benchmarks"
+          fi
+          git sparse-checkout set --cone java/
+          git reset --hard origin/main
+
+      # Set up JDK 8
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      # Cache Gradle
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            java-ranger/.gradle
+            java-ranger/jpf-core/build
+            java-ranger/jpf-symbc/build
+          key: ${{ runner.os }}-gradle-${{ hashFiles('java-ranger/**/*.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # Build java-ranger
+      - name: Build java-ranger
+        working-directory: java-ranger
+        run: ./gradlew :jpf-core:buildJars :jpf-symbc:buildJars -x test --no-daemon
+        env:
+          GRADLE_OPTS: -Xmx2g -Duser.country=US
+
+      # Install table-generator (from benchexec) for HTML output
+      - name: Install table-generator
+        run: pip install benchexec
+
+      # Create output directory
+      - name: Create output dir
+        run: mkdir -p benchmarks/results/${{ matrix.suite }}
+
+      # Run benchmarks for this suite
+      - name: Run ${{ matrix.suite }} benchmarks
+        id: run_benchmarks
+        working-directory: benchmarks
+        run: |
+          bash scripts/run-ci-benchmarks.sh \
+            "${{ github.workspace }}/java-ranger" \
+            "${{ github.workspace }}/sv-benchmarks" \
+            "results/${{ matrix.suite }}" \
+            "${{ matrix.suite }}"
+        timeout-minutes: 180
+
+      # Upload results as artifacts
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ matrix.suite }}-${{ github.run_id }}
+          path: benchmarks/results/${{ matrix.suite }}/
+
+      # Upload JPF logs on failure
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ matrix.suite }}-${{ github.run_id }}
+          path: benchmarks/results/${{ matrix.suite }}/*.log
+
+      # Post summary
+      - name: Post summary
+        working-directory: benchmarks
+        run: |
+          echo "### Results: ${{ matrix.suite }}" >> $GITHUB_STEP_SUMMARY
+          cat "results/${{ matrix.suite }}/summary.txt" >> $GITHUB_STEP_SUMMARY
+
+  # Aggregate and report
+  report:
+    needs: benchmarks
+    runs-on: ubuntu-latest
+    if: always()
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout benchmarks repo (for scripts)
+        uses: actions/checkout@v4
+        with:
+          path: benchmarks-repo
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+
+      - name: Generate aggregated report
+        run: |
+          echo "# Java Ranger Benchmark Report" > report.md
+          echo "" >> report.md
+          echo "**Run:** ${{ github.run_id }}" >> report.md
+          echo "**JR Ref:** ${{ github.event.client_payload.ref || env.JR_REF }}" >> report.md
+          echo "**JR SHA:** ${{ github.event.client_payload.sha || 'manual' }}" >> report.md
+          echo "**Date:** $(date -u)" >> report.md
+          echo "" >> report.md
+
+          for suite in ${{ env.BENCH_SUITES }}; do
+            artifact_dir="results-${suite}-${{ github.run_id }}"
+            if [ -d "$artifact_dir" ]; then
+              echo "### $suite" >> report.md
+              echo '```' >> report.md
+              cat "$artifact_dir/summary.txt" >> report.md 2>/dev/null || echo "(no summary)" >> report.md
+              echo '```' >> report.md
+            fi
+          done
+
+          echo "" >> report.md
+          echo "---" >> report.md
+          echo "_Generated by java-ranger-benchmarks CI_" >> report.md
+
+          cat report.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Install table-generator + deps
+        run: pip install benchexec
+
+      - name: Generate merged tables, per-suite pages, and docs
+        run: |
+          # Collect XML files from artifacts (one per suite)
+          xml_files=""
+          for suite in ${{ env.BENCH_SUITES }}; do
+            artifact_dir="results-${suite}-${{ github.run_id }}"
+            if [ -d "$artifact_dir" ]; then
+              for f in "$artifact_dir"/*.results.xml.bz2; do
+                [ -f "$f" ] && xml_files="$xml_files $f"
+              done
+            fi
+          done
+
+          mkdir -p merged-results docs
+
+          if [ -z "$xml_files" ]; then
+            echo "No XML files found for merge"
+            exit 0
+          fi
+
+          # (a) Merge all XMLs → table-generator → clean 4-column merged table
+          echo "=== Merging all XMLs via table-generator ==="
+          python3 benchmarks-repo/scripts/merge-benchmark-xmls.py \
+            merged-results "all-suites" $xml_files
+
+          # (b) Copy per-suite HTML from artifacts to docs/suites/<name/>
+          echo "=== Copying per-suite HTML ==="
+          CACHE_TAGS='<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">\n<meta http-equiv="Pragma" content="no-cache">\n<meta http-equiv="Expires" content="0">\n'
+          for suite in ${{ env.BENCH_SUITES }}; do
+            artifact_dir="results-${suite}-${{ github.run_id }}"
+            if [ -d "$artifact_dir" ]; then
+              for f in "$artifact_dir"/*.results.html; do
+                [ -f "$f" ] || continue
+                mkdir -p "docs/suites/$suite"
+                cp "$f" "docs/suites/$suite/index.html"
+                # Inject cache-control meta tags into <head>
+                python3 -c "
+import re
+p = 'docs/suites/$suite/index.html'
+with open(p) as f: c = f.read()
+c = c.replace('<head>', '<head>\n${CACHE_TAGS}', 1)
+with open(p, 'w') as f: f.write(c)
+"
+                echo "  $suite"
+              done
+            fi
+          done
+
+          # (c) Generate failure analysis (kept as supplement)
+          echo "=== Generating failure analysis ==="
+          python3 benchmarks-repo/scripts/generate-failure-analysis.py \
+            --build-id ${{ github.sha }} \
+            merged-results/failure-analysis.html $xml_files
+
+          # (d) Copy merged outputs to docs/
+          cp merged-results/all-suites.table.html docs/ 2>/dev/null || true
+          cp merged-results/all-suites.table.csv docs/ 2>/dev/null || true
+          cp merged-results/failure-analysis.html docs/ 2>/dev/null || true
+
+          # (e) Generate index page (compact list format)
+          GIT_SHA="${{ github.sha }}"
+          CB="?v=${GIT_SHA}"
+
+          # Build per-suite list items
+          SUITE_LIST=""
+          for suite in ${{ env.BENCH_SUITES }}; do
+            if [ -d "docs/suites/$suite" ]; then
+              SUITE_LIST="${SUITE_LIST}  <li><a href=\"suites/${suite}/index.html${CB}\">${suite}</a></li>\n"
+            fi
+          done
+
+          cat > docs/index.html << EOF
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+          <meta http-equiv="Pragma" content="no-cache">
+          <meta http-equiv="Expires" content="0">
+          <title>Java Ranger Benchmarks</title>
+          <style>
+          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+          .header { background: #2c3e50; color: white; padding: 30px 40px; }
+          .header h1 { margin: 0; font-size: 1.8em; }
+          .header p { margin: 6px 0 0; opacity: 0.8; font-size: 0.9em; }
+          .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+          h2 { font-size: 1.1em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+          ul { list-style: none; padding: 0; margin: 0; }
+          li { margin: 0; }
+          li a { display: block; padding: 8px 12px; color: #3498db; text-decoration: none; border-radius: 4px; font-size: 0.95em; }
+          li a:hover { background: #e8f0fe; }
+          .footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+          </style>
+          </head>
+          <body>
+          <div class="header">
+            <h1>Java Ranger Benchmarks</h1>
+            <p>Daily SV-COMP benchmark results tracking</p>
+          </div>
+          <div class="container">
+            <h2>Merged Results</h2>
+            <ul>
+              <li><a href="all-suites.table.html${CB}">All Suites (table-generator)</a></li>
+            </ul>
+
+            <h2>Per-Suite Tables</h2>
+            <ul>
+            ${SUITE_LIST}
+            </ul>
+
+            <h2>Analysis</h2>
+            <ul>
+              <li><a href="failure-analysis.html${CB}">Failure Analysis</a></li>
+              <li><a href="all-suites.table.csv${CB}">Raw Data (CSV)</a></li>
+            </ul>
+          </div>
+          <div class="footer">
+            Generated by java-ranger-benchmarks CI &mdash; Run ${{ github.run_id }}
+          </div>
+          </body>
+          </html>
+          EOF
+
+          echo "=== Docs generated ==="
+          find docs -type f | sort
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          path: repo
+
+      - name: Commit results and docs to repo
+        run: |
+          # Copy results from artifacts into repo structure
+          for suite in ${{ env.BENCH_SUITES }}; do
+            artifact_dir="results-${suite}-${{ github.run_id }}"
+            if [ -d "$artifact_dir" ]; then
+              mkdir -p "repo/results/$suite"
+              cp -r "$artifact_dir/"* "repo/results/$suite/"
+            fi
+          done
+
+          # Copy docs
+          if [ -d "docs" ]; then
+            mkdir -p "repo/docs"
+            cp -r docs/* "repo/docs/"
+          fi
+
+          # Commit and push
+          cd repo
+          git config user.name "java-ranger-benchmarks CI"
+          git config user.email "actions@github.com"
+
+          if [ -n "$(git status --porcelain results/ docs/)" ]; then
+            git add results/ docs/
+            git commit -m "benchmark: results for run ${{ github.run_id }}
+
+          Trigger: ${{ github.event_name }}
+          JR Ref: ${{ github.event.client_payload.ref || env.JR_REF }}
+          JR SHA: ${{ github.event.client_payload.sha || 'manual' }}"
+            git push
+            echo "Results committed and pushed."
+          else
+            echo "No changes to commit."
+          fi

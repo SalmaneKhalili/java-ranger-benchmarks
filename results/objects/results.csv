@@ -1,0 +1,15 @@
+benchmark,expected,actual,time_s,result
+objects01,true,compile-error,-,COMPILE_ERR
+objects02,true,compile-error,-,COMPILE_ERR
+objects03,false,compile-error,-,COMPILE_ERR
+objects04,false,compile-error,-,COMPILE_ERR
+objects05,true,compile-error,-,COMPILE_ERR
+objects06,false,compile-error,-,COMPILE_ERR
+objects07,false,compile-error,-,COMPILE_ERR
+objects08,true,compile-error,-,COMPILE_ERR
+objects09,true,compile-error,-,COMPILE_ERR
+objects10,false,compile-error,-,COMPILE_ERR
+objects11,false,compile-error,-,COMPILE_ERR
+objects12,false,compile-error,-,COMPILE_ERR
+objects13,false,compile-error,-,COMPILE_ERR
+objects14,false,compile-error,-,COMPILE_ERR

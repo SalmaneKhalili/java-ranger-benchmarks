@@ -1,0 +1,33 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	float_unboundedloop	float_unboundedloop	float_unboundedloop	float_unboundedloop
+results/float_unboundedloop/	status	cputime (s)	walltime (s)	memory (MB)
+Adjustable-Inner-Count-Halving	incorrect	0.603000	0.603000	0.000000
+Alternating-Step-Schedule	correct	0.538000	0.538000	0.000000
+Batch-Conveyor-Counter	correct	0.573000	0.573000	0.000000
+Bounded-Proportional-Update	correct	0.570000	0.570000	0.000000
+Bounded-Reset-Linear-Growth	correct	0.589000	0.589000	0.000000
+Clamped-Triangular-Drift	correct	0.568000	0.568000	0.000000
+Cyclic-Preset-Inner-ABC	correct	0.577000	0.577000	0.000000
+Fixed-Block-Accumulator	correct	0.564000	0.564000	0.000000
+Hysteresis-On-Off-with-Deadband	correct	0.681000	0.681000	0.000000
+Inner-Retry-Until-OK	correct	0.575000	0.575000	0.000000
+Leak-and-Refill	correct	0.584000	0.584000	0.000000
+Mixed-Phase-AddHalve-with-Slack-Box	correct	0.687000	0.687000	0.000000
+Nested-Drain-Then-Step	correct	0.570000	0.570000	0.000000
+Nested-MinStep-Regulator	correct	0.580000	0.580000	0.000000
+Nested-PingPong-with-Caps	correct	0.577000	0.577000	0.000000
+Nested-Saturation-Then-Reset	correct	0.557000	0.557000	0.000000
+Nested-Windowed-Add-Remove	correct	0.559000	0.559000	0.000000
+Producer-Consumer-Level	correct	0.562000	0.562000	0.000000
+Ramp-and-Hold	correct	0.575000	0.575000	0.000000
+Safe-Accumulator-with-Bounded-Noise	correct	1.165000	1.165000	0.000000
+Saturating-Integrator	correct	0.568000	0.568000	0.000000
+Slew-Rate-Limiter	correct	0.578000	0.578000	0.000000
+Switched-Linear-Plant	correct	0.573000	0.573000	0.000000
+Two-Band-Piecewise-Linear-Oscillator	correct	0.578000	0.578000	0.000000
+Two-Counter-Lexicographic-Small	correct	0.596000	0.596000	0.000000
+Two-Level-Nested-Scheduler	correct	0.572000	0.572000	0.000000
+Two-State-FP-Oscillator	correct	0.569000	0.569000	0.000000
+Two-Var-Nested-Handshake	correct	0.589000	0.589000	0.000000
+Two-Variable_Averaging_Filter	correct	0.587000	0.587000	0.000000
+Unbounded-Outer-Inner-Safety-Gate	correct	0.587000	0.587000	0.000000

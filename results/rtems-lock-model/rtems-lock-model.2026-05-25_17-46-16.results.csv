@@ -1,0 +1,4 @@
+tool	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a	JPF svcomp@766cc2a
+run set	rtems-lock-model	rtems-lock-model	rtems-lock-model	rtems-lock-model
+results/rtems-lock-model/	status	cputime (s)	walltime (s)	memory (MB)
+lock-00-01-10	incorrect	3.100000	3.100000	0.000000

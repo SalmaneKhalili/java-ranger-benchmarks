@@ -1,0 +1,17 @@
+benchmark,expected,actual,time_s,result
+OverapproximationString01,false,false,.60s,CORRECT
+URLDecoder01,true,UNKNOWN,.46s,UNKNOWN
+URLDecoder02,false,UNKNOWN,.45s,UNKNOWN
+addition01,false,true,.64s,INCORRECT
+array-iteration01,false,UNKNOWN,.77s,UNKNOWN
+boundcheck100,false,false,1.45s,CORRECT
+boundcheck200,false,false,3.43s,CORRECT
+boundcheck30,false,false,.83s,CORRECT
+double2long,false,true,.52s,INCORRECT
+float,false,true,.51s,INCORRECT
+list2,true,true,41.72s,CORRECT
+radians,false,true,.49s,INCORRECT
+shifting,false,false,.61s,CORRECT
+shifting2,false,false,.60s,CORRECT
+shifting3,false,false,.60s,CORRECT
+startswith,true,true,.60s,CORRECT

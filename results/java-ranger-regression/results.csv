@@ -1,0 +1,7 @@
+benchmark,expected,actual,time_s,result
+LoopCharAt,false,true,19.19s,INCORRECT
+TCAS_prop1,false,false,2.44s,CORRECT
+TCAS_prop2,true,true,5.34s,CORRECT
+TCAS_prop3,true,true,5.34s,CORRECT
+apachecli_eqchk,true,true,21.92s,CORRECT
+schedule_eqchk,true,true,2.34s,CORRECT
