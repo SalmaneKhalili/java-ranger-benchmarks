@@ -974,6 +974,11 @@ def cmd_analyze(args):
     }
     html = _assemble_html(sections, args.build_id)
 
+    # Write to versioned subdirectory when build_id is known
+    if args.build_id:
+        base_dir = os.path.dirname(args.output) or "."
+        base_name = os.path.basename(args.output)
+        args.output = os.path.join(base_dir, f"v{args.build_id}", base_name)
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
     with open(args.output, "w") as f:
         f.write(html)
@@ -1184,13 +1189,30 @@ def _render_landing_page(suites_info, run_id, build_id):
     return html
 
 
+def _render_redirect_page(build_id):
+    return f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="0; url=v{build_id}/index.html">
+<title>Java Ranger Benchmarks</title>
+</head>
+<body>
+<p>Redirecting to <a href="v{build_id}/index.html">latest results</a>...</p>
+</body>
+</html>"""
+
+
 def cmd_report(args):
     xml_files = [f for f in args.xml_files if os.path.isfile(f)]
     if not xml_files:
         print("No XML files found", file=sys.stderr)
         sys.exit(1)
 
-    output_dir = args.output_dir
+    build_id = args.build_id or datetime.now().strftime("%Y%m%d%H%M%S")
+    output_dir = os.path.join(args.output_dir, f"v{build_id}")
     os.makedirs(output_dir, exist_ok=True)
 
     # Group by suite, deduplicating by benchmark name
@@ -1238,6 +1260,13 @@ def cmd_report(args):
     with open(index_path, "w") as f:
         f.write(html)
     print(f"Landing page: {index_path}")
+
+    # Generate root redirect
+    redirect_path = os.path.join(args.output_dir, "index.html")
+    html = _render_redirect_page(build_id)
+    with open(redirect_path, "w") as f:
+        f.write(html)
+    print(f"Root redirect: {redirect_path}")
     print(f"Total: {len(suites)} suites, {sum(len(info['records']) for info in suites.values())} benchmarks")
 
 
