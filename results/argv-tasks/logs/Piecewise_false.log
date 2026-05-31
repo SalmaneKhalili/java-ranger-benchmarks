@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 5/31/26 11:22 PM
+====================================================== search started: 5/31/26 11:28 PM
 the depth of violation is2
 Property Violated: PC is constraint # = 1
 float4[2.6312296525637935E-13] < double1[3.51267026650434E82]
@@ -62,5 +62,5 @@ instructions:       6244
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 5/31/26 11:22 PM
+====================================================== search finished: 5/31/26 11:28 PM
 

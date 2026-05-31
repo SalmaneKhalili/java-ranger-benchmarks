@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 5/31/26 11:26 PM
+====================================================== search started: 5/31/26 11:32 PM
 threadTerminated
 threadTerminated
 threadTerminated
@@ -59,7 +59,7 @@ Inputs:
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
 
 ====================================================== statistics
-elapsed time:       00:00:12
+elapsed time:       00:00:13
 states:             new=8,visited=0,backtracked=4,end=4
 search:             maxDepth=4,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
@@ -68,5 +68,5 @@ instructions:       6204
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 5/31/26 11:26 PM
+====================================================== search finished: 5/31/26 11:32 PM
 
