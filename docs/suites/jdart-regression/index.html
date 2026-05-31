@@ -44,12 +44,12 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>jdart-regression</h1>
-  <p>JR: svcomp@766cc2a | Date: 2026-05-31 23:13:16 </p>
+  <p>JR: svcomp@766cc2a | Date: 2026-05-31 23:13:50 </p>
 </div>
 <div class="container">
 <div class="nav">
-  <a href="../index.html?v=8d7afef3970d42d7c35938e5619b199bdabe5c72">&larr; Back to overview</a>
-  <a href="../failure-analysis.html?v=8d7afef3970d42d7c35938e5619b199bdabe5c72">Failure Analysis</a>
+  <a href="../index.html?v=d840842228fe8f279c888dc1896a49363c31dd24">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=d840842228fe8f279c888dc1896a49363c31dd24">Failure Analysis</a>
 </div>
 
 <h2>Config</h2>
@@ -67,33 +67,33 @@ tr:hover { background: #f8f9ff; }
   </div>
   <div class="card">
     <h3>Incorrect</h3>
-    <div class="number incorrect">2</div>
+    <div class="number incorrect">1</div>
   </div>
   <div class="card">
     <h3>Unknown</h3>
-    <div class="number unknown">5</div>
+    <div class="number unknown">6</div>
   </div>
 </div>
 
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>OverapproximationString01</td><td>false</td><td class="status-correct">correct</td><td>0.622447</td><td></td></tr>
-<tr><td>URLDecoder01</td><td>true</td><td class="status-unknown">unknown</td><td>0.478745</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
-<tr><td>URLDecoder02</td><td>false</td><td class="status-unknown">unknown</td><td>0.483298</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
-<tr><td>addition01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.664137</td><td><span class="error-text" title="heap:               new=464,released=120,maxLive=452,gcCycles=14 | instructions:       6355 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 11:10 PM">heap:               new=464,released=120,maxLive=452,gcCycles=14 | instructions:       6355 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ================================</span></td></tr>
-<tr><td>array-iteration01</td><td>false</td><td class="status-unknown">unknown</td><td>0.790099</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
-<tr><td>boundcheck100</td><td>false</td><td class="status-correct">correct</td><td>1.450527</td><td></td></tr>
-<tr><td>boundcheck200</td><td>false</td><td class="status-correct">correct</td><td>2.627557</td><td></td></tr>
-<tr><td>boundcheck30</td><td>false</td><td class="status-correct">correct</td><td>0.845949</td><td></td></tr>
+  <tr><td>OverapproximationString01</td><td>false</td><td class="status-correct">correct</td><td>0.624581</td><td></td></tr>
+<tr><td>URLDecoder01</td><td>true</td><td class="status-unknown">unknown</td><td>0.494162</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
+<tr><td>URLDecoder02</td><td>false</td><td class="status-unknown">unknown</td><td>0.504137</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
+<tr><td>addition01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.696169</td><td><span class="error-text" title="heap:               new=464,released=120,maxLive=452,gcCycles=14 | instructions:       6355 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 11:10 PM">heap:               new=464,released=120,maxLive=452,gcCycles=14 | instructions:       6355 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ================================</span></td></tr>
+<tr><td>array-iteration01</td><td>false</td><td class="status-unknown">unknown</td><td>0.826244</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
+<tr><td>boundcheck100</td><td>false</td><td class="status-correct">correct</td><td>2.053233</td><td></td></tr>
+<tr><td>boundcheck200</td><td>false</td><td class="status-correct">correct</td><td>3.565600</td><td></td></tr>
+<tr><td>boundcheck30</td><td>false</td><td class="status-correct">correct</td><td>0.877537</td><td></td></tr>
 <tr><td>double2long</td><td>false</td><td class="status-unknown">unknown</td><td>60.000000</td><td><span class="error-text" title="timeout after 60s">timeout</span></td></tr>
-<tr><td>float</td><td>false</td><td class="status-unknown">unknown</td><td>3.550086</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
-<tr><td>list2</td><td>true</td><td class="status-correct">correct</td><td>41.786172</td><td></td></tr>
-<tr><td>radians</td><td>false</td><td class="status-incorrect">incorrect</td><td>46.112504</td><td><span class="error-text" title="heap:               new=464,released=26,maxLive=452,gcCycles=3 | instructions:       6059 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 5/31/26 11:13 PM">heap:               new=464,released=26,maxLive=452,gcCycles=3 | instructions:       6059 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ==================================</span></td></tr>
-<tr><td>shifting</td><td>false</td><td class="status-correct">correct</td><td>0.613396</td><td></td></tr>
-<tr><td>shifting2</td><td>false</td><td class="status-correct">correct</td><td>0.615550</td><td></td></tr>
-<tr><td>shifting3</td><td>false</td><td class="status-correct">correct</td><td>0.623340</td><td></td></tr>
-<tr><td>startswith</td><td>true</td><td class="status-correct">correct</td><td>0.650613</td><td></td></tr>
+<tr><td>float</td><td>false</td><td class="status-unknown">unknown</td><td>4.412569</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
+<tr><td>list2</td><td>true</td><td class="status-correct">correct</td><td>47.218643</td><td></td></tr>
+<tr><td>radians</td><td>false</td><td class="status-unknown">unknown</td><td>60.000000</td><td><span class="error-text" title="timeout after 60s">timeout</span></td></tr>
+<tr><td>shifting</td><td>false</td><td class="status-correct">correct</td><td>0.660483</td><td></td></tr>
+<tr><td>shifting2</td><td>false</td><td class="status-correct">correct</td><td>0.644655</td><td></td></tr>
+<tr><td>shifting3</td><td>false</td><td class="status-correct">correct</td><td>0.646626</td><td></td></tr>
+<tr><td>startswith</td><td>true</td><td class="status-correct">correct</td><td>0.665699</td><td></td></tr>
 
 </table>
 </div>

@@ -36155,14 +36155,14 @@ threadTerminated
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:44
+elapsed time:       00:00:48
 states:             new=8145,visited=0,backtracked=8145,end=201
 search:             maxDepth=13,constraints=4052
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4072
 heap:               new=1130,released=6275,maxLive=483,gcCycles=8145
 instructions:       158041
-max memory:         419MB
+max memory:         420MB
 loaded code:        classes=89,methods=1843
 
-====================================================== search finished: 5/31/26 11:14 PM
+====================================================== search finished: 5/31/26 11:15 PM
 

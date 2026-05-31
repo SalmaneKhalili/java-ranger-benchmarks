@@ -31,7 +31,7 @@ threadTerminated
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:03
+elapsed time:       00:00:04
 states:             new=6,visited=0,backtracked=6,end=3
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3

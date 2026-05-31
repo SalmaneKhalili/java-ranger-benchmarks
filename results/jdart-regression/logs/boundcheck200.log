@@ -63,13 +63,13 @@ Inputs:
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:03
 states:             new=4,visited=0,backtracked=1,end=1
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
 heap:               new=476,released=17,maxLive=452,gcCycles=2
 instructions:       8272
-max memory:         303MB
+max memory:         429MB
 loaded code:        classes=89,methods=1872
 
 ====================================================== search finished: 5/31/26 11:10 PM

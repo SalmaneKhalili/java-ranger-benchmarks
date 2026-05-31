@@ -15132,7 +15132,7 @@ threadTerminated
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:33
+elapsed time:       00:00:32
 states:             new=695,visited=0,backtracked=695,end=86
 search:             maxDepth=13,constraints=232
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=347
