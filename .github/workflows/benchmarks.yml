@@ -223,7 +223,8 @@ jobs:
 
           for d in "${{ github.workspace }}"/results-*/; do
             [ -d "$d" ] || continue
-            suite_name="${d#results-}"
+            base=$(basename "$d")
+            suite_name="${base#results-}"
             suite_name="${suite_name%%-${{ github.run_id }}*}"
             mkdir -p "results/$suite_name"
             cp -r "$d"* "results/$suite_name/"
