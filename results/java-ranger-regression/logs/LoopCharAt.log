@@ -1,0 +1,4458 @@
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 5/31/26 11:10 PM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8900}")
+*************************************
+Satisfiable: true
+string0 => "\u{8900}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B")
+*************************************
+Satisfiable: true
+string0 => "B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B")
+*************************************
+Satisfiable: true
+string0 => "B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BA")
+*************************************
+Satisfiable: true
+string0 => "BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB")
+*************************************
+Satisfiable: true
+string0 => "BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB")
+*************************************
+Satisfiable: true
+string0 => "BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBA")
+*************************************
+Satisfiable: true
+string0 => "BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB")
+*************************************
+Satisfiable: true
+string0 => "BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB")
+*************************************
+Satisfiable: true
+string0 => "BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBA")
+*************************************
+Satisfiable: true
+string0 => "BBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{10}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBA")
+*************************************
+Satisfiable: true
+string0 => "BBBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBA")
+*************************************
+Satisfiable: true
+string0 => "BBBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBBA")
+*************************************
+Satisfiable: true
+string0 => "BBBBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBB@")
+*************************************
+Satisfiable: true
+string0 => "BBBBB@"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBBB")
+*************************************
+Satisfiable: true
+string0 => "BBBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBBBA")
+*************************************
+Satisfiable: true
+string0 => "BBBBBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBB#")
+*************************************
+Satisfiable: true
+string0 => "BBBBB#"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBBB#A")
+*************************************
+Satisfiable: true
+string0 => "BBBBB#A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{5}")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{5}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{5}A")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{5}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB@\u{10}")
+*************************************
+Satisfiable: true
+string0 => "BBBB@\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{1}B")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{1}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{1f}B")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{1f}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{1f}BA")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{1f}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{16} ")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{16} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBBB\u{16} A")
+*************************************
+Satisfiable: true
+string0 => "BBBB\u{16} A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{20800}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{20800}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{d}A")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{d}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{4841}\u{970c}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{4841}\u{970c}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB`B")
+*************************************
+Satisfiable: true
+string0 => "BBB`B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{4828}B")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{4828}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{4828}BA")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{4828}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{10004}B\u{16848}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{10004}B\u{16848}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{2}BB")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{2}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{202c4}BB")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{202c4}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{202c4}BBA")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{202c4}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{14}B\u{4}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{14}B\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{14}B\u{4}A")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{14}B\u{4}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{1406}\u{80a0}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{1406}\u{80a0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{1406}\u{80a0}A")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{1406}\u{80a0}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{4}""\u{7}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{4}""\u{7}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{12a1}\u{6}B")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{12a1}\u{6}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{9912}@B")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{9912}@B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{9912}@BA")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{9912}@BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{0}\u{880}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{0}\u{880}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BBB\u{0}\u{880}\u{2}A")
+*************************************
+Satisfiable: true
+string0 => "BBB\u{0}\u{880}\u{2}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{8002}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{8002}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{1681}A")
+*************************************
+Satisfiable: true
+string0 => "BB\u{1681}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{2042b}\u{14}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{2042b}\u{14}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{2}B")
+*************************************
+Satisfiable: true
+string0 => "BB\u{2}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{4}B")
+*************************************
+Satisfiable: true
+string0 => "BB\u{4}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB!BAC")
+*************************************
+Satisfiable: true
+string0 => "BB!BAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}B\u{10051}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}B\u{10051}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{2231}BB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{2231}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{5000}BB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{5000}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{5000}BBA")
+*************************************
+Satisfiable: true
+string0 => "BB\u{5000}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{4}BB\u{16}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{4}BB\u{16}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{10}BBB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{10}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{22450}BBB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{22450}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{22450}BBBA")
+*************************************
+Satisfiable: true
+string0 => "BB\u{22450}BBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB`BB\u{41c1}")
+*************************************
+Satisfiable: true
+string0 => "BB`BB\u{41c1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB`BB\u{41c1}A")
+*************************************
+Satisfiable: true
+string0 => "BB`BB\u{41c1}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{8010}B)")
+*************************************
+Satisfiable: true
+string0 => "BB\u{8010}B)"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{8010}B)A")
+*************************************
+Satisfiable: true
+string0 => "BB\u{8010}B)A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{12050}B\u{1}2")
+*************************************
+Satisfiable: true
+string0 => "BB\u{12050}B\u{1}2"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{14140}B\u{4}B")
+*************************************
+Satisfiable: true
+string0 => "BB\u{14140}B\u{4}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB$B\u{20080}B")
+*************************************
+Satisfiable: true
+string0 => "BB$B\u{20080}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB$B\u{20080}BA")
+*************************************
+Satisfiable: true
+string0 => "BB$B\u{20080}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}B\u{200c3}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}B\u{200c3}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}B\u{200c3}\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}B\u{200c3}\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{6400}\u{2a441}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{6400}\u{2a441}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{10}\u{c80}AC")
+*************************************
+Satisfiable: true
+string0 => "BB\u{10}\u{c80}AC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{2}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{2}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB%\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "BB%\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{102a0}\u{20080}B")
+*************************************
+Satisfiable: true
+string0 => "BB\u{102a0}\u{20080}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{102a0}\u{20080}BA")
+*************************************
+Satisfiable: true
+string0 => "BB\u{102a0}\u{20080}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{1800}\u{0}B\u{15}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{1800}\u{0}B\u{15}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{8000}@BB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{8000}@BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}@BB")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}@BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}@BBA")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}@BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{8}B0")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{8}B0"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{8}B0A")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{8}B0A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB@\u{6}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "BB@\u{6}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB@\u{6}\u{4}A")
+*************************************
+Satisfiable: true
+string0 => "BB@\u{6}\u{4}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{3}\u{0}\u{20412}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{3}\u{0}\u{20412}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{14400}\u{600}B")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{14400}\u{600}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB4\u{181}\u{1810}B")
+*************************************
+Satisfiable: true
+string0 => "BB4\u{181}\u{1810}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB4\u{181}\u{1810}BA")
+*************************************
+Satisfiable: true
+string0 => "BB4\u{181}\u{1810}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{10}\u{2084}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{10}\u{2084}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BB\u{0}\u{10}\u{2084}\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "BB\u{0}\u{10}\u{2084}\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{5}")
+*************************************
+Satisfiable: true
+string0 => "B\u{5}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1fee3}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{1fee3}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B""A")
+*************************************
+Satisfiable: true
+string0 => "B""A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{11}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{11}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{c04}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{c04}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{14}B(")
+*************************************
+Satisfiable: true
+string0 => "B\u{14}B("
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{c}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{c}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4000}BBA")
+*************************************
+Satisfiable: true
+string0 => "B\u{4000}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{300}BB1")
+*************************************
+Satisfiable: true
+string0 => "B\u{300}BB1"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{600}BBB")
+*************************************
+Satisfiable: true
+string0 => "B\u{600}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1000}BBB")
+*************************************
+Satisfiable: true
+string0 => "B\u{1000}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1000}BBBA")
+*************************************
+Satisfiable: true
+string0 => "B\u{1000}BBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}BBB\u{1081a}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}BBB\u{1081a}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}BBBB")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{8200}BBBB")
+*************************************
+Satisfiable: true
+string0 => "B\u{8200}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{8200}BBBBA")
+*************************************
+Satisfiable: true
+string0 => "B\u{8200}BBBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{90}BBB\u{0}")
+*************************************
+Satisfiable: true
+string0 => "B\u{90}BBB\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{90}BBB\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{90}BBB\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{800}BB\u{15}")
+*************************************
+Satisfiable: true
+string0 => "B\u{800}BB\u{15}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{800}BB\u{15}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{800}BB\u{15}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}BB\u{1}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}BB\u{1}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B@BB""B")
+*************************************
+Satisfiable: true
+string0 => "B@BB""B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B@BB\u{2200}B")
+*************************************
+Satisfiable: true
+string0 => "B@BB\u{2200}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B@BB\u{2200}BA")
+*************************************
+Satisfiable: true
+string0 => "B@BB\u{2200}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{810}BB\u{2}\u{8215}")
+*************************************
+Satisfiable: true
+string0 => "B\u{810}BB\u{2}\u{8215}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{810}BB\u{2}\u{8215}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{810}BB\u{2}\u{8215}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{b441}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{b441}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}BAC")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}BAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{10000}B\u{10}$")
+*************************************
+Satisfiable: true
+string0 => "B\u{10000}B\u{10}$"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{18}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{18}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{90}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{90}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{90}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{90}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{800}B\u{4050}B.")
+*************************************
+Satisfiable: true
+string0 => "B\u{800}B\u{4050}B."
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1080}B\u{12a1}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{1080}B\u{12a1}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4002}B\u{0}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{4002}B\u{0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4002}B\u{0}BBA")
+*************************************
+Satisfiable: true
+string0 => "B\u{4002}B\u{0}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{85b0}B\u{220a4}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{85b0}B\u{220a4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{85b0}B\u{220a4}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{85b0}B\u{220a4}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4200}B\u{26341}\u{21022}")
+*************************************
+Satisfiable: true
+string0 => "B\u{4200}B\u{26341}\u{21022}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4200}B\u{26341}\u{21022}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{4200}B\u{26341}\u{21022}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{116a5}\u{800}\u{13}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{116a5}\u{800}\u{13}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B1\u{10000}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B1\u{10000}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{28590}\u{294e3}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{28590}\u{294e3}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{28590}\u{294e3}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{28590}\u{294e3}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{0}@\u{0}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{0}@\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}B\u{0}@\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}B\u{0}@\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{254c}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "B\u{254c}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{3100}\u{8208}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{3100}\u{8208}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{2}\u{8} ")
+*************************************
+Satisfiable: true
+string0 => "B\u{2}\u{8} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{2}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{2}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{802}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{802}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{a000}BAC")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{a000}BAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{10000}\u{4}B\u{10455}")
+*************************************
+Satisfiable: true
+string0 => "B\u{10000}\u{4}B\u{10455}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{800}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{800}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B@\u{2000}BB")
+*************************************
+Satisfiable: true
+string0 => "B@\u{2000}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B@\u{2000}BBA")
+*************************************
+Satisfiable: true
+string0 => "B@\u{2000}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{1000}BB\u{100}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{1000}BB\u{100}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{10a0}\u{200}BBB")
+*************************************
+Satisfiable: true
+string0 => "B\u{10a0}\u{200}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B @BBB")
+*************************************
+Satisfiable: true
+string0 => "B @BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B @BBBA")
+*************************************
+Satisfiable: true
+string0 => "B @BBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{178a7}BB\u{409}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{178a7}BB\u{409}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{178a7}BB\u{409}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{178a7}BB\u{409}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{2000}\u{11}B\u{3}")
+*************************************
+Satisfiable: true
+string0 => "B\u{2000}\u{11}B\u{3}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{2000}\u{11}B\u{3}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{2000}\u{11}B\u{3}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{298}B\u{2a0b}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{298}B\u{2a0b}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1800}(B\u{3000}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{1800}(B\u{3000}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{800}\u{17a37}B\u{6000}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{800}\u{17a37}B\u{6000}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{800}\u{17a37}B\u{6000}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{800}\u{17a37}B\u{6000}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4c00}\u{10000}B\u{8}\u{24000}")
+*************************************
+Satisfiable: true
+string0 => "B\u{4c00}\u{10000}B\u{8}\u{24000}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{4c00}\u{10000}B\u{8}\u{24000}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{4c00}\u{10000}B\u{8}\u{24000}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{10}\u{10}\u{4006}")
+*************************************
+Satisfiable: true
+string0 => "B\u{10}\u{10}\u{4006}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1000}\u{1d402} AC")
+*************************************
+Satisfiable: true
+string0 => "B\u{1000}\u{1d402} AC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{1200}\u{8}\u{8088}\u{7400}")
+*************************************
+Satisfiable: true
+string0 => "B\u{1200}\u{8}\u{8088}\u{7400}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{c040}\u{8}\u{20004}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{c040}\u{8}\u{20004}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{204}\u{1}\u{100}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{204}\u{1}\u{100}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{204}\u{1}\u{100}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{204}\u{1}\u{100}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{2000}\u{8400}\u{0}B\u{10}")
+*************************************
+Satisfiable: true
+string0 => "B\u{2000}\u{8400}\u{0}B\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{0}\u{15}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{0}\u{15}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{0}\u{285b0}BB")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{0}\u{285b0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{0}\u{285b0}BBA")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{0}\u{285b0}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{8000}\u{8}\u{28590}B\u{421}")
+*************************************
+Satisfiable: true
+string0 => "B\u{8000}\u{8}\u{28590}B\u{421}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{8000}\u{8}\u{28590}B\u{421}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{8000}\u{8}\u{28590}B\u{421}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{100}\u{2801}\u{0}\u{18602}")
+*************************************
+Satisfiable: true
+string0 => "B\u{100}\u{2801}\u{0}\u{18602}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{100}\u{2801}\u{0}\u{18602}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{100}\u{2801}\u{0}\u{18602}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}\u{0}\u{4}\u{d}""")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}\u{0}\u{4}\u{d}"""
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}0\u{10}\u{20083}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}0\u{10}\u{20083}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}@\u{20490}\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}@\u{20490}\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{0}@\u{20490}\u{0}BA")
+*************************************
+Satisfiable: true
+string0 => "B\u{0}@\u{20490}\u{0}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{900}\u{0}\u{28590}\u{19}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "B\u{900}\u{0}\u{28590}\u{19}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B\u{900}\u{0}\u{28590}\u{19}\u{2}A")
+*************************************
+Satisfiable: true
+string0 => "B\u{900}\u{0}\u{28590}\u{19}\u{2}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10800}A")
+*************************************
+Satisfiable: true
+string0 => "\u{10800}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10800}\u{5}")
+*************************************
+Satisfiable: true
+string0 => "\u{10800}\u{5}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{18}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{18}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{400}B\u{37e4}")
+*************************************
+Satisfiable: true
+string0 => "\u{400}B\u{37e4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{800}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8008}BB\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{8008}BB\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100a0}BBBAC")
+*************************************
+Satisfiable: true
+string0 => "\u{100a0}BBBAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@BBB\u{10}")
+*************************************
+Satisfiable: true
+string0 => "@BBB\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10084}BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{10084}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10084}BBBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{10084}BBBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  " BBBB\u{8124}")
+*************************************
+Satisfiable: true
+string0 => " BBBB\u{8124}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}BBBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{4}BBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBBBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBBBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}BBBB\u{14}")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}BBBB\u{14}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}BBBB\u{14}A")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}BBBB\u{14}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB\u{9}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB\u{9}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB\u{9}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}BBB\u{0}\u{12}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}BBB\u{0}\u{12}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}BBB B")
+*************************************
+Satisfiable: true
+string0 => "\u{100}BBB B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB\u{5900}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB\u{5900}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BBB\u{5900}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BBB\u{5900}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}BBB\u{1011f}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "\u{100}BBB\u{1011f}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}BBB\u{1011f}\u{2}A")
+*************************************
+Satisfiable: true
+string0 => "\u{100}BBB\u{1011f}\u{2}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB\u{2a441}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{2a441}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}BB\u{0}AC")
+*************************************
+Satisfiable: true
+string0 => "\u{8}BB\u{0}AC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10048}BB\u{11085}\u{10}")
+*************************************
+Satisfiable: true
+string0 => "\u{10048}BB\u{11085}\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}BB\u{188c1}B")
+*************************************
+Satisfiable: true
+string0 => "\u{100}BB\u{188c1}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1280}BB\u{10}B")
+*************************************
+Satisfiable: true
+string0 => "\u{1280}BB\u{10}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1280}BB\u{10}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{1280}BB\u{10}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB\u{0}B\u{18202}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{0}B\u{18202}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{140}BB\u{0}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{140}BB\u{0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2200}BB\u{c992}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{2200}BB\u{c992}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2200}BB\u{c992}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{2200}BB\u{c992}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a00}BB\u{11}B\u{16}")
+*************************************
+Satisfiable: true
+string0 => "\u{a00}BB\u{11}B\u{16}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a00}BB\u{11}B\u{16}A")
+*************************************
+Satisfiable: true
+string0 => "\u{a00}BB\u{11}B\u{16}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}BB1\u{18020}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}BB1\u{18020}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}BB1\u{18020}A")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}BB1\u{18020}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB\u{9100}\u{10}\u{8}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{9100}\u{10}\u{8}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}BB\u{180c0}\u{1a0a0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}BB\u{180c0}\u{1a0a0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{210}BB\u{224b0}\u{20032}B")
+*************************************
+Satisfiable: true
+string0 => "\u{210}BB\u{224b0}\u{20032}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{210}BB\u{224b0}\u{20032}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{210}BB\u{224b0}\u{20032}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB\u{10e20}@\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{10e20}@\u{9}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}BB\u{10e20}@\u{9}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{10e20}@\u{9}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1488}B\u{14}")
+*************************************
+Satisfiable: true
+string0 => "\u{1488}B\u{14}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{280}B\u{11e00}A")
+*************************************
+Satisfiable: true
+string0 => "\u{280}B\u{11e00}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}B\u{4}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{800}B\u{4}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{80}B\u{26230}B")
+*************************************
+Satisfiable: true
+string0 => "\u{80}B\u{26230}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{500}B\u{634}BAC")
+*************************************
+Satisfiable: true
+string0 => "\u{500}B\u{634}BAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1004}B\u{4}B\u{1003}")
+*************************************
+Satisfiable: true
+string0 => "\u{1004}B\u{4}B\u{1003}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}B""BB")
+*************************************
+Satisfiable: true
+string0 => "\u{8}B""BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}B\u{242c0}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}B\u{242c0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}B\u{242c0}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}B\u{242c0}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{20000}BB\u{10432}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{20000}BB\u{10432}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2000}B\u{4}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{2000}B\u{4}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B BBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B BBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1020}B3BB\u{c}")
+*************************************
+Satisfiable: true
+string0 => "\u{1020}B3BB\u{c}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1020}B3BB\u{c}A")
+*************************************
+Satisfiable: true
+string0 => "\u{1020}B3BB\u{c}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a00}B\u{801a}B\u{1869a}")
+*************************************
+Satisfiable: true
+string0 => "\u{a00}B\u{801a}B\u{1869a}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a00}B\u{801a}B\u{1869a}A")
+*************************************
+Satisfiable: true
+string0 => "\u{a00}B\u{801a}B\u{1869a}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{3800}B\u{0}B@\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{3800}B\u{0}B@\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{80}B\u{2440}B\u{8010}B")
+*************************************
+Satisfiable: true
+string0 => "\u{80}B\u{2440}B\u{8010}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8010}B\u{a04}B\u{11}B")
+*************************************
+Satisfiable: true
+string0 => "\u{8010}B\u{a04}B\u{11}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8010}B\u{a04}B\u{11}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{8010}B\u{a04}B\u{11}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{0}B\u{0}\u{6}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{0}B\u{0}\u{6}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{0}B\u{0}\u{6}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{0}B\u{0}\u{6}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{920}B\u{4108}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{920}B\u{4108}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2050}B\u{11}\u{0}AC")
+*************************************
+Satisfiable: true
+string0 => "\u{2050}B\u{11}\u{0}AC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{12}A\u{1}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{12}A\u{1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{84}B\u{2}\u{14824}B")
+*************************************
+Satisfiable: true
+string0 => "\u{84}B\u{2}\u{14824}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}B\u{0}\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{800}B\u{0}\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}B\u{0}\u{0}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{800}B\u{0}\u{0}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}B\u{10102}\u{9001}B\u{2}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}B\u{10102}\u{9001}B\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}B\u{400}\u{6}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}B\u{400}\u{6}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}B3\u{2044}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}B3\u{2044}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}B3\u{2044}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}B3\u{2044}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2240}B\u{10}\u{20590}B\u{20000}")
+*************************************
+Satisfiable: true
+string0 => "\u{2240}B\u{10}\u{20590}B\u{20000}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2240}B\u{10}\u{20590}B\u{20000}A")
+*************************************
+Satisfiable: true
+string0 => "\u{2240}B\u{10}\u{20590}B\u{20000}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}B\u{200}\u{10}\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{4}B\u{200}\u{10}\u{9}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}B\u{200}\u{10}\u{9}A")
+*************************************
+Satisfiable: true
+string0 => "\u{4}B\u{200}\u{10}\u{9}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}B@ \u{6}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}B@ \u{6}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{4070}\u{19025}\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{4070}\u{19025}\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}B\u{0}\u{28190}\u{2}B")
+*************************************
+Satisfiable: true
+string0 => "\u{100}B\u{0}\u{28190}\u{2}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}B\u{0}\u{28190}\u{2}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{100}B\u{0}\u{28190}\u{2}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{846}B\u{446}\u{28d90}\u{e01}\u{24100}")
+*************************************
+Satisfiable: true
+string0 => "\u{846}B\u{446}\u{28d90}\u{e01}\u{24100}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{846}B\u{446}\u{28d90}\u{e01}\u{24100}A")
+*************************************
+Satisfiable: true
+string0 => "\u{846}B\u{446}\u{28d90}\u{e01}\u{24100}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2004}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "\u{2004}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{2002}A")
+*************************************
+Satisfiable: true
+string0 => "@\u{2002}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{8020}$")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{8020}$"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}!B")
+*************************************
+Satisfiable: true
+string0 => "\u{100}!B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1008}\u{4}B")
+*************************************
+Satisfiable: true
+string0 => "\u{1008}\u{4}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8000}\u{2}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{8000}\u{2}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{4701}B\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{4701}B\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1000}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1000}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{810}\u{100}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{810}\u{100}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10000}\u{10a00}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{10000}\u{10a00}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{220}BB\u{16}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{220}BB\u{16}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{404}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{404}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1298}\u{0}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{1298}\u{0}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1298}\u{0}BBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{1298}\u{0}BBBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{400}BBB\u{10}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{400}BBB\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{80} BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{80} BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{860}\u{2000}BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{860}\u{2000}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{860}\u{2000}BBBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{860}\u{2000}BBBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{1100}BBB\u{0}")
+*************************************
+Satisfiable: true
+string0 => "@\u{1100}BBB\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{1100}BBB\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "@\u{1100}BBB\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{420c}\u{2000}BB\u{1808c}")
+*************************************
+Satisfiable: true
+string0 => "\u{420c}\u{2000}BB\u{1808c}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{420c}\u{2000}BB\u{1808c}A")
+*************************************
+Satisfiable: true
+string0 => "\u{420c}\u{2000}BB\u{1808c}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{a000}BB\u{20400}\u{10da0}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{a000}BB\u{20400}\u{10da0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{15010}BB@B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{15010}BB@B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{980}@BB\u{20063}B")
+*************************************
+Satisfiable: true
+string0 => "\u{980}@BB\u{20063}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{980}@BB\u{20063}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{980}@BB\u{20063}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "P\u{2000}BB\u{4}@")
+*************************************
+Satisfiable: true
+string0 => "P\u{2000}BB\u{4}@"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "P\u{2000}BB\u{4}@A")
+*************************************
+Satisfiable: true
+string0 => "P\u{2000}BB\u{4}@A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2080}\u{0}B\u{160c2}")
+*************************************
+Satisfiable: true
+string0 => "\u{2080}\u{0}B\u{160c2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@ B\u{81}AC")
+*************************************
+Satisfiable: true
+string0 => "@ B\u{81}AC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{80}B @")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{80}B @"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4540}\u{c00}B\u{5040}B")
+*************************************
+Satisfiable: true
+string0 => "\u{4540}\u{c00}B\u{5040}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10000}\u{0}B@B")
+*************************************
+Satisfiable: true
+string0 => "\u{10000}\u{0}B@B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10000}\u{0}B@BA")
+*************************************
+Satisfiable: true
+string0 => "\u{10000}\u{0}B@BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4800} B\u{14}B\u{7}")
+*************************************
+Satisfiable: true
+string0 => "\u{4800} B\u{14}B\u{7}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10600}\u{810}B@BB")
+*************************************
+Satisfiable: true
+string0 => "\u{10600}\u{810}B@BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}B\u{85b0}BB")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}B\u{85b0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}B\u{85b0}BBA")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}B\u{85b0}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}B\u{8490}B\u{d}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}B\u{8490}B\u{d}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}B\u{8490}B\u{d}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}B\u{8490}B\u{d}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}\u{0}B\u{10281}\u{6200}")
+*************************************
+Satisfiable: true
+string0 => "\u{4}\u{0}B\u{10281}\u{6200}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}\u{0}B\u{10281}\u{6200}A")
+*************************************
+Satisfiable: true
+string0 => "\u{4}\u{0}B\u{10281}\u{6200}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{80}\u{2000}B\u{a}\u{0}\u{a}")
+*************************************
+Satisfiable: true
+string0 => "\u{80}\u{2000}B\u{a}\u{0}\u{a}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{808}\u{0}B\u{24802}\u{6205}B")
+*************************************
+Satisfiable: true
+string0 => "\u{808}\u{0}B\u{24802}\u{6205}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}\u{10000}B\u{20190}\u{0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}\u{10000}B\u{20190}\u{0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1000}\u{10000}B\u{20190}\u{0}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{1000}\u{10000}B\u{20190}\u{0}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}B\u{8490}\u{0}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}B\u{8490}\u{0}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}B\u{8490}\u{0}\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}B\u{8490}\u{0}\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{0}\u{529}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{0}\u{529}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1110}\u{504}\u{82}A")
+*************************************
+Satisfiable: true
+string0 => "\u{1110}\u{504}\u{82}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{18}\u{5022}0\u{20100}")
+*************************************
+Satisfiable: true
+string0 => "\u{18}\u{5022}0\u{20100}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}\u{4120}\u{16210}B")
+*************************************
+Satisfiable: true
+string0 => "\u{800}\u{4120}\u{16210}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10000}\u{8}\u{223a0}B")
+*************************************
+Satisfiable: true
+string0 => "\u{10000}\u{8}\u{223a0}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800} \u{450}BAC")
+*************************************
+Satisfiable: true
+string0 => "\u{800} \u{450}BAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2000}\u{0} B""")
+*************************************
+Satisfiable: true
+string0 => "\u{2000}\u{0} B"""
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{0}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2028}\u{840}\u{10004}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{2028}\u{840}\u{10004}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2028}\u{840}\u{10004}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{2028}\u{840}\u{10004}BBA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8020}\u{500}\u{ca4}BB\u{b}")
+*************************************
+Satisfiable: true
+string0 => "\u{8020}\u{500}\u{ca4}BB\u{b}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2000}\u{1080}@BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{2000}\u{1080}@BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a0}\u{4000}\u{24040}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{a0}\u{4000}\u{24040}BBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{a0}\u{4000}\u{24040}BBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{a0}\u{4000}\u{24040}BBBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{178b7}BB\u{10}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{178b7}BB\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{178b7}BB\u{10}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{178b7}BB\u{10}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{c}\u{0}\u{0}B\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{c}\u{0}\u{0}B\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{c}\u{0}\u{0}B\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "\u{c}\u{0}\u{0}B\u{0}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{0}\u{20020}B\u{1}\u{24400}")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{0}\u{20020}B\u{1}\u{24400}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{9000}B\u{10000}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{9000}B\u{10000}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{17ab7}B\u{28043}B")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{17ab7}B\u{28043}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{0}\u{17ab7}B\u{28043}BA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{0}\u{17ab7}B\u{28043}BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{2300}\u{17ab7}B\u{20103}\u{20480}")
+*************************************
+Satisfiable: true
+string0 => "@\u{2300}\u{17ab7}B\u{20103}\u{20480}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{2300}\u{17ab7}B\u{20103}\u{20480}A")
+*************************************
+Satisfiable: true
+string0 => "@\u{2300}\u{17ab7}B\u{20103}\u{20480}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "$\u{12000}\u{0}\u{6}")
+*************************************
+Satisfiable: true
+string0 => "$\u{12000}\u{0}\u{6}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10002}\u{c80}\u{19}\u{508}AB")
+*************************************
+Satisfiable: true
+string0 => "\u{10002}\u{c80}\u{19}\u{508}AB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{800}\u{1100}\u{0}\u{8800}*")
+*************************************
+Satisfiable: true
+string0 => "\u{800}\u{1100}\u{0}\u{8800}*"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1818}\u{1000}\u{0}\u{2}B")
+*************************************
+Satisfiable: true
+string0 => "\u{1818}\u{1000}\u{0}\u{2}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}\u{0}\u{8}B")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}\u{0}\u{8}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "@\u{0}\u{0}\u{8}BA")
+*************************************
+Satisfiable: true
+string0 => "@\u{0}\u{0}\u{8}BA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8004}\u{1000}\u{0}\u{2040}B""")
+*************************************
+Satisfiable: true
+string0 => "\u{8004}\u{1000}\u{0}\u{2040}B"""
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{10000}\u{1500}\u{c20}\u{800}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{10000}\u{1500}\u{c20}\u{800}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{800}\u{15ab7}!BB")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{800}\u{15ab7}!BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{800}\u{15ab7}!BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{800}\u{15ab7}!BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{1080}\u{178b7}\u{1}B\u{13}")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{1080}\u{178b7}\u{1}B\u{13}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4000}\u{1080}\u{178b7}\u{1}B\u{13}A")
+*************************************
+Satisfiable: true
+string0 => "\u{4000}\u{1080}\u{178b7}\u{1}B\u{13}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}")
+*************************************
+Satisfiable: true
+string0 => "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}A")
+*************************************
+Satisfiable: true
+string0 => "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1040}\u{0}\u{8000}\u{5}\u{2009}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{1040}\u{0}\u{8000}\u{5}\u{2009}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{104}\u{0}\u{0}\u{1}\u{10}B")
+*************************************
+Satisfiable: true
+string0 => "\u{104}\u{0}\u{0}\u{1}\u{10}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{200}\u{4000}\u{178b7}\u{c322}@B")
+*************************************
+Satisfiable: true
+string0 => "\u{200}\u{4000}\u{178b7}\u{c322}@B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{200}\u{4000}\u{178b7}\u{c322}@BA")
+*************************************
+Satisfiable: true
+string0 => "\u{200}\u{4000}\u{178b7}\u{c322}@BA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+
+====================================================== Method Summaries
+
+====================================================== Method Summaries (HTML)
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:18
+states:             new=253,visited=0,backtracked=253,end=63
+search:             maxDepth=13,constraints=64
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=126
+heap:               new=464,released=701,maxLive=456,gcCycles=253
+instructions:       7988
+max memory:         240MB
+loaded code:        classes=85,methods=1830
+
+====================================================== search finished: 5/31/26 11:10 PM
+

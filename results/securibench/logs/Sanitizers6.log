@@ -1,0 +1,872 @@
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 5/31/26 11:16 PM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "O")
+*************************************
+Satisfiable: true
+string0 => "O"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "C")
+*************************************
+Satisfiable: true
+string0 => "C"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "B")
+*************************************
+Satisfiable: true
+string0 => "B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OA")
+*************************************
+Satisfiable: true
+string0 => "OA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OO")
+*************************************
+Satisfiable: true
+string0 => "OO"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "KH")
+*************************************
+Satisfiable: true
+string0 => "KH"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "YL")
+*************************************
+Satisfiable: true
+string0 => "YL"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "ASB")
+*************************************
+Satisfiable: true
+string0 => "ASB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WQZ")
+*************************************
+Satisfiable: true
+string0 => "WQZ"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "DYB")
+*************************************
+Satisfiable: true
+string0 => "DYB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "JBD")
+*************************************
+Satisfiable: true
+string0 => "JBD"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "QHXA")
+*************************************
+Satisfiable: true
+string0 => "QHXA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "KCBY")
+*************************************
+Satisfiable: true
+string0 => "KCBY"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OZYB")
+*************************************
+Satisfiable: true
+string0 => "OZYB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "GZDN")
+*************************************
+Satisfiable: true
+string0 => "GZDN"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BYOMAC")
+*************************************
+Satisfiable: true
+string0 => "BYOMAC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WOOBV")
+*************************************
+Satisfiable: true
+string0 => "WOOBV"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "KOMIV")
+*************************************
+Satisfiable: true
+string0 => "KOMIV"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AMBLK")
+*************************************
+Satisfiable: true
+string0 => "AMBLK"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AMBLKC")
+*************************************
+Satisfiable: true
+string0 => "AMBLKC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFBW")
+*************************************
+Satisfiable: true
+string0 => "AAGFBW"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OGDFHO")
+*************************************
+Satisfiable: true
+string0 => "OGDFHO"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFHO")
+*************************************
+Satisfiable: true
+string0 => "HAVFHO"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFHOB")
+*************************************
+Satisfiable: true
+string0 => "HAVFHOB"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFBq")
+*************************************
+Satisfiable: true
+string0 => "AAGFBq"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BGDFYw")
+*************************************
+Satisfiable: true
+string0 => "BGDFYw"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFHd")
+*************************************
+Satisfiable: true
+string0 => "HAVFHd"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFHdB")
+*************************************
+Satisfiable: true
+string0 => "HAVFHdB"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "UBYHJ\u{0}")
+*************************************
+Satisfiable: true
+string0 => "UBYHJ\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OUPYC ")
+*************************************
+Satisfiable: true
+string0 => "OUPYC "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WYUPD\u{0}")
+*************************************
+Satisfiable: true
+string0 => "WYUPD\u{0}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:48)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFB`")
+*************************************
+Satisfiable: true
+string0 => "AAGFB`"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WGDFA_")
+*************************************
+Satisfiable: true
+string0 => "WGDFA_"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFH`")
+*************************************
+Satisfiable: true
+string0 => "HAVFH`"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVFH`B")
+*************************************
+Satisfiable: true
+string0 => "HAVFH`B"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "UZBBQ\u{2d0c1}")
+*************************************
+Satisfiable: true
+string0 => "UZBBQ\u{2d0c1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OUPYC\u{10020}")
+*************************************
+Satisfiable: true
+string0 => "OUPYC\u{10020}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "ZWYNN\u{870}")
+*************************************
+Satisfiable: true
+string0 => "ZWYNN\u{870}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "ZWYNN\u{870}A")
+*************************************
+Satisfiable: true
+string0 => "ZWYNN\u{870}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "UEZAC")
+*************************************
+Satisfiable: true
+string0 => "UEZAC"
+*************************************
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WOWBn")
+*************************************
+Satisfiable: true
+string0 => "WOWBn"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "KONXl")
+*************************************
+Satisfiable: true
+string0 => "KONXl"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "GMBAo")
+*************************************
+Satisfiable: true
+string0 => "GMBAo"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "GMBAoC")
+*************************************
+Satisfiable: true
+string0 => "GMBAoC"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFbW")
+*************************************
+Satisfiable: true
+string0 => "AAGFbW"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OGDFhO")
+*************************************
+Satisfiable: true
+string0 => "OGDFhO"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAlA")
+*************************************
+Satisfiable: true
+string0 => "HAVAlA"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAlAB")
+*************************************
+Satisfiable: true
+string0 => "HAVAlAB"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFbq")
+*************************************
+Satisfiable: true
+string0 => "AAGFbq"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "BGDFyw")
+*************************************
+Satisfiable: true
+string0 => "BGDFyw"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAlz")
+*************************************
+Satisfiable: true
+string0 => "HAVAlz"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAlzB")
+*************************************
+Satisfiable: true
+string0 => "HAVAlzB"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "UBYHj\u{0}")
+*************************************
+Satisfiable: true
+string0 => "UBYHj\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OUPYw ")
+*************************************
+Satisfiable: true
+string0 => "OUPYw "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WOUVh\u{0}")
+*************************************
+Satisfiable: true
+string0 => "WOUVh\u{0}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:48)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AAGFu`")
+*************************************
+Satisfiable: true
+string0 => "AAGFu`"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WGDFa_")
+*************************************
+Satisfiable: true
+string0 => "WGDFa_"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAl]")
+*************************************
+Satisfiable: true
+string0 => "HAVAl]"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "HAVAl]B")
+*************************************
+Satisfiable: true
+string0 => "HAVAl]B"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "UZBBq\u{2d0c1}")
+*************************************
+Satisfiable: true
+string0 => "UZBBq\u{2d0c1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "OUPYw\u{10020}")
+*************************************
+Satisfiable: true
+string0 => "OUPYw\u{10020}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "ZWYNn\u{870}")
+*************************************
+Satisfiable: true
+string0 => "ZWYNn\u{870}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "ZWYNn\u{870}A")
+*************************************
+Satisfiable: true
+string0 => "ZWYNn\u{870}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers6.clean(Sanitizers6.java:45)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "FAMBd")
+*************************************
+Satisfiable: true
+string0 => "FAMBd"
+*************************************
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers6.doGet(Sanitizers6.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "AQAF\u{0}")
+*************************************
+Satisfiable: true
+string0 => "AQAF\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "WMPY\u{4}")
+*************************************
+Satisfiable: true
+string0 => "WMPY\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "PASP\u{0}")
+*************************************
+Satisfiable: true
+string0 => "PASP\u{0}"
+*************************************
+
+
+java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit
+	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384)
+	at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)
+	at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
