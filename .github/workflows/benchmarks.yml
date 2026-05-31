@@ -148,7 +148,7 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: Install deps
-        run: pip install benchexec yaml
+        run: pip install benchexec pyyaml
 
       - name: Generate merged report
         id: report
