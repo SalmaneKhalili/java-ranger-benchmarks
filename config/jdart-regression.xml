@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.9//EN"
+  "https://www.sosy-lab.org/benchexec/benchmark-1.9.dtd">
+<benchmark tool="jpf" timelimit="60" memlimit="4096" hardtimelimit="120">
+  <sourcefiles>/home/salmane/IdeaProjects/sv-benchmarks/java/jdart-regression/</sourcefiles>
+  <option name="-Djava.library.path=/home/salmane/IdeaProjects/java-ranger/jpf-symbc/lib">+symbolic.fp=true</option>
+  <option>+target=Main</option>
+  <option>+symbolic.dp=z3bitvector</option>
+  <option>+symbolic.bvlength=64</option>
+  <option>+search.depth_limit=13</option>
+  <option>+symbolic.strings=true</option>
+  <option>+symbolic.string_dp=z3str3</option>
+  <option>+symbolic.string_dp_timeout_ms=3000</option>
+  <option>+symbolic.lazy=on</option>
+  <option>+symbolic.arrays=true</option>
+  <option>+listener=.symbc.SymbolicListener</option>
+  <resultfiles>/home/salmane/IdeaProjects/java-ranger/jpf-core/build/RunJPF.jar</resultfiles>
+</benchmark>

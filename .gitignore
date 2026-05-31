@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.swp
+*.swo
+*~
+results/
+merged-results/
+docs/suites/
+docs/all-suites.*
+docs/failure-analysis.html
