@@ -59,7 +59,7 @@ STATUS_MAP = {
     "UNKNOWN": "unknown", "TIMEOUT": "unknown", "COMPILE_ERR": "unknown",
 }
 
-_MATH_FUNCS = re.compile(r'\b(sin|cos|tan|sqrt|log|asin|acos|atan)\b', re.I)
+
 
 
 # ---------------------------------------------------------------------------
@@ -204,32 +204,27 @@ def parse_results_xml(fpath):
 # ---------------------------------------------------------------------------
 
 def classify_failure(error_text):
-    """Return (category, display_text) for a JPF error message."""
-    if not error_text:
-        return "unknown", "unknown"
-    m = error_text.lower()
+    """Extract actual error type from JPF error text. No speculative genres."""
+    if not error_text or error_text == "unknown":
+        return "unknown", error_text or "unknown"
 
-    if "multianewarray" in m and "symbolic array length" in m:
-        return "MULTIANEWARRAY crash", error_text[:300]
-    if "selectexpression cannot be cast" in m or "selectexpression" in m and "classcastexception" in m:
-        return "SelectExpression crash", error_text[:300]
-    if "virtualinvocation.getinvokedmethod" in m:
-        return "VirtualInvocation NPE", error_text[:300]
-    if "pcparser" in m or "fpadd" in m or "fpsub" in m or "fpmul" in m or "fpdiv" in m:
-        return "unsupported FP expression", error_text[:300]
-    if "compile" in m or "cannot find symbol" in m:
-        return "compile error", error_text[:300]
+    m = error_text.lower()
+    truncated = error_text[:300]
+
     if "timeout" in m or "timed out" in m or "exit_code 124" in m or "exit code 124" in m:
-        return "timeout", "timeout after 60s"
-    if "isnan" in m or ("nan" in m and ("exception" in m or "error" in m or "severe" in m)):
-        return "unsupported NaN handling", error_text[:300]
-    if _MATH_FUNCS.search(error_text) and ("exception" in m or "error" in m or "severe" in m):
-        return "unsupported math function", error_text[:300]
-    if "string operation" in m or "z3str3" in m:
-        return "string operation unsupported", error_text[:300]
-    if "exception" in m or "error" in m or "severe" in m:
-        return "runtime error", error_text[:300]
-    return "unknown", error_text[:300]
+        return "timeout", "timeout"
+    if "cannot find symbol" in m:
+        return "compile error", truncated
+
+    exc = re.search(r'(java\.\S+(?:Exception|Error))', error_text)
+    if exc:
+        return exc.group(1), truncated
+
+    if m.startswith("[severe]"):
+        return "SEVERE", truncated
+
+    first = error_text.split(" | ")[0].strip() if " | " in error_text else error_text.strip()
+    return first[:100] or "unknown", truncated
 
 
 def extract_error(jpf_output):
@@ -248,6 +243,66 @@ def extract_error(jpf_output):
         meaningful = [l.rstrip() for l in lines if l.strip() and "JavaPathFinder" not in l]
         errors = meaningful[-5:]
     return " | ".join(errors[:5])
+
+
+# ---------------------------------------------------------------------------
+# Per-suite XML parser
+# ---------------------------------------------------------------------------
+
+def parse_suite_xml(fpath):
+    """Parse a per-suite XML and return (suite_name, options, version, date, records).
+
+    Each record is a dict with keys: name, expected, status, cputime, walltime, error.
+    """
+    try:
+        if fpath.endswith(".bz2"):
+            with bz2.open(fpath) as f:
+                tree = ET.parse(f)
+        else:
+            tree = ET.parse(fpath)
+    except Exception as e:
+        print(f"Warning: could not parse {fpath}: {e}", file=sys.stderr)
+        return None
+
+    root = tree.getroot()
+    suite_name = root.get("benchmarkname", "unknown")
+    options = root.get("options", "")
+    version = root.get("version", "")
+    date = root.get("date", "")
+
+    records = []
+    for run in root.findall("run"):
+        name = (run.get("name") or "").rsplit("/", 1)[-1]
+        name = name.replace(".yml", "").replace(".java", "")
+        expected = run.get("expectedVerdict", "?")
+
+        cols = {}
+        for col in run.findall("column"):
+            cols[col.get("title")] = col.get("value")
+
+        status = cols.get("status", "unknown")
+        cputime = cols.get("cputime", "0").rstrip("s")
+        walltime = cols.get("walltime", "0").rstrip("s")
+
+        error = ""
+        error_el = run.find("column[@title='error']")
+        if error_el is not None:
+            error = error_el.get("value", "")
+        if not error and status != "correct":
+            category_el = run.find("column[@title='category']")
+            if category_el is not None and category_el.get("value") == "error":
+                error = cols.get("error", "")
+
+        records.append({
+            "name": name,
+            "expected": expected,
+            "status": status,
+            "cputime": cputime,
+            "walltime": walltime,
+            "error": error,
+        })
+
+    return suite_name, options, version, date, records
 
 
 # ---------------------------------------------------------------------------
@@ -529,11 +584,6 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
     print(f"Results: {xml_bz2}")
     os.remove(xml_path)
 
-    try:
-        subprocess.run(["table-generator", xml_bz2, "-o", output_dir], capture_output=True, timeout=60)
-    except FileNotFoundError:
-        print("Warning: table-generator not found, skipping HTML table generation")
-
 
 # ---------------------------------------------------------------------------
 # Subcommand: list-suites
@@ -633,38 +683,6 @@ def cmd_merge(args):
 
     print(f"Merged {len(xml_files)} files into {combined_path} ({len(all_runs)} benchmarks)")
 
-    try:
-        result = subprocess.run(
-            ["table-generator", combined_path, "-o", output_dir, "-n", "all-suites"],
-            capture_output=True, text=True, timeout=120,
-        )
-        for line in result.stdout.splitlines():
-            if "INFO" in line or "WARNING" in line:
-                print(line)
-        for ext in ("html", "csv"):
-            src = os.path.join(output_dir, f"all-suites.{ext}")
-            dst = os.path.join(output_dir, f"all-suites.table.{ext}")
-            if os.path.exists(src) and not os.path.exists(dst):
-                os.rename(src, dst)
-        html_path = os.path.join(output_dir, "all-suites.table.html")
-        if os.path.exists(html_path):
-            with open(html_path) as f:
-                html = f.read()
-            cache_tags = (
-                '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">\n'
-                '<meta http-equiv="Pragma" content="no-cache">\n'
-                '<meta http-equiv="Expires" content="0">\n'
-            )
-            html = html.replace("<head>", f"<head>\n{cache_tags}", 1)
-            with open(html_path, "w") as f:
-                f.write(html)
-    except subprocess.TimeoutExpired:
-        print("table-generator timed out", file=sys.stderr)
-    except FileNotFoundError:
-        print("table-generator not found; combined XML written but no HTML", file=sys.stderr)
-    except subprocess.CalledProcessError as e:
-        print(f"table-generator failed: {e.stderr}", file=sys.stderr)
-
 
 # ---------------------------------------------------------------------------
 # Subcommand: baseline
@@ -746,11 +764,10 @@ def cmd_check(args):
 # Subcommand: analyze
 # ---------------------------------------------------------------------------
 
-def _render_header(build_id, cb):
+def _render_header(cb):
     return f"""\
   <div class="nav">
     <a href="index.html{cb}">&larr; Back to overview</a>
-    <a href="all-suites.table.html{cb}">Full results table</a>
   </div>
   <h1>Java Ranger &mdash; Failure Analysis</h1>
   <p>Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>"""
@@ -947,8 +964,9 @@ def cmd_analyze(args):
 
     reasons = Counter(f["reason"] for f in failures)
 
+    cb = f"?v={args.build_id}" if args.build_id else ""
     sections = {
-        "header": _render_header(args.build_id, args.build_id),
+        "header": _render_header(cb),
         "cards": _render_summary_cards(total_benchmarks, incorrect, unknown, correct_rate),
         "reasons": _render_reasons_table(reasons),
         "suite_table": _render_suite_table(by_suite),
@@ -962,6 +980,265 @@ def cmd_analyze(args):
 
     print(f"Failure analysis written to {args.output}")
     print(f"  {total_benchmarks} total, {incorrect} incorrect, {unknown} unknown ({correct_rate:.1f}% correct)")
+
+
+# ---------------------------------------------------------------------------
+# Report generation — per-suite config + results pages
+# ---------------------------------------------------------------------------
+
+_REPORT_STYLE = """\
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+"""
+
+
+def _render_suite_report_page(records, suite, options, version, run_date, build_id):
+    total = len(records)
+    correct = sum(1 for r in records if r["status"] == "correct")
+    incorrect = sum(1 for r in records if r["status"] == "incorrect")
+    unknown = total - correct - incorrect
+    correct_rate = correct / total * 100 if total else 0
+    cb = f"?v={build_id}" if build_id else ""
+
+    _, summary_date = (run_date.split(" | ") + [""])[:2] if " | " in run_date else ("", run_date)
+
+    rows = ""
+    for r in records:
+        status_class = f"status-{r['status']}"
+        reason, disp = classify_failure(r["error"])
+        error_cell = f'<span class="error-text" title="{escape_xml(r["error"][:500])}">{escape_xml(disp[:200])}</span>' if r["error"] else ""
+        rows += (
+            f"<tr>"
+            f"<td>{escape_xml(r['name'])}</td>"
+            f"<td>{escape_xml(r['expected'])}</td>"
+            f"<td class=\"{status_class}\">{r['status']}</td>"
+            f"<td>{r['walltime'] or r['cputime'] or ''}</td>"
+            f"<td>{error_cell}</td>"
+            f"</tr>\n"
+        )
+
+    html = f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{escape_xml(suite)} — Java Ranger Benchmarks</title>
+<style>{_REPORT_STYLE}</style>
+</head>
+<body>
+<div class="header">
+  <h1>{escape_xml(suite)}</h1>
+  <p>JR: {escape_xml(version)} | Date: {escape_xml(summary_date)}</p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html{cb}">&larr; Back to overview</a>
+  <a href="../failure-analysis.html{cb}">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">{escape_xml(options)}</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">{total}</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">{correct}<span class="pct">({correct_rate:.1f}%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">{incorrect}</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">{unknown}</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  {rows}
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>"""
+    return html
+
+
+def _render_landing_page(suites_info, run_id, build_id):
+    cb = f"?v={build_id}" if build_id else ""
+
+    rows = ""
+    total_all = correct_all = 0
+    for suite_name, info in sorted(suites_info.items()):
+        total = len(info["records"])
+        correct = sum(1 for r in info["records"] if r["status"] == "correct")
+        incorrect = sum(1 for r in info["records"] if r["status"] == "incorrect")
+        unknown = total - correct - incorrect
+        rate = correct / total * 100 if total else 0
+        total_all += total
+        correct_all += correct
+        rows += (
+            f"<tr>"
+            f"<td><a href=\"suites/{escape_xml(suite_name)}/index.html{cb}\">{escape_xml(suite_name)}</a></td>"
+            f"<td>{total}</td>"
+            f"<td>{correct}</td>"
+            f"<td>{incorrect}</td>"
+            f"<td>{unknown}</td>"
+            f"<td>{rate:.1f}%</td>"
+            f"</tr>\n"
+        )
+
+    # Pick a representative version/date from the first suite
+    first_info = next(iter(suites_info.values())) if suites_info else {"version": "", "date": ""}
+    version_str = first_info.get("version", "")
+    run_date = first_info.get("date", "")
+
+    html = f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Java Ranger Benchmarks</title>
+<style>{_REPORT_STYLE}</style>
+</head>
+<body>
+<div class="header">
+  <h1>Java Ranger Benchmarks</h1>
+  <p>JR: {escape_xml(version_str)} | Date: {escape_xml(run_date)}</p>
+</div>
+<div class="container">
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total Benchmarks</h3>
+    <div class="number total">{total_all}</div>
+  </div>
+  <div class="card">
+    <h3>Overall Correct</h3>
+    <div class="number correct">{correct_all}<span class="pct">({correct_all / max(total_all, 1) * 100:.1f}%)</span></div>
+  </div>
+</div>
+
+<h2>Suites</h2>
+<table class="index-table">
+  <tr><th>Suite</th><th>Total</th><th>Correct</th><th>Incorrect</th><th>Unknown</th><th>Correct Rate</th></tr>
+  {rows}
+</table>
+
+<h2>Analysis</h2>
+<ul>
+  <li><a href="failure-analysis.html{cb}">Failure Analysis</a> — overall accuracy and failure reasons breakdown</li>
+</ul>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI &mdash; Run {escape_xml(str(run_id or ""))}
+</div>
+</body>
+</html>"""
+    return html
+
+
+def cmd_report(args):
+    xml_files = [f for f in args.xml_files if os.path.isfile(f)]
+    if not xml_files:
+        print("No XML files found", file=sys.stderr)
+        sys.exit(1)
+
+    output_dir = args.output_dir
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Group by suite, deduplicating by benchmark name
+    suites = {}
+    for fpath in sorted(xml_files):
+        parsed = parse_suite_xml(fpath)
+        if parsed is None:
+            continue
+        suite_name, options, version, run_date, records = parsed
+        if suite_name not in suites:
+            suites[suite_name] = {
+                "records": [],
+                "options": options,
+                "version": version,
+                "date": run_date,
+            }
+        seen_names = set(r["name"] for r in suites[suite_name]["records"])
+        for rec in records:
+            if rec["name"] not in seen_names:
+                seen_names.add(rec["name"])
+                suites[suite_name]["records"].append(rec)
+
+    if not suites:
+        print("No suite data found in XML files", file=sys.stderr)
+        sys.exit(1)
+
+    build_id = args.build_id or datetime.now().strftime("%Y%m%d%H%M%S")
+
+    # Generate per-suite pages
+    for suite_name, info in sorted(suites.items()):
+        suite_dir = os.path.join(output_dir, "suites", suite_name)
+        os.makedirs(suite_dir, exist_ok=True)
+        output_path = os.path.join(suite_dir, "index.html")
+        html = _render_suite_report_page(
+            info["records"], suite_name, info["options"],
+            info["version"], info["date"], build_id,
+        )
+        with open(output_path, "w") as f:
+            f.write(html)
+        print(f"  {suite_name}: {len(info['records'])} benchmarks → {output_path}")
+
+    # Generate landing page
+    index_path = os.path.join(output_dir, "index.html")
+    html = _render_landing_page(suites, args.run_id, build_id)
+    with open(index_path, "w") as f:
+        f.write(html)
+    print(f"Landing page: {index_path}")
+    print(f"Total: {len(suites)} suites, {sum(len(info['records']) for info in suites.values())} benchmarks")
 
 
 # ---------------------------------------------------------------------------
@@ -999,6 +1276,12 @@ def main():
     p.add_argument("--output", default="failure-analysis.html")
     p.add_argument("--build-id", default=None)
 
+    p = add("report", help="Generate per-suite report pages + index.html")
+    p.add_argument("xml_files", nargs="+")
+    p.add_argument("--output-dir", default="docs")
+    p.add_argument("--build-id", default=None)
+    p.add_argument("--run-id", default=None)
+
     args = parser.parse_args()
 
     if args.command == "list-suites":
@@ -1013,6 +1296,8 @@ def main():
         cmd_check(args)
     elif args.command == "analyze":
         cmd_analyze(args)
+    elif args.command == "report":
+        cmd_report(args)
 
 
 if __name__ == "__main__":

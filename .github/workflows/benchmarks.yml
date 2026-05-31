@@ -102,9 +102,6 @@ jobs:
         env:
           GRADLE_OPTS: -Xmx2g -Duser.country=US
 
-      - name: Install table-generator
-        run: pip install benchexec
-
       - name: Create output dir
         run: mkdir -p benchmarks/results/${{ matrix.suite }}
 
@@ -148,9 +145,9 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: Install deps
-        run: pip install benchexec pyyaml
+        run: pip install pyyaml
 
-      - name: Generate merged report
+      - name: Generate merged report + suite pages
         id: report
         run: |
           echo "# Java Ranger Benchmark Report" > report.md
@@ -185,28 +182,21 @@ jobs:
             exit 0
           fi
 
+          # Merge (for check + baseline)
           python3 benchmarks-repo/scripts/ci.py merge merged-results $xml_files
 
+          # Per-suite analysis (uses per-suite XMLs, not merged)
           python3 benchmarks-repo/scripts/ci.py analyze \
-            --output merged-results/failure-analysis.html \
+            --output docs/failure-analysis.html \
             --build-id ${{ github.sha }} \
-            merged-results/all-suites.results.xml.bz2
+            $xml_files
 
-          cp merged-results/all-suites.table.html docs/ 2>/dev/null || true
-          cp merged-results/all-suites.table.csv docs/ 2>/dev/null || true
-          cp merged-results/failure-analysis.html docs/ 2>/dev/null || true
-
-          CACHE_TAGS='<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">\n<meta http-equiv="Pragma" content="no-cache">\n<meta http-equiv="Expires" content="0">\n'
-          for d in results-*/; do
-            suite_name="${d#results-}"
-            suite_name="${suite_name%%-${{ github.run_id }}*}"
-            for f in "$d"/*.results.html; do
-              [ -f "$f" ] || continue
-              mkdir -p "docs/suites/$suite_name"
-              cp "$f" "docs/suites/$suite_name/index.html"
-              python3 -c "import re; p = 'docs/suites/$suite_name/index.html'; c = open(p).read(); open(p, 'w').write(c.replace('<head>', '<head>\n${CACHE_TAGS}', 1))"
-            done
-          done
+          # Per-suite report pages + index.html
+          python3 benchmarks-repo/scripts/ci.py report \
+            $xml_files \
+            --output-dir docs \
+            --build-id ${{ github.sha }} \
+            --run-id ${{ github.run_id }}
 
       - name: Regression check
         id: check
@@ -223,70 +213,6 @@ jobs:
         run: |
           echo "## REGRESSIONS DETECTED" >> "$GITHUB_STEP_SUMMARY"
           echo "Score dropped or new unknowns compared to baseline." >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Generate index page
-        run: |
-          GIT_SHA="${{ github.sha }}"
-          CB="?v=${GIT_SHA}"
-          SUITE_LIST=""
-          for d in results-*/; do
-            suite_name="${d#results-}"
-            suite_name="${suite_name%%-${{ github.run_id }}*}"
-            if [ -d "docs/suites/$suite_name" ]; then
-              SUITE_LIST="${SUITE_LIST}  <li><a href=\"suites/${suite_name}/index.html${CB}\">${suite_name}</a></li>\n"
-            fi
-          done
-
-          cat > docs/index.html << INDEXEOF
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-          <meta http-equiv="Pragma" content="no-cache">
-          <meta http-equiv="Expires" content="0">
-          <title>Java Ranger Benchmarks</title>
-          <style>
-          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
-          .header { background: #2c3e50; color: white; padding: 30px 40px; }
-          .header h1 { margin: 0; font-size: 1.8em; }
-          .header p { margin: 6px 0 0; opacity: 0.8; font-size: 0.9em; }
-          .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-          h2 { font-size: 1.1em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
-          ul { list-style: none; padding: 0; margin: 0; }
-          li { margin: 0; }
-          li a { display: block; padding: 8px 12px; color: #3498db; text-decoration: none; border-radius: 4px; font-size: 0.95em; }
-          li a:hover { background: #e8f0fe; }
-          .footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
-          </style>
-          </head>
-          <body>
-          <div class="header">
-            <h1>Java Ranger Benchmarks</h1>
-            <p>Daily SV-COMP benchmark results tracking</p>
-          </div>
-          <div class="container">
-            <h2>Merged Results</h2>
-            <ul>
-              <li><a href="all-suites.table.html${CB}">All Suites (table-generator)</a></li>
-            </ul>
-            <h2>Per-Suite Tables</h2>
-            <ul>
-            ${SUITE_LIST}
-            </ul>
-            <h2>Analysis</h2>
-            <ul>
-              <li><a href="failure-analysis.html${CB}">Failure Analysis</a></li>
-              <li><a href="all-suites.table.csv${CB}">Raw Data (CSV)</a></li>
-            </ul>
-          </div>
-          <div class="footer">
-            Generated by java-ranger-benchmarks CI &mdash; Run ${{ github.run_id }}
-          </div>
-          </body>
-          </html>
-          INDEXEOF
 
       - name: Commit results and docs
         run: |

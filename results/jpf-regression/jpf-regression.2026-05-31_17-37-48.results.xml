@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE result
+  PUBLIC '+//IDN sosy-lab.org//DTD BenchExec result 3.12//EN'
+  'https://www.sosy-lab.org/benchexec/result-3.12.dtd'>
+<result benchmarkname="jpf-regression" date="2026-05-31 17:42:36 " starttime="2026-05-31T17:37:48" endtime="2026-05-31T17:42:36" tool="JPF" version="HEAD@ade8889" toolmodule="scripts/ci.py" generator="java-ranger-benchmarks CI" options="+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener">
+  <columns>
+    <column title="status"/>
+    <column title="cputime"/>
+    <column title="walltime"/>
+  </columns>
+  <systeminfo hostname="salmane-VivoBook-ASUSLaptop-X515EP-X515EP">
+    <os name="Linux-6.17.0-35-generic"/>
+    <cpu model="11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz" cores="4" frequency="1400028000"/>
+    <ram size="8005791744"/>
+    <environment>
+      <var name="PATH">/home/salmane/.sdkman/candidates/java/8.0.492-tem/bin:/home/salmane/.cargo/bin:/home/salmane/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/salmane/.local/share/JetBrains/Toolbox/scripts</var>
+      <var name="HOME">/home/salmane</var>
+      <var name="USER">salmane</var>
+      <var name="SHELL">/bin/bash</var>
+      <var name="JAVA_HOME">/home/salmane/.sdkman/candidates/java/8.0.492-tem</var>
+    </environment>
+  </systeminfo>
+  <run name="ExDarko_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExDarko_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExDarko_false.log">
+    <column title="cputime" value="1.377474s"/>
+    <column title="walltime" value="1.377474s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExDarko_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExDarko_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExDarko_true.log">
+    <column title="cputime" value="1.193233s"/>
+    <column title="walltime" value="1.193233s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExException_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExException_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExException_false.log">
+    <column title="cputime" value="1.337175s"/>
+    <column title="walltime" value="1.337175s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExException_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExException_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExException_true.log">
+    <column title="cputime" value="1.252623s"/>
+    <column title="walltime" value="1.252623s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExGenSymExe_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExGenSymExe_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExGenSymExe_false.log">
+    <column title="cputime" value="1.001943s"/>
+    <column title="walltime" value="1.001943s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExGenSymExe_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExGenSymExe_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExGenSymExe_true.log">
+    <column title="cputime" value="0.915409s"/>
+    <column title="walltime" value="0.915409s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExLazy_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExLazy_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExLazy_false.log">
+    <column title="cputime" value="1.389649s"/>
+    <column title="walltime" value="1.389649s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExLazy_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExLazy_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExLazy_true.log">
+    <column title="cputime" value="1.378475s"/>
+    <column title="walltime" value="1.378475s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExMIT_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExMIT_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExMIT_false.log">
+    <column title="cputime" value="1.323187s"/>
+    <column title="walltime" value="1.323187s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExMIT_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExMIT_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExMIT_true.log">
+    <column title="cputime" value="1.109380s"/>
+    <column title="walltime" value="1.109380s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe10_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe10_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe10_false.log">
+    <column title="cputime" value="1.684076s"/>
+    <column title="walltime" value="1.684076s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe10_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe10_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe10_true.log">
+    <column title="cputime" value="1.133510s"/>
+    <column title="walltime" value="1.133510s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe11_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe11_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe11_false.log">
+    <column title="cputime" value="1.161522s"/>
+    <column title="walltime" value="1.161522s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe11_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe11_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe11_true.log">
+    <column title="cputime" value="1.430270s"/>
+    <column title="walltime" value="1.430270s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe12_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe12_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe12_false.log">
+    <column title="cputime" value="1.644884s"/>
+    <column title="walltime" value="1.644884s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe12_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe12_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe12_true.log">
+    <column title="cputime" value="1.845231s"/>
+    <column title="walltime" value="1.845231s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe13_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe13_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe13_false.log">
+    <column title="cputime" value="1.821358s"/>
+    <column title="walltime" value="1.821358s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe13_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe13_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe13_true.log">
+    <column title="cputime" value="1.123512s"/>
+    <column title="walltime" value="1.123512s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe14_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe14_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe14_false.log">
+    <column title="cputime" value="1.646587s"/>
+    <column title="walltime" value="1.646587s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe14_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe14_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe14_true.log">
+    <column title="cputime" value="1.393232s"/>
+    <column title="walltime" value="1.393232s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe15_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe15_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe15_false.log">
+    <column title="cputime" value="1.672045s"/>
+    <column title="walltime" value="1.672045s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe15_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe15_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe15_true.log">
+    <column title="cputime" value="1.342211s"/>
+    <column title="walltime" value="1.342211s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe16_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe16_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe16_false.log">
+    <column title="cputime" value="1.244673s"/>
+    <column title="walltime" value="1.244673s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe16_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe16_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe16_true.log">
+    <column title="cputime" value="1.379328s"/>
+    <column title="walltime" value="1.379328s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe17_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe17_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe17_false.log">
+    <column title="cputime" value="1.044190s"/>
+    <column title="walltime" value="1.044190s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe17_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe17_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe17_true.log">
+    <column title="cputime" value="1.051589s"/>
+    <column title="walltime" value="1.051589s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe18_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe18_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe18_false.log">
+    <column title="cputime" value="1.361933s"/>
+    <column title="walltime" value="1.361933s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe18_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe18_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe18_true.log">
+    <column title="cputime" value="1.025410s"/>
+    <column title="walltime" value="1.025410s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe19_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe19_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe19_false.log">
+    <column title="cputime" value="1.612984s"/>
+    <column title="walltime" value="1.612984s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe19_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe19_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe19_true.log">
+    <column title="cputime" value="4.794621s"/>
+    <column title="walltime" value="4.794621s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe1_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe1_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe1_false.log">
+    <column title="cputime" value="2.134647s"/>
+    <column title="walltime" value="2.134647s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe1_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe1_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe1_true.log">
+    <column title="cputime" value="1.102731s"/>
+    <column title="walltime" value="1.102731s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe20_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe20_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe20_false.log">
+    <column title="cputime" value="24.965170s"/>
+    <column title="walltime" value="24.965170s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe20_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe20_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe20_true.log">
+    <column title="cputime" value="1.072528s"/>
+    <column title="walltime" value="1.072528s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe21_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe21_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe21_false.log">
+    <column title="cputime" value="2.690032s"/>
+    <column title="walltime" value="2.690032s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe21_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe21_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe21_true.log">
+    <column title="cputime" value="1.228136s"/>
+    <column title="walltime" value="1.228136s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe25_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe25_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe25_false.log">
+    <column title="cputime" value="1.504798s"/>
+    <column title="walltime" value="1.504798s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe25_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe25_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe25_true.log">
+    <column title="cputime" value="1.043589s"/>
+    <column title="walltime" value="1.043589s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe26_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe26_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe26_false.log">
+    <column title="cputime" value="3.319731s"/>
+    <column title="walltime" value="3.319731s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe26_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe26_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe26_true.log">
+    <column title="cputime" value="1.358010s"/>
+    <column title="walltime" value="1.358010s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe27_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe27_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe27_false.log">
+    <column title="cputime" value="1.707026s"/>
+    <column title="walltime" value="1.707026s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe27_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe27_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe27_true.log">
+    <column title="cputime" value="1.272784s"/>
+    <column title="walltime" value="1.272784s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe28_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe28_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe28_false.log">
+    <column title="cputime" value="1.781146s"/>
+    <column title="walltime" value="1.781146s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe28_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe28_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe28_true.log">
+    <column title="cputime" value="1.431499s"/>
+    <column title="walltime" value="1.431499s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe29_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe29_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe29_false.log">
+    <column title="cputime" value="3.782564s"/>
+    <column title="walltime" value="3.782564s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe29_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe29_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe29_true.log">
+    <column title="cputime" value="1.136128s"/>
+    <column title="walltime" value="1.136128s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe2_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe2_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe2_false.log">
+    <column title="cputime" value="2.423812s"/>
+    <column title="walltime" value="2.423812s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe2_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe2_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe2_true.log">
+    <column title="cputime" value="1.119721s"/>
+    <column title="walltime" value="1.119721s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe3_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe3_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe3_false.log">
+    <column title="cputime" value="1.573123s"/>
+    <column title="walltime" value="1.573123s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe3_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe3_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe3_true.log">
+    <column title="cputime" value="1.274366s"/>
+    <column title="walltime" value="1.274366s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe4_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe4_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe4_false.log">
+    <column title="cputime" value="4.233894s"/>
+    <column title="walltime" value="4.233894s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe4_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe4_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe4_true.log">
+    <column title="cputime" value="1.193597s"/>
+    <column title="walltime" value="1.193597s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe5_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe5_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe5_false.log">
+    <column title="cputime" value="1.845621s"/>
+    <column title="walltime" value="1.845621s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe5_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe5_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe5_true.log">
+    <column title="cputime" value="1.242469s"/>
+    <column title="walltime" value="1.242469s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe6_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe6_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe6_false.log">
+    <column title="cputime" value="1.306117s"/>
+    <column title="walltime" value="1.306117s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe6_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe6_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe6_true.log">
+    <column title="cputime" value="1.165324s"/>
+    <column title="walltime" value="1.165324s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe7_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe7_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe7_false.log">
+    <column title="cputime" value="2.189523s"/>
+    <column title="walltime" value="2.189523s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe7_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe7_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe7_true.log">
+    <column title="cputime" value="1.678228s"/>
+    <column title="walltime" value="1.678228s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe8_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe8_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe8_false.log">
+    <column title="cputime" value="2.546893s"/>
+    <column title="walltime" value="2.546893s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe8_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe8_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe8_true.log">
+    <column title="cputime" value="1.135631s"/>
+    <column title="walltime" value="1.135631s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe9_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe9_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe9_false.log">
+    <column title="cputime" value="1.218505s"/>
+    <column title="walltime" value="1.218505s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe9_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe9_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe9_true.log">
+    <column title="cputime" value="1.153395s"/>
+    <column title="walltime" value="1.153395s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeArrays_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeArrays_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeArrays_false.log">
+    <column title="cputime" value="1.249660s"/>
+    <column title="walltime" value="1.249660s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeArrays_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeArrays_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeArrays_true.log">
+    <column title="cputime" value="1.127120s"/>
+    <column title="walltime" value="1.127120s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeBool_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeBool_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeBool_false.log">
+    <column title="cputime" value="1.055870s"/>
+    <column title="walltime" value="1.055870s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeBool_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeBool_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeBool_true.log">
+    <column title="cputime" value="1.456105s"/>
+    <column title="walltime" value="1.456105s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeComplexMath_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeComplexMath_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeComplexMath_false.log">
+    <column title="cputime" value="1.188837s"/>
+    <column title="walltime" value="1.188837s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeComplexMath_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeComplexMath_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeComplexMath_true.log">
+    <column title="cputime" value="1.332388s"/>
+    <column title="walltime" value="1.332388s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeD2I_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeD2I_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeD2I_false.log">
+    <column title="cputime" value="1.286658s"/>
+    <column title="walltime" value="1.286658s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeD2I_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeD2I_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeD2I_true.log">
+    <column title="cputime" value="1.411196s"/>
+    <column title="walltime" value="1.411196s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeD2L_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeD2L_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeD2L_false.log">
+    <column title="cputime" value="1.373565s"/>
+    <column title="walltime" value="1.373565s"/>
+    <column title="status" value="incorrect"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="error" hidden="true"/>
+    <column title="error" value="heap:               new=467,released=8,maxLive=0,gcCycles=1 | instructions:       6368 | max memory:         115MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 5:41 PM" hidden="true"/>
+  </run>
+  <run name="ExSymExeD2L_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeD2L_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeD2L_true.log">
+    <column title="cputime" value="1.375303s"/>
+    <column title="walltime" value="1.375303s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeF2I_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeF2I_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeF2I_false.log">
+    <column title="cputime" value="1.164283s"/>
+    <column title="walltime" value="1.164283s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeF2I_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeF2I_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeF2I_true.log">
+    <column title="cputime" value="1.395606s"/>
+    <column title="walltime" value="1.395606s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeF2L_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeF2L_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeF2L_false.log">
+    <column title="cputime" value="1.248708s"/>
+    <column title="walltime" value="1.248708s"/>
+    <column title="status" value="incorrect"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="error" hidden="true"/>
+    <column title="error" value="instructions:       6354 | max memory:         115MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 5:41 PM | ***********Warning: everything false" hidden="true"/>
+  </run>
+  <run name="ExSymExeF2L_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeF2L_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeF2L_true.log">
+    <column title="cputime" value="1.964374s"/>
+    <column title="walltime" value="1.964374s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeFNEG_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeFNEG_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeFNEG_false.log">
+    <column title="cputime" value="2.023033s"/>
+    <column title="walltime" value="2.023033s"/>
+    <column title="status" value="incorrect"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="error" hidden="true"/>
+    <column title="error" value="instructions:       6373 | max memory:         115MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 5:41 PM | ***********Warning: everything false" hidden="true"/>
+  </run>
+  <run name="ExSymExeFNEG_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeFNEG_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeFNEG_true.log">
+    <column title="cputime" value="2.345059s"/>
+    <column title="walltime" value="2.345059s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeGetStatic_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeGetStatic_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeGetStatic_false.log">
+    <column title="cputime" value="1.747150s"/>
+    <column title="walltime" value="1.747150s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeGetStatic_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeGetStatic_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeGetStatic_true.log">
+    <column title="cputime" value="1.921983s"/>
+    <column title="walltime" value="1.921983s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeI2D_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeI2D_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeI2D_false.log">
+    <column title="cputime" value="2.257978s"/>
+    <column title="walltime" value="2.257978s"/>
+    <column title="status" value="incorrect"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="error" hidden="true"/>
+    <column title="error" value="heap:               new=467,released=17,maxLive=458,gcCycles=3 | instructions:       6371 | max memory:         115MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 5/31/26 5:41 PM" hidden="true"/>
+  </run>
+  <run name="ExSymExeI2D_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeI2D_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeI2D_true.log">
+    <column title="cputime" value="2.577866s"/>
+    <column title="walltime" value="2.577866s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeI2F_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeI2F_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeI2F_false.log">
+    <column title="cputime" value="1.792863s"/>
+    <column title="walltime" value="1.792863s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeI2F_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeI2F_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeI2F_true.log">
+    <column title="cputime" value="1.798676s"/>
+    <column title="walltime" value="1.798676s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeLCMP_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeLCMP_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeLCMP_false.log">
+    <column title="cputime" value="1.825457s"/>
+    <column title="walltime" value="1.825457s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeLCMP_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeLCMP_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeLCMP_true.log">
+    <column title="cputime" value="1.968589s"/>
+    <column title="walltime" value="1.968589s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeLongBytecodes_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeLongBytecodes_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeLongBytecodes_false.log">
+    <column title="cputime" value="1.961480s"/>
+    <column title="walltime" value="1.961480s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeLongBytecodes_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeLongBytecodes_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeLongBytecodes_true.log">
+    <column title="cputime" value="1.724799s"/>
+    <column title="walltime" value="1.724799s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeResearch_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeResearch_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeResearch_false.log">
+    <column title="cputime" value="1.953462s"/>
+    <column title="walltime" value="1.953462s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeResearch_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeResearch_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeResearch_true.log">
+    <column title="cputime" value="1.969537s"/>
+    <column title="walltime" value="1.969537s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSimple_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSimple_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeSimple_false.log">
+    <column title="cputime" value="1.501674s"/>
+    <column title="walltime" value="1.501674s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSimple_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSimple_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeSimple_true.log">
+    <column title="cputime" value="1.432541s"/>
+    <column title="walltime" value="1.432541s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSuzette_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSuzette_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeSuzette_false.log">
+    <column title="cputime" value="2.050746s"/>
+    <column title="walltime" value="2.050746s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSuzette_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSuzette_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeSuzette_true.log">
+    <column title="cputime" value="1.365196s"/>
+    <column title="walltime" value="1.365196s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSwitch_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSwitch_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeSwitch_false.log">
+    <column title="cputime" value="1.515261s"/>
+    <column title="walltime" value="1.515261s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeSwitch_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeSwitch_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeSwitch_true.log">
+    <column title="cputime" value="1.308139s"/>
+    <column title="walltime" value="1.308139s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeTestAssignments_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeTestAssignments_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeTestAssignments_false.log">
+    <column title="cputime" value="2.113911s"/>
+    <column title="walltime" value="2.113911s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeTestAssignments_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeTestAssignments_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeTestAssignments_true.log">
+    <column title="cputime" value="1.906535s"/>
+    <column title="walltime" value="1.906535s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeTestClassFields_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeTestClassFields_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExeTestClassFields_false.log">
+    <column title="cputime" value="1.972352s"/>
+    <column title="walltime" value="1.972352s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExeTestClassFields_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExeTestClassFields_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExeTestClassFields_true.log">
+    <column title="cputime" value="2.404344s"/>
+    <column title="walltime" value="2.404344s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/ExSymExe_false.log">
+    <column title="cputime" value="1.932945s"/>
+    <column title="walltime" value="1.932945s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="ExSymExe_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/ExSymExe_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/ExSymExe_true.log">
+    <column title="cputime" value="1.452602s"/>
+    <column title="walltime" value="1.452602s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="TestLazy_false" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/TestLazy_false&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="false" logfile="./results/jpf-regression/logs/TestLazy_false.log">
+    <column title="cputime" value="2.585635s"/>
+    <column title="walltime" value="2.585635s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+  <run name="TestLazy_true" files="[&quot;/home/salmane/IdeaProjects/sv-benchmarks/java/common,/home/salmane/IdeaProjects/sv-benchmarks/java/jpf-regression/TestLazy_true&quot;]" propertyFile="/home/salmane/IdeaProjects/sv-benchmarks/java/properties/valid-assert.prp" expectedVerdict="true" logfile="./results/jpf-regression/logs/TestLazy_true.log">
+    <column title="cputime" value="2.068514s"/>
+    <column title="walltime" value="2.068514s"/>
+    <column title="status" value="correct"/>
+    <column title="returnvalue" value="0" hidden="true"/>
+    <column title="category" value="correct" hidden="true"/>
+  </run>
+</result>
