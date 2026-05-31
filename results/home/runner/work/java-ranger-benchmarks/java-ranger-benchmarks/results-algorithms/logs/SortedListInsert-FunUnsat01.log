@@ -1,0 +1,236 @@
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 5/31/26 10:39 PM
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:72)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:72)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main$List.insert(Main.java:57)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main.main(Main.java:70)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
+
+the depth of violation is13
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int0 () Int  5)
+(define-fun int4 () Int  1)
+(define-fun int1 () Int  0)
+(define-fun int3 () Int  2)
+(define-fun int5 () Int  0)
+(define-fun int2 () Int  1)
+*************************************
+Satisfiable: true
+int0 => 5
+int2 => 1
+int1 => 0
+int4 => 1
+int3 => 2
+int5 => 0
+*************************************
+
+Property Violated: PC is constraint # = 12
+int5[0] >= int1[0] &&
+CONST_5 >= int0[5] &&
+int5[0] <= int1[0] &&
+CONST_4 < int0[5] &&
+int4[1] <= int2[1] &&
+int4[1] > int1[0] &&
+CONST_3 < int0[5] &&
+int3[3] > int2[1] &&
+int3[3] > int1[0] &&
+CONST_2 < int0[5] &&
+int2[1] > int1[0] &&
+int0[5] > CONST_1
+Property Violated: result is  "java.lang.AssertionError..."
+****************************
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:72)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:72)
+
+
+====================================================== Method Summaries
+Inputs: 
+
+()  --> "java.lang.AssertionError..."
+
+====================================================== Method Summaries (HTML)
+<h1>Test Cases Generated by Symbolic JavaPath Finder for  (Path Coverage) </h1>
+<table border=1>
+<tr><td>RETURN</td></tr>
+<tr><td>"java.lang.AssertionError..."</td></tr>
+</table>
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=42,visited=0,backtracked=29,end=3
+search:             maxDepth=13,constraints=14
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=25
+heap:               new=538,released=95,maxLive=462,gcCycles=41
+instructions:       7055
+max memory:         240MB
+loaded code:        classes=90,methods=1874
+
+====================================================== search finished: 5/31/26 10:39 PM
+

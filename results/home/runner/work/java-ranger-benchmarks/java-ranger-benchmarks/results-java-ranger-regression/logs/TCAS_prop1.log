@@ -1,0 +1,970 @@
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 5/31/26 10:38 PM
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:137)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:137)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:137)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:137)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+threadTerminated
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Own_Above_Threat(Main.java:157)
+	at Main.Non_Crossing_Biased_Descend(Main.java:135)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Own_Above_Threat(Main.java:157)
+	at Main.Non_Crossing_Biased_Climb(Main.java:101)
+	at Main.alt_assign(Main.java:166)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Own_Above_Threat(Main.java:157)
+	at Main.Non_Crossing_Biased_Descend(Main.java:135)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Own_Above_Threat(Main.java:157)
+	at Main.Non_Crossing_Biased_Climb(Main.java:101)
+	at Main.alt_assign(Main.java:166)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+threadTerminated
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+threadTerminated
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.Non_Crossing_Biased_Descend(Main.java:124)
+	at Main.alt_assign(Main.java:174)
+	at Main.alt_sep_test(Main.java:231)
+	at Main.mainProcess(Main.java:278)
+	at Main.main(Main.java:333)
+
+threadTerminated
+the depth of violation is13
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int7 () Int  401)
+(define-fun int4 () Int  600)
+(define-fun int1 () Int  1)
+(define-fun int0 () Int  301)
+(define-fun int11 () Int  0)
+(define-fun int10 () Int  2)
+(define-fun int8 () Int  401)
+(define-fun int3 () Int  1)
+(define-fun int5 () Int  0)
+(define-fun int2 () Int  0)
+(define-fun int6 () Int  0)
+*************************************
+Satisfiable: true
+int0 => 301
+int2 => 0
+int1 => 1
+int4 => 600
+int11 => 0
+int10 => 2
+int3 => 1
+int6 => 0
+int5 => 0
+int8 => 401
+int7 => 401
+*************************************
+
+Property Violated: PC is constraint # = 12
+int7[514] > CONST_400 &&
+int7[514] >= CONST_400 &&
+int5[-2147483648] < int3[-2147483647] &&
+int6[0] == CONST_0 &&
+int0[301] < CONST_600 &&
+int7[514] <= int8[1073741824] &&
+int11[-2147483648] <= CONST_0 &&
+int10[-2147483648] != CONST_1 &&
+int0[301] > CONST_300 &&
+int4[-2147483047] <= CONST_600 &&
+int2[0] == CONST_0 &&
+int1[-2147483648] != CONST_0
+Property Violated: result is  "java.lang.AssertionError..."
+****************************
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.mainProcess(Main.java:284)
+	at Main.main(Main.java:333)
+
+
+====================================================== Method Summaries
+Inputs: 
+
+()  --> "java.lang.AssertionError..."
+
+====================================================== Method Summaries (HTML)
+<h1>Test Cases Generated by Symbolic JavaPath Finder for  (Path Coverage) </h1>
+<table border=1>
+<tr><td>RETURN</td></tr>
+<tr><td>"java.lang.AssertionError..."</td></tr>
+</table>
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
+
+====================================================== statistics
+elapsed time:       00:00:02
+states:             new=286,visited=0,backtracked=273,end=91
+search:             maxDepth=13,constraints=84
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=146
+heap:               new=520,released=871,maxLive=452,gcCycles=92
+instructions:       11179
+max memory:         240MB
+loaded code:        classes=89,methods=1882
+
+====================================================== search finished: 5/31/26 10:38 PM
+
