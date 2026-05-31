@@ -5,8 +5,6 @@ __pycache__/
 *.swp
 *.swo
 *~
-results/
-merged-results/
-docs/suites/
-docs/all-suites.*
-docs/failure-analysis.html
+AGENTS.md
+gsoc2026/
+README.md
