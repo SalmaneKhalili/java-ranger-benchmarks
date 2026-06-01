@@ -36,8 +36,8 @@ SUITES = [
 
 FP_SUITES = frozenset([
     "float-nonlinear-calculation", "float_unboundedloop",
-    "autostub", "argv-tasks", "jpf-regression",
-    "juliet-java", "jdart-regression", "jbmc-regression",
+    "autostub", "jpf-regression", "juliet-java",
+    "jdart-regression", "jbmc-regression",
 ])
 
 JPF_CONFIG = """\
