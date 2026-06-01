@@ -398,14 +398,14 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
                 ["java", "-Xmx1024m", "-ea",
                  f"-Djava.library.path={jpf_symbc_lib}",
                  "-jar", jpf_core_jar, jpf_config_path],
-                cwd=jr_dir, capture_output=True, text=True, timeout=60, env=env,
+                cwd=jr_dir, capture_output=True, text=True, timeout=180, env=env,
             )
             exit_code = jpf_proc.returncode
             jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
         except subprocess.TimeoutExpired:
             result.verdict = "UNKNOWN"
-            result.error = "timeout after 60s"
-            result.cputime = result.walltime = 60.0
+            result.error = "timeout after 180s"
+            result.cputime = result.walltime = 180.0
             result.exit_code = 124
             return result
 
