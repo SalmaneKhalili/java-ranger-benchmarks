@@ -572,6 +572,10 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
     with open(summary_path) as f:
         print(f.read())
 
+    # Remove old result files for this suite
+    for f in glob.glob(os.path.join(output_dir, f"{suite}.*.results.xml*")):
+        os.remove(f)
+
     sysinfo = get_system_info()
     xml_path = os.path.join(output_dir, f"{suite}.{timestamp}.results.xml")
     write_benchexec_xml(results, suite, start_dt, end_dt, sysinfo, xml_path, jr_version_str, jpf_options)
@@ -1291,6 +1295,13 @@ def cmd_report(args):
     build_id = args.build_id or datetime.now().strftime("%Y%m%d%H%M%S")
     output_dir = os.path.join(args.output_dir, f"v{build_id}")
     os.makedirs(output_dir, exist_ok=True)
+
+    # Remove stale versioned docs (keep only current build)
+    for entry in os.listdir(args.output_dir):
+        entry_path = os.path.join(args.output_dir, entry)
+        if entry.startswith("v") and os.path.isdir(entry_path) and entry != f"v{build_id}":
+            shutil.rmtree(entry_path, ignore_errors=True)
+            print(f"  Removed stale docs: {entry_path}")
 
     # Group by suite, deduplicating by benchmark name
     suites = {}

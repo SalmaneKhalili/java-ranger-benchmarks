@@ -1,8 +1,0 @@
-     Total: 104
-   Correct: 100
- Incorrect: 0
-   Unknown: 4
-Compile_err: 0
-   Timeout: 0
-
-Score: 100 / 104

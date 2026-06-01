@@ -1,8 +1,0 @@
-     Total: 177
-   Correct: 145
- Incorrect: 1
-   Unknown: 30
-Compile_err: 0
-   Timeout: 1
-
-Score: 145 / 177
