@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/1/26 4:37 PM
+====================================================== search started: 6/1/26 5:03 PM
 the depth of violation is2
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -70,5 +70,5 @@ instructions:       6384
 max memory:         240MB
 loaded code:        classes=93,methods=1912
 
-====================================================== search finished: 6/1/26 4:37 PM
+====================================================== search finished: 6/1/26 5:03 PM
 
