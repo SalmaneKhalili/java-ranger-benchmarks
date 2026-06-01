@@ -208,13 +208,19 @@ jobs:
             echo "No baseline.json yet; skipping check"
           fi
 
+      - name: Update baseline
+        if: steps.check.outcome == 'success'
+        run: |
+          python3 benchmarks-repo/scripts/ci.py baseline merged-results/ > config/baseline.json
+          echo "Baseline updated from $(wc -l < config/baseline.json) benchmarks"
+
       - name: Report regressions
         if: steps.check.outcome == 'failure'
         run: |
           echo "## REGRESSIONS DETECTED" >> "$GITHUB_STEP_SUMMARY"
           echo "Score dropped or new unknowns compared to baseline." >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Commit results and docs
+      - name: Commit results, docs, and baseline
         run: |
           git clone "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" repo
           cd repo
@@ -235,8 +241,13 @@ jobs:
             cp -r "${{ github.workspace }}/docs/"* docs/
           fi
 
-          if [ -n "$(git status --porcelain results/ docs/ )" ]; then
-            git add results/ docs/
+          if [ -f "${{ github.workspace }}/config/baseline.json" ]; then
+            mkdir -p config
+            cp "${{ github.workspace }}/config/baseline.json" config/baseline.json
+          fi
+
+          if [ -n "$(git status --porcelain results/ docs/ config/ )" ]; then
+            git add results/ docs/ config/
             git commit -m "benchmark: results for run ${{ github.run_id }}
 
           Trigger: ${{ github.event_name }}
@@ -247,3 +258,9 @@ jobs:
           else
             echo "No changes to commit."
           fi
+
+      - name: Fail build on regression
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "::error::Regressions detected against baseline. Baseline NOT updated."
+          exit 1

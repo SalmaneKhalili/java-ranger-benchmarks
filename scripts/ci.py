@@ -164,9 +164,9 @@ def parse_results_xml(fpath):
         return
 
     root = tree.getroot()
-    suite = root.get("benchmarkname", "unknown")
 
     for run in root.findall("run"):
+        suite = run.get("suite") or root.get("benchmarkname", "unknown")
         name = (run.get("name") or "").rsplit("/", 1)[-1]
         name = name.replace(".yml", "").replace(".java", "")
         expected = run.get("expectedVerdict", "?")
@@ -654,10 +654,12 @@ def cmd_merge(args):
             if si is not None:
                 systeminfo = ET.tostring(si, encoding="unicode")
 
+        suite_name = root.get("benchmarkname", "unknown")
         for run in root.findall("run"):
             name = run.get("name", "")
             if name and name not in seen_names:
                 seen_names.add(name)
+                run.set("suite", suite_name)
                 all_runs.append(ET.tostring(run, encoding="unicode"))
 
     if not all_runs:
