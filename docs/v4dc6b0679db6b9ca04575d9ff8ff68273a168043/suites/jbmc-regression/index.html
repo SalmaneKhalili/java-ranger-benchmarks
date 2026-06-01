@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jbmc-regression — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>jbmc-regression</h1>
+  <p>JR: svcomp@766cc2a | Date: 2026-06-01 18:49:21 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=4dc6b0679db6b9ca04575d9ff8ff68273a168043">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=4dc6b0679db6b9ca04575d9ff8ff68273a168043">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener +symbolic.fp=true</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">177</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">145<span class="pct">(81.9%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">1</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">31</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>ArithmeticException1</td><td>false</td><td class="status-correct">correct</td><td>0.660183</td><td></td></tr>
+<tr><td>ArithmeticException5</td><td>true</td><td class="status-correct">correct</td><td>0.497804</td><td></td></tr>
+<tr><td>ArithmeticException6</td><td>false</td><td class="status-correct">correct</td><td>0.651017</td><td></td></tr>
+<tr><td>ArrayIndexOutOfBoundsException1</td><td>false</td><td class="status-unknown">unknown</td><td>0.642424</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
+<tr><td>ArrayIndexOutOfBoundsException2</td><td>false</td><td class="status-unknown">unknown</td><td>0.650993</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
+<tr><td>ArrayIndexOutOfBoundsException3</td><td>false</td><td class="status-unknown">unknown</td><td>0.633287</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
+<tr><td>BufferedReaderReadLine</td><td>false</td><td class="status-correct">correct</td><td>0.693193</td><td></td></tr>
+<tr><td>CharSequenceBug</td><td>false</td><td class="status-correct">correct</td><td>0.663316</td><td></td></tr>
+<tr><td>CharSequenceToString</td><td>true</td><td class="status-correct">correct</td><td>0.700085</td><td></td></tr>
+<tr><td>ClassCastException1</td><td>false</td><td class="status-correct">correct</td><td>0.501330</td><td></td></tr>
+<tr><td>ClassCastException2</td><td>true</td><td class="status-correct">correct</td><td>0.501875</td><td></td></tr>
+<tr><td>ClassCastException3</td><td>false</td><td class="status-correct">correct</td><td>0.502161</td><td></td></tr>
+<tr><td>Class_method1</td><td>true</td><td class="status-correct">correct</td><td>0.497038</td><td></td></tr>
+<tr><td>Inheritance1</td><td>true</td><td class="status-correct">correct</td><td>0.516277</td><td></td></tr>
+<tr><td>NegativeArraySizeException1</td><td>false</td><td class="status-correct">correct</td><td>0.494748</td><td></td></tr>
+<tr><td>NegativeArraySizeException2</td><td>false</td><td class="status-correct">correct</td><td>0.512772</td><td></td></tr>
+<tr><td>NullPointerException1</td><td>true</td><td class="status-incorrect">incorrect</td><td>0.501288</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during instructionExecuted() notification | java.lang.AssertionError: can't find caller stackframe for: invokevirtual java.lang.Object.hashCode()I |  at gov.nasa.jpf.jvm.bytecode.JVMInvokeInstruction.getArgumentValues(JVMInvokeInstruction.java:167) |  at gov.nasa.jpf.symbc.SymbolicListener.instructionExecuted(SymbolicListener.java:200) | gov.nasa.jpf.JPFListenerException: exception during instructionExecuted() notification">[SEVERE] JPF exception, terminating: exception during instructionExecuted() notification | java.lang.AssertionError: can't find caller stackframe for: invokevirtual java.lang.Object.hashCode()I |  at </span></td></tr>
+<tr><td>NullPointerException2</td><td>false</td><td class="status-correct">correct</td><td>0.497579</td><td></td></tr>
+<tr><td>NullPointerException3</td><td>false</td><td class="status-correct">correct</td><td>0.501218</td><td></td></tr>
+<tr><td>NullPointerException4</td><td>false</td><td class="status-correct">correct</td><td>0.523943</td><td></td></tr>
+<tr><td>RegexMatches01</td><td>true</td><td class="status-correct">correct</td><td>0.493706</td><td></td></tr>
+<tr><td>RegexMatches02</td><td>false</td><td class="status-unknown">unknown</td><td>0.515708</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.util.regex.Pattern |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:143) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.util.regex.Pattern |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:143) |  a</span></td></tr>
+<tr><td>RegexSubstitution01</td><td>true</td><td class="status-correct">correct</td><td>0.504284</td><td></td></tr>
+<tr><td>RegexSubstitution02</td><td>false</td><td class="status-unknown">unknown</td><td>0.503583</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: replaceAll |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: replaceAll |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.</span></td></tr>
+<tr><td>RegexSubstitution03</td><td>true</td><td class="status-correct">correct</td><td>0.500671</td><td></td></tr>
+<tr><td>StaticCharMethods01</td><td>true</td><td class="status-correct">correct</td><td>0.479864</td><td></td></tr>
+<tr><td>StaticCharMethods02</td><td>false</td><td class="status-correct">correct</td><td>0.815190</td><td></td></tr>
+<tr><td>StaticCharMethods03</td><td>false</td><td class="status-unknown">unknown</td><td>0.555646</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isDefined |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isDefined |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.j</span></td></tr>
+<tr><td>StaticCharMethods04</td><td>false</td><td class="status-correct">correct</td><td>0.635456</td><td></td></tr>
+<tr><td>StaticCharMethods05</td><td>false</td><td class="status-unknown">unknown</td><td>0.507708</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ClassNotFoundException: class not found: java.lang.NoSuchMethodException!* |  at Main.main(Main.java:14) |  at Main.main(Main.java:14) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.ClassNotFoundException: class not found:...&quot;">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ClassNotFoundException: class not found: java.lang.NoSuchMethodException!* |  at Main.main(Main.java:14) |  at Main.main(Main.java:14) | error </span></td></tr>
+<tr><td>StaticCharMethods06</td><td>true</td><td class="status-unknown">unknown</td><td>0.533830</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Type not handled in Symbolic Type ValueOf: java.lang.Character |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleValueOf(SymbolicStringHandler.java:1777) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:255) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: ERROR: Type not handled in Symbolic Type ValueOf: java.lang.Character |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleValueOf(SymbolicStringHandler.java:1777)</span></td></tr>
+<tr><td>StringBuilderAppend01</td><td>true</td><td class="status-correct">correct</td><td>0.502541</td><td></td></tr>
+<tr><td>StringBuilderAppend02</td><td>false</td><td class="status-unknown">unknown</td><td>0.500074</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Input parameter type not handled in Symbolic String Append |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleAppend(SymbolicStringHandler.java:2757) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:215) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: ERROR: Input parameter type not handled in Symbolic String Append |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleAppend(SymbolicStringHandler.java:2757) |  a</span></td></tr>
+<tr><td>StringBuilderCapLen01</td><td>true</td><td class="status-correct">correct</td><td>0.497520</td><td></td></tr>
+<tr><td>StringBuilderCapLen02</td><td>false</td><td class="status-correct">correct</td><td>0.619528</td><td></td></tr>
+<tr><td>StringBuilderCapLen03</td><td>false</td><td class="status-correct">correct</td><td>0.651614</td><td></td></tr>
+<tr><td>StringBuilderCapLen04</td><td>false</td><td class="status-unknown">unknown</td><td>0.486530</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: capacity |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: capacity |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jp</span></td></tr>
+<tr><td>StringBuilderChars01</td><td>true</td><td class="status-correct">correct</td><td>0.487895</td><td></td></tr>
+<tr><td>StringBuilderChars02</td><td>false</td><td class="status-correct">correct</td><td>0.624435</td><td></td></tr>
+<tr><td>StringBuilderChars03</td><td>false</td><td class="status-unknown">unknown</td><td>0.489345</td><td><span class="error-text" title="java.lang.ClassCastException: gov.nasa.jpf.symbc.string.SymbolicStringBuilder cannot be cast to gov.nasa.jpf.symbc.string.StringExpression |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleCharAt(SymbolicStringHandler.java:726) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:226) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.ClassCastException: gov.nasa.jpf.symbc.string.SymbolicStringBuilder cannot be cast to gov.nasa.jpf.symbc.string.StringExpression |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handl</span></td></tr>
+<tr><td>StringBuilderChars04</td><td>false</td><td class="status-unknown">unknown</td><td>0.503082</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NegativeArraySizeException |  at Main.main(Main.java:15) |  at Main.main(Main.java:15) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.NegativeArraySizeException  at Main.main...&quot;">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NegativeArraySizeException |  at Main.main(Main.java:15) |  at Main.main(Main.java:15) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>StringBuilderChars05</td><td>false</td><td class="status-unknown">unknown</td><td>0.498953</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: setCharAt |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: setCharAt |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.j</span></td></tr>
+<tr><td>StringBuilderChars06</td><td>false</td><td class="status-unknown">unknown</td><td>0.485331</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: reverse |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: reverse |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf</span></td></tr>
+<tr><td>StringBuilderConstructors01</td><td>true</td><td class="status-correct">correct</td><td>0.540090</td><td></td></tr>
+<tr><td>StringBuilderConstructors02</td><td>false</td><td class="status-unknown">unknown</td><td>0.476544</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: expressiontype not handled: ObjectEquals |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleObjectEquals(SymbolicStringHandler.java:2693) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:171) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: ERROR: expressiontype not handled: ObjectEquals |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleObjectEquals(SymbolicStringHandler.java:2693) |  at gov.nasa.j</span></td></tr>
+<tr><td>StringBuilderInsertDelete01</td><td>true</td><td class="status-correct">correct</td><td>0.502481</td><td></td></tr>
+<tr><td>StringBuilderInsertDelete02</td><td>false</td><td class="status-unknown">unknown</td><td>0.504695</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: insert |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: insert |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.</span></td></tr>
+<tr><td>StringBuilderInsertDelete03</td><td>false</td><td class="status-unknown">unknown</td><td>0.490489</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: insert |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: insert |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.</span></td></tr>
+<tr><td>StringCompare01</td><td>true</td><td class="status-correct">correct</td><td>0.480799</td><td></td></tr>
+<tr><td>StringCompare02</td><td>false</td><td class="status-unknown">unknown</td><td>0.473996</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: regionMatches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: regionMatches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.na</span></td></tr>
+<tr><td>StringCompare03</td><td>false</td><td class="status-unknown">unknown</td><td>0.489020</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: regionMatches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: regionMatches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.na</span></td></tr>
+<tr><td>StringCompare04</td><td>false</td><td class="status-unknown">unknown</td><td>0.484499</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: compareTo |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: compareTo |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.j</span></td></tr>
+<tr><td>StringCompare05</td><td>false</td><td class="status-correct">correct</td><td>0.501862</td><td></td></tr>
+<tr><td>StringConcatenation01</td><td>true</td><td class="status-correct">correct</td><td>0.688553</td><td></td></tr>
+<tr><td>StringConcatenation02</td><td>false</td><td class="status-correct">correct</td><td>0.626910</td><td></td></tr>
+<tr><td>StringConcatenation03</td><td>false</td><td class="status-correct">correct</td><td>0.662117</td><td></td></tr>
+<tr><td>StringConcatenation04</td><td>false</td><td class="status-correct">correct</td><td>0.643483</td><td></td></tr>
+<tr><td>StringConstructors01</td><td>true</td><td class="status-correct">correct</td><td>0.485191</td><td></td></tr>
+<tr><td>StringConstructors02</td><td>false</td><td class="status-correct">correct</td><td>0.626850</td><td></td></tr>
+<tr><td>StringConstructors03</td><td>false</td><td class="status-correct">correct</td><td>0.637224</td><td></td></tr>
+<tr><td>StringConstructors04</td><td>false</td><td class="status-correct">correct</td><td>0.648790</td><td></td></tr>
+<tr><td>StringConstructors05</td><td>false</td><td class="status-correct">correct</td><td>0.689213</td><td></td></tr>
+<tr><td>StringContains01</td><td>false</td><td class="status-correct">correct</td><td>0.634692</td><td></td></tr>
+<tr><td>StringContains02</td><td>false</td><td class="status-correct">correct</td><td>0.634238</td><td></td></tr>
+<tr><td>StringIndexMethods01</td><td>true</td><td class="status-correct">correct</td><td>0.480098</td><td></td></tr>
+<tr><td>StringIndexMethods02</td><td>false</td><td class="status-correct">correct</td><td>0.616919</td><td></td></tr>
+<tr><td>StringIndexMethods03</td><td>false</td><td class="status-unknown">unknown</td><td>0.632287</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149) |  at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Process</span></td></tr>
+<tr><td>StringIndexMethods04</td><td>false</td><td class="status-correct">correct</td><td>0.637845</td><td></td></tr>
+<tr><td>StringIndexMethods05</td><td>false</td><td class="status-unknown">unknown</td><td>0.609518</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149) |  at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Process</span></td></tr>
+<tr><td>StringMiscellaneous01</td><td>true</td><td class="status-correct">correct</td><td>0.493190</td><td></td></tr>
+<tr><td>StringMiscellaneous02</td><td>false</td><td class="status-correct">correct</td><td>0.636918</td><td></td></tr>
+<tr><td>StringMiscellaneous03</td><td>false</td><td class="status-correct">correct</td><td>0.743372</td><td></td></tr>
+<tr><td>StringMiscellaneous04</td><td>true</td><td class="status-correct">correct</td><td>0.487494</td><td></td></tr>
+<tr><td>StringStartEnd01</td><td>true</td><td class="status-correct">correct</td><td>0.474316</td><td></td></tr>
+<tr><td>StringStartEnd02</td><td>false</td><td class="status-correct">correct</td><td>0.712101</td><td></td></tr>
+<tr><td>StringStartEnd03</td><td>false</td><td class="status-correct">correct</td><td>0.713757</td><td></td></tr>
+<tr><td>StringValueOf01</td><td>true</td><td class="status-correct">correct</td><td>0.497668</td><td></td></tr>
+<tr><td>StringValueOf02</td><td>false</td><td class="status-correct">correct</td><td>0.637140</td><td></td></tr>
+<tr><td>StringValueOf03</td><td>false</td><td class="status-correct">correct</td><td>0.501194</td><td></td></tr>
+<tr><td>StringValueOf04</td><td>false</td><td class="status-correct">correct</td><td>0.631568</td><td></td></tr>
+<tr><td>StringValueOf05</td><td>false</td><td class="status-correct">correct</td><td>0.644915</td><td></td></tr>
+<tr><td>StringValueOf06</td><td>false</td><td class="status-correct">correct</td><td>0.627556</td><td></td></tr>
+<tr><td>StringValueOf07</td><td>false</td><td class="status-unknown">unknown</td><td>0.494716</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic string method must have symbolic operand: handleLongValueOf |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleLongValueOf(SymbolicStringHandler.java:2502) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleValueOf(SymbolicStringHandler.java:1695) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:255)">java.lang.RuntimeException: ERROR: symbolic string method must have symbolic operand: handleLongValueOf |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleLongValueOf(SymbolicStringHandler.</span></td></tr>
+<tr><td>StringValueOf08</td><td>false</td><td class="status-unknown">unknown</td><td>0.471806</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.</span></td></tr>
+<tr><td>StringValueOf09</td><td>false</td><td class="status-unknown">unknown</td><td>0.490694</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:298) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:298) |  at gov.nasa.jpf.symbc.</span></td></tr>
+<tr><td>StringValueOf10</td><td>false</td><td class="status-correct">correct</td><td>0.638412</td><td></td></tr>
+<tr><td>SubString01</td><td>true</td><td class="status-correct">correct</td><td>0.497168</td><td></td></tr>
+<tr><td>SubString02</td><td>false</td><td class="status-correct">correct</td><td>0.694598</td><td></td></tr>
+<tr><td>SubString03</td><td>false</td><td class="status-correct">correct</td><td>0.671757</td><td></td></tr>
+<tr><td>TokenTest01</td><td>true</td><td class="status-correct">correct</td><td>0.486339</td><td></td></tr>
+<tr><td>TokenTest02</td><td>false</td><td class="status-unknown">unknown</td><td>0.497811</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: split |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: split |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.s</span></td></tr>
+<tr><td>Validate01</td><td>true</td><td class="status-correct">correct</td><td>0.474666</td><td></td></tr>
+<tr><td>Validate02</td><td>false</td><td class="status-unknown">unknown</td><td>0.493027</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: matches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: matches |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf</span></td></tr>
+<tr><td>aastore_aaload1</td><td>true</td><td class="status-unknown">unknown</td><td>180.000000</td><td><span class="error-text" title="timeout after 180s">timeout</span></td></tr>
+<tr><td>array1</td><td>true</td><td class="status-unknown">unknown</td><td>0.644620</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.ClassNotFoundException: class not found: unsupported symbolic size of array length....&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ClassNotFoundException: class not found: unsupported symbolic size of array length. |  at Main.main(Main.java:16) | ()  --&gt; &quot;java.lang.ClassNotFoundException: class not found: unsupported symbolic size of array length....&quot;">Property Violated: result is  &quot;java.lang.ClassNotFoundException: class not found: unsupported symbolic size of array length....&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ClassNotFoun</span></td></tr>
+<tr><td>array2</td><td>true</td><td class="status-correct">correct</td><td>0.569355</td><td></td></tr>
+<tr><td>arraylength1</td><td>true</td><td class="status-correct">correct</td><td>0.554219</td><td></td></tr>
+<tr><td>arrayread1</td><td>true</td><td class="status-correct">correct</td><td>0.561779</td><td></td></tr>
+<tr><td>assert1</td><td>true</td><td class="status-correct">correct</td><td>0.563662</td><td></td></tr>
+<tr><td>assert2</td><td>false</td><td class="status-correct">correct</td><td>0.660138</td><td></td></tr>
+<tr><td>assert3</td><td>false</td><td class="status-correct">correct</td><td>0.650201</td><td></td></tr>
+<tr><td>assert4</td><td>false</td><td class="status-correct">correct</td><td>0.629989</td><td></td></tr>
+<tr><td>assert5</td><td>true</td><td class="status-correct">correct</td><td>0.549029</td><td></td></tr>
+<tr><td>assert6</td><td>true</td><td class="status-correct">correct</td><td>0.558887</td><td></td></tr>
+<tr><td>astore_aload1</td><td>true</td><td class="status-correct">correct</td><td>0.516387</td><td></td></tr>
+<tr><td>athrow1</td><td>false</td><td class="status-correct">correct</td><td>0.516364</td><td></td></tr>
+<tr><td>basic1</td><td>true</td><td class="status-correct">correct</td><td>0.491236</td><td></td></tr>
+<tr><td>bitwise1</td><td>true</td><td class="status-correct">correct</td><td>0.550519</td><td></td></tr>
+<tr><td>boolean1</td><td>true</td><td class="status-correct">correct</td><td>0.594290</td><td></td></tr>
+<tr><td>boolean2</td><td>true</td><td class="status-correct">correct</td><td>0.541609</td><td></td></tr>
+<tr><td>bug-test-gen-095</td><td>false</td><td class="status-correct">correct</td><td>0.653212</td><td></td></tr>
+<tr><td>bug-test-gen-119-2</td><td>true</td><td class="status-correct">correct</td><td>0.481542</td><td></td></tr>
+<tr><td>bug-test-gen-119</td><td>true</td><td class="status-correct">correct</td><td>0.664619</td><td></td></tr>
+<tr><td>calc</td><td>true</td><td class="status-unknown">unknown</td><td>0.609468</td><td><span class="error-text" title="java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.InitExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:202) |  at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslat">java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.InitExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintT</span></td></tr>
+<tr><td>cast1</td><td>true</td><td class="status-correct">correct</td><td>44.324543</td><td></td></tr>
+<tr><td>catch1</td><td>true</td><td class="status-correct">correct</td><td>0.467268</td><td></td></tr>
+<tr><td>char1</td><td>true</td><td class="status-correct">correct</td><td>0.643330</td><td></td></tr>
+<tr><td>charArray</td><td>true</td><td class="status-unknown">unknown</td><td>0.547547</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: toCharArray |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51)">java.lang.RuntimeException: ERROR: symbolic method not handled: toCharArray |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa</span></td></tr>
+<tr><td>classtest1</td><td>true</td><td class="status-correct">correct</td><td>0.473945</td><td></td></tr>
+<tr><td>const1</td><td>true</td><td class="status-correct">correct</td><td>0.479395</td><td></td></tr>
+<tr><td>constructor1</td><td>true</td><td class="status-correct">correct</td><td>0.489504</td><td></td></tr>
+<tr><td>enum1</td><td>true</td><td class="status-correct">correct</td><td>0.492848</td><td></td></tr>
+<tr><td>exceptions1</td><td>false</td><td class="status-correct">correct</td><td>0.483868</td><td></td></tr>
+<tr><td>exceptions10</td><td>false</td><td class="status-correct">correct</td><td>0.478227</td><td></td></tr>
+<tr><td>exceptions11</td><td>false</td><td class="status-correct">correct</td><td>0.491427</td><td></td></tr>
+<tr><td>exceptions12</td><td>false</td><td class="status-correct">correct</td><td>0.474567</td><td></td></tr>
+<tr><td>exceptions13</td><td>false</td><td class="status-correct">correct</td><td>0.495836</td><td></td></tr>
+<tr><td>exceptions14</td><td>true</td><td class="status-correct">correct</td><td>0.472830</td><td></td></tr>
+<tr><td>exceptions15</td><td>true</td><td class="status-correct">correct</td><td>0.517141</td><td></td></tr>
+<tr><td>exceptions16</td><td>false</td><td class="status-correct">correct</td><td>0.510294</td><td></td></tr>
+<tr><td>exceptions18</td><td>true</td><td class="status-correct">correct</td><td>0.482894</td><td></td></tr>
+<tr><td>exceptions2</td><td>false</td><td class="status-correct">correct</td><td>0.475653</td><td></td></tr>
+<tr><td>exceptions3</td><td>false</td><td class="status-correct">correct</td><td>0.477322</td><td></td></tr>
+<tr><td>exceptions4</td><td>true</td><td class="status-correct">correct</td><td>0.482682</td><td></td></tr>
+<tr><td>exceptions5</td><td>true</td><td class="status-correct">correct</td><td>0.490736</td><td></td></tr>
+<tr><td>exceptions6</td><td>false</td><td class="status-correct">correct</td><td>0.483576</td><td></td></tr>
+<tr><td>exceptions7</td><td>false</td><td class="status-correct">correct</td><td>0.477609</td><td></td></tr>
+<tr><td>exceptions8</td><td>false</td><td class="status-correct">correct</td><td>0.483972</td><td></td></tr>
+<tr><td>exceptions9</td><td>true</td><td class="status-correct">correct</td><td>0.483785</td><td></td></tr>
+<tr><td>fcmpx_dcmpx1</td><td>true</td><td class="status-correct">correct</td><td>0.477594</td><td></td></tr>
+<tr><td>iarith1</td><td>true</td><td class="status-correct">correct</td><td>0.461661</td><td></td></tr>
+<tr><td>iarith2</td><td>true</td><td class="status-correct">correct</td><td>0.475481</td><td></td></tr>
+<tr><td>if_acmp1</td><td>true</td><td class="status-correct">correct</td><td>0.461101</td><td></td></tr>
+<tr><td>if_expr1</td><td>true</td><td class="status-correct">correct</td><td>0.518833</td><td></td></tr>
+<tr><td>if_icmp1</td><td>true</td><td class="status-correct">correct</td><td>0.551677</td><td></td></tr>
+<tr><td>ifxx1</td><td>true</td><td class="status-correct">correct</td><td>0.472656</td><td></td></tr>
+<tr><td>instanceof1</td><td>true</td><td class="status-correct">correct</td><td>0.474498</td><td></td></tr>
+<tr><td>instanceof2</td><td>true</td><td class="status-correct">correct</td><td>0.470993</td><td></td></tr>
+<tr><td>instanceof3</td><td>true</td><td class="status-correct">correct</td><td>0.480286</td><td></td></tr>
+<tr><td>instanceof4</td><td>true</td><td class="status-correct">correct</td><td>0.467418</td><td></td></tr>
+<tr><td>instanceof5</td><td>true</td><td class="status-correct">correct</td><td>0.474196</td><td></td></tr>
+<tr><td>instanceof6</td><td>true</td><td class="status-correct">correct</td><td>0.485474</td><td></td></tr>
+<tr><td>instanceof7</td><td>true</td><td class="status-correct">correct</td><td>0.479862</td><td></td></tr>
+<tr><td>instanceof8</td><td>true</td><td class="status-correct">correct</td><td>0.479673</td><td></td></tr>
+<tr><td>interface1</td><td>false</td><td class="status-correct">correct</td><td>0.483481</td><td></td></tr>
+<tr><td>java_append_char</td><td>false</td><td class="status-correct">correct</td><td>0.622065</td><td></td></tr>
+<tr><td>lazyloading4</td><td>true</td><td class="status-correct">correct</td><td>0.498783</td><td></td></tr>
+<tr><td>list1</td><td>true</td><td class="status-correct">correct</td><td>48.229518</td><td></td></tr>
+<tr><td>long1</td><td>true</td><td class="status-correct">correct</td><td>0.480048</td><td></td></tr>
+<tr><td>lookupswitch1</td><td>true</td><td class="status-correct">correct</td><td>0.568548</td><td></td></tr>
+<tr><td>multinewarray</td><td>true</td><td class="status-correct">correct</td><td>0.467897</td><td></td></tr>
+<tr><td>overloading1</td><td>true</td><td class="status-correct">correct</td><td>0.473965</td><td></td></tr>
+<tr><td>package1</td><td>true</td><td class="status-correct">correct</td><td>0.476804</td><td></td></tr>
+<tr><td>putfield_getfield1</td><td>true</td><td class="status-correct">correct</td><td>0.475062</td><td></td></tr>
+<tr><td>putstatic_getstatic1</td><td>true</td><td class="status-correct">correct</td><td>0.487200</td><td></td></tr>
+<tr><td>recursion2</td><td>true</td><td class="status-correct">correct</td><td>0.464754</td><td></td></tr>
+<tr><td>return1</td><td>false</td><td class="status-correct">correct</td><td>0.474301</td><td></td></tr>
+<tr><td>return2</td><td>false</td><td class="status-correct">correct</td><td>0.633732</td><td></td></tr>
+<tr><td>store_load1</td><td>true</td><td class="status-correct">correct</td><td>0.486674</td><td></td></tr>
+<tr><td>swap1</td><td>true</td><td class="status-correct">correct</td><td>0.486219</td><td></td></tr>
+<tr><td>synchronized</td><td>true</td><td class="status-correct">correct</td><td>0.475663</td><td></td></tr>
+<tr><td>tableswitch1</td><td>true</td><td class="status-correct">correct</td><td>0.595569</td><td></td></tr>
+<tr><td>uninitialised1</td><td>true</td><td class="status-correct">correct</td><td>0.487854</td><td></td></tr>
+<tr><td>virtual1</td><td>true</td><td class="status-correct">correct</td><td>0.470700</td><td></td></tr>
+<tr><td>virtual2</td><td>false</td><td class="status-correct">correct</td><td>0.471455</td><td></td></tr>
+<tr><td>virtual4</td><td>true</td><td class="status-correct">correct</td><td>0.475120</td><td></td></tr>
+<tr><td>virtual_function_unwinding</td><td>true</td><td class="status-correct">correct</td><td>0.485300</td><td></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>
