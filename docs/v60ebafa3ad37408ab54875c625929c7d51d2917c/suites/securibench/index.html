@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>securibench — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>securibench</h1>
+  <p>JR: svcomp@766cc2a | Date: 2026-06-01 19:41:55 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=60ebafa3ad37408ab54875c625929c7d51d2917c">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=60ebafa3ad37408ab54875c625929c7d51d2917c">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">113</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">96<span class="pct">(85.0%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">4</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">13</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>Aliasing1</td><td>false</td><td class="status-correct">correct</td><td>0.693262</td><td></td></tr>
+<tr><td>Aliasing2</td><td>true</td><td class="status-correct">correct</td><td>0.511862</td><td></td></tr>
+<tr><td>Aliasing3</td><td>true</td><td class="status-correct">correct</td><td>0.526804</td><td></td></tr>
+<tr><td>Aliasing4</td><td>false</td><td class="status-correct">correct</td><td>0.708720</td><td></td></tr>
+<tr><td>Aliasing5</td><td>false</td><td class="status-correct">correct</td><td>0.692664</td><td></td></tr>
+<tr><td>Aliasing6</td><td>false</td><td class="status-correct">correct</td><td>0.894937</td><td></td></tr>
+<tr><td>Arrays1</td><td>false</td><td class="status-correct">correct</td><td>0.698054</td><td></td></tr>
+<tr><td>Arrays10</td><td>false</td><td class="status-unknown">unknown</td><td>0.658900</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.ArrayIndexOutOfBoundsException: 2...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 2 |  at securibench.micro.arrays.Arrays10.doGet(Arrays10.java:33) | ()  --&gt; &quot;java.lang.ArrayIndexOutOfBoundsException: 2...&quot;">Property Violated: result is  &quot;java.lang.ArrayIndexOutOfBoundsException: 2...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 2 |  at securibench.micro.arra</span></td></tr>
+<tr><td>Arrays2</td><td>false</td><td class="status-correct">correct</td><td>0.678806</td><td></td></tr>
+<tr><td>Arrays3</td><td>false</td><td class="status-correct">correct</td><td>0.683195</td><td></td></tr>
+<tr><td>Arrays4</td><td>false</td><td class="status-correct">correct</td><td>0.677213</td><td></td></tr>
+<tr><td>Arrays5</td><td>true</td><td class="status-correct">correct</td><td>0.502869</td><td></td></tr>
+<tr><td>Arrays6</td><td>false</td><td class="status-correct">correct</td><td>0.669375</td><td></td></tr>
+<tr><td>Arrays7</td><td>false</td><td class="status-correct">correct</td><td>0.655337</td><td></td></tr>
+<tr><td>Arrays8</td><td>false</td><td class="status-correct">correct</td><td>0.670692</td><td></td></tr>
+<tr><td>Arrays9</td><td>false</td><td class="status-correct">correct</td><td>0.679997</td><td></td></tr>
+<tr><td>Basic1</td><td>false</td><td class="status-correct">correct</td><td>0.694015</td><td></td></tr>
+<tr><td>Basic10</td><td>false</td><td class="status-correct">correct</td><td>0.672297</td><td></td></tr>
+<tr><td>Basic11</td><td>false</td><td class="status-correct">correct</td><td>0.507443</td><td></td></tr>
+<tr><td>Basic12</td><td>false</td><td class="status-correct">correct</td><td>0.725001</td><td></td></tr>
+<tr><td>Basic15</td><td>false</td><td class="status-correct">correct</td><td>0.706267</td><td></td></tr>
+<tr><td>Basic16</td><td>false</td><td class="status-correct">correct</td><td>0.680474</td><td></td></tr>
+<tr><td>Basic17</td><td>false</td><td class="status-correct">correct</td><td>0.697892</td><td></td></tr>
+<tr><td>Basic18</td><td>false</td><td class="status-correct">correct</td><td>0.989243</td><td></td></tr>
+<tr><td>Basic19</td><td>false</td><td class="status-correct">correct</td><td>0.667435</td><td></td></tr>
+<tr><td>Basic2</td><td>false</td><td class="status-correct">correct</td><td>0.702883</td><td></td></tr>
+<tr><td>Basic20</td><td>false</td><td class="status-correct">correct</td><td>0.656090</td><td></td></tr>
+<tr><td>Basic21</td><td>false</td><td class="status-unknown">unknown</td><td>0.651819</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception in native method java.lang.StringBuilder.append | gov.nasa.jpf.JPFException: object is not of type java.lang.String |  at gov.nasa.jpf.vm.DynamicElementInfo.getStringChars(DynamicElementInfo.java:111) |  at gov.nasa.jpf.vm.DynamicElementInfo.asString(DynamicElementInfo.java:99) | gov.nasa.jpf.JPFNativePeerException: exception in native method java.lang.StringBuilder.append">[SEVERE] JPF exception, terminating: exception in native method java.lang.StringBuilder.append | gov.nasa.jpf.JPFException: object is not of type java.lang.String |  at gov.nasa.jpf.vm.DynamicElementI</span></td></tr>
+<tr><td>Basic24</td><td>false</td><td class="status-unknown">unknown</td><td>0.670695</td><td><span class="error-text" title="java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)">java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.execute</span></td></tr>
+<tr><td>Basic25</td><td>false</td><td class="status-unknown">unknown</td><td>0.645754</td><td><span class="error-text" title="java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.pushLocal(StackFrame.java:2088) |  at gov.nasa.jpf.jvm.bytecode.ALOAD.execute(ALOAD.java:46) |  at gov.nasa.jpf.symbc.bytecode.ALOAD.execute(ALOAD.java:81)">java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.pushLocal(StackFrame.java:2088) |  at gov.nasa.jpf.jvm.bytecode.ALOAD.execute(ALOAD.java:46) |  at gov.nasa.jpf.symbc.bytec</span></td></tr>
+<tr><td>Basic26</td><td>false</td><td class="status-correct">correct</td><td>0.693147</td><td></td></tr>
+<tr><td>Basic27</td><td>false</td><td class="status-correct">correct</td><td>0.674601</td><td></td></tr>
+<tr><td>Basic28</td><td>true</td><td class="status-correct">correct</td><td>0.508228</td><td></td></tr>
+<tr><td>Basic29</td><td>false</td><td class="status-correct">correct</td><td>0.721132</td><td></td></tr>
+<tr><td>Basic3</td><td>false</td><td class="status-correct">correct</td><td>0.509000</td><td></td></tr>
+<tr><td>Basic30</td><td>false</td><td class="status-correct">correct</td><td>0.670818</td><td></td></tr>
+<tr><td>Basic31</td><td>false</td><td class="status-correct">correct</td><td>0.695133</td><td></td></tr>
+<tr><td>Basic32</td><td>false</td><td class="status-correct">correct</td><td>0.687792</td><td></td></tr>
+<tr><td>Basic33</td><td>false</td><td class="status-correct">correct</td><td>0.713194</td><td></td></tr>
+<tr><td>Basic34</td><td>false</td><td class="status-correct">correct</td><td>0.774749</td><td></td></tr>
+<tr><td>Basic35</td><td>false</td><td class="status-correct">correct</td><td>1.019968</td><td></td></tr>
+<tr><td>Basic37</td><td>false</td><td class="status-incorrect">incorrect</td><td>34.362932</td><td><span class="error-text" title="heap:               new=1409,released=2294,maxLive=536,gcCycles=609 | instructions:       25837 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ====================================================== search finished: 6/1/26 7:35 PM">heap:               new=1409,released=2294,maxLive=536,gcCycles=609 | instructions:       25837 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ===========================</span></td></tr>
+<tr><td>Basic38</td><td>false</td><td class="status-incorrect">incorrect</td><td>34.232476</td><td><span class="error-text" title="heap:               new=1584,released=2552,maxLive=539,gcCycles=609 | instructions:       41991 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ====================================================== search finished: 6/1/26 7:36 PM">heap:               new=1584,released=2552,maxLive=539,gcCycles=609 | instructions:       41991 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ===========================</span></td></tr>
+<tr><td>Basic39</td><td>false</td><td class="status-incorrect">incorrect</td><td>33.681361</td><td><span class="error-text" title="heap:               new=1669,released=2466,maxLive=538,gcCycles=609 | instructions:       26441 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ====================================================== search finished: 6/1/26 7:36 PM">heap:               new=1669,released=2466,maxLive=538,gcCycles=609 | instructions:       26441 | max memory:         240MB | loaded code:        classes=102,methods=1996 | ===========================</span></td></tr>
+<tr><td>Basic4</td><td>false</td><td class="status-correct">correct</td><td>0.715439</td><td></td></tr>
+<tr><td>Basic5</td><td>false</td><td class="status-correct">correct</td><td>0.516371</td><td></td></tr>
+<tr><td>Basic6</td><td>true</td><td class="status-incorrect">incorrect</td><td>0.505554</td><td><span class="error-text" title="java.lang.AssertionError: unsupported toUpper case |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleToLowerCase(SymbolicStringHandler.java:538) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:379) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.AssertionError: unsupported toUpper case |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleToLowerCase(SymbolicStringHandler.java:538) |  at gov.nasa.jpf.symbc.bytecode.SymbolicS</span></td></tr>
+<tr><td>Basic7</td><td>false</td><td class="status-correct">correct</td><td>0.497338</td><td></td></tr>
+<tr><td>Basic8</td><td>true</td><td class="status-correct">correct</td><td>0.487020</td><td></td></tr>
+<tr><td>Basic9</td><td>false</td><td class="status-correct">correct</td><td>0.721903</td><td></td></tr>
+<tr><td>Collections1</td><td>false</td><td class="status-correct">correct</td><td>0.696180</td><td></td></tr>
+<tr><td>Collections10</td><td>false</td><td class="status-correct">correct</td><td>0.712678</td><td></td></tr>
+<tr><td>Collections12</td><td>false</td><td class="status-correct">correct</td><td>0.683288</td><td></td></tr>
+<tr><td>Collections13</td><td>false</td><td class="status-correct">correct</td><td>0.728205</td><td></td></tr>
+<tr><td>Collections14</td><td>false</td><td class="status-correct">correct</td><td>1.176564</td><td></td></tr>
+<tr><td>Collections2</td><td>false</td><td class="status-correct">correct</td><td>0.713160</td><td></td></tr>
+<tr><td>Collections3</td><td>false</td><td class="status-correct">correct</td><td>0.694940</td><td></td></tr>
+<tr><td>Collections4</td><td>false</td><td class="status-correct">correct</td><td>0.702529</td><td></td></tr>
+<tr><td>Collections5</td><td>false</td><td class="status-correct">correct</td><td>0.724430</td><td></td></tr>
+<tr><td>Collections6</td><td>false</td><td class="status-correct">correct</td><td>0.683460</td><td></td></tr>
+<tr><td>Collections7</td><td>false</td><td class="status-correct">correct</td><td>0.702565</td><td></td></tr>
+<tr><td>Collections8</td><td>true</td><td class="status-correct">correct</td><td>0.546960</td><td></td></tr>
+<tr><td>Collections9</td><td>true</td><td class="status-unknown">unknown</td><td>0.706178</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.IndexOutOfBoundsException: Index: 0, Size: 0...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.IndexOutOfBoundsException: Index: 0, Size: 0 |  at java.util.ArrayList.rangeCheck(ArrayList.java:659) | ()  --&gt; &quot;java.lang.IndexOutOfBoundsException: Index: 0, Size: 0...&quot;">Property Violated: result is  &quot;java.lang.IndexOutOfBoundsException: Index: 0, Size: 0...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.IndexOutOfBoundsException: Index: 0, Size: 0 |  at </span></td></tr>
+<tr><td>Datastructures1</td><td>false</td><td class="status-correct">correct</td><td>0.705340</td><td></td></tr>
+<tr><td>Datastructures2</td><td>false</td><td class="status-correct">correct</td><td>0.709800</td><td></td></tr>
+<tr><td>Datastructures3</td><td>false</td><td class="status-correct">correct</td><td>0.663174</td><td></td></tr>
+<tr><td>Datastructures4</td><td>true</td><td class="status-correct">correct</td><td>0.495799</td><td></td></tr>
+<tr><td>Datastructures5</td><td>false</td><td class="status-correct">correct</td><td>0.507474</td><td></td></tr>
+<tr><td>Datastructures6</td><td>false</td><td class="status-correct">correct</td><td>1.419575</td><td></td></tr>
+<tr><td>Factories1</td><td>false</td><td class="status-correct">correct</td><td>0.508019</td><td></td></tr>
+<tr><td>Factories2</td><td>false</td><td class="status-correct">correct</td><td>0.665395</td><td></td></tr>
+<tr><td>Factories3</td><td>false</td><td class="status-correct">correct</td><td>0.693762</td><td></td></tr>
+<tr><td>Inter1</td><td>false</td><td class="status-correct">correct</td><td>0.680661</td><td></td></tr>
+<tr><td>Inter10</td><td>false</td><td class="status-correct">correct</td><td>0.507064</td><td></td></tr>
+<tr><td>Inter11</td><td>false</td><td class="status-correct">correct</td><td>0.502311</td><td></td></tr>
+<tr><td>Inter12</td><td>false</td><td class="status-correct">correct</td><td>0.685044</td><td></td></tr>
+<tr><td>Inter13</td><td>false</td><td class="status-correct">correct</td><td>0.783875</td><td></td></tr>
+<tr><td>Inter14</td><td>false</td><td class="status-correct">correct</td><td>1.015406</td><td></td></tr>
+<tr><td>Inter2</td><td>false</td><td class="status-correct">correct</td><td>0.717164</td><td></td></tr>
+<tr><td>Inter3</td><td>false</td><td class="status-correct">correct</td><td>0.913425</td><td></td></tr>
+<tr><td>Inter4</td><td>false</td><td class="status-correct">correct</td><td>0.677057</td><td></td></tr>
+<tr><td>Inter5</td><td>false</td><td class="status-correct">correct</td><td>0.517855</td><td></td></tr>
+<tr><td>Inter6</td><td>false</td><td class="status-correct">correct</td><td>0.692737</td><td></td></tr>
+<tr><td>Inter7</td><td>false</td><td class="status-correct">correct</td><td>0.686831</td><td></td></tr>
+<tr><td>Inter8</td><td>false</td><td class="status-correct">correct</td><td>0.698491</td><td></td></tr>
+<tr><td>Inter9</td><td>false</td><td class="status-correct">correct</td><td>0.503781</td><td></td></tr>
+<tr><td>Pred1</td><td>true</td><td class="status-correct">correct</td><td>0.513300</td><td></td></tr>
+<tr><td>Pred2</td><td>false</td><td class="status-correct">correct</td><td>0.729032</td><td></td></tr>
+<tr><td>Pred3</td><td>true</td><td class="status-correct">correct</td><td>0.566028</td><td></td></tr>
+<tr><td>Pred4</td><td>false</td><td class="status-correct">correct</td><td>0.661239</td><td></td></tr>
+<tr><td>Pred5</td><td>false</td><td class="status-correct">correct</td><td>0.663614</td><td></td></tr>
+<tr><td>Pred6</td><td>true</td><td class="status-correct">correct</td><td>0.502912</td><td></td></tr>
+<tr><td>Pred7</td><td>true</td><td class="status-correct">correct</td><td>0.500297</td><td></td></tr>
+<tr><td>Pred8</td><td>false</td><td class="status-correct">correct</td><td>0.726239</td><td></td></tr>
+<tr><td>Pred9</td><td>true</td><td class="status-correct">correct</td><td>0.684335</td><td></td></tr>
+<tr><td>Refl1</td><td>false</td><td class="status-correct">correct</td><td>0.682029</td><td></td></tr>
+<tr><td>Refl2</td><td>false</td><td class="status-unknown">unknown</td><td>0.521075</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: cannot handle symbolic reference for reflection |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:196) |  at gov.nasa.jpf.symbc.bytecode.INVOKEVIRTUAL.execute(INVOKEVIRTUAL.java:51) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)">java.lang.RuntimeException: ERROR: cannot handle symbolic reference for reflection |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:196) |  at gov.nasa.jpf.symbc.bytecode.INV</span></td></tr>
+<tr><td>Refl3</td><td>false</td><td class="status-correct">correct</td><td>0.667959</td><td></td></tr>
+<tr><td>Refl4</td><td>false</td><td class="status-correct">correct</td><td>0.681964</td><td></td></tr>
+<tr><td>Sanitizers1</td><td>false</td><td class="status-unknown">unknown</td><td>4.560976</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf</span></td></tr>
+<tr><td>Sanitizers2</td><td>true</td><td class="status-unknown">unknown</td><td>3.749481</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf</span></td></tr>
+<tr><td>Sanitizers3</td><td>true</td><td class="status-unknown">unknown</td><td>0.667265</td><td><span class="error-text" title="java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)">java.lang.ArrayIndexOutOfBoundsException: 8 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.execute</span></td></tr>
+<tr><td>Sanitizers4</td><td>false</td><td class="status-unknown">unknown</td><td>180.000000</td><td><span class="error-text" title="timeout after 180s">timeout</span></td></tr>
+<tr><td>Sanitizers5</td><td>false</td><td class="status-unknown">unknown</td><td>0.660654</td><td><span class="error-text" title="java.lang.ArrayIndexOutOfBoundsException: 9 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)">java.lang.ArrayIndexOutOfBoundsException: 9 |  at gov.nasa.jpf.vm.StackFrame.dup(StackFrame.java:1383) |  at gov.nasa.jpf.jvm.bytecode.DUP.execute(DUP.java:35) |  at gov.nasa.jpf.vm.ThreadInfo.execute</span></td></tr>
+<tr><td>Sanitizers6</td><td>true</td><td class="status-unknown">unknown</td><td>5.176856</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isDigit |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf</span></td></tr>
+<tr><td>Session1</td><td>false</td><td class="status-correct">correct</td><td>0.687874</td><td></td></tr>
+<tr><td>Session2</td><td>false</td><td class="status-correct">correct</td><td>0.717350</td><td></td></tr>
+<tr><td>Session3</td><td>false</td><td class="status-correct">correct</td><td>0.674298</td><td></td></tr>
+<tr><td>StrongUpdates1</td><td>true</td><td class="status-correct">correct</td><td>0.511084</td><td></td></tr>
+<tr><td>StrongUpdates2</td><td>true</td><td class="status-correct">correct</td><td>0.493649</td><td></td></tr>
+<tr><td>StrongUpdates3</td><td>true</td><td class="status-correct">correct</td><td>0.501115</td><td></td></tr>
+<tr><td>StrongUpdates4</td><td>true</td><td class="status-correct">correct</td><td>0.496762</td><td></td></tr>
+<tr><td>StrongUpdates5</td><td>true</td><td class="status-unknown">unknown</td><td>0.515070</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NullPointerException: Attempt to acquire lock for null object |  at securibench.micro.strong_updates.StrongUpdates5.doGet(StrongUpdates5.java:31) |  at Main.main(Main.java:23) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.NullPointerException: Attempt to acquire...&quot;">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NullPointerException: Attempt to acquire lock for null object |  at securibench.micro.strong_updates.StrongUpdates5.doGet(StrongUpdates5.java:3</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>
