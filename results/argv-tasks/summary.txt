@@ -1,8 +1,8 @@
      Total: 70
-   Correct: 19
- Incorrect: 1
-   Unknown: 38
+   Correct: 34
+ Incorrect: 21
+   Unknown: 13
 Compile_err: 0
-   Timeout: 12
+   Timeout: 2
 
-Score: 19 / 70
+Score: 34 / 70

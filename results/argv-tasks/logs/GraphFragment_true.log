@@ -16,10 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/1/26 10:32 AM
-threadTerminated
-threadTerminated
-threadTerminated
+====================================================== search started: 6/1/26 4:38 PM
 
 ====================================================== Method Summaries
 
@@ -30,13 +27,14 @@ no errors detected
 
 ====================================================== statistics
 elapsed time:       00:00:00
-states:             new=4,visited=0,backtracked=4,end=3
-search:             maxDepth=2,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
-heap:               new=476,released=46,maxLive=460,gcCycles=4
-instructions:       6545
+states:             new=1,visited=0,backtracked=1,end=0
+search:             maxDepth=1,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
+heap:               new=476,released=0,maxLive=0,gcCycles=0
+instructions:       6103
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/1/26 10:32 AM
+====================================================== search finished: 6/1/26 4:38 PM
 
+***********Warning: everything false

@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/1/26 10:29 AM
+====================================================== search started: 6/1/26 4:39 PM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -95,8 +95,8 @@ search:             maxDepth=6,constraints=0
 choice generators:  thread=5 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=4), data=1
 heap:               new=15575,released=15036,maxLive=9549,gcCycles=6
 instructions:       219560
-max memory:         240MB
+max memory:         303MB
 loaded code:        classes=112,methods=2132
 
-====================================================== search finished: 6/1/26 10:29 AM
+====================================================== search finished: 6/1/26 4:39 PM
 
