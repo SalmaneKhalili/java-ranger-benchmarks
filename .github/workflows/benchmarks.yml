@@ -228,6 +228,9 @@ jobs:
           git config user.name "java-ranger-benchmarks CI"
           git config user.email "actions@github.com"
 
+          # Update versioned results link in README
+          sed -i "s|BUILD_ID|${{ github.sha }}|g" README.md
+
           for d in "${{ github.workspace }}"/results-*/; do
             [ -d "$d" ] || continue
             base=$(basename "$d")
@@ -247,8 +250,8 @@ jobs:
             cp "${{ github.workspace }}/config/baseline.json" config/baseline.json
           fi
 
-          if [ -n "$(git status --porcelain results/ docs/ config/ )" ]; then
-            git add results/ docs/ config/
+          if [ -n "$(git status --porcelain results/ docs/ config/ README.md )" ]; then
+            git add results/ docs/ config/ README.md
             git commit -m "benchmark: results for run ${{ github.run_id }}
 
           Trigger: ${{ github.event_name }}
