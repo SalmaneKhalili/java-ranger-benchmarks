@@ -202,8 +202,8 @@ jobs:
         id: check
         continue-on-error: true
         run: |
-          if [ -f config/baseline.json ]; then
-            python3 benchmarks-repo/scripts/ci.py check merged-results/ --baseline config/baseline.json
+          if [ -f benchmarks-repo/config/baseline.json ]; then
+            python3 benchmarks-repo/scripts/ci.py check merged-results/ --baseline benchmarks-repo/config/baseline.json
           else
             echo "No baseline.json yet; skipping check"
           fi
@@ -211,6 +211,7 @@ jobs:
       - name: Update baseline
         if: steps.check.outcome == 'success'
         run: |
+          mkdir -p config
           python3 benchmarks-repo/scripts/ci.py baseline merged-results/ > config/baseline.json
           echo "Baseline updated from $(wc -l < config/baseline.json) benchmarks"
 
