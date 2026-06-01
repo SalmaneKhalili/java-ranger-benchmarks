@@ -822,31 +822,59 @@ def _render_suite_table(by_suite):
   </table>"""
 
 
+def _render_error_cell(error):
+    if not error:
+        return ""
+    title = escape_xml(error[:500])
+    disp = escape_xml(error[:200])
+    return f'<span class="error-text" title="{title}">{disp}</span>'
+
+
 def _render_failures_table(failures):
     rows = "".join(
-        f"<tr>"
+        f"<tr data-suite=\"{escape_xml(f['suite'])}\""
+        f" data-status=\"{f['status']}\""
+        f" data-reason=\"{escape_xml(f['reason'])}\">"
         f"<td>{escape_xml(f['suite'])}</td>"
         f"<td>{escape_xml(f['name'])}</td>"
         f"<td class=\"{'incorrect' if f['status'] == 'incorrect' else 'unknown'}\">{f['status']}</td>"
         f"<td>{escape_xml(f['expected'])}</td>"
         f"<td>{escape_xml(f['reason'])}</td>"
         f"<td>{f['time']}</td>"
-        f"<td><code>{escape_xml(f['error'])}</code></td>"
+        f"<td>{_render_error_cell(f['error'])}</td>"
         f"</tr>\n"
         for f in failures
     )
     return f"""\
   <h2>All Failed Benchmarks</h2>
-  <div class="filter-section">
-    <input type="text" id="filterInput" placeholder="Filter by name, suite, or reason..." onkeyup="filterTable()">
+  <div class="filter-bar">
+    <select id="filterSuite" onchange="filterTable()">
+      <option value="">All Suites</option>
+    </select>
+    <select id="filterStatus" onchange="filterTable()">
+      <option value="">All Results</option>
+      <option value="incorrect">Incorrect</option>
+      <option value="unknown">Unknown</option>
+    </select>
+    <select id="filterReason" onchange="filterTable()">
+      <option value="">All Reasons</option>
+    </select>
+    <input type="text" id="filterInput" placeholder="Search text..." onkeyup="filterTable()">
+    <span id="filterCount" class="filter-count"></span>
   </div>
-  <table id="failures-table">
-    <tr>
-      <th>Suite</th><th>Benchmark</th><th>Result</th>
-      <th>Expected</th><th>Failure Reason</th><th>Time (s)</th><th>Details</th>
-    </tr>
-    {rows}
-  </table>"""
+  <div class="table-wrapper">
+    <table id="failures-table">
+      <thead>
+        <tr>
+          <th>Suite</th><th>Benchmark</th><th>Result</th>
+          <th>Expected</th><th>Failure Reason</th><th>Time (s)</th><th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows}
+      </tbody>
+    </table>
+  </div>"""
 
 
 def _assemble_html(sections, build_id):
@@ -878,18 +906,23 @@ h1, h2, h3 {{ color: #333; }}
 .card .number.unknown {{ color: #f39c12; }}
 .card .number.total {{ color: #3498db; }}
 .card .number.rate {{ color: #2ecc71; }}
-table {{ border-collapse: collapse; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; margin: 20px 0; }}
-th {{ background: #3498db; color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; }}
+table {{ border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; margin: 20px 0; }}
+th {{ background: #3498db; color: white; padding: 12px; text-align: left; font-weight: 600; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; position: sticky; top: 0; z-index: 1; }}
 td {{ padding: 10px 12px; border-bottom: 1px solid #eef; font-size: 0.9em; }}
-tr:hover {{ background: #f8f9ff; }}
+tbody tr:nth-child(even) {{ background: #fafbfc; }}
+tr:hover {{ background: #f0f4ff; }}
 .incorrect {{ color: #e74c3c; font-weight: bold; }}
 .unknown {{ color: #f39c12; font-weight: bold; }}
-code {{ background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }}
+.error-text {{ font-size: 0.85em; color: #666; max-width: 350px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }}
 .nav {{ margin: 20px 0; }}
 .nav a {{ color: #3498db; text-decoration: none; margin-right: 20px; }}
 .nav a:hover {{ text-decoration: underline; }}
-.filter-section {{ margin: 20px 0; }}
-.filter-section input {{ padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1em; width: 300px; }}
+.filter-bar {{ display: flex; gap: 8px; margin: 20px 0; flex-wrap: wrap; align-items: center; }}
+.filter-bar select, .filter-bar input {{ padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9em; background: white; }}
+.filter-bar input {{ flex: 1; min-width: 200px; }}
+.filter-count {{ font-size: 0.85em; color: #888; white-space: nowrap; }}
+.table-wrapper {{ overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
+.table-wrapper table {{ box-shadow: none; margin: 0; }}
 </style>
 </head>
 <body>
@@ -897,16 +930,58 @@ code {{ background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.
 {chr(10).join(v for v in sections.values() if v)}
 </div>
 <script>
+function buildFilterOptions() {{
+  var tbody = document.querySelector('#failures-table tbody');
+  if (!tbody) return;
+  var rows = tbody.getElementsByTagName('tr');
+  if (!rows.length) return;
+  var suites = {{}}, reasons = {{}};
+  for (var i = 0; i < rows.length; i++) {{
+    suites[rows[i].getAttribute('data-suite')] = true;
+    reasons[rows[i].getAttribute('data-reason')] = true;
+  }}
+  var suiteSel = document.getElementById('filterSuite');
+  var reasonSel = document.getElementById('filterReason');
+  Object.keys(suites).sort().forEach(function(s) {{
+    var opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    suiteSel.appendChild(opt);
+  }});
+  Object.keys(reasons).sort().forEach(function(r) {{
+    var opt = document.createElement('option');
+    opt.value = r; opt.textContent = r;
+    reasonSel.appendChild(opt);
+  }});
+  filterTable();
+}}
+
 function filterTable() {{
+  var suiteVal = document.getElementById('filterSuite').value;
+  var statusVal = document.getElementById('filterStatus').value;
+  var reasonVal = document.getElementById('filterReason').value;
   var input = document.getElementById('filterInput');
   var filter = input.value.toUpperCase();
-  var table = document.getElementById('failures-table');
-  var rows = table.getElementsByTagName('tr');
-  for (var i = 1; i < rows.length; i++) {{
-    var text = rows[i].textContent || rows[i].innerText;
-    rows[i].style.display = text.toUpperCase().indexOf(filter) > -1 ? '' : 'none';
+  var tbody = document.querySelector('#failures-table tbody');
+  if (!tbody) return;
+  var rows = tbody.getElementsByTagName('tr');
+  var visible = 0;
+  for (var i = 0; i < rows.length; i++) {{
+    var show = true;
+    if (suiteVal && rows[i].getAttribute('data-suite') !== suiteVal) show = false;
+    if (show && statusVal && rows[i].getAttribute('data-status') !== statusVal) show = false;
+    if (show && reasonVal && rows[i].getAttribute('data-reason') !== reasonVal) show = false;
+    if (show && filter) {{
+      var text = rows[i].textContent || rows[i].innerText;
+      if (text.toUpperCase().indexOf(filter) === -1) show = false;
+    }}
+    rows[i].style.display = show ? '' : 'none';
+    if (show) visible++;
   }}
+  var count = document.getElementById('filterCount');
+  if (count) count.textContent = visible + ' of ' + rows.length + ' failures';
 }}
+
+window.addEventListener('DOMContentLoaded', buildFilterOptions);
 </script>
 </body>
 </html>"""
