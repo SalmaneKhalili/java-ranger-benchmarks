@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/1/26 7:34 PM
+====================================================== search started: 6/2/26 4:12 AM
 
 ====================================================== search constraint
 depth limit reached: 13
@@ -2370,5 +2370,5 @@ instructions:       16965
 max memory:         240MB
 loaded code:        classes=87,methods=1835
 
-====================================================== search finished: 6/1/26 7:34 PM
+====================================================== search finished: 6/2/26 4:12 AM
 

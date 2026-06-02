@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>argv-tasks — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>argv-tasks</h1>
+  <p>JR: svcomp@766cc2a | Date: 2026-06-02 04:18:39 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=25463e2fb61575698ae4247419afde9d85f31e2b">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=25463e2fb61575698ae4247419afde9d85f31e2b">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">70</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">35<span class="pct">(50.0%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">21</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">14</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>AbstractChart_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.540803</td><td></td></tr>
+<tr><td>AbstractChart_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.508862</td><td><span class="error-text" title="heap:               new=496,released=44,maxLive=0,gcCycles=1 | instructions:       6258 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:12 AM">heap:               new=496,released=44,maxLive=0,gcCycles=1 | instructions:       6258 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================</span></td></tr>
+<tr><td>AbstractSerializationStreamReader_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.466124</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.s</span></td></tr>
+<tr><td>AbstractSerializationStreamReader_true</td><td>false</td><td class="status-unknown">unknown</td><td>0.456483</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.s</span></td></tr>
+<tr><td>AccelerometerListener_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.501334</td><td><span class="error-text" title="instructions:       6095 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:12 AM | ***********Warning: everything false">instructions:       6095 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:12 AM | **********</span></td></tr>
+<tr><td>AccelerometerListener_true</td><td>true</td><td class="status-correct">correct</td><td>0.511159</td><td></td></tr>
+<tr><td>ActiveCheck</td><td>true</td><td class="status-correct">correct</td><td>132.581226</td><td></td></tr>
+<tr><td>AlbersProjection_false</td><td>false</td><td class="status-unknown">unknown</td><td>1.304941</td><td><span class="error-text" title="# If you would like to submit a bug report, please visit: | #   https://github.com/adoptium/adoptium-support/issues | # The crash happened outside the Java Virtual Machine in native code. | # See problematic frame for where to report the bug. | #"># If you would like to submit a bug report, please visit: | #   https://github.com/adoptium/adoptium-support/issues | # The crash happened outside the Java Virtual Machine in native code. | # See prob</span></td></tr>
+<tr><td>AlbersProjection_true</td><td>true</td><td class="status-unknown">unknown</td><td>1.185404</td><td><span class="error-text" title="# If you would like to submit a bug report, please visit: | #   https://github.com/adoptium/adoptium-support/issues | # The crash happened outside the Java Virtual Machine in native code. | # See problematic frame for where to report the bug. | #"># If you would like to submit a bug report, please visit: | #   https://github.com/adoptium/adoptium-support/issues | # The crash happened outside the Java Virtual Machine in native code. | # See prob</span></td></tr>
+<tr><td>Base</td><td>true</td><td class="status-correct">correct</td><td>0.774751</td><td></td></tr>
+<tr><td>Base64</td><td>true</td><td class="status-correct">correct</td><td>0.579713</td><td></td></tr>
+<tr><td>BufferedBlockCipher</td><td>true</td><td class="status-unknown">unknown</td><td>0.689958</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149) |  at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Process</span></td></tr>
+<tr><td>Constant_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.517222</td><td><span class="error-text" title="instructions:       6073 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6073 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>Constant_false2</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.522980</td><td><span class="error-text" title="instructions:       6073 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6073 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>Constant_true</td><td>true</td><td class="status-correct">correct</td><td>0.520508</td><td></td></tr>
+<tr><td>CorrelationUtils_exceptionless</td><td>true</td><td class="status-unknown">unknown</td><td>0.504614</td><td><span class="error-text" title="java.lang.RuntimeException: ## Error: Math.sqrt not supported |  at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.sqrt(ProblemGeneral.java:165) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:339) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:297)">java.lang.RuntimeException: ## Error: Math.sqrt not supported |  at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.sqrt(ProblemGeneral.java:165) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpress</span></td></tr>
+<tr><td>CorrelationUtils_exceptionprone</td><td>false</td><td class="status-unknown">unknown</td><td>0.518933</td><td><span class="error-text" title="java.lang.RuntimeException: ## Error: Math.sqrt not supported |  at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.sqrt(ProblemGeneral.java:165) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:339) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:297)">java.lang.RuntimeException: ## Error: Math.sqrt not supported |  at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.sqrt(ProblemGeneral.java:165) |  at gov.nasa.jpf.symbc.numeric.PCParser.getExpress</span></td></tr>
+<tr><td>CustomViewAbove</td><td>true</td><td class="status-correct">correct</td><td>0.716883</td><td></td></tr>
+<tr><td>DiskBasedCache</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.530667</td><td><span class="error-text" title="instructions:       6117 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6117 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>DistinguishedNameParser</td><td>false</td><td class="status-unknown">unknown</td><td>5.744288</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.IllegalStateException: Unexpected end of DN: ...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.IllegalStateException: Unexpected end of DN: |  at Main.nextAT(Main.java:70) | ()  --&gt; &quot;java.lang.IllegalStateException: Unexpected end of DN: ...&quot;">Property Violated: result is  &quot;java.lang.IllegalStateException: Unexpected end of DN: ...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.IllegalStateException: Unexpected end of DN: |  at</span></td></tr>
+<tr><td>EquidistantConicProjection_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.565089</td><td><span class="error-text" title="heap:               new=499,released=44,maxLive=0,gcCycles=1 | instructions:       6287 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM">heap:               new=499,released=44,maxLive=0,gcCycles=1 | instructions:       6287 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================</span></td></tr>
+<tr><td>EquidistantConicProjection_true</td><td>true</td><td class="status-correct">correct</td><td>0.528441</td><td></td></tr>
+<tr><td>FractalTouchHandler_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.555146</td><td><span class="error-text" title="instructions:       6147 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6147 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>FractalTouchHandler_true</td><td>true</td><td class="status-correct">correct</td><td>0.540483</td><td></td></tr>
+<tr><td>GaussianGenerator_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.624718</td><td></td></tr>
+<tr><td>GaussianGenerator_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.538960</td><td><span class="error-text" title="instructions:       6138 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6138 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>GraphFragment_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.540824</td><td><span class="error-text" title="instructions:       6103 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | ***********Warning: everything false">instructions:       6103 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:14 AM | **********</span></td></tr>
+<tr><td>GraphFragment_true</td><td>true</td><td class="status-correct">correct</td><td>0.555424</td><td></td></tr>
+<tr><td>HPack</td><td>true</td><td class="status-correct">correct</td><td>0.647824</td><td></td></tr>
+<tr><td>HebrewDate</td><td>true</td><td class="status-unknown">unknown</td><td>180.000000</td><td><span class="error-text" title="timeout after 180s">timeout</span></td></tr>
+<tr><td>HighlightView_false</td><td>false</td><td class="status-correct">correct</td><td>0.607532</td><td></td></tr>
+<tr><td>HighlightView_true</td><td>true</td><td class="status-correct">correct</td><td>0.975762</td><td></td></tr>
+<tr><td>HotspotIntegerGenerator_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.509828</td><td><span class="error-text" title="instructions:       6272 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6272 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>HotspotIntegerGenerator_true</td><td>true</td><td class="status-correct">correct</td><td>0.505244</td><td></td></tr>
+<tr><td>HttpConnectionHandler</td><td>true</td><td class="status-correct">correct</td><td>3.424206</td><td></td></tr>
+<tr><td>HttpTransport_false</td><td>false</td><td class="status-correct">correct</td><td>0.661722</td><td></td></tr>
+<tr><td>HttpTransport_true</td><td>true</td><td class="status-correct">correct</td><td>0.605359</td><td></td></tr>
+<tr><td>ImageRequest</td><td>true</td><td class="status-correct">correct</td><td>0.560638</td><td></td></tr>
+<tr><td>JobsExample</td><td>false</td><td class="status-unknown">unknown</td><td>0.459459</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.UnsupportedOperationException: getenv() not yet supported |  at java.lang.System.getenv(System.java:158) |  at Main.&lt;clinit&gt;(Main.java:30) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.UnsupportedOperationException: getenv() ...&quot;">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.UnsupportedOperationException: getenv() not yet supported |  at java.lang.System.getenv(System.java:158) |  at Main.&lt;clinit&gt;(Main.java:30) | er</span></td></tr>
+<tr><td>MathHelper_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.526026</td><td><span class="error-text" title="instructions:       6086 | max memory:         240MB | loaded code:        classes=85,methods=1832 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6086 | max memory:         240MB | loaded code:        classes=85,methods=1832 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>MathHelper_true</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.510019</td><td><span class="error-text" title="instructions:       6084 | max memory:         240MB | loaded code:        classes=85,methods=1832 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6084 | max memory:         240MB | loaded code:        classes=85,methods=1832 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>Pan_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.629985</td><td></td></tr>
+<tr><td>Pan_exceptionprone</td><td>false</td><td class="status-unknown">unknown</td><td>0.629179</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.ArrayIndexOutOfBoundsException: 1...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 1 |  at Main.apply(Main.java:59) | ()  --&gt; &quot;java.lang.ArrayIndexOutOfBoundsException: 1...&quot;">Property Violated: result is  &quot;java.lang.ArrayIndexOutOfBoundsException: 1...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 1 |  at Main.apply(Main.java:5</span></td></tr>
+<tr><td>PieSegment_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.503730</td><td><span class="error-text" title="heap:               new=473,released=20,maxLive=0,gcCycles=1 | instructions:       6118 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM">heap:               new=473,released=20,maxLive=0,gcCycles=1 | instructions:       6118 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================</span></td></tr>
+<tr><td>PieSegment_true</td><td>true</td><td class="status-correct">correct</td><td>0.526661</td><td></td></tr>
+<tr><td>Piecewise_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.517237</td><td><span class="error-text" title="instructions:       6201 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6201 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>Piecewise_true</td><td>true</td><td class="status-correct">correct</td><td>0.522397</td><td></td></tr>
+<tr><td>ProjectionGridRoundTripper_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.645904</td><td></td></tr>
+<tr><td>ProjectionGridRoundTripper_exceptionprone</td><td>false</td><td class="status-unknown">unknown</td><td>0.467599</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 1 |  at Main.runGrid(Main.java:16) |  at Main.main(Main.java:45) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.ArrayIndexOutOfBoundsException: 1  at Ma...&quot;">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.ArrayIndexOutOfBoundsException: 1 |  at Main.runGrid(Main.java:16) |  at Main.main(Main.java:45) | error #1: gov.nasa.jpf.vm.NoUncaughtExceptio</span></td></tr>
+<tr><td>ProjectionMath_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.503710</td><td></td></tr>
+<tr><td>ProjectionMath_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.497786</td><td><span class="error-text" title="instructions:       6022 | max memory:         240MB | loaded code:        classes=85,methods=1837 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6022 | max memory:         240MB | loaded code:        classes=85,methods=1837 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>ReverseInterpolator_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.515587</td><td><span class="error-text" title="instructions:       6046 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6046 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>ReverseInterpolator_false2</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.520793</td><td><span class="error-text" title="instructions:       6046 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6046 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>ReverseInterpolator_true</td><td>true</td><td class="status-correct">correct</td><td>0.497964</td><td></td></tr>
+<tr><td>SpdyStream</td><td>false</td><td class="status-correct">correct</td><td>0.666381</td><td></td></tr>
+<tr><td>StdAudio_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.518754</td><td></td></tr>
+<tr><td>StdAudio_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.524116</td><td><span class="error-text" title="instructions:       6088 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6088 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>StdRandom_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.512904</td><td></td></tr>
+<tr><td>StdRandom_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.536604</td><td><span class="error-text" title="instructions:       6020 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6020 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+<tr><td>StrictLineReader</td><td>true</td><td class="status-unknown">unknown</td><td>0.593512</td><td><span class="error-text" title="Property Violated: result is  &quot;java.lang.NegativeArraySizeException...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NegativeArraySizeException |  at Main.&lt;clinit&gt;(Main.java:49) | ()  --&gt; &quot;java.lang.NegativeArraySizeException...&quot;">Property Violated: result is  &quot;java.lang.NegativeArraySizeException...&quot; | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.NegativeArraySizeException |  at Main.&lt;clinit&gt;(Main.java:49) | ()  --</span></td></tr>
+<tr><td>SunTimes_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.500083</td><td><span class="error-text" title="heap:               new=464,released=12,maxLive=0,gcCycles=1 | instructions:       6053 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/2/26 4:18 AM">heap:               new=464,released=12,maxLive=0,gcCycles=1 | instructions:       6053 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================</span></td></tr>
+<tr><td>SunTimes_true</td><td>true</td><td class="status-correct">correct</td><td>0.497430</td><td></td></tr>
+<tr><td>TallyCounts_false</td><td>false</td><td class="status-correct">correct</td><td>0.599211</td><td></td></tr>
+<tr><td>TallyCounts_true</td><td>true</td><td class="status-unknown">unknown</td><td>0.515079</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384) |  at gov.nasa.jpf.s</span></td></tr>
+<tr><td>TimeChart</td><td>true</td><td class="status-correct">correct</td><td>0.524707</td><td></td></tr>
+<tr><td>TouchPadView</td><td>true</td><td class="status-correct">correct</td><td>0.618707</td><td></td></tr>
+<tr><td>VelocityTracker_false</td><td>false</td><td class="status-correct">correct</td><td>0.659331</td><td></td></tr>
+<tr><td>VelocityTracker_true</td><td>true</td><td class="status-correct">correct</td><td>0.526495</td><td></td></tr>
+<tr><td>WeibullGenerator_exceptionless</td><td>true</td><td class="status-correct">correct</td><td>0.506088</td><td></td></tr>
+<tr><td>WeibullGenerator_exceptionprone</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.523370</td><td><span class="error-text" title="instructions:       6169 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | ***********Warning: everything false">instructions:       6169 | max memory:         240MB | loaded code:        classes=85,methods=1830 | ====================================================== search finished: 6/2/26 4:18 AM | **********</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

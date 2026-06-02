@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/1/26 7:34 PM
+====================================================== search started: 6/2/26 4:12 AM
 threadTerminated
 the depth of violation is3
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -63,14 +63,14 @@ Inputs:
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:03
 states:             new=4,visited=0,backtracked=1,end=1
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
 heap:               new=476,released=17,maxLive=452,gcCycles=2
 instructions:       8272
-max memory:         303MB
+max memory:         429MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/1/26 7:34 PM
+====================================================== search finished: 6/2/26 4:12 AM
 
