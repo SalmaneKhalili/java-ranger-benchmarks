@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/2/26 4:12 AM
+====================================================== search started: 6/3/26 4:22 AM
 threadTerminated
 threadTerminated
 threadTerminated
@@ -919,7 +919,7 @@ int6[0] == CONST_0 &&
 int0[301] < CONST_600 &&
 int7[514] <= int8[1073741824] &&
 int11[-2147483648] <= CONST_0 &&
-int10[0] != CONST_1 &&
+int10[-2147483648] != CONST_1 &&
 int0[301] > CONST_300 &&
 int4[-2147483047] <= CONST_600 &&
 int2[0] == CONST_0 &&
@@ -966,5 +966,5 @@ instructions:       11179
 max memory:         240MB
 loaded code:        classes=89,methods=1882
 
-====================================================== search finished: 6/2/26 4:12 AM
+====================================================== search finished: 6/3/26 4:22 AM
 
