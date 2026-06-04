@@ -10,13 +10,13 @@ symbolic.max_byte=127
 symbolic.max_char=65535
 symbolic.min_double=4.9E-324
 symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/4/26 4:22 AM
+====================================================== search started: 6/4/26 10:32 PM
 
 ====================================================== search constraint
 depth limit reached: 13
@@ -36161,8 +36161,8 @@ search:             maxDepth=13,constraints=4052
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4072
 heap:               new=1130,released=6275,maxLive=483,gcCycles=8145
 instructions:       158041
-max memory:         475MB
+max memory:         422MB
 loaded code:        classes=89,methods=1843
 
-====================================================== search finished: 6/4/26 4:22 AM
+====================================================== search finished: 6/4/26 10:32 PM
 

@@ -10,13 +10,13 @@ symbolic.max_byte=127
 symbolic.max_char=65535
 symbolic.min_double=4.9E-324
 symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 766cc2a1b34600d24b149a8be0e5ff31aefa4689) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/4/26 4:18 AM
+====================================================== search started: 6/4/26 10:28 PM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -15264,7 +15264,7 @@ threadTerminated
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:32
+elapsed time:       00:00:33
 states:             new=695,visited=0,backtracked=695,end=86
 search:             maxDepth=13,constraints=232
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=347
@@ -15273,5 +15273,5 @@ instructions:       26441
 max memory:         240MB
 loaded code:        classes=102,methods=1996
 
-====================================================== search finished: 6/4/26 4:19 AM
+====================================================== search finished: 6/4/26 10:28 PM
 
