@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>algorithms — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>algorithms</h1>
+  <p>JR: svcomp@6d9cf58 | Date: 2026-06-05 17:41:56 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=86bdcc6ef57827fdcc7920d8453bea0228d0aafa">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=86bdcc6ef57827fdcc7920d8453bea0228d0aafa">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">40</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">24<span class="pct">(60.0%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">6</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">10</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>BellmanFord-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.626234</td><td></td></tr>
+<tr><td>BellmanFord-FunSat02</td><td>false</td><td class="status-unknown">unknown</td><td>0.534234</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>BellmanFord-FunUnsat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.614327</td><td><span class="error-text" title="heap:               new=501,released=24,maxLive=453,gcCycles=5 | instructions:       6354 | max memory:         240MB | loaded code:        classes=86,methods=1931 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=501,released=24,maxLive=453,gcCycles=5 | instructions:       6354 | max memory:         240MB | loaded code:        classes=86,methods=1931 | ==================================</span></td></tr>
+<tr><td>BellmanFord-FunUnsat02</td><td>false</td><td class="status-unknown">unknown</td><td>0.532148</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>BellmanFord-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.632957</td><td></td></tr>
+<tr><td>BellmanFord-MemSat02</td><td>true</td><td class="status-unknown">unknown</td><td>0.544142</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>BellmanFord-MemUnsat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.620074</td><td><span class="error-text" title="heap:               new=501,released=24,maxLive=453,gcCycles=5 | instructions:       6354 | max memory:         240MB | loaded code:        classes=86,methods=1931 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=501,released=24,maxLive=453,gcCycles=5 | instructions:       6354 | max memory:         240MB | loaded code:        classes=86,methods=1931 | ==================================</span></td></tr>
+<tr><td>BellmanFord-MemUnsat02</td><td>false</td><td class="status-unknown">unknown</td><td>0.538144</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>BinaryTreeSearch-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>2.852205</td><td></td></tr>
+<tr><td>BinaryTreeSearch-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.737788</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>4.320384</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.660649</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemUnsat02</td><td>false</td><td class="status-correct">correct</td><td>0.654634</td><td></td></tr>
+<tr><td>InsertionSort-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.627241</td><td></td></tr>
+<tr><td>InsertionSort-FunSat02</td><td>true</td><td class="status-correct">correct</td><td>0.607716</td><td></td></tr>
+<tr><td>InsertionSort-FunUnsat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.651988</td><td><span class="error-text" title="heap:               new=476,released=20,maxLive=453,gcCycles=14 | instructions:       6293 | max memory:         240MB | loaded code:        classes=86,methods=1931 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=476,released=20,maxLive=453,gcCycles=14 | instructions:       6293 | max memory:         240MB | loaded code:        classes=86,methods=1931 | =================================</span></td></tr>
+<tr><td>InsertionSort-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.613633</td><td></td></tr>
+<tr><td>InsertionSort-MemUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.665637</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.ja">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.arrays.SelectExpression cannot be cast to gov.nasa.jpf.symbc.nu</span></td></tr>
+<tr><td>MergeSortIterative-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.617052</td><td></td></tr>
+<tr><td>MergeSortIterative-FunSat02</td><td>true</td><td class="status-correct">correct</td><td>0.615429</td><td></td></tr>
+<tr><td>MergeSortIterative-FunUnsat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.636076</td><td><span class="error-text" title="heap:               new=477,released=20,maxLive=454,gcCycles=14 | instructions:       6298 | max memory:         240MB | loaded code:        classes=86,methods=1938 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=477,released=20,maxLive=454,gcCycles=14 | instructions:       6298 | max memory:         240MB | loaded code:        classes=86,methods=1938 | =================================</span></td></tr>
+<tr><td>MergeSortIterative-MemSat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.598263</td><td><span class="error-text" title="heap:               new=465,released=8,maxLive=454,gcCycles=12 | instructions:       6208 | max memory:         240MB | loaded code:        classes=86,methods=1938 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=465,released=8,maxLive=454,gcCycles=12 | instructions:       6208 | max memory:         240MB | loaded code:        classes=86,methods=1938 | ==================================</span></td></tr>
+<tr><td>MergeSortIterative-MemUnsat01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.590707</td><td><span class="error-text" title="heap:               new=465,released=8,maxLive=454,gcCycles=12 | instructions:       6207 | max memory:         240MB | loaded code:        classes=86,methods=1938 | ====================================================== search finished: 6/5/26 5:41 PM">heap:               new=465,released=8,maxLive=454,gcCycles=12 | instructions:       6207 | max memory:         240MB | loaded code:        classes=86,methods=1938 | ==================================</span></td></tr>
+<tr><td>RedBlackTree-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.842782</td><td></td></tr>
+<tr><td>RedBlackTree-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.724400</td><td></td></tr>
+<tr><td>RedBlackTree-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>3.196786</td><td></td></tr>
+<tr><td>RedBlackTree-MemUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.989925</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during instructionExecuted() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.VirtualInvocation.getInvokedMethod(VirtualInvocation.java:162) |  at gov.nasa.jpf.jvm.bytecode.VirtualInvocation.getInvokedMethod(VirtualInvocation.java:150) | gov.nasa.jpf.JPFListenerException: exception during instructionExecuted() notification">[SEVERE] JPF exception, terminating: exception during instructionExecuted() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.VirtualInvocation.getInvokedMethod(VirtualInvo</span></td></tr>
+<tr><td>SortedListInsert-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>3.272451</td><td></td></tr>
+<tr><td>SortedListInsert-FunSat02</td><td>true</td><td class="status-correct">correct</td><td>4.767479</td><td></td></tr>
+<tr><td>SortedListInsert-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.920743</td><td></td></tr>
+<tr><td>SortedListInsert-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>1.894172</td><td></td></tr>
+<tr><td>SortedListInsert-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.543020</td><td></td></tr>
+<tr><td>Trie-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.556585</td><td></td></tr>
+<tr><td>Trie-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.622990</td><td></td></tr>
+<tr><td>Trie-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.541467</td><td></td></tr>
+<tr><td>Trie-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.618494</td><td></td></tr>
+<tr><td>Tsp-FunSat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.541244</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>Tsp-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.533753</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>Tsp-MemSat01</td><td>true</td><td class="status-unknown">unknown</td><td>0.534546</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+<tr><td>Tsp-MemUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.533180</td><td><span class="error-text" title="java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908) |  at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)">java.lang.RuntimeException: MULTIANEWARRAY: symbolic array length |  at gov.nasa.jpf.symbc.bytecode.MULTIANEWARRAY.execute(MULTIANEWARRAY.java:58) |  at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(T</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

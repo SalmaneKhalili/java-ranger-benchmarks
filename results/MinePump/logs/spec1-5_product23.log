@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/4/26 10:26 PM
+====================================================== search started: 6/5/26 5:41 PM
 threadTerminated
 
 ====================================================== search constraint
@@ -676,7 +676,7 @@ Inputs:
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
+elapsed time:       00:00:01
 states:             new=319,visited=0,backtracked=310,end=156
 search:             maxDepth=13,constraints=72
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=162
@@ -685,5 +685,5 @@ instructions:       28502
 max memory:         240MB
 loaded code:        classes=94,methods=1916
 
-====================================================== search finished: 6/4/26 10:26 PM
+====================================================== search finished: 6/5/26 5:41 PM
 
