@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:50 PM
+====================================================== search started: 6/6/26 4:05 PM
 New sym int int0 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -1187,7 +1187,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 5 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1522,7 +1522,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 5 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2322,7 +2322,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 8 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2398,7 +2398,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2466,7 +2466,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -3195,16 +3195,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 468 msec
+Veritesting Dyn Time = 475 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 177 msec
-Total Solver Parse Time = 30 msec
+Total Solver Time = 184 msec
+Total Solver Parse Time = 28 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 5 msec
+Total Solver Clean up Time = 6 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -3234,7 +3234,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-468,0,468,0,0,177,30,5,0,7,0,0,0,0,7,0,7,0,53,0,0,0,0,53,0,0,-1,-1,0.0,0,0,0
+475,0,475,0,0,184,28,6,0,7,0,0,0,0,7,0,7,0,53,0,0,0,0,53,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -3249,5 +3249,5 @@ instructions:       6312
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 3:50 PM
+====================================================== search finished: 6/6/26 4:05 PM
 

@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:51 PM
+====================================================== search started: 6/6/26 4:05 PM
 New sym int bool0 min=0, max=1
 New sym int bool1 min=0, max=1
 New sym int bool2 min=0, max=1
@@ -875,7 +875,7 @@ Using floating point for reals: yes
 (assert (= bool2 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1007,7 +1007,7 @@ Using floating point for reals: yes
 (assert (= bool2 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2160,14 +2160,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 524 msec
+Veritesting Dyn Time = 513 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 116 msec
-Total Solver Parse Time = 29 msec
+Total Solver Time = 107 msec
+Total Solver Parse Time = 27 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 2 msec
 PCSatSolverCount = 0
@@ -2199,7 +2199,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-524,0,524,0,0,116,29,2,0,5,0,0,0,0,5,0,5,0,32,0,0,0,0,32,0,0,-1,-1,0.0,0,0,0
+513,0,513,0,0,107,27,2,0,5,0,0,0,0,5,0,5,0,32,0,0,0,0,32,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -2214,5 +2214,5 @@ instructions:       9046
 max memory:         240MB
 loaded code:        classes=94,methods=1916
 
-====================================================== search finished: 6/6/26 3:51 PM
+====================================================== search finished: 6/6/26 4:05 PM
 

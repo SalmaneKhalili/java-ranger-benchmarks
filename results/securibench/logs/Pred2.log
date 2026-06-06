@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:54 PM
+====================================================== search started: 6/6/26 4:08 PM
 New sym int string0.length min=-2147483648, max=2147483647
 New sym int bool1 min=0, max=1
 ^_^ running jitAnalysis ^_^
@@ -313,14 +313,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 461 msec
+Veritesting Dyn Time = 435 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 38 msec
-Total Solver Parse Time = 7 msec
+Total Solver Time = 39 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -352,7 +352,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-461,0,461,0,0,38,7,0,0,3,0,0,0,0,3,0,3,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+435,0,435,0,0,39,6,0,0,3,0,0,0,0,3,0,3,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -367,5 +367,5 @@ instructions:       6499
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/6/26 3:54 PM
+====================================================== search finished: 6/6/26 4:08 PM
 

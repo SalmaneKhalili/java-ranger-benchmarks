@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:51 PM
+====================================================== search started: 6/6/26 4:06 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -190,7 +190,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 731 ms
+Solving time of z3 bitvector is 728 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -231,7 +231,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 73 ms
+Solving time of z3 bitvector is 74 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -269,7 +269,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 771 ms
+Solving time of z3 bitvector is 796 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -375,7 +375,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1279 ms
+Solving time of z3 bitvector is 1238 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -414,7 +414,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 515 ms
+Solving time of z3 bitvector is 511 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -450,7 +450,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 753 ms
+Solving time of z3 bitvector is 755 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -474,14 +474,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4544 msec
+Veritesting Dyn Time = 4537 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 4264 msec
-Total Solver Parse Time = 11 msec
+Total Solver Time = 4255 msec
+Total Solver Parse Time = 13 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 87 msec
 PCSatSolverCount = 0
@@ -513,7 +513,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4544,0,4544,0,0,4264,11,87,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+4537,0,4537,0,0,4255,13,87,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -528,5 +528,5 @@ instructions:       6106
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 3:51 PM
+====================================================== search finished: 6/6/26 4:06 PM
 

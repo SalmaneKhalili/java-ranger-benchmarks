@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:54 PM
+====================================================== search started: 6/6/26 4:09 PM
 New sym int int0 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -1016,7 +1016,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1123,7 +1123,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1229,7 +1229,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1400,7 +1400,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1730,7 +1730,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2136,7 +2136,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2196,7 +2196,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2617,7 +2617,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2675,7 +2675,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2742,7 +2742,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2802,7 +2802,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2942,7 +2942,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -3018,7 +3018,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -3076,7 +3076,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -3147,7 +3147,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4283,7 +4283,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4685,7 +4685,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4741,7 +4741,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4810,7 +4810,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5149,7 +5149,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5225,7 +5225,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5346,7 +5346,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5366,17 +5366,17 @@ int0 > CONST_1 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 12
-int5[0] >= int1[0] &&
+int5[-2147483648] >= int1[-2147483648] &&
 CONST_5 >= int0[5] &&
-int5[0] <= int1[0] &&
+int5[-2147483648] <= int1[-2147483648] &&
 CONST_4 < int0[5] &&
-int4[1] <= int2[1] &&
-int4[1] > int1[0] &&
+int4[-2147483647] <= int2[-2147483647] &&
+int4[-2147483647] > int1[-2147483648] &&
 CONST_3 < int0[5] &&
-int3[3] > int2[1] &&
-int3[3] > int1[0] &&
+int3[-2147483645] > int2[-2147483647] &&
+int3[-2147483645] > int1[-2147483648] &&
 CONST_2 < int0[5] &&
-int2[1] > int1[0] &&
+int2[-2147483647] > int1[-2147483648] &&
 int0[5] > CONST_1
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -5458,16 +5458,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 710 msec
+Veritesting Dyn Time = 747 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 325 msec
+Total Solver Time = 318 msec
 Total Solver Parse Time = 39 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 30 msec
+Total Solver Clean up Time = 31 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -5497,7 +5497,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-710,0,710,0,0,325,39,30,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
+747,0,747,0,0,318,39,31,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
@@ -5512,5 +5512,5 @@ instructions:       7055
 max memory:         240MB
 loaded code:        classes=90,methods=1874
 
-====================================================== search finished: 6/6/26 3:54 PM
+====================================================== search finished: 6/6/26 4:09 PM
 

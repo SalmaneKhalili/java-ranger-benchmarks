@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:52 PM
+====================================================== search started: 6/6/26 4:07 PM
 New sym int int0 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -493,7 +493,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -611,7 +611,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -765,7 +765,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -794,7 +794,7 @@ GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 76 msec
+Total Solver Time = 75 msec
 Total Solver Parse Time = 13 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 2 msec
@@ -827,7 +827,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-354,0,354,0,0,76,13,2,0,6,0,0,0,0,6,0,6,0,19,0,0,0,0,19,0,0,-1,-1,0.0,0,0,0
+354,0,354,0,0,75,13,2,0,6,0,0,0,0,6,0,6,0,19,0,0,0,0,19,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -842,5 +842,5 @@ instructions:       6175
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 3:52 PM
+====================================================== search finished: 6/6/26 4:07 PM
 

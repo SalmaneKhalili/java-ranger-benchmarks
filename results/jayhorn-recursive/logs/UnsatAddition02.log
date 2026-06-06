@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:53 PM
+====================================================== search started: 6/6/26 4:08 PM
 New sym int int0 min=-2147483648, max=2147483647
 New sym int int1 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
@@ -767,7 +767,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4852,7 +4852,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6214,7 +6214,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6665,7 +6665,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -7146,7 +7146,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8734,7 +8734,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8987,7 +8987,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9111,7 +9111,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9263,7 +9263,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9402,7 +9402,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9549,7 +9549,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9847,7 +9847,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9995,7 +9995,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10152,7 +10152,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10302,7 +10302,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10653,7 +10653,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10829,7 +10829,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 5 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11183,7 +11183,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11359,7 +11359,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11544,7 +11544,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11722,7 +11722,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11947,7 +11947,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -12147,7 +12147,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 5 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -12354,7 +12354,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 5 ms
+Solving time of z3 bitvector is 7 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -12557,7 +12557,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -12772,7 +12772,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -13231,7 +13231,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 5 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -13465,7 +13465,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -13943,7 +13943,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -13997,16 +13997,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 847 msec
+Veritesting Dyn Time = 838 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 503 msec
-Total Solver Parse Time = 76 msec
+Total Solver Time = 539 msec
+Total Solver Parse Time = 70 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 23 msec
+Total Solver Clean up Time = 22 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -14036,7 +14036,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-847,0,847,0,0,503,76,23,0,4,0,0,0,0,4,0,4,0,166,0,0,0,0,166,0,0,-1,-1,0.0,0,0,0
+838,0,838,0,0,539,70,22,0,4,0,0,0,0,4,0,4,0,166,0,0,0,0,166,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -14051,5 +14051,5 @@ instructions:       6749
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 3:53 PM
+====================================================== search finished: 6/6/26 4:08 PM
 
