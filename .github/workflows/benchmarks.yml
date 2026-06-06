@@ -17,7 +17,7 @@ on:
 env:
   JR_REPO: SalmaneKhalili/java-ranger
   SV_BENCH_REPO: https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks.git
-  JR_REF: svcomp
+  JR_REF: fp-power-fix
 
 jobs:
   setup:
