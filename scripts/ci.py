@@ -34,25 +34,29 @@ SUITES = [
     "juliet-java",
 ]
 
-FP_SUITES = frozenset([
-    "float-nonlinear-calculation", "float_unboundedloop",
-    "autostub", "jpf-regression", "juliet-java",
-    "jdart-regression", "jbmc-regression",
-])
-
 JPF_CONFIG = """\
 target=Main
 classpath={classpath}
 symbolic.dp=z3bitvector
+symbolic.min_int=-2147483648
+symbolic.max_int=2147483647
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+symbolic.min_float=-10000.0
+symbolic.max_float=10000.0
 symbolic.bvlength=64
 search.depth_limit=13
 symbolic.strings=true
 symbolic.string_dp=z3str3
 symbolic.string_dp_timeout_ms=3000
 symbolic.lazy=on
-symbolic.arrays=true
-listener=.symbc.SymbolicListener
-{fp_opts}"""
+symbolic.debug=true
+symbolic.jrarrays=true
+veritestingMode=5
+recursiveDepth=200
+singlePathOptimization=true
+symbolic.fp=true
+listener=.symbc.VeritestingListener"""
 
 STATUS_MAP = {
     "CORRECT": "correct", "INCORRECT": "incorrect",
@@ -383,10 +387,9 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
             result.error = compile_proc.stderr.strip() or compile_proc.stdout.strip() or "compile error"
             return result
 
-        fp_opts = "symbolic.fp=true" if suite in FP_SUITES else ""
         jpf_config_path = os.path.join(tmp_dir, "config.jpf")
         with open(jpf_config_path, "w") as f:
-            f.write(JPF_CONFIG.format(classpath=classpath, fp_opts=fp_opts))
+            f.write(JPF_CONFIG.format(classpath=classpath))
 
         log_path = os.path.join(tmp_dir, "jpf.log")
         env = os.environ.copy()
@@ -536,12 +539,17 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     start_dt = datetime.now()
 
-    jpf_options = ("+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 "
-                   "+search.depth_limit=13 +symbolic.strings=true "
-                   "+symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 "
-                   "+symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener")
-    if suite in FP_SUITES:
-        jpf_options += " +symbolic.fp=true"
+    jpf_options = ("+target=Main +symbolic.dp=z3bitvector "
+                   "+symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 "
+                   "+symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 "
+                   "+symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 "
+                   "+symbolic.bvlength=64 +search.depth_limit=13 "
+                   "+symbolic.strings=true +symbolic.string_dp=z3str3 "
+                   "+symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on "
+                   "+symbolic.debug=true +symbolic.jrarrays=true "
+                   "+veritestingMode=5 +recursiveDepth=200 "
+                   "+singlePathOptimization=true +symbolic.fp=true "
+                   "+listener=.symbc.VeritestingListener")
 
     results = []
     counters = {"total": 0, "correct": 0, "incorrect": 0, "unknown": 0, "compile_err": 0, "timeout": 0}
