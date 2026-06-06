@@ -1,3 +1,15 @@
+Running Symbolic PathFinder ...
+symbolic.dp=z3bitvector
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=z3str3
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -8,15 +20,21 @@ symbolic.max_long=9223372036854775807
 symbolic.max_short=32767
 symbolic.max_byte=127
 symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 12:56 PM
+====================================================== search started: 6/6/26 3:52 PM
+New sym int int0 min=-2147483648, max=2147483647
+New sym int int1 min=-2147483648, max=2147483647
+ALOAD pcHeap: constraint # = 1
+int0 == CONST_-1
 the depth of violation is2
 
 ====================================================== error 1
@@ -31,9 +49,57 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.main(Main.java:17)
 
 
-====================================================== Method Summaries
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-====================================================== Method Summaries (HTML)
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 255 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 0 msec
+Total Solver Parse Time = 0 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 0
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 0
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 0
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 0
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+255,0,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'intValue(..."
@@ -48,5 +114,5 @@ instructions:       6057
 max memory:         240MB
 loaded code:        classes=89,methods=1860
 
-====================================================== search finished: 6/6/26 12:56 PM
+====================================================== search finished: 6/6/26 3:52 PM
 

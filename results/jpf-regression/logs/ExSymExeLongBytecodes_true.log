@@ -1,3 +1,15 @@
+Running Symbolic PathFinder ...
+symbolic.dp=z3bitvector
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=z3str3
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -8,31 +20,583 @@ symbolic.max_long=9223372036854775807
 symbolic.max_short=32767
 symbolic.max_byte=127
 symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 0903c74da6815074d3e86f45545065521bdf3f25) - (C) 2005-2014 United States Government. All rights reserved.
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 2:31 PM
+====================================================== search started: 6/6/26 3:52 PM
+New sym int int0 min=-2147483648, max=2147483647
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+int0 < CONST_0 -> true
+
+### PCs: total:1 sat:1 unsat:0
+
 Testing ExSymExeLongBytecodes
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(int0 - CONST_5) < CONST_34565 &&
+int0 < CONST_0 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
 branch diff <= c
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvadd int0 #x0000000000000005) #x0000000000000005))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(int0 + CONST_5) < CONST_5 &&
+(int0 - CONST_5) < CONST_34565 &&
+int0 < CONST_0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
 branch sum < z
-threadTerminated
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000000005 (bvadd int0 #x0000000000000005)))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+CONST_5 == (int0 + CONST_5) &&
+(int0 - CONST_5) < CONST_34565 &&
+int0 < CONST_0 -> false
+
+### PCs: total:4 sat:3 unsat:1
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvadd int0 #x0000000000000005) #x0000000000000005))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(int0 + CONST_5) > CONST_5 &&
+(int0 - CONST_5) < CONST_34565 &&
+int0 < CONST_0 -> false
+
+### PCs: total:5 sat:3 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000008705 (bvsub int0 #x0000000000000005)))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+CONST_34565 == (int0 - CONST_5) &&
+int0 < CONST_0 -> false
+
+### PCs: total:6 sat:3 unsat:3
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(int0 - CONST_5) > CONST_34565 &&
+int0 < CONST_0 -> false
+
+### PCs: total:7 sat:3 unsat:4
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+CONST_0 == int0 -> true
+
+### PCs: total:8 sat:4 unsat:4
+
 Testing ExSymExeLongBytecodes
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(int0 - CONST_5) < CONST_34565 &&
+CONST_0 == int0 -> true
+
+### PCs: total:9 sat:5 unsat:4
+
 branch diff <= c
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvadd int0 #x0000000000000005) #x0000000000000005))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(int0 + CONST_5) < CONST_5 &&
+(int0 - CONST_5) < CONST_34565 &&
+CONST_0 == int0 -> false
+
+### PCs: total:10 sat:5 unsat:5
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000000005 (bvadd int0 #x0000000000000005)))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+CONST_5 == (int0 + CONST_5) &&
+(int0 - CONST_5) < CONST_34565 &&
+CONST_0 == int0 -> true
+
+### PCs: total:11 sat:6 unsat:5
+
 branch sum >= z
-threadTerminated
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvadd int0 #x0000000000000005) #x0000000000000005))
+(assert (bvslt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(int0 + CONST_5) > CONST_5 &&
+(int0 - CONST_5) < CONST_34565 &&
+CONST_0 == int0 -> false
+
+### PCs: total:12 sat:6 unsat:6
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000008705 (bvsub int0 #x0000000000000005)))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+CONST_34565 == (int0 - CONST_5) &&
+CONST_0 == int0 -> false
+
+### PCs: total:13 sat:6 unsat:7
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvsub int0 #x0000000000000005) #x0000000000008705))
+(assert (= #x0000000000000000 int0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(int0 - CONST_5) > CONST_34565 &&
+CONST_0 == int0 -> false
+
+### PCs: total:14 sat:6 unsat:8
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+int0 > CONST_0 -> true
+
+### PCs: total:15 sat:7 unsat:8
+
 Testing ExSymExeLongBytecodes
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000008705))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+((CONST_0 - int0) - CONST_5) < CONST_34565 &&
+int0 > CONST_0 -> true
+
+### PCs: total:16 sat:8 unsat:8
+
 branch diff <= c
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt (bvadd (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000000005))
+(assert (bvslt (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000008705))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+((CONST_0 - int0) + CONST_5) < CONST_5 &&
+((CONST_0 - int0) - CONST_5) < CONST_34565 &&
+int0 > CONST_0 -> true
+
+### PCs: total:17 sat:9 unsat:8
+
 branch sum < z
-threadTerminated
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
 
-====================================================== Method Summaries
 
-====================================================== Method Summaries (HTML)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000000005
+   (bvadd (bvsub #x0000000000000000 int0) #x0000000000000005)))
+(assert (bvslt (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000008705))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+CONST_5 == ((CONST_0 - int0) + CONST_5) &&
+((CONST_0 - int0) - CONST_5) < CONST_34565 &&
+int0 > CONST_0 -> false
+
+### PCs: total:18 sat:9 unsat:9
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvadd (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000000005))
+(assert (bvslt (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000008705))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+((CONST_0 - int0) + CONST_5) > CONST_5 &&
+((CONST_0 - int0) - CONST_5) < CONST_34565 &&
+int0 > CONST_0 -> false
+
+### PCs: total:19 sat:9 unsat:10
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= #x0000000000008705
+   (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+CONST_34565 == ((CONST_0 - int0) - CONST_5) &&
+int0 > CONST_0 -> false
+
+### PCs: total:20 sat:9 unsat:11
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvsub (bvsub #x0000000000000000 int0) #x0000000000000005)
+       #x0000000000008705))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+((CONST_0 - int0) - CONST_5) > CONST_34565 &&
+int0 > CONST_0 -> false
+
+### PCs: total:21 sat:9 unsat:12
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 341 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 62 msec
+Total Solver Parse Time = 11 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 2 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 0
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 0
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 0
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 0
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+341,0,341,0,0,62,11,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -47,5 +611,5 @@ instructions:       6323
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 2:31 PM
+====================================================== search finished: 6/6/26 3:52 PM
 

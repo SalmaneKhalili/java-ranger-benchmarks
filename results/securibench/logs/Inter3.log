@@ -1,3 +1,15 @@
+Running Symbolic PathFinder ...
+symbolic.dp=z3bitvector
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=z3str3
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -8,18 +20,41 @@ symbolic.max_long=9223372036854775807
 symbolic.max_short=32767
 symbolic.max_byte=127
 symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 12:57 PM
+====================================================== search started: 6/6/26 3:54 PM
+New sym int string0.length min=-2147483648, max=2147483647
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 1
+(string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -27,9 +62,30 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 2
+(CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -37,9 +93,31 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 3
+(CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -47,9 +125,32 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 4
+(CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -57,9 +158,33 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 5
+(CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -67,9 +192,34 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 6
+(CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -77,9 +227,35 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:7 sat:7 unsat:0
+
+string analysis: SPC # = 7
+(CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -87,9 +263,36 @@ Satisfiable: true
 string0 => ""
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:8 sat:8 unsat:0
+
+string analysis: SPC # = 8
+(CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -97,59 +300,200 @@ Satisfiable: true
 string0 => ""
 *************************************
 
-threadTerminated
+## Warning: empty path condition
+### PCs: total:9 sat:9 unsat:0
+
+string analysis: SPC # = 8
+(CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) contains CONST_<bad/>) && (CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:10 sat:10 unsat:0
+
+string analysis: SPC # = 7
+(CONST_adsf .concat(CONST_ade.concat(string0)).concat(CONST_abc) contains CONST_<bad/>) && (CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "adsf " (str.++ "ade" string0)) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:11 sat:11 unsat:0
+
+string analysis: SPC # = 6
+(CONST_.concat(CONST_ade.concat(string0)).concat(CONST_abc) contains CONST_<bad/>) && (CONST_ade.concat(string0) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "" (str.++ "ade" string0)) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ "ade" string0) "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:12 sat:12 unsat:0
+
+string analysis: SPC # = 5
+(CONST_ade.concat(string0) contains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ "ade" string0) "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:13 sat:13 unsat:0
+
+string analysis: SPC # = 4
+(CONST_adsf .concat(string0).concat(CONST_abc) contains CONST_<bad/>) && (CONST_adsf .concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>")))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:14 sat:14 unsat:0
+
+string analysis: SPC # = 3
+(CONST_adsf .concat(string0).concat(CONST_abc) contains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:15 sat:15 unsat:0
+
+string analysis: SPC # = 2
+(CONST_.concat(string0).concat(CONST_abc) contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>"))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
 
 *************************************
 Satisfiable: false
 *************************************
 
+## Warning: empty path condition
+### PCs: total:16 sat:16 unsat:0
+
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 *************************************
@@ -158,9 +502,22 @@ string0 => "<bad/>"
 *************************************
 
 the depth of violation is2
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 *************************************
@@ -168,9 +525,6 @@ Satisfiable: true
 string0 => "<bad/>"
 *************************************
 
-Property Violated: PC is constraint # = 0
-Property Violated: result is  "java.lang.AssertionError..."
-****************************
 
 ====================================================== error 1
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
@@ -210,17 +564,57 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.main(Main.java:23)
 
 
-====================================================== Method Summaries
-Inputs: 
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-()  --> "java.lang.AssertionError..."
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
 
-====================================================== Method Summaries (HTML)
-<h1>Test Cases Generated by Symbolic JavaPath Finder for  (Path Coverage) </h1>
-<table border=1>
-<tr><td>RETURN</td></tr>
-<tr><td>"java.lang.AssertionError..."</td></tr>
-</table>
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 630 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 0 msec
+Total Solver Parse Time = 0 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 1
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 1
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 8
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 8
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+630,0,630,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -235,5 +629,5 @@ instructions:       6814
 max memory:         240MB
 loaded code:        classes=107,methods=2044
 
-====================================================== search finished: 6/6/26 12:57 PM
+====================================================== search finished: 6/6/26 3:54 PM
 

@@ -1,3 +1,15 @@
+Running Symbolic PathFinder ...
+symbolic.dp=z3bitvector
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=z3str3
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -8,21 +20,609 @@ symbolic.max_long=9223372036854775807
 symbolic.max_short=32767
 symbolic.max_byte=127
 symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 12:54 PM
-threadTerminated
-threadTerminated
+====================================================== search started: 6/6/26 3:50 PM
+New sym int int0 min=-2147483648, max=2147483647
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+int0 < CONST_0 -> true
+
+### PCs: total:1 sat:1 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+int0 >= CONST_0 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 > CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+New sym int int1 min=-2147483648, max=2147483647
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+int1 < CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:5 sat:5 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:6 sat:6 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:7 sat:7 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsgt int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+int1 > CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:8 sat:8 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (not (= int0 #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+int0 != CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:9 sat:9 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:10 sat:10 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt int0 #x0000000000000000))
+(assert (= int0 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+int0 < CONST_0 &&
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> false
+
+### PCs: total:11 sat:10 unsat:1
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:12 sat:11 unsat:1
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+int1 < CONST_0 &&
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> false
+
+### PCs: total:13 sat:11 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:14 sat:12 unsat:2
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt (bvashr (bvshl (bvadd int1 #x0000000000000001) #x0000000000000020)
+               #x0000000000000020)
+       #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+(((int1 + CONST_1)<<CONST_32)>>CONST_32) < CONST_0 &&
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> false
+
+### PCs: total:15 sat:12 unsat:3
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsge (bvashr (bvshl (bvadd int1 #x0000000000000001) #x0000000000000020)
+               #x0000000000000020)
+       #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+(((int1 + CONST_1)<<CONST_32)>>CONST_32) >= CONST_0 &&
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:16 sat:13 unsat:3
+
 the depth of violation is6
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+int0 == CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+int0[0] == CONST_0 &&
+int1[0] <= CONST_23 &&
+int1[0] >= CONST_0 &&
+int0[0] <= CONST_3 &&
+int0[0] >= CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
+current query... 
+
+(declare-const int0 Int)
+(declare-const int1 Int)
+
+(assert (= int0 0))
+(assert (<= int1 23))
+(assert (>= int1 0))
+(assert (<= int0 3))
+(assert (>= int0 0))
+
+
+
+(define-fun int1 () Int
+  0)
+(define-fun int0 () Int
+  0)
 Returned solutions: 
 (define-fun int1 () Int  0)
 (define-fun int0 () Int  0)
@@ -32,14 +632,6 @@ int0 => 0
 int1 => 0
 *************************************
 
-Property Violated: PC is constraint # = 5
-int0[0] == CONST_0 &&
-int1[0] <= CONST_23 &&
-int1[0] >= CONST_0 &&
-int0[0] <= CONST_3 &&
-int0[0] >= CONST_0
-Property Violated: result is  "java.lang.AssertionError..."
-****************************
 
 ====================================================== error 1
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
@@ -53,17 +645,57 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.main(Main.java:34)
 
 
-====================================================== Method Summaries
-Inputs: 
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-()  --> "java.lang.AssertionError..."
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
 
-====================================================== Method Summaries (HTML)
-<h1>Test Cases Generated by Symbolic JavaPath Finder for  (Path Coverage) </h1>
-<table border=1>
-<tr><td>RETURN</td></tr>
-<tr><td>"java.lang.AssertionError..."</td></tr>
-</table>
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 484 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 61 msec
+Total Solver Parse Time = 12 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 8
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 8
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 15
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 15
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+484,0,484,0,0,61,12,0,0,8,0,0,0,0,8,0,8,0,15,0,0,0,0,15,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
@@ -78,5 +710,5 @@ instructions:       6119
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/6/26 12:54 PM
+====================================================== search finished: 6/6/26 3:50 PM
 
