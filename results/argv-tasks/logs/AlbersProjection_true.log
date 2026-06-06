@@ -16,11 +16,11 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:44 AM
+====================================================== search started: 6/6/26 11:57 AM
 #
 # A fatal error has been detected by the Java Runtime Environment:
 #
-#  SIGFPE (0x8) at pc=0x00007f36dbb1c9e8, pid=3109, tid=0x00007f372bf166c0
+#  SIGFPE (0x8) at pc=0x00007f8966b1c9e8, pid=3118, tid=0x00007f89999ff6c0
 #
 # JRE version: OpenJDK Runtime Environment (8.0_492-b09) (build 1.8.0_492-b09)
 # Java VM: OpenJDK 64-Bit Server VM (25.492-b09 mixed mode linux-amd64 compressed oops)
@@ -30,7 +30,7 @@ Main.main()
 # Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
 #
 # An error report file with more information is saved as:
-# /home/runner/work/java-ranger-benchmarks/java-ranger-benchmarks/java-ranger/hs_err_pid3109.log
+# /home/runner/work/java-ranger-benchmarks/java-ranger-benchmarks/java-ranger/hs_err_pid3118.log
 #
 # If you would like to submit a bug report, please visit:
 #   https://github.com/adoptium/adoptium-support/issues

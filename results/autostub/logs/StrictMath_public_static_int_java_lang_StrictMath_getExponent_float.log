@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 3:44 AM
+====================================================== search started: 6/6/26 11:58 AM
 
 java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
 	at gov.nasa.jpf.symbc.bytecode.ALOAD.execute(ALOAD.java:108)
