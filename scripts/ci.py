@@ -402,8 +402,8 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
             )
             exit_code = jpf_proc.returncode
             jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
-        except subprocess.TimeoutExpired:
-            jpf_output = "TIMEOUT after 180s"
+        except subprocess.TimeoutExpired as exc:
+            jpf_output = (exc.stdout or "") + "\n" + (exc.stderr or "")
             exit_code = 124
 
         end_ns = time.time_ns()
