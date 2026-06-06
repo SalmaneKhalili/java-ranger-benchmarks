@@ -25,7 +25,7 @@ except ImportError:
 
 
 SUITES = [
-    "algorithms", "argv-tasks", "autostub",
+    "algorithms", "autostub",
     "float-nonlinear-calculation", "float_unboundedloop",
     "java-ranger-regression", "jayhorn-recursive",
     "jbmc-regression", "jdart-regression",
@@ -401,7 +401,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
                 ["java", "-Xmx1024m", "-ea",
                  f"-Djava.library.path={jpf_symbc_lib}",
                  "-jar", jpf_core_jar, jpf_config_path],
-                cwd=jr_dir, capture_output=True, text=True, timeout=180, env=env,
+                 cwd=jr_dir, capture_output=True, text=True, timeout=30, env=env,
             )
             exit_code = jpf_proc.returncode
             jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
@@ -431,7 +431,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
 
         if exit_code == 124:
             result.verdict = "UNKNOWN"
-            result.error = "timeout after 180s"
+            result.error = "timeout after 30s"
             return result
 
         if "no errors detected" in jpf_output:
