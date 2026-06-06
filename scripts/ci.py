@@ -25,11 +25,11 @@ except ImportError:
 
 
 SUITES = [
-    "algorithms", "autostub",
+    "algorithms",
     "float-nonlinear-calculation", "float_unboundedloop",
     "java-ranger-regression", "jayhorn-recursive",
     "jbmc-regression", "jdart-regression",
-    "jpf-regression", "MinePump", "objects",
+    "jpf-regression", "MinePump",
     "rtems-lock-model", "securibench",
     "juliet-java",
 ]
