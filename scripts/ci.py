@@ -403,24 +403,27 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
             exit_code = jpf_proc.returncode
             jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
         except subprocess.TimeoutExpired:
-            result.verdict = "UNKNOWN"
-            result.error = "timeout after 180s"
-            result.cputime = result.walltime = 180.0
-            result.exit_code = 124
-            return result
+            jpf_output = "TIMEOUT after 180s"
+            exit_code = 124
 
         end_ns = time.time_ns()
         elapsed_s = (end_ns - start_ns) / 1_000_000_000
         result.cputime = result.walltime = elapsed_s
         result.exit_code = exit_code
 
-        with open(log_path, "w") as f:
-            f.write(jpf_output)
-
         os.makedirs(log_dir, exist_ok=True)
         persistent_log = os.path.join(log_dir, f"{result.name}.log")
-        shutil.copy2(log_path, persistent_log)
         result.logfile = persistent_log
+        try:
+            with open(persistent_log, "w") as f:
+                f.write(jpf_output)
+        except OSError:
+            pass
+
+        if exit_code == 124:
+            result.verdict = "UNKNOWN"
+            result.error = "timeout after 180s"
+            return result
 
         if "no errors detected" in jpf_output:
             result.actual = "true"
