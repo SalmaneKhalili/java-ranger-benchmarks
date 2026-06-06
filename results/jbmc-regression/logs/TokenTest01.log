@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 11:56 AM
+====================================================== search started: 6/6/26 12:55 PM
 Number of elements: 4
 The tokens are:
 automatic
@@ -42,5 +42,5 @@ instructions:       6146
 max memory:         240MB
 loaded code:        classes=81,methods=1620
 
-====================================================== search finished: 6/6/26 11:56 AM
+====================================================== search finished: 6/6/26 12:55 PM
 

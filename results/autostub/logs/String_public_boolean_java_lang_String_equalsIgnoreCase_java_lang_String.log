@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 12:44 PM
+====================================================== search started: 6/6/26 12:57 PM
 
 java.lang.RuntimeException: ERROR: symbolic string method not Implemented - EqualsIgnoreCase
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleEqualsIgnoreCase(SymbolicStringHandler.java:1326)

@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 11:55 AM
+====================================================== search started: 6/6/26 12:54 PM
 Symbolic Exp [ (double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1))]
 Symbolic Exp [ ((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)) + ((CONST_-9.8 - (( pow ((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)),CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1))]
 Symbolic Exp [ (((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)) + ((CONST_-9.8 - (( pow ((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)),CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)) + ((CONST_-9.8 - (( pow (((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)) + ((CONST_-9.8 - (( pow ((double0 + ((CONST_-9.8 - (( pow (double0,CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)),CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1)),CONST_2.0) / CONST_0.11) * CONST_0.002)) * CONST_0.1))]

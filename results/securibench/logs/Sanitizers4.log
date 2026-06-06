@@ -1,1 +1,3383 @@
-TIMEOUT after 180s
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/6/26 12:58 PM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&")
+*************************************
+Satisfiable: true
+string0 => "&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&")
+*************************************
+Satisfiable: true
+string0 => "&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&A")
+*************************************
+Satisfiable: true
+string0 => "&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&")
+*************************************
+Satisfiable: true
+string0 => "&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&")
+*************************************
+Satisfiable: true
+string0 => "&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&A")
+*************************************
+Satisfiable: true
+string0 => "&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&A")
+*************************************
+Satisfiable: true
+string0 => "&&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&A")
+*************************************
+Satisfiable: true
+string0 => "&&&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&A")
+*************************************
+Satisfiable: true
+string0 => "&&&&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&&A")
+*************************************
+Satisfiable: true
+string0 => "&&&&&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&\u{20200}")
+*************************************
+Satisfiable: true
+string0 => "&&&&&\u{20200}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&\u{8cb1}")
+*************************************
+Satisfiable: true
+string0 => "&&&&&\u{8cb1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&\u{8cb1}A")
+*************************************
+Satisfiable: true
+string0 => "&&&&&\u{8cb1}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{8585}")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{8585}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{2004d}")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{2004d}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{2004d}A")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{2004d}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{1}&")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{1}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{1f}&")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{1f}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{1f}&A")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{1f}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{0} ")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{0} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{2} ")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{2} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{2} A")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{2} A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&\u{2246c}")
+*************************************
+Satisfiable: true
+string0 => "&&&&\u{2246c}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{24800}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{24800}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{12040}A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{12040}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&& &")
+*************************************
+Satisfiable: true
+string0 => "&&& &"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{800}&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{800}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{800}&A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{800}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{2}&&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{2}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{20880}&&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{20880}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{20880}&&A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{20880}&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{12000}&\u{14048}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{12000}&\u{14048}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{10}&\u{8}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{10}&\u{8}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{10}&\u{8}A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{10}&\u{8}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{157af}&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{157af}&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{4841} ")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{4841} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{300d}\u{80a0}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{300d}\u{80a0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{300d}\u{80a0}A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{300d}\u{80a0}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{20053}\u{9}&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{20053}\u{9}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{9912}\u{1}&")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{9912}\u{1}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{9912}\u{1}&A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{9912}\u{1}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{4}""\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{4}""\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{0}\u{0}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{0}\u{0}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{0}\u{0}\u{2}A")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{0}\u{0}\u{2}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{1f837}\u{11c11}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{1f837}\u{11c11}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{14}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{14}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&&&\u{0}"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&&")
+*************************************
+Satisfiable: true
+string0 => "&&&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{18}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{18}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{14}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{14}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{8}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{8}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{2231}&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{2231}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{5000}&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{5000}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{5000}&&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{5000}&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{2}&&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{2}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{20400}&&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{20400}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{20400}&&&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{20400}&&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}&&\u{12}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}&&\u{12}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&`&&\u{3}")
+*************************************
+Satisfiable: true
+string0 => "&&`&&\u{3}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&`&&\u{3}A")
+*************************************
+Satisfiable: true
+string0 => "&&`&&\u{3}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&<&&")
+*************************************
+Satisfiable: true
+string0 => "&&<&&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{9}&\u{10011}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{9}&\u{10011}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{8010}&\u{9}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{8010}&\u{9}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{8010}&\u{9}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{8010}&\u{9}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{140}&\u{1000}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{140}&\u{1000}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&$&\u{20080}&")
+*************************************
+Satisfiable: true
+string0 => "&&$&\u{20080}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&$&\u{20080}&A")
+*************************************
+Satisfiable: true
+string0 => "&&$&\u{20080}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{12050}&\u{281a2}\u{2000}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{12050}&\u{281a2}\u{2000}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}&\u{5}\u{24204}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}&\u{5}\u{24204}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}&\u{5}\u{24204}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}&\u{5}\u{24204}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{6f00}&\u{1c393}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{6f00}&\u{1c393}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{c020}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{c020}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{800}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{800}&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&& \u{4}")
+*************************************
+Satisfiable: true
+string0 => "&& \u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{2000}\u{28441}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{2000}\u{28441}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{13}\u{8}AB")
+*************************************
+Satisfiable: true
+string0 => "&&\u{13}\u{8}AB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{12831}\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{12831}\u{0}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{5000}\u{20080}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{5000}\u{20080}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{5000}\u{20080}&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{5000}\u{20080}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{8000}\u{12a1}&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{8000}\u{12a1}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{10048}&&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{10048}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{10048}&&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{10048}&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{1800}\u{8}&\u{10432}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{1800}\u{8}&\u{10432}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{1400}\u{8}&\u{10}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{1400}\u{8}&\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{1400}\u{8}&\u{10}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{1400}\u{8}&\u{10}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{0}&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&& \u{20800}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&& \u{20800}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{0}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{0}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{0}\u{4}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{0}\u{4}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{14400}\u{400}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{14400}\u{400}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{10}\u{180}\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&&\u{10}\u{180}\u{0}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{10}\u{180}\u{0}&A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{10}\u{180}\u{0}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{8400}\u{3}\u{302}\u{20412}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{8400}\u{3}\u{302}\u{20412}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{10}\u{c}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{10}\u{c}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{10}\u{c}\u{0}A")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{10}\u{c}\u{0}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0}\u{0}\u{8120}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0}\u{0}\u{8120}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{0} ")
+*************************************
+Satisfiable: true
+string0 => "&&\u{0} "
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&J\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&&J\u{0}"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{10}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&\u{300}")
+*************************************
+Satisfiable: true
+string0 => "&&\u{300}"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&")
+*************************************
+Satisfiable: true
+string0 => "&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&&")
+*************************************
+Satisfiable: true
+string0 => "&&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{5}")
+*************************************
+Satisfiable: true
+string0 => "&\u{5}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1fee3}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{1fee3}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{11}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{11}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{c04}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{c04}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{c}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{c}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4000}&&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{4000}&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{600}&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{600}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1000}&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{1000}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1000}&&&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{1000}&&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{8200}&&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{8200}&&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{8200}&&&&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{8200}&&&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&&&\u{1081a}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&&&\u{1081a}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{90}&&&\u{19}")
+*************************************
+Satisfiable: true
+string0 => "&\u{90}&&&\u{19}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{90}&&&\u{19}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{90}&&&\u{19}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&&&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{300}&&!")
+*************************************
+Satisfiable: true
+string0 => "&\u{300}&&!"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{810}&&\u{5}")
+*************************************
+Satisfiable: true
+string0 => "&\u{810}&&\u{5}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{810}&&\u{5}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{810}&&\u{5}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&@&&""&")
+*************************************
+Satisfiable: true
+string0 => "&@&&""&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&@&&\u{280}&")
+*************************************
+Satisfiable: true
+string0 => "&@&&\u{280}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&@&&\u{280}&A")
+*************************************
+Satisfiable: true
+string0 => "&@&&\u{280}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&&\u{1}\u{1}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&&\u{1}\u{1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{810}&&\u{2}\u{1d}")
+*************************************
+Satisfiable: true
+string0 => "&\u{810}&&\u{2}\u{1d}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{810}&&\u{2}\u{1d}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{810}&&\u{2}\u{1d}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{100}&&\u{20910}")
+*************************************
+Satisfiable: true
+string0 => "&\u{100}&&\u{20910}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{2}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{12330}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{12330}&&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10}&\u{200}")
+*************************************
+Satisfiable: true
+string0 => "&\u{10}&\u{200}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{b441}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{b441}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{13}AB")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{13}AB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{18}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{18}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{90}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{90}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{90}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{90}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1080}&\u{12a1}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{1080}&\u{12a1}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4000}&\u{0}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{4000}&\u{0}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4000}&\u{0}&&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{4000}&\u{0}&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{800}&\u{3}&""")
+*************************************
+Satisfiable: true
+string0 => "&\u{800}&\u{3}&"""
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{285b0}&\u{2120}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{285b0}&\u{2120}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{285b0}&\u{2120}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{285b0}&\u{2120}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{4}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{4}&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10000}&$$")
+*************************************
+Satisfiable: true
+string0 => "&\u{10000}&$$"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4200}& \u{21022}")
+*************************************
+Satisfiable: true
+string0 => "&\u{4200}& \u{21022}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4200}& \u{21022}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{4200}& \u{21022}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{18}\u{280}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{18}\u{280}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{285b0}\u{294e3}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{285b0}\u{294e3}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{285b0}\u{294e3}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{285b0}\u{294e3}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}&\u{96a5}\u{800}\u{26100}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}&\u{96a5}\u{800}\u{26100}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{100}&\u{c}\u{0}\u{10246}")
+*************************************
+Satisfiable: true
+string0 => "&\u{100}&\u{c}\u{0}\u{10246}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{100}&\u{c}\u{0}\u{10246}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{100}&\u{c}\u{0}\u{10246}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{14200}&\u{1e774}\u{8bc}")
+*************************************
+Satisfiable: true
+string0 => "&\u{14200}&\u{1e774}\u{8bc}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10}&\u{8802}")
+*************************************
+Satisfiable: true
+string0 => "&\u{10}&\u{8802}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{14a64}&\u{1b82b}")
+*************************************
+Satisfiable: true
+string0 => "&\u{14a64}&\u{1b82b}"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2880}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{2880}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{2}&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{1}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{254c}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&\u{254c}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{3100}\u{8208}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{3100}\u{8208}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{6}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{6}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{802}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{802}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0} &A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0} &A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{908}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{908}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&@\u{2040}&&")
+*************************************
+Satisfiable: true
+string0 => "&@\u{2040}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&@\u{2040}&&A")
+*************************************
+Satisfiable: true
+string0 => "&@\u{2040}&&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10a0}\u{200}&&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{10a0}\u{200}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "& \u{0}&&&")
+*************************************
+Satisfiable: true
+string0 => "& \u{0}&&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "& \u{0}&&&A")
+*************************************
+Satisfiable: true
+string0 => "& \u{0}&&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{1000}&&\u{100}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{1000}&&\u{100}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{178a7}&&\u{409}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{178a7}&&\u{409}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{178a7}&&\u{409}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{178a7}&&\u{409}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{14000}\u{14000}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{14000}\u{14000}&&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{4}&\u{455}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{4}&\u{455}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2000}\u{11}&\u{3}")
+*************************************
+Satisfiable: true
+string0 => "&\u{2000}\u{11}&\u{3}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2000}\u{11}&\u{3}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{2000}\u{11}&\u{3}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1800}\u{0}&\u{2210}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{1800}\u{0}&\u{2210}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1000}\u{7ab7}&\u{8018}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{1000}\u{7ab7}&\u{8018}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1000}\u{7ab7}&\u{8018}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{1000}\u{7ab7}&\u{8018}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{28c}&\u{7e4d}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{28c}&\u{7e4d}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4c00}\u{10400}&\u{0}\u{24000}")
+*************************************
+Satisfiable: true
+string0 => "&\u{4c00}\u{10400}&\u{0}\u{24000}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4c00}\u{10400}&\u{0}\u{24000}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{4c00}\u{10400}&\u{0}\u{24000}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{c242}\u{200c8}&\u{1}")
+*************************************
+Satisfiable: true
+string0 => "&\u{c242}\u{200c8}&\u{1}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4320}\u{680}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{4320}\u{680}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}&"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2}\u{8}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{2}\u{8}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10}\u{10}\u{4006}")
+*************************************
+Satisfiable: true
+string0 => "&\u{10}\u{10}\u{4006}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1000}\u{1d402} AB")
+*************************************
+Satisfiable: true
+string0 => "&\u{1000}\u{1d402} AB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{c040}\u{0}\u{20004}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{c040}\u{0}\u{20004}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4}\u{1}\u{0}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{4}\u{1}\u{0}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{4}\u{1}\u{0}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{4}\u{1}\u{0}&A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{5}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{5}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{285b0}&&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{285b0}&&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{285b0}&&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{285b0}&&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{2000}\u{1c}\u{0}&\u{10}")
+*************************************
+Satisfiable: true
+string0 => "&\u{2000}\u{1c}\u{0}&\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{8000}\u{18}\u{28590}&\u{421}")
+*************************************
+Satisfiable: true
+string0 => "&\u{8000}\u{18}\u{28590}&\u{421}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{8000}\u{18}\u{28590}&\u{421}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{8000}\u{18}\u{28590}&\u{421}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1edc0}P\u{10064}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{1edc0}P\u{10064}&"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{1200}\u{8}\u{8088}\u{6080}")
+*************************************
+Satisfiable: true
+string0 => "&\u{1200}\u{8}\u{8088}\u{6080}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&$\u{2001}\u{0}\u{18202}")
+*************************************
+Satisfiable: true
+string0 => "&$\u{2001}\u{0}\u{18202}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&$\u{2001}\u{0}\u{18202}A")
+*************************************
+Satisfiable: true
+string0 => "&$\u{2001}\u{0}\u{18202}A"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{10}\u{10}\u{20083}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{10}\u{10}\u{20083}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10}\u{0}\u{2c580}\u{c}&")
+*************************************
+Satisfiable: true
+string0 => "&\u{10}\u{0}\u{2c580}\u{c}&"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{10}\u{0}\u{2c580}\u{c}&A")
+*************************************
+Satisfiable: true
+string0 => "&\u{10}\u{0}\u{2c580}\u{c}&A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{4}\u{d}\u{245}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{4}\u{d}\u{245}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{900}\u{0}\u{8590}\u{19}\u{2}")
+*************************************
+Satisfiable: true
+string0 => "&\u{900}\u{0}\u{8590}\u{19}\u{2}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{900}\u{0}\u{8590}\u{19}\u{2}A")
+*************************************
+Satisfiable: true
+string0 => "&\u{900}\u{0}\u{8590}\u{19}\u{2}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at securibench.micro.sanitizers.Sanitizers4.clean(Sanitizers4.java:43)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:31)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{10000}\u{a016}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{10000}\u{a016}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:37)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.sanitizers.Sanitizers4.doGet(Sanitizers4.java:36)
+	at Main.main(Main.java:23)
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{200}\u{0}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "&\u{200}\u{0}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{0}\u{12000}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{0}\u{12000}"
+*************************************
+
+threadTerminated
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "&\u{0}\u{f}")
+*************************************
+Satisfiable: true
+string0 => "&\u{0}\u{f}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+
