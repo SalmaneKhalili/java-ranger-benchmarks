@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 11:55 AM
+====================================================== search started: 6/6/26 12:41 PM
 Testing ExSymExe12
 branch FOO1
 branch BOO2
@@ -73,5 +73,5 @@ instructions:       6106
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/6/26 11:55 AM
+====================================================== search finished: 6/6/26 12:41 PM
 

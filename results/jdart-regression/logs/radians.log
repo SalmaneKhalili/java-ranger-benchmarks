@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 11:57 AM
+====================================================== search started: 6/6/26 12:43 PM
 Radians is positively radiant!
 threadTerminated
 Radians is positively radiant!
@@ -30,7 +30,7 @@ threadTerminated
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:48
+elapsed time:       00:00:41
 states:             new=3,visited=0,backtracked=3,end=2
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -39,5 +39,5 @@ instructions:       6059
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/6/26 11:58 AM
+====================================================== search finished: 6/6/26 12:44 PM
 
