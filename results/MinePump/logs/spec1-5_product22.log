@@ -10,13 +10,13 @@ symbolic.max_byte=127
 symbolic.max_char=65535
 symbolic.min_double=4.9E-324
 symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 0903c74da6815074d3e86f45545065521bdf3f25) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 12:54 PM
+====================================================== search started: 6/6/26 2:29 PM
 the depth of violation is9
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -97,5 +97,5 @@ instructions:       6922
 max memory:         240MB
 loaded code:        classes=94,methods=1916
 
-====================================================== search finished: 6/6/26 12:54 PM
+====================================================== search finished: 6/6/26 2:29 PM
 

@@ -1,6 +1,6 @@
 # Java Ranger Benchmarks
 
-[Latest CI results](https://salmanekhalili.github.io/java-ranger-benchmarks/v047296c8bb9583c7cb6669dbe8014171f4178fa5/index.html)
+[Latest CI results](https://salmanekhalili.github.io/java-ranger-benchmarks/v080ebc53e9b7b8162dfbe8bec29ca9087ab56cd6/index.html)
 
 Automated benchmarking of [Java Ranger](https://github.com/SalmaneKhalili/java-ranger) against the [SV-Benchmarks](https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks) Java corpus. Each push to `main` triggers a full run across 15 benchmark suites via GitHub Actions.
 
