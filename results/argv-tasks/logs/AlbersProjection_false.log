@@ -16,11 +16,11 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/5/26 5:43 PM
+====================================================== search started: 6/6/26 3:44 AM
 #
 # A fatal error has been detected by the Java Runtime Environment:
 #
-#  SIGFPE (0x8) at pc=0x00007f9ac391c9e8, pid=3061, tid=0x00007f9b0e9166c0
+#  SIGFPE (0x8) at pc=0x00007fe3e5d1c9e8, pid=3061, tid=0x00007fe404b166c0
 #
 # JRE version: OpenJDK Runtime Environment (8.0_492-b09) (build 1.8.0_492-b09)
 # Java VM: OpenJDK 64-Bit Server VM (25.492-b09 mixed mode linux-amd64 compressed oops)

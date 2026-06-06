@@ -16,7 +16,7 @@ JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/5/26 5:45 PM
+====================================================== search started: 6/6/26 3:45 AM
 
 java.lang.AssertionError: unsupported toUpper case
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleToLowerCase(SymbolicStringHandler.java:538)

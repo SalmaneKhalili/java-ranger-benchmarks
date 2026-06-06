@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MinePump — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>MinePump</h1>
+  <p>JR: svcomp@6d9cf58 | Date: 2026-06-06 03:44:32 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=3408150219af64301d199f6f0146da007249fb91">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=3408150219af64301d199f6f0146da007249fb91">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.arrays=true +listener=.symbc.SymbolicListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">64</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">64<span class="pct">(100.0%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">0</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">0</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>spec1-5_product1</td><td>false</td><td class="status-correct">correct</td><td>0.735247</td><td></td></tr>
+<tr><td>spec1-5_product10</td><td>false</td><td class="status-correct">correct</td><td>0.743467</td><td></td></tr>
+<tr><td>spec1-5_product11</td><td>false</td><td class="status-correct">correct</td><td>1.596044</td><td></td></tr>
+<tr><td>spec1-5_product12</td><td>false</td><td class="status-correct">correct</td><td>0.798497</td><td></td></tr>
+<tr><td>spec1-5_product13</td><td>false</td><td class="status-correct">correct</td><td>0.720996</td><td></td></tr>
+<tr><td>spec1-5_product14</td><td>false</td><td class="status-correct">correct</td><td>0.734181</td><td></td></tr>
+<tr><td>spec1-5_product15</td><td>false</td><td class="status-correct">correct</td><td>1.475175</td><td></td></tr>
+<tr><td>spec1-5_product16</td><td>false</td><td class="status-correct">correct</td><td>0.822614</td><td></td></tr>
+<tr><td>spec1-5_product17</td><td>false</td><td class="status-correct">correct</td><td>0.707954</td><td></td></tr>
+<tr><td>spec1-5_product18</td><td>false</td><td class="status-correct">correct</td><td>0.725558</td><td></td></tr>
+<tr><td>spec1-5_product19</td><td>false</td><td class="status-correct">correct</td><td>1.433336</td><td></td></tr>
+<tr><td>spec1-5_product2</td><td>false</td><td class="status-correct">correct</td><td>0.712298</td><td></td></tr>
+<tr><td>spec1-5_product20</td><td>false</td><td class="status-correct">correct</td><td>0.803478</td><td></td></tr>
+<tr><td>spec1-5_product21</td><td>false</td><td class="status-correct">correct</td><td>0.732904</td><td></td></tr>
+<tr><td>spec1-5_product22</td><td>false</td><td class="status-correct">correct</td><td>0.716510</td><td></td></tr>
+<tr><td>spec1-5_product23</td><td>false</td><td class="status-correct">correct</td><td>1.471194</td><td></td></tr>
+<tr><td>spec1-5_product24</td><td>false</td><td class="status-correct">correct</td><td>0.784235</td><td></td></tr>
+<tr><td>spec1-5_product25</td><td>false</td><td class="status-correct">correct</td><td>0.723526</td><td></td></tr>
+<tr><td>spec1-5_product26</td><td>false</td><td class="status-correct">correct</td><td>0.730881</td><td></td></tr>
+<tr><td>spec1-5_product27</td><td>false</td><td class="status-correct">correct</td><td>1.483303</td><td></td></tr>
+<tr><td>spec1-5_product28</td><td>false</td><td class="status-correct">correct</td><td>0.807109</td><td></td></tr>
+<tr><td>spec1-5_product29</td><td>false</td><td class="status-correct">correct</td><td>0.763072</td><td></td></tr>
+<tr><td>spec1-5_product3</td><td>false</td><td class="status-correct">correct</td><td>1.513024</td><td></td></tr>
+<tr><td>spec1-5_product30</td><td>false</td><td class="status-correct">correct</td><td>0.728522</td><td></td></tr>
+<tr><td>spec1-5_product31</td><td>false</td><td class="status-correct">correct</td><td>1.479988</td><td></td></tr>
+<tr><td>spec1-5_product32</td><td>false</td><td class="status-correct">correct</td><td>0.830316</td><td></td></tr>
+<tr><td>spec1-5_product33</td><td>false</td><td class="status-correct">correct</td><td>0.703516</td><td></td></tr>
+<tr><td>spec1-5_product34</td><td>false</td><td class="status-correct">correct</td><td>0.700754</td><td></td></tr>
+<tr><td>spec1-5_product35</td><td>false</td><td class="status-correct">correct</td><td>1.415003</td><td></td></tr>
+<tr><td>spec1-5_product36</td><td>false</td><td class="status-correct">correct</td><td>0.790611</td><td></td></tr>
+<tr><td>spec1-5_product37</td><td>false</td><td class="status-correct">correct</td><td>0.706340</td><td></td></tr>
+<tr><td>spec1-5_product38</td><td>false</td><td class="status-correct">correct</td><td>0.682342</td><td></td></tr>
+<tr><td>spec1-5_product39</td><td>false</td><td class="status-correct">correct</td><td>1.457011</td><td></td></tr>
+<tr><td>spec1-5_product4</td><td>false</td><td class="status-correct">correct</td><td>0.812929</td><td></td></tr>
+<tr><td>spec1-5_product40</td><td>false</td><td class="status-correct">correct</td><td>0.820726</td><td></td></tr>
+<tr><td>spec1-5_product41</td><td>false</td><td class="status-correct">correct</td><td>0.752566</td><td></td></tr>
+<tr><td>spec1-5_product42</td><td>false</td><td class="status-correct">correct</td><td>0.743848</td><td></td></tr>
+<tr><td>spec1-5_product43</td><td>false</td><td class="status-correct">correct</td><td>1.525791</td><td></td></tr>
+<tr><td>spec1-5_product44</td><td>false</td><td class="status-correct">correct</td><td>0.852012</td><td></td></tr>
+<tr><td>spec1-5_product45</td><td>false</td><td class="status-correct">correct</td><td>0.799386</td><td></td></tr>
+<tr><td>spec1-5_product46</td><td>false</td><td class="status-correct">correct</td><td>0.775473</td><td></td></tr>
+<tr><td>spec1-5_product47</td><td>false</td><td class="status-correct">correct</td><td>1.462025</td><td></td></tr>
+<tr><td>spec1-5_product48</td><td>false</td><td class="status-correct">correct</td><td>0.829406</td><td></td></tr>
+<tr><td>spec1-5_product49</td><td>false</td><td class="status-correct">correct</td><td>0.696259</td><td></td></tr>
+<tr><td>spec1-5_product5</td><td>false</td><td class="status-correct">correct</td><td>0.724611</td><td></td></tr>
+<tr><td>spec1-5_product50</td><td>false</td><td class="status-correct">correct</td><td>0.721641</td><td></td></tr>
+<tr><td>spec1-5_product51</td><td>false</td><td class="status-correct">correct</td><td>1.409685</td><td></td></tr>
+<tr><td>spec1-5_product52</td><td>false</td><td class="status-correct">correct</td><td>0.825608</td><td></td></tr>
+<tr><td>spec1-5_product53</td><td>false</td><td class="status-correct">correct</td><td>0.681401</td><td></td></tr>
+<tr><td>spec1-5_product54</td><td>false</td><td class="status-correct">correct</td><td>0.730021</td><td></td></tr>
+<tr><td>spec1-5_product55</td><td>false</td><td class="status-correct">correct</td><td>1.422473</td><td></td></tr>
+<tr><td>spec1-5_product56</td><td>false</td><td class="status-correct">correct</td><td>0.812186</td><td></td></tr>
+<tr><td>spec1-5_product57</td><td>true</td><td class="status-correct">correct</td><td>6.960621</td><td></td></tr>
+<tr><td>spec1-5_product58</td><td>true</td><td class="status-correct">correct</td><td>6.837966</td><td></td></tr>
+<tr><td>spec1-5_product59</td><td>true</td><td class="status-correct">correct</td><td>6.094309</td><td></td></tr>
+<tr><td>spec1-5_product6</td><td>false</td><td class="status-correct">correct</td><td>0.710223</td><td></td></tr>
+<tr><td>spec1-5_product60</td><td>true</td><td class="status-correct">correct</td><td>6.209990</td><td></td></tr>
+<tr><td>spec1-5_product61</td><td>true</td><td class="status-correct">correct</td><td>6.850626</td><td></td></tr>
+<tr><td>spec1-5_product62</td><td>true</td><td class="status-correct">correct</td><td>6.778830</td><td></td></tr>
+<tr><td>spec1-5_product63</td><td>true</td><td class="status-correct">correct</td><td>6.378421</td><td></td></tr>
+<tr><td>spec1-5_product64</td><td>true</td><td class="status-correct">correct</td><td>6.189729</td><td></td></tr>
+<tr><td>spec1-5_product7</td><td>false</td><td class="status-correct">correct</td><td>1.506785</td><td></td></tr>
+<tr><td>spec1-5_product8</td><td>false</td><td class="status-correct">correct</td><td>0.851242</td><td></td></tr>
+<tr><td>spec1-5_product9</td><td>false</td><td class="status-correct">correct</td><td>0.739277</td><td></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>
