@@ -10,7 +10,16 @@ on:
       jr_ref:
         description: 'Java Ranger ref (branch/commit)'
         required: false
-        default: 'svcomp'
+        default: 'ade8889'
+      timeout:
+        description: 'Per-benchmark timeout in seconds'
+        required: false
+        default: '900'
+      no_fp:
+        description: 'Disable symbolic.fp (floating-point theory)'
+        type: boolean
+        required: false
+        default: false
   repository_dispatch:
     types: [java-ranger-push]
 
@@ -49,7 +58,7 @@ jobs:
         with:
           repository: ${{ env.JR_REPO }}
           token: ${{ secrets.BENCHMARK_PAT }}
-          ref: ${{ github.event.client_payload.ref || env.JR_REF }}
+          ref: ${{ github.event.client_payload.ref || inputs.jr_ref || env.JR_REF }}
           path: java-ranger
           submodules: recursive
           fetch-depth: 0
@@ -109,17 +118,22 @@ jobs:
         id: run_benchmarks
         working-directory: benchmarks
         run: |
-          python3 scripts/ci.py run \
-            "${{ matrix.suite }}" \
-            "${{ github.workspace }}/java-ranger" \
-            "${{ github.workspace }}/sv-benchmarks" \
-            "results/${{ matrix.suite }}"
+          TIMEOUT="${{ inputs.timeout || 900 }}"
+          NO_FP="${{ inputs.no_fp || 'false' }}"
+          CMD="python3 scripts/ci.py run \"${{ matrix.suite }}\" \
+            \"${{ github.workspace }}/java-ranger\" \
+            \"${{ github.workspace }}/sv-benchmarks\" \
+            \"results/${{ matrix.suite }}\" \
+            --timeout $TIMEOUT"
+          [ "$NO_FP" = "true" ] && CMD="$CMD --no-fp"
+          echo "Running: $CMD"
+          eval "$CMD"
         timeout-minutes: 180
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: results-${{ matrix.suite }}-${{ github.run_id }}
+          name: results-${{ matrix.suite }}-${{ inputs.no_fp == true && 'nofp' || 'fp' }}-${{ github.run_id }}
           path: benchmarks/results/${{ matrix.suite }}/
 
       - name: Post summary
@@ -159,8 +173,13 @@ jobs:
 
           xml_files=""
           for d in results-*/; do
-            suite_name="${d#results-}"
-            suite_name="${suite_name%%-${{ github.run_id }}*}"
+            raw="${d#results-}"
+            # Strip trailing suffixes like -fp-<runid>, -nofp-<runid>
+            suite_name="${raw%-fp-*}"
+            suite_name="${suite_name%-nofp-*}"
+            if [ "$suite_name" = "$raw" ]; then
+              suite_name="${raw%-${{ github.run_id }}}"
+            fi
             for f in "$d"/*.results.xml.bz2; do
               [ -f "$f" ] && xml_files="$xml_files $f"
             done
@@ -234,8 +253,12 @@ jobs:
           for d in "${{ github.workspace }}"/results-*/; do
             [ -d "$d" ] || continue
             base=$(basename "$d")
-            suite_name="${base#results-}"
-            suite_name="${suite_name%%-${{ github.run_id }}*}"
+            raw="${base#results-}"
+            suite_name="${raw%-fp-*}"
+            suite_name="${suite_name%-nofp-*}"
+            if [ "$suite_name" = "$raw" ]; then
+              suite_name="${raw%-${{ github.run_id }}}"
+            fi
             mkdir -p "results/$suite_name"
             cp -r "$d"* "results/$suite_name/"
           done

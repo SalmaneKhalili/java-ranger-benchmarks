@@ -34,7 +34,8 @@ SUITES = [
     "juliet-java",
 ]
 
-JPF_CONFIG = """\
+def make_jpf_config(classpath, fp_enabled=True):
+    return """\
 target=Main
 classpath={classpath}
 symbolic.dp=z3bitvector
@@ -55,8 +56,8 @@ symbolic.jrarrays=true
 veritestingMode=5
 recursiveDepth=200
 singlePathOptimization=true
-symbolic.fp=true
-listener=.symbc.VeritestingListener"""
+symbolic.fp={fp}
+listener=.symbc.VeritestingListener""".format(classpath=classpath, fp=str(fp_enabled).lower())
 
 STATUS_MAP = {
     "CORRECT": "correct", "INCORRECT": "incorrect",
@@ -329,7 +330,8 @@ class BenchmarkResult:
         self.compile_ok = True
 
 
-def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
+def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
+                  timeout=30, fp_enabled=True):
     result = BenchmarkResult()
     result.name = os.path.splitext(os.path.basename(yml_path))[0]
     yml_dir = os.path.dirname(yml_path)
@@ -389,7 +391,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
 
         jpf_config_path = os.path.join(tmp_dir, "config.jpf")
         with open(jpf_config_path, "w") as f:
-            f.write(JPF_CONFIG.format(classpath=classpath))
+            f.write(make_jpf_config(classpath, fp_enabled=fp_enabled))
 
         log_path = os.path.join(tmp_dir, "jpf.log")
         env = os.environ.copy()
@@ -401,7 +403,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
                 ["java", "-Xmx1024m", "-ea",
                  f"-Djava.library.path={jpf_symbc_lib}",
                  "-jar", jpf_core_jar, jpf_config_path],
-                 cwd=jr_dir, capture_output=True, text=True, timeout=30, env=env,
+                 cwd=jr_dir, capture_output=True, text=True, timeout=timeout, env=env,
             )
             exit_code = jpf_proc.returncode
             jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
@@ -431,7 +433,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir):
 
         if exit_code == 124:
             result.verdict = "UNKNOWN"
-            result.error = "timeout after 30s"
+            result.error = f"timeout after {timeout}s"
             return result
 
         if "no errors detected" in jpf_output:
@@ -523,7 +525,8 @@ def write_benchexec_xml(results, suite, start_dt, end_dt, sysinfo, output_path, 
         f.write('</result>\n')
 
 
-def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
+def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
+              timeout=30, fp_enabled=True, max_benchmarks=0):
     suite_dir = os.path.join(sv_bench_dir, "java", suite)
     if not os.path.isdir(suite_dir):
         print(f"Error: Suite directory not found: {suite_dir}", file=sys.stderr)
@@ -534,11 +537,15 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
         print(f"No YML files found in {suite_dir}", file=sys.stderr)
         return
 
+    if max_benchmarks > 0:
+        yml_files = yml_files[:max_benchmarks]
+
     os.makedirs(output_dir, exist_ok=True)
     log_dir = os.path.join(output_dir, "logs")
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     start_dt = datetime.now()
 
+    fp_str = "true" if fp_enabled else "false"
     jpf_options = ("+target=Main +symbolic.dp=z3bitvector "
                    "+symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 "
                    "+symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 "
@@ -548,16 +555,18 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str):
                    "+symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on "
                    "+symbolic.debug=true +symbolic.jrarrays=true "
                    "+veritestingMode=5 +recursiveDepth=200 "
-                   "+singlePathOptimization=true +symbolic.fp=true "
+                   "+singlePathOptimization=true "
+                   f"+symbolic.fp={fp_str} "
                    "+listener=.symbc.VeritestingListener")
 
     results = []
     counters = {"total": 0, "correct": 0, "incorrect": 0, "unknown": 0, "compile_err": 0, "timeout": 0}
 
-    print(f"--- {suite} ({len(yml_files)} benchmarks) ---")
+    print(f"--- {suite} ({len(yml_files)} benchmarks, timeout={timeout}s, fp={fp_str}) ---")
 
     for yml_path in yml_files:
-        result = run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir)
+        result = run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
+                               timeout=timeout, fp_enabled=fp_enabled)
         results.append(result)
         counters["total"] += 1
 
@@ -632,7 +641,9 @@ def cmd_run(args):
     except Exception:
         pass
 
-    run_suite(args.suite, args.jr_dir, args.sv_dir, args.output_dir, jr_version_str)
+    run_suite(args.suite, args.jr_dir, args.sv_dir, args.output_dir, jr_version_str,
+              timeout=args.timeout, fp_enabled=not args.no_fp,
+              max_benchmarks=args.max_benchmarks)
 
 
 # ---------------------------------------------------------------------------
@@ -1393,6 +1404,12 @@ def main():
     p.add_argument("jr_dir")
     p.add_argument("sv_dir")
     p.add_argument("output_dir")
+    p.add_argument("--timeout", type=int, default=30,
+                   help="Per-benchmark JPF timeout in seconds (default: 30)")
+    p.add_argument("--no-fp", action="store_true",
+                   help="Disable symbolic.fp (floating-point theory)")
+    p.add_argument("--max-benchmarks", type=int, default=0,
+                   help="Limit benchmarks per suite (0 = all, default: 0)")
 
     p = add("merge", help="Merge per-suite XMLs")
     p.add_argument("output_dir")
