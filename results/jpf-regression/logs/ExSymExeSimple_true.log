@@ -1,4 +1,154 @@
-Total Solver Time = 52 msec
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int0 #x000000007fffffff))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+int0 >= CONST_2147483647 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0
+       (bvashr (bvshl (bvadd int0 #x0000000000000001) #x0000000000000020)
+               #x0000000000000020)))
+(assert (bvslt int0 #x000000007fffffff))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 <= (((int0 + CONST_1)<<CONST_32)>>CONST_32) &&
+int0 < CONST_2147483647 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt int0
+       (bvashr (bvshl (bvadd int0 #x0000000000000001) #x0000000000000020)
+               #x0000000000000020)))
+(assert (bvslt int0 #x000000007fffffff))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 > (((int0 + CONST_1)<<CONST_32)>>CONST_32) &&
+int0 < CONST_2147483647 -> false
+
+### PCs: total:4 sat:3 unsat:1
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (= int0
+              (bvashr (bvshl (bvadd int0 #x0000000000000001) #x0000000000000020)
+                      #x0000000000000020))))
+  (not a!1)))
+(assert (bvslt int0 #x000000007fffffff))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 != (((int0 + CONST_1)<<CONST_32)>>CONST_32) &&
+int0 < CONST_2147483647 -> true
+
+### PCs: total:5 sat:4 unsat:1
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0
+   (bvashr (bvshl (bvadd int0 #x0000000000000001) #x0000000000000020)
+           #x0000000000000020)))
+(assert (bvslt int0 #x000000007fffffff))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 == (((int0 + CONST_1)<<CONST_32)>>CONST_32) &&
+int0 < CONST_2147483647 -> false
+
+### PCs: total:6 sat:4 unsat:2
+
+<
+*****************
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 300 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 44 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-299,0,299,0,0,52,7,0,0,3,0,0,0,0,3,0,3,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+300,0,300,0,0,44,7,0,0,3,0,0,0,0,3,0,3,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6076
 max memory:         240MB
 loaded code:        classes=86,methods=1832
 
-====================================================== search finished: 6/7/26 7:43 PM
+====================================================== search finished: 6/7/26 9:41 PM

@@ -1,7 +1,157 @@
-Total Solver Time = 52 msec
-Total Solver Parse Time = 7 msec
+(assert (bvsle short0 #x0000000000007fff))
+(assert (bvslt short0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+short0 < CONST_0 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Testing ExSymExe12
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun short0 () (_ BitVec 64))
+(assert (bvsge short0 #xffffffffffff8000))
+(assert (bvsle short0 #x0000000000007fff))
+(assert (bvsge (bvashr (bvshl (bvadd short0 #x0000000000000003) #x0000000000000020)
+               #x0000000000000020)
+       (bvsub short0 #x0000000000000003)))
+(assert (bvsge short0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(((short0 + CONST_3)<<CONST_32)>>CONST_32) >= (short0 - CONST_3) &&
+short0 >= CONST_0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun short0 () (_ BitVec 64))
+(assert (bvsge short0 #xffffffffffff8000))
+(assert (bvsle short0 #x0000000000007fff))
+(assert (bvslt (bvashr (bvshl (bvadd short0 #x0000000000000003) #x0000000000000020)
+               #x0000000000000020)
+       (bvsub short0 #x0000000000000003)))
+(assert (bvsge short0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(((short0 + CONST_3)<<CONST_32)>>CONST_32) < (short0 - CONST_3) &&
+short0 >= CONST_0 -> false
+
+### PCs: total:4 sat:3 unsat:1
+
+branch FOO2
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun short0 () (_ BitVec 64))
+(assert (bvsge short0 #xffffffffffff8000))
+(assert (bvsle short0 #x0000000000007fff))
+(assert (bvsge (bvsub short0 #x0000000000000003)
+       (bvashr (bvshl (bvadd short0 #x0000000000000003) #x0000000000000020)
+               #x0000000000000020)))
+(assert (bvsge short0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 3 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(short0 - CONST_3) >= (((short0 + CONST_3)<<CONST_32)>>CONST_32) &&
+short0 >= CONST_0 -> false
+
+### PCs: total:5 sat:3 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun short0 () (_ BitVec 64))
+(assert (bvsge short0 #xffffffffffff8000))
+(assert (bvsle short0 #x0000000000007fff))
+(assert (bvslt (bvsub short0 #x0000000000000003)
+       (bvashr (bvshl (bvadd short0 #x0000000000000003) #x0000000000000020)
+               #x0000000000000020)))
+(assert (bvsge short0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+(short0 - CONST_3) < (((short0 + CONST_3)<<CONST_32)>>CONST_32) &&
+short0 >= CONST_0 -> true
+
+### PCs: total:6 sat:4 unsat:2
+
+branch BOO1
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 305 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 50 msec
+Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1 msec
+Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-301,0,301,0,0,52,7,1,0,3,0,0,0,0,3,0,3,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+305,0,305,0,0,50,8,0,0,3,0,0,0,0,3,0,3,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6087
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/7/26 7:41 PM
+====================================================== search finished: 6/7/26 9:39 PM

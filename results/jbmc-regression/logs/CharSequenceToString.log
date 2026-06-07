@@ -1,5 +1,155 @@
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun Length_0_ () (_ BitVec 64))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (not (= Length_0_ #xffffffffffffffff)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+Length_0_ != CONST_-1 -> true
+
+### PCs: total:4 sat:3 unsat:1
+
+string analysis: SPC # = 1
+(string0 equals CONST_case1)
+NPC constraint # = 1
+Length_0_ != CONST_-1
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (= string0 "case1"))
+(assert (not (= (str.len string0) (- 1))))
+
+
+
+(define-fun string0 () String
+  "case1")
+Returned solutions: 
+(define-fun string0 () String  "case1")
+*************************************
+Satisfiable: true
+string0 => "case1"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun Length_0_ () (_ BitVec 64))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (= Length_0_ #x0000000000000005))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+Length_0_ == CONST_5 -> true
+
+### PCs: total:5 sat:4 unsat:1
+
+string analysis: SPC # = 1
+(string0 equals CONST_case1)
+NPC constraint # = 1
+Length_0_ == CONST_5
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (= string0 "case1"))
+(assert (= (str.len string0) 5))
+
+
+
+(define-fun string0 () String
+  "case1")
+Returned solutions: 
+(define-fun string0 () String  "case1")
+*************************************
+Satisfiable: true
+string0 => "case1"
+*************************************
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun Length_0_ () (_ BitVec 64))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (not (= Length_0_ #x0000000000000005)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+Length_0_ != CONST_5 -> true
+
+### PCs: total:6 sat:5 unsat:1
+
+string analysis: SPC # = 1
+(string0 equals CONST_case1)
+NPC constraint # = 1
+Length_0_ != CONST_5
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (= string0 "case1"))
+(assert (not (= (str.len string0) 5)))
+
+
+
+*************************************
+Satisfiable: false
+*************************************
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 412 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
 Total Solver Time = 13 msec
-Total Solver Parse Time = 3 msec
+Total Solver Parse Time = 4 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-419,0,419,0,0,13,3,0,0,2,0,0,0,0,2,0,2,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+412,0,412,0,0,13,4,0,0,2,0,0,0,0,2,0,2,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6061
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/7/26 7:41 PM
+====================================================== search finished: 6/7/26 9:39 PM

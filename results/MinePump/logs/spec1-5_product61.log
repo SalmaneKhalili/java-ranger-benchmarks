@@ -1,7 +1,157 @@
-Total Solver Time = 7807 msec
-Total Solver Parse Time = 842 msec
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(declare-fun bool4 () (_ BitVec 64))
+(declare-fun bool3 () (_ BitVec 64))
+(declare-fun bool5 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+(assert (not (= bool8 #x0000000000000000)))
+(assert (bvsge bool4 #x0000000000000000))
+(assert (bvsle bool4 #x0000000000000001))
+(assert (= bool4 #x0000000000000000))
+(assert (bvsge bool3 #x0000000000000000))
+(assert (bvsle bool3 #x0000000000000001))
+(assert (= bool3 #x0000000000000000))
+(assert (bvsge bool5 #x0000000000000000))
+(assert (bvsle bool5 #x0000000000000001))
+(assert (not (= bool5 #x0000000000000000)))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (not (= bool2 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+bool8 == CONST_0 &&
+bool7 == CONST_0 &&
+bool6 == CONST_0 &&
+bool8 != CONST_0 &&
+bool4 == CONST_0 &&
+bool3 == CONST_0 &&
+bool5 != CONST_0 &&
+bool1 == CONST_0 &&
+bool0 == CONST_0 &&
+bool2 != CONST_0 -> false
+
+### PCs: total:5965 sat:4709 unsat:1256
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool4 () (_ BitVec 64))
+(declare-fun bool3 () (_ BitVec 64))
+(declare-fun bool5 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (not (= bool8 #x0000000000000000)))
+(assert (bvsge bool4 #x0000000000000000))
+(assert (bvsle bool4 #x0000000000000001))
+(assert (= bool4 #x0000000000000000))
+(assert (bvsge bool3 #x0000000000000000))
+(assert (bvsle bool3 #x0000000000000001))
+(assert (= bool3 #x0000000000000000))
+(assert (bvsge bool5 #x0000000000000000))
+(assert (bvsle bool5 #x0000000000000001))
+(assert (not (= bool5 #x0000000000000000)))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (not (= bool2 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+bool7 == CONST_0 &&
+bool6 == CONST_0 &&
+bool8 != CONST_0 &&
+bool4 == CONST_0 &&
+bool3 == CONST_0 &&
+bool5 != CONST_0 &&
+bool1 == CONST_0 &&
+bool0 == CONST_0 &&
+bool2 != CONST_0 -> true
+
+### PCs: total:5966 sat:4710 unsat:1256
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 9262 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 7900 msec
+Total Solver Parse Time = 860 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 337 msec
+Total Solver Clean up Time = 333 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-9146,0,9146,0,0,7807,842,337,0,5,0,0,0,0,5,0,5,0,6437,0,0,0,0,6437,0,0,-1,-1,0.0,0,0,0
+9262,0,9262,0,0,7900,860,333,0,5,0,0,0,0,5,0,5,0,6437,0,0,0,0,6437,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       1344416
 max memory:         488MB
 loaded code:        classes=90,methods=1878
 
-====================================================== search finished: 6/7/26 7:43 PM
+====================================================== search finished: 6/7/26 9:41 PM

@@ -1,5 +1,155 @@
-Total Solver Time = 40 msec
-Total Solver Parse Time = 8 msec
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (not (= bool0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+bool0 != CONST_0 -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 1
+(.valueof[(bool0)] equals CONST_true)
+NPC constraint # = 1
+bool0 != CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const bool0 Int)
+(assert (= (ite ( not (= bool0 0)) "true" "false") "true"))
+(assert (not (= bool0 0)))
+
+
+
+(define-fun bool0 () Int
+  1)
+Returned solutions: 
+(define-fun bool0 () Int  1)
+*************************************
+Satisfiable: true
+bool0 => 1
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+bool0 == CONST_0 -> true
+
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 1
+(.valueof[(bool0)] notequals CONST_false)
+NPC constraint # = 1
+bool0 == CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const bool0 Int)
+(assert (not (= (ite ( not (= bool0 0)) "true" "false") "false")))
+(assert (= bool0 0))
+
+
+
+*************************************
+Satisfiable: false
+*************************************
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+bool0 == CONST_0 -> true
+
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 1
+(.valueof[(bool0)] equals CONST_false)
+NPC constraint # = 1
+bool0 == CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const bool0 Int)
+(assert (= (ite ( not (= bool0 0)) "true" "false") "false"))
+(assert (= bool0 0))
+
+
+
+(define-fun bool0 () Int
+  0)
+Returned solutions: 
+(define-fun bool0 () Int  0)
+*************************************
+Satisfiable: true
+bool0 => 0
+*************************************
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 406 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 36 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-418,0,418,0,0,40,8,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+406,0,406,0,0,36,6,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6054
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/7/26 7:43 PM
+====================================================== search finished: 6/7/26 9:41 PM

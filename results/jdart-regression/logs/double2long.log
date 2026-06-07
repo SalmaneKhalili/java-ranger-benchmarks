@@ -1,3 +1,153 @@
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
+       (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
+       (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(double0 * CONST_10.0)_1340565491|
+   (fp.mul roundNearestTiesToEven
+           (fp #b0 #b10000000010 #x4000000000000)
+           double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 3807 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
+
+### PCs: total:5 sat:5 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #xffffffffffffff9c))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
+       (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
+       (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(double0 * CONST_10.0)_1340565491|
+   (fp.mul roundNearestTiesToEven
+           (fp #b0 #b10000000010 #x4000000000000)
+           double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 2203 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+INT_1 < CONST_-100 &&
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
+
+### PCs: total:6 sat:6 unsat:0
+
+the depth of violation is5
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #xffffffffffffff9c))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
+       (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
+       (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(double0 * CONST_10.0)_1340565491|
+   (fp.mul roundNearestTiesToEven
+           (fp #b0 #b10000000010 #x4000000000000)
+           double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 947 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+INT_1 < CONST_-100 &&
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
+
+[SEVERE] JPF exception, terminating: exception during propertyViolated() notification
+
+java.lang.NumberFormatException: For input string: "(-"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValue(ProblemZ3BitVector.java:1676)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:228)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+java.lang.NumberFormatException: For input string: "(-"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
 	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
 	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
 	at gov.nasa.jpf.JPF.run(JPF.java:613)
@@ -10,7 +160,7 @@
 	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
 java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
 java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1649)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
@@ -40,7 +190,7 @@ gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notificat
 	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
 Caused by: java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
 java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1649)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)

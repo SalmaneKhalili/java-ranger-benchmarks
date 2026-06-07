@@ -1,7 +1,157 @@
-Total Solver Time = 4090 msec
-Total Solver Parse Time = 10 msec
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt float0 (fp #b0 #b10000011101 #x0000000000000)))
+(assert (fp.gt float0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+float0 > CONST_1.073741824E9 &&
+float0 > CONST_0.0 -> false
+
+### PCs: total:12 sat:7 unsat:5
+
+New sym int INT_2 min=-2147483648, max=2147483647
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun |(float0 + CONST_1.0)_825658265| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(declare-fun INT_2 () (_ BitVec 64))
+(assert (fp.gt |(float0 + CONST_1.0)_825658265| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_825658265| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_825658265|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (bvsge INT_2 #xffffffff80000000))
+(assert (bvsle INT_2 #x000000007fffffff))
+(assert (fp.eq |(float0 + CONST_1.0)_825658265| ((_ to_fp 11 53) roundTowardZero INT_2)))
+(assert (fp.lt float0 (fp #b0 #b10000011101 #x0000000000000)))
+(assert (fp.gt float0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 848 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(float0 + CONST_1.0) == INT_2 &&
+float0 < CONST_1.073741824E9 &&
+float0 > CONST_0.0 -> true
+
+### PCs: total:13 sat:8 unsat:5
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_2 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_825658265| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_2 #xffffffff80000000))
+(assert (bvsle INT_2 #x000000007fffffff))
+(assert (bvsle INT_2 #x0000000000000000))
+(assert (fp.gt |(float0 + CONST_1.0)_825658265| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_825658265| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_825658265|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_825658265| ((_ to_fp 11 53) roundTowardZero INT_2)))
+(assert (fp.lt float0 (fp #b0 #b10000011101 #x0000000000000)))
+(assert (fp.gt float0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 267 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+INT_2 <= CONST_0 &&
+(float0 + CONST_1.0) == INT_2 &&
+float0 < CONST_1.073741824E9 &&
+float0 > CONST_0.0 -> false
+
+### PCs: total:14 sat:8 unsat:6
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_2 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_825658265| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_2 #xffffffff80000000))
+(assert (bvsle INT_2 #x000000007fffffff))
+(assert (bvsgt INT_2 #x0000000000000000))
+(assert (fp.gt |(float0 + CONST_1.0)_825658265| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_825658265| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_825658265|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_825658265| ((_ to_fp 11 53) roundTowardZero INT_2)))
+(assert (fp.lt float0 (fp #b0 #b10000011101 #x0000000000000)))
+(assert (fp.gt float0 (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 1121 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+INT_2 > CONST_0 &&
+(float0 + CONST_1.0) == INT_2 &&
+float0 < CONST_1.073741824E9 &&
+float0 > CONST_0.0 -> true
+
+### PCs: total:15 sat:9 unsat:6
+
+x >0
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 4307 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 4042 msec
+Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 84 msec
+Total Solver Clean up Time = 100 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4339,0,4339,0,0,4090,10,84,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+4307,0,4307,0,0,4042,12,100,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6107
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 9:41 PM

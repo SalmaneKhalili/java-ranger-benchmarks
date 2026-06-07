@@ -1,7 +1,157 @@
-Total Solver Time = 72152 msec
-Total Solver Parse Time = 24 msec
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_7)))
+(assert (bvsge INT_6 #xffffffff80000000))
+(assert (bvsle INT_6 #x000000007fffffff))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_6)))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_5)))
+(assert (fp.gt REAL_4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (fp.eq REAL_4 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.gt REAL_2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (= int0 int0))
+(assert (bvsle int0 #x000000000000007f))
+(assert (bvsge int0 #xffffffffffffff80))
+
+
+Solving time of z3 bitvector is 3814 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+INT_7 == INT_5 &&
+REAL_3 == INT_7 &&
+REAL_3 == INT_6 &&
+REAL_3 == INT_5 &&
+REAL_4 == int0 &&
+REAL_3 == int0 &&
+REAL_2 == int0 &&
+REAL_1 == int0 &&
+int0 == int0 &&
+int0 <= CONST_127 &&
+int0 >= CONST_-128 -> true
+
+### PCs: total:32 sat:20 unsat:12
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_5 () (_ BitVec 64))
+(declare-fun INT_7 () (_ BitVec 64))
+(declare-fun REAL_3 () (_ FloatingPoint 11 53))
+(declare-fun INT_6 () (_ BitVec 64))
+(declare-fun REAL_4 () (_ FloatingPoint 11 53))
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun REAL_2 () (_ FloatingPoint 11 53))
+(declare-fun REAL_1 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_5 #xffffffff80000000))
+(assert (bvsle INT_5 #x000000007fffffff))
+(assert (bvsge INT_7 #xffffffff80000000))
+(assert (bvsle INT_7 #x000000007fffffff))
+(assert (bvsgt INT_5 INT_7))
+(assert (fp.gt REAL_3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_7)))
+(assert (bvsge INT_6 #xffffffff80000000))
+(assert (bvsle INT_6 #x000000007fffffff))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_6)))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero INT_5)))
+(assert (fp.gt REAL_4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (fp.eq REAL_4 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.gt REAL_2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero int0)))
+(assert (= int0 int0))
+(assert (bvsle int0 #x000000000000007f))
+(assert (bvsge int0 #xffffffffffffff80))
+
+
+Solving time of z3 bitvector is 13805 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+INT_5 > INT_7 &&
+REAL_3 == INT_7 &&
+REAL_3 == INT_6 &&
+REAL_3 == INT_5 &&
+REAL_4 == int0 &&
+REAL_3 == int0 &&
+REAL_2 == int0 &&
+REAL_1 == int0 &&
+int0 == int0 &&
+int0 <= CONST_127 &&
+int0 >= CONST_-128 -> false
+
+### PCs: total:33 sat:20 unsat:13
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt int0 int0))
+(assert (bvsle int0 #x000000000000007f))
+(assert (bvsge int0 #xffffffffffffff80))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+int0 > int0 &&
+int0 <= CONST_127 &&
+int0 >= CONST_-128 -> false
+
+### PCs: total:34 sat:20 unsat:14
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 63273 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 63009 msec
+Total Solver Parse Time = 22 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 593 msec
+Total Solver Clean up Time = 507 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-72418,0,72418,0,0,72152,24,593,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
+63273,0,63273,0,0,63009,22,507,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:01:12
+elapsed time:       00:01:03
 states:             new=18,visited=0,backtracked=18,end=3
 search:             maxDepth=12,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=11
@@ -46,4 +196,4 @@ instructions:       6141
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/7/26 7:44 PM
+====================================================== search finished: 6/7/26 9:42 PM

@@ -1,3 +1,153 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_1543148593| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #x0000000000000000))
+(assert (fp.gt |(float0 + CONST_1.0)_1543148593| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_1543148593| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_1543148593|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_1543148593|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
+
+
+Solving time of z3 bitvector is 168 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+INT_1 < CONST_0 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> false
+
+### PCs: total:5 sat:4 unsat:1
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_1543148593| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (= #x0000000000000000 INT_1))
+(assert (fp.gt |(float0 + CONST_1.0)_1543148593| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_1543148593| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_1543148593|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_1543148593|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
+
+
+Solving time of z3 bitvector is 15 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+CONST_0 == INT_1 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> false
+
+### PCs: total:6 sat:4 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_1543148593| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvsgt INT_1 #x0000000000000000))
+(assert (fp.gt |(float0 + CONST_1.0)_1543148593| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_1543148593| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_1543148593|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_1543148593|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
+
+
+Solving time of z3 bitvector is 848 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+INT_1 > CONST_0 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> true
+
+### PCs: total:7 sat:5 unsat:2
+
+the depth of violation is4
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_1543148593| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvsgt INT_1 #x0000000000000000))
+(assert (fp.gt |(float0 + CONST_1.0)_1543148593| (fp #b1 #b10000011110 #x0000000000000)))
+(assert (fp.lt |(float0 + CONST_1.0)_1543148593| (fp #b0 #b10000011101 #xfffffffc00000)))
+(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= |(float0 + CONST_1.0)_1543148593|
+   (fp.add roundNearestTiesToEven float0 (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_1543148593|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
+
+
+Solving time of z3 bitvector is 193 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+INT_1 > CONST_0 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+INT_1[1] > CONST_0 &&
+(float0[0.0] + CONST_1.0) == INT_1[1] &&
+CONST_0.0 == float0[0.0]
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+[SEVERE] JPF exception, terminating: exception during propertyViolated() notification
+
+java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:156)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:202)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslator.java:32)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:46)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:55)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:23)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.translate(NormalFormTranslator.java:44)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.collect(NumericConstraintTranslator.java:31)
+	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:49)
 	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:28)
 	at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:22)
 	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.inner_isSatisfiable(SymbolicStringConstraintsGeneral.java:450)

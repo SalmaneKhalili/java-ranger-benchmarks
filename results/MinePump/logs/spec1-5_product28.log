@@ -1,7 +1,157 @@
-Total Solver Time = 160 msec
-Total Solver Parse Time = 32 msec
+(assert (bvsle bool2 #x0000000000000001))
+(assert (= bool2 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+bool9 == CONST_0 &&
+bool8 != CONST_0 &&
+bool10 != CONST_0 &&
+bool7 != CONST_0 &&
+bool5 != CONST_0 &&
+bool4 != CONST_0 &&
+bool6 == CONST_0 &&
+bool3 != CONST_0 &&
+bool1 != CONST_0 &&
+bool0 != CONST_0 &&
+bool2 == CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+bool9[0] == CONST_0 &&
+bool8[1] != CONST_0 &&
+bool10[1] != CONST_0 &&
+bool7[1] != CONST_0 &&
+bool5[1] != CONST_0 &&
+bool4[1] != CONST_0 &&
+bool6[0] == CONST_0 &&
+bool3[1] != CONST_0 &&
+bool1[1] != CONST_0 &&
+bool0[1] != CONST_0 &&
+bool2[0] == CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const bool3 Int)
+(declare-const bool2 Int)
+(declare-const bool10 Int)
+(declare-const bool5 Int)
+(declare-const bool4 Int)
+(declare-const bool7 Int)
+(declare-const bool6 Int)
+(declare-const bool9 Int)
+(declare-const bool8 Int)
+(declare-const bool1 Int)
+(declare-const bool0 Int)
+
+(assert (= bool9 0))
+(assert (not (= bool8 0)))
+(assert (not (= bool10 0)))
+(assert (not (= bool7 0)))
+(assert (not (= bool5 0)))
+(assert (not (= bool4 0)))
+(assert (= bool6 0))
+(assert (not (= bool3 0)))
+(assert (not (= bool1 0)))
+(assert (not (= bool0 0)))
+(assert (= bool2 0))
+
+
+
+(define-fun bool0 () Int
+  1)
+(define-fun bool1 () Int
+  1)
+(define-fun bool3 () Int
+  1)
+(define-fun bool4 () Int
+  1)
+(define-fun bool5 () Int
+  1)
+(define-fun bool7 () Int
+  1)
+(define-fun bool10 () Int
+  1)
+(define-fun bool8 () Int
+  1)
+(define-fun bool2 () Int
+  0)
+(define-fun bool6 () Int
+  0)
+(define-fun bool9 () Int
+  0)
+Returned solutions: 
+(define-fun bool0 () Int  1)
+(define-fun bool1 () Int  1)
+(define-fun bool3 () Int  1)
+(define-fun bool4 () Int  1)
+(define-fun bool5 () Int  1)
+(define-fun bool7 () Int  1)
+(define-fun bool10 () Int  1)
+(define-fun bool8 () Int  1)
+(define-fun bool2 () Int  0)
+(define-fun bool6 () Int  0)
+(define-fun bool9 () Int  0)
+*************************************
+Satisfiable: true
+bool3 => 1
+bool2 => 0
+bool5 => 1
+bool10 => 1
+bool4 => 1
+bool7 => 1
+bool6 => 0
+bool9 => 0
+bool8 => 1
+bool1 => 1
+bool0 => 1
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Actions.Specification3(Actions.java:104)
+	at Actions.timeShift(Actions.java:50)
+	at Main.randomSequenceOfActions(Main.java:50)
+	at Main.main(Main.java:16)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Actions.Specification3(Actions.java:104)
+	at Actions.timeShift(Actions.java:50)
+	at Main.randomSequenceOfActions(Main.java:50)
+	at Main.main(Main.java:16)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 550 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 155 msec
+Total Solver Parse Time = 35 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 4 msec
+Total Solver Clean up Time = 3 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-571,0,571,0,0,160,32,4,0,5,0,0,0,0,5,0,5,0,53,0,0,0,0,53,0,0,-1,-1,0.0,0,0,0
+550,0,550,0,0,155,35,3,0,5,0,0,0,0,5,0,5,0,53,0,0,0,0,53,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -46,4 +196,4 @@ instructions:       8537
 max memory:         240MB
 loaded code:        classes=94,methods=1916
 
-====================================================== search finished: 6/7/26 7:41 PM
+====================================================== search finished: 6/7/26 9:40 PM

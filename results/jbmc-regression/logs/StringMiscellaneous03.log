@@ -1,5 +1,155 @@
-Total Solver Time = 44 msec
-Total Solver Parse Time = 8 msec
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun |CharAt((Length_0_ - CONST_1))_1_| () (_ BitVec 64))
+(declare-fun |CharAt(CONST_0)_2_| () (_ BitVec 64))
+(declare-fun Length_0_ () (_ BitVec 64))
+(assert (bvsge |CharAt((Length_0_ - CONST_1))_1_| #x0000000000000000))
+(assert (bvsle |CharAt((Length_0_ - CONST_1))_1_| #x000000000000ffff))
+(assert (bvsge |CharAt(CONST_0)_2_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_0)_2_| #x000000000000ffff))
+(assert (= |CharAt((Length_0_ - CONST_1))_1_| |CharAt(CONST_0)_2_|))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+CharAt((Length_0_ - CONST_1))_1_ == CharAt(CONST_0)_2_ &&
+(Length_0_ - CONST_1) >= CONST_0 -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+CharAt((Length_0_ - CONST_1))_1_ == CharAt(CONST_0)_2_ &&
+(Length_0_ - CONST_1) >= CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string1 String)
+(declare-const string0 String)
+
+
+(assert (= (str.to_code (str.at string0 ( -  (str.len string0) 1))) (str.to_code (str.at string1 0))))
+(assert (>= ( -  (str.len string0) 1) 0))
+
+
+
+(define-fun string1 () String
+  "\u{fee9}")
+(define-fun string0 () String
+  "\u{fee9}")
+Returned solutions: 
+(define-fun string1 () String  "\u{fee9}")
+(define-fun string0 () String  "\u{fee9}")
+*************************************
+Satisfiable: true
+string1 => "\u{fee9}"
+string0 => "\u{fee9}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is3
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun |CharAt((Length_0_ - CONST_1))_1_| () (_ BitVec 64))
+(declare-fun |CharAt(CONST_0)_2_| () (_ BitVec 64))
+(declare-fun Length_0_ () (_ BitVec 64))
+(assert (bvsge |CharAt((Length_0_ - CONST_1))_1_| #x0000000000000000))
+(assert (bvsle |CharAt((Length_0_ - CONST_1))_1_| #x000000000000ffff))
+(assert (bvsge |CharAt(CONST_0)_2_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_0)_2_| #x000000000000ffff))
+(assert (= |CharAt((Length_0_ - CONST_1))_1_| |CharAt(CONST_0)_2_|))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+CharAt((Length_0_ - CONST_1))_1_ == CharAt(CONST_0)_2_ &&
+(Length_0_ - CONST_1) >= CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+CharAt((Length_0_ - CONST_1))_1_[0] == CharAt(CONST_0)_2_[0] &&
+(Length_0_[64] - CONST_1) >= CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string1 String)
+(declare-const string0 String)
+
+
+(assert (= (str.to_code (str.at string0 ( -  (str.len string0) 1))) (str.to_code (str.at string1 0))))
+(assert (>= ( -  (str.len string0) 1) 0))
+
+
+
+(define-fun string1 () String
+  "\u{fee9}")
+(define-fun string0 () String
+  "\u{fee9}")
+Returned solutions: 
+(define-fun string1 () String  "\u{fee9}")
+(define-fun string0 () String  "\u{fee9}")
+*************************************
+Satisfiable: true
+string1 => "\u{fee9}"
+string0 => "\u{fee9}"
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:18)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:18)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 451 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 40 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-463,0,463,0,0,44,8,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+451,0,451,0,0,40,7,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -46,4 +196,4 @@ instructions:       6103
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 9:40 PM
