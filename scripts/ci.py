@@ -426,6 +426,9 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
         persistent_log = os.path.join(log_dir, f"{result.name}.log")
         result.logfile = persistent_log
         try:
+            lines = jpf_output.splitlines()
+            if len(lines) > 50:
+                jpf_output = "\n".join(lines[-50:])
             with open(persistent_log, "w") as f:
                 f.write(jpf_output)
         except OSError:
