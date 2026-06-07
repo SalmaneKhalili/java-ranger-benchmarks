@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-242,0,242,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+236,0,236,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +46,4 @@ instructions:       7054
 max memory:         240MB
 loaded code:        classes=81,methods=1620
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 7:43 PM

@@ -1,7 +1,7 @@
-Total Solver Time = 5324 msec
-Total Solver Parse Time = 937 msec
+Total Solver Time = 5607 msec
+Total Solver Parse Time = 1193 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 183 msec
+Total Solver Clean up Time = 180 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-6502,0,6502,0,0,5324,937,183,0,2,0,0,0,0,2,0,2,0,11033,0,0,0,0,11033,0,0,-1,-1,0.0,0,0,0
+6649,0,6649,0,0,5607,1193,180,0,2,0,0,0,0,2,0,2,0,11033,0,0,0,0,11033,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
@@ -43,7 +43,7 @@ search:             maxDepth=13,constraints=2
 choice generators:  thread=18 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=17), data=2
 heap:               new=474,released=74,maxLive=454,gcCycles=25
 instructions:       930231
-max memory:         310MB
+max memory:         309MB
 loaded code:        classes=85,methods=1836
 
 ====================================================== search finished: 6/7/26 8:28 PM

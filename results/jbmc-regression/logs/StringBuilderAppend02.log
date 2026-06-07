@@ -1,10 +1,10 @@
-symbolic.string_dp_alphaSize=26
 symbolic.string_dp_upper=10
 symbolic.string_dp_lower=1
 symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768

@@ -1,7 +1,7 @@
-Total Solver Time = 316 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 296 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 45 msec
+Total Solver Clean up Time = 37 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-733,0,733,0,0,316,8,45,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+686,0,686,0,0,296,6,37,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:5..."

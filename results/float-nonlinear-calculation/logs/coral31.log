@@ -1,7 +1,7 @@
-Total Solver Time = 48 msec
-Total Solver Parse Time = 9 msec
+Total Solver Time = 7063 msec
+Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 100 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,19 +31,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-326,0,326,0,0,48,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+7954,0,7954,0,0,7063,10,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
-no errors detected
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=7,visited=0,backtracked=7,end=0
-search:             maxDepth=3,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4
-heap:               new=463,released=8,maxLive=0,gcCycles=1
-instructions:       6056
+elapsed time:       00:00:07
+states:             new=13,visited=0,backtracked=9,end=3
+search:             maxDepth=4,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=6
+heap:               new=479,released=35,maxLive=455,gcCycles=4
+instructions:       6110
 max memory:         240MB
-loaded code:        classes=86,methods=1906
+loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/7/26 7:56 PM
+====================================================== search finished: 6/7/26 8:17 PM

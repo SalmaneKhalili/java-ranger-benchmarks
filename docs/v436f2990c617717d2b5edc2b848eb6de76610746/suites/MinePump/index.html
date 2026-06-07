@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>MinePump</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-07 19:43:43 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-07 19:43:44 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,70 +78,70 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>spec1-5_product1</td><td>false</td><td class="status-correct">correct</td><td>0.696782</td><td></td></tr>
-<tr><td>spec1-5_product10</td><td>false</td><td class="status-correct">correct</td><td>0.738702</td><td></td></tr>
-<tr><td>spec1-5_product11</td><td>false</td><td class="status-correct">correct</td><td>1.746583</td><td></td></tr>
-<tr><td>spec1-5_product12</td><td>false</td><td class="status-correct">correct</td><td>0.794670</td><td></td></tr>
-<tr><td>spec1-5_product13</td><td>false</td><td class="status-correct">correct</td><td>0.711649</td><td></td></tr>
-<tr><td>spec1-5_product14</td><td>false</td><td class="status-correct">correct</td><td>0.701904</td><td></td></tr>
-<tr><td>spec1-5_product15</td><td>false</td><td class="status-correct">correct</td><td>1.730805</td><td></td></tr>
-<tr><td>spec1-5_product16</td><td>false</td><td class="status-correct">correct</td><td>0.785003</td><td></td></tr>
-<tr><td>spec1-5_product17</td><td>false</td><td class="status-correct">correct</td><td>0.675581</td><td></td></tr>
-<tr><td>spec1-5_product18</td><td>false</td><td class="status-correct">correct</td><td>0.687371</td><td></td></tr>
-<tr><td>spec1-5_product19</td><td>false</td><td class="status-correct">correct</td><td>1.737679</td><td></td></tr>
-<tr><td>spec1-5_product2</td><td>false</td><td class="status-correct">correct</td><td>0.672188</td><td></td></tr>
-<tr><td>spec1-5_product20</td><td>false</td><td class="status-correct">correct</td><td>0.783360</td><td></td></tr>
-<tr><td>spec1-5_product21</td><td>false</td><td class="status-correct">correct</td><td>0.685275</td><td></td></tr>
-<tr><td>spec1-5_product22</td><td>false</td><td class="status-correct">correct</td><td>0.688691</td><td></td></tr>
-<tr><td>spec1-5_product23</td><td>false</td><td class="status-correct">correct</td><td>1.703425</td><td></td></tr>
-<tr><td>spec1-5_product24</td><td>false</td><td class="status-correct">correct</td><td>0.801812</td><td></td></tr>
-<tr><td>spec1-5_product25</td><td>false</td><td class="status-correct">correct</td><td>0.681286</td><td></td></tr>
-<tr><td>spec1-5_product26</td><td>false</td><td class="status-correct">correct</td><td>0.680105</td><td></td></tr>
-<tr><td>spec1-5_product27</td><td>false</td><td class="status-correct">correct</td><td>1.715435</td><td></td></tr>
-<tr><td>spec1-5_product28</td><td>false</td><td class="status-correct">correct</td><td>0.776718</td><td></td></tr>
-<tr><td>spec1-5_product29</td><td>false</td><td class="status-correct">correct</td><td>0.677854</td><td></td></tr>
-<tr><td>spec1-5_product3</td><td>false</td><td class="status-correct">correct</td><td>1.726844</td><td></td></tr>
-<tr><td>spec1-5_product30</td><td>false</td><td class="status-correct">correct</td><td>0.676395</td><td></td></tr>
-<tr><td>spec1-5_product31</td><td>false</td><td class="status-correct">correct</td><td>1.683080</td><td></td></tr>
-<tr><td>spec1-5_product32</td><td>false</td><td class="status-correct">correct</td><td>0.793649</td><td></td></tr>
-<tr><td>spec1-5_product33</td><td>false</td><td class="status-correct">correct</td><td>0.646912</td><td></td></tr>
-<tr><td>spec1-5_product34</td><td>false</td><td class="status-correct">correct</td><td>0.652308</td><td></td></tr>
-<tr><td>spec1-5_product35</td><td>false</td><td class="status-correct">correct</td><td>1.642861</td><td></td></tr>
-<tr><td>spec1-5_product36</td><td>false</td><td class="status-correct">correct</td><td>0.785298</td><td></td></tr>
-<tr><td>spec1-5_product37</td><td>false</td><td class="status-correct">correct</td><td>0.635564</td><td></td></tr>
-<tr><td>spec1-5_product38</td><td>false</td><td class="status-correct">correct</td><td>0.652649</td><td></td></tr>
-<tr><td>spec1-5_product39</td><td>false</td><td class="status-correct">correct</td><td>1.595772</td><td></td></tr>
-<tr><td>spec1-5_product4</td><td>false</td><td class="status-correct">correct</td><td>0.786991</td><td></td></tr>
-<tr><td>spec1-5_product40</td><td>false</td><td class="status-correct">correct</td><td>0.784342</td><td></td></tr>
-<tr><td>spec1-5_product41</td><td>false</td><td class="status-correct">correct</td><td>0.717941</td><td></td></tr>
-<tr><td>spec1-5_product42</td><td>false</td><td class="status-correct">correct</td><td>0.717598</td><td></td></tr>
-<tr><td>spec1-5_product43</td><td>false</td><td class="status-correct">correct</td><td>1.773249</td><td></td></tr>
-<tr><td>spec1-5_product44</td><td>false</td><td class="status-correct">correct</td><td>0.783507</td><td></td></tr>
-<tr><td>spec1-5_product45</td><td>false</td><td class="status-correct">correct</td><td>0.747771</td><td></td></tr>
-<tr><td>spec1-5_product46</td><td>false</td><td class="status-correct">correct</td><td>0.761297</td><td></td></tr>
-<tr><td>spec1-5_product47</td><td>false</td><td class="status-correct">correct</td><td>1.729810</td><td></td></tr>
-<tr><td>spec1-5_product48</td><td>false</td><td class="status-correct">correct</td><td>0.788417</td><td></td></tr>
-<tr><td>spec1-5_product49</td><td>false</td><td class="status-correct">correct</td><td>0.631711</td><td></td></tr>
-<tr><td>spec1-5_product5</td><td>false</td><td class="status-correct">correct</td><td>0.693977</td><td></td></tr>
-<tr><td>spec1-5_product50</td><td>false</td><td class="status-correct">correct</td><td>0.638432</td><td></td></tr>
-<tr><td>spec1-5_product51</td><td>false</td><td class="status-correct">correct</td><td>1.630502</td><td></td></tr>
-<tr><td>spec1-5_product52</td><td>false</td><td class="status-correct">correct</td><td>0.780253</td><td></td></tr>
-<tr><td>spec1-5_product53</td><td>false</td><td class="status-correct">correct</td><td>0.630797</td><td></td></tr>
-<tr><td>spec1-5_product54</td><td>false</td><td class="status-correct">correct</td><td>0.651875</td><td></td></tr>
-<tr><td>spec1-5_product55</td><td>false</td><td class="status-correct">correct</td><td>1.604181</td><td></td></tr>
-<tr><td>spec1-5_product56</td><td>false</td><td class="status-correct">correct</td><td>0.760753</td><td></td></tr>
-<tr><td>spec1-5_product57</td><td>true</td><td class="status-correct">correct</td><td>9.379156</td><td></td></tr>
-<tr><td>spec1-5_product58</td><td>true</td><td class="status-correct">correct</td><td>9.570284</td><td></td></tr>
-<tr><td>spec1-5_product59</td><td>true</td><td class="status-correct">correct</td><td>9.904326</td><td></td></tr>
-<tr><td>spec1-5_product6</td><td>false</td><td class="status-correct">correct</td><td>0.661056</td><td></td></tr>
-<tr><td>spec1-5_product60</td><td>true</td><td class="status-correct">correct</td><td>9.641380</td><td></td></tr>
-<tr><td>spec1-5_product61</td><td>true</td><td class="status-correct">correct</td><td>9.540548</td><td></td></tr>
-<tr><td>spec1-5_product62</td><td>true</td><td class="status-correct">correct</td><td>9.900477</td><td></td></tr>
-<tr><td>spec1-5_product63</td><td>true</td><td class="status-correct">correct</td><td>9.666831</td><td></td></tr>
-<tr><td>spec1-5_product64</td><td>true</td><td class="status-correct">correct</td><td>9.422165</td><td></td></tr>
-<tr><td>spec1-5_product7</td><td>false</td><td class="status-correct">correct</td><td>1.723956</td><td></td></tr>
-<tr><td>spec1-5_product8</td><td>false</td><td class="status-correct">correct</td><td>0.825305</td><td></td></tr>
-<tr><td>spec1-5_product9</td><td>false</td><td class="status-correct">correct</td><td>0.693864</td><td></td></tr>
+  <tr><td>spec1-5_product1</td><td>false</td><td class="status-correct">correct</td><td>0.704603</td><td></td></tr>
+<tr><td>spec1-5_product10</td><td>false</td><td class="status-correct">correct</td><td>0.671641</td><td></td></tr>
+<tr><td>spec1-5_product11</td><td>false</td><td class="status-correct">correct</td><td>1.706157</td><td></td></tr>
+<tr><td>spec1-5_product12</td><td>false</td><td class="status-correct">correct</td><td>0.787263</td><td></td></tr>
+<tr><td>spec1-5_product13</td><td>false</td><td class="status-correct">correct</td><td>0.668135</td><td></td></tr>
+<tr><td>spec1-5_product14</td><td>false</td><td class="status-correct">correct</td><td>0.671041</td><td></td></tr>
+<tr><td>spec1-5_product15</td><td>false</td><td class="status-correct">correct</td><td>1.684277</td><td></td></tr>
+<tr><td>spec1-5_product16</td><td>false</td><td class="status-correct">correct</td><td>0.797404</td><td></td></tr>
+<tr><td>spec1-5_product17</td><td>false</td><td class="status-correct">correct</td><td>0.687350</td><td></td></tr>
+<tr><td>spec1-5_product18</td><td>false</td><td class="status-correct">correct</td><td>0.660698</td><td></td></tr>
+<tr><td>spec1-5_product19</td><td>false</td><td class="status-correct">correct</td><td>1.747882</td><td></td></tr>
+<tr><td>spec1-5_product2</td><td>false</td><td class="status-correct">correct</td><td>0.699004</td><td></td></tr>
+<tr><td>spec1-5_product20</td><td>false</td><td class="status-correct">correct</td><td>0.776682</td><td></td></tr>
+<tr><td>spec1-5_product21</td><td>false</td><td class="status-correct">correct</td><td>0.677096</td><td></td></tr>
+<tr><td>spec1-5_product22</td><td>false</td><td class="status-correct">correct</td><td>0.668051</td><td></td></tr>
+<tr><td>spec1-5_product23</td><td>false</td><td class="status-correct">correct</td><td>1.683752</td><td></td></tr>
+<tr><td>spec1-5_product24</td><td>false</td><td class="status-correct">correct</td><td>0.794322</td><td></td></tr>
+<tr><td>spec1-5_product25</td><td>false</td><td class="status-correct">correct</td><td>0.684028</td><td></td></tr>
+<tr><td>spec1-5_product26</td><td>false</td><td class="status-correct">correct</td><td>0.679525</td><td></td></tr>
+<tr><td>spec1-5_product27</td><td>false</td><td class="status-correct">correct</td><td>1.700548</td><td></td></tr>
+<tr><td>spec1-5_product28</td><td>false</td><td class="status-correct">correct</td><td>0.816280</td><td></td></tr>
+<tr><td>spec1-5_product29</td><td>false</td><td class="status-correct">correct</td><td>0.701381</td><td></td></tr>
+<tr><td>spec1-5_product3</td><td>false</td><td class="status-correct">correct</td><td>1.714221</td><td></td></tr>
+<tr><td>spec1-5_product30</td><td>false</td><td class="status-correct">correct</td><td>0.679731</td><td></td></tr>
+<tr><td>spec1-5_product31</td><td>false</td><td class="status-correct">correct</td><td>1.686259</td><td></td></tr>
+<tr><td>spec1-5_product32</td><td>false</td><td class="status-correct">correct</td><td>0.776648</td><td></td></tr>
+<tr><td>spec1-5_product33</td><td>false</td><td class="status-correct">correct</td><td>0.654833</td><td></td></tr>
+<tr><td>spec1-5_product34</td><td>false</td><td class="status-correct">correct</td><td>0.639644</td><td></td></tr>
+<tr><td>spec1-5_product35</td><td>false</td><td class="status-correct">correct</td><td>1.615931</td><td></td></tr>
+<tr><td>spec1-5_product36</td><td>false</td><td class="status-correct">correct</td><td>0.773460</td><td></td></tr>
+<tr><td>spec1-5_product37</td><td>false</td><td class="status-correct">correct</td><td>0.646231</td><td></td></tr>
+<tr><td>spec1-5_product38</td><td>false</td><td class="status-correct">correct</td><td>0.655481</td><td></td></tr>
+<tr><td>spec1-5_product39</td><td>false</td><td class="status-correct">correct</td><td>1.602869</td><td></td></tr>
+<tr><td>spec1-5_product4</td><td>false</td><td class="status-correct">correct</td><td>0.795875</td><td></td></tr>
+<tr><td>spec1-5_product40</td><td>false</td><td class="status-correct">correct</td><td>0.782117</td><td></td></tr>
+<tr><td>spec1-5_product41</td><td>false</td><td class="status-correct">correct</td><td>0.734269</td><td></td></tr>
+<tr><td>spec1-5_product42</td><td>false</td><td class="status-correct">correct</td><td>0.718075</td><td></td></tr>
+<tr><td>spec1-5_product43</td><td>false</td><td class="status-correct">correct</td><td>1.699788</td><td></td></tr>
+<tr><td>spec1-5_product44</td><td>false</td><td class="status-correct">correct</td><td>0.791531</td><td></td></tr>
+<tr><td>spec1-5_product45</td><td>false</td><td class="status-correct">correct</td><td>0.747661</td><td></td></tr>
+<tr><td>spec1-5_product46</td><td>false</td><td class="status-correct">correct</td><td>0.734381</td><td></td></tr>
+<tr><td>spec1-5_product47</td><td>false</td><td class="status-correct">correct</td><td>1.733032</td><td></td></tr>
+<tr><td>spec1-5_product48</td><td>false</td><td class="status-correct">correct</td><td>0.782511</td><td></td></tr>
+<tr><td>spec1-5_product49</td><td>false</td><td class="status-correct">correct</td><td>0.636648</td><td></td></tr>
+<tr><td>spec1-5_product5</td><td>false</td><td class="status-correct">correct</td><td>0.681509</td><td></td></tr>
+<tr><td>spec1-5_product50</td><td>false</td><td class="status-correct">correct</td><td>0.643902</td><td></td></tr>
+<tr><td>spec1-5_product51</td><td>false</td><td class="status-correct">correct</td><td>1.652281</td><td></td></tr>
+<tr><td>spec1-5_product52</td><td>false</td><td class="status-correct">correct</td><td>0.767811</td><td></td></tr>
+<tr><td>spec1-5_product53</td><td>false</td><td class="status-correct">correct</td><td>0.638168</td><td></td></tr>
+<tr><td>spec1-5_product54</td><td>false</td><td class="status-correct">correct</td><td>0.648200</td><td></td></tr>
+<tr><td>spec1-5_product55</td><td>false</td><td class="status-correct">correct</td><td>1.618382</td><td></td></tr>
+<tr><td>spec1-5_product56</td><td>false</td><td class="status-correct">correct</td><td>0.789970</td><td></td></tr>
+<tr><td>spec1-5_product57</td><td>true</td><td class="status-correct">correct</td><td>9.538423</td><td></td></tr>
+<tr><td>spec1-5_product58</td><td>true</td><td class="status-correct">correct</td><td>9.557971</td><td></td></tr>
+<tr><td>spec1-5_product59</td><td>true</td><td class="status-correct">correct</td><td>9.413900</td><td></td></tr>
+<tr><td>spec1-5_product6</td><td>false</td><td class="status-correct">correct</td><td>0.699445</td><td></td></tr>
+<tr><td>spec1-5_product60</td><td>true</td><td class="status-correct">correct</td><td>9.982622</td><td></td></tr>
+<tr><td>spec1-5_product61</td><td>true</td><td class="status-correct">correct</td><td>9.409454</td><td></td></tr>
+<tr><td>spec1-5_product62</td><td>true</td><td class="status-correct">correct</td><td>9.409221</td><td></td></tr>
+<tr><td>spec1-5_product63</td><td>true</td><td class="status-correct">correct</td><td>9.437552</td><td></td></tr>
+<tr><td>spec1-5_product64</td><td>true</td><td class="status-correct">correct</td><td>9.320177</td><td></td></tr>
+<tr><td>spec1-5_product7</td><td>false</td><td class="status-correct">correct</td><td>1.717433</td><td></td></tr>
+<tr><td>spec1-5_product8</td><td>false</td><td class="status-correct">correct</td><td>0.814702</td><td></td></tr>
+<tr><td>spec1-5_product9</td><td>false</td><td class="status-correct">correct</td><td>0.702816</td><td></td></tr>
 
 </table>
 </div>

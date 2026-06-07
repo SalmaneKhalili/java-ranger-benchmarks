@@ -1,7 +1,7 @@
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/7/26 7:41 PM
+====================================================== search started: 6/7/26 7:42 PM
 [SEVERE] JPF exception, terminating: exception during executeInstruction() notification
 
 java.lang.StringIndexOutOfBoundsException: String index out of range: -1

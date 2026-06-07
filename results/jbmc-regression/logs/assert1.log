@@ -1,4 +1,4 @@
-Total Solver Time = 40 msec
+Total Solver Time = 43 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-297,0,297,0,0,40,8,0,0,4,0,0,0,0,4,0,4,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
+296,0,296,0,0,43,8,0,0,4,0,0,0,0,4,0,4,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +46,4 @@ instructions:       6056
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 7:43 PM

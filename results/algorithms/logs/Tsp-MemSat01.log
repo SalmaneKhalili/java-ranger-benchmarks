@@ -1,7 +1,7 @@
-Total Solver Time = 140 msec
-Total Solver Parse Time = 34 msec
+Total Solver Time = 146 msec
+Total Solver Parse Time = 35 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 3 msec
+Total Solver Clean up Time = 4 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-442,0,442,0,0,140,34,3,0,8,0,0,0,0,8,0,8,0,69,0,0,0,0,69,0,0,-1,-1,0.0,0,0,0
+451,0,451,0,0,146,35,4,0,8,0,0,0,0,8,0,8,0,69,0,0,0,0,69,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected

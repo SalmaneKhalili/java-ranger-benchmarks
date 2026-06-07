@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>jayhorn-recursive</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-07 20:16:28 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-07 20:16:12 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,29 +78,29 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>Ackermann01</td><td>false</td><td class="status-correct">correct</td><td>0.676733</td><td></td></tr>
-<tr><td>Addition</td><td>true</td><td class="status-correct">correct</td><td>0.674706</td><td></td></tr>
-<tr><td>InfiniteLoop</td><td>false</td><td class="status-correct">correct</td><td>0.615390</td><td></td></tr>
-<tr><td>SatAckermann01</td><td>true</td><td class="status-correct">correct</td><td>24.383449</td><td></td></tr>
-<tr><td>SatAckermann02</td><td>true</td><td class="status-correct">correct</td><td>24.107364</td><td></td></tr>
-<tr><td>SatAckermann03</td><td>true</td><td class="status-correct">correct</td><td>24.002525</td><td></td></tr>
-<tr><td>SatAddition01</td><td>true</td><td class="status-correct">correct</td><td>0.899442</td><td></td></tr>
-<tr><td>SatEvenOdd01</td><td>true</td><td class="status-correct">correct</td><td>0.638697</td><td></td></tr>
-<tr><td>SatFibonacci01</td><td>true</td><td class="status-correct">correct</td><td>1.534324</td><td></td></tr>
-<tr><td>SatFibonacci02</td><td>true</td><td class="status-correct">correct</td><td>0.466486</td><td></td></tr>
-<tr><td>SatFibonacci03</td><td>true</td><td class="status-correct">correct</td><td>2.289794</td><td></td></tr>
-<tr><td>SatGcd</td><td>true</td><td class="status-unknown">unknown</td><td>900.027381</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>SatHanoi01</td><td>true</td><td class="status-correct">correct</td><td>22.143057</td><td></td></tr>
-<tr><td>SatMccarthy91</td><td>true</td><td class="status-correct">correct</td><td>199.642731</td><td></td></tr>
-<tr><td>SatMultCommutative01</td><td>true</td><td class="status-correct">correct</td><td>0.985535</td><td></td></tr>
-<tr><td>SatPrimes01</td><td>true</td><td class="status-unknown">unknown</td><td>900.554341</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>UnsatAckermann01</td><td>false</td><td class="status-correct">correct</td><td>0.637465</td><td></td></tr>
-<tr><td>UnsatAddition01</td><td>false</td><td class="status-correct">correct</td><td>0.642956</td><td></td></tr>
-<tr><td>UnsatAddition02</td><td>false</td><td class="status-incorrect">incorrect</td><td>1.013113</td><td><span class="error-text" title="heap:               new=464,released=354,maxLive=452,gcCycles=39 | instructions:       6749 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/7/26 8:16 PM">heap:               new=464,released=354,maxLive=452,gcCycles=39 | instructions:       6749 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ================================</span></td></tr>
-<tr><td>UnsatEvenOdd01</td><td>false</td><td class="status-correct">correct</td><td>0.622615</td><td></td></tr>
-<tr><td>UnsatFibonacci01</td><td>false</td><td class="status-correct">correct</td><td>0.706400</td><td></td></tr>
-<tr><td>UnsatFibonacci02</td><td>false</td><td class="status-correct">correct</td><td>1.163667</td><td></td></tr>
-<tr><td>UnsatMccarthy91</td><td>false</td><td class="status-correct">correct</td><td>0.620243</td><td></td></tr>
+  <tr><td>Ackermann01</td><td>false</td><td class="status-correct">correct</td><td>0.874107</td><td></td></tr>
+<tr><td>Addition</td><td>true</td><td class="status-correct">correct</td><td>0.740606</td><td></td></tr>
+<tr><td>InfiniteLoop</td><td>false</td><td class="status-correct">correct</td><td>0.645029</td><td></td></tr>
+<tr><td>SatAckermann01</td><td>true</td><td class="status-correct">correct</td><td>25.445829</td><td></td></tr>
+<tr><td>SatAckermann02</td><td>true</td><td class="status-correct">correct</td><td>25.911822</td><td></td></tr>
+<tr><td>SatAckermann03</td><td>true</td><td class="status-correct">correct</td><td>24.911926</td><td></td></tr>
+<tr><td>SatAddition01</td><td>true</td><td class="status-correct">correct</td><td>0.951697</td><td></td></tr>
+<tr><td>SatEvenOdd01</td><td>true</td><td class="status-correct">correct</td><td>0.646341</td><td></td></tr>
+<tr><td>SatFibonacci01</td><td>true</td><td class="status-correct">correct</td><td>1.656884</td><td></td></tr>
+<tr><td>SatFibonacci02</td><td>true</td><td class="status-correct">correct</td><td>0.496751</td><td></td></tr>
+<tr><td>SatFibonacci03</td><td>true</td><td class="status-correct">correct</td><td>2.490331</td><td></td></tr>
+<tr><td>SatGcd</td><td>true</td><td class="status-unknown">unknown</td><td>900.044843</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>SatHanoi01</td><td>true</td><td class="status-correct">correct</td><td>10.995078</td><td></td></tr>
+<tr><td>SatMccarthy91</td><td>true</td><td class="status-correct">correct</td><td>187.824895</td><td></td></tr>
+<tr><td>SatMultCommutative01</td><td>true</td><td class="status-correct">correct</td><td>0.981668</td><td></td></tr>
+<tr><td>SatPrimes01</td><td>true</td><td class="status-unknown">unknown</td><td>900.610062</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>UnsatAckermann01</td><td>false</td><td class="status-correct">correct</td><td>0.663052</td><td></td></tr>
+<tr><td>UnsatAddition01</td><td>false</td><td class="status-correct">correct</td><td>0.658757</td><td></td></tr>
+<tr><td>UnsatAddition02</td><td>false</td><td class="status-incorrect">incorrect</td><td>1.049543</td><td><span class="error-text" title="heap:               new=464,released=354,maxLive=452,gcCycles=39 | instructions:       6749 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ====================================================== search finished: 6/7/26 8:16 PM">heap:               new=464,released=354,maxLive=452,gcCycles=39 | instructions:       6749 | max memory:         240MB | loaded code:        classes=85,methods=1831 | ================================</span></td></tr>
+<tr><td>UnsatEvenOdd01</td><td>false</td><td class="status-correct">correct</td><td>0.628424</td><td></td></tr>
+<tr><td>UnsatFibonacci01</td><td>false</td><td class="status-correct">correct</td><td>0.722091</td><td></td></tr>
+<tr><td>UnsatFibonacci02</td><td>false</td><td class="status-correct">correct</td><td>1.294096</td><td></td></tr>
+<tr><td>UnsatMccarthy91</td><td>false</td><td class="status-correct">correct</td><td>0.658857</td><td></td></tr>
 
 </table>
 </div>

@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-243,0,243,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+231,0,231,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at B.f(Main.java:16)  at..."
@@ -46,4 +46,4 @@ instructions:       6027
 max memory:         240MB
 loaded code:        classes=87,methods=1665
 
-====================================================== search finished: 6/7/26 7:45 PM
+====================================================== search finished: 6/7/26 7:46 PM

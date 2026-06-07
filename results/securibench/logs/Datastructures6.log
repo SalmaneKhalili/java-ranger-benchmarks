@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1031,0,1031,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
+1168,0,1168,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -43,7 +43,7 @@ search:             maxDepth=12,constraints=0
 choice generators:  thread=11 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=10), data=1
 heap:               new=13358,released=12833,maxLive=2132,gcCycles=12
 instructions:       540919
-max memory:         429MB
+max memory:         303MB
 loaded code:        classes=108,methods=2038
 
 ====================================================== search finished: 6/7/26 7:44 PM

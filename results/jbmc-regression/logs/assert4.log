@@ -1,4 +1,4 @@
-Total Solver Time = 40 msec
+Total Solver Time = 37 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-382,0,382,0,0,40,7,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+377,0,377,0,0,37,7,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError: my super assertion  at M..."
@@ -46,4 +46,4 @@ instructions:       6091
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 7:43 PM

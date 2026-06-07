@@ -1,49 +1,49 @@
-New sym int e29969 min=-2147483648, max=2147483647
-New sym int e29970 min=-2147483648, max=2147483647
-New sym int e29971 min=-2147483648, max=2147483647
-New sym int e29972 min=-2147483648, max=2147483647
-New sym int e29973 min=-2147483648, max=2147483647
-New sym int e29974 min=-2147483648, max=2147483647
-New sym int e29975 min=-2147483648, max=2147483647
-New sym int e29976 min=-2147483648, max=2147483647
-New sym int e29977 min=-2147483648, max=2147483647
-New sym int e29978 min=-2147483648, max=2147483647
-New sym int e29979 min=-2147483648, max=2147483647
-New sym int e29980 min=-2147483648, max=2147483647
-New sym int e29981 min=-2147483648, max=2147483647
-New sym int e29982 min=-2147483648, max=2147483647
-New sym int e29983 min=-2147483648, max=2147483647
-New sym int e29984 min=-2147483648, max=2147483647
-New sym int e29985 min=-2147483648, max=2147483647
-New sym int e29986 min=-2147483648, max=2147483647
-New sym int e29987 min=-2147483648, max=2147483647
-New sym int e29988 min=-2147483648, max=2147483647
-New sym int e29989 min=-2147483648, max=2147483647
-New sym int e29990 min=-2147483648, max=2147483647
-New sym int e29991 min=-2147483648, max=2147483647
-New sym int e29992 min=-2147483648, max=2147483647
-New sym int e29993 min=-2147483648, max=2147483647
-New sym int e29994 min=-2147483648, max=2147483647
-New sym int e29995 min=-2147483648, max=2147483647
-New sym int e29996 min=-2147483648, max=2147483647
-New sym int e29997 min=-2147483648, max=2147483647
-New sym int e29998 min=-2147483648, max=2147483647
-New sym int e29999 min=-2147483648, max=2147483647
-New sym int e30000 min=-2147483648, max=2147483647
-New sym int e30001 min=-2147483648, max=2147483647
-New sym int e30002 min=-2147483648, max=2147483647
-New sym int e30003 min=-2147483648, max=2147483647
-New sym int e30004 min=-2147483648, max=2147483647
-New sym int e30005 min=-2147483648, max=2147483647
-New sym int e30006 min=-2147483648, max=2147483647
-New sym int e30007 min=-2147483648, max=2147483647
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000003)
+         (= e11 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000003))
+         (= e11 #x0000000000000000))))
+(assert (bvsge e10 #xffffffff80000000))
+(assert (bvsle e10 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000002)
+         (= e10 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000002))
+         (= e10 #x0000000000000000))))
+(assert (bvsge e9 #xffffffff80000000))
+(assert (bvsle e9 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000001)
+         (= e9 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000001))
+         (= e9 #x0000000000000000))))
+(assert (bvsge e8 #xffffffff80000000))
+(assert (bvsle e8 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000000)
+         (= e8 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000000))
+         (= e8 #x0000000000000000))))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt int1 #x000000000000b505))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= (bvmul int0 int0) #x0000000000002710))
+(assert (bvsge (bvmul int0 int0) #x0000000000000000))
+(assert (bvslt int0 #x000000000000b505))
+(assert (bvsgt int0 #x0000000000000000))
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

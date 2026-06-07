@@ -31,7 +31,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-257,0,257,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+255,0,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Attempt to acquire..."
@@ -46,4 +46,4 @@ instructions:       6122
 max memory:         240MB
 loaded code:        classes=98,methods=1903
 
-====================================================== search finished: 6/7/26 8:01 PM
+====================================================== search finished: 6/7/26 8:00 PM

@@ -1,28 +1,28 @@
+(assert (fp.lt (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 387 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 12
+numeric PC: constraint # = 11
 (double0 * CONST_0.017453292519943295) > CONST_0.0 &&
 double6 < CONST_50.0 &&
 CONST_0.0 < double6 &&
 double5 == CONST_-100.0 &&
 double4 == CONST_-100.0 &&
 double3 == CONST_-100.0 &&
-double2 < CONST_100.0 &&
-CONST_-100.0 < double2 &&
+double2 == CONST_-100.0 &&
 double1 < CONST_100.0 &&
 CONST_0.0 < double1 &&
 double0 < CONST_360.0 &&
 CONST_0.0 < double0 -> true
 
-### PCs: total:138 sat:116 unsat:22
+### PCs: total:273 sat:232 unsat:41
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 java.lang.RuntimeException: ## Error: Math.tan not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.tan(ProblemGeneral.java:161)
