@@ -1,7 +1,157 @@
-Total Solver Time = 344 msec
-Total Solver Parse Time = 28 msec
+double0 > CONST_2.75 &&
+double0 > CONST_2.5 &&
+double0 > CONST_2.25 &&
+double0 > CONST_2.0 &&
+double0 > CONST_1.75 &&
+double0 > CONST_1.5 &&
+double0 > CONST_1.25 &&
+double0 > CONST_1.0 -> true
+
+### PCs: total:225 sat:95 unsat:130
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (< double0 (/ 5.0 4.0)))
+(assert (> double0 (/ 13.0 4.0)))
+(assert (> double0 3.0))
+(assert (> double0 (/ 11.0 4.0)))
+(assert (> double0 (/ 5.0 2.0)))
+(assert (> double0 (/ 9.0 4.0)))
+(assert (> double0 2.0))
+(assert (> double0 (/ 7.0 4.0)))
+(assert (> double0 (/ 3.0 2.0)))
+(assert (> double0 (/ 5.0 4.0)))
+(assert (> double0 1.0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+double0 < CONST_1.25 &&
+double0 > CONST_3.25 &&
+double0 > CONST_3.0 &&
+double0 > CONST_2.75 &&
+double0 > CONST_2.5 &&
+double0 > CONST_2.25 &&
+double0 > CONST_2.0 &&
+double0 > CONST_1.75 &&
+double0 > CONST_1.5 &&
+double0 > CONST_1.25 &&
+double0 > CONST_1.0 -> false
+
+### PCs: total:226 sat:95 unsat:131
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (= (/ 5.0 4.0) double0))
+(assert (> double0 (/ 13.0 4.0)))
+(assert (> double0 3.0))
+(assert (> double0 (/ 11.0 4.0)))
+(assert (> double0 (/ 5.0 2.0)))
+(assert (> double0 (/ 9.0 4.0)))
+(assert (> double0 2.0))
+(assert (> double0 (/ 7.0 4.0)))
+(assert (> double0 (/ 3.0 2.0)))
+(assert (> double0 (/ 5.0 4.0)))
+(assert (> double0 1.0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+CONST_1.25 == double0 &&
+double0 > CONST_3.25 &&
+double0 > CONST_3.0 &&
+double0 > CONST_2.75 &&
+double0 > CONST_2.5 &&
+double0 > CONST_2.25 &&
+double0 > CONST_2.0 &&
+double0 > CONST_1.75 &&
+double0 > CONST_1.5 &&
+double0 > CONST_1.25 &&
+double0 > CONST_1.0 -> false
+
+### PCs: total:227 sat:95 unsat:132
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (> double0 (/ 13.0 4.0)))
+(assert (> double0 3.0))
+(assert (> double0 (/ 11.0 4.0)))
+(assert (> double0 (/ 5.0 2.0)))
+(assert (> double0 (/ 9.0 4.0)))
+(assert (> double0 2.0))
+(assert (> double0 (/ 7.0 4.0)))
+(assert (> double0 (/ 3.0 2.0)))
+(assert (> double0 (/ 5.0 4.0)))
+(assert (> double0 1.0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+double0 > CONST_3.25 &&
+double0 > CONST_3.0 &&
+double0 > CONST_2.75 &&
+double0 > CONST_2.5 &&
+double0 > CONST_2.25 &&
+double0 > CONST_2.0 &&
+double0 > CONST_1.75 &&
+double0 > CONST_1.5 &&
+double0 > CONST_1.25 &&
+double0 > CONST_1.0 -> true
+
+### PCs: total:228 sat:96 unsat:132
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 444 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 151 msec
+Total Solver Parse Time = 35 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 16 msec
+Total Solver Clean up Time = 3 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-608,0,608,0,0,344,28,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+444,0,444,0,0,151,35,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -46,4 +196,4 @@ instructions:       6602
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/7/26 7:41 PM
+====================================================== search finished: 6/7/26 9:49 PM

@@ -1,7 +1,157 @@
-Total Solver Time = 24157 msec
-Total Solver Parse Time = 4748 msec
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int1 #x0000000000000001) #x0000000000000000)))
+(assert (not (= int1 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (not (= int0 #x0000000000000000)))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((int1 - CONST_1) - CONST_1) != CONST_0 &&
+(int1 - CONST_1) != CONST_0 &&
+int1 != CONST_0 &&
+int0 != CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:27169 sat:13610 unsat:13559
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
+            #x0000000000000001)
+     #x0000000000000000)))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
+          #x0000000000000000))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000000))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000000))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int1 #x0000000000000001) #x0000000000000000)))
+(assert (not (= int1 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (not (= int0 #x0000000000000000)))
+(assert (bvsle int1 #x0000000000000017))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvsle int0 #x0000000000000003))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
+((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((int1 - CONST_1) - CONST_1) != CONST_0 &&
+(int1 - CONST_1) != CONST_0 &&
+int1 != CONST_0 &&
+int0 != CONST_0 &&
+int1 <= CONST_23 &&
+int1 >= CONST_0 &&
+int0 <= CONST_3 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:27170 sat:13611 unsat:13559
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.ackermann(Main.java:17)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.ackermann(Main.java:20)
+	at Main.main(Main.java:32)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 24668 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 23688 msec
+Total Solver Parse Time = 4511 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 505 msec
+Total Solver Clean up Time = 496 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-25114,0,25114,0,0,24157,4748,505,0,9,0,0,0,0,9,0,9,0,13631,0,0,0,0,13631,0,0,-1,-1,0.0,0,0,0
+24668,0,24668,0,0,23688,4511,496,0,9,0,0,0,0,9,0,9,0,13631,0,0,0,0,13631,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:25
+elapsed time:       00:00:24
 states:             new=47,visited=0,backtracked=47,end=21
 search:             maxDepth=13,constraints=6
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=23
@@ -46,4 +196,4 @@ instructions:       141650
 max memory:         443MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/7/26 7:41 PM
+====================================================== search finished: 6/7/26 9:49 PM

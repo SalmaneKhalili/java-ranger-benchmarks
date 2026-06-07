@@ -1,7 +1,157 @@
+CONST_3 < int0 &&
+int1 < int2 &&
+int2 >= CONST_0 &&
+CONST_2 < int0 &&
+int1 >= CONST_0 &&
+CONST_1 < int0 -> true
+
+### PCs: total:36 sat:36 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is12
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun int3 () (_ BitVec 64))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (= int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge #x0000000000000004 int0))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvslt int2 int3))
+(assert (bvslt int1 int3))
+(assert (bvsge int3 #x0000000000000000))
+(assert (bvslt #x0000000000000003 int0))
+(assert (bvslt int1 int2))
+(assert (bvsge int2 #x0000000000000000))
+(assert (bvslt #x0000000000000002 int0))
+(assert (bvsge int1 #x0000000000000000))
+(assert (bvslt #x0000000000000001 int0))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 11
+int1 == CONST_0 &&
+CONST_4 >= int0 &&
+int2 < int3 &&
+int1 < int3 &&
+int3 >= CONST_0 &&
+CONST_3 < int0 &&
+int1 < int2 &&
+int2 >= CONST_0 &&
+CONST_2 < int0 &&
+int1 >= CONST_0 &&
+CONST_1 < int0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+int1[0] == CONST_0 &&
+CONST_4 >= int0[4] &&
+int2[2] < int3[3] &&
+int1[0] < int3[3] &&
+int3[3] >= CONST_0 &&
+CONST_3 < int0[4] &&
+int1[0] < int2[2] &&
+int2[2] >= CONST_0 &&
+CONST_2 < int0[4] &&
+int1[0] >= CONST_0 &&
+CONST_1 < int0[4]
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const int0 Int)
+(declare-const int2 Int)
+(declare-const int1 Int)
+(declare-const int3 Int)
+
+(assert (= int1 0))
+(assert (>= 4 int0))
+(assert (< int2 int3))
+(assert (< int1 int3))
+(assert (>= int3 0))
+(assert (< 3 int0))
+(assert (< int1 int2))
+(assert (>= int2 0))
+(assert (< 2 int0))
+(assert (>= int1 0))
+(assert (< 1 int0))
+
+
+
+(define-fun int0 () Int
+  4)
+(define-fun int3 () Int
+  2)
+(define-fun int2 () Int
+  1)
+(define-fun int1 () Int
+  0)
+Returned solutions: 
+(define-fun int0 () Int  4)
+(define-fun int3 () Int  2)
+(define-fun int2 () Int  1)
+(define-fun int1 () Int  0)
+*************************************
+Satisfiable: true
+int0 => 4
+int2 => 1
+int1 => 0
+int3 => 2
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:115)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:115)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 476 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
 Total Solver Time = 109 msec
-Total Solver Parse Time = 19 msec
+Total Solver Parse Time = 20 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 6 msec
+Total Solver Clean up Time = 5 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-489,0,489,0,0,109,19,6,0,5,0,0,0,0,5,0,5,0,36,0,0,0,0,36,0,0,-1,-1,0.0,0,0,0
+476,0,476,0,0,109,20,5,0,5,0,0,0,0,5,0,5,0,36,0,0,0,0,36,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -46,4 +196,4 @@ instructions:       6428
 max memory:         240MB
 loaded code:        classes=91,methods=1876
 
-====================================================== search finished: 6/7/26 8:26 PM
+====================================================== search finished: 6/7/26 10:34 PM

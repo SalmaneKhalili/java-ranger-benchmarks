@@ -1,3 +1,153 @@
+### PCs: total:14 sat:14 unsat:0
+
+string analysis: SPC # = 3
+(CONST_adsf .concat(string0).concat(CONST_abc) contains CONST_<bad/>) && (CONST_.concat(string0).concat(CONST_abc) notcontains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "adsf " string0) "abc") "<bad/>"))
+(assert (not (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>")))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+*************************************
+Satisfiable: false
+*************************************
+
+## Warning: empty path condition
+### PCs: total:15 sat:15 unsat:0
+
+string analysis: SPC # = 2
+(CONST_.concat(string0).concat(CONST_abc) contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains (str.++ (str.++ "" string0) "abc") "<bad/>"))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+*************************************
+Satisfiable: false
+*************************************
+
+## Warning: empty path condition
+### PCs: total:16 sat:16 unsat:0
+
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
+Returned solutions: 
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+*************************************
+
+the depth of violation is2
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
+Returned solutions: 
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.inter.Inter3.f9(Inter3.java:74)
+	at securibench.micro.inter.Inter3.f8(Inter3.java:69)
+	at securibench.micro.inter.Inter3.f7(Inter3.java:65)
+	at securibench.micro.inter.Inter3.f6(Inter3.java:58)
+	at securibench.micro.inter.Inter3.f5(Inter3.java:54)
+	at securibench.micro.inter.Inter3.f4(Inter3.java:50)
+	at securibench.micro.inter.Inter3.f3(Inter3.java:46)
+	at securibench.micro.inter.Inter3.f2(Inter3.java:41)
+	at securibench.micro.inter.Inter3.f1(Inter3.java:37)
+	at securibench.micro.inter.Inter3.doGet(Inter3.java:33)
+	at Main.main(Main.java:23)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.inter.Inter3.f9(Inter3.java:74)
+	at securibench.micro.inter.Inter3.f8(Inter3.java:69)
+	at securibench.micro.inter.Inter3.f7(Inter3.java:65)
+	at securibench.micro.inter.Inter3.f6(Inter3.java:58)
+	at securibench.micro.inter.Inter3.f5(Inter3.java:54)
+	at securibench.micro.inter.Inter3.f4(Inter3.java:50)
+	at securibench.micro.inter.Inter3.f3(Inter3.java:46)
+	at securibench.micro.inter.Inter3.f2(Inter3.java:41)
+	at securibench.micro.inter.Inter3.f1(Inter3.java:37)
+	at securibench.micro.inter.Inter3.doGet(Inter3.java:33)
+	at Main.main(Main.java:23)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 609 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
 Total Solver Time = 0 msec
 Total Solver Parse Time = 0 msec
 Region Summary Parse Time = 0 msec
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-621,0,621,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
+609,0,609,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -46,4 +196,4 @@ instructions:       6814
 max memory:         240MB
 loaded code:        classes=107,methods=2044
 
-====================================================== search finished: 6/7/26 7:44 PM
+====================================================== search finished: 6/7/26 9:52 PM

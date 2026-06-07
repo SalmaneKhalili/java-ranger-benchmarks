@@ -1,28 +1,178 @@
-(assert (fp.lt (_ +zero 11 53) double0))
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (< (* (/ 3490658503988659.0 200000000000000000.0) double0) 0.0))
+(assert (>= double6 (- 10000.0)))
+(assert (<= double6 10000.0))
+(assert (< double6 50.0))
+(assert (< 0.0 double6))
+(assert (>= double5 (- 10000.0)))
+(assert (<= double5 10000.0))
+(assert (= double5 (- 100.0)))
+(assert (>= double4 (- 10000.0)))
+(assert (<= double4 10000.0))
+(assert (= double4 (- 100.0)))
+(assert (>= double3 (- 10000.0)))
+(assert (<= double3 10000.0))
+(assert (= double3 (- 100.0)))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (< double2 100.0))
+(assert (< (- 100.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (< double1 100.0))
+(assert (< 0.0 double1))
+(assert (< double0 360.0))
+(assert (< 0.0 double0))
 
 
-Solving time of z3 bitvector is 387 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 11
+numeric PC: constraint # = 12
+(double0 * CONST_0.017453292519943295) < CONST_0.0 &&
+double6 < CONST_50.0 &&
+CONST_0.0 < double6 &&
+double5 == CONST_-100.0 &&
+double4 == CONST_-100.0 &&
+double3 == CONST_-100.0 &&
+double2 < CONST_100.0 &&
+CONST_-100.0 < double2 &&
+double1 < CONST_100.0 &&
+CONST_0.0 < double1 &&
+double0 < CONST_360.0 &&
+CONST_0.0 < double0 -> false
+
+### PCs: total:136 sat:115 unsat:21
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(declare-fun double6 () Real)
+(declare-fun double5 () Real)
+(declare-fun double4 () Real)
+(declare-fun double3 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (= 0.0 (* (/ 3490658503988659.0 200000000000000000.0) double0)))
+(assert (>= double6 (- 10000.0)))
+(assert (<= double6 10000.0))
+(assert (< double6 50.0))
+(assert (< 0.0 double6))
+(assert (>= double5 (- 10000.0)))
+(assert (<= double5 10000.0))
+(assert (= double5 (- 100.0)))
+(assert (>= double4 (- 10000.0)))
+(assert (<= double4 10000.0))
+(assert (= double4 (- 100.0)))
+(assert (>= double3 (- 10000.0)))
+(assert (<= double3 10000.0))
+(assert (= double3 (- 100.0)))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (< double2 100.0))
+(assert (< (- 100.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (< double1 100.0))
+(assert (< 0.0 double1))
+(assert (< double0 360.0))
+(assert (< 0.0 double0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 12
+CONST_0.0 == (double0 * CONST_0.017453292519943295) &&
+double6 < CONST_50.0 &&
+CONST_0.0 < double6 &&
+double5 == CONST_-100.0 &&
+double4 == CONST_-100.0 &&
+double3 == CONST_-100.0 &&
+double2 < CONST_100.0 &&
+CONST_-100.0 < double2 &&
+double1 < CONST_100.0 &&
+CONST_0.0 < double1 &&
+double0 < CONST_360.0 &&
+CONST_0.0 < double0 -> false
+
+### PCs: total:137 sat:115 unsat:22
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(declare-fun double6 () Real)
+(declare-fun double5 () Real)
+(declare-fun double4 () Real)
+(declare-fun double3 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (> (* (/ 3490658503988659.0 200000000000000000.0) double0) 0.0))
+(assert (>= double6 (- 10000.0)))
+(assert (<= double6 10000.0))
+(assert (< double6 50.0))
+(assert (< 0.0 double6))
+(assert (>= double5 (- 10000.0)))
+(assert (<= double5 10000.0))
+(assert (= double5 (- 100.0)))
+(assert (>= double4 (- 10000.0)))
+(assert (<= double4 10000.0))
+(assert (= double4 (- 100.0)))
+(assert (>= double3 (- 10000.0)))
+(assert (<= double3 10000.0))
+(assert (= double3 (- 100.0)))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (< double2 100.0))
+(assert (< (- 100.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (< double1 100.0))
+(assert (< 0.0 double1))
+(assert (< double0 360.0))
+(assert (< 0.0 double0))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 12
 (double0 * CONST_0.017453292519943295) > CONST_0.0 &&
 double6 < CONST_50.0 &&
 CONST_0.0 < double6 &&
 double5 == CONST_-100.0 &&
 double4 == CONST_-100.0 &&
 double3 == CONST_-100.0 &&
-double2 == CONST_-100.0 &&
+double2 < CONST_100.0 &&
+CONST_-100.0 < double2 &&
 double1 < CONST_100.0 &&
 CONST_0.0 < double1 &&
 double0 < CONST_360.0 &&
 CONST_0.0 < double0 -> true
 
-### PCs: total:273 sat:232 unsat:41
+### PCs: total:138 sat:116 unsat:22
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 java.lang.RuntimeException: ## Error: Math.tan not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.tan(ProblemGeneral.java:161)

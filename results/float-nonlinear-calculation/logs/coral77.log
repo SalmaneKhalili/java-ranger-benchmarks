@@ -1,7 +1,157 @@
-Total Solver Time = 324 msec
-Total Solver Parse Time = 14 msec
+(declare-fun double6 () Real)
+(declare-fun double5 () Real)
+(declare-fun double4 () Real)
+(declare-fun double3 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(declare-fun double0 () Real)
+(assert (>= double8 (- 10000.0)))
+(assert (<= double8 10000.0))
+(assert (>= double9 (- 10000.0)))
+(assert (<= double9 10000.0))
+(assert (> double8 double9))
+(assert (>= double7 (- 10000.0)))
+(assert (<= double7 10000.0))
+(assert (> double7 double8))
+(assert (>= double6 (- 10000.0)))
+(assert (<= double6 10000.0))
+(assert (> double6 double7))
+(assert (>= double5 (- 10000.0)))
+(assert (<= double5 10000.0))
+(assert (> double5 double6))
+(assert (>= double4 (- 10000.0)))
+(assert (<= double4 10000.0))
+(assert (> double4 double5))
+(assert (>= double3 (- 10000.0)))
+(assert (<= double3 10000.0))
+(assert (> double3 double4))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (> double2 double3))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> double1 double2))
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (> double0 double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+double8 > double9 &&
+double7 > double8 &&
+double6 > double7 &&
+double5 > double6 &&
+double4 > double5 &&
+double3 > double4 &&
+double2 > double3 &&
+double1 > double2 &&
+double0 > double1 -> true
+
+### PCs: total:27 sat:27 unsat:0
+
+the depth of violation is10
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double8 () Real)
+(declare-fun double9 () Real)
+(declare-fun double7 () Real)
+(declare-fun double6 () Real)
+(declare-fun double5 () Real)
+(declare-fun double4 () Real)
+(declare-fun double3 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(declare-fun double0 () Real)
+(assert (>= double8 (- 10000.0)))
+(assert (<= double8 10000.0))
+(assert (>= double9 (- 10000.0)))
+(assert (<= double9 10000.0))
+(assert (> double8 double9))
+(assert (>= double7 (- 10000.0)))
+(assert (<= double7 10000.0))
+(assert (> double7 double8))
+(assert (>= double6 (- 10000.0)))
+(assert (<= double6 10000.0))
+(assert (> double6 double7))
+(assert (>= double5 (- 10000.0)))
+(assert (<= double5 10000.0))
+(assert (> double5 double6))
+(assert (>= double4 (- 10000.0)))
+(assert (<= double4 10000.0))
+(assert (> double4 double5))
+(assert (>= double3 (- 10000.0)))
+(assert (<= double3 10000.0))
+(assert (> double3 double4))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (> double2 double3))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> double1 double2))
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (> double0 double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+double8 > double9 &&
+double7 > double8 &&
+double6 > double7 &&
+double5 > double6 &&
+double4 > double5 &&
+double3 > double4 &&
+double2 > double3 &&
+double1 > double2 &&
+double0 > double1 -> true
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at JPFBenchmark.benchmark77(JPFBenchmark.java:735)
+	at Main.main(Main.java:22)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at JPFBenchmark.benchmark77(JPFBenchmark.java:735)
+	at Main.main(Main.java:22)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 365 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 64 msec
+Total Solver Parse Time = 18 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 18 msec
+Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-594,0,594,0,0,324,14,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+365,0,365,0,0,64,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
@@ -46,4 +196,4 @@ instructions:       6437
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/7/26 8:18 PM
+====================================================== search finished: 6/7/26 10:05 PM

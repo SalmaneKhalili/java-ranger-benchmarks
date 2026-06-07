@@ -1,33 +1,12 @@
-
-
-numeric PC: constraint # = 2
-REAL_1 == (int0 + CONST_1) &&
-int0 >= CONST_0 -> true
-
-### PCs: total:3 sat:3 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_1 () (_ FloatingPoint 11 53))
-(declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (_ +zero 11 53)))
-(assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
-(assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= (bvadd int0 #x0000000000000001) |(int0 + CONST_1)_-1902868816|))
-(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero |(int0 + CONST_1)_-1902868816|)))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_1
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 37 ms
+Solving time of z3 bitvector is 7 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -40,26 +19,33 @@ int0 >= CONST_0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_1 () (_ FloatingPoint 11 53))
+(declare-fun REAL_1 () Real)
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53) REAL_1))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(assert (>= REAL_1 (- 10000.0)))
+(assert (<= REAL_1 10000.0))
+(assert (= 0.0 REAL_1))
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd int0 #x0000000000000001) |(int0 + CONST_1)_-1902868816|))
-(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero |(int0 + CONST_1)_-1902868816|)))
+(assert (= __bv2i0 |(int0 + CONST_1)_-1902868816|))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_1
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 298 ms
+Solving time of z3 bitvector is 7 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -72,26 +58,33 @@ int0 >= CONST_0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_1 () (_ FloatingPoint 11 53))
+(declare-fun REAL_1 () Real)
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt REAL_1 (_ +zero 11 53)))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(assert (>= REAL_1 (- 10000.0)))
+(assert (<= REAL_1 10000.0))
+(assert (> REAL_1 0.0))
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd int0 #x0000000000000001) |(int0 + CONST_1)_-1902868816|))
-(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero |(int0 + CONST_1)_-1902868816|)))
+(assert (= __bv2i0 |(int0 + CONST_1)_-1902868816|))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_1
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 98 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -105,25 +98,32 @@ int0 >= CONST_0 -> true
 the depth of violation is3
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(declare-fun REAL_1 () (_ FloatingPoint 11 53))
+(declare-fun REAL_1 () Real)
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd int0 #x0000000000000001) |(int0 + CONST_1)_-1902868816|))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero |(int0 + CONST_1)_-1902868816|)))
+(assert (>= REAL_1 (- 10000.0)))
+(assert (<= REAL_1 10000.0))
+(assert (= __bv2i0 |(int0 + CONST_1)_-1902868816|))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_1
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 134 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -133,8 +133,8 @@ int0 >= CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 2
-REAL_1[4096.0] == (int0[4095] + CONST_1) &&
-int0[4095] >= CONST_0
+REAL_1[10000.0] == (int0[9999] + CONST_1) &&
+int0[9999] >= CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 

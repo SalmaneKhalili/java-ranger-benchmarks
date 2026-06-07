@@ -1,3 +1,153 @@
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+## Warning: empty path condition
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 1
+(string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+(define-fun string0 () String
+  "")
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
+
+## Warning: empty path condition
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 2
+(string0 contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+(assert (not (str.contains string0 "<bad/>")))
+
+
+
+
+*************************************
+Satisfiable: false
+*************************************
+
+## Warning: empty path condition
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
+Returned solutions: 
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+*************************************
+
+the depth of violation is2
+string analysis: SPC # = 1
+(string0 contains CONST_<bad/>)
+NPC constraint # = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+(assert (str.contains string0 "<bad/>"))
+
+
+
+
+(define-fun string0 () String
+  "<bad/>")
+Returned solutions: 
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic31.doGet(Basic31.java:35)
+	at Main.main(Main.java:23)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic31.doGet(Basic31.java:35)
+	at Main.main(Main.java:23)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 453 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
 Total Solver Time = 0 msec
 Total Solver Parse Time = 0 msec
 Region Summary Parse Time = 0 msec
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-455,0,455,0,0,0,0,0,0,3,0,0,0,0,3,0,3,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+453,0,453,0,0,0,0,0,0,3,0,0,0,0,3,0,3,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -46,4 +196,4 @@ instructions:       6511
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/7/26 7:42 PM
+====================================================== search finished: 6/7/26 9:50 PM

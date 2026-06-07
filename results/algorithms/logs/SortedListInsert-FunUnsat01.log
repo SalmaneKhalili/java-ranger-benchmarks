@@ -1,7 +1,157 @@
-Total Solver Time = 316 msec
-Total Solver Parse Time = 35 msec
+(declare-fun int5 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int4 () (_ BitVec 64))
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun int3 () (_ BitVec 64))
+(assert (bvsge int5 #xffffffff80000000))
+(assert (bvsle int5 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsge int5 int1))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge #x0000000000000005 int0))
+(assert (bvsle int5 int1))
+(assert (bvslt #x0000000000000004 int0))
+(assert (bvsge int4 #xffffffff80000000))
+(assert (bvsle int4 #x000000007fffffff))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvsle int4 int2))
+(assert (bvsgt int4 int1))
+(assert (bvslt #x0000000000000003 int0))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsgt int3 int2))
+(assert (bvsgt int3 int1))
+(assert (bvslt #x0000000000000002 int0))
+(assert (bvsgt int2 int1))
+(assert (bvsgt int0 #x0000000000000001))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 12
+int5 >= int1 &&
+CONST_5 >= int0 &&
+int5 <= int1 &&
+CONST_4 < int0 &&
+int4 <= int2 &&
+int4 > int1 &&
+CONST_3 < int0 &&
+int3 > int2 &&
+int3 > int1 &&
+CONST_2 < int0 &&
+int2 > int1 &&
+int0 > CONST_1 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 12
+int5[0] >= int1[0] &&
+CONST_5 >= int0[5] &&
+int5[0] <= int1[0] &&
+CONST_4 < int0[5] &&
+int4[1] <= int2[1] &&
+int4[1] > int1[0] &&
+CONST_3 < int0[5] &&
+int3[3] > int2[1] &&
+int3[3] > int1[0] &&
+CONST_2 < int0[5] &&
+int2[1] > int1[0] &&
+int0[5] > CONST_1
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const int0 Int)
+(declare-const int2 Int)
+(declare-const int1 Int)
+(declare-const int4 Int)
+(declare-const int3 Int)
+(declare-const int5 Int)
+
+(assert (>= int5 int1))
+(assert (>= 5 int0))
+(assert (<= int5 int1))
+(assert (< 4 int0))
+(assert (<= int4 int2))
+(assert (> int4 int1))
+(assert (< 3 int0))
+(assert (> int3 int2))
+(assert (> int3 int1))
+(assert (< 2 int0))
+(assert (> int2 int1))
+(assert (> int0 1))
+
+
+
+(define-fun int0 () Int
+  5)
+(define-fun int4 () Int
+  1)
+(define-fun int1 () Int
+  0)
+(define-fun int3 () Int
+  2)
+(define-fun int5 () Int
+  0)
+(define-fun int2 () Int
+  1)
+Returned solutions: 
+(define-fun int0 () Int  5)
+(define-fun int4 () Int  1)
+(define-fun int1 () Int  0)
+(define-fun int3 () Int  2)
+(define-fun int5 () Int  0)
+(define-fun int2 () Int  1)
+*************************************
+Satisfiable: true
+int0 => 5
+int2 => 1
+int1 => 0
+int4 => 1
+int3 => 2
+int5 => 0
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:72)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:72)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 674 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 296 msec
+Total Solver Parse Time = 33 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 30 msec
+Total Solver Clean up Time = 29 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-711,0,711,0,0,316,35,30,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
+674,0,674,0,0,296,33,29,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
@@ -46,4 +196,4 @@ instructions:       7055
 max memory:         240MB
 loaded code:        classes=90,methods=1874
 
-====================================================== search finished: 6/7/26 8:29 PM
+====================================================== search finished: 6/7/26 10:37 PM

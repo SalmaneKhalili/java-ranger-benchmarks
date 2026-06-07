@@ -1,3 +1,153 @@
+CharAt(CONST_4)_5_ != CONST_0 &&
+CharAt(CONST_4)_5_ < CONST_65 &&
+CharAt(CONST_4)_5_ != CONST_62 &&
+CharAt(CONST_4)_5_ != CONST_60 &&
+CharAt(CONST_4)_5_ != CONST_38 &&
+CONST_4 < Length_0_ &&
+CharAt(CONST_3)_4_ == CONST_38 &&
+CONST_3 < Length_0_ &&
+CharAt(CONST_2)_3_ == CONST_38 &&
+CONST_2 < Length_0_ &&
+CharAt(CONST_1)_2_ == CONST_38 &&
+CONST_1 < Length_0_ &&
+CharAt(CONST_0)_1_ == CONST_38 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:66 sat:64 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+CharAt(CONST_4)_5_ != CONST_0 &&
+CharAt(CONST_4)_5_ < CONST_65 &&
+CharAt(CONST_4)_5_ != CONST_62 &&
+CharAt(CONST_4)_5_ != CONST_60 &&
+CharAt(CONST_4)_5_ != CONST_38 &&
+CONST_4 < Length_0_ &&
+CharAt(CONST_3)_4_ == CONST_38 &&
+CONST_3 < Length_0_ &&
+CharAt(CONST_2)_3_ == CONST_38 &&
+CONST_2 < Length_0_ &&
+CharAt(CONST_1)_2_ == CONST_38 &&
+CONST_1 < Length_0_ &&
+CharAt(CONST_0)_1_ == CONST_38 &&
+CONST_0 < Length_0_
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
+
+(assert (not (= (str.to_code (str.at string0 4)) 0)))
+(assert (< (str.to_code (str.at string0 4)) 65))
+(assert (not (= (str.to_code (str.at string0 4)) 62)))
+(assert (not (= (str.to_code (str.at string0 4)) 60)))
+(assert (not (= (str.to_code (str.at string0 4)) 38)))
+(assert (< 4 (str.len string0)))
+(assert (= (str.to_code (str.at string0 3)) 38))
+(assert (< 3 (str.len string0)))
+(assert (= (str.to_code (str.at string0 2)) 38))
+(assert (< 2 (str.len string0)))
+(assert (= (str.to_code (str.at string0 1)) 38))
+(assert (< 1 (str.len string0)))
+(assert (= (str.to_code (str.at string0 0)) 38))
+(assert (< 0 (str.len string0)))
+
+
+
+(define-fun string0 () String
+  "&&&& ")
+Returned solutions: 
+(define-fun string0 () String  "&&&& ")
+*************************************
+Satisfiable: true
+string0 => "&&&& "
+*************************************
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun |CharAt(CONST_4)_5_| () (_ BitVec 64))
+(declare-fun Length_0_ () (_ BitVec 64))
+(declare-fun |CharAt(CONST_3)_4_| () (_ BitVec 64))
+(declare-fun |CharAt(CONST_2)_3_| () (_ BitVec 64))
+(declare-fun |CharAt(CONST_1)_2_| () (_ BitVec 64))
+(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
+(assert (bvsge |CharAt(CONST_4)_5_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_4)_5_| #x000000000000ffff))
+(assert (= |CharAt(CONST_4)_5_| #x0000000000000000))
+(assert (bvslt |CharAt(CONST_4)_5_| #x0000000000000041))
+(assert (not (= |CharAt(CONST_4)_5_| #x000000000000003e)))
+(assert (not (= |CharAt(CONST_4)_5_| #x000000000000003c)))
+(assert (not (= |CharAt(CONST_4)_5_| #x0000000000000026)))
+(assert (bvsge Length_0_ #x0000000000000000))
+(assert (bvsle Length_0_ #x000000000000007d))
+(assert (bvslt #x0000000000000004 Length_0_))
+(assert (bvsge |CharAt(CONST_3)_4_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_3)_4_| #x000000000000ffff))
+(assert (= |CharAt(CONST_3)_4_| #x0000000000000026))
+(assert (bvslt #x0000000000000003 Length_0_))
+(assert (bvsge |CharAt(CONST_2)_3_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_2)_3_| #x000000000000ffff))
+(assert (= |CharAt(CONST_2)_3_| #x0000000000000026))
+(assert (bvslt #x0000000000000002 Length_0_))
+(assert (bvsge |CharAt(CONST_1)_2_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_1)_2_| #x000000000000ffff))
+(assert (= |CharAt(CONST_1)_2_| #x0000000000000026))
+(assert (bvslt #x0000000000000001 Length_0_))
+(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
+(assert (= |CharAt(CONST_0)_1_| #x0000000000000026))
+(assert (bvslt #x0000000000000000 Length_0_))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 14
+CharAt(CONST_4)_5_ == CONST_0 &&
+CharAt(CONST_4)_5_ < CONST_65 &&
+CharAt(CONST_4)_5_ != CONST_62 &&
+CharAt(CONST_4)_5_ != CONST_60 &&
+CharAt(CONST_4)_5_ != CONST_38 &&
+CONST_4 < Length_0_ &&
+CharAt(CONST_3)_4_ == CONST_38 &&
+CONST_3 < Length_0_ &&
+CharAt(CONST_2)_3_ == CONST_38 &&
+CONST_2 < Length_0_ &&
+CharAt(CONST_1)_2_ == CONST_38 &&
+CONST_1 < Length_0_ &&
+CharAt(CONST_0)_1_ == CONST_38 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:67 sat:65 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+CharAt(CONST_4)_5_ == CONST_0 &&
+CharAt(CONST_4)_5_ < CONST_65 &&
+CharAt(CONST_4)_5_ != CONST_62 &&
+CharAt(CONST_4)_5_ != CONST_60 &&
+CharAt(CONST_4)_5_ != CONST_38 &&
+CONST_4 < Length_0_ &&
+CharAt(CONST_3)_4_ == CONST_38 &&
+CONST_3 < Length_0_ &&
+CharAt(CONST_2)_3_ == CONST_38 &&
+CONST_2 < Length_0_ &&
+CharAt(CONST_1)_2_ == CONST_38 &&
+CONST_1 < Length_0_ &&
+CharAt(CONST_0)_1_ == CONST_38 &&
+CONST_0 < Length_0_
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string0 String)
+
 
 (assert (= (str.to_code (str.at string0 4)) 0))
 (assert (< (str.to_code (str.at string0 4)) 65))

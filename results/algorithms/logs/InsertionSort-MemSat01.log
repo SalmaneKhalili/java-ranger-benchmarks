@@ -1,7 +1,157 @@
-Total Solver Time = 35394 msec
-Total Solver Parse Time = 6997 msec
+int0 > CONST_0 -> false
+
+### PCs: total:136221 sat:68114 unsat:68107
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvsub int0 #x00000000000000b5) (bvsub int0 #x00000000000000e2)))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+(int0 - CONST_181) > (int0 - CONST_226) &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:136222 sat:68115 unsat:68107
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle (bvsub int0 #x00000000000000b6) (bvsub int0 #x00000000000000e2)))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+(int0 - CONST_182) <= (int0 - CONST_226) &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:136223 sat:68115 unsat:68108
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsgt (bvsub int0 #x00000000000000b6) (bvsub int0 #x00000000000000e2)))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+(int0 - CONST_182) > (int0 - CONST_226) &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:136224 sat:68116 unsat:68108
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:49)
+	at Main.main(Main.java:65)
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:136225 sat:68117 unsat:68108
+
+[SEVERE] JPF out of memory
+
+====================================================== search constraint
+JPF out of memory
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:59)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 40642 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 37456 msec
+Total Solver Parse Time = 9087 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1129 msec
+Total Solver Clean up Time = 1138 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-38691,0,38691,0,0,35394,6997,1129,0,3,0,0,0,0,3,0,3,0,68109,0,0,0,0,68109,0,0,-1,-1,0.0,0,0,0
+40642,0,40642,0,0,37456,9087,1138,0,3,0,0,0,0,3,0,3,0,68109,0,0,0,0,68109,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
 
 ====================================================== statistics
-elapsed time:       00:00:38
+elapsed time:       00:00:40
 states:             new=30,visited=0,backtracked=28,end=5
 search:             maxDepth=13,constraints=3
 choice generators:  thread=21 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=20), data=2
 heap:               new=467,released=58,maxLive=453,gcCycles=28
 instructions:       1108144
-max memory:         484MB
+max memory:         487MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/7/26 8:28 PM
+====================================================== search finished: 6/7/26 10:36 PM

@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>jpf-regression</h1>
-  <p>JR: fp-power-fix@7d31423 | Date: 2026-06-07 21:42:05 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-07 21:50:57 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -63,125 +63,125 @@ tr:hover { background: #f8f9ff; }
   </div>
   <div class="card">
     <h3>Correct</h3>
-    <div class="number correct">100<span class="pct">(96.2%)</span></div>
+    <div class="number correct">99<span class="pct">(95.2%)</span></div>
   </div>
   <div class="card">
     <h3>Incorrect</h3>
-    <div class="number incorrect">0</div>
+    <div class="number incorrect">2</div>
   </div>
   <div class="card">
     <h3>Unknown</h3>
-    <div class="number unknown">4</div>
+    <div class="number unknown">3</div>
   </div>
 </div>
 
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>ExDarko_false</td><td>false</td><td class="status-correct">correct</td><td>0.635147</td><td></td></tr>
-<tr><td>ExDarko_true</td><td>true</td><td class="status-correct">correct</td><td>0.523046</td><td></td></tr>
-<tr><td>ExException_false</td><td>false</td><td class="status-correct">correct</td><td>0.611204</td><td></td></tr>
-<tr><td>ExException_true</td><td>true</td><td class="status-correct">correct</td><td>0.570137</td><td></td></tr>
-<tr><td>ExGenSymExe_false</td><td>false</td><td class="status-correct">correct</td><td>0.482358</td><td></td></tr>
-<tr><td>ExGenSymExe_true</td><td>true</td><td class="status-correct">correct</td><td>0.474564</td><td></td></tr>
-<tr><td>ExLazy_false</td><td>false</td><td class="status-correct">correct</td><td>0.657509</td><td></td></tr>
-<tr><td>ExLazy_true</td><td>true</td><td class="status-correct">correct</td><td>0.594678</td><td></td></tr>
-<tr><td>ExMIT_false</td><td>false</td><td class="status-correct">correct</td><td>0.616719</td><td></td></tr>
-<tr><td>ExMIT_true</td><td>true</td><td class="status-correct">correct</td><td>0.542622</td><td></td></tr>
-<tr><td>ExSymExe10_false</td><td>false</td><td class="status-correct">correct</td><td>0.635565</td><td></td></tr>
-<tr><td>ExSymExe10_true</td><td>true</td><td class="status-correct">correct</td><td>0.543610</td><td></td></tr>
-<tr><td>ExSymExe11_false</td><td>false</td><td class="status-correct">correct</td><td>0.496453</td><td></td></tr>
-<tr><td>ExSymExe11_true</td><td>true</td><td class="status-correct">correct</td><td>0.555682</td><td></td></tr>
-<tr><td>ExSymExe12_false</td><td>false</td><td class="status-correct">correct</td><td>0.640010</td><td></td></tr>
-<tr><td>ExSymExe12_true</td><td>true</td><td class="status-correct">correct</td><td>0.544232</td><td></td></tr>
-<tr><td>ExSymExe13_false</td><td>false</td><td class="status-correct">correct</td><td>0.629556</td><td></td></tr>
-<tr><td>ExSymExe13_true</td><td>true</td><td class="status-correct">correct</td><td>0.556164</td><td></td></tr>
-<tr><td>ExSymExe14_false</td><td>false</td><td class="status-correct">correct</td><td>0.632250</td><td></td></tr>
-<tr><td>ExSymExe14_true</td><td>true</td><td class="status-correct">correct</td><td>0.547510</td><td></td></tr>
-<tr><td>ExSymExe15_false</td><td>false</td><td class="status-correct">correct</td><td>0.619887</td><td></td></tr>
-<tr><td>ExSymExe15_true</td><td>true</td><td class="status-correct">correct</td><td>0.561654</td><td></td></tr>
-<tr><td>ExSymExe16_false</td><td>false</td><td class="status-correct">correct</td><td>0.474187</td><td></td></tr>
-<tr><td>ExSymExe16_true</td><td>true</td><td class="status-correct">correct</td><td>0.461976</td><td></td></tr>
-<tr><td>ExSymExe17_false</td><td>false</td><td class="status-correct">correct</td><td>0.466806</td><td></td></tr>
-<tr><td>ExSymExe17_true</td><td>true</td><td class="status-correct">correct</td><td>0.471777</td><td></td></tr>
-<tr><td>ExSymExe18_false</td><td>false</td><td class="status-correct">correct</td><td>0.511469</td><td></td></tr>
-<tr><td>ExSymExe18_true</td><td>true</td><td class="status-correct">correct</td><td>0.465691</td><td></td></tr>
-<tr><td>ExSymExe19_false</td><td>false</td><td class="status-correct">correct</td><td>0.656612</td><td></td></tr>
-<tr><td>ExSymExe19_true</td><td>true</td><td class="status-correct">correct</td><td>1.697735</td><td></td></tr>
-<tr><td>ExSymExe1_false</td><td>false</td><td class="status-correct">correct</td><td>0.953146</td><td></td></tr>
-<tr><td>ExSymExe1_true</td><td>true</td><td class="status-correct">correct</td><td>0.473052</td><td></td></tr>
-<tr><td>ExSymExe20_false</td><td>false</td><td class="status-correct">correct</td><td>9.214505</td><td></td></tr>
-<tr><td>ExSymExe20_true</td><td>true</td><td class="status-correct">correct</td><td>0.473726</td><td></td></tr>
-<tr><td>ExSymExe21_false</td><td>false</td><td class="status-correct">correct</td><td>0.963984</td><td></td></tr>
-<tr><td>ExSymExe21_true</td><td>true</td><td class="status-correct">correct</td><td>0.460487</td><td></td></tr>
-<tr><td>ExSymExe25_false</td><td>false</td><td class="status-correct">correct</td><td>0.626246</td><td></td></tr>
-<tr><td>ExSymExe25_true</td><td>true</td><td class="status-correct">correct</td><td>0.473220</td><td></td></tr>
-<tr><td>ExSymExe26_false</td><td>false</td><td class="status-correct">correct</td><td>1.104432</td><td></td></tr>
-<tr><td>ExSymExe26_true</td><td>true</td><td class="status-correct">correct</td><td>0.482601</td><td></td></tr>
-<tr><td>ExSymExe27_false</td><td>false</td><td class="status-correct">correct</td><td>0.617371</td><td></td></tr>
-<tr><td>ExSymExe27_true</td><td>true</td><td class="status-correct">correct</td><td>0.469531</td><td></td></tr>
-<tr><td>ExSymExe28_false</td><td>false</td><td class="status-correct">correct</td><td>0.635444</td><td></td></tr>
-<tr><td>ExSymExe28_true</td><td>true</td><td class="status-correct">correct</td><td>0.470941</td><td></td></tr>
-<tr><td>ExSymExe29_false</td><td>false</td><td class="status-correct">correct</td><td>1.527844</td><td></td></tr>
-<tr><td>ExSymExe29_true</td><td>true</td><td class="status-correct">correct</td><td>0.465087</td><td></td></tr>
-<tr><td>ExSymExe2_false</td><td>false</td><td class="status-correct">correct</td><td>0.960865</td><td></td></tr>
-<tr><td>ExSymExe2_true</td><td>true</td><td class="status-correct">correct</td><td>0.478261</td><td></td></tr>
-<tr><td>ExSymExe3_false</td><td>false</td><td class="status-correct">correct</td><td>0.654907</td><td></td></tr>
-<tr><td>ExSymExe3_true</td><td>true</td><td class="status-correct">correct</td><td>0.463037</td><td></td></tr>
-<tr><td>ExSymExe4_false</td><td>false</td><td class="status-correct">correct</td><td>1.407932</td><td></td></tr>
-<tr><td>ExSymExe4_true</td><td>true</td><td class="status-correct">correct</td><td>0.475123</td><td></td></tr>
-<tr><td>ExSymExe5_false</td><td>false</td><td class="status-correct">correct</td><td>0.610003</td><td></td></tr>
-<tr><td>ExSymExe5_true</td><td>true</td><td class="status-correct">correct</td><td>0.465170</td><td></td></tr>
-<tr><td>ExSymExe6_false</td><td>false</td><td class="status-correct">correct</td><td>0.519598</td><td></td></tr>
-<tr><td>ExSymExe6_true</td><td>true</td><td class="status-correct">correct</td><td>0.469025</td><td></td></tr>
-<tr><td>ExSymExe7_false</td><td>false</td><td class="status-correct">correct</td><td>0.810204</td><td></td></tr>
-<tr><td>ExSymExe7_true</td><td>true</td><td class="status-correct">correct</td><td>0.694221</td><td></td></tr>
-<tr><td>ExSymExe8_false</td><td>false</td><td class="status-correct">correct</td><td>0.983744</td><td></td></tr>
-<tr><td>ExSymExe8_true</td><td>true</td><td class="status-correct">correct</td><td>0.457463</td><td></td></tr>
-<tr><td>ExSymExe9_false</td><td>false</td><td class="status-correct">correct</td><td>0.465071</td><td></td></tr>
-<tr><td>ExSymExe9_true</td><td>true</td><td class="status-correct">correct</td><td>0.473716</td><td></td></tr>
-<tr><td>ExSymExeArrays_false</td><td>false</td><td class="status-correct">correct</td><td>0.485914</td><td></td></tr>
-<tr><td>ExSymExeArrays_true</td><td>true</td><td class="status-correct">correct</td><td>0.472714</td><td></td></tr>
-<tr><td>ExSymExeBool_false</td><td>false</td><td class="status-correct">correct</td><td>0.469060</td><td></td></tr>
-<tr><td>ExSymExeBool_true</td><td>true</td><td class="status-correct">correct</td><td>0.476530</td><td></td></tr>
-<tr><td>ExSymExeComplexMath_false</td><td>false</td><td class="status-correct">correct</td><td>0.476319</td><td></td></tr>
-<tr><td>ExSymExeComplexMath_true</td><td>true</td><td class="status-correct">correct</td><td>0.464856</td><td></td></tr>
-<tr><td>ExSymExeD2I_false</td><td>false</td><td class="status-correct">correct</td><td>0.468435</td><td></td></tr>
-<tr><td>ExSymExeD2I_true</td><td>true</td><td class="status-correct">correct</td><td>4.698416</td><td></td></tr>
-<tr><td>ExSymExeD2L_false</td><td>false</td><td class="status-correct">correct</td><td>8.736579</td><td></td></tr>
-<tr><td>ExSymExeD2L_true</td><td>true</td><td class="status-correct">correct</td><td>5.423892</td><td></td></tr>
-<tr><td>ExSymExeF2I_false</td><td>false</td><td class="status-correct">correct</td><td>0.482327</td><td></td></tr>
-<tr><td>ExSymExeF2I_true</td><td>true</td><td class="status-correct">correct</td><td>4.545926</td><td></td></tr>
-<tr><td>ExSymExeF2L_false</td><td>false</td><td class="status-unknown">unknown</td><td>2.708984</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
-<tr><td>ExSymExeF2L_true</td><td>true</td><td class="status-correct">correct</td><td>4.975969</td><td></td></tr>
-<tr><td>ExSymExeFNEG_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.648126</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
-<tr><td>ExSymExeFNEG_true</td><td>true</td><td class="status-correct">correct</td><td>0.549188</td><td></td></tr>
-<tr><td>ExSymExeGetStatic_false</td><td>false</td><td class="status-correct">correct</td><td>0.483799</td><td></td></tr>
-<tr><td>ExSymExeGetStatic_true</td><td>true</td><td class="status-correct">correct</td><td>0.475340</td><td></td></tr>
-<tr><td>ExSymExeI2D_false</td><td>false</td><td class="status-unknown">unknown</td><td>1.468695</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
-<tr><td>ExSymExeI2D_true</td><td>true</td><td class="status-correct">correct</td><td>5.591330</td><td></td></tr>
-<tr><td>ExSymExeI2F_false</td><td>false</td><td class="status-correct">correct</td><td>0.480939</td><td></td></tr>
-<tr><td>ExSymExeI2F_true</td><td>true</td><td class="status-correct">correct</td><td>0.523562</td><td></td></tr>
-<tr><td>ExSymExeLCMP_false</td><td>false</td><td class="status-correct">correct</td><td>0.616952</td><td></td></tr>
-<tr><td>ExSymExeLCMP_true</td><td>true</td><td class="status-correct">correct</td><td>0.548691</td><td></td></tr>
-<tr><td>ExSymExeLongBytecodes_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.611985</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) |  at java.lang.Integer.parseInt(Integer.java:583) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.</span></td></tr>
-<tr><td>ExSymExeLongBytecodes_true</td><td>true</td><td class="status-correct">correct</td><td>0.563988</td><td></td></tr>
-<tr><td>ExSymExeResearch_false</td><td>false</td><td class="status-correct">correct</td><td>0.630293</td><td></td></tr>
-<tr><td>ExSymExeResearch_true</td><td>true</td><td class="status-correct">correct</td><td>0.561060</td><td></td></tr>
-<tr><td>ExSymExeSimple_false</td><td>false</td><td class="status-correct">correct</td><td>0.542094</td><td></td></tr>
-<tr><td>ExSymExeSimple_true</td><td>true</td><td class="status-correct">correct</td><td>0.536947</td><td></td></tr>
-<tr><td>ExSymExeSuzette_false</td><td>false</td><td class="status-correct">correct</td><td>0.650930</td><td></td></tr>
-<tr><td>ExSymExeSuzette_true</td><td>true</td><td class="status-correct">correct</td><td>0.526587</td><td></td></tr>
-<tr><td>ExSymExeSwitch_false</td><td>false</td><td class="status-correct">correct</td><td>0.626761</td><td></td></tr>
-<tr><td>ExSymExeSwitch_true</td><td>true</td><td class="status-correct">correct</td><td>0.551917</td><td></td></tr>
-<tr><td>ExSymExeTestAssignments_false</td><td>false</td><td class="status-correct">correct</td><td>0.644425</td><td></td></tr>
-<tr><td>ExSymExeTestAssignments_true</td><td>true</td><td class="status-correct">correct</td><td>0.521309</td><td></td></tr>
-<tr><td>ExSymExeTestClassFields_false</td><td>false</td><td class="status-correct">correct</td><td>0.629769</td><td></td></tr>
-<tr><td>ExSymExeTestClassFields_true</td><td>true</td><td class="status-correct">correct</td><td>0.547699</td><td></td></tr>
-<tr><td>ExSymExe_false</td><td>false</td><td class="status-correct">correct</td><td>0.477107</td><td></td></tr>
-<tr><td>ExSymExe_true</td><td>true</td><td class="status-correct">correct</td><td>0.472883</td><td></td></tr>
-<tr><td>TestLazy_false</td><td>false</td><td class="status-correct">correct</td><td>0.603912</td><td></td></tr>
-<tr><td>TestLazy_true</td><td>true</td><td class="status-correct">correct</td><td>0.574585</td><td></td></tr>
+  <tr><td>ExDarko_false</td><td>false</td><td class="status-correct">correct</td><td>0.668558</td><td></td></tr>
+<tr><td>ExDarko_true</td><td>true</td><td class="status-correct">correct</td><td>0.576181</td><td></td></tr>
+<tr><td>ExException_false</td><td>false</td><td class="status-correct">correct</td><td>0.629727</td><td></td></tr>
+<tr><td>ExException_true</td><td>true</td><td class="status-correct">correct</td><td>0.554232</td><td></td></tr>
+<tr><td>ExGenSymExe_false</td><td>false</td><td class="status-correct">correct</td><td>0.495600</td><td></td></tr>
+<tr><td>ExGenSymExe_true</td><td>true</td><td class="status-correct">correct</td><td>0.494586</td><td></td></tr>
+<tr><td>ExLazy_false</td><td>false</td><td class="status-correct">correct</td><td>0.647259</td><td></td></tr>
+<tr><td>ExLazy_true</td><td>true</td><td class="status-correct">correct</td><td>0.591571</td><td></td></tr>
+<tr><td>ExMIT_false</td><td>false</td><td class="status-correct">correct</td><td>0.646165</td><td></td></tr>
+<tr><td>ExMIT_true</td><td>true</td><td class="status-correct">correct</td><td>0.545331</td><td></td></tr>
+<tr><td>ExSymExe10_false</td><td>false</td><td class="status-correct">correct</td><td>0.652040</td><td></td></tr>
+<tr><td>ExSymExe10_true</td><td>true</td><td class="status-correct">correct</td><td>0.567686</td><td></td></tr>
+<tr><td>ExSymExe11_false</td><td>false</td><td class="status-correct">correct</td><td>0.509350</td><td></td></tr>
+<tr><td>ExSymExe11_true</td><td>true</td><td class="status-correct">correct</td><td>0.551130</td><td></td></tr>
+<tr><td>ExSymExe12_false</td><td>false</td><td class="status-correct">correct</td><td>0.673548</td><td></td></tr>
+<tr><td>ExSymExe12_true</td><td>true</td><td class="status-correct">correct</td><td>0.563211</td><td></td></tr>
+<tr><td>ExSymExe13_false</td><td>false</td><td class="status-correct">correct</td><td>0.661023</td><td></td></tr>
+<tr><td>ExSymExe13_true</td><td>true</td><td class="status-correct">correct</td><td>0.550347</td><td></td></tr>
+<tr><td>ExSymExe14_false</td><td>false</td><td class="status-correct">correct</td><td>0.645822</td><td></td></tr>
+<tr><td>ExSymExe14_true</td><td>true</td><td class="status-correct">correct</td><td>0.556411</td><td></td></tr>
+<tr><td>ExSymExe15_false</td><td>false</td><td class="status-correct">correct</td><td>0.635432</td><td></td></tr>
+<tr><td>ExSymExe15_true</td><td>true</td><td class="status-correct">correct</td><td>0.570409</td><td></td></tr>
+<tr><td>ExSymExe16_false</td><td>false</td><td class="status-correct">correct</td><td>0.491345</td><td></td></tr>
+<tr><td>ExSymExe16_true</td><td>true</td><td class="status-correct">correct</td><td>0.491735</td><td></td></tr>
+<tr><td>ExSymExe17_false</td><td>false</td><td class="status-correct">correct</td><td>0.490210</td><td></td></tr>
+<tr><td>ExSymExe17_true</td><td>true</td><td class="status-correct">correct</td><td>0.490788</td><td></td></tr>
+<tr><td>ExSymExe18_false</td><td>false</td><td class="status-correct">correct</td><td>0.572630</td><td></td></tr>
+<tr><td>ExSymExe18_true</td><td>true</td><td class="status-correct">correct</td><td>0.501988</td><td></td></tr>
+<tr><td>ExSymExe19_false</td><td>false</td><td class="status-correct">correct</td><td>0.649730</td><td></td></tr>
+<tr><td>ExSymExe19_true</td><td>true</td><td class="status-correct">correct</td><td>1.665627</td><td></td></tr>
+<tr><td>ExSymExe1_false</td><td>false</td><td class="status-correct">correct</td><td>0.940015</td><td></td></tr>
+<tr><td>ExSymExe1_true</td><td>true</td><td class="status-correct">correct</td><td>0.722215</td><td></td></tr>
+<tr><td>ExSymExe20_false</td><td>false</td><td class="status-correct">correct</td><td>9.246980</td><td></td></tr>
+<tr><td>ExSymExe20_true</td><td>true</td><td class="status-correct">correct</td><td>0.486233</td><td></td></tr>
+<tr><td>ExSymExe21_false</td><td>false</td><td class="status-correct">correct</td><td>0.981046</td><td></td></tr>
+<tr><td>ExSymExe21_true</td><td>true</td><td class="status-correct">correct</td><td>0.498553</td><td></td></tr>
+<tr><td>ExSymExe25_false</td><td>false</td><td class="status-correct">correct</td><td>0.650080</td><td></td></tr>
+<tr><td>ExSymExe25_true</td><td>true</td><td class="status-correct">correct</td><td>0.486535</td><td></td></tr>
+<tr><td>ExSymExe26_false</td><td>false</td><td class="status-correct">correct</td><td>1.149629</td><td></td></tr>
+<tr><td>ExSymExe26_true</td><td>true</td><td class="status-correct">correct</td><td>0.497161</td><td></td></tr>
+<tr><td>ExSymExe27_false</td><td>false</td><td class="status-correct">correct</td><td>0.639061</td><td></td></tr>
+<tr><td>ExSymExe27_true</td><td>true</td><td class="status-correct">correct</td><td>0.508483</td><td></td></tr>
+<tr><td>ExSymExe28_false</td><td>false</td><td class="status-correct">correct</td><td>0.648139</td><td></td></tr>
+<tr><td>ExSymExe28_true</td><td>true</td><td class="status-correct">correct</td><td>0.494981</td><td></td></tr>
+<tr><td>ExSymExe29_false</td><td>false</td><td class="status-correct">correct</td><td>1.525895</td><td></td></tr>
+<tr><td>ExSymExe29_true</td><td>true</td><td class="status-correct">correct</td><td>0.502591</td><td></td></tr>
+<tr><td>ExSymExe2_false</td><td>false</td><td class="status-correct">correct</td><td>0.957495</td><td></td></tr>
+<tr><td>ExSymExe2_true</td><td>true</td><td class="status-correct">correct</td><td>0.487430</td><td></td></tr>
+<tr><td>ExSymExe3_false</td><td>false</td><td class="status-correct">correct</td><td>0.638600</td><td></td></tr>
+<tr><td>ExSymExe3_true</td><td>true</td><td class="status-correct">correct</td><td>0.485916</td><td></td></tr>
+<tr><td>ExSymExe4_false</td><td>false</td><td class="status-correct">correct</td><td>1.394588</td><td></td></tr>
+<tr><td>ExSymExe4_true</td><td>true</td><td class="status-correct">correct</td><td>0.509431</td><td></td></tr>
+<tr><td>ExSymExe5_false</td><td>false</td><td class="status-correct">correct</td><td>0.642569</td><td></td></tr>
+<tr><td>ExSymExe5_true</td><td>true</td><td class="status-correct">correct</td><td>0.499430</td><td></td></tr>
+<tr><td>ExSymExe6_false</td><td>false</td><td class="status-correct">correct</td><td>0.555415</td><td></td></tr>
+<tr><td>ExSymExe6_true</td><td>true</td><td class="status-correct">correct</td><td>0.495777</td><td></td></tr>
+<tr><td>ExSymExe7_false</td><td>false</td><td class="status-correct">correct</td><td>0.824826</td><td></td></tr>
+<tr><td>ExSymExe7_true</td><td>true</td><td class="status-correct">correct</td><td>0.684870</td><td></td></tr>
+<tr><td>ExSymExe8_false</td><td>false</td><td class="status-correct">correct</td><td>0.993281</td><td></td></tr>
+<tr><td>ExSymExe8_true</td><td>true</td><td class="status-correct">correct</td><td>0.494749</td><td></td></tr>
+<tr><td>ExSymExe9_false</td><td>false</td><td class="status-correct">correct</td><td>0.494731</td><td></td></tr>
+<tr><td>ExSymExe9_true</td><td>true</td><td class="status-correct">correct</td><td>0.489251</td><td></td></tr>
+<tr><td>ExSymExeArrays_false</td><td>false</td><td class="status-correct">correct</td><td>0.487718</td><td></td></tr>
+<tr><td>ExSymExeArrays_true</td><td>true</td><td class="status-correct">correct</td><td>0.483569</td><td></td></tr>
+<tr><td>ExSymExeBool_false</td><td>false</td><td class="status-correct">correct</td><td>0.505086</td><td></td></tr>
+<tr><td>ExSymExeBool_true</td><td>true</td><td class="status-correct">correct</td><td>0.501806</td><td></td></tr>
+<tr><td>ExSymExeComplexMath_false</td><td>false</td><td class="status-correct">correct</td><td>0.489374</td><td></td></tr>
+<tr><td>ExSymExeComplexMath_true</td><td>true</td><td class="status-correct">correct</td><td>0.481271</td><td></td></tr>
+<tr><td>ExSymExeD2I_false</td><td>false</td><td class="status-correct">correct</td><td>0.485777</td><td></td></tr>
+<tr><td>ExSymExeD2I_true</td><td>true</td><td class="status-correct">correct</td><td>0.558175</td><td></td></tr>
+<tr><td>ExSymExeD2L_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.612634</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>ExSymExeD2L_true</td><td>true</td><td class="status-correct">correct</td><td>0.576868</td><td></td></tr>
+<tr><td>ExSymExeF2I_false</td><td>false</td><td class="status-correct">correct</td><td>0.501709</td><td></td></tr>
+<tr><td>ExSymExeF2I_true</td><td>true</td><td class="status-correct">correct</td><td>0.556624</td><td></td></tr>
+<tr><td>ExSymExeF2L_false</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.546821</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>ExSymExeF2L_true</td><td>true</td><td class="status-correct">correct</td><td>0.553720</td><td></td></tr>
+<tr><td>ExSymExeFNEG_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.600985</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
+<tr><td>ExSymExeFNEG_true</td><td>true</td><td class="status-correct">correct</td><td>0.574655</td><td></td></tr>
+<tr><td>ExSymExeGetStatic_false</td><td>false</td><td class="status-correct">correct</td><td>0.487574</td><td></td></tr>
+<tr><td>ExSymExeGetStatic_true</td><td>true</td><td class="status-correct">correct</td><td>0.480590</td><td></td></tr>
+<tr><td>ExSymExeI2D_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.639480</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
+<tr><td>ExSymExeI2D_true</td><td>true</td><td class="status-correct">correct</td><td>2.162515</td><td></td></tr>
+<tr><td>ExSymExeI2F_false</td><td>false</td><td class="status-correct">correct</td><td>0.488070</td><td></td></tr>
+<tr><td>ExSymExeI2F_true</td><td>true</td><td class="status-correct">correct</td><td>0.541721</td><td></td></tr>
+<tr><td>ExSymExeLCMP_false</td><td>false</td><td class="status-correct">correct</td><td>0.631287</td><td></td></tr>
+<tr><td>ExSymExeLCMP_true</td><td>true</td><td class="status-correct">correct</td><td>0.546717</td><td></td></tr>
+<tr><td>ExSymExeLongBytecodes_false</td><td>false</td><td class="status-unknown">unknown</td><td>0.626797</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) |  at java.lang.Integer.parseInt(Integer.java:583) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.</span></td></tr>
+<tr><td>ExSymExeLongBytecodes_true</td><td>true</td><td class="status-correct">correct</td><td>0.585089</td><td></td></tr>
+<tr><td>ExSymExeResearch_false</td><td>false</td><td class="status-correct">correct</td><td>0.689773</td><td></td></tr>
+<tr><td>ExSymExeResearch_true</td><td>true</td><td class="status-correct">correct</td><td>0.607168</td><td></td></tr>
+<tr><td>ExSymExeSimple_false</td><td>false</td><td class="status-correct">correct</td><td>0.550627</td><td></td></tr>
+<tr><td>ExSymExeSimple_true</td><td>true</td><td class="status-correct">correct</td><td>0.583249</td><td></td></tr>
+<tr><td>ExSymExeSuzette_false</td><td>false</td><td class="status-correct">correct</td><td>0.663340</td><td></td></tr>
+<tr><td>ExSymExeSuzette_true</td><td>true</td><td class="status-correct">correct</td><td>0.582692</td><td></td></tr>
+<tr><td>ExSymExeSwitch_false</td><td>false</td><td class="status-correct">correct</td><td>0.641847</td><td></td></tr>
+<tr><td>ExSymExeSwitch_true</td><td>true</td><td class="status-correct">correct</td><td>0.563206</td><td></td></tr>
+<tr><td>ExSymExeTestAssignments_false</td><td>false</td><td class="status-correct">correct</td><td>0.641740</td><td></td></tr>
+<tr><td>ExSymExeTestAssignments_true</td><td>true</td><td class="status-correct">correct</td><td>0.543045</td><td></td></tr>
+<tr><td>ExSymExeTestClassFields_false</td><td>false</td><td class="status-correct">correct</td><td>0.667122</td><td></td></tr>
+<tr><td>ExSymExeTestClassFields_true</td><td>true</td><td class="status-correct">correct</td><td>0.539978</td><td></td></tr>
+<tr><td>ExSymExe_false</td><td>false</td><td class="status-correct">correct</td><td>0.492963</td><td></td></tr>
+<tr><td>ExSymExe_true</td><td>true</td><td class="status-correct">correct</td><td>0.494012</td><td></td></tr>
+<tr><td>TestLazy_false</td><td>false</td><td class="status-correct">correct</td><td>0.641825</td><td></td></tr>
+<tr><td>TestLazy_true</td><td>true</td><td class="status-correct">correct</td><td>0.538933</td><td></td></tr>
 
 </table>
 </div>

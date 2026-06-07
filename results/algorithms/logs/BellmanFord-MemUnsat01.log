@@ -1,7 +1,157 @@
-Total Solver Time = 1053 msec
-Total Solver Parse Time = 90 msec
+  (or a!1 (and (= #x0000000000000000 #x0000000000000000) a!2 (= e6 e2)))))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge e5 #xffffffff80000000))
+(assert (bvsle e5 #x000000007fffffff))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvsge e1 #xffffffff80000000))
+(assert (bvsle e1 #x000000007fffffff))
+(assert (let ((a!1 (and (= #x0000000000000000 #x0000000000000000)
+                (= (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+                   #x0000000000000001)
+                (= e5 int2)))
+      (a!2 (not (= (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+                   #x0000000000000001))))
+  (or a!1 (and (= #x0000000000000000 #x0000000000000000) a!2 (= e5 e1)))))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge e4 #xffffffff80000000))
+(assert (bvsle e4 #x000000007fffffff))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvsge e0 #xffffffff80000000))
+(assert (bvsle e0 #x000000007fffffff))
+(assert (let ((a!1 (and (= #x0000000000000000 #x0000000000000000)
+                (= (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+                   #x0000000000000000)
+                (= e4 int2)))
+      (a!2 (not (= (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+                   #x0000000000000000))))
+  (or a!1 (and (= #x0000000000000000 #x0000000000000000) a!2 (= e4 e0)))))
+(assert (bvsge (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+       #x0000000000000000))
+(assert (bvslt (bvashr (bvshl int0 #x0000000000000020) #x0000000000000020)
+       #x0000000000000004))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvslt int2 #x00000000000f4240))
+(assert (bvsge int2 #x0000000000000000))
+(assert (bvsge e3 #xffffffff80000000))
+(assert (bvsle e3 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000003)
+         (= e3 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000003))
+         (= e3 #x0000000000000000))))
+(assert (bvsge e2 #xffffffff80000000))
+(assert (bvsle e2 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000002)
+         (= e2 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000002))
+         (= e2 #x0000000000000000))))
+(assert (bvsge e1 #xffffffff80000000))
+(assert (bvsle e1 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000001)
+         (= e1 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000001))
+         (= e1 #x0000000000000000))))
+(assert (bvsge e0 #xffffffff80000000))
+(assert (bvsle e0 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000000)
+         (= e0 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000000))
+         (= e0 #x0000000000000000))))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt int1 #x00000000000f4240))
+(assert (bvsge int1 #x0000000000000000))
+(assert (= (bvmul int0 int0) #x0000000000000004))
+(assert (bvsge (bvmul int0 int0) #x0000000000000000))
+(assert (bvslt int0 #x00000000000f4240))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 22
+int0 == CONST_2 &&
+int0 >= CONST_0 &&
+0==0&&int0<<32>>32==3&&e7==int2||0==0&&!(int0<<32>>32==3)&&e7==e3 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 22
+int0[2] == CONST_2 &&
+int0[2] >= CONST_0 &&
+0==0&&int0<<32>>32==3&&e7==int2||0==0&&!(int0<<32>>32==3)&&e7==e3
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+
+
+
+
+
+
+
+Returned solutions: 
+*************************************
+Satisfiable: true
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:105)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:105)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 1393 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 969 msec
+Total Solver Parse Time = 84 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 149 msec
+Total Solver Clean up Time = 128 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -31,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1505,0,1505,0,0,1053,90,149,0,7,0,0,0,0,7,0,7,0,34,0,0,0,0,34,0,0,-1,-1,0.0,0,0,0
+1393,0,1393,0,0,969,84,128,0,7,0,0,0,0,7,0,7,0,34,0,0,0,0,34,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -46,4 +196,4 @@ instructions:       6429
 max memory:         240MB
 loaded code:        classes=93,methods=1887
 
-====================================================== search finished: 6/7/26 8:26 PM
+====================================================== search finished: 6/7/26 10:34 PM
