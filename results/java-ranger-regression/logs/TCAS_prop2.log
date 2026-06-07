@@ -20,7 +20,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -70,7 +70,7 @@ int1 != CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 6898 msec
+Veritesting Dyn Time = 7043 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 6378 msec
-Total Solver Parse Time = 476 msec
+Total Solver Time = 6513 msec
+Total Solver Parse Time = 484 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 466 msec
+Total Solver Clean up Time = 453 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-6898,0,6898,0,0,6378,476,466,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
+7043,0,7043,0,0,6513,484,453,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:06
+elapsed time:       00:00:07
 states:             new=783,visited=0,backtracked=783,end=236
 search:             maxDepth=13,constraints=272
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=391

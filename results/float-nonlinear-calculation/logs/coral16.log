@@ -9,6 +9,7 @@ symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -29,20 +30,20 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/7/26 10:04 PM
+====================================================== search started: 6/7/26 10:25 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double4 () Real)
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (not (= double4 0.0)))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (not (fp.eq double4 (_ +zero 11 53))))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -53,7 +54,7 @@ double4 != CONST_0.0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 java.lang.RuntimeException: ## Error: Math.tan not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.tan(ProblemGeneral.java:161)

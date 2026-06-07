@@ -20,7 +20,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -70,7 +70,7 @@ int1 != CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 6874 msec
+Veritesting Dyn Time = 6961 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 6368 msec
-Total Solver Parse Time = 480 msec
+Total Solver Time = 6453 msec
+Total Solver Parse Time = 475 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 456 msec
+Total Solver Clean up Time = 451 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-6874,0,6874,0,0,6368,480,456,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
+6961,0,6961,0,0,6453,475,451,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
