@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 4:05 PM
+====================================================== search started: 6/7/26 4:12 AM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -48,7 +48,7 @@ Using floating point for reals: yes
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 11647 ms
+Solving time of z3 bitvector is 10778 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -74,7 +74,7 @@ Using floating point for reals: yes
                        (fp #b0 #b10000000110 #x6800000000000)))))
 
 
-Solving time of z3 bitvector is 11361 ms
+Solving time of z3 bitvector is 10652 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -93,6 +93,33 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
 (assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
 (assert (fp.gt (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000000 #x921fb54442d18)
+               (fp.div roundNearestTiesToEven
+                       double0
+                       (fp #b0 #b10000000110 #x6800000000000)))
+       (_ +zero 11 53)))
+
+
+Solving time of z3 bitvector is 7348 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+((double0 / CONST_180.0) * CONST_3.141592653589793) > CONST_0.0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+the depth of violation is2
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.mul roundNearestTiesToEven
                (fp #b0 #b10000000000 #x921fb54442d18)
                (fp.div roundNearestTiesToEven
                        double0

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>juliet-java — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>juliet-java</h1>
+  <p>JR: fp-power-fix@7d31423 | Date: 2026-06-07 04:11:17 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=00484cdd87bbfb5a2d6d533847de9e4072776a59">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=00484cdd87bbfb5a2d6d533847de9e4072776a59">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">9</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">0<span class="pct">(0.0%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">0</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">9</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_01_bad</td><td>false</td><td class="status-unknown">unknown</td><td>0.545650</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_01_bad_version2</td><td>false</td><td class="status-unknown">unknown</td><td>1.023875</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_01_good</td><td>true</td><td class="status-unknown">unknown</td><td>0.540528</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_81a_bad</td><td>false</td><td class="status-unknown">unknown</td><td>0.540104</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_81a_bad_version2</td><td>false</td><td class="status-unknown">unknown</td><td>0.519789</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_connect_tcp_divide_81a_good</td><td>true</td><td class="status-unknown">unknown</td><td>0.531788</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.collectPgmNameForSymVar(WitnessSymbolicState.java:96) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.NullPointerException |  at gov.nasa.jpf.jvm.bytecode.EXECUTENATIVE.toString(EXECUTENATIVE.java:92) |</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_console_readLine_divide_54_bad</td><td>false</td><td class="status-unknown">unknown</td><td>0.517950</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_console_readLine_divide_54_bad_version2</td><td>false</td><td class="status-unknown">unknown</td><td>0.542012</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.</span></td></tr>
+<tr><td>CWE369_Divide_by_Zero__float_console_readLine_divide_54_good</td><td>true</td><td class="status-unknown">unknown</td><td>0.528950</td><td><span class="error-text" title="java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225) |  at gov.nasa.jpf.symbc.bytecode.INVOKESTATIC.execute(INVOKESTATIC.java:45)">java.lang.RuntimeException: ERROR: Unsupported string operation. |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:274) |  at gov.nasa.jpf.symbc.</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

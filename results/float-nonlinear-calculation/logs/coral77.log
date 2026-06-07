@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 4:09 PM
+====================================================== search started: 6/7/26 4:18 AM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -94,7 +94,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -180,7 +180,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -281,7 +281,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -319,7 +319,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 5 ms
+Solving time of z3 bitvector is 6 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -358,7 +358,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -397,7 +397,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 8 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -440,7 +440,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 8 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -528,7 +528,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 6 ms
+Solving time of z3 bitvector is 7 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -576,7 +576,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 8 ms
+Solving time of z3 bitvector is 10 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -625,7 +625,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 9 ms
+Solving time of z3 bitvector is 12 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -674,7 +674,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 8 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -727,7 +727,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 14 ms
+Solving time of z3 bitvector is 16 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -781,7 +781,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 8 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -835,7 +835,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 14 ms
+Solving time of z3 bitvector is 15 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -893,7 +893,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 8 ms
+Solving time of z3 bitvector is 9 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -952,7 +952,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 5 ms
+Solving time of z3 bitvector is 6 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1011,7 +1011,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 11 ms
+Solving time of z3 bitvector is 13 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1074,7 +1074,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 34 ms
+Solving time of z3 bitvector is 40 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1138,7 +1138,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 11 ms
+Solving time of z3 bitvector is 12 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1202,7 +1202,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 19 ms
+Solving time of z3 bitvector is 21 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1267,7 +1267,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 12 ms
+Solving time of z3 bitvector is 13 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1308,16 +1308,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 545 msec
+Veritesting Dyn Time = 622 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 288 msec
-Total Solver Parse Time = 15 msec
+Total Solver Time = 326 msec
+Total Solver Parse Time = 16 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 21 msec
+Total Solver Clean up Time = 19 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -1347,7 +1347,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-545,0,545,0,0,288,15,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+622,0,622,0,0,326,16,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
@@ -1362,5 +1362,5 @@ instructions:       6437
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/6/26 4:09 PM
+====================================================== search finished: 6/7/26 4:18 AM
 

@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 4:05 PM
+====================================================== search started: 6/7/26 4:11 AM
 New sym int int0 min=-2147483648, max=2147483647
 New sym int int1 min=-2147483648, max=2147483647
 New sym int int2 min=-2147483648, max=2147483647
@@ -807,7 +807,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1409,7 +1409,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1454,7 +1454,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -1931,7 +1931,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2308,7 +2308,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2543,7 +2543,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2588,7 +2588,7 @@ Using floating point for reals: yes
 (assert (= int1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4156,7 +4156,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4229,7 +4229,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4483,7 +4483,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4538,7 +4538,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4605,7 +4605,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4889,7 +4889,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -4944,7 +4944,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5146,7 +5146,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5214,7 +5214,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5653,7 +5653,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -5865,7 +5865,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6167,7 +6167,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6463,7 +6463,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6539,7 +6539,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -6612,7 +6612,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -7406,7 +7406,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -7484,7 +7484,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -7889,7 +7889,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8039,7 +8039,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8187,7 +8187,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8718,7 +8718,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8793,7 +8793,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -8876,7 +8876,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9126,7 +9126,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9356,7 +9356,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -9746,7 +9746,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10544,7 +10544,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10619,7 +10619,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10859,7 +10859,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -10936,7 +10936,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11263,7 +11263,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11494,7 +11494,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -11809,7 +11809,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -12684,7 +12684,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -15167,7 +15167,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -15495,7 +15495,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -15807,7 +15807,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -15964,7 +15964,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -16286,7 +16286,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -16363,7 +16363,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -16590,7 +16590,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -16895,7 +16895,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -17211,7 +17211,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -18008,7 +18008,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -19350,7 +19350,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -19601,7 +19601,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -20317,7 +20317,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -20633,7 +20633,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -20790,7 +20790,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -21040,7 +21040,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -21430,7 +21430,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -21804,7 +21804,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22039,7 +22039,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22197,7 +22197,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22276,7 +22276,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22432,7 +22432,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22665,7 +22665,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22821,7 +22821,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22901,7 +22901,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22978,7 +22978,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23152,7 +23152,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23389,7 +23389,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23778,7 +23778,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -24091,7 +24091,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -24463,7 +24463,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -24603,7 +24603,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -24812,7 +24812,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -25224,7 +25224,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -25933,7 +25933,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -27437,7 +27437,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -27593,7 +27593,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -28128,7 +28128,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -28199,7 +28199,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -28339,7 +28339,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -29636,7 +29636,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -29707,7 +29707,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -29787,7 +29787,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -29860,7 +29860,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -30326,7 +30326,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -30478,7 +30478,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -30556,7 +30556,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -30631,7 +30631,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -30895,7 +30895,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31124,7 +31124,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31434,7 +31434,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31512,7 +31512,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31587,7 +31587,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31989,7 +31989,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32144,7 +32144,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32219,7 +32219,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32302,7 +32302,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32535,7 +32535,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32615,7 +32615,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -32859,7 +32859,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -33171,7 +33171,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -33328,7 +33328,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -33580,7 +33580,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -33813,7 +33813,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34060,7 +34060,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34293,7 +34293,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34922,7 +34922,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -35020,7 +35020,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -35097,7 +35097,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -35194,7 +35194,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -35269,7 +35269,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -35353,7 +35353,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37074,7 +37074,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37304,7 +37304,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37379,7 +37379,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37461,7 +37461,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37534,7 +37534,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37616,7 +37616,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37691,7 +37691,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 6 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37844,7 +37844,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37921,7 +37921,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38150,7 +38150,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38302,7 +38302,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38606,7 +38606,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38758,7 +38758,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38836,7 +38836,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -38911,7 +38911,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -39327,7 +39327,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -40012,7 +40012,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -40090,7 +40090,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -40249,7 +40249,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -40422,7 +40422,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -41507,7 +41507,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -41586,7 +41586,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42143,7 +42143,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42222,7 +42222,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42702,7 +42702,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42938,7 +42938,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -43332,7 +43332,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -43565,7 +43565,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -43721,7 +43721,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44033,7 +44033,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44112,7 +44112,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44345,7 +44345,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44425,7 +44425,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44502,7 +44502,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44673,7 +44673,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45143,7 +45143,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45534,7 +45534,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45767,7 +45767,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45924,7 +45924,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -46371,7 +46371,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47106,7 +47106,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47205,7 +47205,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47374,7 +47374,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -48425,7 +48425,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -48502,7 +48502,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -50388,7 +50388,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -52210,7 +52210,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -53959,7 +53959,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54039,7 +54039,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54261,7 +54261,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54784,7 +54784,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54857,7 +54857,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54937,7 +54937,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -55160,7 +55160,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -55534,7 +55534,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -56302,7 +56302,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -57185,7 +57185,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -57406,7 +57406,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -61397,7 +61397,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -62629,7 +62629,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -62704,7 +62704,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63468,7 +63468,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63556,7 +63556,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -71637,7 +71637,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -74659,7 +74659,7 @@ Using floating point for reals: yes
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -74683,11 +74683,11 @@ int7[514] > CONST_400 &&
 int7[514] >= CONST_400 &&
 int5[-2147483648] < int3[-2147483647] &&
 int6[0] == CONST_0 &&
-int0[301] < CONST_600 &&
-int7[514] <= int8[67108864] &&
+int0[557] < CONST_600 &&
+int7[514] <= int8[536870912] &&
 int11[-2147483648] <= CONST_0 &&
 int10[-2147483648] != CONST_1 &&
-int0[301] > CONST_300 &&
+int0[557] > CONST_300 &&
 int4[-2147483047] <= CONST_600 &&
 int2[0] == CONST_0 &&
 int1[-2147483648] != CONST_0
@@ -74798,16 +74798,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2824 msec
+Veritesting Dyn Time = 3019 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2322 msec
-Total Solver Parse Time = 198 msec
+Total Solver Time = 2459 msec
+Total Solver Parse Time = 215 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 167 msec
+Total Solver Clean up Time = 174 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -74837,13 +74837,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2824,0,2824,0,0,2322,198,167,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
+3019,0,3019,0,0,2459,215,174,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:03
 states:             new=286,visited=0,backtracked=273,end=91
 search:             maxDepth=13,constraints=84
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=146
@@ -74852,5 +74852,5 @@ instructions:       11179
 max memory:         240MB
 loaded code:        classes=89,methods=1882
 
-====================================================== search finished: 6/6/26 4:05 PM
+====================================================== search finished: 6/7/26 4:11 AM
 

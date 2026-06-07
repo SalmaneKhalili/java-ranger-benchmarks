@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 4:09 PM
+====================================================== search started: 6/7/26 4:15 AM
 New sym int int0 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -1506,7 +1506,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -2332,14 +2332,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 509 msec
+Veritesting Dyn Time = 470 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 94 msec
-Total Solver Parse Time = 25 msec
+Total Solver Time = 80 msec
+Total Solver Parse Time = 23 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
@@ -2371,7 +2371,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-509,0,509,0,0,94,25,1,0,7,0,0,0,0,7,0,7,0,26,0,0,0,0,26,0,0,-1,-1,0.0,0,0,0
+470,0,470,0,0,80,23,1,0,7,0,0,0,0,7,0,7,0,26,0,0,0,0,26,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -2386,5 +2386,5 @@ instructions:       6426
 max memory:         240MB
 loaded code:        classes=94,methods=1890
 
-====================================================== search finished: 6/6/26 4:09 PM
+====================================================== search finished: 6/7/26 4:15 AM
 

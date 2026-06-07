@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/6/26 4:06 PM
+====================================================== search started: 6/7/26 4:12 AM
 New sym int int0 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -7940,7 +7940,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x000000000000002e))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31439,7 +31439,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x000000000000002e))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -61980,16 +61980,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1325 msec
+Veritesting Dyn Time = 1408 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 1000 msec
-Total Solver Parse Time = 221 msec
+Total Solver Time = 1067 msec
+Total Solver Parse Time = 230 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 15 msec
+Total Solver Clean up Time = 16 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -62019,7 +62019,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1325,0,1325,0,0,1000,221,15,0,5,0,0,0,0,5,0,5,0,462,0,0,0,0,462,0,0,-1,-1,0.0,0,0,0
+1408,0,1408,0,0,1067,230,16,0,5,0,0,0,0,5,0,5,0,462,0,0,0,0,462,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -62034,5 +62034,5 @@ instructions:       8929
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 4:06 PM
+====================================================== search finished: 6/7/26 4:12 AM
 
