@@ -1,8 +1,8 @@
      Total: 16
-   Correct: 8
- Incorrect: 1
-   Unknown: 5
+   Correct: 10
+ Incorrect: 2
+   Unknown: 4
 Compile_err: 0
-   Timeout: 2
+   Timeout: 0
 
-Score: 8 / 16
+Score: 10 / 16

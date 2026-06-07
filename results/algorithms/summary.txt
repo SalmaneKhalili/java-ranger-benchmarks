@@ -1,8 +1,8 @@
      Total: 40
    Correct: 28
  Incorrect: 0
-   Unknown: 6
+   Unknown: 9
 Compile_err: 0
-   Timeout: 6
+   Timeout: 3
 
 Score: 28 / 40

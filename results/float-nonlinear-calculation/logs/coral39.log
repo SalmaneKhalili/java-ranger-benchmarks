@@ -1,149 +1,6 @@
-Running Symbolic PathFinder ...
-symbolic.dp=z3bitvector
-symbolic.string_dp_timeout_ms=3000
-symbolic.string_dp_alpha=A-Z
-symbolic.string_dp_alphaSize=26
-symbolic.string_dp_upper=10
-symbolic.string_dp_lower=1
-symbolic.string_dp=z3str3
-symbolic.max_pc_length=2147483647
-symbolic.max_pc_msec=0
-symbolic.bvlength=64
-Using floating point theory for reals in Z3.
-symbolic.min_int=-2147483648
-symbolic.min_long=-9223372036854775808
-symbolic.min_short=-32768
-symbolic.min_byte=-128
-symbolic.min_char=0
-symbolic.max_int=2147483647
-symbolic.max_long=9223372036854775807
-symbolic.max_short=32767
-symbolic.max_byte=127
-symbolic.max_char=65535
-symbolic.min_double=-10000.0
-symbolic.max_double=10000.0
-* running veritesting with SPFCases and Early Returns.
-search depth = 13
-JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
-
-
-====================================================== system under test
-Main.main()
-
-====================================================== search started: 6/7/26 4:15 AM
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.lt ((_ to_fp 11 53)
-         roundNearestTiesToEven
-         (^ (fp.to_real double0) (fp.to_real double1)))
-       (fp #b0 #b01111111111 #x0000000000000)))
-
-
-Solving time of z3 bitvector is 2061 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
- pow (double0,double1) < CONST_1.0 -> false
-
-### PCs: total:1 sat:0 unsat:1
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (fp #b0 #b01111111111 #x0000000000000)
-       ((_ to_fp 11 53)
-         roundNearestTiesToEven
-         (^ (fp.to_real double0) (fp.to_real double1)))))
-(fpa2bv-model-converter
-  (double0 (fp ((_ extract 63 63) k!7) ((_ extract 62 52) k!7) ((_ extract 51 0) k!7)))
-  (double1 (fp ((_ extract 63 63) k!8) ((_ extract 62 52) k!8) ((_ extract 51 0) k!8)))
-  (fp.to_real (declare-fun k!9 ((_ BitVec 64)) Real)))
-
-Solving time of z3 bitvector is 964 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-CONST_1.0 ==  pow (double0,double1) -> false
-
-### PCs: total:2 sat:0 unsat:2
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt ((_ to_fp 11 53)
-         roundNearestTiesToEven
-         (^ (fp.to_real double0) (fp.to_real double1)))
-       (fp #b0 #b01111111111 #x0000000000000)))
-(fpa2bv-model-converter
-  (double0 (fp ((_ extract 63 63) k!218)
-               ((_ extract 62 52) k!218)
-               ((_ extract 51 0) k!218)))
-  (double1 (fp ((_ extract 63 63) k!219)
-               ((_ extract 62 52) k!219)
-               ((_ extract 51 0) k!219)))
-  (fp.to_real (declare-fun k!220 ((_ BitVec 64)) Real)))
-
-Solving time of z3 bitvector is 574 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
- pow (double0,double1) > CONST_1.0 -> false
-
-### PCs: total:3 sat:0 unsat:3
-
-
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
-
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
-
-
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 3937 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
-
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 3686 msec
-Total Solver Parse Time = 7 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 48 msec
+Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -173,13 +30,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3937,0,3937,0,0,3686,7,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+333,0,333,0,0,51,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:03
+elapsed time:       00:00:00
 states:             new=1,visited=0,backtracked=1,end=0
 search:             maxDepth=1,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
@@ -188,6 +45,6 @@ instructions:       6064
 max memory:         240MB
 loaded code:        classes=86,methods=1906
 
-====================================================== search finished: 6/7/26 4:15 AM
+====================================================== search finished: 6/7/26 7:56 PM
 
 ***********Warning: everything false
