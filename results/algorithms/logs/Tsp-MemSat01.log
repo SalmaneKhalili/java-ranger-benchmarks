@@ -40,7 +40,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -148,7 +148,7 @@ GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 142 msec
+Total Solver Time = 141 msec
 Total Solver Parse Time = 34 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 3 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-445,0,445,0,0,142,34,3,0,8,0,0,0,0,8,0,8,0,69,0,0,0,0,69,0,0,-1,-1,0.0,0,0,0
+445,0,445,0,0,141,34,3,0,8,0,0,0,0,8,0,8,0,69,0,0,0,0,69,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6937
 max memory:         240MB
 loaded code:        classes=87,methods=1934
 
-====================================================== search finished: 6/7/26 10:37 PM
+====================================================== search finished: 6/8/26 5:02 AM
