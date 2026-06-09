@@ -3,7 +3,7 @@
 (assert (not (= (bvsrem int1 #x0000000000000005) (bvsrem int0 #x0000000000000003))))
 
 
-Solving time of z3 bitvector is 140 ms
+Solving time of z3 bitvector is 138 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63,7 +63,7 @@ Using floating point for reals: yes
 (assert (not (= (bvsrem int1 #x0000000000000005) (bvsrem int0 #x0000000000000003))))
 
 
-Solving time of z3 bitvector is 163 ms
+Solving time of z3 bitvector is 170 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -89,7 +89,7 @@ Using floating point for reals: yes
 (assert (not (= (bvsrem int1 #x0000000000000005) (bvsrem int0 #x0000000000000003))))
 
 
-Solving time of z3 bitvector is 179 ms
+Solving time of z3 bitvector is 182 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1312 msec
+Veritesting Dyn Time = 1327 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 732 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 756 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 102 msec
+Total Solver Clean up Time = 103 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1312,0,1312,0,0,732,8,102,0,2,0,0,0,0,2,0,2,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+1327,0,1327,0,0,756,9,103,0,2,0,0,0,0,2,0,2,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:4..."
@@ -196,4 +196,4 @@ instructions:       6117
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/8/26 4:15 AM
+====================================================== search finished: 6/9/26 3:43 AM

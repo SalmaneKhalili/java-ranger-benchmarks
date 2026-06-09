@@ -14,7 +14,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/8/26 4:15 AM
+====================================================== search started: 6/9/26 3:44 AM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -32,7 +32,7 @@ Using floating point for reals: yes
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 12067 ms
+Solving time of z3 bitvector is 11180 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -58,7 +58,7 @@ Using floating point for reals: yes
                        (fp #b0 #b10000000110 #x6800000000000)))))
 
 
-Solving time of z3 bitvector is 12084 ms
+Solving time of z3 bitvector is 11260 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -84,7 +84,7 @@ Using floating point for reals: yes
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 8284 ms
+Solving time of z3 bitvector is 7608 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -111,7 +111,7 @@ Using floating point for reals: yes
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 16808 ms
+Solving time of z3 bitvector is 16018 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 49958 msec
+Veritesting Dyn Time = 46759 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 32775 msec
+Total Solver Time = 30355 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 302 msec
+Total Solver Clean up Time = 265 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-49958,0,49958,0,0,32775,7,302,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+46759,0,46759,0,0,30355,7,265,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:49
+elapsed time:       00:00:46
 states:             new=2,visited=0,backtracked=0,end=0
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -196,4 +196,4 @@ instructions:       6070
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/8/26 4:16 AM
+====================================================== search finished: 6/9/26 3:45 AM
