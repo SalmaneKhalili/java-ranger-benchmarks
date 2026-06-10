@@ -49,7 +49,7 @@ Using floating point for reals: yes
 (assert (fp.eq double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 132 ms
+Solving time of z3 bitvector is 137 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -84,7 +84,7 @@ Using floating point for reals: yes
 (assert (fp.eq double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 139 ms
+Solving time of z3 bitvector is 150 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -119,7 +119,7 @@ Using floating point for reals: yes
 (assert (fp.eq double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 262 ms
+Solving time of z3 bitvector is 284 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 140022 msec
+Veritesting Dyn Time = 152891 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 139736 msec
-Total Solver Parse Time = 23 msec
+Total Solver Time = 152585 msec
+Total Solver Parse Time = 22 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 813 msec
+Total Solver Clean up Time = 848 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-140022,0,140022,0,0,139736,23,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+152891,0,152891,0,0,152585,22,848,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:02:20
+elapsed time:       00:02:32
 states:             new=25,visited=0,backtracked=25,end=9
 search:             maxDepth=5,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=8
@@ -196,4 +196,4 @@ instructions:       6484
 max memory:         240MB
 loaded code:        classes=87,methods=2006
 
-====================================================== search finished: 6/9/26 5:08 AM
+====================================================== search finished: 6/10/26 5:23 AM

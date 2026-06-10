@@ -148,10 +148,10 @@ GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 6414 msec
-Total Solver Parse Time = 478 msec
+Total Solver Time = 6400 msec
+Total Solver Parse Time = 488 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 474 msec
+Total Solver Clean up Time = 459 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-6930,0,6930,0,0,6414,478,474,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
+6930,0,6930,0,0,6400,488,459,0,22,0,0,0,0,22,0,22,0,2285,0,0,0,0,2285,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       21105
 max memory:         240MB
 loaded code:        classes=85,methods=1841
 
-====================================================== search finished: 6/9/26 3:43 AM
+====================================================== search finished: 6/10/26 3:57 AM

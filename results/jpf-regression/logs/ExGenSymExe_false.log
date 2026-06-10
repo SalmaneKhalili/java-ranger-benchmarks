@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/9/26 3:42 AM
+====================================================== search started: 6/10/26 3:57 AM
 the depth of violation is1
 
 ====================================================== error 1
@@ -58,7 +58,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 263 msec
+Veritesting Dyn Time = 226 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -97,7 +97,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-263,0,263,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+226,0,226,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main$Node.swapNode(Ma..."
@@ -112,5 +112,5 @@ instructions:       6078
 max memory:         240MB
 loaded code:        classes=86,methods=1663
 
-====================================================== search finished: 6/9/26 3:42 AM
+====================================================== search finished: 6/10/26 3:57 AM
 

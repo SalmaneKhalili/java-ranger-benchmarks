@@ -1,7 +1,7 @@
        #x0000000000000000))
 
 
-Solving time of z3 bitvector is 52 ms
+Solving time of z3 bitvector is 54 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34,7 +34,7 @@ Using floating point for reals: yes
        #x0000000000000000))
 
 
-Solving time of z3 bitvector is 62 ms
+Solving time of z3 bitvector is 59 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -89,7 +89,7 @@ Using floating point for reals: yes
        #x0000000000000000))
 
 
-Solving time of z3 bitvector is 58 ms
+Solving time of z3 bitvector is 54 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 753 msec
+Veritesting Dyn Time = 722 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 322 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 314 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 45 msec
+Total Solver Clean up Time = 43 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-753,0,753,0,0,322,8,45,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+722,0,722,0,0,314,7,43,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:5..."
@@ -196,4 +196,4 @@ instructions:       6141
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/9/26 3:44 AM
+====================================================== search finished: 6/10/26 3:58 AM

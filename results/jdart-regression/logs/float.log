@@ -18,7 +18,7 @@
        (fp #b0 #b01101101010 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 614 ms
+Solving time of z3 bitvector is 522 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -52,7 +52,7 @@ Using floating point for reals: yes
        (fp #b0 #b01101101010 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 210 ms
+Solving time of z3 bitvector is 177 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -86,7 +86,7 @@ Using floating point for reals: yes
        (fp #b0 #b01101101010 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 793 ms
+Solving time of z3 bitvector is 693 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -121,7 +121,7 @@ Using floating point for reals: yes
        (fp #b0 #b01101101010 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 422 ms
+Solving time of z3 bitvector is 363 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
