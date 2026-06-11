@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/10/26 5:17 AM
+====================================================== search started: 6/11/26 5:30 AM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -49,7 +49,7 @@ Using floating point for reals: yes
        (fp #b0 #b01111111111 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 1886 ms
+Solving time of z3 bitvector is 1921 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -79,7 +79,7 @@ Using floating point for reals: yes
   (double1 (fp ((_ extract 63 63) k!8) ((_ extract 62 52) k!8) ((_ extract 51 0) k!8)))
   (fp.to_real (declare-fun k!9 ((_ BitVec 64)) Real)))
 
-Solving time of z3 bitvector is 818 ms
+Solving time of z3 bitvector is 875 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -113,7 +113,7 @@ Using floating point for reals: yes
                ((_ extract 51 0) k!219)))
   (fp.to_real (declare-fun k!220 ((_ BitVec 64)) Real)))
 
-Solving time of z3 bitvector is 522 ms
+Solving time of z3 bitvector is 540 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -134,16 +134,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3579 msec
+Veritesting Dyn Time = 3703 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 3315 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 3424 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 45 msec
+Total Solver Clean up Time = 49 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -173,7 +173,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3579,0,3579,0,0,3315,8,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+3703,0,3703,0,0,3424,7,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -188,6 +188,6 @@ instructions:       6064
 max memory:         240MB
 loaded code:        classes=86,methods=1906
 
-====================================================== search finished: 6/10/26 5:17 AM
+====================================================== search finished: 6/11/26 5:31 AM
 
 ***********Warning: everything false
