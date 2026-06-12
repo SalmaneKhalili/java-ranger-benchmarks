@@ -65,7 +65,7 @@ Using floating point for reals: yes
 (assert (fp.lt (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -109,7 +109,7 @@ Using floating point for reals: yes
 (assert (fp.lt (_ +zero 11 53) double0))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

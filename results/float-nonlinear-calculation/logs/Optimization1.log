@@ -15,7 +15,7 @@
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 7819 ms
+Solving time of z3 bitvector is 8243 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -46,7 +46,7 @@ Using floating point for reals: yes
                                double1)))))
 
 
-Solving time of z3 bitvector is 56371 ms
+Solving time of z3 bitvector is 56670 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -77,7 +77,7 @@ Using floating point for reals: yes
        (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 5803 ms
+Solving time of z3 bitvector is 6059 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -109,7 +109,7 @@ Using floating point for reals: yes
                                double1)))))
 
 
-Solving time of z3 bitvector is 83862 ms
+Solving time of z3 bitvector is 82025 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 154344 msec
+Veritesting Dyn Time = 153461 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 70143 msec
-Total Solver Parse Time = 9 msec
+Total Solver Time = 71128 msec
+Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 110 msec
+Total Solver Clean up Time = 108 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-154344,0,154344,0,0,70143,9,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+153461,0,153461,0,0,71128,10,108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Optimization.beale(Op..."
 
 ====================================================== statistics
-elapsed time:       00:02:34
+elapsed time:       00:02:33
 states:             new=3,visited=0,backtracked=1,end=1
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -196,4 +196,4 @@ instructions:       6102
 max memory:         240MB
 loaded code:        classes=90,methods=1879
 
-====================================================== search finished: 6/11/26 4:29 AM
+====================================================== search finished: 6/12/26 4:31 AM

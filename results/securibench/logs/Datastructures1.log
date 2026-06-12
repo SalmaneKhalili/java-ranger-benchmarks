@@ -142,7 +142,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 419 msec
+Veritesting Dyn Time = 448 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-419,0,419,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+448,0,448,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -196,4 +196,4 @@ instructions:       6521
 max memory:         240MB
 loaded code:        classes=108,methods=2037
 
-====================================================== search finished: 6/11/26 4:14 AM
+====================================================== search finished: 6/12/26 4:15 AM
