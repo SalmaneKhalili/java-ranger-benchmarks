@@ -1,4 +1,4 @@
-Solving time of z3 bitvector is 400 ms
+Solving time of z3 bitvector is 386 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34,7 +34,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 57 ms
+Solving time of z3 bitvector is 58 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -70,7 +70,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 704 ms
+Solving time of z3 bitvector is 643 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -107,7 +107,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 646 ms
+Solving time of z3 bitvector is 596 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 8405 msec
+Veritesting Dyn Time = 7767 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 7466 msec
-Total Solver Parse Time = 12 msec
+Total Solver Time = 6866 msec
+Total Solver Parse Time = 13 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 116 msec
+Total Solver Clean up Time = 104 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-8405,0,8405,0,0,7466,12,116,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+7767,0,7767,0,0,6866,13,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
 
 ====================================================== statistics
-elapsed time:       00:00:08
+elapsed time:       00:00:07
 states:             new=13,visited=0,backtracked=9,end=3
 search:             maxDepth=4,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=6
@@ -196,4 +196,4 @@ instructions:       6110
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/12/26 5:32 AM
+====================================================== search finished: 6/13/26 5:19 AM
