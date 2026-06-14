@@ -36,7 +36,7 @@ classPath null
 the depth of violation is5
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 447 msec
+Veritesting Dyn Time = 433 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 45 msec
+Total Solver Time = 43 msec
 Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-447,0,447,0,0,45,10,0,0,5,0,0,0,0,5,0,5,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
+433,0,433,0,0,43,10,0,0,5,0,0,0,0,5,0,5,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."

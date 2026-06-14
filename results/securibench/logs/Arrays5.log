@@ -9,6 +9,7 @@ symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -43,7 +44,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 261 msec
+Veritesting Dyn Time = 267 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -82,7 +83,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-261,0,261,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+267,0,267,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected

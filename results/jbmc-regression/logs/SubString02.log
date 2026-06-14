@@ -10,7 +10,7 @@ New sym int string0.length min=-2147483648, max=2147483647
 New sym int Length_0_ min=0, max=125
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -31,7 +31,7 @@ Length_0_ >= CONST_20 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -77,7 +77,7 @@ string0 => "DEFGHIABJKLCMNOPQRST"
 the depth of violation is3
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 452 msec
+Veritesting Dyn Time = 427 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
 Total Solver Time = 36 msec
-Total Solver Parse Time = 7 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-452,0,452,0,0,36,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+427,0,427,0,0,36,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."

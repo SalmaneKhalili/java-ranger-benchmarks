@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>java-ranger-regression</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:45:22 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:45:09 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,12 +78,12 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>LoopCharAt</td><td>false</td><td class="status-incorrect">incorrect</td><td>19.121679</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>TCAS_prop1</td><td>false</td><td class="status-correct">correct</td><td>3.048939</td><td></td></tr>
-<tr><td>TCAS_prop2</td><td>true</td><td class="status-correct">correct</td><td>7.291770</td><td></td></tr>
-<tr><td>TCAS_prop3</td><td>true</td><td class="status-correct">correct</td><td>7.216298</td><td></td></tr>
-<tr><td>apachecli_eqchk</td><td>true</td><td class="status-correct">correct</td><td>38.142725</td><td></td></tr>
-<tr><td>schedule_eqchk</td><td>true</td><td class="status-correct">correct</td><td>3.947021</td><td></td></tr>
+  <tr><td>LoopCharAt</td><td>false</td><td class="status-incorrect">incorrect</td><td>18.131790</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>TCAS_prop1</td><td>false</td><td class="status-correct">correct</td><td>2.952948</td><td></td></tr>
+<tr><td>TCAS_prop2</td><td>true</td><td class="status-correct">correct</td><td>7.069748</td><td></td></tr>
+<tr><td>TCAS_prop3</td><td>true</td><td class="status-correct">correct</td><td>6.973453</td><td></td></tr>
+<tr><td>apachecli_eqchk</td><td>true</td><td class="status-correct">correct</td><td>36.902591</td><td></td></tr>
+<tr><td>schedule_eqchk</td><td>true</td><td class="status-correct">correct</td><td>3.957548</td><td></td></tr>
 
 </table>
 </div>

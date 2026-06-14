@@ -1,4 +1,4 @@
-symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -19,24 +19,24 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/14/26 10:01 PM
+====================================================== search started: 6/14/26 11:50 PM
 New sym int string4.length min=-2147483648, max=2147483647
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double5 () Real)
-(declare-fun double3 () Real)
-(assert (>= double5 (- 10000.0)))
-(assert (<= double5 10000.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (< (- double5 double3) 0.0))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven double5 double3) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 70 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47,20 +47,20 @@ numeric PC: constraint # = 1
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double5 () Real)
-(declare-fun double3 () Real)
-(assert (>= double5 (- 10000.0)))
-(assert (<= double5 10000.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= 0.0 (- double5 double3)))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven double5 double3)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1640 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -71,20 +71,20 @@ CONST_0.0 == (double5 - double3) -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double5 () Real)
-(declare-fun double3 () Real)
-(assert (>= double5 (- 10000.0)))
-(assert (<= double5 10000.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (> (- double5 double3) 0.0))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven double5 double3) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 96 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -96,20 +96,20 @@ numeric PC: constraint # = 1
 the depth of violation is2
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double5 () Real)
-(declare-fun double3 () Real)
-(assert (>= double5 (- 10000.0)))
-(assert (<= double5 10000.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (< (- double5 double3) 0.0))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven double5 double3) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 118 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 322 msec
+Veritesting Dyn Time = 2275 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 35 msec
+Total Solver Time = 1858 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 12 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-322,0,322,0,0,35,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+2275,0,2275,0,0,1858,7,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.RuntimeException: Negative current time!..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
+elapsed time:       00:00:02
 states:             new=2,visited=0,backtracked=0,end=0
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -196,4 +196,4 @@ instructions:       6210
 max memory:         240MB
 loaded code:        classes=89,methods=1866
 
-====================================================== search finished: 6/14/26 10:01 PM
+====================================================== search finished: 6/14/26 11:50 PM

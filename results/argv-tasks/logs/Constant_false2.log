@@ -1,10 +1,10 @@
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> (+ double0 0.0) double1))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -15,21 +15,21 @@ numeric PC: constraint # = 1
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< (+ double1 double0) double1))
-(assert (< (+ double0 0.0) double1))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven double1 double0) double1))
+(assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 114 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -41,21 +41,21 @@ numeric PC: constraint # = 2
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= double1 (+ double1 double0)))
-(assert (< (+ double0 0.0) double1))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= double1 (fp.add roundNearestTiesToEven double1 double0)))
+(assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 270 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -67,21 +67,21 @@ double1 == (double1 + double0) &&
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> (+ double1 double0) double1))
-(assert (< (+ double0 0.0) double1))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt (fp.add roundNearestTiesToEven double1 double0) double1))
+(assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 605 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -94,21 +94,21 @@ numeric PC: constraint # = 2
 the depth of violation is3
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< (+ double1 double0) double1))
-(assert (< (+ double0 0.0) double1))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven double1 double0) double1))
+(assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 156 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 337 msec
+Veritesting Dyn Time = 1522 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 42 msec
-Total Solver Parse Time = 9 msec
+Total Solver Time = 1056 msec
+Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 14 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-337,0,337,0,0,42,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+1522,0,1522,0,0,1056,10,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
+elapsed time:       00:00:01
 states:             new=3,visited=0,backtracked=0,end=0
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2

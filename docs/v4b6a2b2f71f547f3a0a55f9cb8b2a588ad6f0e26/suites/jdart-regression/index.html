@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>jdart-regression</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:44:43 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:45:53 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -67,33 +67,33 @@ tr:hover { background: #f8f9ff; }
   </div>
   <div class="card">
     <h3>Incorrect</h3>
-    <div class="number incorrect">2</div>
+    <div class="number incorrect">1</div>
   </div>
   <div class="card">
     <h3>Unknown</h3>
-    <div class="number unknown">4</div>
+    <div class="number unknown">5</div>
   </div>
 </div>
 
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>OverapproximationString01</td><td>false</td><td class="status-correct">correct</td><td>0.402944</td><td></td></tr>
-<tr><td>URLDecoder01</td><td>true</td><td class="status-unknown">unknown</td><td>0.298778</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
-<tr><td>URLDecoder02</td><td>false</td><td class="status-unknown">unknown</td><td>0.308307</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
-<tr><td>addition01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.454898</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>array-iteration01</td><td>false</td><td class="status-unknown">unknown</td><td>0.446374</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
-<tr><td>boundcheck100</td><td>false</td><td class="status-correct">correct</td><td>1.229488</td><td></td></tr>
-<tr><td>boundcheck200</td><td>false</td><td class="status-correct">correct</td><td>2.800267</td><td></td></tr>
-<tr><td>boundcheck30</td><td>false</td><td class="status-correct">correct</td><td>0.585896</td><td></td></tr>
-<tr><td>double2long</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.395531</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>float</td><td>false</td><td class="status-unknown">unknown</td><td>0.374764</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
-<tr><td>list2</td><td>true</td><td class="status-correct">correct</td><td>32.807061</td><td></td></tr>
-<tr><td>radians</td><td>false</td><td class="status-correct">correct</td><td>0.389163</td><td></td></tr>
-<tr><td>shifting</td><td>false</td><td class="status-correct">correct</td><td>0.443926</td><td></td></tr>
-<tr><td>shifting2</td><td>false</td><td class="status-correct">correct</td><td>0.546515</td><td></td></tr>
-<tr><td>shifting3</td><td>false</td><td class="status-correct">correct</td><td>0.464449</td><td></td></tr>
-<tr><td>startswith</td><td>true</td><td class="status-correct">correct</td><td>0.454664</td><td></td></tr>
+  <tr><td>OverapproximationString01</td><td>false</td><td class="status-correct">correct</td><td>0.632886</td><td></td></tr>
+<tr><td>URLDecoder01</td><td>true</td><td class="status-unknown">unknown</td><td>0.475134</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
+<tr><td>URLDecoder02</td><td>false</td><td class="status-unknown">unknown</td><td>0.478382</td><td><span class="error-text" title="java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:153) |  at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)">java.lang.RuntimeException: Error: Unsupported string class, java.net.URLDecoder |  at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.isMethodStringSymbolic(SymbolicStringHandler.java:138) |  at go</span></td></tr>
+<tr><td>addition01</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.667204</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>array-iteration01</td><td>false</td><td class="status-unknown">unknown</td><td>0.811195</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
+<tr><td>boundcheck100</td><td>false</td><td class="status-correct">correct</td><td>2.035391</td><td></td></tr>
+<tr><td>boundcheck200</td><td>false</td><td class="status-correct">correct</td><td>4.643808</td><td></td></tr>
+<tr><td>boundcheck30</td><td>false</td><td class="status-correct">correct</td><td>0.964926</td><td></td></tr>
+<tr><td>double2long</td><td>false</td><td class="status-unknown">unknown</td><td>8.526380</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;(-&quot; |  at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043) |  at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110) | java.lang.NumberFormatException: For input string: &quot;(-&quot;">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;(-&quot; |  at sun.misc.FloatingDecimal.readJavaFormatString(Floa</span></td></tr>
+<tr><td>float</td><td>false</td><td class="status-unknown">unknown</td><td>2.711635</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:156) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
+<tr><td>list2</td><td>true</td><td class="status-correct">correct</td><td>54.615579</td><td></td></tr>
+<tr><td>radians</td><td>false</td><td class="status-correct">correct</td><td>44.243256</td><td></td></tr>
+<tr><td>shifting</td><td>false</td><td class="status-correct">correct</td><td>0.612078</td><td></td></tr>
+<tr><td>shifting2</td><td>false</td><td class="status-correct">correct</td><td>0.621680</td><td></td></tr>
+<tr><td>shifting3</td><td>false</td><td class="status-correct">correct</td><td>0.630128</td><td></td></tr>
+<tr><td>startswith</td><td>true</td><td class="status-correct">correct</td><td>0.620201</td><td></td></tr>
 
 </table>
 </div>

@@ -9,6 +9,7 @@ symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -32,17 +33,17 @@ Main.main()
 ====================================================== search started: 6/14/26 9:46 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< double0 0.0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -53,14 +54,14 @@ double0 < CONST_0.0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= 0.0 double0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (_ +zero 11 53) double0))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -74,14 +75,14 @@ CONST_0.0 == double0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 0.0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (_ +zero 11 53)))
 
 
 Solving time of z3 bitvector is 0 ms

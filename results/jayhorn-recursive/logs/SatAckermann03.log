@@ -36,7 +36,7 @@ int0 >= CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 24853 msec
+Veritesting Dyn Time = 24605 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 23800 msec
-Total Solver Parse Time = 5101 msec
+Total Solver Time = 23560 msec
+Total Solver Parse Time = 4784 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 482 msec
+Total Solver Clean up Time = 481 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-24853,0,24853,0,0,23800,5101,482,0,8,0,0,0,0,8,0,8,0,13623,0,0,0,0,13623,0,0,-1,-1,0.0,0,0,0
+24605,0,24605,0,0,23560,4784,481,0,8,0,0,0,0,8,0,8,0,13623,0,0,0,0,13623,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -193,7 +193,7 @@ search:             maxDepth=13,constraints=6
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=23
 heap:               new=464,released=201,maxLive=452,gcCycles=23
 instructions:       141647
-max memory:         444MB
+max memory:         443MB
 loaded code:        classes=85,methods=1831
 
 ====================================================== search finished: 6/14/26 9:45 PM

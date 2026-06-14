@@ -1,6 +1,6 @@
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -67,7 +67,7 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -105,7 +105,7 @@ Using floating point for reals: no
 (assert (= bool3 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 21 ms
+Solving time of z3 bitvector is 32 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 140880 msec
+Veritesting Dyn Time = 149615 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 139797 msec
-Total Solver Parse Time = 4746 msec
+Total Solver Time = 148396 msec
+Total Solver Parse Time = 3413 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 7217 msec
+Total Solver Clean up Time = 8592 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-140880,0,140880,0,0,139797,4746,7217,0,2,0,0,0,0,2,0,2,0,1279,0,0,0,0,1279,0,0,-1,-1,0.0,0,0,0
+149615,0,149615,0,0,148396,3413,8592,0,2,0,0,0,0,2,0,2,0,1279,0,0,0,0,1279,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:02:20
+elapsed time:       00:02:29
 states:             new=5297,visited=0,backtracked=5297,end=152
 search:             maxDepth=13,constraints=2220
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1907

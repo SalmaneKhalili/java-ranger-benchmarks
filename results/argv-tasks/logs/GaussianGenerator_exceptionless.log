@@ -1,200 +1,199 @@
-double4 < double2 -> false
-
-### PCs: total:4 sat:3 unsat:1
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double2 () Real)
-(declare-fun double4 () Real)
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (= double2 (+ double2 1.0)))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (< double4 double2))
+(assert (fp.lt (_ +zero 11 53) double3))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 187062 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 2
-double2 == (double2 + CONST_1.0) &&
-double4 < double2 -> false
-
-### PCs: total:5 sat:3 unsat:2
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double2 () Real)
-(declare-fun double4 () Real)
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> (+ double2 1.0) double2))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (< double4 double2))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-(double2 + CONST_1.0) > double2 &&
-double4 < double2 -> true
-
-### PCs: total:6 sat:4 unsat:2
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double3 () Real)
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (< 0.0 double3))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double4 double2))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
+numeric PC: constraint # = 5
+double3 == ((double7 * double1) + double0) &&
+((double6 * double1) + double0) < double3 &&
+((double5 * double1) + double0) < double3 &&
 CONST_0.0 < double3 &&
 double4 < double2 -> true
 
-### PCs: total:7 sat:5 unsat:2
+### PCs: total:17 sat:15 unsat:2
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double3 () Real)
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= double3 0.0))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double4 double2))
+(declare-fun double7 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double6 () (_ FloatingPoint 11 53))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double7 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double7 double1)
+               double0)
+       double3))
+(assert (fp.gt double6 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double6 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double6 double1)
+               double0)
+       double3))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double5 double1)
+               double0)
+       double3))
+(assert (fp.lt (_ +zero 11 53) double3))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 149012 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 2
-double3 == CONST_0.0 &&
+numeric PC: constraint # = 5
+((double7 * double1) + double0) > double3 &&
+((double6 * double1) + double0) < double3 &&
+((double5 * double1) + double0) < double3 &&
+CONST_0.0 < double3 &&
 double4 < double2 -> true
 
-### PCs: total:8 sat:6 unsat:2
+### PCs: total:18 sat:16 unsat:2
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double3 () Real)
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (> 0.0 double3))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double4 double2))
+(declare-fun double8 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double7 () (_ FloatingPoint 11 53))
+(declare-fun double6 () (_ FloatingPoint 11 53))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double8 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double8 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double8 double1)
+               double0)
+       double3))
+(assert (fp.gt double7 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double7 double1)
+               double0)
+       double3))
+(assert (fp.gt double6 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double6 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double6 double1)
+               double0)
+       double3))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double5 double1)
+               double0)
+       double3))
+(assert (fp.lt (_ +zero 11 53) double3))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 95718 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 2
-CONST_0.0 > double3 &&
+numeric PC: constraint # = 6
+((double8 * double1) + double0) < double3 &&
+((double7 * double1) + double0) < double3 &&
+((double6 * double1) + double0) < double3 &&
+((double5 * double1) + double0) < double3 &&
+CONST_0.0 < double3 &&
 double4 < double2 -> true
 
-### PCs: total:9 sat:7 unsat:2
+### PCs: total:19 sat:17 unsat:2
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
-java.lang.RuntimeException
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.mult(ProblemZ3BitVector.java:788)
-	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:297)
-	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:279)
-	at gov.nasa.jpf.symbc.numeric.PCParser.createDPRealConstraint(PCParser.java:461)
-	at gov.nasa.jpf.symbc.numeric.PCParser.addConstraint(PCParser.java:1146)
-	at gov.nasa.jpf.symbc.numeric.PCParser.parse(PCParser.java:1105)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:127)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:409)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:354)
-	at gov.nasa.jpf.symbc.bytecode.optimization.util.IFInstrSymbHelper.getNextInstructionAndSetPCChoiceDouble(IFInstrSymbHelper.java:380)
-	at gov.nasa.jpf.symbc.bytecode.optimization.DCMPG.execute(DCMPG.java:44)
-	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
-	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
-	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
-	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
-	at gov.nasa.jpf.search.Search.forward(Search.java:937)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
-java.lang.RuntimeException: ## Error Z3: mult(Object, Object) failed.
-java.lang.RuntimeException
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.mult(ProblemZ3BitVector.java:792)
-	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:297)
-	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:279)
-	at gov.nasa.jpf.symbc.numeric.PCParser.createDPRealConstraint(PCParser.java:461)
-	at gov.nasa.jpf.symbc.numeric.PCParser.addConstraint(PCParser.java:1146)
-	at gov.nasa.jpf.symbc.numeric.PCParser.parse(PCParser.java:1105)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:127)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:409)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:354)
-	at gov.nasa.jpf.symbc.bytecode.optimization.util.IFInstrSymbHelper.getNextInstructionAndSetPCChoiceDouble(IFInstrSymbHelper.java:380)
-	at gov.nasa.jpf.symbc.bytecode.optimization.DCMPG.execute(DCMPG.java:44)
-	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
-	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
-	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
-	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
-	at gov.nasa.jpf.search.Search.forward(Search.java:937)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double8 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double7 () (_ FloatingPoint 11 53))
+(declare-fun double6 () (_ FloatingPoint 11 53))
+(declare-fun double5 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double8 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double8 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (= double3
+   (fp.add roundNearestTiesToEven
+           (fp.mul roundNearestTiesToEven double8 double1)
+           double0)))
+(assert (fp.gt double7 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double7 double1)
+               double0)
+       double3))
+(assert (fp.gt double6 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double6 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double6 double1)
+               double0)
+       double3))
+(assert (fp.gt double5 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double5 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.add roundNearestTiesToEven
+               (fp.mul roundNearestTiesToEven double5 double1)
+               double0)
+       double3))
+(assert (fp.lt (_ +zero 11 53) double3))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
+

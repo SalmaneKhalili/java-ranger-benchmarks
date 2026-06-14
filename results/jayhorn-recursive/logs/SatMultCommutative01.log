@@ -26,7 +26,7 @@ int0 >= CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 659 msec
+Veritesting Dyn Time = 661 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 378 msec
-Total Solver Parse Time = 70 msec
+Total Solver Time = 369 msec
+Total Solver Parse Time = 68 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 16 msec
+Total Solver Clean up Time = 15 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-659,0,659,0,0,378,70,16,0,7,0,0,0,0,7,0,7,0,201,0,0,0,0,201,0,0,-1,-1,0.0,0,0,0
+661,0,661,0,0,369,68,15,0,7,0,0,0,0,7,0,7,0,201,0,0,0,0,201,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6990
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/14/26 10:04 PM
+====================================================== search finished: 6/14/26 10:03 PM

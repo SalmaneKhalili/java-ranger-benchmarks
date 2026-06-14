@@ -1,5 +1,5 @@
-symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -20,23 +20,23 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/14/26 9:46 PM
+====================================================== search started: 6/14/26 10:07 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double4 double2))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47,16 +47,16 @@ double4 < double2 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double2 () Real)
-(declare-fun double4 () Real)
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
 (assert (= double2 double4))
 
 
@@ -71,20 +71,20 @@ double2 == double4 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> double4 double2))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -96,20 +96,20 @@ double4 > double2 -> true
 the depth of violation is2
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double4 () Real)
-(declare-fun double2 () Real)
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double4 double2))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 332 msec
+Veritesting Dyn Time = 331 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 45 msec
-Total Solver Parse Time = 7 msec
+Total Solver Time = 44 msec
+Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-332,0,332,0,0,45,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+331,0,331,0,0,44,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.RuntimeException: current time is smalle..."
@@ -196,4 +196,4 @@ instructions:       6179
 max memory:         240MB
 loaded code:        classes=89,methods=1866
 
-====================================================== search finished: 6/14/26 9:46 PM
+====================================================== search finished: 6/14/26 10:07 PM

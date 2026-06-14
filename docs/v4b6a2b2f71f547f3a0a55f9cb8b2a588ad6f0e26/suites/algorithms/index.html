@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>algorithms</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-14 22:32:35 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-14 22:32:39 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,46 +78,46 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>BellmanFord-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>900.063637</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>BellmanFord-FunSat02</td><td>false</td><td class="status-correct">correct</td><td>0.750441</td><td></td></tr>
-<tr><td>BellmanFord-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>900.094412</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>BellmanFord-FunUnsat02</td><td>false</td><td class="status-correct">correct</td><td>0.725025</td><td></td></tr>
-<tr><td>BellmanFord-MemSat01</td><td>true</td><td class="status-unknown">unknown</td><td>900.158878</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>BellmanFord-MemSat02</td><td>true</td><td class="status-correct">correct</td><td>0.752779</td><td></td></tr>
-<tr><td>BellmanFord-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>1.656746</td><td></td></tr>
-<tr><td>BellmanFord-MemUnsat02</td><td>false</td><td class="status-unknown">unknown</td><td>0.551676</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
-<tr><td>BinaryTreeSearch-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>3.294287</td><td></td></tr>
-<tr><td>BinaryTreeSearch-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.723188</td><td></td></tr>
-<tr><td>BinaryTreeSearch-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>4.820946</td><td></td></tr>
-<tr><td>BinaryTreeSearch-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.664292</td><td></td></tr>
-<tr><td>BinaryTreeSearch-MemUnsat02</td><td>false</td><td class="status-correct">correct</td><td>0.630825</td><td></td></tr>
-<tr><td>InsertionSort-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>39.960054</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>InsertionSort-FunSat02</td><td>true</td><td class="status-unknown">unknown</td><td>39.931780</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:61) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:61) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>InsertionSort-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.528612</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
-<tr><td>InsertionSort-MemSat01</td><td>true</td><td class="status-unknown">unknown</td><td>42.899863</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>InsertionSort-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.625116</td><td></td></tr>
-<tr><td>MergeSortIterative-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>6.494360</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:30) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:30) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>MergeSortIterative-FunSat02</td><td>true</td><td class="status-unknown">unknown</td><td>6.962631</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>MergeSortIterative-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.545644</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
-<tr><td>MergeSortIterative-MemSat01</td><td>false</td><td class="status-unknown">unknown</td><td>6.527166</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
-<tr><td>MergeSortIterative-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.631369</td><td></td></tr>
-<tr><td>RedBlackTree-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.808901</td><td></td></tr>
-<tr><td>RedBlackTree-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.721134</td><td></td></tr>
-<tr><td>RedBlackTree-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>3.892368</td><td></td></tr>
-<tr><td>RedBlackTree-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>1.191300</td><td></td></tr>
-<tr><td>SortedListInsert-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>3.585691</td><td></td></tr>
-<tr><td>SortedListInsert-FunSat02</td><td>true</td><td class="status-correct">correct</td><td>5.498283</td><td></td></tr>
-<tr><td>SortedListInsert-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.963944</td><td></td></tr>
-<tr><td>SortedListInsert-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>2.264803</td><td></td></tr>
-<tr><td>SortedListInsert-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.637785</td><td></td></tr>
-<tr><td>Trie-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.563672</td><td></td></tr>
-<tr><td>Trie-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.644515</td><td></td></tr>
-<tr><td>Trie-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.575501</td><td></td></tr>
-<tr><td>Trie-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.642391</td><td></td></tr>
-<tr><td>Tsp-FunSat01</td><td>false</td><td class="status-correct">correct</td><td>0.700992</td><td></td></tr>
-<tr><td>Tsp-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.696434</td><td></td></tr>
-<tr><td>Tsp-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.691113</td><td></td></tr>
-<tr><td>Tsp-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.672746</td><td></td></tr>
+  <tr><td>BellmanFord-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>900.091875</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>BellmanFord-FunSat02</td><td>false</td><td class="status-correct">correct</td><td>0.772911</td><td></td></tr>
+<tr><td>BellmanFord-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>900.126257</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>BellmanFord-FunUnsat02</td><td>false</td><td class="status-correct">correct</td><td>0.777711</td><td></td></tr>
+<tr><td>BellmanFord-MemSat01</td><td>true</td><td class="status-unknown">unknown</td><td>900.076437</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>BellmanFord-MemSat02</td><td>true</td><td class="status-correct">correct</td><td>0.803415</td><td></td></tr>
+<tr><td>BellmanFord-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>1.817310</td><td></td></tr>
+<tr><td>BellmanFord-MemUnsat02</td><td>false</td><td class="status-unknown">unknown</td><td>0.582240</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
+<tr><td>BinaryTreeSearch-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>3.367246</td><td></td></tr>
+<tr><td>BinaryTreeSearch-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.753129</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>5.028607</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.646897</td><td></td></tr>
+<tr><td>BinaryTreeSearch-MemUnsat02</td><td>false</td><td class="status-correct">correct</td><td>0.658495</td><td></td></tr>
+<tr><td>InsertionSort-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>47.650917</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>InsertionSort-FunSat02</td><td>true</td><td class="status-unknown">unknown</td><td>46.374964</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:61) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:61) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>InsertionSort-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.581182</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
+<tr><td>InsertionSort-MemSat01</td><td>true</td><td class="status-unknown">unknown</td><td>48.587714</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:59) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>InsertionSort-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.681535</td><td></td></tr>
+<tr><td>MergeSortIterative-FunSat01</td><td>true</td><td class="status-unknown">unknown</td><td>7.359651</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:30) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:30) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>MergeSortIterative-FunSat02</td><td>true</td><td class="status-unknown">unknown</td><td>7.623085</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>MergeSortIterative-FunUnsat01</td><td>false</td><td class="status-unknown">unknown</td><td>0.553927</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(String.java:1931) |  at gov.nasa.jpf.symbc.witness.WitnessSymbolicState.findStackSlot(WitnessSymbolicState.java:131) | gov.nasa.jpf.JPFListenerException: exception during executeInstruction() notification">[SEVERE] JPF exception, terminating: exception during executeInstruction() notification | java.lang.StringIndexOutOfBoundsException: String index out of range: -1 |  at java.lang.String.substring(Stri</span></td></tr>
+<tr><td>MergeSortIterative-MemSat01</td><td>false</td><td class="status-unknown">unknown</td><td>7.633822</td><td><span class="error-text" title="[SEVERE] JPF out of memory |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty">[SEVERE] JPF out of memory |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty</span></td></tr>
+<tr><td>MergeSortIterative-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.670549</td><td></td></tr>
+<tr><td>RedBlackTree-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.880501</td><td></td></tr>
+<tr><td>RedBlackTree-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.759682</td><td></td></tr>
+<tr><td>RedBlackTree-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>3.921677</td><td></td></tr>
+<tr><td>RedBlackTree-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>1.205997</td><td></td></tr>
+<tr><td>SortedListInsert-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>4.025984</td><td></td></tr>
+<tr><td>SortedListInsert-FunSat02</td><td>true</td><td class="status-correct">correct</td><td>5.844398</td><td></td></tr>
+<tr><td>SortedListInsert-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>1.022698</td><td></td></tr>
+<tr><td>SortedListInsert-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>2.334171</td><td></td></tr>
+<tr><td>SortedListInsert-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.668088</td><td></td></tr>
+<tr><td>Trie-FunSat01</td><td>true</td><td class="status-correct">correct</td><td>0.593692</td><td></td></tr>
+<tr><td>Trie-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.665366</td><td></td></tr>
+<tr><td>Trie-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.590409</td><td></td></tr>
+<tr><td>Trie-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.676253</td><td></td></tr>
+<tr><td>Tsp-FunSat01</td><td>false</td><td class="status-correct">correct</td><td>0.723608</td><td></td></tr>
+<tr><td>Tsp-FunUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.739070</td><td></td></tr>
+<tr><td>Tsp-MemSat01</td><td>true</td><td class="status-correct">correct</td><td>0.748570</td><td></td></tr>
+<tr><td>Tsp-MemUnsat01</td><td>false</td><td class="status-correct">correct</td><td>0.727610</td><td></td></tr>
 
 </table>
 </div>

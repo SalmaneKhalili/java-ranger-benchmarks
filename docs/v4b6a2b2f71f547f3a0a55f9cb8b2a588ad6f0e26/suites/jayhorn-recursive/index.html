@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>jayhorn-recursive</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-14 22:19:17 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-14 22:18:55 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,29 +78,29 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>Ackermann01</td><td>false</td><td class="status-correct">correct</td><td>0.684574</td><td></td></tr>
-<tr><td>Addition</td><td>true</td><td class="status-correct">correct</td><td>0.680583</td><td></td></tr>
-<tr><td>InfiniteLoop</td><td>false</td><td class="status-correct">correct</td><td>0.601491</td><td></td></tr>
-<tr><td>SatAckermann01</td><td>true</td><td class="status-correct">correct</td><td>24.801987</td><td></td></tr>
-<tr><td>SatAckermann02</td><td>true</td><td class="status-correct">correct</td><td>24.181312</td><td></td></tr>
-<tr><td>SatAckermann03</td><td>true</td><td class="status-correct">correct</td><td>25.180594</td><td></td></tr>
-<tr><td>SatAddition01</td><td>true</td><td class="status-correct">correct</td><td>0.891946</td><td></td></tr>
-<tr><td>SatEvenOdd01</td><td>true</td><td class="status-correct">correct</td><td>0.613159</td><td></td></tr>
-<tr><td>SatFibonacci01</td><td>true</td><td class="status-correct">correct</td><td>1.561240</td><td></td></tr>
-<tr><td>SatFibonacci02</td><td>true</td><td class="status-correct">correct</td><td>0.473812</td><td></td></tr>
-<tr><td>SatFibonacci03</td><td>true</td><td class="status-correct">correct</td><td>2.352195</td><td></td></tr>
-<tr><td>SatGcd</td><td>true</td><td class="status-unknown">unknown</td><td>900.034096</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>SatHanoi01</td><td>true</td><td class="status-correct">correct</td><td>10.785625</td><td></td></tr>
-<tr><td>SatMccarthy91</td><td>true</td><td class="status-correct">correct</td><td>202.430937</td><td></td></tr>
-<tr><td>SatMultCommutative01</td><td>true</td><td class="status-correct">correct</td><td>0.911542</td><td></td></tr>
-<tr><td>SatPrimes01</td><td>true</td><td class="status-unknown">unknown</td><td>900.560269</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
-<tr><td>UnsatAckermann01</td><td>false</td><td class="status-correct">correct</td><td>0.632426</td><td></td></tr>
-<tr><td>UnsatAddition01</td><td>false</td><td class="status-correct">correct</td><td>0.623711</td><td></td></tr>
-<tr><td>UnsatAddition02</td><td>false</td><td class="status-incorrect">incorrect</td><td>1.066202</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>UnsatEvenOdd01</td><td>false</td><td class="status-correct">correct</td><td>0.613044</td><td></td></tr>
-<tr><td>UnsatFibonacci01</td><td>false</td><td class="status-correct">correct</td><td>0.710734</td><td></td></tr>
-<tr><td>UnsatFibonacci02</td><td>false</td><td class="status-correct">correct</td><td>1.192542</td><td></td></tr>
-<tr><td>UnsatMccarthy91</td><td>false</td><td class="status-correct">correct</td><td>0.610232</td><td></td></tr>
+  <tr><td>Ackermann01</td><td>false</td><td class="status-correct">correct</td><td>0.650609</td><td></td></tr>
+<tr><td>Addition</td><td>true</td><td class="status-correct">correct</td><td>0.671959</td><td></td></tr>
+<tr><td>InfiniteLoop</td><td>false</td><td class="status-correct">correct</td><td>0.596185</td><td></td></tr>
+<tr><td>SatAckermann01</td><td>true</td><td class="status-correct">correct</td><td>24.092972</td><td></td></tr>
+<tr><td>SatAckermann02</td><td>true</td><td class="status-correct">correct</td><td>24.482765</td><td></td></tr>
+<tr><td>SatAckermann03</td><td>true</td><td class="status-correct">correct</td><td>24.920608</td><td></td></tr>
+<tr><td>SatAddition01</td><td>true</td><td class="status-correct">correct</td><td>0.911854</td><td></td></tr>
+<tr><td>SatEvenOdd01</td><td>true</td><td class="status-correct">correct</td><td>0.623334</td><td></td></tr>
+<tr><td>SatFibonacci01</td><td>true</td><td class="status-correct">correct</td><td>1.520293</td><td></td></tr>
+<tr><td>SatFibonacci02</td><td>true</td><td class="status-correct">correct</td><td>0.456715</td><td></td></tr>
+<tr><td>SatFibonacci03</td><td>true</td><td class="status-correct">correct</td><td>2.330883</td><td></td></tr>
+<tr><td>SatGcd</td><td>true</td><td class="status-unknown">unknown</td><td>900.074696</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>SatHanoi01</td><td>true</td><td class="status-correct">correct</td><td>17.965685</td><td></td></tr>
+<tr><td>SatMccarthy91</td><td>true</td><td class="status-correct">correct</td><td>191.775301</td><td></td></tr>
+<tr><td>SatMultCommutative01</td><td>true</td><td class="status-correct">correct</td><td>0.901428</td><td></td></tr>
+<tr><td>SatPrimes01</td><td>true</td><td class="status-unknown">unknown</td><td>900.599239</td><td><span class="error-text" title="timeout after 900s">timeout</span></td></tr>
+<tr><td>UnsatAckermann01</td><td>false</td><td class="status-correct">correct</td><td>0.632808</td><td></td></tr>
+<tr><td>UnsatAddition01</td><td>false</td><td class="status-correct">correct</td><td>0.639974</td><td></td></tr>
+<tr><td>UnsatAddition02</td><td>false</td><td class="status-incorrect">incorrect</td><td>1.055853</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>UnsatEvenOdd01</td><td>false</td><td class="status-correct">correct</td><td>0.637820</td><td></td></tr>
+<tr><td>UnsatFibonacci01</td><td>false</td><td class="status-correct">correct</td><td>0.710272</td><td></td></tr>
+<tr><td>UnsatFibonacci02</td><td>false</td><td class="status-correct">correct</td><td>1.277595</td><td></td></tr>
+<tr><td>UnsatMccarthy91</td><td>false</td><td class="status-correct">correct</td><td>0.621821</td><td></td></tr>
 
 </table>
 </div>

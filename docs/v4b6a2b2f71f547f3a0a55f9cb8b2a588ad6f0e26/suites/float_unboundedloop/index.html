@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>float_unboundedloop</h1>
-  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:44:36 </p>
+  <p>JR: svcomp@ade8889 | Date: 2026-06-14 21:44:19 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,36 +78,36 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>Adjustable-Inner-Count-Halving</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.638566</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>Alternating-Step-Schedule</td><td>true</td><td class="status-correct">correct</td><td>0.555015</td><td></td></tr>
-<tr><td>Batch-Conveyor-Counter</td><td>true</td><td class="status-correct">correct</td><td>0.606674</td><td></td></tr>
-<tr><td>Bounded-Proportional-Update</td><td>true</td><td class="status-correct">correct</td><td>0.621937</td><td></td></tr>
-<tr><td>Bounded-Reset-Linear-Growth</td><td>true</td><td class="status-correct">correct</td><td>0.628489</td><td></td></tr>
-<tr><td>Clamped-Triangular-Drift</td><td>true</td><td class="status-correct">correct</td><td>0.627171</td><td></td></tr>
-<tr><td>Cyclic-Preset-Inner-ABC</td><td>true</td><td class="status-correct">correct</td><td>0.791654</td><td></td></tr>
-<tr><td>Fixed-Block-Accumulator</td><td>true</td><td class="status-correct">correct</td><td>0.614449</td><td></td></tr>
-<tr><td>Hysteresis-On-Off-with-Deadband</td><td>false</td><td class="status-correct">correct</td><td>0.718714</td><td></td></tr>
-<tr><td>Inner-Retry-Until-OK</td><td>true</td><td class="status-correct">correct</td><td>0.661206</td><td></td></tr>
-<tr><td>Leak-and-Refill</td><td>true</td><td class="status-correct">correct</td><td>0.616656</td><td></td></tr>
-<tr><td>Mixed-Phase-AddHalve-with-Slack-Box</td><td>true</td><td class="status-correct">correct</td><td>0.662149</td><td></td></tr>
-<tr><td>Nested-Drain-Then-Step</td><td>true</td><td class="status-correct">correct</td><td>0.639115</td><td></td></tr>
-<tr><td>Nested-MinStep-Regulator</td><td>true</td><td class="status-correct">correct</td><td>0.597057</td><td></td></tr>
-<tr><td>Nested-PingPong-with-Caps</td><td>true</td><td class="status-correct">correct</td><td>0.639181</td><td></td></tr>
-<tr><td>Nested-Saturation-Then-Reset</td><td>true</td><td class="status-correct">correct</td><td>0.623413</td><td></td></tr>
-<tr><td>Nested-Windowed-Add-Remove</td><td>true</td><td class="status-correct">correct</td><td>0.636947</td><td></td></tr>
-<tr><td>Producer-Consumer-Level</td><td>true</td><td class="status-correct">correct</td><td>0.611856</td><td></td></tr>
-<tr><td>Ramp-and-Hold</td><td>true</td><td class="status-correct">correct</td><td>0.628330</td><td></td></tr>
-<tr><td>Safe-Accumulator-with-Bounded-Noise</td><td>true</td><td class="status-correct">correct</td><td>1.465698</td><td></td></tr>
-<tr><td>Saturating-Integrator</td><td>true</td><td class="status-correct">correct</td><td>0.611582</td><td></td></tr>
-<tr><td>Slew-Rate-Limiter</td><td>true</td><td class="status-correct">correct</td><td>0.622562</td><td></td></tr>
-<tr><td>Switched-Linear-Plant</td><td>true</td><td class="status-correct">correct</td><td>0.620548</td><td></td></tr>
-<tr><td>Two-Band-Piecewise-Linear-Oscillator</td><td>true</td><td class="status-correct">correct</td><td>0.629023</td><td></td></tr>
-<tr><td>Two-Counter-Lexicographic-Small</td><td>true</td><td class="status-correct">correct</td><td>0.607919</td><td></td></tr>
-<tr><td>Two-Level-Nested-Scheduler</td><td>true</td><td class="status-correct">correct</td><td>0.625318</td><td></td></tr>
-<tr><td>Two-State-FP-Oscillator</td><td>true</td><td class="status-correct">correct</td><td>0.607344</td><td></td></tr>
-<tr><td>Two-Var-Nested-Handshake</td><td>true</td><td class="status-correct">correct</td><td>0.599025</td><td></td></tr>
-<tr><td>Two-Variable_Averaging_Filter</td><td>true</td><td class="status-correct">correct</td><td>0.611011</td><td></td></tr>
-<tr><td>Unbounded-Outer-Inner-Safety-Gate</td><td>true</td><td class="status-correct">correct</td><td>0.646071</td><td></td></tr>
+  <tr><td>Adjustable-Inner-Count-Halving</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.640492</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>Alternating-Step-Schedule</td><td>true</td><td class="status-correct">correct</td><td>0.525276</td><td></td></tr>
+<tr><td>Batch-Conveyor-Counter</td><td>true</td><td class="status-correct">correct</td><td>0.577941</td><td></td></tr>
+<tr><td>Bounded-Proportional-Update</td><td>true</td><td class="status-correct">correct</td><td>0.577427</td><td></td></tr>
+<tr><td>Bounded-Reset-Linear-Growth</td><td>true</td><td class="status-correct">correct</td><td>0.549839</td><td></td></tr>
+<tr><td>Clamped-Triangular-Drift</td><td>true</td><td class="status-correct">correct</td><td>0.618031</td><td></td></tr>
+<tr><td>Cyclic-Preset-Inner-ABC</td><td>true</td><td class="status-correct">correct</td><td>0.595583</td><td></td></tr>
+<tr><td>Fixed-Block-Accumulator</td><td>true</td><td class="status-correct">correct</td><td>0.568420</td><td></td></tr>
+<tr><td>Hysteresis-On-Off-with-Deadband</td><td>false</td><td class="status-correct">correct</td><td>0.683556</td><td></td></tr>
+<tr><td>Inner-Retry-Until-OK</td><td>true</td><td class="status-correct">correct</td><td>0.615244</td><td></td></tr>
+<tr><td>Leak-and-Refill</td><td>true</td><td class="status-correct">correct</td><td>0.575437</td><td></td></tr>
+<tr><td>Mixed-Phase-AddHalve-with-Slack-Box</td><td>true</td><td class="status-correct">correct</td><td>0.570687</td><td></td></tr>
+<tr><td>Nested-Drain-Then-Step</td><td>true</td><td class="status-correct">correct</td><td>0.559895</td><td></td></tr>
+<tr><td>Nested-MinStep-Regulator</td><td>true</td><td class="status-correct">correct</td><td>0.594431</td><td></td></tr>
+<tr><td>Nested-PingPong-with-Caps</td><td>true</td><td class="status-correct">correct</td><td>0.604403</td><td></td></tr>
+<tr><td>Nested-Saturation-Then-Reset</td><td>true</td><td class="status-correct">correct</td><td>0.601652</td><td></td></tr>
+<tr><td>Nested-Windowed-Add-Remove</td><td>true</td><td class="status-correct">correct</td><td>0.563394</td><td></td></tr>
+<tr><td>Producer-Consumer-Level</td><td>true</td><td class="status-correct">correct</td><td>0.583154</td><td></td></tr>
+<tr><td>Ramp-and-Hold</td><td>true</td><td class="status-correct">correct</td><td>0.563815</td><td></td></tr>
+<tr><td>Safe-Accumulator-with-Bounded-Noise</td><td>true</td><td class="status-correct">correct</td><td>1.387667</td><td></td></tr>
+<tr><td>Saturating-Integrator</td><td>true</td><td class="status-correct">correct</td><td>0.555035</td><td></td></tr>
+<tr><td>Slew-Rate-Limiter</td><td>true</td><td class="status-correct">correct</td><td>0.562933</td><td></td></tr>
+<tr><td>Switched-Linear-Plant</td><td>true</td><td class="status-correct">correct</td><td>0.570047</td><td></td></tr>
+<tr><td>Two-Band-Piecewise-Linear-Oscillator</td><td>true</td><td class="status-correct">correct</td><td>0.590866</td><td></td></tr>
+<tr><td>Two-Counter-Lexicographic-Small</td><td>true</td><td class="status-correct">correct</td><td>0.590450</td><td></td></tr>
+<tr><td>Two-Level-Nested-Scheduler</td><td>true</td><td class="status-correct">correct</td><td>0.577358</td><td></td></tr>
+<tr><td>Two-State-FP-Oscillator</td><td>true</td><td class="status-correct">correct</td><td>0.596662</td><td></td></tr>
+<tr><td>Two-Var-Nested-Handshake</td><td>true</td><td class="status-correct">correct</td><td>0.558456</td><td></td></tr>
+<tr><td>Two-Variable_Averaging_Filter</td><td>true</td><td class="status-correct">correct</td><td>0.588584</td><td></td></tr>
+<tr><td>Unbounded-Outer-Inner-Safety-Gate</td><td>true</td><td class="status-correct">correct</td><td>0.579617</td><td></td></tr>
 
 </table>
 </div>

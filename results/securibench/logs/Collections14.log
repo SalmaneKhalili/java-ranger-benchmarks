@@ -1,4 +1,3 @@
-symbolic.dp=z3bitvector
 symbolic.string_dp_timeout_ms=3000
 symbolic.string_dp_alpha=A-Z
 symbolic.string_dp_alphaSize=26
@@ -8,6 +7,7 @@ symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -28,7 +28,7 @@ JavaPathfinder core system v8.0 (rev ade8889514ca0d3fa9081db6a64751fc7210cfa1) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/14/26 9:47 PM
+====================================================== search started: 6/14/26 9:46 PM
 New sym int string0.length min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -142,7 +142,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 807 msec
+Veritesting Dyn Time = 783 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-807,0,807,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
+783,0,783,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -193,7 +193,7 @@ search:             maxDepth=6,constraints=0
 choice generators:  thread=5 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=4), data=1
 heap:               new=15575,released=15036,maxLive=9549,gcCycles=6
 instructions:       219560
-max memory:         303MB
+max memory:         240MB
 loaded code:        classes=112,methods=2132
 
-====================================================== search finished: 6/14/26 9:47 PM
+====================================================== search finished: 6/14/26 9:46 PM

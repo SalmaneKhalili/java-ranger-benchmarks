@@ -1,23 +1,19 @@
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (< double4 0.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= 0.0 double3))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< (- 0.0 double1) 1.0))
-(assert (< double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< (- 0.0 double0) 1.0))
-(assert (< double0 0.0))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (_ +zero 11 53)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double1)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double1 (_ +zero 11 53)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double0)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -34,55 +30,57 @@ double1 < CONST_0.0 &&
 (CONST_0.0 - double0) < CONST_1.0 &&
 double0 < CONST_0.0 -> true
 
-### PCs: total:1132 sat:641 unsat:491
+### PCs: total:1132 sat:1127 unsat:5
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double13 () Real)
-(declare-fun double11 () Real)
-(declare-fun double10 () Real)
-(declare-fun double7 () Real)
-(declare-fun double4 () Real)
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double13 (- 10000.0)))
-(assert (<= double13 10000.0))
-(assert (= (/ 1.0 0.0) double13))
-(assert (>= double11 (- 10000.0)))
-(assert (<= double11 10000.0))
-(assert (< double11 0.0))
-(assert (>= double10 (- 10000.0)))
-(assert (<= double10 10000.0))
-(assert (< double10 0.0))
-(assert (>= double7 (- 10000.0)))
-(assert (<= double7 10000.0))
-(assert (< double7 0.0))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (< double4 0.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= 0.0 double3))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< (- 0.0 double1) 1.0))
-(assert (< double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< (- 0.0 double0) 1.0))
-(assert (< double0 0.0))
+(declare-fun double13 () (_ FloatingPoint 11 53))
+(declare-fun double11 () (_ FloatingPoint 11 53))
+(declare-fun double10 () (_ FloatingPoint 11 53))
+(declare-fun double7 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double13 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double13 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (fp #b0 #b01111100111 #xad7f29abcaf48) double13))
+(assert (fp.gt double11 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double11 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double11 (_ +zero 11 53)))
+(assert (fp.gt double10 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double10 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double10 (_ +zero 11 53)))
+(assert (fp.gt double7 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (_ +zero 11 53)))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (_ +zero 11 53)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (_ +zero 11 53) double3))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (_ +zero 11 53)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double1)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double1 (_ +zero 11 53)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double0)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -97,57 +95,59 @@ double2 < CONST_0.0 &&
 (CONST_0.0 - double1) < CONST_1.0 &&
 double1 < CONST_0.0 &&
 (CONST_0.0 - double0) < CONST_1.0 &&
-double0 < CONST_0.0 -> false
+double0 < CONST_0.0 -> true
 
-### PCs: total:1133 sat:641 unsat:492
+### PCs: total:1133 sat:1128 unsat:5
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double13 () Real)
-(declare-fun double11 () Real)
-(declare-fun double10 () Real)
-(declare-fun double7 () Real)
-(declare-fun double4 () Real)
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double13 (- 10000.0)))
-(assert (<= double13 10000.0))
-(assert (> double13 (/ 1.0 0.0)))
-(assert (>= double11 (- 10000.0)))
-(assert (<= double11 10000.0))
-(assert (< double11 0.0))
-(assert (>= double10 (- 10000.0)))
-(assert (<= double10 10000.0))
-(assert (< double10 0.0))
-(assert (>= double7 (- 10000.0)))
-(assert (<= double7 10000.0))
-(assert (< double7 0.0))
-(assert (>= double4 (- 10000.0)))
-(assert (<= double4 10000.0))
-(assert (< double4 0.0))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= 0.0 double3))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (< double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< (- 0.0 double1) 1.0))
-(assert (< double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< (- 0.0 double0) 1.0))
-(assert (< double0 0.0))
+(declare-fun double13 () (_ FloatingPoint 11 53))
+(declare-fun double11 () (_ FloatingPoint 11 53))
+(declare-fun double10 () (_ FloatingPoint 11 53))
+(declare-fun double7 () (_ FloatingPoint 11 53))
+(declare-fun double4 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (fp.gt double13 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double13 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double13 (fp #b0 #b01111100111 #xad7f29abcaf48)))
+(assert (fp.gt double11 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double11 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double11 (_ +zero 11 53)))
+(assert (fp.gt double10 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double10 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double10 (_ +zero 11 53)))
+(assert (fp.gt double7 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double7 (_ +zero 11 53)))
+(assert (fp.gt double4 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double4 (_ +zero 11 53)))
+(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (_ +zero 11 53) double3))
+(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double2 (_ +zero 11 53)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double1)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double1 (_ +zero 11 53)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) double0)
+       (fp #b0 #b01111111111 #x0000000000000)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -162,16 +162,16 @@ double2 < CONST_0.0 &&
 (CONST_0.0 - double1) < CONST_1.0 &&
 double1 < CONST_0.0 &&
 (CONST_0.0 - double0) < CONST_1.0 &&
-double0 < CONST_0.0 -> false
+double0 < CONST_0.0 -> true
 
-### PCs: total:1134 sat:641 unsat:493
+### PCs: total:1134 sat:1129 unsat:5
 
 New sym int bool17 min=0, max=1
 New sym int int18 min=-2147483648, max=2147483647
-New sym int INT_2298 min=-2147483648, max=2147483647
+New sym int INT_1083 min=-2147483648, max=2147483647
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 java.lang.RuntimeException: ## Error: Math.log not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.log(ProblemGeneral.java:157)

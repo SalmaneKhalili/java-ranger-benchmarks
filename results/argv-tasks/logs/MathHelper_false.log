@@ -1,12 +1,26 @@
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< (- double0 double1) 0.0))
-(assert (< double0 double1))
+
+numeric PC: constraint # = 1
+double0 > double1 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
 
 
-Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven double0 double1) (_ +zero 11 53)))
+(assert (fp.lt double0 double1))
+
+
+Solving time of z3 bitvector is 61 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -18,21 +32,21 @@ double0 < double1 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(declare-fun double1 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (= 0.0 (- double0 double1)))
-(assert (< double0 double1))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven double0 double1)))
+(assert (fp.lt double0 double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 6888 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -44,21 +58,21 @@ double0 < double1 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(declare-fun double1 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> (- double0 double1) 0.0))
-(assert (< double0 double1))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven double0 double1) (_ +zero 11 53)))
+(assert (fp.lt double0 double1))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 610 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -70,34 +84,27 @@ double0 < double1 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_3 () Real)
+(declare-fun REAL_3 () (_ FloatingPoint 11 53))
 (declare-fun int2 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(declare-fun double0 () Real)
-(declare-fun double1 () Real)
-(assert (>= REAL_3 (- 10000.0)))
-(assert (<= REAL_3 10000.0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt REAL_3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_3 (fp #b0 #b10000001100 #x3880000000000)))
 (assert (bvsge int2 #xffffffff80000000))
 (assert (bvsle int2 #x000000007fffffff))
-(assert (= __bv2i0 int2))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= REAL_3
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< double0 double1))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero int2)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 double1))
 
 
-Solving time of z3 bitvector is 25 ms
+Solving time of z3 bitvector is 405 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -109,35 +116,28 @@ double0 < double1 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_3 () Real)
+(declare-fun REAL_3 () (_ FloatingPoint 11 53))
 (declare-fun int2 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(declare-fun double0 () Real)
-(declare-fun double1 () Real)
-(assert (>= REAL_3 (- 10000.0)))
-(assert (<= REAL_3 10000.0))
-(assert (not (= REAL_3 0.0)))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt REAL_3 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt REAL_3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (not (fp.eq REAL_3 (_ +zero 11 53))))
 (assert (bvsge int2 #xffffffff80000000))
 (assert (bvsle int2 #x000000007fffffff))
-(assert (= __bv2i0 int2))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= REAL_3
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< double0 double1))
+(assert (fp.eq REAL_3 ((_ to_fp 11 53) roundTowardZero int2)))
+(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double0 double1))
 
 
-Solving time of z3 bitvector is 30 ms
+Solving time of z3 bitvector is 153 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

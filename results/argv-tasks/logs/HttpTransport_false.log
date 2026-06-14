@@ -6,7 +6,7 @@
 (assert (= bool1 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -22,7 +22,7 @@ bool1 == CONST_0 -> true
 the depth of violation is6
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 481 msec
+Veritesting Dyn Time = 459 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 69 msec
-Total Solver Parse Time = 16 msec
+Total Solver Time = 64 msec
+Total Solver Parse Time = 15 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-481,0,481,0,0,69,16,1,0,5,0,0,0,0,5,0,5,0,11,0,0,0,0,11,0,0,-1,-1,0.0,0,0,0
+459,0,459,0,0,64,15,1,0,5,0,0,0,0,5,0,5,0,11,0,0,0,0,11,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
@@ -196,4 +196,4 @@ instructions:       6465
 max memory:         240MB
 loaded code:        classes=92,methods=1886
 
-====================================================== search finished: 6/14/26 9:58 PM
+====================================================== search finished: 6/14/26 10:36 PM

@@ -9,6 +9,7 @@ symbolic.string_dp=z3str3
 symbolic.max_pc_length=2147483647
 symbolic.max_pc_msec=0
 symbolic.bvlength=64
+Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -32,17 +33,17 @@ Main.main()
 ====================================================== search started: 6/14/26 9:46 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (< double1 (/ 1.0 0.0)))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b01111100111 #xad7f29abcaf48)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -53,14 +54,14 @@ double1 < CONST_1.0E-7 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (= (/ 1.0 0.0) double1))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.eq (fp #b0 #b01111100111 #xad7f29abcaf48) double1))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -68,20 +69,20 @@ Solving time of z3 bitvector is 0 ms
 
 
 numeric PC: constraint # = 1
-CONST_1.0E-7 == double1 -> false
+CONST_1.0E-7 == double1 -> true
 
-### PCs: total:2 sat:1 unsat:1
+### PCs: total:2 sat:2 unsat:0
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () Real)
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> double1 (/ 1.0 0.0)))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
+(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (fp.gt double1 (fp #b0 #b01111100111 #xad7f29abcaf48)))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -89,13 +90,13 @@ Solving time of z3 bitvector is 0 ms
 
 
 numeric PC: constraint # = 1
-double1 > CONST_1.0E-7 -> false
+double1 > CONST_1.0E-7 -> true
 
-### PCs: total:3 sat:1 unsat:2
+### PCs: total:3 sat:3 unsat:0
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 java.lang.RuntimeException: ## Error: Math.asin not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.asin(ProblemGeneral.java:145)
