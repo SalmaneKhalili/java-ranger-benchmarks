@@ -26,10 +26,13 @@ except ImportError:
 
 SUITES = [
     "algorithms",
+    "argv-tasks",
+    "autostub",
     "float-nonlinear-calculation", "float_unboundedloop",
     "java-ranger-regression", "jayhorn-recursive",
     "jbmc-regression", "jdart-regression",
     "jpf-regression", "MinePump",
+    "objects",
     "rtems-lock-model", "securibench",
     "juliet-java",
 ]
@@ -622,8 +625,16 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
 # Subcommand: list-suites
 # ---------------------------------------------------------------------------
 
-def cmd_list_suites():
-    print(json.dumps({"suite": SUITES}))
+def cmd_list_suites(suite_filter=None):
+    suites = SUITES
+    if suite_filter:
+        requested = [s.strip() for s in suite_filter.split(",") if s.strip()]
+        if requested:
+            suites = [s for s in suites if s in requested]
+            missing = set(requested) - set(SUITES)
+            if missing:
+                print(f"Warning: unknown suites: {', '.join(sorted(missing))}", file=sys.stderr)
+    print(json.dumps({"suite": suites}))
 
 
 # ---------------------------------------------------------------------------
@@ -1400,7 +1411,9 @@ def main():
     def add(name, **kwargs):
         return sub.add_parser(name, **kwargs)
 
-    add("list-suites", help="Print suite list as JSON array")
+    p = add("list-suites", help="Print suite list as JSON array")
+    p.add_argument("filter", nargs="?", default=None,
+                   help="Comma-separated suite names (default: all suites)")
 
     p = add("run", help="Run benchmarks for one suite")
     p.add_argument("suite")
@@ -1439,7 +1452,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "list-suites":
-        cmd_list_suites()
+        cmd_list_suites(args.filter)
     elif args.command == "run":
         cmd_run(args)
     elif args.command == "merge":

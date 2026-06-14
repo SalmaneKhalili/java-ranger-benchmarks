@@ -20,6 +20,10 @@ on:
         type: boolean
         required: false
         default: false
+      suites:
+        description: 'Comma-separated suite names (empty = all suites)'
+        required: false
+        default: ''
   repository_dispatch:
     types: [java-ranger-push]
 
@@ -37,7 +41,7 @@ jobs:
       - name: Checkout benchmarks repo
         uses: actions/checkout@v4
       - id: list-suites
-        run: echo "matrix=$(python3 scripts/ci.py list-suites)" >> "$GITHUB_OUTPUT"
+        run: echo "matrix=$(python3 scripts/ci.py list-suites ${{ inputs.suites }})" >> "$GITHUB_OUTPUT"
 
   benchmarks:
     needs: setup
