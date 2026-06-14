@@ -1,30 +1,187 @@
-symbolic.min_int=-2147483648
-symbolic.min_long=-9223372036854775808
-symbolic.min_short=-32768
-symbolic.min_byte=-128
-symbolic.min_char=0
-symbolic.max_int=2147483647
-symbolic.max_long=9223372036854775807
-symbolic.max_short=32767
-symbolic.max_byte=127
-symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+(assert (not (= int3 #x0000000000000000)))
+(assert (bvsgt int3 #x0000000000000000))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (bvsgt long2 #x0000000000000000))
 
 
-====================================================== system under test
-Main.main()
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-====================================================== search started: 6/6/26 1:01 PM
-threadTerminated
-threadTerminated
-threadTerminated
-threadTerminated
 
-====================================================== Method Summaries
+numeric PC: constraint # = 3
+int3 != CONST_0 &&
+int3 > CONST_0 &&
+long2 > CONST_0 -> true
 
-====================================================== Method Summaries (HTML)
+### PCs: total:9 sat:7 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun long2 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (= int3 #x0000000000000000))
+(assert (bvsgt int3 #x0000000000000000))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (bvsgt long2 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+int3 == CONST_0 &&
+int3 > CONST_0 &&
+long2 > CONST_0 -> false
+
+### PCs: total:10 sat:7 unsat:3
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun long2 () (_ BitVec 64))
+(declare-fun int3 () (_ BitVec 64))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (bvslt long2 #x0000000000000000))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsgt int3 #x0000000000000000))
+(assert (bvsgt long2 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+long2 < CONST_0 &&
+int3 > CONST_0 &&
+long2 > CONST_0 -> false
+
+### PCs: total:11 sat:7 unsat:4
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun long2 () (_ BitVec 64))
+(declare-fun int3 () (_ BitVec 64))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (= #x0000000000000000 long2))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsgt int3 #x0000000000000000))
+(assert (bvsgt long2 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+CONST_0 == long2 &&
+int3 > CONST_0 &&
+long2 > CONST_0 -> false
+
+### PCs: total:12 sat:7 unsat:5
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun long2 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsgt int3 #x0000000000000000))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (bvsgt long2 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int3 > CONST_0 &&
+long2 > CONST_0 -> true
+
+### PCs: total:13 sat:8 unsat:5
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 329 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 50 msec
+Total Solver Parse Time = 11 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 2
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 2
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 4
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 4
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+329,0,329,0,0,50,11,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -39,5 +196,4 @@ instructions:       6311
 max memory:         240MB
 loaded code:        classes=85,methods=1832
 
-====================================================== search finished: 6/6/26 1:01 PM
-
+====================================================== search finished: 6/14/26 10:01 PM

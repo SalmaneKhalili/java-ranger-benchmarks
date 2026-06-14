@@ -22,7 +22,7 @@ CONST_1 < int0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -72,7 +72,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -98,7 +98,7 @@ CONST_1 >= int0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3085 msec
+Veritesting Dyn Time = 3055 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2591 msec
-Total Solver Parse Time = 187 msec
+Total Solver Time = 2569 msec
+Total Solver Parse Time = 189 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 188 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3085,0,3085,0,0,2591,187,188,0,7,0,0,0,0,7,0,7,0,1133,0,0,0,0,1133,0,0,-1,-1,0.0,0,0,0
+3055,0,3055,0,0,2569,189,188,0,7,0,0,0,0,7,0,7,0,1133,0,0,0,0,1133,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       17598
 max memory:         240MB
 loaded code:        classes=88,methods=1935
 
-====================================================== search finished: 6/14/26 5:04 AM
+====================================================== search finished: 6/14/26 10:29 PM

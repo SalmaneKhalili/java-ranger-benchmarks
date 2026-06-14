@@ -1,45 +1,200 @@
-symbolic.min_int=-2147483648
-symbolic.min_long=-9223372036854775808
-symbolic.min_short=-32768
-symbolic.min_byte=-128
-symbolic.min_char=0
-symbolic.max_int=2147483647
-symbolic.max_long=9223372036854775807
-symbolic.max_short=32767
-symbolic.max_byte=127
-symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+Solving time of z3 bitvector is 12 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-====================================================== system under test
-Main.main()
+numeric PC: constraint # = 7
+REAL_4 == int3 &&
+int3 != CONST_0 &&
+int0 == CONST_0 &&
+int2 > CONST_0 &&
+int1 > CONST_0 &&
+int3 >= CONST_0 &&
+int0 >= CONST_0 -> true
 
-====================================================== search started: 6/6/26 1:00 PM
-threadTerminated
-threadTerminated
-threadTerminated
-threadTerminated
-threadTerminated
-threadTerminated
+### PCs: total:19 sat:16 unsat:3
 
-====================================================== Method Summaries
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
 
-====================================================== Method Summaries (HTML)
 
-====================================================== results
-no errors detected
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun REAL_5 () Real)
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(declare-fun REAL_4 () Real)
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun __bv2i2 () (_ BitVec 64))
+(declare-fun __bv2i3 () Int)
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (>= REAL_5 (- 10000.0)))
+(assert (<= REAL_5 10000.0))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (= __bv2i0 int2))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_5
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
+(assert (>= REAL_4 (- 10000.0)))
+(assert (<= REAL_4 10000.0))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (= __bv2i2 int3))
+(assert (= (bv2int __bv2i2) __bv2i3))
+(assert (= REAL_4
+   (to_real (ite (bvslt __bv2i2 #x0000000000000000)
+                 (- __bv2i3 18446744073709551616)
+                 __bv2i3))))
+(assert (not (= int3 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsgt int2 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsgt int1 #x0000000000000000))
+(assert (bvsge int3 #x0000000000000000))
+(assert (bvsge int0 #x0000000000000000))
 
-====================================================== statistics
-elapsed time:       00:00:00
-states:             new=17,visited=0,backtracked=17,end=6
-search:             maxDepth=8,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=9
-heap:               new=472,released=74,maxLive=452,gcCycles=7
-instructions:       6176
-max memory:         240MB
-loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/6/26 1:00 PM
+Solving time of z3 bitvector is 26 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+
+numeric PC: constraint # = 8
+REAL_5 == int2 &&
+REAL_4 == int3 &&
+int3 != CONST_0 &&
+int0 == CONST_0 &&
+int2 > CONST_0 &&
+int1 > CONST_0 &&
+int3 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:20 sat:17 unsat:3
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun REAL_5 () Real)
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(declare-fun REAL_4 () Real)
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun __bv2i2 () (_ BitVec 64))
+(declare-fun __bv2i3 () Int)
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (>= REAL_5 (- 10000.0)))
+(assert (<= REAL_5 10000.0))
+(assert (not (= REAL_5 0.0)))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (= __bv2i0 int2))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_5
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
+(assert (>= REAL_4 (- 10000.0)))
+(assert (<= REAL_4 10000.0))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (= __bv2i2 int3))
+(assert (= (bv2int __bv2i2) __bv2i3))
+(assert (= REAL_4
+   (to_real (ite (bvslt __bv2i2 #x0000000000000000)
+                 (- __bv2i3 18446744073709551616)
+                 __bv2i3))))
+(assert (not (= int3 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= int0 #x0000000000000000))
+(assert (bvsgt int2 #x0000000000000000))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvsgt int1 #x0000000000000000))
+(assert (bvsge int3 #x0000000000000000))
+(assert (bvsge int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 19 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+REAL_5 != CONST_0.0 &&
+REAL_5 == int2 &&
+REAL_4 == int3 &&
+int3 != CONST_0 &&
+int0 == CONST_0 &&
+int2 > CONST_0 &&
+int1 > CONST_0 &&
+int3 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:21 sat:18 unsat:3
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+java.lang.RuntimeException
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.div(ProblemZ3BitVector.java:838)
+	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:306)
+	at gov.nasa.jpf.symbc.numeric.PCParser.createDPRealConstraint(PCParser.java:458)
+	at gov.nasa.jpf.symbc.numeric.PCParser.addConstraint(PCParser.java:1146)
+	at gov.nasa.jpf.symbc.numeric.PCParser.parse(PCParser.java:1105)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:127)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:409)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:354)
+	at gov.nasa.jpf.symbc.bytecode.optimization.util.IFInstrSymbHelper.getNextInstructionAndSetPCChoiceDouble(IFInstrSymbHelper.java:380)
+	at gov.nasa.jpf.symbc.bytecode.optimization.DCMPL.execute(DCMPL.java:43)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+java.lang.RuntimeException: ## Error Z3: div(Object, Object) failed.
+java.lang.RuntimeException
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.div(ProblemZ3BitVector.java:842)
+	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:306)
+	at gov.nasa.jpf.symbc.numeric.PCParser.createDPRealConstraint(PCParser.java:458)
+	at gov.nasa.jpf.symbc.numeric.PCParser.addConstraint(PCParser.java:1146)
+	at gov.nasa.jpf.symbc.numeric.PCParser.parse(PCParser.java:1105)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:127)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:409)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:354)
+	at gov.nasa.jpf.symbc.bytecode.optimization.util.IFInstrSymbHelper.getNextInstructionAndSetPCChoiceDouble(IFInstrSymbHelper.java:380)
+	at gov.nasa.jpf.symbc.bytecode.optimization.DCMPL.execute(DCMPL.java:43)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)

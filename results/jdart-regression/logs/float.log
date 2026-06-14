@@ -1,24 +1,42 @@
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () (_ FloatingPoint 11 53))
-(declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (_ +zero 11 53)))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b1 #b01101101010 #x0000000000000)))
-(assert (fp.lt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b0 #b01101101010 #x0000000000000)))
+(declare-fun float0 () Real)
+(declare-fun float1 () Real)
+(assert (>= float0 (- 10000.0)))
+(assert (<= float0 10000.0))
+(assert (>= float1 (- 10000.0)))
+(assert (<= float1 10000.0))
+(assert (> (+ float0 float1) float0))
 
 
-Solving time of z3 bitvector is 510 ms
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+(float0 + float1) > float0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun float1 () Real)
+(declare-fun float0 () Real)
+(assert (>= float1 (- 10000.0)))
+(assert (<= float1 10000.0))
+(assert (< float1 0.0))
+(assert (>= float0 (- 10000.0)))
+(assert (<= float0 10000.0))
+(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
+(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
+
+
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -31,28 +49,22 @@ float1 < CONST_0.0 &&
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () (_ FloatingPoint 11 53))
-(declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53) float1))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b1 #b01101101010 #x0000000000000)))
-(assert (fp.lt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b0 #b01101101010 #x0000000000000)))
+(declare-fun float1 () Real)
+(declare-fun float0 () Real)
+(assert (>= float1 (- 10000.0)))
+(assert (<= float1 10000.0))
+(assert (= 0.0 float1))
+(assert (>= float0 (- 10000.0)))
+(assert (<= float0 10000.0))
+(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
+(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
 
 
-Solving time of z3 bitvector is 174 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -65,28 +77,22 @@ CONST_0.0 == float1 &&
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () (_ FloatingPoint 11 53))
-(declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt float1 (_ +zero 11 53)))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b1 #b01101101010 #x0000000000000)))
-(assert (fp.lt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b0 #b01101101010 #x0000000000000)))
+(declare-fun float1 () Real)
+(declare-fun float0 () Real)
+(assert (>= float1 (- 10000.0)))
+(assert (<= float1 10000.0))
+(assert (> float1 0.0))
+(assert (>= float0 (- 10000.0)))
+(assert (<= float0 10000.0))
+(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
+(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
 
 
-Solving time of z3 bitvector is 668 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -100,28 +106,22 @@ float1 > CONST_0.0 &&
 the depth of violation is3
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+Using floating point for reals: no
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () (_ FloatingPoint 11 53))
-(declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.lt float1 (_ +zero 11 53)))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b1 #b01101101010 #x0000000000000)))
-(assert (fp.lt (fp.sub roundNearestTiesToEven
-               (fp.add roundNearestTiesToEven float0 float1)
-               float0)
-       (fp #b0 #b01101101010 #x0000000000000)))
+(declare-fun float1 () Real)
+(declare-fun float0 () Real)
+(assert (>= float1 (- 10000.0)))
+(assert (<= float1 10000.0))
+(assert (< float1 0.0))
+(assert (>= float0 (- 10000.0)))
+(assert (<= float0 10000.0))
+(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
+(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
 
 
-Solving time of z3 bitvector is 349 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -132,9 +132,9 @@ float1 < CONST_0.0 &&
 
 string analysis: SPC # = 0
 NPC constraint # = 3
-float1[5.960464832821272E-8] < CONST_0.0 &&
-((float0[0.0] + float1[5.960464832821272E-8]) - float0[0.0]) > CONST_-1.401298464324817E-45 &&
-((float0[0.0] + float1[5.960464832821272E-8]) - float0[0.0]) < CONST_1.401298464324817E-45
+float1[-1.0] < CONST_0.0 &&
+((float0[0.0] + float1[-1.0]) - float0[0.0]) > CONST_-1.401298464324817E-45 &&
+((float0[0.0] + float1[-1.0]) - float0[0.0]) < CONST_1.401298464324817E-45
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 

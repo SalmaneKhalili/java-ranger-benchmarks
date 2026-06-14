@@ -1,24 +1,185 @@
-symbolic.min_int=-2147483648
-symbolic.min_long=-9223372036854775808
-symbolic.min_short=-32768
-symbolic.min_byte=-128
-symbolic.min_char=0
-symbolic.max_int=2147483647
-symbolic.max_long=9223372036854775807
-symbolic.max_short=32767
-symbolic.max_byte=127
-symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+(assert (>= REAL_3 (- 10000.0)))
+(assert (<= REAL_3 10000.0))
+(assert (< REAL_3 (* 0.0 double1)))
+(assert (bvsge |(long2 + CONST_-1)_-734759192| #xffffffffffffd8f0))
+(assert (bvsle |(long2 + CONST_-1)_-734759192| #x0000000000002710))
+(assert (= (bvadd long2 #xffffffffffffffff) |(long2 + CONST_-1)_-734759192|))
+(assert (= __bv2i8 |(long2 + CONST_-1)_-734759192|))
+(assert (= (bv2int __bv2i8) __bv2i9))
+(assert (= REAL_3
+   (to_real (ite (bvslt __bv2i8 #x0000000000000000)
+                 (- __bv2i9 18446744073709551616)
+                 __bv2i9))))
+(assert (bvsle #xffffffffffffffff int0))
 
 
-====================================================== system under test
-Main.main()
+Solving time of z3 bitvector is 18 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-====================================================== search started: 6/6/26 1:01 PM
 
-***********Warning: everything false
+numeric PC: constraint # = 12
+CONST_2 > int0 &&
+REAL_9 < (double1 * CONST_0.0) &&
+REAL_9 == (long4 + (long3 + (long2 + CONST_-1))) &&
+REAL_7 == (long3 + (long2 + CONST_-1)) &&
+CONST_1 <= int0 &&
+REAL_6 < (double1 * CONST_0.0) &&
+REAL_6 == (long3 + (long2 + CONST_-1)) &&
+REAL_4 == (long2 + CONST_-1) &&
+CONST_0 <= int0 &&
+REAL_3 < (double1 * CONST_0.0) &&
+REAL_3 == (long2 + CONST_-1) &&
+CONST_-1 <= int0 -> true
+
+### PCs: total:30 sat:24 unsat:6
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun REAL_9 () Real)
+(declare-fun double1 () Real)
+(declare-fun |(long4 + (long3 + (long2 + CONST_-1)))_-743109440|
+             ()
+             (_ BitVec 64))
+(declare-fun long4 () (_ BitVec 64))
+(declare-fun long3 () (_ BitVec 64))
+(declare-fun long2 () (_ BitVec 64))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(declare-fun |(long3 + (long2 + CONST_-1))_-837877004| () (_ BitVec 64))
+(declare-fun REAL_7 () Real)
+(declare-fun __bv2i2 () (_ BitVec 64))
+(declare-fun __bv2i3 () Int)
+(declare-fun REAL_6 () Real)
+(declare-fun __bv2i4 () (_ BitVec 64))
+(declare-fun __bv2i5 () Int)
+(declare-fun |(long2 + CONST_-1)_-734759192| () (_ BitVec 64))
+(declare-fun REAL_4 () Real)
+(declare-fun __bv2i6 () (_ BitVec 64))
+(declare-fun __bv2i7 () Int)
+(declare-fun REAL_3 () Real)
+(declare-fun __bv2i8 () (_ BitVec 64))
+(declare-fun __bv2i9 () Int)
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle #x0000000000000002 int0))
+(assert (>= REAL_9 (- 10000.0)))
+(assert (<= REAL_9 10000.0))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (< REAL_9 (* 0.0 double1)))
+(assert (bvsge |(long4 + (long3 + (long2 + CONST_-1)))_-743109440| #xffffffffffffd8f0))
+(assert (bvsle |(long4 + (long3 + (long2 + CONST_-1)))_-743109440| #x0000000000002710))
+(assert (bvsge long4 #x8000000000000000))
+(assert (bvsle long4 #x7fffffffffffffff))
+(assert (bvsge long3 #x8000000000000000))
+(assert (bvsle long3 #x7fffffffffffffff))
+(assert (bvsge long2 #x8000000000000000))
+(assert (bvsle long2 #x7fffffffffffffff))
+(assert (= (bvadd long4 long3 long2 #xffffffffffffffff)
+   |(long4 + (long3 + (long2 + CONST_-1)))_-743109440|))
+(assert (= __bv2i0 |(long4 + (long3 + (long2 + CONST_-1)))_-743109440|))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_9
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
+(assert (bvsge |(long3 + (long2 + CONST_-1))_-837877004| #xffffffffffffd8f0))
+(assert (bvsle |(long3 + (long2 + CONST_-1))_-837877004| #x0000000000002710))
+(assert (= (bvadd long3 long2 #xffffffffffffffff)
+   |(long3 + (long2 + CONST_-1))_-837877004|))
+(assert (>= REAL_7 (- 10000.0)))
+(assert (<= REAL_7 10000.0))
+(assert (= __bv2i2 |(long3 + (long2 + CONST_-1))_-837877004|))
+(assert (= (bv2int __bv2i2) __bv2i3))
+(assert (= REAL_7
+   (to_real (ite (bvslt __bv2i2 #x0000000000000000)
+                 (- __bv2i3 18446744073709551616)
+                 __bv2i3))))
+(assert (bvsle #x0000000000000001 int0))
+(assert (>= REAL_6 (- 10000.0)))
+(assert (<= REAL_6 10000.0))
+(assert (< REAL_6 (* 0.0 double1)))
+(assert (bvsge |(long3 + (long2 + CONST_-1))_-837877004| #xffffffffffffd8f0))
+(assert (bvsle |(long3 + (long2 + CONST_-1))_-837877004| #x0000000000002710))
+(assert (= (bvadd long3 long2 #xffffffffffffffff)
+   |(long3 + (long2 + CONST_-1))_-837877004|))
+(assert (= __bv2i4 |(long3 + (long2 + CONST_-1))_-837877004|))
+(assert (= (bv2int __bv2i4) __bv2i5))
+(assert (= REAL_6
+   (to_real (ite (bvslt __bv2i4 #x0000000000000000)
+                 (- __bv2i5 18446744073709551616)
+                 __bv2i5))))
+(assert (bvsge |(long2 + CONST_-1)_-734759192| #xffffffffffffd8f0))
+(assert (bvsle |(long2 + CONST_-1)_-734759192| #x0000000000002710))
+(assert (= (bvadd long2 #xffffffffffffffff) |(long2 + CONST_-1)_-734759192|))
+(assert (>= REAL_4 (- 10000.0)))
+(assert (<= REAL_4 10000.0))
+(assert (= __bv2i6 |(long2 + CONST_-1)_-734759192|))
+(assert (= (bv2int __bv2i6) __bv2i7))
+(assert (= REAL_4
+   (to_real (ite (bvslt __bv2i6 #x0000000000000000)
+                 (- __bv2i7 18446744073709551616)
+                 __bv2i7))))
+(assert (bvsle #x0000000000000000 int0))
+(assert (>= REAL_3 (- 10000.0)))
+(assert (<= REAL_3 10000.0))
+(assert (< REAL_3 (* 0.0 double1)))
+(assert (bvsge |(long2 + CONST_-1)_-734759192| #xffffffffffffd8f0))
+(assert (bvsle |(long2 + CONST_-1)_-734759192| #x0000000000002710))
+(assert (= (bvadd long2 #xffffffffffffffff) |(long2 + CONST_-1)_-734759192|))
+(assert (= __bv2i8 |(long2 + CONST_-1)_-734759192|))
+(assert (= (bv2int __bv2i8) __bv2i9))
+(assert (= REAL_3
+   (to_real (ite (bvslt __bv2i8 #x0000000000000000)
+                 (- __bv2i9 18446744073709551616)
+                 __bv2i9))))
+(assert (bvsle #xffffffffffffffff int0))
+
+
+Solving time of z3 bitvector is 20 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 12
+CONST_2 <= int0 &&
+REAL_9 < (double1 * CONST_0.0) &&
+REAL_9 == (long4 + (long3 + (long2 + CONST_-1))) &&
+REAL_7 == (long3 + (long2 + CONST_-1)) &&
+CONST_1 <= int0 &&
+REAL_6 < (double1 * CONST_0.0) &&
+REAL_6 == (long3 + (long2 + CONST_-1)) &&
+REAL_4 == (long2 + CONST_-1) &&
+CONST_0 <= int0 &&
+REAL_3 < (double1 * CONST_0.0) &&
+REAL_3 == (long2 + CONST_-1) &&
+CONST_-1 <= int0 -> true
+
+### PCs: total:31 sat:25 unsat:6
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.getQuantile(Main.java:31)
+	at Main.main(Main.java:46)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
 java.lang.RuntimeException: ERROR: symbolic method not handled: isNaN
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384)
 	at gov.nasa.jpf.symbc.bytecode.BytecodeUtils.execute(BytecodeUtils.java:225)

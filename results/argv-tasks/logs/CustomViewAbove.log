@@ -1,41 +1,199 @@
-symbolic.min_int=-2147483648
-symbolic.min_long=-9223372036854775808
-symbolic.min_short=-32768
-symbolic.min_byte=-128
-symbolic.min_char=0
-symbolic.max_int=2147483647
-symbolic.max_long=9223372036854775807
-symbolic.max_short=32767
-symbolic.max_byte=127
-symbolic.max_char=65535
-symbolic.min_double=4.9E-324
-symbolic.max_double=1.7976931348623157E308
-JavaPathfinder core system v8.0 (rev 6d9cf5883e516937c900ab7aa46062089f9f0ad6) - (C) 2005-2014 United States Government. All rights reserved.
+(declare-fun __bv2i1 () Int)
+(declare-fun int7 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int8 #xffffffff80000000))
+(assert (bvsle int8 #x000000007fffffff))
+(assert (= (bvsub int0 int8) #x0000000000000000))
+(assert (bvsge int13 #xffffffff80000000))
+(assert (bvsle int13 #x000000007fffffff))
+(assert (bvsgt int13 #x0000000000000000))
+(assert (bvsge |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|
+       #xffffffffffffd8f0))
+(assert (bvsle |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|
+       #x0000000000002710))
+(assert (bvsge int12 #xffffffff80000000))
+(assert (bvsle int12 #x000000007fffffff))
+(assert (bvsge int10 #xffffffff80000000))
+(assert (bvsle int10 #x000000007fffffff))
+(assert (let ((a!1 (bvshl (bvadd (bvmul int12 (bvsdiv int10 #x0000000000000002))
+                         (bvsdiv int10 #x0000000000000002))
+                  #x0000000000000020)))
+  (= (bvashr a!1 #x0000000000000020)
+     |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|)))
+(assert (>= REAL_21 (- 10000.0)))
+(assert (<= REAL_21 10000.0))
+(assert (= __bv2i0
+   |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_21
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
+(assert (not (= (bvsub int0 int8) #x0000000000000000)))
+(assert (bvsge int7 #xffffffff80000000))
+(assert (bvsle int7 #x000000007fffffff))
+(assert (not (= int7 #x0000000000000000)))
 
 
-====================================================== system under test
-Main.main()
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-====================================================== search started: 6/6/26 12:57 PM
-threadTerminated
-threadTerminated
 
-====================================================== Method Summaries
+numeric PC: constraint # = 5
+(int0 - int8) == CONST_0 &&
+int13 > CONST_0 &&
+REAL_21 == ((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32) &&
+(int0 - int8) != CONST_0 &&
+int7 != CONST_0 -> false
 
-====================================================== Method Summaries (HTML)
+### PCs: total:19 sat:16 unsat:3
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun REAL_25 () Real)
+(declare-fun int10 () (_ BitVec 64))
+(declare-fun __bv2i0 () (_ BitVec 64))
+(declare-fun __bv2i1 () Int)
+(declare-fun int13 () (_ BitVec 64))
+(declare-fun |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|
+             ()
+             (_ BitVec 64))
+(declare-fun int12 () (_ BitVec 64))
+(declare-fun REAL_21 () Real)
+(declare-fun __bv2i2 () (_ BitVec 64))
+(declare-fun __bv2i3 () Int)
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int8 () (_ BitVec 64))
+(declare-fun int7 () (_ BitVec 64))
+(assert (>= REAL_25 (- 10000.0)))
+(assert (<= REAL_25 10000.0))
+(assert (bvsge int10 #xffffffff80000000))
+(assert (bvsle int10 #x000000007fffffff))
+(assert (= __bv2i0 int10))
+(assert (= (bv2int __bv2i0) __bv2i1))
+(assert (= REAL_25
+   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
+                 (- __bv2i1 18446744073709551616)
+                 __bv2i1))))
+(assert (bvsge int13 #xffffffff80000000))
+(assert (bvsle int13 #x000000007fffffff))
+(assert (bvsle int13 #x0000000000000000))
+(assert (bvsge |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|
+       #xffffffffffffd8f0))
+(assert (bvsle |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|
+       #x0000000000002710))
+(assert (bvsge int12 #xffffffff80000000))
+(assert (bvsle int12 #x000000007fffffff))
+(assert (let ((a!1 (bvshl (bvadd (bvmul int12 (bvsdiv int10 #x0000000000000002))
+                         (bvsdiv int10 #x0000000000000002))
+                  #x0000000000000020)))
+  (= (bvashr a!1 #x0000000000000020)
+     |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|)))
+(assert (>= REAL_21 (- 10000.0)))
+(assert (<= REAL_21 10000.0))
+(assert (= __bv2i2
+   |((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32)_70323523|))
+(assert (= (bv2int __bv2i2) __bv2i3))
+(assert (= REAL_21
+   (to_real (ite (bvslt __bv2i2 #x0000000000000000)
+                 (- __bv2i3 18446744073709551616)
+                 __bv2i3))))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int8 #xffffffff80000000))
+(assert (bvsle int8 #x000000007fffffff))
+(assert (not (= (bvsub int0 int8) #x0000000000000000)))
+(assert (bvsge int7 #xffffffff80000000))
+(assert (bvsle int7 #x000000007fffffff))
+(assert (not (= int7 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 158 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+REAL_25 == int10 &&
+int13 <= CONST_0 &&
+REAL_21 == ((((int12 * (int10 / CONST_2)) + (int10 / CONST_2))<<CONST_32)>>CONST_32) &&
+(int0 - int8) != CONST_0 &&
+int7 != CONST_0 -> true
+
+### PCs: total:20 sat:17 unsat:3
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 1578 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 1279 msec
+Total Solver Parse Time = 26 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 153 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 6
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 6
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 18
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 18
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+1578,0,1578,0,0,1279,26,153,0,6,0,0,0,0,6,0,6,0,18,0,0,0,0,18,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=9,visited=0,backtracked=9,end=2
-search:             maxDepth=5,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
-heap:               new=522,released=86,maxLive=454,gcCycles=6
-instructions:       6471
+elapsed time:       00:00:01
+states:             new=15,visited=0,backtracked=15,end=6
+search:             maxDepth=7,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=9
+heap:               new=578,released=154,maxLive=457,gcCycles=14
+instructions:       6679
 max memory:         240MB
-loaded code:        classes=85,methods=1831
+loaded code:        classes=89,methods=1861
 
-====================================================== search finished: 6/6/26 12:57 PM
-
+====================================================== search finished: 6/14/26 9:46 PM
