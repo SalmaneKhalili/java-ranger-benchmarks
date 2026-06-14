@@ -44,7 +44,7 @@ Using floating point for reals: yes
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 860 ms
+Solving time of z3 bitvector is 792 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -82,7 +82,7 @@ Using floating point for reals: yes
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 261 ms
+Solving time of z3 bitvector is 246 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -117,7 +117,7 @@ Using floating point for reals: yes
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1129 ms
+Solving time of z3 bitvector is 1116 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4315 msec
+Veritesting Dyn Time = 4178 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 4049 msec
+Total Solver Time = 3927 msec
 Total Solver Parse Time = 11 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 90 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4315,0,4315,0,0,4049,11,90,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+4178,0,4178,0,0,3927,11,90,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6107
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/14/26 4:20 AM
+====================================================== search finished: 6/14/26 8:53 PM

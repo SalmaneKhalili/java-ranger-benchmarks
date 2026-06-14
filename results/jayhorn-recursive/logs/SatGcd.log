@@ -18,7 +18,7 @@
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 54355 ms
+Solving time of z3 bitvector is 32744 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -76,7 +76,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 16 ms
+Solving time of z3 bitvector is 27 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -139,7 +139,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 36 ms
+Solving time of z3 bitvector is 17 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
