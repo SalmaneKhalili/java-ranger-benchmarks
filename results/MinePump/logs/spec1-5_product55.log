@@ -11,7 +11,7 @@
 (assert (= bool2 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1411 msec
+Veritesting Dyn Time = 1070 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 885 msec
-Total Solver Parse Time = 111 msec
+Total Solver Time = 669 msec
+Total Solver Parse Time = 89 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 34 msec
+Total Solver Clean up Time = 25 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1411,0,1411,0,0,885,111,34,0,5,0,0,0,0,5,0,5,0,543,0,0,0,0,543,0,0,-1,-1,0.0,0,0,0
+1070,0,1070,0,0,669,89,25,0,5,0,0,0,0,5,0,5,0,543,0,0,0,0,543,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -196,4 +196,4 @@ instructions:       26447
 max memory:         240MB
 loaded code:        classes=94,methods=1919
 
-====================================================== search finished: 6/13/26 4:01 AM
+====================================================== search finished: 6/14/26 4:19 AM

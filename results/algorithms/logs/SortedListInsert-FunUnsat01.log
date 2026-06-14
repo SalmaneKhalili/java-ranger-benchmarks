@@ -30,7 +30,7 @@
 (assert (bvsgt int0 #x0000000000000001))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54,13 +54,13 @@ int5[-2147483648] >= int1[-2147483648] &&
 CONST_5 >= int0[5] &&
 int5[-2147483648] <= int1[-2147483648] &&
 CONST_4 < int0[5] &&
-int4[-2147483647] <= int2[-2147483647] &&
-int4[-2147483647] > int1[-2147483648] &&
+int4[-2147483645] <= int2[-1610612735] &&
+int4[-2147483645] > int1[-2147483648] &&
 CONST_3 < int0[5] &&
-int3[-2147483645] > int2[-2147483647] &&
-int3[-2147483645] > int1[-2147483648] &&
+int3[-1610612733] > int2[-1610612735] &&
+int3[-1610612733] > int1[-2147483648] &&
 CONST_2 < int0[5] &&
-int2[-2147483647] > int1[-2147483648] &&
+int2[-1610612735] > int1[-2147483648] &&
 int0[5] > CONST_1
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 583 msec
+Veritesting Dyn Time = 745 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 269 msec
-Total Solver Parse Time = 30 msec
+Total Solver Time = 337 msec
+Total Solver Parse Time = 39 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 27 msec
+Total Solver Clean up Time = 32 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-583,0,583,0,0,269,30,27,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
+745,0,745,0,0,337,39,32,0,4,0,0,0,0,4,0,4,0,88,0,0,0,0,88,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
@@ -196,4 +196,4 @@ instructions:       7055
 max memory:         240MB
 loaded code:        classes=90,methods=1874
 
-====================================================== search finished: 6/13/26 4:47 AM
+====================================================== search finished: 6/14/26 5:07 AM

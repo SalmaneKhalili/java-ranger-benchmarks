@@ -16,7 +16,7 @@ Using floating point for reals: yes
 (assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -80,7 +80,7 @@ Using floating point for reals: yes
 (assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 480 msec
+Veritesting Dyn Time = 353 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 46 msec
-Total Solver Parse Time = 9 msec
+Total Solver Time = 32 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-480,0,480,0,0,46,9,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+353,0,353,0,0,32,6,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       6103
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/13/26 4:01 AM
+====================================================== search finished: 6/14/26 4:19 AM

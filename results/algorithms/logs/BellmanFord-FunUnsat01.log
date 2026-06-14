@@ -1,199 +1,199 @@
-(assert (bvsge e26 #xffffffff80000000))
-(assert (bvsle e26 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000012)
-         (= e26 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000012))
-         (= e26 #x0000000000000000))))
-(assert (bvsge e25 #xffffffff80000000))
-(assert (bvsle e25 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000011)
-         (= e25 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000011))
-         (= e25 #x0000000000000000))))
-(assert (bvsge e24 #xffffffff80000000))
-(assert (bvsle e24 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000010)
-         (= e24 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000010))
-         (= e24 #x0000000000000000))))
-(assert (bvsge e23 #xffffffff80000000))
-(assert (bvsle e23 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000f)
-         (= e23 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000f))
-         (= e23 #x0000000000000000))))
-(assert (bvsge e22 #xffffffff80000000))
-(assert (bvsle e22 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000e)
-         (= e22 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000e))
-         (= e22 #x0000000000000000))))
-(assert (bvsge e21 #xffffffff80000000))
-(assert (bvsle e21 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000d)
-         (= e21 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000d))
-         (= e21 #x0000000000000000))))
-(assert (bvsge e20 #xffffffff80000000))
-(assert (bvsle e20 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000c)
-         (= e20 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000c))
-         (= e20 #x0000000000000000))))
-(assert (bvsge e19 #xffffffff80000000))
-(assert (bvsle e19 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000b)
-         (= e19 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000b))
-         (= e19 #x0000000000000000))))
-(assert (bvsge e18 #xffffffff80000000))
-(assert (bvsle e18 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x000000000000000a)
-         (= e18 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x000000000000000a))
-         (= e18 #x0000000000000000))))
-(assert (bvsge e17 #xffffffff80000000))
-(assert (bvsle e17 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000009)
-         (= e17 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000009))
-         (= e17 #x0000000000000000))))
-(assert (bvsge e16 #xffffffff80000000))
-(assert (bvsle e16 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000008)
-         (= e16 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000008))
-         (= e16 #x0000000000000000))))
-(assert (bvsge e15 #xffffffff80000000))
-(assert (bvsle e15 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000007)
-         (= e15 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000007))
-         (= e15 #x0000000000000000))))
-(assert (bvsge e14 #xffffffff80000000))
-(assert (bvsle e14 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000006)
-         (= e14 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000006))
-         (= e14 #x0000000000000000))))
-(assert (bvsge e13 #xffffffff80000000))
-(assert (bvsle e13 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000005)
-         (= e13 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000005))
-         (= e13 #x0000000000000000))))
-(assert (bvsge e12 #xffffffff80000000))
-(assert (bvsle e12 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000004)
-         (= e12 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000004))
-         (= e12 #x0000000000000000))))
-(assert (bvsge e11 #xffffffff80000000))
-(assert (bvsle e11 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000003)
-         (= e11 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000003))
-         (= e11 #x0000000000000000))))
-(assert (bvsge e10 #xffffffff80000000))
-(assert (bvsle e10 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000002)
-         (= e10 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000002))
-         (= e10 #x0000000000000000))))
-(assert (bvsge e9 #xffffffff80000000))
-(assert (bvsle e9 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000001)
-         (= e9 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000001))
-         (= e9 #x0000000000000000))))
-(assert (bvsge e8 #xffffffff80000000))
-(assert (bvsle e8 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (or (and (= #x0000000000000000 #x0000000000000000)
-         (= #x0000000000000001 #x0000000000000000)
-         (= e8 int1))
-    (and (= #x0000000000000000 #x0000000000000000)
-         (not (= #x0000000000000001 #x0000000000000000))
-         (= e8 #x0000000000000000))))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvslt int1 #x00000000000f4240))
-(assert (bvsge int1 #x0000000000000000))
-(assert (= (bvmul int0 int0) #x0000000000002710))
-(assert (bvsge (bvmul int0 int0) #x0000000000000000))
-(assert (bvslt int0 #x00000000000f4240))
-(assert (bvsgt int0 #x0000000000000000))
+New sym int e29819 min=-2147483648, max=2147483647
+New sym int e29820 min=-2147483648, max=2147483647
+New sym int e29821 min=-2147483648, max=2147483647
+New sym int e29822 min=-2147483648, max=2147483647
+New sym int e29823 min=-2147483648, max=2147483647
+New sym int e29824 min=-2147483648, max=2147483647
+New sym int e29825 min=-2147483648, max=2147483647
+New sym int e29826 min=-2147483648, max=2147483647
+New sym int e29827 min=-2147483648, max=2147483647
+New sym int e29828 min=-2147483648, max=2147483647
+New sym int e29829 min=-2147483648, max=2147483647
+New sym int e29830 min=-2147483648, max=2147483647
+New sym int e29831 min=-2147483648, max=2147483647
+New sym int e29832 min=-2147483648, max=2147483647
+New sym int e29833 min=-2147483648, max=2147483647
+New sym int e29834 min=-2147483648, max=2147483647
+New sym int e29835 min=-2147483648, max=2147483647
+New sym int e29836 min=-2147483648, max=2147483647
+New sym int e29837 min=-2147483648, max=2147483647
+New sym int e29838 min=-2147483648, max=2147483647
+New sym int e29839 min=-2147483648, max=2147483647
+New sym int e29840 min=-2147483648, max=2147483647
+New sym int e29841 min=-2147483648, max=2147483647
+New sym int e29842 min=-2147483648, max=2147483647
+New sym int e29843 min=-2147483648, max=2147483647
+New sym int e29844 min=-2147483648, max=2147483647
+New sym int e29845 min=-2147483648, max=2147483647
+New sym int e29846 min=-2147483648, max=2147483647
+New sym int e29847 min=-2147483648, max=2147483647
+New sym int e29848 min=-2147483648, max=2147483647
+New sym int e29849 min=-2147483648, max=2147483647
+New sym int e29850 min=-2147483648, max=2147483647
+New sym int e29851 min=-2147483648, max=2147483647
+New sym int e29852 min=-2147483648, max=2147483647
+New sym int e29853 min=-2147483648, max=2147483647
+New sym int e29854 min=-2147483648, max=2147483647
+New sym int e29855 min=-2147483648, max=2147483647
+New sym int e29856 min=-2147483648, max=2147483647
+New sym int e29857 min=-2147483648, max=2147483647
+New sym int e29858 min=-2147483648, max=2147483647
+New sym int e29859 min=-2147483648, max=2147483647
+New sym int e29860 min=-2147483648, max=2147483647
+New sym int e29861 min=-2147483648, max=2147483647
+New sym int e29862 min=-2147483648, max=2147483647
+New sym int e29863 min=-2147483648, max=2147483647
+New sym int e29864 min=-2147483648, max=2147483647
+New sym int e29865 min=-2147483648, max=2147483647
+New sym int e29866 min=-2147483648, max=2147483647
+New sym int e29867 min=-2147483648, max=2147483647
+New sym int e29868 min=-2147483648, max=2147483647
+New sym int e29869 min=-2147483648, max=2147483647
+New sym int e29870 min=-2147483648, max=2147483647
+New sym int e29871 min=-2147483648, max=2147483647
+New sym int e29872 min=-2147483648, max=2147483647
+New sym int e29873 min=-2147483648, max=2147483647
+New sym int e29874 min=-2147483648, max=2147483647
+New sym int e29875 min=-2147483648, max=2147483647
+New sym int e29876 min=-2147483648, max=2147483647
+New sym int e29877 min=-2147483648, max=2147483647
+New sym int e29878 min=-2147483648, max=2147483647
+New sym int e29879 min=-2147483648, max=2147483647
+New sym int e29880 min=-2147483648, max=2147483647
+New sym int e29881 min=-2147483648, max=2147483647
+New sym int e29882 min=-2147483648, max=2147483647
+New sym int e29883 min=-2147483648, max=2147483647
+New sym int e29884 min=-2147483648, max=2147483647
+New sym int e29885 min=-2147483648, max=2147483647
+New sym int e29886 min=-2147483648, max=2147483647
+New sym int e29887 min=-2147483648, max=2147483647
+New sym int e29888 min=-2147483648, max=2147483647
+New sym int e29889 min=-2147483648, max=2147483647
+New sym int e29890 min=-2147483648, max=2147483647
+New sym int e29891 min=-2147483648, max=2147483647
+New sym int e29892 min=-2147483648, max=2147483647
+New sym int e29893 min=-2147483648, max=2147483647
+New sym int e29894 min=-2147483648, max=2147483647
+New sym int e29895 min=-2147483648, max=2147483647
+New sym int e29896 min=-2147483648, max=2147483647
+New sym int e29897 min=-2147483648, max=2147483647
+New sym int e29898 min=-2147483648, max=2147483647
+New sym int e29899 min=-2147483648, max=2147483647
+New sym int e29900 min=-2147483648, max=2147483647
+New sym int e29901 min=-2147483648, max=2147483647
+New sym int e29902 min=-2147483648, max=2147483647
+New sym int e29903 min=-2147483648, max=2147483647
+New sym int e29904 min=-2147483648, max=2147483647
+New sym int e29905 min=-2147483648, max=2147483647
+New sym int e29906 min=-2147483648, max=2147483647
+New sym int e29907 min=-2147483648, max=2147483647
+New sym int e29908 min=-2147483648, max=2147483647
+New sym int e29909 min=-2147483648, max=2147483647
+New sym int e29910 min=-2147483648, max=2147483647
+New sym int e29911 min=-2147483648, max=2147483647
+New sym int e29912 min=-2147483648, max=2147483647
+New sym int e29913 min=-2147483648, max=2147483647
+New sym int e29914 min=-2147483648, max=2147483647
+New sym int e29915 min=-2147483648, max=2147483647
+New sym int e29916 min=-2147483648, max=2147483647
+New sym int e29917 min=-2147483648, max=2147483647
+New sym int e29918 min=-2147483648, max=2147483647
+New sym int e29919 min=-2147483648, max=2147483647
+New sym int e29920 min=-2147483648, max=2147483647
+New sym int e29921 min=-2147483648, max=2147483647
+New sym int e29922 min=-2147483648, max=2147483647
+New sym int e29923 min=-2147483648, max=2147483647
+New sym int e29924 min=-2147483648, max=2147483647
+New sym int e29925 min=-2147483648, max=2147483647
+New sym int e29926 min=-2147483648, max=2147483647
+New sym int e29927 min=-2147483648, max=2147483647
+New sym int e29928 min=-2147483648, max=2147483647
+New sym int e29929 min=-2147483648, max=2147483647
+New sym int e29930 min=-2147483648, max=2147483647
+New sym int e29931 min=-2147483648, max=2147483647
+New sym int e29932 min=-2147483648, max=2147483647
+New sym int e29933 min=-2147483648, max=2147483647
+New sym int e29934 min=-2147483648, max=2147483647
+New sym int e29935 min=-2147483648, max=2147483647
+New sym int e29936 min=-2147483648, max=2147483647
+New sym int e29937 min=-2147483648, max=2147483647
+New sym int e29938 min=-2147483648, max=2147483647
+New sym int e29939 min=-2147483648, max=2147483647
+New sym int e29940 min=-2147483648, max=2147483647
+New sym int e29941 min=-2147483648, max=2147483647
+New sym int e29942 min=-2147483648, max=2147483647
+New sym int e29943 min=-2147483648, max=2147483647
+New sym int e29944 min=-2147483648, max=2147483647
+New sym int e29945 min=-2147483648, max=2147483647
+New sym int e29946 min=-2147483648, max=2147483647
+New sym int e29947 min=-2147483648, max=2147483647
+New sym int e29948 min=-2147483648, max=2147483647
+New sym int e29949 min=-2147483648, max=2147483647
+New sym int e29950 min=-2147483648, max=2147483647
+New sym int e29951 min=-2147483648, max=2147483647
+New sym int e29952 min=-2147483648, max=2147483647
+New sym int e29953 min=-2147483648, max=2147483647
+New sym int e29954 min=-2147483648, max=2147483647
+New sym int e29955 min=-2147483648, max=2147483647
+New sym int e29956 min=-2147483648, max=2147483647
+New sym int e29957 min=-2147483648, max=2147483647
+New sym int e29958 min=-2147483648, max=2147483647
+New sym int e29959 min=-2147483648, max=2147483647
+New sym int e29960 min=-2147483648, max=2147483647
+New sym int e29961 min=-2147483648, max=2147483647
+New sym int e29962 min=-2147483648, max=2147483647
+New sym int e29963 min=-2147483648, max=2147483647
+New sym int e29964 min=-2147483648, max=2147483647
+New sym int e29965 min=-2147483648, max=2147483647
+New sym int e29966 min=-2147483648, max=2147483647
+New sym int e29967 min=-2147483648, max=2147483647
+New sym int e29968 min=-2147483648, max=2147483647
+New sym int e29969 min=-2147483648, max=2147483647
+New sym int e29970 min=-2147483648, max=2147483647
+New sym int e29971 min=-2147483648, max=2147483647
+New sym int e29972 min=-2147483648, max=2147483647
+New sym int e29973 min=-2147483648, max=2147483647
+New sym int e29974 min=-2147483648, max=2147483647
+New sym int e29975 min=-2147483648, max=2147483647
+New sym int e29976 min=-2147483648, max=2147483647
+New sym int e29977 min=-2147483648, max=2147483647
+New sym int e29978 min=-2147483648, max=2147483647
+New sym int e29979 min=-2147483648, max=2147483647
+New sym int e29980 min=-2147483648, max=2147483647
+New sym int e29981 min=-2147483648, max=2147483647
+New sym int e29982 min=-2147483648, max=2147483647
+New sym int e29983 min=-2147483648, max=2147483647
+New sym int e29984 min=-2147483648, max=2147483647
+New sym int e29985 min=-2147483648, max=2147483647
+New sym int e29986 min=-2147483648, max=2147483647
+New sym int e29987 min=-2147483648, max=2147483647
+New sym int e29988 min=-2147483648, max=2147483647
+New sym int e29989 min=-2147483648, max=2147483647
+New sym int e29990 min=-2147483648, max=2147483647
+New sym int e29991 min=-2147483648, max=2147483647
+New sym int e29992 min=-2147483648, max=2147483647
+New sym int e29993 min=-2147483648, max=2147483647
+New sym int e29994 min=-2147483648, max=2147483647
+New sym int e29995 min=-2147483648, max=2147483647
+New sym int e29996 min=-2147483648, max=2147483647
+New sym int e29997 min=-2147483648, max=2147483647
+New sym int e29998 min=-2147483648, max=2147483647
+New sym int e29999 min=-2147483648, max=2147483647
+New sym int e30000 min=-2147483648, max=2147483647
+New sym int e30001 min=-2147483648, max=2147483647
+New sym int e30002 min=-2147483648, max=2147483647
+New sym int e30003 min=-2147483648, max=2147483647
+New sym int e30004 min=-2147483648, max=2147483647
+New sym int e30005 min=-2147483648, max=2147483647
+New sym int e30006 min=-2147483648, max=2147483647
+New sym int e30007 min=-2147483648, max=2147483647
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

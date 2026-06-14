@@ -46,7 +46,7 @@
 (assert (not (= bool0 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 455 msec
+Veritesting Dyn Time = 361 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 127 msec
-Total Solver Parse Time = 29 msec
+Total Solver Time = 87 msec
+Total Solver Parse Time = 20 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 5 msec
+Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-455,0,455,0,0,127,29,5,0,1,0,0,0,0,1,0,1,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+361,0,361,0,0,87,20,1,0,1,0,0,0,0,1,0,1,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6753
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/13/26 4:00 AM
+====================================================== search finished: 6/14/26 4:19 AM
