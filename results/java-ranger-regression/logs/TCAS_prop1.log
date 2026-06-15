@@ -23,12 +23,12 @@ int1 != CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 12
-int7[335544322] > CONST_400 &&
-int7[335544322] >= CONST_400 &&
+int7[514] > CONST_400 &&
+int7[514] >= CONST_400 &&
 int5[0] < int3[1] &&
 int6[0] == CONST_0 &&
 int0[301] < CONST_600 &&
-int7[335544322] <= int8[369098752] &&
+int7[514] <= int8[1073741824] &&
 int11[-2147483648] <= CONST_0 &&
 int10[-2147483648] != CONST_1 &&
 int0[301] > CONST_300 &&
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2735 msec
+Veritesting Dyn Time = 2747 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2270 msec
-Total Solver Parse Time = 196 msec
+Total Solver Time = 2254 msec
+Total Solver Parse Time = 193 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 159 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2735,0,2735,0,0,2270,196,159,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
+2747,0,2747,0,0,2254,193,159,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
@@ -196,4 +196,4 @@ instructions:       11179
 max memory:         240MB
 loaded code:        classes=89,methods=1882
 
-====================================================== search finished: 6/14/26 9:44 PM
+====================================================== search finished: 6/15/26 4:42 AM

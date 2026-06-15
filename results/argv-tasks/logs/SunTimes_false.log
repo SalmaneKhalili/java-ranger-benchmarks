@@ -22,7 +22,7 @@
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 1404 ms
+Solving time of z3 bitvector is 1311 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63,7 +63,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 1183 ms
+Solving time of z3 bitvector is 999 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -105,7 +105,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 338 ms
+Solving time of z3 bitvector is 322 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 7775 msec
+Veritesting Dyn Time = 7196 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 7122 msec
+Total Solver Time = 6564 msec
 Total Solver Parse Time = 13 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 202 msec
+Total Solver Clean up Time = 193 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-7775,0,7775,0,0,7122,13,202,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+7196,0,7196,0,0,6564,13,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
@@ -196,4 +196,4 @@ instructions:       6134
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/14/26 11:33 PM
+====================================================== search finished: 6/15/26 6:32 AM

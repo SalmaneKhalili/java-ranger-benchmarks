@@ -5,7 +5,7 @@
 (assert (bvslt #x0000000000000001 int0))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -36,7 +36,7 @@ Using floating point for reals: yes
 (assert (bvslt #x0000000000000001 int0))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 402 msec
+Veritesting Dyn Time = 398 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 41 msec
+Total Solver Time = 40 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-402,0,402,0,0,41,8,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
+398,0,398,0,0,40,8,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       6183
 max memory:         240MB
 loaded code:        classes=94,methods=1888
 
-====================================================== search finished: 6/14/26 10:29 PM
+====================================================== search finished: 6/15/26 5:27 AM

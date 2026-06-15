@@ -24,7 +24,7 @@ Using floating point for reals: yes
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 4049 ms
+Solving time of z3 bitvector is 3803 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63,7 +63,7 @@ Using floating point for reals: yes
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 2224 ms
+Solving time of z3 bitvector is 2147 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -104,7 +104,7 @@ Using floating point for reals: yes
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 909 ms
+Solving time of z3 bitvector is 879 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -120,9 +120,9 @@ java.lang.NumberFormatException: For input string: "(-"
 	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
 	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
 	at java.lang.Double.parseDouble(Double.java:538)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1625)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1636)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValue(ProblemZ3BitVector.java:1661)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValue(ProblemZ3BitVector.java:1676)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:228)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
@@ -141,8 +141,8 @@ java.lang.NumberFormatException: For input string: "(-"
 	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
 	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
 	at java.lang.Double.parseDouble(Double.java:538)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1625)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1636)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
@@ -160,7 +160,7 @@ java.lang.NumberFormatException: For input string: "(-"
 	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
 java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
 java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1649)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
@@ -190,7 +190,7 @@ gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notificat
 	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
 Caused by: java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
 java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1649)
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
 	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
 	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)

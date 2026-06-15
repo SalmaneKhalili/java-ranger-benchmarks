@@ -120,7 +120,7 @@ Using floating point for reals: yes
        #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 327 msec
+Veritesting Dyn Time = 336 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 64 msec
+Total Solver Time = 61 msec
 Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-327,0,327,0,0,64,10,1,0,6,0,0,0,0,6,0,6,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
+336,0,336,0,0,61,10,1,0,6,0,0,0,0,6,0,6,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6059
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/14/26 9:47 PM
+====================================================== search finished: 6/15/26 4:45 AM

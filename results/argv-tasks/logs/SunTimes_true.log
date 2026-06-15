@@ -21,7 +21,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 226 ms
+Solving time of z3 bitvector is 206 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -54,7 +54,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 34 ms
+Solving time of z3 bitvector is 33 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -87,7 +87,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 36 ms
+Solving time of z3 bitvector is 32 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -119,7 +119,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 72 ms
+Solving time of z3 bitvector is 64 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3357 msec
+Veritesting Dyn Time = 3004 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 3082 msec
-Total Solver Parse Time = 16 msec
+Total Solver Time = 2734 msec
+Total Solver Parse Time = 15 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 278 msec
+Total Solver Clean up Time = 245 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3357,0,3357,0,0,3082,16,278,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+3004,0,3004,0,0,2734,15,245,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6208
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/14/26 11:33 PM
+====================================================== search finished: 6/15/26 6:32 AM

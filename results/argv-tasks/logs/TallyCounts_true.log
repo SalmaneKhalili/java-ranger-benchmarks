@@ -39,7 +39,7 @@
 (assert (bvsle #xffffffffffffffff int0))
 
 
-Solving time of z3 bitvector is 1848 ms
+Solving time of z3 bitvector is 1564 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -141,7 +141,7 @@ Using floating point for reals: yes
 (assert (bvsle #xffffffffffffffff int0))
 
 
-Solving time of z3 bitvector is 1185 ms
+Solving time of z3 bitvector is 1032 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
