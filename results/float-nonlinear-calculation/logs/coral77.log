@@ -36,7 +36,7 @@
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 21 ms
+Solving time of z3 bitvector is 23 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -101,7 +101,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 double1))
 
 
-Solving time of z3 bitvector is 16 ms
+Solving time of z3 bitvector is 12 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 653 msec
+Veritesting Dyn Time = 621 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 337 msec
-Total Solver Parse Time = 18 msec
+Total Solver Time = 332 msec
+Total Solver Parse Time = 17 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 17 msec
+Total Solver Clean up Time = 18 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-653,0,653,0,0,337,18,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+621,0,621,0,0,332,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
@@ -196,4 +196,4 @@ instructions:       6437
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/15/26 6:05 AM
+====================================================== search finished: 6/16/26 5:49 AM

@@ -13,7 +13,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_10 ((_ to_fp 11 53) roundTowardZero int9)))
 
 
-Solving time of z3 bitvector is 91 ms
+Solving time of z3 bitvector is 85 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45,7 +45,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_10 ((_ to_fp 11 53) roundTowardZero int9)))
 
 
-Solving time of z3 bitvector is 179 ms
+Solving time of z3 bitvector is 172 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -81,7 +81,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_10 ((_ to_fp 11 53) roundTowardZero int9)))
 
 
-Solving time of z3 bitvector is 580 ms
+Solving time of z3 bitvector is 477 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -118,7 +118,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_10 ((_ to_fp 11 53) roundTowardZero int9)))
 
 
-Solving time of z3 bitvector is 1289 ms
+Solving time of z3 bitvector is 1108 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -155,7 +155,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_10 ((_ to_fp 11 53) roundTowardZero int9)))
 
 
-Solving time of z3 bitvector is 725 ms
+Solving time of z3 bitvector is 663 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

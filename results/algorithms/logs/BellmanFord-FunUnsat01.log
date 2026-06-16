@@ -1,3 +1,10 @@
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000012)
+         (= e26 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000012))
          (= e26 #x0000000000000000))))
 (assert (bvsge e25 #xffffffff80000000))
 (assert (bvsle e25 #x000000007fffffff))
@@ -183,17 +190,10 @@
 (assert (bvsle int1 #x000000007fffffff))
 (assert (bvslt int1 #x00000000000f4240))
 (assert (bvsge int1 #x0000000000000000))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvmul int0 int0) #x0000000000002710))
 (assert (bvsge (bvmul int0 int0) #x0000000000000000))
 (assert (bvslt int0 #x00000000000f4240))
 (assert (bvsgt int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 1771 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 30017
-CONST_4 >= int0 &&
-0==0&&3==9999&&e30007==int3||0==0&&!(3==9999)&&e30007==e20007 -> false
 

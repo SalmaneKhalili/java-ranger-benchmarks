@@ -13,7 +13,7 @@
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

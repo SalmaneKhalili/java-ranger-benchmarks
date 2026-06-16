@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/15/26 6:05 AM
+====================================================== search started: 6/16/26 5:49 AM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -46,7 +46,7 @@ Using floating point for reals: yes
 (assert (not (fp.eq (fp.add roundNearestTiesToEven double3 double4) (_ +zero 11 53))))
 
 
-Solving time of z3 bitvector is 73 ms
+Solving time of z3 bitvector is 74 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

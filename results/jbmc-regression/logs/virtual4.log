@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/15/26 4:47 AM
+====================================================== search started: 6/16/26 4:31 AM
 
 ====================================================== VeritestingListener report:
 Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
@@ -43,7 +43,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 249 msec
+Veritesting Dyn Time = 250 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -82,7 +82,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-249,0,249,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+250,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -97,5 +97,5 @@ instructions:       6006
 max memory:         240MB
 loaded code:        classes=84,methods=1625
 
-====================================================== search finished: 6/15/26 4:47 AM
+====================================================== search finished: 6/16/26 4:31 AM
 

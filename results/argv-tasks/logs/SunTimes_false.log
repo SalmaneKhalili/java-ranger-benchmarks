@@ -22,7 +22,7 @@
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 1311 ms
+Solving time of z3 bitvector is 1258 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -63,7 +63,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 999 ms
+Solving time of z3 bitvector is 964 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -105,7 +105,7 @@ Using floating point for reals: yes
 (assert (fp.eq REAL_2 ((_ to_fp 11 53) roundTowardZero int1)))
 
 
-Solving time of z3 bitvector is 322 ms
+Solving time of z3 bitvector is 293 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 7196 msec
+Veritesting Dyn Time = 6783 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 6564 msec
+Total Solver Time = 6183 msec
 Total Solver Parse Time = 13 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 193 msec
+Total Solver Clean up Time = 181 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-7196,0,7196,0,0,6564,13,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+6783,0,6783,0,0,6183,13,181,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
 
 ====================================================== statistics
-elapsed time:       00:00:07
+elapsed time:       00:00:06
 states:             new=6,visited=0,backtracked=0,end=0
 search:             maxDepth=6,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
@@ -196,4 +196,4 @@ instructions:       6134
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/15/26 6:32 AM
+====================================================== search finished: 6/16/26 6:13 AM
