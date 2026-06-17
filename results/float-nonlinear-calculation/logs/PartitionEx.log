@@ -62,7 +62,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 908 ms
+Solving time of z3 bitvector is 886 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -90,7 +90,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 18802 ms
+Solving time of z3 bitvector is 18396 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -118,7 +118,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 734 ms
+Solving time of z3 bitvector is 802 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 20779 msec
+Veritesting Dyn Time = 20428 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 20515 msec
+Total Solver Time = 20155 msec
 Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 20 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-20779,0,20779,0,0,20515,9,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+20428,0,20428,0,0,20155,9,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6102
 max memory:         240MB
 loaded code:        classes=86,methods=1932
 
-====================================================== search finished: 6/16/26 5:45 AM
+====================================================== search finished: 6/17/26 5:38 AM

@@ -6,7 +6,7 @@
 (assert (bvsge int0 #x00000000000000c8))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4306 msec
+Veritesting Dyn Time = 2533 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 3860 msec
-Total Solver Parse Time = 743 msec
+Total Solver Time = 2246 msec
+Total Solver Parse Time = 439 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 108 msec
+Total Solver Clean up Time = 64 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4306,0,4306,0,0,3860,743,108,0,5,0,0,0,0,5,0,5,0,606,0,0,0,0,606,0,0,-1,-1,0.0,0,0,0
+2533,0,2533,0,0,2246,439,64,0,5,0,0,0,0,5,0,5,0,606,0,0,0,0,606,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:02
 states:             new=4,visited=0,backtracked=1,end=1
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
@@ -196,4 +196,4 @@ instructions:       8272
 max memory:         496MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/16/26 4:26 AM
+====================================================== search finished: 6/17/26 4:20 AM

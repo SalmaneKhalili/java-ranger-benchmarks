@@ -38,7 +38,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -57,15 +57,15 @@ int0 > CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 11
-int4[-2147483648] < int3[-2147483644] &&
-int4[-2147483648] != int3[-2147483644] &&
-int4[-2147483648] < int2[-2147483642] &&
-int4[-2147483648] != int2[-2147483642] &&
+int4[-2147483648] < int3[0] &&
+int4[-2147483648] != int3[0] &&
+int4[-2147483648] < int2[2] &&
+int4[-2147483648] != int2[2] &&
 CONST_3 >= int0[3] &&
-int3[-2147483644] < int2[-2147483642] &&
-int3[-2147483644] < int1[-2147483641] &&
+int3[0] < int2[2] &&
+int3[0] < int1[3] &&
 CONST_2 < int0[3] &&
-int2[-2147483642] < int1[-2147483641] &&
+int2[2] < int1[3] &&
 CONST_1 < int0[3] &&
 int0[3] > CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 923 msec
+Veritesting Dyn Time = 969 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 518 msec
-Total Solver Parse Time = 52 msec
+Total Solver Time = 536 msec
+Total Solver Parse Time = 54 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 52 msec
+Total Solver Clean up Time = 49 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-923,0,923,0,0,518,52,52,0,6,0,0,0,0,6,0,6,0,149,0,0,0,0,149,0,0,-1,-1,0.0,0,0,0
+969,0,969,0,0,536,54,49,0,6,0,0,0,0,6,0,6,0,149,0,0,0,0,149,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:6..."
@@ -196,4 +196,4 @@ instructions:       9676
 max memory:         240MB
 loaded code:        classes=95,methods=1922
 
-====================================================== search finished: 6/16/26 5:14 AM
+====================================================== search finished: 6/17/26 5:08 AM

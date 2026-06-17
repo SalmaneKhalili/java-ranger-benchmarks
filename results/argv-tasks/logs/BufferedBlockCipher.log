@@ -98,7 +98,7 @@ Using floating point for reals: yes
 (assert (bvsgt int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 671 msec
+Veritesting Dyn Time = 495 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 95 msec
-Total Solver Parse Time = 44 msec
+Total Solver Time = 71 msec
+Total Solver Parse Time = 33 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 2 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-671,0,671,0,0,95,44,2,0,11,0,0,0,0,11,0,11,0,20,0,0,0,0,20,0,0,-1,-1,0.0,0,0,0
+495,0,495,0,0,71,33,2,0,11,0,0,0,0,11,0,11,0,20,0,0,0,0,20,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
@@ -196,4 +196,4 @@ instructions:       6559
 max memory:         240MB
 loaded code:        classes=85,methods=1832
 
-====================================================== search finished: 6/16/26 4:28 AM
+====================================================== search finished: 6/17/26 4:22 AM
