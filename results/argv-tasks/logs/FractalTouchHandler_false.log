@@ -3,7 +3,7 @@
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1498 ms
+Solving time of z3 bitvector is 2050 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -36,7 +36,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 3804 ms
+Solving time of z3 bitvector is 5341 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -69,7 +69,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 413 ms
+Solving time of z3 bitvector is 598 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -102,7 +102,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1331 ms
+Solving time of z3 bitvector is 1792 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -135,7 +135,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 6651 ms
+Solving time of z3 bitvector is 9008 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -168,7 +168,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.sub roundNearestTiesToEven float0 (_ +zero 11 53)) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 303 ms
+Solving time of z3 bitvector is 447 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

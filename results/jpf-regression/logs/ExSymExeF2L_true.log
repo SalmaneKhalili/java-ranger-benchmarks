@@ -13,7 +13,7 @@
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1090 ms
+Solving time of z3 bitvector is 990 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47,7 +47,7 @@ Using floating point for reals: yes
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 793 ms
+Solving time of z3 bitvector is 752 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -117,7 +117,7 @@ Using floating point for reals: yes
 (assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 790 ms
+Solving time of z3 bitvector is 770 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 5428 msec
+Veritesting Dyn Time = 5131 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 5130 msec
+Total Solver Time = 4835 msec
 Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 113 msec
+Total Solver Clean up Time = 106 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-5428,0,5428,0,0,5130,12,113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+5131,0,5131,0,0,4835,12,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6117
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/17/26 4:22 AM
+====================================================== search finished: 6/18/26 4:14 AM

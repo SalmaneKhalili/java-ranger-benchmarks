@@ -6,7 +6,7 @@
 (assert (bvsge int0 #x00000000000000c8))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2533 msec
+Veritesting Dyn Time = 4437 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2246 msec
-Total Solver Parse Time = 439 msec
+Total Solver Time = 3949 msec
+Total Solver Parse Time = 774 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 64 msec
+Total Solver Clean up Time = 113 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2533,0,2533,0,0,2246,439,64,0,5,0,0,0,0,5,0,5,0,606,0,0,0,0,606,0,0,-1,-1,0.0,0,0,0
+4437,0,4437,0,0,3949,774,113,0,5,0,0,0,0,5,0,5,0,606,0,0,0,0,606,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:04
 states:             new=4,visited=0,backtracked=1,end=1
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
 heap:               new=476,released=17,maxLive=452,gcCycles=2
 instructions:       8272
-max memory:         496MB
+max memory:         497MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/17/26 4:20 AM
+====================================================== search finished: 6/18/26 4:12 AM

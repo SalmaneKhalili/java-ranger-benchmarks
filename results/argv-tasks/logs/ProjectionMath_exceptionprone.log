@@ -2,7 +2,7 @@
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 2279 ms
+Solving time of z3 bitvector is 1252 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -61,7 +61,7 @@ Using floating point for reals: yes
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 3 ms
+Solving time of z3 bitvector is 4 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 629475 msec
+Veritesting Dyn Time = 788553 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 629113 msec
-Total Solver Parse Time = 448 msec
+Total Solver Time = 788106 msec
+Total Solver Parse Time = 542 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 17309 msec
+Total Solver Clean up Time = 19518 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-629475,0,629475,0,0,629113,448,17309,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+788553,0,788553,0,0,788106,542,19518,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.ArithmeticException: div by 0  at Main.h..."
 
 ====================================================== statistics
-elapsed time:       00:10:29
+elapsed time:       00:13:08
 states:             new=130,visited=0,backtracked=123,end=0
 search:             maxDepth=13,constraints=81
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=48
@@ -196,4 +196,4 @@ instructions:       16320
 max memory:         240MB
 loaded code:        classes=89,methods=1867
 
-====================================================== search finished: 6/17/26 5:18 AM
+====================================================== search finished: 6/18/26 5:19 AM

@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/17/26 4:20 AM
+====================================================== search started: 6/18/26 4:13 AM
 New sym int string0.length min=-2147483648, max=2147483647
 
 java.lang.RuntimeException: ERROR: expressiontype not handled: ObjectEquals

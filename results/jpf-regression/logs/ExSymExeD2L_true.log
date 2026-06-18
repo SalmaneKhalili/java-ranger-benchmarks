@@ -5,7 +5,7 @@
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1060 ms
+Solving time of z3 bitvector is 1029 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42,7 +42,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1098 ms
+Solving time of z3 bitvector is 1075 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -80,7 +80,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 41 ms
+Solving time of z3 bitvector is 37 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -118,7 +118,7 @@ Using floating point for reals: yes
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1373 ms
+Solving time of z3 bitvector is 1235 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 5922 msec
+Veritesting Dyn Time = 5677 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 5622 msec
-Total Solver Parse Time = 13 msec
+Total Solver Time = 5402 msec
+Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 112 msec
+Total Solver Clean up Time = 106 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-5922,0,5922,0,0,5622,13,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+5677,0,5677,0,0,5402,12,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6116
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/17/26 4:21 AM
+====================================================== search finished: 6/18/26 4:14 AM
