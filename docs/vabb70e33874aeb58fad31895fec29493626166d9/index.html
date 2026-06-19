@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Java Ranger Benchmarks</h1>
+  <p>JR: fp-power-fix@7d31423 | Date: 2026-06-19 04:44:15 </p>
+</div>
+<div class="container">
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total Benchmarks</h3>
+    <div class="number total">928</div>
+  </div>
+  <div class="card">
+    <h3>Overall Correct</h3>
+    <div class="number correct">508<span class="pct">(54.7%)</span></div>
+  </div>
+</div>
+
+<h2>Suites</h2>
+<table class="index-table">
+  <tr><th>Suite</th><th>Total</th><th>Correct</th><th>Incorrect</th><th>Unknown</th><th>Correct Rate</th></tr>
+  <tr><td><a href="suites/MinePump/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">MinePump</a></td><td>64</td><td>64</td><td>0</td><td>0</td><td>100.0%</td></tr>
+<tr><td><a href="suites/algorithms/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">algorithms</a></td><td>40</td><td>28</td><td>0</td><td>12</td><td>70.0%</td></tr>
+<tr><td><a href="suites/autostub/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">autostub</a></td><td>244</td><td>6</td><td>0</td><td>238</td><td>2.5%</td></tr>
+<tr><td><a href="suites/float-nonlinear-calculation/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">float-nonlinear-calculation</a></td><td>87</td><td>9</td><td>6</td><td>72</td><td>10.3%</td></tr>
+<tr><td><a href="suites/float_unboundedloop/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">float_unboundedloop</a></td><td>30</td><td>29</td><td>1</td><td>0</td><td>96.7%</td></tr>
+<tr><td><a href="suites/java-ranger-regression/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">java-ranger-regression</a></td><td>6</td><td>5</td><td>1</td><td>0</td><td>83.3%</td></tr>
+<tr><td><a href="suites/jayhorn-recursive/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">jayhorn-recursive</a></td><td>23</td><td>20</td><td>1</td><td>2</td><td>87.0%</td></tr>
+<tr><td><a href="suites/jbmc-regression/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">jbmc-regression</a></td><td>177</td><td>141</td><td>0</td><td>36</td><td>79.7%</td></tr>
+<tr><td><a href="suites/jdart-regression/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">jdart-regression</a></td><td>16</td><td>10</td><td>1</td><td>5</td><td>62.5%</td></tr>
+<tr><td><a href="suites/jpf-regression/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">jpf-regression</a></td><td>104</td><td>100</td><td>0</td><td>4</td><td>96.2%</td></tr>
+<tr><td><a href="suites/juliet-java/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">juliet-java</a></td><td>9</td><td>0</td><td>0</td><td>9</td><td>0.0%</td></tr>
+<tr><td><a href="suites/objects/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">objects</a></td><td>14</td><td>0</td><td>0</td><td>14</td><td>0.0%</td></tr>
+<tr><td><a href="suites/rtems-lock-model/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">rtems-lock-model</a></td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.0%</td></tr>
+<tr><td><a href="suites/securibench/index.html?v=abb70e33874aeb58fad31895fec29493626166d9">securibench</a></td><td>113</td><td>96</td><td>4</td><td>13</td><td>85.0%</td></tr>
+
+</table>
+
+<h2>Analysis</h2>
+<ul>
+  <li><a href="failure-analysis.html?v=abb70e33874aeb58fad31895fec29493626166d9">Failure Analysis</a> — overall accuracy and failure reasons breakdown</li>
+</ul>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI &mdash; Run 27805801294
+</div>
+</body>
+</html>

@@ -25,7 +25,7 @@
                        (fp.mul roundNearestTiesToEven double0 double0)))))
 
 
-Solving time of z3 bitvector is 170954 ms
+Solving time of z3 bitvector is 166533 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -84,7 +84,7 @@ Using floating point for reals: yes
                        (fp.mul roundNearestTiesToEven double0 double0)))))
 
 
-Solving time of z3 bitvector is 116320 ms
+Solving time of z3 bitvector is 112940 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -141,7 +141,7 @@ Using floating point for reals: yes
                        (fp.mul roundNearestTiesToEven double0 double0)))))
 
 
-Solving time of z3 bitvector is 53434 ms
+Solving time of z3 bitvector is 51481 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

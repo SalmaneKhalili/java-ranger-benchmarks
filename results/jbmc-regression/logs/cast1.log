@@ -20,7 +20,7 @@
 (assert (bvsge int0 #xffffffffffffff80))
 
 
-Solving time of z3 bitvector is 4375 ms
+Solving time of z3 bitvector is 4411 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -82,7 +82,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #xffffffffffffff80))
 
 
-Solving time of z3 bitvector is 15794 ms
+Solving time of z3 bitvector is 15904 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 73317 msec
+Veritesting Dyn Time = 73043 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 73019 msec
-Total Solver Parse Time = 25 msec
+Total Solver Time = 72774 msec
+Total Solver Parse Time = 26 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 575 msec
+Total Solver Clean up Time = 560 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-73317,0,73317,0,0,73019,25,575,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
+73043,0,73043,0,0,72774,26,560,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6141
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/18/26 4:15 AM
+====================================================== search finished: 6/19/26 4:44 AM

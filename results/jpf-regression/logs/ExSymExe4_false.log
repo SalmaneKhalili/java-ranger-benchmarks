@@ -20,7 +20,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 66 ms
+Solving time of z3 bitvector is 44 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -49,7 +49,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 695 ms
+Solving time of z3 bitvector is 374 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1196 msec
+Veritesting Dyn Time = 670 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 822 msec
-Total Solver Parse Time = 9 msec
+Total Solver Time = 455 msec
+Total Solver Parse Time = 5 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 15 msec
+Total Solver Clean up Time = 11 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1196,0,1196,0,0,822,9,15,0,3,0,0,0,0,3,0,3,0,7,0,0,0,0,7,0,0,-1,-1,0.0,0,0,0
+670,0,670,0,0,455,5,11,0,3,0,0,0,0,3,0,3,0,7,0,0,0,0,7,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:5..."
 
 ====================================================== statistics
-elapsed time:       00:00:01
+elapsed time:       00:00:00
 states:             new=5,visited=0,backtracked=2,end=2
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
@@ -196,4 +196,4 @@ instructions:       6136
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/18/26 4:13 AM
+====================================================== search finished: 6/19/26 4:42 AM

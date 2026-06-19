@@ -3,7 +3,7 @@
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23,12 +23,12 @@ int1 != CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 12
-int7[514] > CONST_400 &&
-int7[514] >= CONST_400 &&
+int7[1040187394] > CONST_400 &&
+int7[1040187394] >= CONST_400 &&
 int5[-2147483648] < int3[-2147483647] &&
 int6[0] == CONST_0 &&
 int0[301] < CONST_600 &&
-int7[514] <= int8[134217728] &&
+int7[1040187394] <= int8[1056964608] &&
 int11[-2147483648] <= CONST_0 &&
 int10[-2147483648] != CONST_1 &&
 int0[301] > CONST_300 &&
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2809 msec
+Veritesting Dyn Time = 2963 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2309 msec
-Total Solver Parse Time = 197 msec
+Total Solver Time = 2417 msec
+Total Solver Parse Time = 203 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 160 msec
+Total Solver Clean up Time = 182 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2809,0,2809,0,0,2309,197,160,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
+2963,0,2963,0,0,2417,203,182,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
@@ -196,4 +196,4 @@ instructions:       11179
 max memory:         240MB
 loaded code:        classes=89,methods=1882
 
-====================================================== search finished: 6/18/26 4:12 AM
+====================================================== search finished: 6/19/26 4:41 AM

@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/18/26 4:13 AM
+====================================================== search started: 6/19/26 4:42 AM
 New sym int string0.length min=-2147483648, max=2147483647
 ## Warning: empty path condition
 ### PCs: total:1 sat:1 unsat:0
@@ -106,7 +106,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 413 msec
+Veritesting Dyn Time = 377 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -145,7 +145,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-413,0,413,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+377,0,377,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -160,5 +160,5 @@ instructions:       6142
 max memory:         240MB
 loaded code:        classes=90,methods=2051
 
-====================================================== search finished: 6/18/26 4:13 AM
+====================================================== search finished: 6/19/26 4:42 AM
 

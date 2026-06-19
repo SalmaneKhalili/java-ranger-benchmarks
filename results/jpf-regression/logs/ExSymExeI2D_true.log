@@ -36,7 +36,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 865 ms
+Solving time of z3 bitvector is 509 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -77,7 +77,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 1073 ms
+Solving time of z3 bitvector is 581 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -118,7 +118,7 @@ Using floating point for reals: yes
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 261 ms
+Solving time of z3 bitvector is 154 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 5628 msec
+Veritesting Dyn Time = 3346 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 5329 msec
-Total Solver Parse Time = 12 msec
+Total Solver Time = 3185 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 186 msec
+Total Solver Clean up Time = 141 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-5628,0,5628,0,0,5329,12,186,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+3346,0,3346,0,0,3185,7,141,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:05
+elapsed time:       00:00:03
 states:             new=5,visited=0,backtracked=5,end=2
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
@@ -196,4 +196,4 @@ instructions:       6099
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/18/26 4:14 AM
+====================================================== search finished: 6/19/26 4:42 AM
