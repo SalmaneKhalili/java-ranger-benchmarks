@@ -29,7 +29,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 115 ms
+Solving time of z3 bitvector is 105 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -55,7 +55,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 249 ms
+Solving time of z3 bitvector is 242 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -81,7 +81,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 563 ms
+Solving time of z3 bitvector is 538 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -108,7 +108,7 @@ Using floating point for reals: yes
 (assert (fp.lt (fp.add roundNearestTiesToEven double0 (_ +zero 11 53)) double1))
 
 
-Solving time of z3 bitvector is 159 ms
+Solving time of z3 bitvector is 140 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1422 msec
+Veritesting Dyn Time = 1377 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 987 msec
+Total Solver Time = 949 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 13 msec
+Total Solver Clean up Time = 12 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1422,0,1422,0,0,987,8,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+1377,0,1377,0,0,949,8,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
@@ -196,4 +196,4 @@ instructions:       6116
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/18/26 4:15 AM
+====================================================== search finished: 6/20/26 3:57 AM

@@ -13,7 +13,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/19/26 4:41 AM
+====================================================== search started: 6/20/26 3:54 AM
 New sym int int0 min=-2147483648, max=2147483647
 New sym int int1 min=-2147483648, max=2147483647
 ^_^ running jitAnalysis ^_^
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 186 msec
+Veritesting Dyn Time = 300 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 23 msec
-Total Solver Parse Time = 4 msec
+Total Solver Time = 36 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-186,0,186,0,0,23,4,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
+300,0,300,0,0,36,7,0,0,2,0,0,0,0,2,0,2,0,4,0,0,0,0,4,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6182
 max memory:         240MB
 loaded code:        classes=86,methods=1835
 
-====================================================== search finished: 6/19/26 4:41 AM
+====================================================== search finished: 6/20/26 3:54 AM

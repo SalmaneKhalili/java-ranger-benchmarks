@@ -47,7 +47,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 4 ms
+Solving time of z3 bitvector is 3 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 280844 msec
+Veritesting Dyn Time = 258272 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 280518 msec
-Total Solver Parse Time = 134 msec
+Total Solver Time = 257926 msec
+Total Solver Parse Time = 108 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 3665 msec
+Total Solver Clean up Time = 3279 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-280844,0,280844,0,0,280518,134,3665,0,9,0,0,0,0,9,0,9,0,86,0,0,0,0,86,0,0,-1,-1,0.0,0,0,0
+258272,0,258272,0,0,257926,108,3279,0,9,0,0,0,0,9,0,9,0,86,0,0,0,0,86,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:04:40
+elapsed time:       00:04:18
 states:             new=65,visited=0,backtracked=65,end=23
 search:             maxDepth=13,constraints=16
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=34
@@ -196,4 +196,4 @@ instructions:       7071
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/18/26 4:20 AM
+====================================================== search finished: 6/20/26 4:02 AM

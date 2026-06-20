@@ -1,3 +1,67 @@
+(assert (bvsge e26 #xffffffff80000000))
+(assert (bvsle e26 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000012)
+         (= e26 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000012))
+         (= e26 #x0000000000000000))))
+(assert (bvsge e25 #xffffffff80000000))
+(assert (bvsle e25 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000011)
+         (= e25 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000011))
+         (= e25 #x0000000000000000))))
+(assert (bvsge e24 #xffffffff80000000))
+(assert (bvsle e24 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x0000000000000010)
+         (= e24 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x0000000000000010))
+         (= e24 #x0000000000000000))))
+(assert (bvsge e23 #xffffffff80000000))
+(assert (bvsle e23 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x000000000000000f)
+         (= e23 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x000000000000000f))
+         (= e23 #x0000000000000000))))
+(assert (bvsge e22 #xffffffff80000000))
+(assert (bvsle e22 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x000000000000000e)
+         (= e22 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x000000000000000e))
+         (= e22 #x0000000000000000))))
+(assert (bvsge e21 #xffffffff80000000))
+(assert (bvsle e21 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (or (and (= #x0000000000000000 #x0000000000000000)
+         (= #x0000000000000001 #x000000000000000d)
+         (= e21 int1))
+    (and (= #x0000000000000000 #x0000000000000000)
+         (not (= #x0000000000000001 #x000000000000000d))
+         (= e21 #x0000000000000000))))
+(assert (bvsge e20 #xffffffff80000000))
+(assert (bvsle e20 #x000000007fffffff))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
 (assert (or (and (= #x0000000000000000 #x0000000000000000)
          (= #x0000000000000001 #x000000000000000c)
          (= e20 int1))
@@ -128,72 +192,8 @@
 (assert (bvsle int1 #x000000007fffffff))
 (assert (bvslt int1 #x00000000000f4240))
 (assert (bvsge int1 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvmul int0 int0) #x0000000000002710))
 (assert (bvsge (bvmul int0 int0) #x0000000000000000))
 (assert (bvslt int0 #x00000000000f4240))
 (assert (bvsgt int0 #x0000000000000000))
 
-
-Solving time of z3 bitvector is 100270 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 20014
-int3 < CONST_1000000 &&
-int3 >= CONST_0 &&
-0==0&&2==9999&&e20007==int2||0==0&&!(2==9999)&&e20007==e10007 -> true
-
-### PCs: total:161 sat:61 unsat:100
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-numeric PC: constraint # = 20015
-CONST_3 >= CONST_10000 &&
-int3 < CONST_1000000 &&
-int3 >= CONST_0 &&
-0==0&&2==9999&&e20007==int2||0==0&&!(2==9999)&&e20007==e10007 -> false
-
-### PCs: total:162 sat:61 unsat:101
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:95)
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-numeric PC: constraint # = 20015
-CONST_3 < CONST_0 &&
-int3 < CONST_1000000 &&
-int3 >= CONST_0 &&
-0==0&&2==9999&&e20007==int2||0==0&&!(2==9999)&&e20007==e10007 -> false
-
-### PCs: total:163 sat:61 unsat:102
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:95)
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

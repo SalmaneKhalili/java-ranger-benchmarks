@@ -6,7 +6,7 @@
 (assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 212507 ms
+Solving time of z3 bitvector is 176549 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -65,7 +65,7 @@ Using floating point for reals: yes
 (assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 167022 ms
+Solving time of z3 bitvector is 138877 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -131,7 +131,7 @@ Using floating point for reals: yes
 (assert (fp.lt double4 double2))
 
 
-Solving time of z3 bitvector is 103804 ms
+Solving time of z3 bitvector is 89024 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

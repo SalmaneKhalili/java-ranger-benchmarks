@@ -30,7 +30,7 @@ JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/19/26 4:41 AM
+====================================================== search started: 6/20/26 3:55 AM
 New sym int int0 min=-2147483648, max=2147483647
 New sym int int1 min=-2147483648, max=2147483647
 ALOAD pcHeap: constraint # = 1
@@ -60,7 +60,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 251 msec
+Veritesting Dyn Time = 267 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -99,7 +99,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-251,0,251,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+267,0,267,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'intValue(..."
@@ -114,5 +114,5 @@ instructions:       6057
 max memory:         240MB
 loaded code:        classes=89,methods=1860
 
-====================================================== search finished: 6/19/26 4:41 AM
+====================================================== search finished: 6/20/26 3:55 AM
 

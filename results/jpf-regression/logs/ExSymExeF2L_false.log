@@ -16,7 +16,7 @@
 (assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 106 ms
+Solving time of z3 bitvector is 157 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -50,7 +50,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 9 ms
+Solving time of z3 bitvector is 12 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -84,7 +84,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 456 ms
+Solving time of z3 bitvector is 756 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -119,7 +119,7 @@ Using floating point for reals: yes
 (assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 113 ms
+Solving time of z3 bitvector is 172 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
