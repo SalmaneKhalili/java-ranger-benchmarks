@@ -1,7 +1,3 @@
-
-
-numeric PC: constraint # = 2
-REAL_1 == (int0 + CONST_1) &&
 int0 >= CONST_0 -> true
 
 ### PCs: total:3 sat:3 unsat:0
@@ -15,8 +11,9 @@ Using floating point for reals: yes
 (declare-fun REAL_1 () (_ FloatingPoint 11 53))
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq REAL_1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_1)))
 (assert (fp.lt REAL_1 (_ +zero 11 53)))
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
@@ -27,7 +24,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 34 ms
+Solving time of z3 bitvector is 38 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -47,8 +44,9 @@ Using floating point for reals: yes
 (declare-fun REAL_1 () (_ FloatingPoint 11 53))
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq REAL_1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_1)))
 (assert (fp.eq (_ +zero 11 53) REAL_1))
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
@@ -59,7 +57,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 273 ms
+Solving time of z3 bitvector is 203 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -79,8 +77,9 @@ Using floating point for reals: yes
 (declare-fun REAL_1 () (_ FloatingPoint 11 53))
 (declare-fun |(int0 + CONST_1)_-1902868816| () (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq REAL_1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_1)))
 (assert (fp.gt REAL_1 (_ +zero 11 53)))
 (assert (bvsge |(int0 + CONST_1)_-1902868816| #xffffffffffffd8f0))
 (assert (bvsle |(int0 + CONST_1)_-1902868816| #x0000000000002710))
@@ -91,7 +90,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 87 ms
+Solving time of z3 bitvector is 105 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -117,13 +116,14 @@ Using floating point for reals: yes
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd int0 #x0000000000000001) |(int0 + CONST_1)_-1902868816|))
-(assert (fp.gt REAL_1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq REAL_1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_1)))
 (assert (fp.eq REAL_1 ((_ to_fp 11 53) roundTowardZero |(int0 + CONST_1)_-1902868816|)))
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 118 ms
+Solving time of z3 bitvector is 155 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -133,18 +133,18 @@ int0 >= CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 2
-REAL_1[4096.0] == (int0[4095] + CONST_1) &&
-int0[4095] >= CONST_0
+REAL_1[518.0] == (int0[517] + CONST_1) &&
+int0[517] >= CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 [SEVERE] JPF exception, terminating: exception during propertyViolated() notification
 
 java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:156)
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:202)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:160)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:206)
 	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslator.java:32)
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:46)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:50)
 	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:23)
 	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.translate(NormalFormTranslator.java:44)
 	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.collect(NumericConstraintTranslator.java:31)
@@ -180,10 +180,10 @@ gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notificat
 	at gov.nasa.jpf.tool.Run.call(Run.java:80)
 	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
 Caused by: java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:156)
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:202)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:160)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:206)
 	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslator.java:32)
-	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:46)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:50)
 	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:23)
 	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.translate(NormalFormTranslator.java:44)
 	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.collect(NumericConstraintTranslator.java:31)

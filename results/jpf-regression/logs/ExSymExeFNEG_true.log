@@ -1,8 +1,3 @@
-(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
-(assert (fp.eq (_ +zero 11 53) float0))
-
-
-Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -19,8 +14,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
 (assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0)))
 (assert (fp.eq (_ +zero 11 53) float0))
 
@@ -42,8 +38,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
 (assert (fp.gt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
 (assert (fp.eq (_ +zero 11 53) float0))
 
@@ -67,8 +64,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
 (assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
 (assert (fp.gt float0 (_ +zero 11 53)))
 
@@ -90,8 +88,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
 (assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0)))
 (assert (fp.gt float0 (_ +zero 11 53)))
 
@@ -113,8 +112,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun float0 () (_ FloatingPoint 11 53))
-(assert (fp.gt float0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt float0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
 (assert (fp.gt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
 (assert (fp.gt float0 (_ +zero 11 53)))
 
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 319 msec
+Veritesting Dyn Time = 301 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 54 msec
+Total Solver Time = 56 msec
 Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-319,0,319,0,0,54,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+301,0,301,0,0,56,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6093
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/20/26 3:56 AM
+====================================================== search finished: 6/20/26 12:33 PM

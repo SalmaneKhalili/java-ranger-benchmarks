@@ -18,7 +18,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 275 ms
+Solving time of z3 bitvector is 317 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -50,7 +50,7 @@ Using floating point for reals: yes
 (assert (bvsge int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 3602 ms
+Solving time of z3 bitvector is 3868 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 8658 msec
+Veritesting Dyn Time = 9386 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 8297 msec
+Total Solver Time = 9043 msec
 Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 77 msec
+Total Solver Clean up Time = 91 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-8658,0,8658,0,0,8297,9,77,0,4,0,0,0,0,4,0,4,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
+9386,0,9386,0,0,9043,9,91,0,4,0,0,0,0,4,0,4,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:6..."
 
 ====================================================== statistics
-elapsed time:       00:00:08
+elapsed time:       00:00:09
 states:             new=5,visited=0,backtracked=2,end=2
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
@@ -196,4 +196,4 @@ instructions:       6144
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/20/26 3:55 AM
+====================================================== search finished: 6/20/26 12:32 PM

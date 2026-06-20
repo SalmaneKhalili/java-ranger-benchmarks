@@ -1,6 +1,3 @@
-double0 > CONST_2.75 &&
-double0 > CONST_2.5 &&
-double0 > CONST_2.25 &&
 double0 > CONST_2.0 &&
 double0 > CONST_1.75 &&
 double0 > CONST_1.5 &&
@@ -16,8 +13,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
 (assert (fp.lt double0 (fp #b0 #b01111111111 #x4000000000000)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #xa000000000000)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #x8000000000000)))
@@ -57,8 +55,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
 (assert (fp.eq (fp #b0 #b01111111111 #x4000000000000) double0))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #xa000000000000)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #x8000000000000)))
@@ -98,8 +97,9 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #xa000000000000)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #x8000000000000)))
 (assert (fp.gt double0 (fp #b0 #b10000000000 #x6000000000000)))
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 689 msec
+Veritesting Dyn Time = 715 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 391 msec
-Total Solver Parse Time = 36 msec
+Total Solver Time = 404 msec
+Total Solver Parse Time = 38 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 19 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-689,0,689,0,0,391,36,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+715,0,715,0,0,404,38,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6602
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/20/26 3:55 AM
+====================================================== search finished: 6/20/26 12:31 PM

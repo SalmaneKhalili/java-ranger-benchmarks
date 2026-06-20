@@ -1,132 +1,4 @@
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x0000000000000)
-               double2)))
-(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000010 #x2f9422c23c47e)
-               (fp.sub roundNearestTiesToEven
-                       double3
-                       (fp.mul roundNearestTiesToEven double2 double2)))))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x0000000000000)
-               double0)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000010 #x4000000000000)
-               (fp.sub roundNearestTiesToEven
-                       double1
-                       (fp.mul roundNearestTiesToEven double0 double0)))))
-
-
-Solving time of z3 bitvector is 58621 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-CONST_0.0 == (CONST_1.0 - double2) &&
-CONST_0.0 == ((double3 - (double2 * double2)) * CONST_9.486832980505138) &&
-CONST_0.0 == (CONST_1.0 - double0) &&
-CONST_0.0 == ((double1 - (double0 * double0)) * CONST_10.0) -> true
-
-### PCs: total:11 sat:11 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double2 () (_ FloatingPoint 11 53))
-(declare-fun double3 () (_ FloatingPoint 11 53))
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x0000000000000)
-               double2)
-       (_ +zero 11 53)))
-(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000010 #x2f9422c23c47e)
-               (fp.sub roundNearestTiesToEven
-                       double3
-                       (fp.mul roundNearestTiesToEven double2 double2)))))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x0000000000000)
-               double0)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000010 #x4000000000000)
-               (fp.sub roundNearestTiesToEven
-                       double1
-                       (fp.mul roundNearestTiesToEven double0 double0)))))
-
-
-Solving time of z3 bitvector is 176208 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-(CONST_1.0 - double2) > CONST_0.0 &&
-CONST_0.0 == ((double3 - (double2 * double2)) * CONST_9.486832980505138) &&
-CONST_0.0 == (CONST_1.0 - double0) &&
-CONST_0.0 == ((double1 - (double0 * double0)) * CONST_10.0) -> true
-
-### PCs: total:12 sat:12 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(declare-fun double3 () (_ FloatingPoint 11 53))
-(declare-fun double2 () (_ FloatingPoint 11 53))
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.lt (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000000 #x94c583ada5b53)
-               (fp.sub roundNearestTiesToEven
-                       (fp.add roundNearestTiesToEven double1 double3)
-                       (fp #b0 #b10000000000 #x0000000000000)))
-       (_ +zero 11 53)))
-(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x0000000000000)
-               double2)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.mul roundNearestTiesToEven
-               (fp #b0 #b10000000010 #x2f9422c23c47e)
-               (fp.sub roundNearestTiesToEven
-                       double3
-                       (fp.mul roundNearestTiesToEven double2 double2)))))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
 (assert (fp.eq (_ +zero 11 53)
        (fp.sub roundNearestTiesToEven
                (fp #b0 #b01111111111 #x0000000000000)
@@ -139,7 +11,7 @@ Using floating point for reals: yes
                        (fp.mul roundNearestTiesToEven double0 double0)))))
 
 
-Solving time of z3 bitvector is 74787 ms
+Solving time of z3 bitvector is 65140 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -162,18 +34,21 @@ Using floating point for reals: yes
 (declare-fun double3 () (_ FloatingPoint 11 53))
 (declare-fun double2 () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double3 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double3 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
 (assert (fp.eq (_ +zero 11 53)
        (fp.mul roundNearestTiesToEven
                (fp #b0 #b10000000000 #x94c583ada5b53)
                (fp.sub roundNearestTiesToEven
                        (fp.add roundNearestTiesToEven double1 double3)
                        (fp #b0 #b10000000000 #x0000000000000)))))
-(assert (fp.gt double2 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double2 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
 (assert (fp.eq (_ +zero 11 53)
        (fp.sub roundNearestTiesToEven
                (fp #b0 #b01111111111 #x0000000000000)
@@ -184,8 +59,133 @@ Using floating point for reals: yes
                (fp.sub roundNearestTiesToEven
                        double3
                        (fp.mul roundNearestTiesToEven double2 double2)))))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.sub roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x0000000000000)
+               double0)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               (fp.sub roundNearestTiesToEven
+                       double1
+                       (fp.mul roundNearestTiesToEven double0 double0)))))
+
+
+Solving time of z3 bitvector is 206987 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+CONST_0.0 == (((double1 + double3) - CONST_2.0) * CONST_3.1622776601683795) &&
+CONST_0.0 == (CONST_1.0 - double2) &&
+CONST_0.0 == ((double3 - (double2 * double2)) * CONST_9.486832980505138) &&
+CONST_0.0 == (CONST_1.0 - double0) &&
+CONST_0.0 == ((double1 - (double0 * double0)) * CONST_10.0) -> true
+
+### PCs: total:14 sat:13 unsat:1
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.gt (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000000 #x94c583ada5b53)
+               (fp.sub roundNearestTiesToEven
+                       (fp.add roundNearestTiesToEven double1 double3)
+                       (fp #b0 #b10000000000 #x0000000000000)))
+       (_ +zero 11 53)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.sub roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x0000000000000)
+               double2)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x2f9422c23c47e)
+               (fp.sub roundNearestTiesToEven
+                       double3
+                       (fp.mul roundNearestTiesToEven double2 double2)))))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.sub roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x0000000000000)
+               double0)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               (fp.sub roundNearestTiesToEven
+                       double1
+                       (fp.mul roundNearestTiesToEven double0 double0)))))
+
+
+Solving time of z3 bitvector is 79205 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+(((double1 + double3) - CONST_2.0) * CONST_3.1622776601683795) > CONST_0.0 &&
+CONST_0.0 == (CONST_1.0 - double2) &&
+CONST_0.0 == ((double3 - (double2 * double2)) * CONST_9.486832980505138) &&
+CONST_0.0 == (CONST_1.0 - double0) &&
+CONST_0.0 == ((double1 - (double0 * double0)) * CONST_10.0) -> false
+
+### PCs: total:15 sat:13 unsat:2
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.lt (fp.mul roundNearestTiesToEven
+               (fp #b0 #b01111111101 #x43d136248490f)
+               (fp.sub roundNearestTiesToEven double1 double3))
+       (_ +zero 11 53)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.sub roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x0000000000000)
+               double2)))
+(assert (fp.eq (_ +zero 11 53)
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x2f9422c23c47e)
+               (fp.sub roundNearestTiesToEven
+                       double3
+                       (fp.mul roundNearestTiesToEven double2 double2)))))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
 (assert (fp.eq (_ +zero 11 53)
        (fp.sub roundNearestTiesToEven
                (fp #b0 #b01111111111 #x0000000000000)

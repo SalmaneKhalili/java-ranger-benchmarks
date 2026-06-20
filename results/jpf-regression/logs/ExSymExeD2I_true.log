@@ -1,17 +1,5 @@
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double0 (fp #b0 #b10000011100 #xfffffff800000)))
-(assert (fp.gt double0 (_ +zero 11 53)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
 numeric PC: constraint # = 2
 double0 > CONST_1.073741823E9 &&
 double0 > CONST_0.0 -> false
@@ -25,25 +13,29 @@ Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |(double0 + CONST_1.0)_288994035| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 + CONST_1.0)_959869407| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (declare-fun INT_2 () (_ BitVec 64))
-(assert (fp.gt |(double0 + CONST_1.0)_288994035| (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 + CONST_1.0)_288994035| (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 + CONST_1.0)_288994035|
-   (fp.add roundNearestTiesToEven
-           double0
-           (fp #b0 #b01111111111 #x0000000000000))))
+(assert (or (and (fp.geq |(double0 + CONST_1.0)_959869407|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 + CONST_1.0)_959869407|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 + CONST_1.0)_959869407|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
+       (fp.add roundNearestTiesToEven
+               double0
+               (fp #b0 #b01111111111 #x0000000000000))))
 (assert (bvsge INT_2 #xffffffff80000000))
 (assert (bvsle INT_2 #x000000007fffffff))
-(assert (fp.eq |(double0 + CONST_1.0)_288994035|
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
        ((_ to_fp 11 53) roundTowardZero INT_2)))
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 1138 ms
+Solving time of z3 bitvector is 842 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -64,25 +56,29 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun INT_2 () (_ BitVec 64))
-(declare-fun |(double0 + CONST_1.0)_288994035| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 + CONST_1.0)_959869407| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge INT_2 #xffffffff80000000))
 (assert (bvsle INT_2 #x000000007fffffff))
 (assert (bvsle INT_2 #x0000000000000000))
-(assert (fp.gt |(double0 + CONST_1.0)_288994035| (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 + CONST_1.0)_288994035| (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 + CONST_1.0)_288994035|
-   (fp.add roundNearestTiesToEven
-           double0
-           (fp #b0 #b01111111111 #x0000000000000))))
-(assert (fp.eq |(double0 + CONST_1.0)_288994035|
+(assert (or (and (fp.geq |(double0 + CONST_1.0)_959869407|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 + CONST_1.0)_959869407|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 + CONST_1.0)_959869407|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
+       (fp.add roundNearestTiesToEven
+               double0
+               (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
        ((_ to_fp 11 53) roundTowardZero INT_2)))
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 450 ms
+Solving time of z3 bitvector is 276 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -100,25 +96,29 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun INT_2 () (_ BitVec 64))
-(declare-fun |(double0 + CONST_1.0)_288994035| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 + CONST_1.0)_959869407| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge INT_2 #xffffffff80000000))
 (assert (bvsle INT_2 #x000000007fffffff))
 (assert (bvsgt INT_2 #x0000000000000000))
-(assert (fp.gt |(double0 + CONST_1.0)_288994035| (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 + CONST_1.0)_288994035| (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 + CONST_1.0)_288994035|
-   (fp.add roundNearestTiesToEven
-           double0
-           (fp #b0 #b01111111111 #x0000000000000))))
-(assert (fp.eq |(double0 + CONST_1.0)_288994035|
+(assert (or (and (fp.geq |(double0 + CONST_1.0)_959869407|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 + CONST_1.0)_959869407|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 + CONST_1.0)_959869407|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
+       (fp.add roundNearestTiesToEven
+               double0
+               (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(double0 + CONST_1.0)_959869407|
        ((_ to_fp 11 53) roundTowardZero INT_2)))
 (assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 681 ms
+Solving time of z3 bitvector is 1255 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4185 msec
+Veritesting Dyn Time = 4510 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 3918 msec
-Total Solver Parse Time = 10 msec
+Total Solver Time = 4247 msec
+Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 78 msec
+Total Solver Clean up Time = 92 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4185,0,4185,0,0,3918,10,78,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+4510,0,4510,0,0,4247,12,92,0,1,0,0,0,0,1,0,1,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6106
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/20/26 3:56 AM
+====================================================== search finished: 6/20/26 12:32 PM

@@ -1,30 +1,26 @@
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun INT_1 () (_ BitVec 64))
-(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge INT_1 #xffffffff80000000))
 (assert (bvsle INT_1 #x000000007fffffff))
 (assert (bvslt INT_1 #x0000000000000064))
-(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
-       (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
-       (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 * CONST_10.0)_1340565491|
-   (fp.mul roundNearestTiesToEven
-           (fp #b0 #b10000000010 #x4000000000000)
-           double0)))
-(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
        ((_ to_fp 11 53) roundTowardZero INT_1)))
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 3521 ms
+Solving time of z3 bitvector is 3444 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42,28 +38,30 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun INT_1 () (_ BitVec 64))
-(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge INT_1 #xffffffff80000000))
 (assert (bvsle INT_1 #x000000007fffffff))
 (assert (bvslt INT_1 #xffffffffffffff9c))
 (assert (bvslt INT_1 #x0000000000000064))
-(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
-       (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
-       (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 * CONST_10.0)_1340565491|
-   (fp.mul roundNearestTiesToEven
-           (fp #b0 #b10000000010 #x4000000000000)
-           double0)))
-(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
        ((_ to_fp 11 53) roundTowardZero INT_1)))
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 2002 ms
+Solving time of z3 bitvector is 1394 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -83,28 +81,30 @@ Using floating point for reals: yes
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun INT_1 () (_ BitVec 64))
-(declare-fun |(double0 * CONST_10.0)_1340565491| () (_ FloatingPoint 11 53))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge INT_1 #xffffffff80000000))
 (assert (bvsle INT_1 #x000000007fffffff))
 (assert (bvslt INT_1 #xffffffffffffff9c))
 (assert (bvslt INT_1 #x0000000000000064))
-(assert (fp.gt |(double0 * CONST_10.0)_1340565491|
-       (fp #b1 #b10000011110 #x0000000000000)))
-(assert (fp.lt |(double0 * CONST_10.0)_1340565491|
-       (fp #b0 #b10000011101 #xfffffffc00000)))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (= |(double0 * CONST_10.0)_1340565491|
-   (fp.mul roundNearestTiesToEven
-           (fp #b0 #b10000000010 #x4000000000000)
-           double0)))
-(assert (fp.eq |(double0 * CONST_10.0)_1340565491|
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
        ((_ to_fp 11 53) roundTowardZero INT_1)))
 (assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 847 ms
+Solving time of z3 bitvector is 1811 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -114,87 +114,86 @@ INT_1 < CONST_100 &&
 (double0 * CONST_10.0) == INT_1 &&
 double0 < CONST_0.0 -> true
 
-[SEVERE] JPF exception, terminating: exception during propertyViolated() notification
 
-java.lang.NumberFormatException: For input string: "(-"
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValue(ProblemZ3BitVector.java:1676)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:228)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
-	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
-	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
-java.lang.NumberFormatException: For input string: "(-"
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getFPValue(ProblemZ3BitVector.java:1640)
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1651)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
-	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
-	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
-java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
-java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
-	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
-	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
----------------------- JPF error stack trace ---------------------
-gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification
-	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:863)
-	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
-	at gov.nasa.jpf.JPF.run(JPF.java:613)
-	at gov.nasa.jpf.JPF.start(JPF.java:189)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at gov.nasa.jpf.tool.Run.call(Run.java:80)
-	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
-Caused by: java.lang.RuntimeException: ## Error Z3: Exception caught in Z3 JNI: 
-java.lang.NumberFormatException: For input string: "(-"
-	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.getRealValueInf(ProblemZ3BitVector.java:1664)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.catchBody(SymbolicConstraintsGeneral.java:286)
-	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.solve(SymbolicConstraintsGeneral.java:231)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:390)
-	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
-	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
-	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
-	... 9 more
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.bar(Main.java:32)
+	at Main.foo(Main.java:43)
+	at Main.main(Main.java:49)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.bar(Main.java:32)
+	at Main.foo(Main.java:43)
+	at Main.main(Main.java:49)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 7863 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 5772 msec
+Total Solver Parse Time = 10 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 47 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 0
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 0
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 0
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 0
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+7863,0,7863,0,0,5772,10,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.bar(Main.java:32..."
+
+====================================================== statistics
+elapsed time:       00:00:07
+states:             new=5,visited=0,backtracked=0,end=0
+search:             maxDepth=5,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4
+heap:               new=478,released=8,maxLive=0,gcCycles=1
+instructions:       6089
+max memory:         240MB
+loaded code:        classes=89,methods=1873
+
+====================================================== search finished: 6/20/26 12:31 PM

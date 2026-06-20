@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 6633 msec
+Veritesting Dyn Time = 6646 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 5313 msec
-Total Solver Parse Time = 836 msec
+Total Solver Time = 5587 msec
+Total Solver Parse Time = 926 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 190 msec
+Total Solver Clean up Time = 197 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-6633,0,6633,0,0,5313,836,190,0,2,0,0,0,0,2,0,2,0,11033,0,0,0,0,11033,0,0,-1,-1,0.0,0,0,0
+6646,0,6646,0,0,5587,926,197,0,2,0,0,0,0,2,0,2,0,11033,0,0,0,0,11033,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
@@ -193,7 +193,7 @@ search:             maxDepth=13,constraints=2
 choice generators:  thread=18 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=17), data=2
 heap:               new=474,released=74,maxLive=454,gcCycles=25
 instructions:       930231
-max memory:         303MB
+max memory:         302MB
 loaded code:        classes=85,methods=1836
 
-====================================================== search finished: 6/20/26 4:42 AM
+====================================================== search finished: 6/20/26 1:19 PM

@@ -24,13 +24,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev 7d31423b0d16196e39c22164b9cfed388a375b63) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/20/26 5:22 AM
+====================================================== search started: 6/20/26 1:25 PM
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
 Using floating point for reals: yes
@@ -39,10 +39,12 @@ Using floating point for reals: yes
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
 (assert (let ((a!1 (fp.mul roundNearestTiesToEven
                    (fp.sub roundNearestTiesToEven
                            (fp.mul roundNearestTiesToEven
@@ -75,7 +77,7 @@ Using floating point for reals: yes
          (_ +zero 11 53))))
 
 
-Solving time of z3 bitvector is 240970 ms
+Solving time of z3 bitvector is 182540 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -92,10 +94,12 @@ Using floating point for reals: yes
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun double0 () (_ FloatingPoint 11 53))
 (declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (fp.gt double0 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double0 (fp #b0 #b10000001100 #x3880000000000)))
-(assert (fp.gt double1 (fp #b1 #b10000001100 #x3880000000000)))
-(assert (fp.lt double1 (fp #b0 #b10000001100 #x3880000000000)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
 (assert (let ((a!1 (fp.mul roundNearestTiesToEven
                    (fp.sub roundNearestTiesToEven
                            (fp.mul roundNearestTiesToEven
