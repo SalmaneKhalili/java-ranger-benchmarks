@@ -37,7 +37,7 @@ SUITES = [
     "juliet-java",
 ]
 
-def make_jpf_config(classpath, fp_enabled=True):
+def make_jpf_config(classpath, fp_enabled=True, nan_enabled=False, inf_enabled=False):
     return """\
 target=Main
 classpath={classpath}
@@ -60,7 +60,11 @@ veritestingMode=5
 recursiveDepth=200
 singlePathOptimization=true
 symbolic.fp={fp}
-listener=.symbc.VeritestingListener""".format(classpath=classpath, fp=str(fp_enabled).lower())
+symbolic.nan={nan}
+symbolic.inf={inf}
+listener=.symbc.VeritestingListener""".format(
+    classpath=classpath, fp=str(fp_enabled).lower(),
+    nan=str(nan_enabled).lower(), inf=str(inf_enabled).lower())
 
 STATUS_MAP = {
     "CORRECT": "correct", "INCORRECT": "incorrect",
@@ -334,9 +338,9 @@ class BenchmarkResult:
 
 
 def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
-                  timeout=30, fp_enabled=True):
+                  timeout=30, fp_enabled=True, nan_enabled=False, inf_enabled=False,
+                  property_entry=None):
     result = BenchmarkResult()
-    result.name = os.path.splitext(os.path.basename(yml_path))[0]
     yml_dir = os.path.dirname(yml_path)
 
     config = parse_yaml(yml_path)
@@ -344,11 +348,25 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
         result.error = "malformed YML"
         return result
 
-    first_prop = config["properties"][0]
-    raw = first_prop.get("expected_verdict", "true")
-    result.expected = str(raw).lower()
-    prop_file_rel = first_prop.get("property_file", "../properties/valid-assert.prp")
+    if property_entry is None:
+        property_entry = config["properties"][0]
+    raw = str(property_entry.get("expected_verdict", "true")).lower()
+    result.expected = raw
+    prop_file_rel = property_entry.get("property_file", "../properties/valid-assert.prp")
     result.property_file = os.path.normpath(os.path.join(yml_dir, prop_file_rel))
+
+    # Determine property mode matching jr-sv-comp logic
+    property_mode = "assertion"
+    try:
+        with open(result.property_file) as f:
+            content = f.read()
+        if "Exception" in content:
+            property_mode = "runtime_exception"
+    except OSError:
+        pass
+
+    prop_tag = os.path.splitext(os.path.basename(result.property_file))[0]
+    result.name = f"{os.path.splitext(os.path.basename(yml_path))[0]}.{prop_tag}"
 
     src_dirs = []
     files_csv = ""
@@ -363,7 +381,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
         if os.path.isdir(d):
             for root, dirs, fnames in os.walk(d):
                 for fn in fnames:
-                    if fn.endswith(".java") and fn != "Verifier.java":
+                    if fn.endswith(".java"):
                         java_files.append(os.path.join(root, fn))
 
     if not java_files:
@@ -394,7 +412,11 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
 
         jpf_config_path = os.path.join(tmp_dir, "config.jpf")
         with open(jpf_config_path, "w") as f:
-            f.write(make_jpf_config(classpath, fp_enabled=fp_enabled))
+            f.write(make_jpf_config(classpath, fp_enabled=fp_enabled,
+                                    nan_enabled=nan_enabled, inf_enabled=inf_enabled))
+        if property_mode == "runtime_exception":
+            with open(jpf_config_path, "a") as f:
+                f.write("\nsearch.multiple_errors = true")
 
         log_path = os.path.join(tmp_dir, "jpf.log")
         env = os.environ.copy()
@@ -444,7 +466,9 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
 
         if "no errors detected" in jpf_output:
             result.actual = "true"
-        elif "java.lang.AssertionError" in jpf_output:
+        elif property_mode == "assertion" and "AssertionError" in jpf_output:
+            result.actual = "false"
+        elif property_mode == "runtime_exception" and re.search(r'java\.lang\.\w*Exception', jpf_output):
             result.actual = "false"
         else:
             result.actual = "UNKNOWN"
@@ -532,13 +556,14 @@ def write_benchexec_xml(results, suite, start_dt, end_dt, sysinfo, output_path, 
 
 
 def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
-              timeout=30, fp_enabled=True, max_benchmarks=0):
+              timeout=30, fp_enabled=True, nan_enabled=False, inf_enabled=False,
+              max_benchmarks=0):
     suite_dir = os.path.join(sv_bench_dir, "java", suite)
     if not os.path.isdir(suite_dir):
         print(f"Error: Suite directory not found: {suite_dir}", file=sys.stderr)
         sys.exit(1)
 
-    yml_files = sorted(glob.glob(os.path.join(suite_dir, "*.yml")))
+    yml_files = sorted(glob.glob(os.path.join(suite_dir, "**", "*.yml"), recursive=True))
     if not yml_files:
         print(f"No YML files found in {suite_dir}", file=sys.stderr)
         return
@@ -552,6 +577,8 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
     start_dt = datetime.now()
 
     fp_str = "true" if fp_enabled else "false"
+    nan_str = "true" if nan_enabled else "false"
+    inf_str = "true" if inf_enabled else "false"
     jpf_options = ("+target=Main +symbolic.dp=z3bitvector "
                    "+symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 "
                    "+symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 "
@@ -563,36 +590,46 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
                    "+veritestingMode=5 +recursiveDepth=200 "
                    "+singlePathOptimization=true "
                    f"+symbolic.fp={fp_str} "
+                   f"+symbolic.nan={nan_str} "
+                   f"+symbolic.inf={inf_str} "
                    "+listener=.symbc.VeritestingListener")
 
     results = []
     counters = {"total": 0, "correct": 0, "incorrect": 0, "unknown": 0, "compile_err": 0, "timeout": 0}
 
-    print(f"--- {suite} ({len(yml_files)} benchmarks, timeout={timeout}s, fp={fp_str}) ---")
+    print(f"--- {suite} ({len(yml_files)} benchmarks, timeout={timeout}s, fp={fp_str}, nan={nan_str}, inf={inf_str}) ---")
 
     for yml_path in yml_files:
-        result = run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
-                               timeout=timeout, fp_enabled=fp_enabled)
-        results.append(result)
-        counters["total"] += 1
+        config = parse_yaml(yml_path)
+        if not config or "properties" not in config or not config["properties"]:
+            print(f"  MALFORMED  {os.path.basename(yml_path)}")
+            continue
 
-        if result.verdict == "CORRECT":
-            counters["correct"] += 1
-            status_str = "CORRECT"
-        elif result.verdict == "INCORRECT":
-            counters["incorrect"] += 1
-            status_str = "INCORRECT"
-        elif "timeout" in result.error.lower():
-            counters["timeout"] += 1
-            status_str = "TIMEOUT"
-        elif not result.compile_ok:
-            counters["compile_err"] += 1
-            status_str = "COMPILE_ERR"
-        else:
-            counters["unknown"] += 1
-            status_str = "UNKNOWN"
+        for prop_entry in config["properties"]:
+            result = run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
+                                   timeout=timeout, fp_enabled=fp_enabled,
+                                   nan_enabled=nan_enabled, inf_enabled=inf_enabled,
+                                   property_entry=prop_entry)
+            results.append(result)
+            counters["total"] += 1
 
-        print(f"  {status_str:>11}  {result.name} ({result.walltime:.2f}s)")
+            if result.verdict == "CORRECT":
+                counters["correct"] += 1
+                status_str = "CORRECT"
+            elif result.verdict == "INCORRECT":
+                counters["incorrect"] += 1
+                status_str = "INCORRECT"
+            elif "timeout" in result.error.lower():
+                counters["timeout"] += 1
+                status_str = "TIMEOUT"
+            elif not result.compile_ok:
+                counters["compile_err"] += 1
+                status_str = "COMPILE_ERR"
+            else:
+                counters["unknown"] += 1
+                status_str = "UNKNOWN"
+
+            print(f"  {status_str:>11}  {result.name} ({result.walltime:.2f}s)")
 
     end_dt = datetime.now()
 
@@ -657,6 +694,7 @@ def cmd_run(args):
 
     run_suite(args.suite, args.jr_dir, args.sv_dir, args.output_dir, jr_version_str,
               timeout=args.timeout, fp_enabled=not args.no_fp,
+              nan_enabled=args.nan_enabled, inf_enabled=args.inf_enabled,
               max_benchmarks=args.max_benchmarks)
 
 
@@ -1424,6 +1462,10 @@ def main():
                    help="Per-benchmark JPF timeout in seconds (default: 30)")
     p.add_argument("--no-fp", action="store_true",
                    help="Disable symbolic.fp (floating-point theory)")
+    p.add_argument("--nan", action="store_true", dest="nan_enabled",
+                   help="Enable NaN values for FP symbolic variables")
+    p.add_argument("--inf", action="store_true", dest="inf_enabled",
+                   help="Enable +/-Infinity values for FP symbolic variables")
     p.add_argument("--max-benchmarks", type=int, default=0,
                    help="Limit benchmarks per suite (0 = all, default: 0)")
 
