@@ -1,0 +1,199 @@
+
+numeric PC: constraint # = 13
+((((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((int0 - CONST_1) - CONST_1) != CONST_1 &&
+(int0 - CONST_1) != CONST_1 &&
+int0 != CONST_1 &&
+int0 >= CONST_1 &&
+int0 <= CONST_46 -> true
+
+### PCs: total:1479 sat:752 unsat:727
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub (bvsub a!2 #x0000000000000001) #x0000000000000001)
+     #x0000000000000001))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub a!2 #x0000000000000001) #x0000000000000001)))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!2 #x0000000000000001)))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+(let ((a!2 (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000001)))
+  (not a!2))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
+          #x0000000000000001))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000001))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000001))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000001)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+        #x0000000000000001)))
+(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000001)))
+(assert (not (= int0 #x0000000000000001)))
+(assert (bvsge int0 #x0000000000000001))
+(assert (bvsle int0 #x000000000000002e))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+((((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_1 &&
+(((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
+((int0 - CONST_1) - CONST_1) != CONST_1 &&
+(int0 - CONST_1) != CONST_1 &&
+int0 != CONST_1 &&
+int0 >= CONST_1 &&
+int0 <= CONST_46 -> true
+
+### PCs: total:1480 sat:753 unsat:727
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.fibonacci(Main.java:16)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.fibonacci(Main.java:19)
+	at Main.main(Main.java:28)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 2353 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 2001 msec
+Total Solver Parse Time = 535 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 23 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 4
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 4
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 764
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 764
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+2353,0,2353,0,0,2001,535,23,0,4,0,0,0,0,4,0,4,0,764,0,0,0,0,764,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:02
+states:             new=25,visited=0,backtracked=25,end=12
+search:             maxDepth=13,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
+heap:               new=460,released=116,maxLive=452,gcCycles=13
+instructions:       10848
+max memory:         240MB
+loaded code:        classes=85,methods=1831
+
+====================================================== search finished: 6/23/26 9:36 PM

@@ -1,0 +1,199 @@
+(assert (bvslt int6 #x0000000000000000))
+(assert (bvslt #x0000000000000006 int0))
+(assert (bvsge int5 #xffffffff80000000))
+(assert (bvsle int5 #x000000007fffffff))
+(assert (bvslt int5 #x0000000000000000))
+(assert (bvslt #x0000000000000005 int0))
+(assert (bvsge int4 #xffffffff80000000))
+(assert (bvsle int4 #x000000007fffffff))
+(assert (bvslt int4 #x0000000000000000))
+(assert (bvslt #x0000000000000004 int0))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvslt int3 #x0000000000000000))
+(assert (bvslt #x0000000000000003 int0))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (bvslt int2 #x0000000000000000))
+(assert (bvslt #x0000000000000002 int0))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (bvslt int1 #x0000000000000000))
+(assert (bvslt #x0000000000000001 int0))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+CONST_7 < int0 &&
+int6 < CONST_0 &&
+CONST_6 < int0 &&
+int5 < CONST_0 &&
+CONST_5 < int0 &&
+int4 < CONST_0 &&
+CONST_4 < int0 &&
+int3 < CONST_0 &&
+CONST_3 < int0 &&
+int2 < CONST_0 &&
+CONST_2 < int0 &&
+int1 < CONST_0 &&
+CONST_1 < int0 -> true
+
+### PCs: total:1064 sat:963 unsat:101
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:109)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 3798 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 2362 msec
+Total Solver Parse Time = 163 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 165 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 6
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 6
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 1078
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 1078
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+3798,0,3798,0,0,2362,163,165,0,6,0,0,0,0,6,0,6,0,1078,0,0,0,0,1078,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #5: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #6: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #7: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #10: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #11: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #12: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #13: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #14: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #15: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #16: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #17: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #18: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #19: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #20: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #21: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #22: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #23: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #24: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #25: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #26: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #27: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #28: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #29: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #30: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #31: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #32: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #33: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #34: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #35: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #36: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #37: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #38: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #39: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #40: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #41: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #42: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #43: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #44: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #45: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #46: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #47: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #48: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #49: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #50: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #51: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #52: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #53: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #54: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #55: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+
+====================================================== statistics
+elapsed time:       00:00:03
+states:             new=547,visited=0,backtracked=547,end=61
+search:             maxDepth=13,constraints=202
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=273
+heap:               new=1782,released=1074,maxLive=462,gcCycles=431
+instructions:       16427
+max memory:         240MB
+loaded code:        classes=91,methods=1876
+
+====================================================== search finished: 6/23/26 10:33 PM

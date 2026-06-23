@@ -1,0 +1,199 @@
+char0 == CONST_63 &&
+char0 != CONST_0 -> true
+
+### PCs: total:24 sat:22 unsat:2
+
+Symbolic Exp [ char4 ]entry 0 mismatch, 63, 0
+Mismatch
+the depth of violation is11
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= char4 #x000000000000000a)))
+(assert (not (= char4 #x0000000000000000)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (= char3 #x0000000000000026))
+(assert (not (= char3 #x0000000000000000)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (= char2 #x0000000000000026))
+(assert (not (= char2 #x0000000000000000)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (= char1 #x000000000000003f))
+(assert (not (= char1 #x0000000000000000)))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= char0 #x000000000000003f))
+(assert (not (= char0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+char4 != CONST_10 &&
+char4 != CONST_0 &&
+char3 == CONST_38 &&
+char3 != CONST_0 &&
+char2 == CONST_38 &&
+char2 != CONST_0 &&
+char1 == CONST_63 &&
+char1 != CONST_0 &&
+char0 == CONST_63 &&
+char0 != CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 10
+char4[2] != CONST_10 &&
+char4[2] != CONST_0 &&
+char3[38] == CONST_38 &&
+char3[38] != CONST_0 &&
+char2[38] == CONST_38 &&
+char2[38] != CONST_0 &&
+char1[63] == CONST_63 &&
+char1[63] != CONST_0 &&
+char0[63] == CONST_63 &&
+char0[63] != CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const char1 Int)
+(declare-const char0 Int)
+(declare-const char4 Int)
+(declare-const char3 Int)
+(declare-const char2 Int)
+
+(assert (not (= char4 10)))
+(assert (not (= char4 0)))
+(assert (= char3 38))
+(assert (not (= char3 0)))
+(assert (= char2 38))
+(assert (not (= char2 0)))
+(assert (= char1 63))
+(assert (not (= char1 0)))
+(assert (= char0 63))
+(assert (not (= char0 0)))
+
+
+
+(define-fun char4 () Int
+  (- 1))
+(define-fun char0 () Int
+  63)
+(define-fun char1 () Int
+  63)
+(define-fun char2 () Int
+  38)
+(define-fun char3 () Int
+  38)
+Returned solutions: 
+(define-fun char4 () Int  (- 1))
+(define-fun char0 () Int  63)
+(define-fun char1 () Int  63)
+(define-fun char2 () Int  38)
+(define-fun char3 () Int  38)
+*************************************
+Satisfiable: true
+char1 => 63
+char0 => 63
+char4 => -1
+char3 => 38
+char2 => 38
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.checkEquality(Main.java:21)
+	at Main.main(Main.java:14)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.checkEquality(Main.java:21)
+	at Main.main(Main.java:14)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 464 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 59 msec
+Total Solver Parse Time = 15 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 9
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 9
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 22
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 22
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+464,0,464,0,0,59,15,0,0,9,0,0,0,0,9,0,9,0,22,0,0,0,0,22,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.checkEquality(Ma..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=11,visited=0,backtracked=0,end=0
+search:             maxDepth=11,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=10
+heap:               new=536,released=24,maxLive=468,gcCycles=10
+instructions:       12819
+max memory:         240MB
+loaded code:        classes=91,methods=1897
+
+====================================================== search finished: 6/23/26 9:28 PM

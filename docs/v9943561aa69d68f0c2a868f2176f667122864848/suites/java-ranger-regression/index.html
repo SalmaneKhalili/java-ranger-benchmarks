@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>java-ranger-regression — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>java-ranger-regression</h1>
+  <p>JR: experimentalnan@9a662f9 | Date: 2026-06-23 21:30:18 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=9943561aa69d68f0c2a868f2176f667122864848">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=9943561aa69d68f0c2a868f2176f667122864848">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +symbolic.nan=false +symbolic.inf=false +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">81</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">70<span class="pct">(86.4%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">2</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">9</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>LoopCharAt.valid-assert</td><td>false</td><td class="status-incorrect">incorrect</td><td>19.264273</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>TCAS_prop1.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>3.067947</td><td></td></tr>
+<tr><td>TCAS_prop1.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>7.991642</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #2: g</span></td></tr>
+<tr><td>TCAS_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>7.326696</td><td></td></tr>
+<tr><td>TCAS_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>7.144711</td><td></td></tr>
+<tr><td>TCAS_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>7.232587</td><td></td></tr>
+<tr><td>TCAS_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>7.252727</td><td></td></tr>
+<tr><td>WBS_prop1.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.755037</td><td></td></tr>
+<tr><td>WBS_prop1.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>5.108599</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+<tr><td>WBS_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.522538</td><td></td></tr>
+<tr><td>WBS_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>4.497540</td><td></td></tr>
+<tr><td>WBS_prop3.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.699706</td><td></td></tr>
+<tr><td>WBS_prop3.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>4.400332</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+<tr><td>WBS_prop4.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>5.287949</td><td></td></tr>
+<tr><td>WBS_prop4.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>32.124783</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+<tr><td>Alarm_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.713394</td><td></td></tr>
+<tr><td>Alarm_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.705983</td><td></td></tr>
+<tr><td>Alarm_prop10.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.707228</td><td></td></tr>
+<tr><td>Alarm_prop10.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.697331</td><td></td></tr>
+<tr><td>Alarm_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.698054</td><td></td></tr>
+<tr><td>Alarm_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.696740</td><td></td></tr>
+<tr><td>Alarm_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.687262</td><td></td></tr>
+<tr><td>Alarm_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.690679</td><td></td></tr>
+<tr><td>Alarm_prop4.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.715072</td><td></td></tr>
+<tr><td>Alarm_prop4.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.723662</td><td></td></tr>
+<tr><td>Alarm_prop5.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.701996</td><td></td></tr>
+<tr><td>Alarm_prop5.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.705616</td><td></td></tr>
+<tr><td>Alarm_prop6.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.725036</td><td></td></tr>
+<tr><td>Alarm_prop6.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.727287</td><td></td></tr>
+<tr><td>Alarm_prop8.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.731203</td><td></td></tr>
+<tr><td>Alarm_prop8.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.680938</td><td></td></tr>
+<tr><td>Alarm_prop9.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.699667</td><td></td></tr>
+<tr><td>Alarm_prop9.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.713349</td><td></td></tr>
+<tr><td>apachecli_eqchk.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>38.997584</td><td></td></tr>
+<tr><td>apachecli_eqchk.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>38.840782</td><td></td></tr>
+<tr><td>Infusion_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.699921</td><td></td></tr>
+<tr><td>Infusion_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.676439</td><td></td></tr>
+<tr><td>Infusion_prop10.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.659341</td><td></td></tr>
+<tr><td>Infusion_prop10.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.714156</td><td></td></tr>
+<tr><td>Infusion_prop11.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.665748</td><td></td></tr>
+<tr><td>Infusion_prop11.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.664447</td><td></td></tr>
+<tr><td>Infusion_prop12.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.660017</td><td></td></tr>
+<tr><td>Infusion_prop12.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.693535</td><td></td></tr>
+<tr><td>Infusion_prop13.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.655080</td><td></td></tr>
+<tr><td>Infusion_prop13.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.674682</td><td></td></tr>
+<tr><td>Infusion_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.678571</td><td></td></tr>
+<tr><td>Infusion_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.667871</td><td></td></tr>
+<tr><td>Infusion_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.664869</td><td></td></tr>
+<tr><td>Infusion_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.668861</td><td></td></tr>
+<tr><td>Infusion_prop4.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.669949</td><td></td></tr>
+<tr><td>Infusion_prop4.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.679287</td><td></td></tr>
+<tr><td>Infusion_prop5.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.673122</td><td></td></tr>
+<tr><td>Infusion_prop5.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.672270</td><td></td></tr>
+<tr><td>Infusion_prop6.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.685922</td><td></td></tr>
+<tr><td>Infusion_prop6.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.681194</td><td></td></tr>
+<tr><td>Infusion_prop7.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.685888</td><td></td></tr>
+<tr><td>Infusion_prop7.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.727037</td><td></td></tr>
+<tr><td>Infusion_prop8.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.689819</td><td></td></tr>
+<tr><td>Infusion_prop8.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.661272</td><td></td></tr>
+<tr><td>Infusion_prop9.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.667002</td><td></td></tr>
+<tr><td>Infusion_prop9.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.669326</td><td></td></tr>
+<tr><td>nanoxml_prop1.valid-assert</td><td>true</td><td class="status-unknown">unknown</td><td>0.771364</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.ClassCastException: gov.nasa.jpf.symbc.string.DerivedStringExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.C</span></td></tr>
+<tr><td>nanoxml_prop1.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.787070</td><td></td></tr>
+<tr><td>nanoxml_prop2.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.709632</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.ClassCastException: gov.nasa.jpf.symbc.string.DerivedStringExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.C</span></td></tr>
+<tr><td>nanoxml_prop2.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.709904</td><td></td></tr>
+<tr><td>nanoxml_prop3.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.795967</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.ClassCastException: gov.nasa.jpf.symbc.string.DerivedStringExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.lang.C</span></td></tr>
+<tr><td>nanoxml_prop3.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.800172</td><td></td></tr>
+<tr><td>printtokens_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>29.040888</td><td></td></tr>
+<tr><td>printtokens_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>23.602544</td><td></td></tr>
+<tr><td>printtokens_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.684395</td><td></td></tr>
+<tr><td>printtokens_prop2.no-runtime-exception</td><td>true</td><td class="status-incorrect">incorrect</td><td>0.740347</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149) |  at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.RuntimeException: ERROR: unsupported string operation |  at edu.ucsb.cs.vlab.versions.Z3String3Process</span></td></tr>
+<tr><td>replace5_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>8.714536</td><td></td></tr>
+<tr><td>replace5_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>8.860090</td><td></td></tr>
+<tr><td>replace5_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.703147</td><td></td></tr>
+<tr><td>replace5_prop2.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>11.123156</td><td><span class="error-text" title="error #211: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.checkEquality(Ma...&quot; | error #212: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.checkEquality(Ma...&quot; | error #213: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.checkEquality(Ma...&quot; | error #214: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.checkEquality(Ma...&quot; | error #215: gov.nasa.jpf.vm.NoUncaughtEx">error #211: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.checkEquality(Ma...&quot; | error #212: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  a</span></td></tr>
+<tr><td>schedule_eqchk.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.134268</td><td></td></tr>
+<tr><td>schedule_eqchk.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>4.127624</td><td></td></tr>
+<tr><td>siena_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>25.208469</td><td></td></tr>
+<tr><td>siena_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>25.165339</td><td></td></tr>
+<tr><td>siena_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>2.652053</td><td></td></tr>
+<tr><td>siena_prop2.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>26.525409</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

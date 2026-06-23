@@ -1,0 +1,199 @@
+(assert (not (= |CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_|
+        |CharAt(CONST_2)_6_|)))
+(assert (bvsge (bvadd (bvsub Length_0_ #x0000000000000001)
+              #xffffffffffffffff
+              #xffffffffffffffff)
+       #x0000000000000000))
+(assert (bvsge |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| #x0000000000000000))
+(assert (bvsle |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| #x000000000000ffff))
+(assert (bvsge |CharAt(CONST_1)_4_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_1)_4_| #x000000000000ffff))
+(assert (not (= |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| |CharAt(CONST_1)_4_|)))
+(assert (bvsge (bvadd (bvsub Length_0_ #x0000000000000001) #xffffffffffffffff)
+       #x0000000000000000))
+(assert (bvsge |CharAt((Length_0_ - CONST_1))_1_| #x0000000000000000))
+(assert (bvsle |CharAt((Length_0_ - CONST_1))_1_| #x000000000000ffff))
+(assert (bvsge |CharAt(CONST_0)_2_| #x0000000000000000))
+(assert (bvsle |CharAt(CONST_0)_2_| #x000000000000ffff))
+(assert (not (= |CharAt((Length_0_ - CONST_1))_1_| |CharAt(CONST_0)_2_|)))
+(assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
+
+
+Solving time of z3 bitvector is 7 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_11_ != CharAt(CONST_5)_12_ &&
+((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_9_ != CharAt(CONST_4)_10_ &&
+(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1))_7_ != CharAt(CONST_3)_8_ &&
+((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_ != CharAt(CONST_2)_6_ &&
+(((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_ != CharAt(CONST_1)_4_ &&
+((Length_0_ - CONST_1) + CONST_-1) >= CONST_0 &&
+CharAt((Length_0_ - CONST_1))_1_ != CharAt(CONST_0)_2_ &&
+(Length_0_ - CONST_1) >= CONST_0 -> true
+
+### PCs: total:26 sat:26 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 13
+(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_11_ != CharAt(CONST_5)_12_ &&
+((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_9_ != CharAt(CONST_4)_10_ &&
+(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1))_7_ != CharAt(CONST_3)_8_ &&
+((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_ != CharAt(CONST_2)_6_ &&
+(((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) >= CONST_0 &&
+CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_ != CharAt(CONST_1)_4_ &&
+((Length_0_ - CONST_1) + CONST_-1) >= CONST_0 &&
+CharAt((Length_0_ - CONST_1))_1_ != CharAt(CONST_0)_2_ &&
+(Length_0_ - CONST_1) >= CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+(declare-const string1 String)
+(declare-const string0 String)
+
+
+(assert (>= ( +  ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 5)))))
+(assert (>= ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 4)))))
+(assert (>= ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 3)))))
+(assert (>= ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)))) (str.to_code (str.at string1 2)))))
+(assert (>= ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( +  ( -  (str.len string0) 1) (- 1)))) (str.to_code (str.at string1 1)))))
+(assert (>= ( +  ( -  (str.len string0) 1) (- 1)) 0))
+(assert (not (= (str.to_code (str.at string0 ( -  (str.len string0) 1))) (str.to_code (str.at string1 0)))))
+(assert (>= ( -  (str.len string0) 1) 0))
+
+
+
+(define-fun string1 () String
+  "\u{1effe}")
+(define-fun string0 () String
+  "F\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}")
+Returned solutions: 
+(define-fun string1 () String  "\u{1effe}")
+(define-fun string0 () String  "F\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}")
+*************************************
+Satisfiable: true
+string1 => "\u{1effe}"
+string0 => "F\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 3931 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 200 msec
+Total Solver Parse Time = 26 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 16 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 2
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 2
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 37
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 37
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+3931,0,3931,0,0,200,26,16,0,2,0,0,0,0,2,0,2,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #5: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+error #6: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+
+====================================================== statistics
+elapsed time:       00:00:03
+states:             new=25,visited=0,backtracked=25,end=6
+search:             maxDepth=13,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
+heap:               new=567,released=96,maxLive=459,gcCycles=19
+instructions:       6347
+max memory:         240MB
+loaded code:        classes=89,methods=1871
+
+====================================================== search finished: 6/23/26 9:25 PM

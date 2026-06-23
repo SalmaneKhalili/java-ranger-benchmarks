@@ -1,0 +1,199 @@
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x000000000000000b)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x000000000000000b)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x000000000000000b)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+  (bvsle a!3 #x0000000000000064)))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int0 #x000000000000000b)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x000000000000000b)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x000000000000000b)
+                  #x0000000000000020)))
+  (bvsle (bvashr a!2 #x0000000000000020) #x0000000000000064))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int0 #x000000000000000b)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x000000000000000b)))
+  (bvsle (bvashr (bvshl a!1 #x0000000000000020) #x0000000000000020)
+         #x0000000000000064)))
+(assert (bvsle (bvashr (bvshl (bvadd int0 #x000000000000000b) #x0000000000000020)
+               #x0000000000000020)
+       #x0000000000000064))
+(assert (bvsle int0 #x0000000000000064))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+((((((((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) > CONST_100 &&
+(((((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+(((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+(((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+(((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+(((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+(((int0 + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
+int0 <= CONST_100 -> true
+
+### PCs: total:7426 sat:3792 unsat:3634
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.f(Main.java:13)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.main(Main.java:19)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 177677 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 174597 msec
+Total Solver Parse Time = 11469 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 15322 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 3
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 3
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 3849
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 3849
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+177677,0,177677,0,0,174597,11469,15322,0,3,0,0,0,0,3,0,3,0,3849,0,0,0,0,3849,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #5: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #6: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #7: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #10: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #11: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #12: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #13: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #14: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #15: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #16: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #17: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #18: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #19: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #20: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #21: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #22: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #23: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #24: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #25: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #26: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #27: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #28: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #29: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #30: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #31: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #32: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #33: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #34: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #35: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #36: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #37: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #38: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #39: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #40: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #41: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #42: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #43: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #44: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #45: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #46: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #47: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #48: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #49: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #50: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #51: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #52: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #53: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #54: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #55: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #56: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #57: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+
+====================================================== statistics
+elapsed time:       00:02:57
+states:             new=137,visited=0,backtracked=137,end=1
+search:             maxDepth=13,constraints=22
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=68
+heap:               new=1372,released=17,maxLive=452,gcCycles=57
+instructions:       37563
+max memory:         240MB
+loaded code:        classes=89,methods=1872
+
+====================================================== search finished: 6/23/26 10:38 PM

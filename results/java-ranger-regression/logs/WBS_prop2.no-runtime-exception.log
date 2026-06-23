@@ -1,0 +1,199 @@
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:68)
+	at Main.main(Main.java:13)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (not (= int3 #x0000000000000004)))
+(assert (not (= int3 #x0000000000000003)))
+(assert (not (= int3 #x0000000000000002)))
+(assert (not (= int3 #x0000000000000001)))
+(assert (not (= int3 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (= bool2 #x0000000000000000))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000004)))
+(assert (not (= int0 #x0000000000000003)))
+(assert (not (= int0 #x0000000000000002)))
+(assert (not (= int0 #x0000000000000001)))
+(assert (not (= int0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+int3 != CONST_4 &&
+int3 != CONST_3 &&
+int3 != CONST_2 &&
+int3 != CONST_1 &&
+int3 != CONST_0 &&
+int0 <= CONST_0 &&
+bool2 == CONST_0 &&
+bool1 == CONST_0 &&
+int0 != CONST_4 &&
+int0 != CONST_3 &&
+int0 != CONST_2 &&
+int0 != CONST_1 &&
+int0 != CONST_0 -> true
+
+### PCs: total:3501 sat:2389 unsat:1112
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (= int3 #x0000000000000004))
+(assert (not (= int3 #x0000000000000003)))
+(assert (not (= int3 #x0000000000000002)))
+(assert (not (= int3 #x0000000000000001)))
+(assert (not (= int3 #x0000000000000000)))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsle int0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (= bool2 #x0000000000000000))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000004)))
+(assert (not (= int0 #x0000000000000003)))
+(assert (not (= int0 #x0000000000000002)))
+(assert (not (= int0 #x0000000000000001)))
+(assert (not (= int0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+int3 == CONST_4 &&
+int3 != CONST_3 &&
+int3 != CONST_2 &&
+int3 != CONST_1 &&
+int3 != CONST_0 &&
+int0 <= CONST_0 &&
+bool2 == CONST_0 &&
+bool1 == CONST_0 &&
+int0 != CONST_4 &&
+int0 != CONST_3 &&
+int0 != CONST_2 &&
+int0 != CONST_1 &&
+int0 != CONST_0 -> true
+
+### PCs: total:3502 sat:2390 unsat:1112
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:58)
+	at Main.main(Main.java:13)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 4250 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 3682 msec
+Total Solver Parse Time = 801 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 127 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 10
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 10
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 2869
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 2869
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+4250,0,4250,0,0,3682,801,127,0,10,0,0,0,0,10,0,10,0,2869,0,0,0,0,2869,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:04
+states:             new=1119,visited=0,backtracked=1119,end=480
+search:             maxDepth=13,constraints=192
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=559
+heap:               new=810,released=5152,maxLive=458,gcCycles=561
+instructions:       63766
+max memory:         240MB
+loaded code:        classes=86,methods=1832
+
+====================================================== search finished: 6/23/26 9:24 PM

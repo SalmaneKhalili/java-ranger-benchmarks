@@ -1,0 +1,199 @@
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (not (= (bvshl #x0000000000000001 (bvand #x000000000000001f int0))
+        #x0000000000000001)))
+(assert (bvsle int0 #x0000000000000064))
+(assert (bvsge int0 #x0000000000000001))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(CONST_1<<(int0 & CONST_31)) != CONST_1 &&
+int0 <= CONST_100 &&
+int0 >= CONST_1 -> true
+
+### PCs: total:5 sat:5 unsat:0
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= (bvshl #x0000000000000001 (bvand #x000000000000001f int0))
+   #x0000000000000001))
+(assert (bvsle int0 #x0000000000000064))
+(assert (bvsge int0 #x0000000000000001))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(CONST_1<<(int0 & CONST_31)) == CONST_1 &&
+int0 <= CONST_100 &&
+int0 >= CONST_1 -> true
+
+### PCs: total:6 sat:6 unsat:0
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is4
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (= (bvshl #x0000000000000001 (bvand #x000000000000001f int0))
+   #x0000000000000001))
+(assert (bvsle int0 #x0000000000000064))
+(assert (bvsge int0 #x0000000000000001))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(CONST_1<<(int0 & CONST_31)) == CONST_1 &&
+int0 <= CONST_100 &&
+int0 >= CONST_1 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+(CONST_1<<(int0[32] & CONST_31)) == CONST_1 &&
+int0[32] <= CONST_100 &&
+int0[32] >= CONST_1
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+
+
+
+
+
+
+
+Returned solutions: 
+*************************************
+Satisfiable: true
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:19)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:19)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 399 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 43 msec
+Total Solver Parse Time = 8 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 0 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 3
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 3
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 9
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 9
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+399,0,399,0,0,43,8,0,0,3,0,0,0,0,3,0,3,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=7,visited=0,backtracked=7,end=3
+search:             maxDepth=4,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
+heap:               new=476,released=35,maxLive=452,gcCycles=4
+instructions:       6079
+max memory:         240MB
+loaded code:        classes=89,methods=1871
+
+====================================================== search finished: 6/23/26 9:25 PM

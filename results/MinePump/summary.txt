@@ -1,8 +1,8 @@
-     Total: 64
-   Correct: 64
+     Total: 128
+   Correct: 72
  Incorrect: 0
-   Unknown: 0
+   Unknown: 56
 Compile_err: 0
    Timeout: 0
 
-Score: 64 / 64
+Score: 72 / 128

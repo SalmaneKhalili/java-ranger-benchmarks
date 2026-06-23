@@ -1,0 +1,199 @@
+  (not (= (bvashr a!5 #x0000000000000020) #x0000000000000000))))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+(let ((a!4 (bvadd (bvashr (bvshl (bvadd a!3 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+  (not (= (bvashr (bvshl a!4 #x0000000000000020) #x0000000000000020)
+          #x0000000000000000)))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+(let ((a!4 (= (bvashr (bvshl (bvadd a!3 #x0000000000000001) #x0000000000000020)
+                      #x0000000000000020)
+              #x0000000000000000)))
+  (not a!4))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+  (not (= a!3 #x0000000000000000))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+  (not (= (bvashr a!2 #x0000000000000020) #x0000000000000000)))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+  (not (= (bvashr (bvshl a!1 #x0000000000000020) #x0000000000000020)
+          #x0000000000000000))))
+(assert (let ((a!1 (= (bvashr (bvshl (bvadd int1 #x0000000000000001) #x0000000000000020)
+                      #x0000000000000020)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (bvsle int1 #x0000000000000000))
+(assert (not (= int1 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+(((((((((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) == CONST_0 &&
+((((((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((int1 + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+int1 <= CONST_0 &&
+int1 != CONST_0 -> true
+
+### PCs: total:130 sat:89 unsat:41
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.addition(Main.java:13)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.main(Main.java:25)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 1197 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 456 msec
+Total Solver Parse Time = 70 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 21 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 3
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 3
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 109
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 109
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+1197,0,1197,0,0,456,70,21,0,3,0,0,0,0,3,0,3,0,109,0,0,0,0,109,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #5: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #6: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #7: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #10: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #11: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #12: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #13: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #14: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #15: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #16: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #17: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #18: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #19: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+error #20: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
+
+====================================================== statistics
+elapsed time:       00:00:01
+states:             new=45,visited=0,backtracked=45,end=1
+search:             maxDepth=13,constraints=4
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=22
+heap:               new=784,released=21,maxLive=452,gcCycles=22
+instructions:       7202
+max memory:         240MB
+loaded code:        classes=89,methods=1872
+
+====================================================== search finished: 6/23/26 10:35 PM

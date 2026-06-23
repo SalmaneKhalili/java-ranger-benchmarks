@@ -1,0 +1,199 @@
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun int5 () (_ BitVec 64))
+(declare-fun int8 () (_ BitVec 64))
+(declare-fun int7 () (_ BitVec 64))
+(declare-fun int6 () (_ BitVec 64))
+(declare-fun int4 () (_ BitVec 64))
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsge int5 #xffffffff80000000))
+(assert (bvsle int5 #x000000007fffffff))
+(assert (bvsle int3 int5))
+(assert (bvsge int8 #xffffffff80000000))
+(assert (bvsle int8 #x000000007fffffff))
+(assert (bvsge int8 #x00000000000002e4))
+(assert (bvsge int7 #xffffffff80000000))
+(assert (bvsle int7 #x000000007fffffff))
+(assert (bvsgt int7 #x00000000000002e4))
+(assert (bvsge int6 #xffffffff80000000))
+(assert (bvsle int6 #x000000007fffffff))
+(assert (not (= int6 #x0000000000000002)))
+(assert (not (= int6 #x0000000000000001)))
+(assert (not (= int6 #x0000000000000000)))
+(assert (bvsge int4 #xffffffff80000000))
+(assert (bvsle int4 #x000000007fffffff))
+(assert (bvsgt int4 #x0000000000000258))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (not (= int2 #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (not (= int1 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+int3 <= int5 &&
+int8 >= CONST_740 &&
+int7 > CONST_740 &&
+int6 != CONST_2 &&
+int6 != CONST_1 &&
+int6 != CONST_0 &&
+int4 > CONST_600 &&
+int2 != CONST_0 &&
+int1 != CONST_0 -> true
+
+### PCs: total:3133 sat:2167 unsat:966
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int3 () (_ BitVec 64))
+(declare-fun int5 () (_ BitVec 64))
+(declare-fun int8 () (_ BitVec 64))
+(declare-fun int7 () (_ BitVec 64))
+(declare-fun int6 () (_ BitVec 64))
+(declare-fun int4 () (_ BitVec 64))
+(declare-fun int2 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int3 #xffffffff80000000))
+(assert (bvsle int3 #x000000007fffffff))
+(assert (bvsge int5 #xffffffff80000000))
+(assert (bvsle int5 #x000000007fffffff))
+(assert (bvsgt int3 int5))
+(assert (bvsge int8 #xffffffff80000000))
+(assert (bvsle int8 #x000000007fffffff))
+(assert (bvsge int8 #x00000000000002e4))
+(assert (bvsge int7 #xffffffff80000000))
+(assert (bvsle int7 #x000000007fffffff))
+(assert (bvsgt int7 #x00000000000002e4))
+(assert (bvsge int6 #xffffffff80000000))
+(assert (bvsle int6 #x000000007fffffff))
+(assert (not (= int6 #x0000000000000002)))
+(assert (not (= int6 #x0000000000000001)))
+(assert (not (= int6 #x0000000000000000)))
+(assert (bvsge int4 #xffffffff80000000))
+(assert (bvsle int4 #x000000007fffffff))
+(assert (bvsgt int4 #x0000000000000258))
+(assert (bvsge int2 #xffffffff80000000))
+(assert (bvsle int2 #x000000007fffffff))
+(assert (not (= int2 #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (not (= int1 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 1 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+int3 > int5 &&
+int8 >= CONST_740 &&
+int7 > CONST_740 &&
+int6 != CONST_2 &&
+int6 != CONST_1 &&
+int6 != CONST_0 &&
+int4 > CONST_600 &&
+int2 != CONST_0 &&
+int1 != CONST_0 -> true
+
+### PCs: total:3134 sat:2168 unsat:966
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 7743 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 7026 msec
+Total Solver Parse Time = 499 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 497 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 23
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 23
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 2421
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 2421
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+7743,0,7743,0,0,7026,499,497,0,23,0,0,0,0,23,0,23,0,2421,0,0,0,0,2421,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."
+
+====================================================== statistics
+elapsed time:       00:00:07
+states:             new=855,visited=0,backtracked=855,end=250
+search:             maxDepth=13,constraints=284
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=427
+heap:               new=568,released=2302,maxLive=452,gcCycles=251
+instructions:       21419
+max memory:         240MB
+loaded code:        classes=89,methods=1882
+
+====================================================== search finished: 6/23/26 9:23 PM

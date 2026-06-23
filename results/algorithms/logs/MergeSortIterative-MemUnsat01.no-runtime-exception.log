@@ -1,0 +1,200 @@
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+CONST_9998 < int0 &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:22068 sat:11038 unsat:11030
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge #x000000000000270f int0))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+CONST_9999 >= int0 &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:22069 sat:11038 unsat:11031
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt #x000000000000270f int0))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+CONST_9999 < int0 &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:22070 sat:11039 unsat:11031
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge #x0000000000002710 int0))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+CONST_10000 >= int0 &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:22071 sat:11040 unsat:11031
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvslt #x0000000000002710 int0))
+(assert (= int0 #x0000000000002710))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+CONST_10000 < int0 &&
+int0 == CONST_10000 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:22072 sat:11040 unsat:11032
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.merge(Main.java:107)
+	at Main.iterativeMergesort(Main.java:51)
+	at Main.main(Main.java:37)
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (bvsge int0 #x0000000000000000))
+(assert (bvsgt int0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:22073 sat:11041 unsat:11032
+
+[SEVERE] JPF out of memory
+
+====================================================== search constraint
+JPF out of memory
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:31)
+
+[SEVERE] JPF exception, terminating: exception during out-of-memory termination
+
+java.lang.NullPointerException
+	at gov.nasa.jpf.search.Search.error(Search.java:706)
+	at gov.nasa.jpf.search.Search.error(Search.java:681)
+	at gov.nasa.jpf.JPF.run(JPF.java:645)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+---------------------- JPF error stack trace ---------------------
+gov.nasa.jpf.JPFListenerException: exception during out-of-memory termination
+	at gov.nasa.jpf.JPF.run(JPF.java:648)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+Caused by: java.lang.NullPointerException
+	at gov.nasa.jpf.search.Search.error(Search.java:706)
+	at gov.nasa.jpf.search.Search.error(Search.java:681)
+	at gov.nasa.jpf.JPF.run(JPF.java:645)
+	... 7 more

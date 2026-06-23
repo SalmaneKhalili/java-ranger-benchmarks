@@ -1,0 +1,199 @@
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is5
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool3 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(declare-fun bool0 () (_ BitVec 64))
+(assert (bvsge bool3 #x0000000000000000))
+(assert (bvsle bool3 #x0000000000000001))
+(assert (= bool3 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (not (= bool2 #x0000000000000000)))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (not (= bool1 #x0000000000000000)))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (not (= bool0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+bool3 == CONST_0 &&
+bool2 != CONST_0 &&
+bool1 != CONST_0 &&
+bool0 != CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+bool3[0] == CONST_0 &&
+bool2[1] != CONST_0 &&
+bool1[1] != CONST_0 &&
+bool0[1] != CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const bool3 Int)
+(declare-const bool2 Int)
+(declare-const bool1 Int)
+(declare-const bool0 Int)
+
+(assert (= bool3 0))
+(assert (not (= bool2 0)))
+(assert (not (= bool1 0)))
+(assert (not (= bool0 0)))
+
+
+
+(define-fun bool0 () Int
+  1)
+(define-fun bool1 () Int
+  1)
+(define-fun bool2 () Int
+  1)
+(define-fun bool3 () Int
+  0)
+Returned solutions: 
+(define-fun bool0 () Int  1)
+(define-fun bool1 () Int  1)
+(define-fun bool2 () Int  1)
+(define-fun bool3 () Int  0)
+*************************************
+Satisfiable: true
+bool3 => 0
+bool2 => 1
+bool1 => 1
+bool0 => 1
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:47)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:47)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 483 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 88 msec
+Total Solver Parse Time = 18 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 1 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 1
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 1
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 34
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 34
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+483,0,483,0,0,88,18,1,0,1,0,0,0,0,1,0,1,0,34,0,0,0,0,34,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:4..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=22,visited=0,backtracked=17,end=8
+search:             maxDepth=13,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
+heap:               new=526,released=128,maxLive=454,gcCycles=21
+instructions:       6632
+max memory:         240MB
+loaded code:        classes=89,methods=1871
+
+====================================================== search finished: 6/23/26 9:23 PM

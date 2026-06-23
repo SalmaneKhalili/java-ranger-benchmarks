@@ -1,0 +1,199 @@
+
+### PCs: total:798332 sat:399173 unsat:399159
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000000))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub a!1 #x0000000000000001) #x0000000000000000)))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000000))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (= int1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 8
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
+((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((int0 - CONST_1) - CONST_1) != CONST_0 &&
+(int0 - CONST_1) != CONST_0 &&
+int1 == CONST_0 &&
+int0 != CONST_0 -> false
+
+### PCs: total:798333 sat:399173 unsat:399160
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub a!1 #x0000000000000001) #x0000000000000000)))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000000))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (= int1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 7
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
+((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((int0 - CONST_1) - CONST_1) != CONST_0 &&
+(int0 - CONST_1) != CONST_0 &&
+int1 == CONST_0 &&
+int0 != CONST_0 -> true
+
+### PCs: total:798334 sat:399174 unsat:399160
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000000))))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub a!1 #x0000000000000001) #x0000000000000000)))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000000))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (= int1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 8
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
+((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
+((int0 - CONST_1) - CONST_1) != CONST_0 &&
+(int0 - CONST_1) != CONST_0 &&
+int1 == CONST_0 &&
+int0 != CONST_0 -> false
+
+### PCs: total:798335 sat:399174 unsat:399161
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun int0 () (_ BitVec 64))
+(declare-fun int1 () (_ BitVec 64))
+(assert (bvsge int0 #xffffffff80000000))
+(assert (bvsle int0 #x000000007fffffff))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (= (bvsub a!1 #x0000000000000001) #x0000000000000000)))
+(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
+                                #x0000000000000001)
+                         #x0000000000000001)
+                  #x0000000000000001)))
+  (not (= a!1 #x0000000000000000))))
+(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+                     #x0000000000000001)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
+        #x0000000000000000)))
+(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
+(assert (bvsge int1 #xffffffff80000000))
+(assert (bvsle int1 #x000000007fffffff))
+(assert (= int1 #x0000000000000000))
+(assert (not (= int0 #x0000000000000000)))
+

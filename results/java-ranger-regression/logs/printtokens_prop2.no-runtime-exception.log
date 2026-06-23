@@ -1,0 +1,200 @@
+((char1 & CONST_65535) & CONST_65535) == CONST_32 &&
+char1 > CONST_0 &&
+char0 <= CONST_0 -> true
+
+### PCs: total:26 sat:18 unsat:8
+
+eof.
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (bvsgt char3 #x0000000000000000))
+(assert (bvsle char3 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (bvsle char2 #x0000000000000000))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char1) #x0000000000000020))
+(assert (bvsgt char1 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (bvsle char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+char3 > CONST_0 &&
+char3 <= CONST_0 &&
+char2 <= CONST_0 &&
+((char1 & CONST_65535) & CONST_65535) == CONST_32 &&
+char1 > CONST_0 &&
+char0 <= CONST_0 -> false
+
+### PCs: total:27 sat:18 unsat:9
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (bvsle char3 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (bvsle char2 #x0000000000000000))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char1) #x0000000000000020))
+(assert (bvsgt char1 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (bvsle char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+char3 <= CONST_0 &&
+char2 <= CONST_0 &&
+((char1 & CONST_65535) & CONST_65535) == CONST_32 &&
+char1 > CONST_0 &&
+char0 <= CONST_0 -> true
+
+### PCs: total:28 sat:19 unsat:9
+
+Mismatch
+the depth of violation is6
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (bvsle char3 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (bvsle char2 #x0000000000000000))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char1) #x0000000000000020))
+(assert (bvsgt char1 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (bvsle char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+char3 <= CONST_0 &&
+char2 <= CONST_0 &&
+((char1 & CONST_65535) & CONST_65535) == CONST_32 &&
+char1 > CONST_0 &&
+char0 <= CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+char3[0] <= CONST_0 &&
+char2[0] <= CONST_0 &&
+((char1[32] & CONST_65535) & CONST_65535) == CONST_32 &&
+char1[32] > CONST_0 &&
+char0[0] <= CONST_0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+current query... 
+
+(declare-const char1 Int)
+(declare-const char0 Int)
+(declare-const char3 Int)
+(declare-const char2 Int)
+
+(assert (<= char3 0))
+(assert (<= char2 0))
+(assert (= (str.from_code ( bv2int ( bvand (( _ int2bv 32) ( str.to_code (str.from_code ( bv2int ( bvand (( _ int2bv 32) ( str.to_code char1 )) (( _ int2bv 32 ) 65535 )))) )) (( _ int2bv 32 ) 65535 )))) 32))
+(assert (> char1 0))
+(assert (<= char0 0))
+
+
+
+Z3 exception: (error "line 10 column 141: Sort of polymorphic function 'str.to_code' does not match the declared type. 
+Given domain: Int 
+Expected domain: String ")
+
+[SEVERE] JPF exception, terminating: exception during propertyViolated() notification
+
+java.lang.RuntimeException: ERROR: unsupported string operation
+	at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149)
+	at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.inner_isSatisfiable(SymbolicStringConstraintsGeneral.java:450)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.isSatisfiable(SymbolicStringConstraintsGeneral.java:378)
+	at gov.nasa.jpf.symbc.string.StringPathCondition.solve(StringPathCondition.java:138)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:397)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+---------------------- JPF error stack trace ---------------------
+gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:863)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+Caused by: java.lang.RuntimeException: ERROR: unsupported string operation
+	at edu.ucsb.cs.vlab.versions.Z3String3Processor.getOutput(Z3String3Processor.java:149)
+	at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:30)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.inner_isSatisfiable(SymbolicStringConstraintsGeneral.java:450)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.isSatisfiable(SymbolicStringConstraintsGeneral.java:378)
+	at gov.nasa.jpf.symbc.string.StringPathCondition.solve(StringPathCondition.java:138)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:397)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
+	... 9 more

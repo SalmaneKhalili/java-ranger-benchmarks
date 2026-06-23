@@ -1,0 +1,200 @@
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char4) #x000000000000003b)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char3) #x000000000000003b)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char2) #x000000000000003b)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char1) #x000000000000003b)))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char0) #x0000000000000026))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+char8 < CONST_0 &&
+(char8 & CONST_65535) != CONST_59 &&
+(char7 & CONST_65535) != CONST_59 &&
+(char6 & CONST_65535) != CONST_59 &&
+(char5 & CONST_65535) != CONST_59 &&
+(char4 & CONST_65535) != CONST_59 &&
+(char3 & CONST_65535) != CONST_59 &&
+(char2 & CONST_65535) != CONST_59 &&
+(char1 & CONST_65535) != CONST_59 &&
+((char0 & CONST_65535) & CONST_65535) == CONST_38 -> false
+
+### PCs: total:74 sat:46 unsat:28
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char8 () (_ BitVec 64))
+(declare-fun char7 () (_ BitVec 64))
+(declare-fun char6 () (_ BitVec 64))
+(declare-fun char5 () (_ BitVec 64))
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char8 #x0000000000000000))
+(assert (bvsle char8 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff char8) #x000000000000003b))
+(assert (not (= (bvand #x000000000000ffff char8) #x000000000000003b)))
+(assert (bvsge char7 #x0000000000000000))
+(assert (bvsle char7 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char7) #x000000000000003b)))
+(assert (bvsge char6 #x0000000000000000))
+(assert (bvsle char6 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char6) #x000000000000003b)))
+(assert (bvsge char5 #x0000000000000000))
+(assert (bvsle char5 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char5) #x000000000000003b)))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char4) #x000000000000003b)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char3) #x000000000000003b)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char2) #x000000000000003b)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char1) #x000000000000003b)))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char0) #x0000000000000026))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+(char8 & CONST_65535) == CONST_59 &&
+(char8 & CONST_65535) != CONST_59 &&
+(char7 & CONST_65535) != CONST_59 &&
+(char6 & CONST_65535) != CONST_59 &&
+(char5 & CONST_65535) != CONST_59 &&
+(char4 & CONST_65535) != CONST_59 &&
+(char3 & CONST_65535) != CONST_59 &&
+(char2 & CONST_65535) != CONST_59 &&
+(char1 & CONST_65535) != CONST_59 &&
+((char0 & CONST_65535) & CONST_65535) == CONST_38 -> false
+
+### PCs: total:75 sat:46 unsat:29
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char8 () (_ BitVec 64))
+(declare-fun char7 () (_ BitVec 64))
+(declare-fun char6 () (_ BitVec 64))
+(declare-fun char5 () (_ BitVec 64))
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char8 #x0000000000000000))
+(assert (bvsle char8 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char8) #x000000000000003b)))
+(assert (bvsge char7 #x0000000000000000))
+(assert (bvsle char7 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char7) #x000000000000003b)))
+(assert (bvsge char6 #x0000000000000000))
+(assert (bvsle char6 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char6) #x000000000000003b)))
+(assert (bvsge char5 #x0000000000000000))
+(assert (bvsle char5 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char5) #x000000000000003b)))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char4) #x000000000000003b)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char3) #x000000000000003b)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char2) #x000000000000003b)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (not (= (bvand #x000000000000ffff char1) #x000000000000003b)))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= (bvand #x000000000000ffff #x000000000000ffff char0) #x0000000000000026))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+(char8 & CONST_65535) != CONST_59 &&
+(char7 & CONST_65535) != CONST_59 &&
+(char6 & CONST_65535) != CONST_59 &&
+(char5 & CONST_65535) != CONST_59 &&
+(char4 & CONST_65535) != CONST_59 &&
+(char3 & CONST_65535) != CONST_59 &&
+(char2 & CONST_65535) != CONST_59 &&
+(char1 & CONST_65535) != CONST_59 &&
+((char0 & CONST_65535) & CONST_65535) == CONST_38 -> true
+
+### PCs: total:76 sat:47 unsat:29
+
+java.io.IOException: IntReader EOF
+	at IntReader.read(IntReader.java:23)
+	at java.io.FilterReader.read(FilterReader.java:65)
+	at java.io.PushbackReader.read(PushbackReader.java:90)
+	at StdXMLReader.read(StdXMLReader.java:91)
+	at StdXMLParser.scanEntity(StdXMLParser.java:797)
+	at StdXMLParser.read(StdXMLParser.java:923)
+	at StdXMLParser.scanData(StdXMLParser.java:106)
+	at StdXMLParser.parse(StdXMLParser.java:92)
+	at DumpXML.mainProcess(DumpXML.java:29)
+	at Main.main(Main.java:17)
+Match
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+java.lang.ClassCastException: gov.nasa.jpf.symbc.string.DerivedStringExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
+	at gov.nasa.jpf.symbc.bytecode.optimization.IFNE.execute(IFNE.java:60)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)

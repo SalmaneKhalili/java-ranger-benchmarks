@@ -1,0 +1,199 @@
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(declare-fun bool4 () (_ BitVec 64))
+(declare-fun bool3 () (_ BitVec 64))
+(declare-fun bool5 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+(assert (not (= bool8 #x0000000000000000)))
+(assert (bvsge bool4 #x0000000000000000))
+(assert (bvsle bool4 #x0000000000000001))
+(assert (= bool4 #x0000000000000000))
+(assert (bvsge bool3 #x0000000000000000))
+(assert (bvsle bool3 #x0000000000000001))
+(assert (= bool3 #x0000000000000000))
+(assert (bvsge bool5 #x0000000000000000))
+(assert (bvsle bool5 #x0000000000000001))
+(assert (not (= bool5 #x0000000000000000)))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (not (= bool2 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+bool8 == CONST_0 &&
+bool7 == CONST_0 &&
+bool6 == CONST_0 &&
+bool8 != CONST_0 &&
+bool4 == CONST_0 &&
+bool3 == CONST_0 &&
+bool5 != CONST_0 &&
+bool1 == CONST_0 &&
+bool0 == CONST_0 &&
+bool2 != CONST_0 -> false
+
+### PCs: total:5965 sat:4709 unsat:1256
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool4 () (_ BitVec 64))
+(declare-fun bool3 () (_ BitVec 64))
+(declare-fun bool5 () (_ BitVec 64))
+(declare-fun bool1 () (_ BitVec 64))
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool2 () (_ BitVec 64))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (not (= bool8 #x0000000000000000)))
+(assert (bvsge bool4 #x0000000000000000))
+(assert (bvsle bool4 #x0000000000000001))
+(assert (= bool4 #x0000000000000000))
+(assert (bvsge bool3 #x0000000000000000))
+(assert (bvsle bool3 #x0000000000000001))
+(assert (= bool3 #x0000000000000000))
+(assert (bvsge bool5 #x0000000000000000))
+(assert (bvsle bool5 #x0000000000000001))
+(assert (not (= bool5 #x0000000000000000)))
+(assert (bvsge bool1 #x0000000000000000))
+(assert (bvsle bool1 #x0000000000000001))
+(assert (= bool1 #x0000000000000000))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool2 #x0000000000000000))
+(assert (bvsle bool2 #x0000000000000001))
+(assert (not (= bool2 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 9
+bool7 == CONST_0 &&
+bool6 == CONST_0 &&
+bool8 != CONST_0 &&
+bool4 == CONST_0 &&
+bool3 == CONST_0 &&
+bool5 != CONST_0 &&
+bool1 == CONST_0 &&
+bool0 == CONST_0 &&
+bool2 != CONST_0 -> true
+
+### PCs: total:5966 sat:4710 unsat:1256
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 9389 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 8007 msec
+Total Solver Parse Time = 864 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 346 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 5
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 5
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 6437
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 6437
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+9389,0,9389,0,0,8007,864,346,0,5,0,0,0,0,5,0,5,0,6437,0,0,0,0,6437,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:09
+states:             new=3455,visited=0,backtracked=3455,end=1728
+search:             maxDepth=13,constraints=512
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1727
+heap:               new=3428,released=23338,maxLive=486,gcCycles=2670
+instructions:       1308524
+max memory:         430MB
+loaded code:        classes=90,methods=1877
+
+====================================================== search finished: 6/23/26 9:35 PM

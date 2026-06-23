@@ -1,0 +1,199 @@
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+(let ((a!4 (bvadd (bvashr (bvshl (bvadd a!3 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!5 (bvshl (bvadd (bvashr (bvshl a!4 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+  (not (= (bvashr a!5 #x0000000000000020) #x0000000000000000))))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+(let ((a!4 (bvadd (bvashr (bvshl (bvadd a!3 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+  (not (= (bvashr (bvshl a!4 #x0000000000000020) #x0000000000000020)
+          #x0000000000000000)))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+(let ((a!4 (= (bvashr (bvshl (bvadd a!3 #x0000000000000001) #x0000000000000020)
+                      #x0000000000000020)
+              #x0000000000000000)))
+  (not a!4))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
+                                 #x0000000000000001)
+                          #x0000000000000020)
+                   #x0000000000000020)))
+  (not (= a!3 #x0000000000000000))))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
+                                 #x0000000000000020)
+                         #x0000000000000001)
+                  #x0000000000000020)))
+  (not (= (bvashr a!2 #x0000000000000020) #x0000000000000000)))))
+(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int1 #x0000000000000001)
+                                 #x0000000000000020)
+                          #x0000000000000020)
+                  #x0000000000000001)))
+  (not (= (bvashr (bvshl a!1 #x0000000000000020) #x0000000000000020)
+          #x0000000000000000))))
+(assert (let ((a!1 (= (bvashr (bvshl (bvadd int1 #x0000000000000001) #x0000000000000020)
+                      #x0000000000000020)
+              #x0000000000000000)))
+  (not a!1)))
+(assert (bvsle int1 #x0000000000000000))
+(assert (not (= int1 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 2 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 13
+(((((((((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) == CONST_0 &&
+((((((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+((((((int1 + CONST_1)<<CONST_32)>>CONST_32) + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+(((int1 + CONST_1)<<CONST_32)>>CONST_32) != CONST_0 &&
+int1 <= CONST_0 &&
+int1 != CONST_0 -> true
+
+### PCs: total:168 sat:129 unsat:39
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.addition(Main.java:13)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.main(Main.java:25)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 798 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 490 msec
+Total Solver Parse Time = 74 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 21 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 4
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 4
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 166
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 166
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+798,0,798,0,0,490,74,21,0,4,0,0,0,0,4,0,4,0,166,0,0,0,0,166,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=83,visited=0,backtracked=83,end=38
+search:             maxDepth=13,constraints=8
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=41
+heap:               new=464,released=354,maxLive=452,gcCycles=39
+instructions:       6749
+max memory:         240MB
+loaded code:        classes=85,methods=1831
+
+====================================================== search finished: 6/23/26 10:35 PM

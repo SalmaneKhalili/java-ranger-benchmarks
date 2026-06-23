@@ -1,0 +1,199 @@
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (= char4 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (= char2 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+char4 == CONST_0 &&
+char2 == CONST_0 &&
+char0 == CONST_0 -> true
+
+### PCs: total:10007 sat:5591 unsat:4416
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= char4 #x0000000000000000)))
+(assert (= char4 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (= char2 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+char4 != CONST_0 &&
+char4 == CONST_0 &&
+char2 == CONST_0 &&
+char0 == CONST_0 -> false
+
+### PCs: total:10008 sat:5591 unsat:4417
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (= char4 char4))
+(assert (= char4 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (= char2 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+char4 == char4 &&
+char4 == CONST_0 &&
+char2 == CONST_0 &&
+char0 == CONST_0 -> true
+
+### PCs: total:10009 sat:5592 unsat:4417
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= char4 char4)))
+(assert (= char4 #x0000000000000000))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (= char2 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (= char0 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 4
+char4 != char4 &&
+char4 == CONST_0 &&
+char2 == CONST_0 &&
+char0 == CONST_0 -> false
+
+### PCs: total:10010 sat:5592 unsat:4418
+
+Match
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 8430 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 7074 msec
+Total Solver Parse Time = 959 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 239 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 35
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 35
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 5891
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 5891
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+8430,0,8430,0,0,7074,959,239,0,35,0,0,0,0,35,0,35,0,5891,0,0,0,0,5891,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:08
+states:             new=887,visited=0,backtracked=887,end=300
+search:             maxDepth=13,constraints=236
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=443
+heap:               new=5413,released=8790,maxLive=470,gcCycles=887
+instructions:       2194859
+max memory:         488MB
+loaded code:        classes=87,methods=1856
+
+====================================================== search finished: 6/23/26 9:28 PM

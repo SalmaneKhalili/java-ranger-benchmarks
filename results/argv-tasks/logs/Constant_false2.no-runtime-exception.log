@@ -1,0 +1,199 @@
+(declare-fun double0 () Real)
+(declare-fun double1 () Real)
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (< (+ double2 double0) double2))
+(assert (= double2 (+ double0 0.0)))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> (+ double0 0.0) double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(double2 + double0) < double2 &&
+double2 == (double0 + CONST_0.0) &&
+(double0 + CONST_0.0) > double1 -> true
+
+
+====================================================== error 4
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.generateNextEvent(Main.java:20)
+	at Main.main(Main.java:30)
+
+
+====================================================== snapshot #4
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.generateNextEvent(Main.java:20)
+	at Main.main(Main.java:30)
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (< (+ double0 0.0) double2))
+(assert (> (+ double0 0.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> (+ double0 0.0) double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(double0 + CONST_0.0) < double2 &&
+(double0 + CONST_0.0) > double2 &&
+(double0 + CONST_0.0) > double1 -> false
+
+### PCs: total:70 sat:43 unsat:27
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double2 () Real)
+(declare-fun double0 () Real)
+(declare-fun double1 () Real)
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (= double2 (+ double0 0.0)))
+(assert (> (+ double0 0.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> (+ double0 0.0) double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+double2 == (double0 + CONST_0.0) &&
+(double0 + CONST_0.0) > double2 &&
+(double0 + CONST_0.0) > double1 -> false
+
+### PCs: total:71 sat:43 unsat:28
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun double0 () Real)
+(declare-fun double2 () Real)
+(declare-fun double1 () Real)
+(assert (>= double0 (- 10000.0)))
+(assert (<= double0 10000.0))
+(assert (>= double2 (- 10000.0)))
+(assert (<= double2 10000.0))
+(assert (> (+ double0 0.0) double2))
+(assert (> (+ double0 0.0) double2))
+(assert (>= double1 (- 10000.0)))
+(assert (<= double1 10000.0))
+(assert (> (+ double0 0.0) double1))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+(double0 + CONST_0.0) > double2 &&
+(double0 + CONST_0.0) > double2 &&
+(double0 + CONST_0.0) > double1 -> true
+
+### PCs: total:72 sat:44 unsat:28
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 374 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 82 msec
+Total Solver Parse Time = 21 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 1 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 0
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 0
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 0
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 0
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+374,0,374,0,0,82,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.generateNextEven..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=31,visited=0,backtracked=31,end=17
+search:             maxDepth=4,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=10
+heap:               new=549,released=202,maxLive=453,gcCycles=27
+instructions:       6763
+max memory:         240MB
+loaded code:        classes=89,methods=1872
+
+====================================================== search finished: 6/23/26 9:25 PM

@@ -1,0 +1,199 @@
+
+Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char7)]).concat(CONST_, ).concat(.valueof[(char7)])]
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char7 () (_ BitVec 64))
+(declare-fun char6 () (_ BitVec 64))
+(declare-fun char5 () (_ BitVec 64))
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char7 #x0000000000000000))
+(assert (bvsle char7 #x000000000000ffff))
+(assert (= char7 char7))
+(assert (not (= char7 #x000000000000002d)))
+(assert (bvsge char6 #x0000000000000000))
+(assert (bvsle char6 #x000000000000ffff))
+(assert (not (= char6 #x000000000000002d)))
+(assert (bvsge char5 #x0000000000000000))
+(assert (bvsle char5 #x000000000000ffff))
+(assert (not (= char5 #x000000000000002d)))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= char4 #x000000000000002d)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (not (= char3 #x000000000000002d)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (not (= char2 #x000000000000002d)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (not (= char1 #x000000000000002d)))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (not (= char0 #x000000000000002d)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+char7 == char7 &&
+char7 != CONST_45 &&
+char6 != CONST_45 &&
+char5 != CONST_45 &&
+char4 != CONST_45 &&
+char3 != CONST_45 &&
+char2 != CONST_45 &&
+char1 != CONST_45 &&
+bool8 == CONST_0 &&
+char0 != CONST_45 -> true
+
+### PCs: total:29177 sat:16324 unsat:12853
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun char7 () (_ BitVec 64))
+(declare-fun char6 () (_ BitVec 64))
+(declare-fun char5 () (_ BitVec 64))
+(declare-fun char4 () (_ BitVec 64))
+(declare-fun char3 () (_ BitVec 64))
+(declare-fun char2 () (_ BitVec 64))
+(declare-fun char1 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun char0 () (_ BitVec 64))
+(assert (bvsge char7 #x0000000000000000))
+(assert (bvsle char7 #x000000000000ffff))
+(assert (not (= char7 char7)))
+(assert (not (= char7 #x000000000000002d)))
+(assert (bvsge char6 #x0000000000000000))
+(assert (bvsle char6 #x000000000000ffff))
+(assert (not (= char6 #x000000000000002d)))
+(assert (bvsge char5 #x0000000000000000))
+(assert (bvsle char5 #x000000000000ffff))
+(assert (not (= char5 #x000000000000002d)))
+(assert (bvsge char4 #x0000000000000000))
+(assert (bvsle char4 #x000000000000ffff))
+(assert (not (= char4 #x000000000000002d)))
+(assert (bvsge char3 #x0000000000000000))
+(assert (bvsle char3 #x000000000000ffff))
+(assert (not (= char3 #x000000000000002d)))
+(assert (bvsge char2 #x0000000000000000))
+(assert (bvsle char2 #x000000000000ffff))
+(assert (not (= char2 #x000000000000002d)))
+(assert (bvsge char1 #x0000000000000000))
+(assert (bvsle char1 #x000000000000ffff))
+(assert (not (= char1 #x000000000000002d)))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge char0 #x0000000000000000))
+(assert (bvsle char0 #x000000000000ffff))
+(assert (not (= char0 #x000000000000002d)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 10
+char7 != char7 &&
+char7 != CONST_45 &&
+char6 != CONST_45 &&
+char5 != CONST_45 &&
+char4 != CONST_45 &&
+char3 != CONST_45 &&
+char2 != CONST_45 &&
+char1 != CONST_45 &&
+bool8 == CONST_0 &&
+char0 != CONST_45 -> false
+
+### PCs: total:29178 sat:16324 unsat:12854
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 38515 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 29007 msec
+Total Solver Parse Time = 3226 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 1132 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 13
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 13
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 17035
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 17035
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+38515,0,38515,0,0,29007,3226,1132,0,13,0,0,0,0,13,0,13,0,17035,0,0,0,0,17035,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:38
+states:             new=2447,visited=0,backtracked=2447,end=712
+search:             maxDepth=13,constraints=674
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1223
+heap:               new=333120,released=411961,maxLive=685,gcCycles=2318
+instructions:       19323725
+max memory:         499MB
+loaded code:        classes=107,methods=2316
+
+====================================================== search finished: 6/23/26 9:26 PM

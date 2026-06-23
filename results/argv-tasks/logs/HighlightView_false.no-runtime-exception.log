@@ -1,0 +1,199 @@
+(assert (bvsge bool9 #x0000000000000000))
+(assert (bvsle bool9 #x0000000000000001))
+(assert (= bool9 #x0000000000000000))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 7
+float1 == CONST_0.0 &&
+float10 > CONST_0.0 &&
+bool0 != CONST_0 &&
+bool9 == CONST_0 &&
+bool8 == CONST_0 &&
+bool7 == CONST_0 &&
+bool6 == CONST_0 -> true
+
+### PCs: total:914 sat:668 unsat:246
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool9 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool9 #x0000000000000000))
+(assert (bvsle bool9 #x0000000000000001))
+(assert (= bool9 #x0000000000000000))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 5
+bool0 == CONST_0 &&
+bool9 == CONST_0 &&
+bool8 == CONST_0 &&
+bool7 == CONST_0 &&
+bool6 == CONST_0 -> true
+
+### PCs: total:915 sat:669 unsat:246
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: no
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(declare-fun bool9 () (_ BitVec 64))
+(declare-fun bool8 () (_ BitVec 64))
+(declare-fun bool7 () (_ BitVec 64))
+(declare-fun bool6 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (not (= bool0 #x0000000000000000)))
+(assert (= bool0 #x0000000000000000))
+(assert (bvsge bool9 #x0000000000000000))
+(assert (bvsle bool9 #x0000000000000001))
+(assert (= bool9 #x0000000000000000))
+(assert (bvsge bool8 #x0000000000000000))
+(assert (bvsle bool8 #x0000000000000001))
+(assert (= bool8 #x0000000000000000))
+(assert (bvsge bool7 #x0000000000000000))
+(assert (bvsle bool7 #x0000000000000001))
+(assert (= bool7 #x0000000000000000))
+(assert (bvsge bool6 #x0000000000000000))
+(assert (bvsle bool6 #x0000000000000001))
+(assert (= bool6 #x0000000000000000))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 6
+bool0 != CONST_0 &&
+bool0 == CONST_0 &&
+bool9 == CONST_0 &&
+bool8 == CONST_0 &&
+bool7 == CONST_0 &&
+bool6 == CONST_0 -> false
+
+### PCs: total:916 sat:669 unsat:247
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 1776 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 0
+Total Solver Time = 1087 msec
+Total Solver Parse Time = 157 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 39 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 10
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 10
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 320
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 320
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+1776,0,1776,0,0,1087,157,39,0,10,0,0,0,0,10,0,10,0,320,0,0,0,0,320,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #5: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #6: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #7: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #10: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #11: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+error #12: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
+
+====================================================== statistics
+elapsed time:       00:00:01
+states:             new=583,visited=0,backtracked=583,end=220
+search:             maxDepth=11,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=271
+heap:               new=911,released=2464,maxLive=455,gcCycles=439
+instructions:       12257
+max memory:         240MB
+loaded code:        classes=89,methods=1873
+
+====================================================== search finished: 6/23/26 9:36 PM
