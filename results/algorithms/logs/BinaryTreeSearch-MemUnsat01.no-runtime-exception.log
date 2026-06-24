@@ -39,7 +39,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -72,7 +72,7 @@ CONST_1 < int0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -128,16 +128,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1406 msec
+Veritesting Dyn Time = 1429 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 690 msec
-Total Solver Parse Time = 45 msec
+Total Solver Time = 695 msec
+Total Solver Parse Time = 46 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 54 msec
+Total Solver Clean up Time = 56 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -167,7 +167,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1406,0,1406,0,0,690,45,54,0,5,0,0,0,0,5,0,5,0,213,0,0,0,0,213,0,0,-1,-1,0.0,0,0,0
+1429,0,1429,0,0,695,46,56,0,5,0,0,0,0,5,0,5,0,213,0,0,0,0,213,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."

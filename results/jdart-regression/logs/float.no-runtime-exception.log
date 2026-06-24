@@ -1,31 +1,23 @@
+(declare-fun float1 () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float1)))
+(assert (fp.lt float1 (_ +zero 11 53)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven
+               (fp.add roundNearestTiesToEven float0 float1)
+               float0)
+       (fp #b1 #b01101101010 #x0000000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven
+               (fp.add roundNearestTiesToEven float0 float1)
+               float0)
+       (fp #b0 #b01101101010 #x0000000000000)))
 
 
-numeric PC: constraint # = 3
-float1 > CONST_0.0 &&
-((float0 + float1) - float0) > CONST_-1.401298464324817E-45 &&
-((float0 + float1) - float0) < CONST_1.401298464324817E-45 -> true
-
-### PCs: total:6 sat:6 unsat:0
-
-the depth of violation is3
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () Real)
-(declare-fun float0 () Real)
-(assert (>= float1 (- 10000.0)))
-(assert (<= float1 10000.0))
-(assert (< float1 0.0))
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
-(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
-
-
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 99 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -36,9 +28,9 @@ float1 < CONST_0.0 &&
 
 string analysis: SPC # = 0
 NPC constraint # = 3
-float1[-1.0] < CONST_0.0 &&
-((float0[0.0] + float1[-1.0]) - float0[0.0]) > CONST_-1.401298464324817E-45 &&
-((float0[0.0] + float1[-1.0]) - float0[0.0]) < CONST_1.401298464324817E-45
+float1[1.0842021724855044E-19] < CONST_0.0 &&
+((float0[0.0] + float1[1.0842021724855044E-19]) - float0[0.0]) > CONST_-1.401298464324817E-45 &&
+((float0[0.0] + float1[1.0842021724855044E-19]) - float0[0.0]) < CONST_1.401298464324817E-45
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -71,22 +63,30 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 the depth of violation is3
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float1 () Real)
-(declare-fun float0 () Real)
-(assert (>= float1 (- 10000.0)))
-(assert (<= float1 10000.0))
-(assert (> float1 0.0))
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> (- (+ float0 float1) float0) (- (/ 1.0 0.0))))
-(assert (< (- (+ float0 float1) float0) (/ 1.0 0.0)))
+(declare-fun float1 () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float1)))
+(assert (fp.gt float1 (_ +zero 11 53)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven
+               (fp.add roundNearestTiesToEven float0 float1)
+               float0)
+       (fp #b1 #b01101101010 #x0000000000000)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven
+               (fp.add roundNearestTiesToEven float0 float1)
+               float0)
+       (fp #b0 #b01101101010 #x0000000000000)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 652 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -97,9 +97,9 @@ float1 > CONST_0.0 &&
 
 string analysis: SPC # = 0
 NPC constraint # = 3
-float1[0.5] > CONST_0.0 &&
-((float0[0.0] + float1[0.5]) - float0[0.0]) > CONST_-1.401298464324817E-45 &&
-((float0[0.0] + float1[0.5]) - float0[0.0]) < CONST_1.401298464324817E-45
+float1[2.6645461011221006E-14] > CONST_0.0 &&
+((float0[9.66338012213519E-13] + float1[2.6645461011221006E-14]) - float0[9.66338012213519E-13]) > CONST_-1.401298464324817E-45 &&
+((float0[9.66338012213519E-13] + float1[2.6645461011221006E-14]) - float0[9.66338012213519E-13]) < CONST_1.401298464324817E-45
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -141,16 +141,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 425 msec
+Veritesting Dyn Time = 3732 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 38 msec
+Total Solver Time = 2564 msec
 Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 44 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -180,14 +180,14 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-425,0,425,0,0,38,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+3732,0,3732,0,0,2564,10,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
+elapsed time:       00:00:03
 states:             new=7,visited=0,backtracked=7,end=3
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2

@@ -44,7 +44,7 @@ tr:hover { background: #f8f9ff; }
 <body>
 <div class="header">
   <h1>float_unboundedloop</h1>
-  <p>JR: experimentalnan@9a662f9 | Date: 2026-06-23 21:24:00 </p>
+  <p>JR: experimentalnan@9a662f9 | Date: 2026-06-23 21:23:57 </p>
 </div>
 <div class="container">
 <div class="nav">
@@ -53,7 +53,7 @@ tr:hover { background: #f8f9ff; }
 </div>
 
 <h2>Config</h2>
-<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=false +symbolic.nan=false +symbolic.inf=false +listener=.symbc.VeritestingListener</pre>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.debug=true +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +symbolic.nan=false +symbolic.inf=false +listener=.symbc.VeritestingListener</pre>
 
 <h2>Summary</h2>
 <div class="summary-cards">
@@ -78,66 +78,66 @@ tr:hover { background: #f8f9ff; }
 <h2>Results</h2>
 <table>
   <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
-  <tr><td>Adjustable-Inner-Count-Halving.valid-assert</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.627276</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
-<tr><td>Adjustable-Inner-Count-Halving.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.591513</td><td></td></tr>
-<tr><td>Alternating-Step-Schedule.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.542224</td><td></td></tr>
-<tr><td>Alternating-Step-Schedule.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.675409</td><td></td></tr>
-<tr><td>Batch-Conveyor-Counter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.629402</td><td></td></tr>
-<tr><td>Batch-Conveyor-Counter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.603306</td><td></td></tr>
-<tr><td>Bounded-Proportional-Update.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.575973</td><td></td></tr>
-<tr><td>Bounded-Proportional-Update.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.599047</td><td></td></tr>
-<tr><td>Bounded-Reset-Linear-Growth.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.753304</td><td></td></tr>
-<tr><td>Bounded-Reset-Linear-Growth.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.592763</td><td></td></tr>
-<tr><td>Clamped-Triangular-Drift.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.597105</td><td></td></tr>
-<tr><td>Clamped-Triangular-Drift.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.614821</td><td></td></tr>
-<tr><td>Cyclic-Preset-Inner-ABC.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.589359</td><td></td></tr>
-<tr><td>Cyclic-Preset-Inner-ABC.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.601062</td><td></td></tr>
-<tr><td>Fixed-Block-Accumulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.627822</td><td></td></tr>
-<tr><td>Fixed-Block-Accumulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.602094</td><td></td></tr>
-<tr><td>Hysteresis-On-Off-with-Deadband.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.719878</td><td></td></tr>
-<tr><td>Hysteresis-On-Off-with-Deadband.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.702656</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics **********</span></td></tr>
-<tr><td>Inner-Retry-Until-OK.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.630578</td><td></td></tr>
-<tr><td>Inner-Retry-Until-OK.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.592780</td><td></td></tr>
-<tr><td>Leak-and-Refill.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.592715</td><td></td></tr>
-<tr><td>Leak-and-Refill.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.592917</td><td></td></tr>
-<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.599214</td><td></td></tr>
-<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.584758</td><td></td></tr>
-<tr><td>Nested-Drain-Then-Step.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.601096</td><td></td></tr>
-<tr><td>Nested-Drain-Then-Step.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.591566</td><td></td></tr>
-<tr><td>Nested-MinStep-Regulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.603774</td><td></td></tr>
-<tr><td>Nested-MinStep-Regulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.616326</td><td></td></tr>
-<tr><td>Nested-PingPong-with-Caps.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.591582</td><td></td></tr>
-<tr><td>Nested-PingPong-with-Caps.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.595603</td><td></td></tr>
-<tr><td>Nested-Saturation-Then-Reset.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.587102</td><td></td></tr>
-<tr><td>Nested-Saturation-Then-Reset.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.596752</td><td></td></tr>
-<tr><td>Nested-Windowed-Add-Remove.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.602384</td><td></td></tr>
-<tr><td>Nested-Windowed-Add-Remove.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.589983</td><td></td></tr>
-<tr><td>Producer-Consumer-Level.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.576348</td><td></td></tr>
-<tr><td>Producer-Consumer-Level.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.626035</td><td></td></tr>
-<tr><td>Ramp-and-Hold.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.617887</td><td></td></tr>
-<tr><td>Ramp-and-Hold.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.584011</td><td></td></tr>
-<tr><td>Safe-Accumulator-with-Bounded-Noise.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>1.447645</td><td></td></tr>
-<tr><td>Safe-Accumulator-with-Bounded-Noise.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>1.404065</td><td></td></tr>
-<tr><td>Saturating-Integrator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.591058</td><td></td></tr>
-<tr><td>Saturating-Integrator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.568866</td><td></td></tr>
-<tr><td>Slew-Rate-Limiter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.602140</td><td></td></tr>
-<tr><td>Slew-Rate-Limiter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.601291</td><td></td></tr>
-<tr><td>Switched-Linear-Plant.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.597490</td><td></td></tr>
-<tr><td>Switched-Linear-Plant.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.599611</td><td></td></tr>
-<tr><td>Two-Band-Piecewise-Linear-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.640748</td><td></td></tr>
-<tr><td>Two-Band-Piecewise-Linear-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.609495</td><td></td></tr>
-<tr><td>Two-Counter-Lexicographic-Small.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.598293</td><td></td></tr>
-<tr><td>Two-Counter-Lexicographic-Small.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.594606</td><td></td></tr>
-<tr><td>Two-Level-Nested-Scheduler.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.606174</td><td></td></tr>
-<tr><td>Two-Level-Nested-Scheduler.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.634063</td><td></td></tr>
-<tr><td>Two-State-FP-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.609805</td><td></td></tr>
-<tr><td>Two-State-FP-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.613417</td><td></td></tr>
-<tr><td>Two-Var-Nested-Handshake.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.588593</td><td></td></tr>
-<tr><td>Two-Var-Nested-Handshake.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.612433</td><td></td></tr>
-<tr><td>Two-Variable_Averaging_Filter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.633518</td><td></td></tr>
-<tr><td>Two-Variable_Averaging_Filter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.616587</td><td></td></tr>
-<tr><td>Unbounded-Outer-Inner-Safety-Gate.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.645081</td><td></td></tr>
-<tr><td>Unbounded-Outer-Inner-Safety-Gate.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.608255</td><td></td></tr>
+  <tr><td>Adjustable-Inner-Count-Halving.valid-assert</td><td>false</td><td class="status-incorrect">incorrect</td><td>0.660542</td><td><span class="error-text" title="/************************ Printing Exception Statistics *****************">/************************ Printing Exception Statistics *****************</span></td></tr>
+<tr><td>Adjustable-Inner-Count-Halving.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.696166</td><td></td></tr>
+<tr><td>Alternating-Step-Schedule.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.628960</td><td></td></tr>
+<tr><td>Alternating-Step-Schedule.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.595219</td><td></td></tr>
+<tr><td>Batch-Conveyor-Counter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.628119</td><td></td></tr>
+<tr><td>Batch-Conveyor-Counter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.649399</td><td></td></tr>
+<tr><td>Bounded-Proportional-Update.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.636280</td><td></td></tr>
+<tr><td>Bounded-Proportional-Update.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.641035</td><td></td></tr>
+<tr><td>Bounded-Reset-Linear-Growth.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.621739</td><td></td></tr>
+<tr><td>Bounded-Reset-Linear-Growth.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.658394</td><td></td></tr>
+<tr><td>Clamped-Triangular-Drift.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.634185</td><td></td></tr>
+<tr><td>Clamped-Triangular-Drift.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.664261</td><td></td></tr>
+<tr><td>Cyclic-Preset-Inner-ABC.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.654957</td><td></td></tr>
+<tr><td>Cyclic-Preset-Inner-ABC.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.639986</td><td></td></tr>
+<tr><td>Fixed-Block-Accumulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.631025</td><td></td></tr>
+<tr><td>Fixed-Block-Accumulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.638481</td><td></td></tr>
+<tr><td>Hysteresis-On-Off-with-Deadband.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.735517</td><td></td></tr>
+<tr><td>Hysteresis-On-Off-with-Deadband.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.752571</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>Inner-Retry-Until-OK.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.636335</td><td></td></tr>
+<tr><td>Inner-Retry-Until-OK.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.646888</td><td></td></tr>
+<tr><td>Leak-and-Refill.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.622246</td><td></td></tr>
+<tr><td>Leak-and-Refill.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.623533</td><td></td></tr>
+<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.639762</td><td></td></tr>
+<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.638359</td><td></td></tr>
+<tr><td>Nested-Drain-Then-Step.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.653643</td><td></td></tr>
+<tr><td>Nested-Drain-Then-Step.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.635940</td><td></td></tr>
+<tr><td>Nested-MinStep-Regulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.641261</td><td></td></tr>
+<tr><td>Nested-MinStep-Regulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.651395</td><td></td></tr>
+<tr><td>Nested-PingPong-with-Caps.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.629091</td><td></td></tr>
+<tr><td>Nested-PingPong-with-Caps.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.659902</td><td></td></tr>
+<tr><td>Nested-Saturation-Then-Reset.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.627078</td><td></td></tr>
+<tr><td>Nested-Saturation-Then-Reset.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.662835</td><td></td></tr>
+<tr><td>Nested-Windowed-Add-Remove.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.629039</td><td></td></tr>
+<tr><td>Nested-Windowed-Add-Remove.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.665186</td><td></td></tr>
+<tr><td>Producer-Consumer-Level.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.623057</td><td></td></tr>
+<tr><td>Producer-Consumer-Level.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.638324</td><td></td></tr>
+<tr><td>Ramp-and-Hold.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.620948</td><td></td></tr>
+<tr><td>Ramp-and-Hold.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.628535</td><td></td></tr>
+<tr><td>Safe-Accumulator-with-Bounded-Noise.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>1.884778</td><td></td></tr>
+<tr><td>Safe-Accumulator-with-Bounded-Noise.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>1.835394</td><td></td></tr>
+<tr><td>Saturating-Integrator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.735622</td><td></td></tr>
+<tr><td>Saturating-Integrator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.733654</td><td></td></tr>
+<tr><td>Slew-Rate-Limiter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.746210</td><td></td></tr>
+<tr><td>Slew-Rate-Limiter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.763089</td><td></td></tr>
+<tr><td>Switched-Linear-Plant.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.750711</td><td></td></tr>
+<tr><td>Switched-Linear-Plant.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.727156</td><td></td></tr>
+<tr><td>Two-Band-Piecewise-Linear-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.721658</td><td></td></tr>
+<tr><td>Two-Band-Piecewise-Linear-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.789043</td><td></td></tr>
+<tr><td>Two-Counter-Lexicographic-Small.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.770418</td><td></td></tr>
+<tr><td>Two-Counter-Lexicographic-Small.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.788051</td><td></td></tr>
+<tr><td>Two-Level-Nested-Scheduler.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.702221</td><td></td></tr>
+<tr><td>Two-Level-Nested-Scheduler.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.737422</td><td></td></tr>
+<tr><td>Two-State-FP-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.740971</td><td></td></tr>
+<tr><td>Two-State-FP-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.740484</td><td></td></tr>
+<tr><td>Two-Var-Nested-Handshake.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.727278</td><td></td></tr>
+<tr><td>Two-Var-Nested-Handshake.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.746582</td><td></td></tr>
+<tr><td>Two-Variable_Averaging_Filter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.759255</td><td></td></tr>
+<tr><td>Two-Variable_Averaging_Filter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.746300</td><td></td></tr>
+<tr><td>Unbounded-Outer-Inner-Safety-Gate.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.748987</td><td></td></tr>
+<tr><td>Unbounded-Outer-Inner-Safety-Gate.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.727169</td><td></td></tr>
 
 </table>
 </div>

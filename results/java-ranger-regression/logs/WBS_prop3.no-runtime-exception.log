@@ -35,16 +35,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4151 msec
+Veritesting Dyn Time = 4118 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2027 msec
-Total Solver Parse Time = 271 msec
+Total Solver Time = 1911 msec
+Total Solver Parse Time = 251 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 77 msec
+Total Solver Clean up Time = 72 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -74,7 +74,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4151,0,4151,0,0,2027,271,77,0,9,0,0,0,0,9,0,9,0,1773,0,0,0,0,1773,0,0,-1,-1,0.0,0,0,0
+4118,0,4118,0,0,1911,251,72,0,9,0,0,0,0,9,0,9,0,1773,0,0,0,0,1773,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."

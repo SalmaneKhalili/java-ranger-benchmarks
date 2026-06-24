@@ -28,7 +28,7 @@ char0 == CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -65,7 +65,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -98,7 +98,7 @@ char0 == CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 8430 msec
+Veritesting Dyn Time = 8268 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 7074 msec
-Total Solver Parse Time = 959 msec
+Total Solver Time = 7031 msec
+Total Solver Parse Time = 1036 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 239 msec
+Total Solver Clean up Time = 222 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-8430,0,8430,0,0,7074,959,239,0,35,0,0,0,0,35,0,35,0,5891,0,0,0,0,5891,0,0,-1,-1,0.0,0,0,0
+8268,0,8268,0,0,7031,1036,222,0,35,0,0,0,0,35,0,35,0,5891,0,0,0,0,5891,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -193,7 +193,7 @@ search:             maxDepth=13,constraints=236
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=443
 heap:               new=5413,released=8790,maxLive=470,gcCycles=887
 instructions:       2194859
-max memory:         488MB
+max memory:         476MB
 loaded code:        classes=87,methods=1856
 
 ====================================================== search finished: 6/23/26 9:28 PM

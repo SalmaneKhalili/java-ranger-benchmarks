@@ -1,199 +1,200 @@
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (< float0 0.0))
+(assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 226 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 1
-float0 < CONST_0.0 -> true
-
-### PCs: total:1 sat:1 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= 0.0 float0))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-CONST_0.0 == float0 -> true
-
-### PCs: total:2 sat:2 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> float0 0.0))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-float0 > CONST_0.0 -> true
-
-### PCs: total:3 sat:3 unsat:0
-
-New sym int INT_1 min=-2147483648, max=2147483647
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |(float0 + CONST_1.0)_112302969| () Real)
-(declare-fun float0 () Real)
-(declare-fun INT_1 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= |(float0 + CONST_1.0)_112302969| 0.0))
-(assert (<= |(float0 + CONST_1.0)_112302969| 0.0))
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= |(float0 + CONST_1.0)_112302969| (+ float0 1.0)))
-(assert (bvsge INT_1 #xffffffff80000000))
-(assert (bvsle INT_1 #x000000007fffffff))
-(assert (= __bv2i0 INT_1))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= |(float0 + CONST_1.0)_112302969|
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (= 0.0 float0))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
+numeric PC: constraint # = 3
+INT_1 < CONST_0 &&
 (float0 + CONST_1.0) == INT_1 &&
 CONST_0.0 == float0 -> false
 
-### PCs: total:4 sat:3 unsat:1
+### PCs: total:5 sat:4 unsat:1
 
-New sym int INT_2 min=-2147483648, max=2147483647
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |(float0 + CONST_1.0)_689401025| () Real)
-(declare-fun float0 () Real)
-(declare-fun INT_2 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= |(float0 + CONST_1.0)_689401025| 0.0))
-(assert (<= |(float0 + CONST_1.0)_689401025| 0.0))
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= |(float0 + CONST_1.0)_689401025| (+ float0 1.0)))
-(assert (bvsge INT_2 #xffffffff80000000))
-(assert (bvsle INT_2 #x000000007fffffff))
-(assert (= __bv2i0 INT_2))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= |(float0 + CONST_1.0)_689401025|
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (> float0 0.0))
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_384294141| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (= #x0000000000000000 INT_1))
+(assert (or (and (fp.geq |(float0 + CONST_1.0)_384294141|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(float0 + CONST_1.0)_384294141|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(float0 + CONST_1.0)_384294141|)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141|
+       (fp.add roundNearestTiesToEven
+               float0
+               (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141| ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 20 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 2
-(float0 + CONST_1.0) == INT_2 &&
-float0 > CONST_0.0 -> false
+numeric PC: constraint # = 3
+CONST_0 == INT_1 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> false
 
-### PCs: total:5 sat:3 unsat:2
+### PCs: total:6 sat:4 unsat:2
 
-
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
-
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
 
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 319 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
-
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 42 msec
-Total Solver Parse Time = 10 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
-
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 0
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 0
-Number of High Order Regions Used = 0
-
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 0
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 0
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_384294141| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvsgt INT_1 #x0000000000000000))
+(assert (or (and (fp.geq |(float0 + CONST_1.0)_384294141|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(float0 + CONST_1.0)_384294141|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(float0 + CONST_1.0)_384294141|)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141|
+       (fp.add roundNearestTiesToEven
+               float0
+               (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141| ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
 
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+Solving time of z3 bitvector is 785 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-Metrics Vector:
-319,0,319,0,0,42,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
-====================================================== results
-no errors detected
+numeric PC: constraint # = 3
+INT_1 > CONST_0 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> true
 
-====================================================== statistics
-elapsed time:       00:00:00
-states:             new=6,visited=0,backtracked=6,end=1
-search:             maxDepth=3,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
-heap:               new=462,released=17,maxLive=453,gcCycles=4
-instructions:       6075
-max memory:         240MB
-loaded code:        classes=85,methods=1831
+### PCs: total:7 sat:5 unsat:2
 
-====================================================== search finished: 6/23/26 9:25 PM
+the depth of violation is4
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(float0 + CONST_1.0)_384294141| () (_ FloatingPoint 11 53))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvsgt INT_1 #x0000000000000000))
+(assert (or (and (fp.geq |(float0 + CONST_1.0)_384294141|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(float0 + CONST_1.0)_384294141|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(float0 + CONST_1.0)_384294141|)))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141|
+       (fp.add roundNearestTiesToEven
+               float0
+               (fp #b0 #b01111111111 #x0000000000000))))
+(assert (fp.eq |(float0 + CONST_1.0)_384294141| ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.eq (_ +zero 11 53) float0))
+
+
+Solving time of z3 bitvector is 637 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 3
+INT_1 > CONST_0 &&
+(float0 + CONST_1.0) == INT_1 &&
+CONST_0.0 == float0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+INT_1[1] > CONST_0 &&
+(float0[0.0] + CONST_1.0) == INT_1[1] &&
+CONST_0.0 == float0[0.0]
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+[SEVERE] JPF exception, terminating: exception during propertyViolated() notification
+
+java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:160)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:206)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslator.java:32)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:50)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:59)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:23)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.translate(NormalFormTranslator.java:44)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.collect(NumericConstraintTranslator.java:31)
+	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:49)
+	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:28)
+	at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:22)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.inner_isSatisfiable(SymbolicStringConstraintsGeneral.java:450)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.isSatisfiable(SymbolicStringConstraintsGeneral.java:378)
+	at gov.nasa.jpf.symbc.string.StringPathCondition.solve(StringPathCondition.java:138)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:397)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+---------------------- JPF error stack trace ---------------------
+gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:863)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:84)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+Caused by: java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.<init>(NumericConstraintTranslator.java:160)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:206)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.transform(NormalFormTranslator.java:32)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:50)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:59)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.transformChain(NumericConstraintTranslator.java:23)
+	at edu.ucsb.cs.vlab.translate.NormalFormTranslator.translate(NormalFormTranslator.java:44)
+	at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.collect(NumericConstraintTranslator.java:31)
+	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:49)
+	at edu.ucsb.cs.vlab.translate.smtlib.from.Translator.translate(Translator.java:28)
+	at gov.nasa.jpf.symbc.string.translate.TranslateToZ3str3.solve(TranslateToZ3str3.java:22)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.inner_isSatisfiable(SymbolicStringConstraintsGeneral.java:450)
+	at gov.nasa.jpf.symbc.string.SymbolicStringConstraintsGeneral.isSatisfiable(SymbolicStringConstraintsGeneral.java:378)
+	at gov.nasa.jpf.symbc.string.StringPathCondition.solve(StringPathCondition.java:138)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solveOld(PathCondition.java:397)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.solve(PathCondition.java:344)
+	at gov.nasa.jpf.symbc.VeritestingListener.propertyViolated(VeritestingListener.java:746)
+	at gov.nasa.jpf.search.Search.notifyPropertyViolated(Search.java:857)
+	... 9 more

@@ -1,17 +1,15 @@
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> (- 0.0 float0) 0.0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23,17 +21,18 @@ numeric PC: constraint # = 1
 the depth of violation is2
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (< (- 0.0 float0) 0.0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -42,7 +41,7 @@ numeric PC: constraint # = 1
 
 string analysis: SPC # = 0
 NPC constraint # = 1
-(CONST_0.0 - float0[0.5]) < CONST_0.0
+(CONST_0.0 - float0[2.0000000000000004]) < CONST_0.0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -77,17 +76,18 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 the depth of violation is2
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= 0.0 (- 0.0 float0)))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -141,13 +141,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 427 msec
+Veritesting Dyn Time = 441 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 39 msec
+Total Solver Time = 46 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -180,7 +180,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-427,0,427,0,0,39,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+441,0,441,0,0,46,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:4..."

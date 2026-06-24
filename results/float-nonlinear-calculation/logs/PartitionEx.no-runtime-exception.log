@@ -1,21 +1,8 @@
-numeric PC: constraint # = 2
-double0 < CONST_10.0 &&
-CONST_5.0 < double0 -> true
-
-### PCs: total:7 sat:7 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= 10.0 double0))
-(assert (< double0 10.0))
-(assert (< 5.0 double0))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq (fp #b0 #b10000000010 #x4000000000000) double0))
+(assert (fp.lt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -31,16 +18,17 @@ CONST_5.0 < double0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 10.0))
-(assert (< double0 10.0))
-(assert (< 5.0 double0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -56,19 +44,23 @@ CONST_5.0 < double0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (< double0 (* (/ 6.0 5.0) double0)))
-(assert (< double0 10.0))
-(assert (< 5.0 double0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.lt double0
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x3333333333333)
+               double0)))
+(assert (fp.lt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 543 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -81,19 +73,23 @@ CONST_5.0 < double0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= (* (/ 6.0 5.0) double0) double0))
-(assert (< double0 10.0))
-(assert (< 5.0 double0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq (fp.mul roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x3333333333333)
+               double0)
+       double0))
+(assert (fp.lt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1097 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -106,19 +102,23 @@ CONST_5.0 < double0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () Real)
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 (* (/ 6.0 5.0) double0)))
-(assert (< double0 10.0))
-(assert (< 5.0 double0))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b01111111111 #x3333333333333)
+               double0)))
+(assert (fp.lt double0 (fp #b0 #b10000000010 #x4000000000000)))
+(assert (fp.lt (fp #b0 #b10000000001 #x4000000000000) double0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 665 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 320 msec
+Veritesting Dyn Time = 2686 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 49 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 2385 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 21 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-320,0,320,0,0,49,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+2686,0,2686,0,0,2385,9,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:00
+elapsed time:       00:00:02
 states:             new=7,visited=0,backtracked=7,end=1
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
@@ -196,4 +196,4 @@ instructions:       6102
 max memory:         240MB
 loaded code:        classes=86,methods=1932
 
-====================================================== search finished: 6/23/26 9:43 PM
+====================================================== search finished: 6/23/26 10:14 PM

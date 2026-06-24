@@ -187,7 +187,7 @@ error #989: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #990: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:22
+elapsed time:       00:00:23
 states:             new=3059,visited=0,backtracked=3059,end=540
 search:             maxDepth=13,constraints=448
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1529

@@ -8,7 +8,7 @@ int0 >= CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -132,14 +132,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 668 msec
+Veritesting Dyn Time = 643 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 126 msec
-Total Solver Parse Time = 42 msec
+Total Solver Time = 113 msec
+Total Solver Parse Time = 33 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
@@ -171,7 +171,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-668,0,668,0,0,126,42,1,0,6,0,0,0,0,6,0,6,0,58,0,0,0,0,58,0,0,-1,-1,0.0,0,0,0
+643,0,643,0,0,113,33,1,0,6,0,0,0,0,6,0,6,0,58,0,0,0,0,58,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:4..."
@@ -196,4 +196,4 @@ instructions:       6648
 max memory:         240MB
 loaded code:        classes=89,methods=1873
 
-====================================================== search finished: 6/23/26 10:35 PM
+====================================================== search finished: 6/23/26 10:33 PM

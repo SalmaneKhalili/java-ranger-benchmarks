@@ -6,7 +6,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -60,7 +60,7 @@ int0 != CONST_0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -134,16 +134,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 31797 msec
+Veritesting Dyn Time = 33581 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 29723 msec
-Total Solver Parse Time = 3490 msec
+Total Solver Time = 31301 msec
+Total Solver Parse Time = 4481 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1271 msec
+Total Solver Clean up Time = 1250 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -173,7 +173,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-31797,0,31797,0,0,29723,3490,1271,0,9,0,0,0,0,9,0,9,0,18996,0,0,0,0,18996,0,0,-1,-1,0.0,0,0,0
+33581,0,33581,0,0,31301,4481,1250,0,9,0,0,0,0,9,0,9,0,18996,0,0,0,0,18996,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -187,13 +187,13 @@ error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError
 error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 
 ====================================================== statistics
-elapsed time:       00:00:31
+elapsed time:       00:00:33
 states:             new=8153,visited=0,backtracked=8153,end=256
 search:             maxDepth=13,constraints=4072
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4076
 heap:               new=21870,released=23828,maxLive=458,gcCycles=2080
 instructions:       447703
-max memory:         484MB
+max memory:         472MB
 loaded code:        classes=90,methods=1873
 
 ====================================================== search finished: 6/23/26 9:24 PM

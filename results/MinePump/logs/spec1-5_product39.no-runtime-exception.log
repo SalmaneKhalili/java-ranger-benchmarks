@@ -12,7 +12,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-11128,0,11128,0,0,7237,1460,281,0,5,0,0,0,0,5,0,5,0,5043,0,0,0,0,5043,0,0,-1,-1,0.0,0,0,0
+11239,0,11239,0,0,7288,1517,278,0,5,0,0,0,0,5,0,5,0,5043,0,0,0,0,5043,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -193,7 +193,7 @@ search:             maxDepth=13,constraints=432
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1353
 heap:               new=5604,released=16266,maxLive=486,gcCycles=2063
 instructions:       351185
-max memory:         240MB
+max memory:         300MB
 loaded code:        classes=94,methods=1916
 
 ====================================================== search finished: 6/23/26 9:30 PM

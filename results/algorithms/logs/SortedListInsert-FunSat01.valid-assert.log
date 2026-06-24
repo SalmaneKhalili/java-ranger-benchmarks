@@ -16,7 +16,7 @@ int0 > CONST_1 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -64,7 +64,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -95,7 +95,7 @@ int0 > CONST_1 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3354 msec
+Veritesting Dyn Time = 3403 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2889 msec
-Total Solver Parse Time = 144 msec
+Total Solver Time = 2937 msec
+Total Solver Parse Time = 142 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 325 msec
+Total Solver Clean up Time = 338 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3354,0,3354,0,0,2889,144,325,0,4,0,0,0,0,4,0,4,0,948,0,0,0,0,948,0,0,-1,-1,0.0,0,0,0
+3403,0,3403,0,0,2937,142,338,0,4,0,0,0,0,4,0,4,0,948,0,0,0,0,948,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       16231
 max memory:         240MB
 loaded code:        classes=87,methods=1933
 
-====================================================== search finished: 6/23/26 10:40 PM
+====================================================== search finished: 6/23/26 10:39 PM

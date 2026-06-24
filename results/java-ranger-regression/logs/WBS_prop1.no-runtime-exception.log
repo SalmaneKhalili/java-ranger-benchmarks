@@ -41,10 +41,10 @@ GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2662 msec
-Total Solver Parse Time = 642 msec
+Total Solver Time = 2660 msec
+Total Solver Parse Time = 663 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 92 msec
+Total Solver Clean up Time = 86 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -74,7 +74,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4848,0,4848,0,0,2662,642,92,0,10,0,0,0,0,10,0,10,0,1989,0,0,0,0,1989,0,0,-1,-1,0.0,0,0,0
+4848,0,4848,0,0,2660,663,86,0,10,0,0,0,0,10,0,10,0,1989,0,0,0,0,1989,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       47446
 max memory:         240MB
 loaded code:        classes=90,methods=1873
 
-====================================================== search finished: 6/23/26 9:24 PM
+====================================================== search finished: 6/23/26 9:23 PM

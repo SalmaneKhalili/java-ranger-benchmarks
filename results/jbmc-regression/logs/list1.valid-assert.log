@@ -43,7 +43,7 @@
 (assert (not (= (bvsrem int0 #x0000000000000002) #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -64,7 +64,7 @@ numeric PC: constraint # = 11
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 65098 msec
+Veritesting Dyn Time = 61744 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 62300 msec
-Total Solver Parse Time = 3692 msec
+Total Solver Time = 59656 msec
+Total Solver Parse Time = 3652 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 4453 msec
+Total Solver Clean up Time = 3966 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-65098,0,65098,0,0,62300,3692,4453,0,5,0,0,0,0,5,0,5,0,18623,0,0,0,0,18623,0,0,-1,-1,0.0,0,0,0
+61744,0,61744,0,0,59656,3652,3966,0,5,0,0,0,0,5,0,5,0,18623,0,0,0,0,18623,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:01:05
+elapsed time:       00:01:01
 states:             new=8145,visited=0,backtracked=8145,end=201
 search:             maxDepth=13,constraints=4052
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4072
 heap:               new=1130,released=6275,maxLive=483,gcCycles=8145
 instructions:       158041
-max memory:         358MB
+max memory:         314MB
 loaded code:        classes=89,methods=1843
 
-====================================================== search finished: 6/23/26 9:30 PM
+====================================================== search finished: 6/23/26 9:32 PM

@@ -1,134 +1,134 @@
-(assert (= 0.0 double0))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 7 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 5
-REAL_3 == INT_2 &&
-INT_2 > CONST_-100 &&
-INT_2 < CONST_100 &&
-(double0 / CONST_10.0) == INT_2 &&
-CONST_0.0 == double0 -> true
-
-### PCs: total:10 sat:7 unsat:3
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun INT_2 () (_ BitVec 64))
-(declare-fun |(double0 / CONST_10.0)_817348612| () Real)
-(declare-fun double0 () Real)
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (bvsge INT_2 #xffffffff80000000))
-(assert (bvsle INT_2 #x000000007fffffff))
-(assert (= #x0000000000000064 INT_2))
-(assert (>= |(double0 / CONST_10.0)_817348612| 0.0))
-(assert (<= |(double0 / CONST_10.0)_817348612| 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= |(double0 / CONST_10.0)_817348612| (/ double0 10.0)))
-(assert (= __bv2i0 INT_2))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= |(double0 / CONST_10.0)_817348612|
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (= 0.0 double0))
-
-
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 4190 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 numeric PC: constraint # = 3
-CONST_100 == INT_2 &&
-(double0 / CONST_10.0) == INT_2 &&
-CONST_0.0 == double0 -> false
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
 
-### PCs: total:11 sat:7 unsat:4
+### PCs: total:5 sat:5 unsat:0
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun INT_2 () (_ BitVec 64))
-(declare-fun |(double0 / CONST_10.0)_817348612| () Real)
-(declare-fun double0 () Real)
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (bvsge INT_2 #xffffffff80000000))
-(assert (bvsle INT_2 #x000000007fffffff))
-(assert (bvsgt INT_2 #x0000000000000064))
-(assert (>= |(double0 / CONST_10.0)_817348612| 0.0))
-(assert (<= |(double0 / CONST_10.0)_817348612| 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= |(double0 / CONST_10.0)_817348612| (/ double0 10.0)))
-(assert (= __bv2i0 INT_2))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= |(double0 / CONST_10.0)_817348612|
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (= 0.0 double0))
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #xffffffffffffff9c))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 8 ms
+Solving time of z3 bitvector is 1725 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 3
-INT_2 > CONST_100 &&
-(double0 / CONST_10.0) == INT_2 &&
-CONST_0.0 == double0 -> false
+numeric PC: constraint # = 4
+INT_1 < CONST_-100 &&
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
 
-### PCs: total:12 sat:7 unsat:5
+### PCs: total:6 sat:6 unsat:0
 
-New sym int INT_4 min=-2147483648, max=2147483647
+the depth of violation is5
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |(double0 / CONST_10.0)_1240232440| () Real)
-(declare-fun double0 () Real)
-(declare-fun INT_4 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= |(double0 / CONST_10.0)_1240232440| 0.0))
-(assert (<= |(double0 / CONST_10.0)_1240232440| 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (= |(double0 / CONST_10.0)_1240232440| (/ double0 10.0)))
-(assert (bvsge INT_4 #xffffffff80000000))
-(assert (bvsle INT_4 #x000000007fffffff))
-(assert (= __bv2i0 INT_4))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= |(double0 / CONST_10.0)_1240232440|
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
-(assert (> double0 0.0))
+(declare-fun INT_1 () (_ BitVec 64))
+(declare-fun |(double0 * CONST_10.0)_247944893| () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (bvsge INT_1 #xffffffff80000000))
+(assert (bvsle INT_1 #x000000007fffffff))
+(assert (bvslt INT_1 #xffffffffffffff9c))
+(assert (bvslt INT_1 #x0000000000000064))
+(assert (or (and (fp.geq |(double0 * CONST_10.0)_247944893|
+                 (fp #b1 #b10000011110 #x0000000000000))
+         (fp.leq |(double0 * CONST_10.0)_247944893|
+                 (fp #b0 #b10000011101 #xfffffffc00000)))
+    (fp.isNaN |(double0 * CONST_10.0)_247944893|)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       (fp.mul roundNearestTiesToEven
+               (fp #b0 #b10000000010 #x4000000000000)
+               double0)))
+(assert (fp.eq |(double0 * CONST_10.0)_247944893|
+       ((_ to_fp 11 53) roundTowardZero INT_1)))
+(assert (fp.lt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 2140 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-numeric PC: constraint # = 2
-(double0 / CONST_10.0) == INT_4 &&
-double0 > CONST_0.0 -> false
+numeric PC: constraint # = 4
+INT_1 < CONST_-100 &&
+INT_1 < CONST_100 &&
+(double0 * CONST_10.0) == INT_1 &&
+double0 < CONST_0.0 -> true
 
-### PCs: total:13 sat:7 unsat:6
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.bar(Main.java:32)
+	at Main.foo(Main.java:43)
+	at Main.main(Main.java:49)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.bar(Main.java:32)
+	at Main.foo(Main.java:43)
+	at Main.main(Main.java:49)
 
 
 ====================================================== VeritestingListener report:
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 388 msec
+Veritesting Dyn Time = 9408 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 125 msec
-Total Solver Parse Time = 15 msec
+Total Solver Time = 6945 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1 msec
+Total Solver Clean up Time = 53 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-388,0,388,0,0,125,15,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+9408,0,9408,0,0,6945,9,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
-no errors detected
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.bar(Main.java:32..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=14,visited=0,backtracked=14,end=1
-search:             maxDepth=6,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=7
-heap:               new=462,released=17,maxLive=454,gcCycles=2
-instructions:       6092
+elapsed time:       00:00:09
+states:             new=5,visited=0,backtracked=0,end=0
+search:             maxDepth=5,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4
+heap:               new=478,released=8,maxLive=0,gcCycles=1
+instructions:       6089
 max memory:         240MB
-loaded code:        classes=85,methods=1832
+loaded code:        classes=89,methods=1873
 
 ====================================================== search finished: 6/23/26 9:23 PM

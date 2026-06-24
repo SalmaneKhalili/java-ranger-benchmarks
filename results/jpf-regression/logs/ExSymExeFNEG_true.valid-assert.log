@@ -1,8 +1,3 @@
-(assert (< (- 0.0 float0) 0.0))
-(assert (= 0.0 float0))
-
-
-Solving time of z3 bitvector is 0 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -14,18 +9,19 @@ CONST_0.0 == float0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= 0.0 (- 0.0 float0)))
-(assert (= 0.0 float0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0)))
+(assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -37,18 +33,19 @@ CONST_0.0 == float0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> (- 0.0 float0) 0.0))
-(assert (= 0.0 float0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
+(assert (fp.eq (_ +zero 11 53) float0))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -62,18 +59,19 @@ branch -x <= 0
 Testing FNEG
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (< (- 0.0 float0) 0.0))
-(assert (> float0 0.0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.lt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
+(assert (fp.gt float0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -85,15 +83,16 @@ float0 > CONST_0.0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (= 0.0 (- 0.0 float0)))
-(assert (> float0 0.0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.eq (_ +zero 11 53) (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0)))
+(assert (fp.gt float0 (_ +zero 11 53)))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -108,15 +107,16 @@ float0 > CONST_0.0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun float0 () Real)
-(assert (>= float0 (- 10000.0)))
-(assert (<= float0 10000.0))
-(assert (> (- 0.0 float0) 0.0))
-(assert (> float0 0.0))
+(declare-fun float0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq float0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq float0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN float0)))
+(assert (fp.gt (fp.sub roundNearestTiesToEven (_ +zero 11 53) float0) (_ +zero 11 53)))
+(assert (fp.gt float0 (_ +zero 11 53)))
 
 
 Solving time of z3 bitvector is 0 ms
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 319 msec
+Veritesting Dyn Time = 317 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 41 msec
-Total Solver Parse Time = 7 msec
+Total Solver Time = 49 msec
+Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-319,0,319,0,0,41,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+317,0,317,0,0,49,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected

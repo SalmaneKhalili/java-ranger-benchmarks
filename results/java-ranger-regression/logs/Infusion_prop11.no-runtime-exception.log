@@ -46,7 +46,7 @@
 (assert (bvsle #x0000000000000000 int21))
 
 
-Solving time of z3 bitvector is 2 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,7 +142,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 408 msec
+Veritesting Dyn Time = 392 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-408,0,408,0,0,88,21,2,0,13,0,0,0,0,13,0,13,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+392,0,392,0,0,88,21,2,0,13,0,0,0,0,13,0,13,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected

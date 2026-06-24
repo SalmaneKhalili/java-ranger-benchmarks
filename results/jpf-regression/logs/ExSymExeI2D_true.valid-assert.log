@@ -1,38 +1,44 @@
+
+Solving time of z3 bitvector is 318 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 2
+REAL_2 == ((CONST_0 - (int0 % CONST_10)) + CONST_1) &&
+int0 <= CONST_0 -> true
+
 ### PCs: total:7 sat:5 unsat:2
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_2 () Real)
-(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|
+(declare-fun REAL_2 () (_ FloatingPoint 11 53))
+(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|
              ()
              (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= REAL_2 (- 10000.0)))
-(assert (<= REAL_2 10000.0))
-(assert (< REAL_2 0.0))
-(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #xffffffffffffd8f0))
-(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #x0000000000002710))
+(assert (or (and (fp.geq REAL_2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_2)))
+(assert (fp.lt REAL_2 (_ +zero 11 53)))
+(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #xffffffffffffd8f0))
+(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd (bvsub #x0000000000000000 (bvsrem int0 #x000000000000000a))
           #x0000000000000001)
-   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= __bv2i0 |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= REAL_2
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
+   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|))
+(assert (fp.eq REAL_2
+       ((_ to_fp 11 53)
+         roundTowardZero
+         |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|)))
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 734 ms
+Solving time of z3 bitvector is 740 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -45,37 +51,34 @@ int0 <= CONST_0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_2 () Real)
-(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|
+(declare-fun REAL_2 () (_ FloatingPoint 11 53))
+(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|
              ()
              (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= REAL_2 (- 10000.0)))
-(assert (<= REAL_2 10000.0))
-(assert (= 0.0 REAL_2))
-(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #xffffffffffffd8f0))
-(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #x0000000000002710))
+(assert (or (and (fp.geq REAL_2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_2)))
+(assert (fp.eq (_ +zero 11 53) REAL_2))
+(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #xffffffffffffd8f0))
+(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd (bvsub #x0000000000000000 (bvsrem int0 #x000000000000000a))
           #x0000000000000001)
-   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= __bv2i0 |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= REAL_2
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
+   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|))
+(assert (fp.eq REAL_2
+       ((_ to_fp 11 53)
+         roundTowardZero
+         |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|)))
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 94 ms
+Solving time of z3 bitvector is 1054 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -88,37 +91,34 @@ int0 <= CONST_0 -> false
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun REAL_2 () Real)
-(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|
+(declare-fun REAL_2 () (_ FloatingPoint 11 53))
+(declare-fun |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|
              ()
              (_ BitVec 64))
 (declare-fun int0 () (_ BitVec 64))
-(declare-fun __bv2i0 () (_ BitVec 64))
-(declare-fun __bv2i1 () Int)
-(assert (>= REAL_2 (- 10000.0)))
-(assert (<= REAL_2 10000.0))
-(assert (> REAL_2 0.0))
-(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #xffffffffffffd8f0))
-(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266| #x0000000000002710))
+(assert (or (and (fp.geq REAL_2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq REAL_2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN REAL_2)))
+(assert (fp.gt REAL_2 (_ +zero 11 53)))
+(assert (bvsge |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #xffffffffffffd8f0))
+(assert (bvsle |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372| #x0000000000002710))
 (assert (bvsge int0 #xffffffff80000000))
 (assert (bvsle int0 #x000000007fffffff))
 (assert (= (bvadd (bvsub #x0000000000000000 (bvsrem int0 #x000000000000000a))
           #x0000000000000001)
-   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= __bv2i0 |((CONST_0 - (int0 % CONST_10)) + CONST_1)_153245266|))
-(assert (= (bv2int __bv2i0) __bv2i1))
-(assert (= REAL_2
-   (to_real (ite (bvslt __bv2i0 #x0000000000000000)
-                 (- __bv2i1 18446744073709551616)
-                 __bv2i1))))
+   |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|))
+(assert (fp.eq REAL_2
+       ((_ to_fp 11 53)
+         roundTowardZero
+         |((CONST_0 - (int0 % CONST_10)) + CONST_1)_694316372|)))
 (assert (bvsle int0 #x0000000000000000))
 
 
-Solving time of z3 bitvector is 172 ms
+Solving time of z3 bitvector is 400 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2162 msec
+Veritesting Dyn Time = 5856 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 1884 msec
-Total Solver Parse Time = 15 msec
+Total Solver Time = 5570 msec
+Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 90 msec
+Total Solver Clean up Time = 203 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +181,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2162,0,2162,0,0,1884,15,90,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+5856,0,5856,0,0,5570,12,203,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:05
 states:             new=5,visited=0,backtracked=5,end=2
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
@@ -196,4 +196,4 @@ instructions:       6099
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/23/26 9:26 PM
+====================================================== search finished: 6/23/26 9:27 PM

@@ -19,7 +19,7 @@
 (assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
 
 
-Solving time of z3 bitvector is 7 ms
+Solving time of z3 bitvector is 6 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -137,14 +137,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3931 msec
+Veritesting Dyn Time = 3942 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 200 msec
-Total Solver Parse Time = 26 msec
+Total Solver Time = 209 msec
+Total Solver Parse Time = 27 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 16 msec
 PCSatSolverCount = 0
@@ -176,7 +176,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3931,0,3931,0,0,200,26,16,0,2,0,0,0,0,2,0,2,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+3942,0,3942,0,0,209,27,16,0,2,0,0,0,0,2,0,2,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."

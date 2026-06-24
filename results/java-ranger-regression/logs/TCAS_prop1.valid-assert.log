@@ -3,7 +3,7 @@
 (assert (not (= int1 #x0000000000000000)))
 
 
-Solving time of z3 bitvector is 1 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -23,12 +23,12 @@ int1 != CONST_0 -> true
 
 string analysis: SPC # = 0
 NPC constraint # = 12
-int7[536870914] > CONST_400 &&
-int7[536870914] >= CONST_400 &&
+int7[514] > CONST_400 &&
+int7[514] >= CONST_400 &&
 int5[0] < int3[1] &&
 int6[0] == CONST_0 &&
 int0[301] < CONST_600 &&
-int7[536870914] <= int8[805306368] &&
+int7[514] <= int8[1073741824] &&
 int11[-2147483648] <= CONST_0 &&
 int10[-2147483648] != CONST_1 &&
 int0[301] > CONST_300 &&
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2815 msec
+Veritesting Dyn Time = 2774 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 2311 msec
-Total Solver Parse Time = 193 msec
+Total Solver Time = 2270 msec
+Total Solver Parse Time = 198 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 159 msec
+Total Solver Clean up Time = 158 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2815,0,2815,0,0,2311,193,159,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
+2774,0,2774,0,0,2270,198,158,0,22,0,0,0,0,22,0,22,0,790,0,0,0,0,790,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.mainProcess(Main..."

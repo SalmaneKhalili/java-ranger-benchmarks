@@ -1,28 +1,10 @@
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool0 () (_ BitVec 64))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
 bool0 != CONST_0 -> true
 
-### PCs: total:2203845 sat:1101924 unsat:1101921
+### PCs: total:2650309 sat:1325156 unsat:1325153
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -41,7 +23,7 @@ numeric PC: constraint # = 2
 bool0 == CONST_0 &&
 bool0 != CONST_0 -> false
 
-### PCs: total:2203846 sat:1101924 unsat:1101922
+### PCs: total:2650310 sat:1325156 unsat:1325154
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -49,7 +31,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -66,11 +48,11 @@ Solving time of z3 bitvector is 0 ms
 numeric PC: constraint # = 1
 bool0 != CONST_0 -> true
 
-### PCs: total:2203847 sat:1101925 unsat:1101922
+### PCs: total:2650311 sat:1325157 unsat:1325154
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -89,7 +71,7 @@ numeric PC: constraint # = 2
 bool0 == CONST_0 &&
 bool0 != CONST_0 -> false
 
-### PCs: total:2203848 sat:1101925 unsat:1101923
+### PCs: total:2650312 sat:1325157 unsat:1325155
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -97,7 +79,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -114,11 +96,11 @@ Solving time of z3 bitvector is 0 ms
 numeric PC: constraint # = 1
 bool0 != CONST_0 -> true
 
-### PCs: total:2203849 sat:1101926 unsat:1101923
+### PCs: total:2650313 sat:1325158 unsat:1325155
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -137,7 +119,7 @@ numeric PC: constraint # = 2
 bool0 == CONST_0 &&
 bool0 != CONST_0 -> false
 
-### PCs: total:2203850 sat:1101926 unsat:1101924
+### PCs: total:2650314 sat:1325158 unsat:1325156
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -145,7 +127,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -162,11 +144,11 @@ Solving time of z3 bitvector is 0 ms
 numeric PC: constraint # = 1
 bool0 != CONST_0 -> true
 
-### PCs: total:2203851 sat:1101927 unsat:1101924
+### PCs: total:2650315 sat:1325159 unsat:1325156
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -185,7 +167,7 @@ numeric PC: constraint # = 2
 bool0 == CONST_0 &&
 bool0 != CONST_0 -> false
 
-### PCs: total:2203852 sat:1101927 unsat:1101925
+### PCs: total:2650316 sat:1325159 unsat:1325157
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -193,7 +175,25 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(declare-fun bool0 () (_ BitVec 64))
+(assert (bvsge bool0 #x0000000000000000))
+(assert (bvsle bool0 #x0000000000000001))
+(assert (not (= bool0 #x0000000000000000)))
+
+
+Solving time of z3 bitvector is 0 ms
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+numeric PC: constraint # = 1
+bool0 != CONST_0 -> true
+
+### PCs: total:2650317 sat:1325160 unsat:1325157
+
+Z3bitvector using 64-bit bitvectors.
+Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
+Using floating point for reals: yes

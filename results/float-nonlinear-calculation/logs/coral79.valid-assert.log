@@ -1,33 +1,21 @@
-double1 > CONST_0.0 &&
-double0 > CONST_0.0 -> true
-
-### PCs: total:10 sat:10 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (= 0.0 double3))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 0.0))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.eq (_ +zero 11 53) double3))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.gt double2 (_ +zero 11 53)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (fp.gt double1 (_ +zero 11 53)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -41,29 +29,33 @@ double0 > CONST_0.0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (> double3 0.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 0.0))
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.gt double3 (_ +zero 11 53)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.gt double2 (_ +zero 11 53)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (fp.gt double1 (_ +zero 11 53)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 1 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -81,33 +73,37 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun int4 () (_ BitVec 64))
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge int4 #xffffffff80000000))
 (assert (bvsle int4 #x000000007fffffff))
 (assert (bvsle int4 #x0000000000000000))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (> double3 0.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 0.0))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.gt double3 (_ +zero 11 53)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.gt double2 (_ +zero 11 53)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (fp.gt double1 (_ +zero 11 53)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -122,33 +118,37 @@ double0 > CONST_0.0 -> true
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 (declare-fun int4 () (_ BitVec 64))
-(declare-fun double3 () Real)
-(declare-fun double2 () Real)
-(declare-fun double1 () Real)
-(declare-fun double0 () Real)
+(declare-fun double3 () (_ FloatingPoint 11 53))
+(declare-fun double2 () (_ FloatingPoint 11 53))
+(declare-fun double1 () (_ FloatingPoint 11 53))
+(declare-fun double0 () (_ FloatingPoint 11 53))
 (assert (bvsge int4 #xffffffff80000000))
 (assert (bvsle int4 #x000000007fffffff))
 (assert (bvsgt int4 #x0000000000000000))
-(assert (>= double3 (- 10000.0)))
-(assert (<= double3 10000.0))
-(assert (> double3 0.0))
-(assert (>= double2 (- 10000.0)))
-(assert (<= double2 10000.0))
-(assert (> double2 0.0))
-(assert (>= double1 (- 10000.0)))
-(assert (<= double1 10000.0))
-(assert (> double1 0.0))
-(assert (>= double0 (- 10000.0)))
-(assert (<= double0 10000.0))
-(assert (> double0 0.0))
+(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double3)))
+(assert (fp.gt double3 (_ +zero 11 53)))
+(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double2)))
+(assert (fp.gt double2 (_ +zero 11 53)))
+(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double1)))
+(assert (fp.gt double1 (_ +zero 11 53)))
+(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
+         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
+    (fp.isNaN double0)))
+(assert (fp.gt double0 (_ +zero 11 53)))
 
 
-Solving time of z3 bitvector is 0 ms
+Solving time of z3 bitvector is 2 ms
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -167,7 +167,7 @@ classPath null
 
 Z3bitvector using 64-bit bitvectors.
 Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+Using floating point for reals: yes
 
 java.lang.RuntimeException: ## Error: Math.sin not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.sin(ProblemGeneral.java:132)
