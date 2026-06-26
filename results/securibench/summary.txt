@@ -1,8 +1,8 @@
      Total: 226
-   Correct: 118
- Incorrect: 12
-   Unknown: 94
-Compile_err: 0
-   Timeout: 2
+   Correct: 0
+ Incorrect: 0
+   Unknown: 0
+Compile_err: 226
+   Timeout: 0
 
-Score: 118 / 226
+Score: 0 / 226

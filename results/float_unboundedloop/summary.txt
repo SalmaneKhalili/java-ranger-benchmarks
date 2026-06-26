@@ -1,8 +1,8 @@
      Total: 60
-   Correct: 58
- Incorrect: 1
-   Unknown: 1
-Compile_err: 0
+   Correct: 0
+ Incorrect: 0
+   Unknown: 0
+Compile_err: 60
    Timeout: 0
 
-Score: 58 / 60
+Score: 0 / 60
