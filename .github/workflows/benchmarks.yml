@@ -10,7 +10,7 @@ on:
       jr_ref:
         description: 'Java Ranger ref (branch/commit)'
         required: false
-        default: 'ade8889'
+        default: 'experimentalnan'
       timeout:
         description: 'Per-benchmark timeout in seconds'
         required: false
@@ -30,7 +30,7 @@ on:
 env:
   JR_REPO: SalmaneKhalili/java-ranger
   SV_BENCH_REPO: https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks.git
-  JR_REF: fp-power-fix
+  JR_REF: experimentalnan
 
 jobs:
   setup:

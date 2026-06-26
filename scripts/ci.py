@@ -37,7 +37,7 @@ SUITES = [
     "juliet-java",
 ]
 
-def make_jpf_config(classpath, fp_enabled=True, nan_enabled=False, inf_enabled=False):
+def make_jpf_config(classpath, fp_enabled=True, depth_limit=13):
     return """\
 target=Main
 classpath={classpath}
@@ -46,25 +46,20 @@ symbolic.min_int=-2147483648
 symbolic.max_int=2147483647
 symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
-symbolic.min_float=-10000.0
-symbolic.max_float=10000.0
 symbolic.bvlength=64
-search.depth_limit=13
+search.depth_limit={depth_limit}
 symbolic.strings=true
 symbolic.string_dp=z3str3
 symbolic.string_dp_timeout_ms=3000
 symbolic.lazy=on
-symbolic.debug=true
 symbolic.jrarrays=true
 veritestingMode=5
 recursiveDepth=200
 singlePathOptimization=true
 symbolic.fp={fp}
-symbolic.nan={nan}
-symbolic.inf={inf}
 listener=.symbc.VeritestingListener""".format(
     classpath=classpath, fp=str(fp_enabled).lower(),
-    nan=str(nan_enabled).lower(), inf=str(inf_enabled).lower())
+    depth_limit=depth_limit)
 
 STATUS_MAP = {
     "CORRECT": "correct", "INCORRECT": "incorrect",
@@ -337,9 +332,11 @@ class BenchmarkResult:
         self.compile_ok = True
 
 
+DEPTH_LIMITS = [13, 21, 156]
+
+
 def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
-                  timeout=30, fp_enabled=True, nan_enabled=False, inf_enabled=False,
-                  property_entry=None):
+                  timeout=30, fp_enabled=True, property_entry=None):
     result = BenchmarkResult()
     yml_dir = os.path.dirname(yml_path)
 
@@ -355,7 +352,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
     prop_file_rel = property_entry.get("property_file", "../properties/valid-assert.prp")
     result.property_file = os.path.normpath(os.path.join(yml_dir, prop_file_rel))
 
-    # Determine property mode matching jr-sv-comp logic
+    # Determine property mode matching jr-sv-comp logics
     property_mode = "assertion"
     try:
         with open(result.property_file) as f:
@@ -401,7 +398,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
         classpath = f"{jpf_symbc_classes}:{classes_dir}"
 
         compile_proc = subprocess.run(
-            ["javac", "-g", "-cp", classpath, "-d", classes_dir] + java_files,
+            ["javac", "--release", "8", "-g", "-cp", classpath, "-d", classes_dir] + java_files,
             capture_output=True, text=True, timeout=120,
         )
         if compile_proc.returncode != 0:
@@ -410,78 +407,121 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
             result.error = compile_proc.stderr.strip() or compile_proc.stdout.strip() or "compile error"
             return result
 
-        jpf_config_path = os.path.join(tmp_dir, "config.jpf")
-        with open(jpf_config_path, "w") as f:
-            f.write(make_jpf_config(classpath, fp_enabled=fp_enabled,
-                                    nan_enabled=nan_enabled, inf_enabled=inf_enabled))
-        if property_mode == "runtime_exception":
-            with open(jpf_config_path, "a") as f:
-                f.write("\nsearch.multiple_errors = true")
-
-        log_path = os.path.join(tmp_dir, "jpf.log")
-        env = os.environ.copy()
-        env["LD_LIBRARY_PATH"] = f"{jpf_symbc_lib}:{env.get('LD_LIBRARY_PATH', '')}"
-
-        start_ns = time.time_ns()
-        try:
-            jpf_proc = subprocess.run(
-                ["java", "-Xmx1024m", "-ea",
-                 f"-Djava.library.path={jpf_symbc_lib}",
-                 "-jar", jpf_core_jar, jpf_config_path],
-                 cwd=jr_dir, capture_output=True, text=True, timeout=timeout, env=env,
-            )
-            exit_code = jpf_proc.returncode
-            jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
-        except subprocess.TimeoutExpired as exc:
-            out = exc.stdout
-            err = exc.stderr
-            if isinstance(out, bytes):
-                out = out.decode("utf-8", errors="replace")
-            if isinstance(err, bytes):
-                err = err.decode("utf-8", errors="replace")
-            jpf_output = (out or "") + "\n" + (err or "")
-            exit_code = 124
-
-        end_ns = time.time_ns()
-        elapsed_s = (end_ns - start_ns) / 1_000_000_000
-        result.cputime = result.walltime = elapsed_s
-        result.exit_code = exit_code
-
-        os.makedirs(log_dir, exist_ok=True)
+        iter_timeout = max(int(timeout / len(DEPTH_LIMITS)), 1)
+        verdict = None
+        all_output = ""
         persistent_log = os.path.join(log_dir, f"{result.name}.log")
         result.logfile = persistent_log
+        os.makedirs(log_dir, exist_ok=True)
+
+        for itr, depth_limit in enumerate(DEPTH_LIMITS):
+            jpf_config_path = os.path.join(tmp_dir, f"config.{depth_limit}.jpf")
+            with open(jpf_config_path, "w") as f:
+                f.write(make_jpf_config(classpath, fp_enabled=fp_enabled,
+                                        depth_limit=depth_limit))
+            if property_mode == "runtime_exception":
+                with open(jpf_config_path, "a") as f:
+                    f.write("\nsearch.multiple_errors = true")
+
+            env = os.environ.copy()
+            env["LD_LIBRARY_PATH"] = f"{jpf_symbc_lib}:{env.get('LD_LIBRARY_PATH', '')}"
+
+            start_ns = time.time_ns()
+            try:
+                jpf_proc = subprocess.run(
+                    ["java", "-Xmx1024m", "-ea",
+                     f"-Djava.library.path={jpf_symbc_lib}",
+                     "-jar", jpf_core_jar, jpf_config_path],
+                     cwd=jr_dir, capture_output=True, text=True,
+                     timeout=iter_timeout, env=env,
+                )
+                exit_code = jpf_proc.returncode
+                jpf_output = jpf_proc.stdout + "\n" + jpf_proc.stderr
+            except subprocess.TimeoutExpired as exc:
+                out = exc.stdout
+                err = exc.stderr
+                if isinstance(out, bytes):
+                    out = out.decode("utf-8", errors="replace")
+                if isinstance(err, bytes):
+                    err = err.decode("utf-8", errors="replace")
+                jpf_output = (out or "") + "\n" + (err or "")
+                exit_code = 124
+
+            elapsed_s = (time.time_ns() - start_ns) / 1_000_000_000
+            result.cputime = result.walltime = elapsed_s
+            result.exit_code = exit_code
+
+            all_output += jpf_output
+
+            timed_out = (exit_code == 124)
+
+            # Result interpretation matching jr-sv-comp exactly
+            no_errors = "no errors detected" in jpf_output
+            depth_reached = "depth limit reached" in jpf_output
+
+            if no_errors and not depth_reached:
+                result.actual = "true"
+                verdict = "CORRECT"
+                break
+            elif no_errors and depth_reached:
+                verdict = "SAFE_DEPTH_REACHED"
+                # Continue to next depth
+            else:
+                # Check for UNSAFE
+                if property_mode == "assertion":
+                    if re.search(r'gov\.nasa\.jpf\.vm\.NoUncaughtExceptionsProperty.*AssertionError', jpf_output):
+                        result.actual = "false"
+                        verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        break
+                    else:
+                        verdict = "UNKNOWN"
+                        break
+                elif property_mode == "runtime_exception":
+                    if re.search(r'java\.lang\.\w*Exception', jpf_output):
+                        result.actual = "false"
+                        verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        break
+                    else:
+                        verdict = "UNKNOWN"
+                        break
+                else:
+                    verdict = "UNKNOWN"
+                    break
+
+            if timed_out:
+                verdict = "UNKNOWN"
+                result.error = f"timeout after {iter_timeout}s at depth={depth_limit}"
+                break
+
+        # Write persistent log
         try:
-            lines = jpf_output.splitlines()
+            lines = all_output.splitlines()
             if len(lines) > 200:
-                jpf_output = "\n".join(lines[-200:])
+                all_output = "\n".join(lines[-200:])
             with open(persistent_log, "w") as f:
-                f.write(jpf_output)
+                f.write(all_output)
         except OSError:
             pass
 
-        if exit_code == 124:
-            result.verdict = "UNKNOWN"
-            result.error = f"timeout after {timeout}s"
-            return result
+        if verdict is None:
+            verdict = "UNKNOWN"
 
-        if "no errors detected" in jpf_output:
+        if verdict == "SAFE_DEPTH_REACHED":
+            # All depths exhausted, treat as SAFE
             result.actual = "true"
-        elif property_mode == "assertion" and "AssertionError" in jpf_output:
-            result.actual = "false"
-        elif property_mode == "runtime_exception" and re.search(r'java\.lang\.\w*Exception', jpf_output):
-            result.actual = "false"
-        else:
-            result.actual = "UNKNOWN"
-
-        if result.actual == result.expected:
+            if result.actual == result.expected:
+                result.verdict = "CORRECT"
+            else:
+                result.verdict = "INCORRECT"
+        elif verdict == "CORRECT":
             result.verdict = "CORRECT"
-        elif result.actual == "UNKNOWN":
-            result.verdict = "UNKNOWN"
-        else:
+        elif verdict == "INCORRECT":
             result.verdict = "INCORRECT"
+        else:
+            result.verdict = "UNKNOWN"
 
-        if result.verdict != "CORRECT":
-            result.error = extract_error(jpf_output)
+        if result.verdict != "CORRECT" and not result.error:
+            result.error = extract_error(all_output)
 
     finally:
         shutil.rmtree(tmp_dir, ignore_errors=True)
@@ -556,8 +596,7 @@ def write_benchexec_xml(results, suite, start_dt, end_dt, sysinfo, output_path, 
 
 
 def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
-              timeout=30, fp_enabled=True, nan_enabled=False, inf_enabled=False,
-              max_benchmarks=0):
+              timeout=30, fp_enabled=True, max_benchmarks=0):
     suite_dir = os.path.join(sv_bench_dir, "java", suite)
     if not os.path.isdir(suite_dir):
         print(f"Error: Suite directory not found: {suite_dir}", file=sys.stderr)
@@ -577,27 +616,23 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
     start_dt = datetime.now()
 
     fp_str = "true" if fp_enabled else "false"
-    nan_str = "true" if nan_enabled else "false"
-    inf_str = "true" if inf_enabled else "false"
     jpf_options = ("+target=Main +symbolic.dp=z3bitvector "
                    "+symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 "
                    "+symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 "
                    "+symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 "
-                   "+symbolic.bvlength=64 +search.depth_limit=13 "
+                   "+symbolic.bvlength=64 +search.depth_limit=13,21,156 "
                    "+symbolic.strings=true +symbolic.string_dp=z3str3 "
                    "+symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on "
-                   "+symbolic.debug=true +symbolic.jrarrays=true "
+                   "+symbolic.jrarrays=true "
                    "+veritestingMode=5 +recursiveDepth=200 "
                    "+singlePathOptimization=true "
                    f"+symbolic.fp={fp_str} "
-                   f"+symbolic.nan={nan_str} "
-                   f"+symbolic.inf={inf_str} "
                    "+listener=.symbc.VeritestingListener")
 
     results = []
     counters = {"total": 0, "correct": 0, "incorrect": 0, "unknown": 0, "compile_err": 0, "timeout": 0}
 
-    print(f"--- {suite} ({len(yml_files)} benchmarks, timeout={timeout}s, fp={fp_str}, nan={nan_str}, inf={inf_str}) ---")
+    print(f"--- {suite} ({len(yml_files)} benchmarks, timeout={timeout}s, fp={fp_str}) ---")
 
     for yml_path in yml_files:
         config = parse_yaml(yml_path)
@@ -608,7 +643,6 @@ def run_suite(suite, jr_dir, sv_bench_dir, output_dir, jr_version_str,
         for prop_entry in config["properties"]:
             result = run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
                                    timeout=timeout, fp_enabled=fp_enabled,
-                                   nan_enabled=nan_enabled, inf_enabled=inf_enabled,
                                    property_entry=prop_entry)
             results.append(result)
             counters["total"] += 1
@@ -694,7 +728,6 @@ def cmd_run(args):
 
     run_suite(args.suite, args.jr_dir, args.sv_dir, args.output_dir, jr_version_str,
               timeout=args.timeout, fp_enabled=not args.no_fp,
-              nan_enabled=args.nan_enabled, inf_enabled=args.inf_enabled,
               max_benchmarks=args.max_benchmarks)
 
 
@@ -1462,10 +1495,6 @@ def main():
                    help="Per-benchmark JPF timeout in seconds (default: 30)")
     p.add_argument("--no-fp", action="store_true",
                    help="Disable symbolic.fp (floating-point theory)")
-    p.add_argument("--nan", action="store_true", dest="nan_enabled",
-                   help="Enable NaN values for FP symbolic variables")
-    p.add_argument("--inf", action="store_true", dest="inf_enabled",
-                   help="Enable +/-Infinity values for FP symbolic variables")
     p.add_argument("--max-benchmarks", type=int, default=0,
                    help="Limit benchmarks per suite (0 = all, default: 0)")
 
