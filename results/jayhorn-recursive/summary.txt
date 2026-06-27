@@ -1,8 +1,8 @@
      Total: 46
-   Correct: 0
+   Correct: 14
  Incorrect: 0
-   Unknown: 0
-Compile_err: 46
+   Unknown: 32
+Compile_err: 0
    Timeout: 0
 
-Score: 0 / 46
+Score: 14 / 46

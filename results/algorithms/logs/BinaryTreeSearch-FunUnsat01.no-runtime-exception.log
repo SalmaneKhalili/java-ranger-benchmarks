@@ -1,47 +1,47 @@
-(assert (bvslt int6 #x0000000000000000))
-(assert (bvslt #x0000000000000006 int0))
-(assert (bvsge int5 #xffffffff80000000))
-(assert (bvsle int5 #x000000007fffffff))
-(assert (bvslt int5 #x0000000000000000))
-(assert (bvslt #x0000000000000005 int0))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (bvslt int4 #x0000000000000000))
-(assert (bvslt #x0000000000000004 int0))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (bvslt int3 #x0000000000000000))
-(assert (bvslt #x0000000000000003 int0))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvslt int2 #x0000000000000000))
-(assert (bvslt #x0000000000000002 int0))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvslt int1 #x0000000000000000))
-(assert (bvslt #x0000000000000001 int0))
+depth limit reached: 13
+
+====================================================== snapshot 
+no live threads
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
 
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:109)
 
-numeric PC: constraint # = 13
-CONST_7 < int0 &&
-int6 < CONST_0 &&
-CONST_6 < int0 &&
-int5 < CONST_0 &&
-CONST_5 < int0 &&
-int4 < CONST_0 &&
-CONST_4 < int0 &&
-int3 < CONST_0 &&
-CONST_3 < int0 &&
-int2 < CONST_0 &&
-CONST_2 < int0 &&
-int1 < CONST_0 &&
-CONST_1 < int0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:1064 sat:963 unsat:101
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -88,16 +88,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3773 msec
+Veritesting Dyn Time = 3428 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 2305 msec
-Total Solver Parse Time = 172 msec
+Total Solver Queries Count = 1119
+Total Solver Time = 1933 msec
+Total Solver Parse Time = 156 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 159 msec
+Total Solver Clean up Time = 161 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -127,7 +127,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3773,0,3773,0,0,2305,172,159,0,6,0,0,0,0,6,0,6,0,1078,0,0,0,0,1078,0,0,-1,-1,0.0,0,0,0
+3428,0,3428,0,1119,1933,156,161,0,6,0,0,0,0,6,0,6,0,1078,0,0,0,0,1078,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       16427
 max memory:         240MB
 loaded code:        classes=91,methods=1876
 
-====================================================== search finished: 6/23/26 10:33 PM
+====================================================== search finished: 6/27/26 9:28 AM

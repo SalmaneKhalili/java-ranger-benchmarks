@@ -1,121 +1,25 @@
-    (fp.isNaN double6)))
-(assert (fp.gt double6 double7))
-(assert (or (and (fp.geq double5 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double5 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double5)))
-(assert (fp.gt double5 double6))
-(assert (or (and (fp.geq double4 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double4 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double4)))
-(assert (fp.gt double4 double5))
-(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double3)))
-(assert (fp.gt double3 double4))
-(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double2)))
-(assert (fp.gt double2 double3))
-(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double1)))
-(assert (fp.gt double1 double2))
-(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double0)))
-(assert (fp.gt double0 double1))
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 20 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
-
-numeric PC: constraint # = 9
-double8 > double9 &&
-double7 > double8 &&
-double6 > double7 &&
-double5 > double6 &&
-double4 > double5 &&
-double3 > double4 &&
-double2 > double3 &&
-double1 > double2 &&
-double0 > double1 -> true
-
-### PCs: total:27 sat:27 unsat:0
-
+====================================================== search started: 6/27/26 9:39 AM
 the depth of violation is10
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double8 () (_ FloatingPoint 11 53))
-(declare-fun double9 () (_ FloatingPoint 11 53))
-(declare-fun double7 () (_ FloatingPoint 11 53))
-(declare-fun double6 () (_ FloatingPoint 11 53))
-(declare-fun double5 () (_ FloatingPoint 11 53))
-(declare-fun double4 () (_ FloatingPoint 11 53))
-(declare-fun double3 () (_ FloatingPoint 11 53))
-(declare-fun double2 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(assert (or (and (fp.geq double8 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double8 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double8)))
-(assert (or (and (fp.geq double9 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double9 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double9)))
-(assert (fp.gt double8 double9))
-(assert (or (and (fp.geq double7 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double7 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double7)))
-(assert (fp.gt double7 double8))
-(assert (or (and (fp.geq double6 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double6 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double6)))
-(assert (fp.gt double6 double7))
-(assert (or (and (fp.geq double5 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double5 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double5)))
-(assert (fp.gt double5 double6))
-(assert (or (and (fp.geq double4 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double4 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double4)))
-(assert (fp.gt double4 double5))
-(assert (or (and (fp.geq double3 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double3 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double3)))
-(assert (fp.gt double3 double4))
-(assert (or (and (fp.geq double2 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double2 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double2)))
-(assert (fp.gt double2 double3))
-(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double1)))
-(assert (fp.gt double1 double2))
-(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double0)))
-(assert (fp.gt double0 double1))
-
-
-Solving time of z3 bitvector is 24 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 9
-double8 > double9 &&
-double7 > double8 &&
-double6 > double7 &&
-double5 > double6 &&
-double4 > double5 &&
-double3 > double4 &&
-double2 > double3 &&
-double1 > double2 &&
-double0 > double1 -> true
-
 
 ====================================================== error 1
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
@@ -142,16 +46,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 750 msec
+Veritesting Dyn Time = 652 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 406 msec
-Total Solver Parse Time = 21 msec
+Total Solver Queries Count = 28
+Total Solver Time = 339 msec
+Total Solver Parse Time = 22 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 24 msec
+Total Solver Clean up Time = 21 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +85,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-750,0,750,0,0,406,21,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+652,0,652,0,28,339,22,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
@@ -196,4 +100,5 @@ instructions:       6437
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/23/26 10:43 PM
+====================================================== search finished: 6/27/26 9:39 AM
+

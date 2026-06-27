@@ -1,116 +1,40 @@
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000000005))
-(assert (= int0 #x0000000000000001))
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
+====================================================== search started: 6/27/26 8:40 AM
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 2
-int0 == CONST_5 &&
-int0 == CONST_1 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x000000000000000a))
-(assert (= int0 #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-int0 == CONST_10 &&
-int0 == CONST_1 -> false
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x00000000000003e8))
-(assert (= int0 #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-int0 == CONST_1000 &&
-int0 == CONST_1 -> false
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000002710))
-(assert (= int0 #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-int0 == CONST_10000 &&
-int0 == CONST_1 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 the depth of violation is2
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-int0[-2147483648] == CONST_1 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 1
-int0[1] == CONST_1
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-
-(assert (= int0 1))
-
-
-
-(define-fun int0 () Int
-  1)
 Returned solutions: 
 (define-fun int0 () Int  1)
 *************************************
@@ -142,13 +66,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 405 msec
+Veritesting Dyn Time = 414 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 33 msec
+Total Solver Queries Count = 10
+Total Solver Time = 42 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +105,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-405,0,405,0,0,33,8,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+414,0,414,0,10,42,8,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.ClassNotFoundException: class not found:..."
@@ -196,4 +120,5 @@ instructions:       6035
 max memory:         240MB
 loaded code:        classes=89,methods=1862
 
-====================================================== search finished: 6/23/26 9:26 PM
+====================================================== search finished: 6/27/26 8:40 AM
+

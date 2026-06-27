@@ -1,43 +1,54 @@
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (not (= bool6 #x0000000000000000)))
-(assert (bvsge int8 #xffffffff80000000))
-(assert (bvsle int8 #x000000007fffffff))
-(assert (bvsgt int8 #x0000000000000000))
-(assert (bvsge int7 #xffffffff80000000))
-(assert (bvsle int7 #x000000007fffffff))
-(assert (bvsgt int7 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000000002))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
 
-
-numeric PC: constraint # = 16
-int5 == CONST_1000000000 &&
-int4 == CONST_10000 &&
-int4 >= CONST_0 &&
-int3 == CONST_2 &&
-int3 >= CONST_0 &&
-int5 > CONST_0 &&
-int4 > CONST_0 &&
-int3 > CONST_0 &&
-int2 >= CONST_0 &&
-int1 >= CONST_0 &&
-bool6 != CONST_0 &&
-int8 > CONST_0 &&
-int7 > CONST_0 &&
-int0 == CONST_2 &&
-int0 >= CONST_0 &&
-int0 > CONST_0 -> true
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:112)
 
 
 ====================================================== search constraint
@@ -49,76 +60,65 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.processBytes(Main.java:45)
 	at Main.main(Main.java:114)
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int4 () (_ BitVec 64))
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int5 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(declare-fun int8 () (_ BitVec 64))
-(declare-fun int7 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (bvsge int4 #x0000000000000000))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (= int3 #x0000000000000002))
-(assert (bvsge int3 #x0000000000000000))
-(assert (bvsge int5 #xffffffff80000000))
-(assert (bvsle int5 #x000000007fffffff))
-(assert (bvsgt int5 #x0000000000000000))
-(assert (bvsgt int4 #x0000000000000000))
-(assert (bvsgt int3 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (not (= bool6 #x0000000000000000)))
-(assert (bvsge int8 #xffffffff80000000))
-(assert (bvsle int8 #x000000007fffffff))
-(assert (bvsgt int8 #x0000000000000000))
-(assert (bvsge int7 #xffffffff80000000))
-(assert (bvsle int7 #x000000007fffffff))
-(assert (bvsgt int7 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000000002))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
 
 
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
 
 
-numeric PC: constraint # = 14
-int4 >= CONST_0 &&
-int3 == CONST_2 &&
-int3 >= CONST_0 &&
-int5 > CONST_0 &&
-int4 > CONST_0 &&
-int3 > CONST_0 &&
-int2 >= CONST_0 &&
-int1 >= CONST_0 &&
-bool6 != CONST_0 &&
-int8 > CONST_0 &&
-int7 > CONST_0 &&
-int0 == CONST_2 &&
-int0 >= CONST_0 &&
-int0 > CONST_0 -> true
+====================================================== search constraint
+depth limit reached: 13
 
-### PCs: total:35 sat:30 unsat:5
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.processBytes(Main.java:45)
+	at Main.main(Main.java:114)
 
 [SEVERE] JPF out of memory
 
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 645 msec
+Veritesting Dyn Time = 597 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 101 msec
-Total Solver Parse Time = 57 msec
+Total Solver Queries Count = 115
+Total Solver Time = 79 msec
+Total Solver Parse Time = 43 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 2 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-645,0,645,0,0,101,57,2,0,11,0,0,0,0,11,0,11,0,20,0,0,0,0,20,0,0,-1,-1,0.0,0,0,0
+597,0,597,0,115,79,43,2,0,11,0,0,0,0,11,0,11,0,20,0,0,0,0,20,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
@@ -196,4 +196,4 @@ instructions:       6559
 max memory:         240MB
 loaded code:        classes=85,methods=1832
 
-====================================================== search finished: 6/23/26 9:25 PM
+====================================================== search finished: 6/27/26 8:54 AM

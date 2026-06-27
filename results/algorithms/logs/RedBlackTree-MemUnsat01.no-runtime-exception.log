@@ -1,3 +1,59 @@
+int3 => 0
+*************************************
+
+
+====================================================== error 30
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:61)
+
+
+====================================================== snapshot #30
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:61)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is5
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int0 () Int  1)
+(define-fun int1 () Int  1)
+(define-fun int2 () Int  0)
+*************************************
+Satisfiable: true
+int0 => 1
+int2 => 0
+int1 => 1
+*************************************
+
+
+====================================================== error 31
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
 java.lang.AssertionError
 	at Main.main(Main.java:61)
@@ -13,65 +69,9 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 classPath null
 
 the depth of violation is5
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsge int2 int1))
-(assert (not (= int2 int1)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge #x0000000000000001 int0))
-(assert (bvsgt int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-int2 >= int1 &&
-int2 != int1 &&
-CONST_1 >= int0 &&
-int0 > CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 4
-int2[1073741824] >= int1[1] &&
-int2[1073741824] != int1[1] &&
-CONST_1 >= int0[1] &&
-int0[1] > CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-(declare-const int2 Int)
-(declare-const int1 Int)
-
-(assert (>= int2 int1))
-(assert (not (= int2 int1)))
-(assert (>= 1 int0))
-(assert (> int0 0))
-
-
-
-(define-fun int0 () Int
-  1)
-(define-fun int1 () Int
-  (- 1))
-(define-fun int2 () Int
-  0)
 Returned solutions: 
 (define-fun int0 () Int  1)
 (define-fun int1 () Int  (- 1))
@@ -111,16 +111,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4171 msec
+Veritesting Dyn Time = 3770 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 2990 msec
-Total Solver Parse Time = 170 msec
+Total Solver Queries Count = 1168
+Total Solver Time = 2560 msec
+Total Solver Parse Time = 191 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 352 msec
+Total Solver Clean up Time = 348 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -150,7 +150,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4171,0,4171,0,0,2990,170,352,0,6,0,0,0,0,6,0,6,0,1110,0,0,0,0,1110,0,0,-1,-1,0.0,0,0,0
+3770,0,3770,0,1168,2560,191,348,0,6,0,0,0,0,6,0,6,0,1110,0,0,0,0,1110,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:6..."
@@ -187,7 +187,7 @@ error #31: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #32: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:6..."
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:03
 states:             new=543,visited=0,backtracked=543,end=63
 search:             maxDepth=13,constraints=192
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=271
@@ -196,4 +196,4 @@ instructions:       35753
 max memory:         240MB
 loaded code:        classes=96,methods=2022
 
-====================================================== search finished: 6/23/26 10:39 PM
+====================================================== search finished: 6/27/26 10:06 AM

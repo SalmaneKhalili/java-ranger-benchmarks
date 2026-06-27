@@ -1,114 +1,28 @@
-(assert (not (= Length_0_ #x0000000000000000)))
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
-
-numeric PC: constraint # = 1
-Length_0_ != CONST_0 -> true
-
-### PCs: total:1 sat:1 unsat:0
-
-New sym int Length_1_ min=0, max=125
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_1_ () (_ BitVec 64))
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge Length_1_ #x0000000000000000))
-(assert (bvsle Length_1_ #x000000000000007d))
-(assert (not (= Length_1_ #x0000000000000000)))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (not (= Length_0_ #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-Length_1_ != CONST_0 &&
-Length_0_ != CONST_0 -> true
-
-### PCs: total:2 sat:2 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_1_ () (_ BitVec 64))
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge Length_1_ #x0000000000000000))
-(assert (bvsle Length_1_ #x000000000000007d))
-(assert (= Length_1_ #x0000000000000000))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (not (= Length_0_ #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-Length_1_ == CONST_0 &&
-Length_0_ != CONST_0 -> true
-
-### PCs: total:3 sat:3 unsat:0
-
+====================================================== search started: 6/27/26 8:40 AM
 the depth of violation is3
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_1_ () (_ BitVec 64))
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge Length_1_ #x0000000000000000))
-(assert (bvsle Length_1_ #x000000000000007d))
-(assert (= Length_1_ #x0000000000000000))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (not (= Length_0_ #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-Length_1_ == CONST_0 &&
-Length_0_ != CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 2
-Length_1_[0] == CONST_0 &&
-Length_0_[1] != CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string1 String)
-(declare-const string0 String)
-
-
-(assert (= (str.len string1) 0))
-(assert (not (= (str.len string0) 0)))
-
-
-
-(define-fun string1 () String
-  "")
-(define-fun string0 () String
-  "A")
 Returned solutions: 
 (define-fun string1 () String  "")
 (define-fun string0 () String  "A")
@@ -142,14 +56,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 397 msec
+Veritesting Dyn Time = 366 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 38 msec
-Total Solver Parse Time = 8 msec
+Total Solver Queries Count = 4
+Total Solver Time = 33 msec
+Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +95,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-397,0,397,0,0,38,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+366,0,366,0,4,33,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -196,4 +110,5 @@ instructions:       6131
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/23/26 9:25 PM
+====================================================== search finished: 6/27/26 8:40 AM
+

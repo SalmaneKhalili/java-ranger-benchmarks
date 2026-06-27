@@ -1,199 +1,199 @@
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
+	at harness.TestThread.run(TestThread.java:27)
 
 
 ====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at rtems.RTEMSThread.<init>(RTEMSThread.java:37)
-	at harness.TestThread.<init>(TestThread.java:18)
-	at harness.Environment.main(Environment.java:60)
-	at Main.main(Main.java:11)
-
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
-  call stack:
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.lang.Thread.<init>(Thread.java:127)
-	at java.lang.Thread.<init>(Thread.java:91)
-	at rtems.RTEMSThread.<init>(RTEMSThread.java:36)
-	at harness.TestThread.<init>(TestThread.java:18)
-	at harness.Environment.main(Environment.java:60)
-	at Main.main(Main.java:11)
-
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
-  call stack:
-	at java.util.ArrayList.indexOf(ArrayList.java:322)
-	at java.util.ArrayList.contains(ArrayList.java:306)
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at rtems.RTEMSThread.<init>(RTEMSThread.java:37)
-	at harness.TestThread.<init>(TestThread.java:18)
-	at harness.Environment.main(Environment.java:60)
-	at Main.main(Main.java:11)
-
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
-  call stack:
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.lang.Thread.<init>(Thread.java:127)
-	at java.lang.Thread.<init>(Thread.java:91)
-	at rtems.RTEMSThread.<init>(RTEMSThread.java:36)
-	at harness.TestThread.<init>(TestThread.java:18)
-	at harness.Environment.main(Environment.java:60)
-	at Main.main(Main.java:11)
-
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
-  call stack:
-	at java.util.ArrayList.indexOf(ArrayList.java:322)
-	at java.util.ArrayList.contains(ArrayList.java:306)
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.lang.Thread.<init>(Thread.java:127)
-	at java.lang.Thread.<init>(Thread.java:91)
-	at rtems.RTEMSThread.<init>(RTEMSThread.java:36)
-	at harness.TestThread.<init>(TestThread.java:18)
-	at harness.Environment.main(Environment.java:60)
-	at Main.main(Main.java:11)
-
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
-  call stack:
-	at java.util.ArrayList.indexOf(ArrayList.java:322)
-	at java.util.ArrayList.contains(ArrayList.java:306)
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:69)
-	at rtems.Mutex.lock(Mutex.java:90)
-	at harness.TestThread.run(TestThread.java:28)
-
-
-====================================================== search constraint
-depth limit reached: 13
+depth limit reached: 21
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
 	at java.lang.Thread.start(Thread.java)
-	at harness.Environment.main(Environment.java:53)
+	at harness.Environment.main(Environment.java:73)
 	at Main.main(Main.java:11)
 
-thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
-  owned locks:rtems.Mutex@1d1
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at rtems.RTEMSThread.pushMutex(RTEMSThread.java:70)
-	at rtems.Mutex.lock(Mutex.java:90)
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
 	at harness.TestThread.run(TestThread.java:28)
 
 
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+====================================================== search constraint
+depth limit reached: 21
 
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:WAITING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  waiting on: harness.TestThread@208
+  call stack:
+	at java.lang.Thread.join(Thread.java)
+	at harness.Environment.main(Environment.java:76)
+	at Main.main(Main.java:11)
 
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 2164 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
 
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 29 msec
-Total Solver Parse Time = 5 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
-
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 2
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 2
-Number of High Order Regions Used = 0
-
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 6
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 6
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
 
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+====================================================== search constraint
+depth limit reached: 21
 
-Metrics Vector:
-2164,0,2164,0,0,29,5,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.lang.Thread.start(Thread.java)
+	at harness.Environment.main(Environment.java:73)
+	at Main.main(Main.java:11)
 
-====================================================== results
-no errors detected
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  owned locks:rtems.Mutex@1d1
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:67)
+	at harness.TestThread.run(TestThread.java:28)
 
-====================================================== statistics
-elapsed time:       00:00:02
-states:             new=25155,visited=0,backtracked=25155,end=0
-search:             maxDepth=13,constraints=16200
-choice generators:  thread=8954 (signal=0,lock=1811,sharedRef=5107,threadApi=887,reschedule=1149), data=2
-heap:               new=30304,released=12576,maxLive=535,gcCycles=22484
-instructions:       862712
-max memory:         497MB
-loaded code:        classes=95,methods=1960
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
 
-====================================================== search finished: 6/23/26 9:22 PM
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.lang.Thread.start(Thread.java)
+	at harness.Environment.main(Environment.java:73)
+	at Main.main(Main.java:11)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.lang.Thread.start(Thread.java)
+	at harness.Environment.main(Environment.java:73)
+	at Main.main(Main.java:11)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:64)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:WAITING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  waiting on: harness.TestThread@208
+  call stack:
+	at java.lang.Thread.join(Thread.java)
+	at harness.Environment.main(Environment.java:76)
+	at Main.main(Main.java:11)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  owned locks:rtems.Mutex@1d1
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:87)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:27)
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:WAITING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  waiting on: harness.TestThread@208
+  call stack:
+	at java.lang.Thread.join(Thread.java)
+	at harness.Environment.main(Environment.java:76)
+	at Main.main(Main.java:11)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  owned locks:rtems.Mutex@1d1
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:67)
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:2,name:Thread-2,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:28)
+
+thread harness.TestThread:{id:3,name:Thread-3,status:RUNNING,priority:2,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at harness.TestThread.run(TestThread.java:27)
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:WAITING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  waiting on: harness.TestThread@208
+  call stack:
+	at java.lang.Thread.join(Thread.java)
+	at harness.Environment.main(Environment.java:76)
+	at Main.main(Main.java:11)
+
+thread harness.TestThread:{id:1,name:Thread-1,status:RUNNING,priority:3,isDaemon:false,lockCount:0,suspendCount:0}
+  owned locks:rtems.Mutex@1d1
+  call stack:
+	at rtems.Mutex.lock(Mutex.java:67)
+	at harness.TestThread.run(TestThread.java:28)
+

@@ -1,110 +1,110 @@
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 9
-CONST_2 < int0 &&
-int0 >= CONST_0 &&
-int2 < CONST_1000000 &&
-int2 >= CONST_0 &&
-int1 < CONST_1000000 &&
-int1 >= CONST_0 &&
-int0 == CONST_2 &&
-int0 < CONST_1000000 &&
-int0 > CONST_0 -> false
-
-### PCs: total:174 sat:97 unsat:77
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (not (= #x0000000000000001 int0)))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvslt int2 #x00000000000f4240))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvslt int1 #x00000000000f4240))
-(assert (bvsge int1 #x0000000000000000))
-(assert (= int0 #x0000000000000002))
-(assert (bvslt int0 #x00000000000f4240))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 9
-CONST_1 != int0 &&
-int0 >= CONST_0 &&
-int2 < CONST_1000000 &&
-int2 >= CONST_0 &&
-int1 < CONST_1000000 &&
-int1 >= CONST_0 &&
-int0 == CONST_2 &&
-int0 < CONST_1000000 &&
-int0 > CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:175 sat:98 unsat:77
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= #x0000000000000001 int0))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvslt int2 #x00000000000f4240))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvslt int1 #x00000000000f4240))
-(assert (bvsge int1 #x0000000000000000))
-(assert (= int0 #x0000000000000002))
-(assert (bvslt int0 #x00000000000f4240))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 9
-CONST_1 == int0 &&
-int0 >= CONST_0 &&
-int2 < CONST_1000000 &&
-int2 >= CONST_0 &&
-int1 < CONST_1000000 &&
-int1 >= CONST_0 &&
-int0 == CONST_2 &&
-int0 < CONST_1000000 &&
-int0 > CONST_0 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:176 sat:98 unsat:78
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 525 msec
+Veritesting Dyn Time = 439 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 211 msec
-Total Solver Parse Time = 54 msec
+Total Solver Queries Count = 210
+Total Solver Time = 131 msec
+Total Solver Parse Time = 39 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 5 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-525,0,525,0,0,211,54,5,0,12,0,0,0,0,12,0,12,0,104,0,0,0,0,104,0,0,-1,-1,0.0,0,0,0
+439,0,439,0,210,131,39,5,0,12,0,0,0,0,12,0,12,0,104,0,0,0,0,104,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6995
 max memory:         240MB
 loaded code:        classes=86,methods=1931
 
-====================================================== search finished: 6/23/26 10:22 PM
+====================================================== search finished: 6/27/26 9:07 AM

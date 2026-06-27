@@ -1,106 +1,106 @@
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int6 #xffffffff80000000))
-(assert (bvsle int6 #x000000007fffffff))
-(assert (bvsgt int0 int6))
-(assert (bvsge int8 #xffffffff80000000))
-(assert (bvsle int8 #x000000007fffffff))
-(assert (bvsge int7 #xffffffff80000000))
-(assert (bvsle int7 #x000000007fffffff))
-(assert (bvsgt int8 (bvsdiv int7 #x0000000000000002)))
-(assert (bvsge int8 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 125 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 10
-bool1 != CONST_0 &&
-int9 <= (int3 / CONST_2) &&
-bool4 != CONST_0 &&
-int9 >= int10 &&
-bool5 != CONST_0 &&
-int0 > int6 &&
-int8 > (int7 / CONST_2) &&
-int8 >= CONST_0 &&
-int2 >= CONST_0 &&
-int0 > CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:37 sat:34 unsat:3
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool1 () (_ BitVec 64))
-(declare-fun int9 () (_ BitVec 64))
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun bool4 () (_ BitVec 64))
-(declare-fun int10 () (_ BitVec 64))
-(declare-fun bool5 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int6 () (_ BitVec 64))
-(declare-fun int8 () (_ BitVec 64))
-(declare-fun int7 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-(assert (bvsge int9 #xffffffff80000000))
-(assert (bvsle int9 #x000000007fffffff))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (bvsle int9 (bvsdiv int3 #x0000000000000002)))
-(assert (bvsge bool4 #x0000000000000000))
-(assert (bvsle bool4 #x0000000000000001))
-(assert (not (= bool4 #x0000000000000000)))
-(assert (bvsge int10 #xffffffff80000000))
-(assert (bvsle int10 #x000000007fffffff))
-(assert (bvsge int9 int10))
-(assert (bvsge bool5 #x0000000000000000))
-(assert (bvsle bool5 #x0000000000000001))
-(assert (not (= bool5 #x0000000000000000)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int6 #xffffffff80000000))
-(assert (bvsle int6 #x000000007fffffff))
-(assert (bvsgt int0 int6))
-(assert (bvsge int8 #xffffffff80000000))
-(assert (bvsle int8 #x000000007fffffff))
-(assert (bvsge int7 #xffffffff80000000))
-(assert (bvsle int7 #x000000007fffffff))
-(assert (bvsgt int8 (bvsdiv int7 #x0000000000000002)))
-(assert (bvsge int8 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 135 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 10
-bool1 == CONST_0 &&
-int9 <= (int3 / CONST_2) &&
-bool4 != CONST_0 &&
-int9 >= int10 &&
-bool5 != CONST_0 &&
-int0 > int6 &&
-int8 > (int7 / CONST_2) &&
-int8 >= CONST_0 &&
-int2 >= CONST_0 &&
-int0 > CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:38 sat:35 unsat:3
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3331 msec
+Veritesting Dyn Time = 3431 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 3036 msec
-Total Solver Parse Time = 27 msec
+Total Solver Queries Count = 38
+Total Solver Time = 3115 msec
+Total Solver Parse Time = 28 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 527 msec
+Total Solver Clean up Time = 545 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3331,0,3331,0,0,3036,27,527,0,12,0,0,0,0,12,0,12,0,51,0,0,0,0,51,0,0,-1,-1,0.0,0,0,0
+3431,0,3431,0,38,3115,28,545,0,12,0,0,0,0,12,0,12,0,51,0,0,0,0,51,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6498
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/23/26 9:36 PM
+====================================================== search finished: 6/27/26 9:45 AM

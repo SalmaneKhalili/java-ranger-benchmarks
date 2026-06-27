@@ -1,88 +1,88 @@
-(assert (not (= |CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_|
-        |CharAt(CONST_2)_6_|)))
-(assert (bvsge (bvadd (bvsub Length_0_ #x0000000000000001)
-              #xffffffffffffffff
-              #xffffffffffffffff)
-       #x0000000000000000))
-(assert (bvsge |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| #x0000000000000000))
-(assert (bvsle |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| #x000000000000ffff))
-(assert (bvsge |CharAt(CONST_1)_4_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_1)_4_| #x000000000000ffff))
-(assert (not (= |CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_| |CharAt(CONST_1)_4_|)))
-(assert (bvsge (bvadd (bvsub Length_0_ #x0000000000000001) #xffffffffffffffff)
-       #x0000000000000000))
-(assert (bvsge |CharAt((Length_0_ - CONST_1))_1_| #x0000000000000000))
-(assert (bvsle |CharAt((Length_0_ - CONST_1))_1_| #x000000000000ffff))
-(assert (bvsge |CharAt(CONST_0)_2_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_2_| #x000000000000ffff))
-(assert (not (= |CharAt((Length_0_ - CONST_1))_1_| |CharAt(CONST_0)_2_|)))
-(assert (bvsge (bvsub Length_0_ #x0000000000000001) #x0000000000000000))
-
-
-Solving time of z3 bitvector is 6 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_11_ != CharAt(CONST_5)_12_ &&
-((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_9_ != CharAt(CONST_4)_10_ &&
-(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1))_7_ != CharAt(CONST_3)_8_ &&
-((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_ != CharAt(CONST_2)_6_ &&
-(((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_ != CharAt(CONST_1)_4_ &&
-((Length_0_ - CONST_1) + CONST_-1) >= CONST_0 &&
-CharAt((Length_0_ - CONST_1))_1_ != CharAt(CONST_0)_2_ &&
-(Length_0_ - CONST_1) >= CONST_0 -> true
-
-### PCs: total:26 sat:26 unsat:0
-
-string analysis: SPC # = 0
-NPC constraint # = 13
-(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_11_ != CharAt(CONST_5)_12_ &&
-((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt((((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1))_9_ != CharAt(CONST_4)_10_ &&
-(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1))_7_ != CharAt(CONST_3)_8_ &&
-((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt((((Length_0_ - CONST_1) + CONST_-1) + CONST_-1))_5_ != CharAt(CONST_2)_6_ &&
-(((Length_0_ - CONST_1) + CONST_-1) + CONST_-1) >= CONST_0 &&
-CharAt(((Length_0_ - CONST_1) + CONST_-1))_3_ != CharAt(CONST_1)_4_ &&
-((Length_0_ - CONST_1) + CONST_-1) >= CONST_0 &&
-CharAt((Length_0_ - CONST_1))_1_ != CharAt(CONST_0)_2_ &&
-(Length_0_ - CONST_1) >= CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string1 String)
-(declare-const string0 String)
+Returned solutions: 
+(define-fun string1 () String  "\u{1ffde}")
+(define-fun string0 () String  "0\u{100}\u{2023a}\u{1fffe}\u{1ffff}\u{1ffff}")
+*************************************
+Satisfiable: true
+string1 => "\u{1ffde}"
+string0 => "0\u{100}\u{2023a}\u{1fffe}\u{1ffff}\u{1ffff}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string1 () String  "\u{1fffe}\u{1fffe}\u{1fffe}\u{13ffb}\u{23bff}\u{1eff4}")
+(define-fun string0 () String  "\u{1eff4}\u{13ffe}\u{1ffff}\u{1ffff}\u{1ffff}\u{1ffff}")
+*************************************
+Satisfiable: true
+string1 => "\u{1fffe}\u{1fffe}\u{1fffe}\u{13ffb}\u{23bff}\u{1eff4}"
+string0 => "\u{1eff4}\u{13ffe}\u{1ffff}\u{1ffff}\u{1ffff}\u{1ffff}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is13
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string1 () String  "\u{1fffe}\u{1fffe}\u{1fffe}\u{13ffb}\u{23bff}\u{1eff4}")
+(define-fun string0 () String  "\u{1eff4}\u{13ffe}\u{1ffff}\u{1ffff}\u{1ffff}\u{1ffff}")
+*************************************
+Satisfiable: true
+string1 => "\u{1fffe}\u{1fffe}\u{1fffe}\u{13ffb}\u{23bff}\u{1eff4}"
+string0 => "\u{1eff4}\u{13ffe}\u{1ffff}\u{1ffff}\u{1ffff}\u{1ffff}"
+*************************************
 
 
-(assert (>= ( +  ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 5)))))
-(assert (>= ( +  ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 4)))))
-(assert (>= ( +  ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)))) (str.to_code (str.at string1 3)))))
-(assert (>= ( +  ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)))) (str.to_code (str.at string1 2)))))
-(assert (>= ( +  ( +  ( -  (str.len string0) 1) (- 1)) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( +  ( -  (str.len string0) 1) (- 1)))) (str.to_code (str.at string1 1)))))
-(assert (>= ( +  ( -  (str.len string0) 1) (- 1)) 0))
-(assert (not (= (str.to_code (str.at string0 ( -  (str.len string0) 1))) (str.to_code (str.at string1 0)))))
-(assert (>= ( -  (str.len string0) 1) 0))
+====================================================== error 6
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:18)
 
 
+====================================================== snapshot #6
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:18)
 
-(define-fun string1 () String
-  "\u{1effe}")
-(define-fun string0 () String
-  "F\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}")
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot #6
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:18)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string1 () String  "\u{1effe}")
+(define-fun string0 () String  "\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}")
+*************************************
+Satisfiable: true
+string1 => "\u{1effe}"
+string0 => "\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
 Returned solutions: 
 (define-fun string1 () String  "\u{1effe}")
 (define-fun string0 () String  "F\u{10}\u{1200}\u{ec32}\u{0}\u{1ffff}\u{1efff}")
@@ -137,16 +137,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3942 msec
+Veritesting Dyn Time = 3775 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 209 msec
+Total Solver Queries Count = 32
+Total Solver Time = 174 msec
 Total Solver Parse Time = 27 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 16 msec
+Total Solver Clean up Time = 14 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -176,7 +176,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3942,0,3942,0,0,209,27,16,0,2,0,0,0,0,2,0,2,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+3775,0,3775,0,32,174,27,14,0,2,0,0,0,0,2,0,2,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       6347
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/23/26 9:25 PM
+====================================================== search finished: 6/27/26 8:39 AM

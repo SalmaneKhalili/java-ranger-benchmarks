@@ -1,39 +1,75 @@
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge #x0000000000000002 int0))
-(assert (bvslt #x0000000000000001 int0))
-(assert (bvsgt int0 #x0000000000000000))
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:54)
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== snapshot #7
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:54)
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 3
-CONST_2 >= int0 &&
-CONST_1 < int0 &&
-int0 > CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 3
-CONST_2 >= int0[2] &&
-CONST_1 < int0[2] &&
-int0[2] > CONST_0
+the depth of violation is6
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-
-(assert (>= 2 int0))
-(assert (< 1 int0))
-(assert (> int0 0))
-
+Returned solutions: 
+(define-fun int0 () Int  4)
+*************************************
+Satisfiable: true
+int0 => 4
+*************************************
 
 
-(define-fun int0 () Int
-  2)
+====================================================== error 8
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:54)
+
+
+====================================================== snapshot #8
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:54)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is5
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int0 () Int  3)
+*************************************
+Satisfiable: true
+int0 => 3
+*************************************
+
+
+====================================================== error 9
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:54)
+
+
+====================================================== snapshot #9
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:54)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is4
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
 Returned solutions: 
 (define-fun int0 () Int  2)
 *************************************
@@ -58,45 +94,9 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 classPath null
 
 the depth of violation is3
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge #x0000000000000001 int0))
-(assert (bvsgt int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-CONST_1 >= int0 &&
-int0 > CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 2
-CONST_1 >= int0[1] &&
-int0[1] > CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-
-(assert (>= 1 int0))
-(assert (> int0 0))
-
-
-
-(define-fun int0 () Int
-  1)
 Returned solutions: 
 (define-fun int0 () Int  1)
 *************************************
@@ -132,14 +132,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 669 msec
+Veritesting Dyn Time = 637 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 85 msec
-Total Solver Parse Time = 19 msec
+Total Solver Queries Count = 39
+Total Solver Time = 68 msec
+Total Solver Parse Time = 17 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
@@ -171,7 +171,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-669,0,669,0,0,85,19,1,0,2,0,0,0,0,2,0,2,0,38,0,0,0,0,38,0,0,-1,-1,0.0,0,0,0
+637,0,637,0,39,68,17,1,0,2,0,0,0,0,2,0,2,0,38,0,0,0,0,38,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:5..."
@@ -196,4 +196,4 @@ instructions:       11453
 max memory:         240MB
 loaded code:        classes=93,methods=2010
 
-====================================================== search finished: 6/23/26 10:38 PM
+====================================================== search finished: 6/27/26 9:49 AM

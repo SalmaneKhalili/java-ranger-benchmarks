@@ -1,42 +1,10 @@
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(assert (>= float1 (- 10000.0)))
-(assert (<= float1 10000.0))
-(assert (= float1 0.0))
-(assert (>= float10 (- 10000.0)))
-(assert (<= float10 10000.0))
-(assert (> float10 0.0))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 7
-float1 == CONST_0.0 &&
-float10 > CONST_0.0 &&
-bool0 != CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> true
-
-### PCs: total:2184 sat:1581 unsat:603
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -46,89 +14,121 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool9 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (= bool0 #x0000000000000000))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 5
-bool0 == CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:2185 sat:1582 unsat:603
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool9 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-(assert (= bool0 #x0000000000000000))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 6
-bool0 != CONST_0 &&
-bool0 == CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:2186 sat:1582 unsat:604
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 3137 msec
+Veritesting Dyn Time = 3102 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 2628 msec
-Total Solver Parse Time = 323 msec
+Total Solver Queries Count = 2186
+Total Solver Time = 2580 msec
+Total Solver Parse Time = 372 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 96 msec
+Total Solver Clean up Time = 158 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-3137,0,3137,0,0,2628,323,96,0,10,0,0,0,0,10,0,10,0,699,0,0,0,0,699,0,0,-1,-1,0.0,0,0,0
+3102,0,3102,0,2186,2580,372,158,0,10,0,0,0,0,10,0,10,0,699,0,0,0,0,699,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       19738
 max memory:         240MB
 loaded code:        classes=85,methods=1832
 
-====================================================== search finished: 6/23/26 9:36 PM
+====================================================== search finished: 6/27/26 9:35 AM

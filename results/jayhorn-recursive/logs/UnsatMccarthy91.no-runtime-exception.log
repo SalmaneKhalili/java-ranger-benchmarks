@@ -1,56 +1,56 @@
-                                 #x0000000000000020)
-                          #x0000000000000020)
-                  #x000000000000000b)))
-(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
-                                 #x0000000000000020)
-                         #x000000000000000b)
-                  #x0000000000000020)))
-(let ((a!3 (bvashr (bvshl (bvadd (bvashr a!2 #x0000000000000020)
-                                 #x000000000000000b)
-                          #x0000000000000020)
-                   #x0000000000000020)))
-  (bvsle a!3 #x0000000000000064)))))
-(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int0 #x000000000000000b)
-                                 #x0000000000000020)
-                          #x0000000000000020)
-                  #x000000000000000b)))
-(let ((a!2 (bvshl (bvadd (bvashr (bvshl a!1 #x0000000000000020)
-                                 #x0000000000000020)
-                         #x000000000000000b)
-                  #x0000000000000020)))
-  (bvsle (bvashr a!2 #x0000000000000020) #x0000000000000064))))
-(assert (let ((a!1 (bvadd (bvashr (bvshl (bvadd int0 #x000000000000000b)
-                                 #x0000000000000020)
-                          #x0000000000000020)
-                  #x000000000000000b)))
-  (bvsle (bvashr (bvshl a!1 #x0000000000000020) #x0000000000000020)
-         #x0000000000000064)))
-(assert (bvsle (bvashr (bvshl (bvadd int0 #x000000000000000b) #x0000000000000020)
-               #x0000000000000020)
-       #x0000000000000064))
-(assert (bvsle int0 #x0000000000000064))
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.main(Main.java:19)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 4 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
 
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.f(Main.java:13)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.f(Main.java:14)
+	at Main.main(Main.java:19)
 
-numeric PC: constraint # = 13
-((((((((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) > CONST_100 &&
-(((((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-((((((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-(((((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-((((((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-(((((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-((((((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-(((((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-((((((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-(((((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-((((((int0 + CONST_11)<<CONST_32)>>CONST_32) + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-(((int0 + CONST_11)<<CONST_32)>>CONST_32) <= CONST_100 &&
-int0 <= CONST_100 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:7426 sat:3792 unsat:3634
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -86,16 +86,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 200591 msec
+Veritesting Dyn Time = 162527 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 197223 msec
-Total Solver Parse Time = 22382 msec
+Total Solver Queries Count = 7483
+Total Solver Time = 158054 msec
+Total Solver Parse Time = 7605 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 17032 msec
+Total Solver Clean up Time = 18741 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -125,7 +125,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-200591,0,200591,0,0,197223,22382,17032,0,3,0,0,0,0,3,0,3,0,3849,0,0,0,0,3849,0,0,-1,-1,0.0,0,0,0
+162527,0,162527,0,7483,158054,7605,18741,0,3,0,0,0,0,3,0,3,0,3849,0,0,0,0,3849,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -187,13 +187,13 @@ error #56: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #57: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
 
 ====================================================== statistics
-elapsed time:       00:03:20
+elapsed time:       00:02:42
 states:             new=137,visited=0,backtracked=137,end=1
 search:             maxDepth=13,constraints=22
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=68
 heap:               new=1372,released=17,maxLive=452,gcCycles=57
 instructions:       37563
-max memory:         240MB
+max memory:         264MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/23/26 10:37 PM
+====================================================== search finished: 6/27/26 11:06 AM

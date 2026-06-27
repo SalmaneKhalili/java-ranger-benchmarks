@@ -1,84 +1,97 @@
-(string0 contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
-NPC constraint # = 0
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
 
-(assert (str.contains string0 "<bad/>"))
-(assert (not (str.contains string0 "<bad/>")))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
 *************************************
 Satisfiable: false
 *************************************
 
-## Warning: empty path condition
-### PCs: total:8 sat:8 unsat:0
-
-string analysis: SPC # = 2
-(string0 contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
-
-current query... 
-(declare-const string0 String)
-
-(assert (str.contains string0 "<bad/>"))
-(assert (not (str.contains string0 "<bad/>")))
-
-
-
 
 *************************************
 Satisfiable: false
 *************************************
 
-## Warning: empty path condition
-### PCs: total:9 sat:9 unsat:0
-
-string analysis: SPC # = 2
-(string0 contains CONST_<bad/>) && (string0 notcontains CONST_<bad/>)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
-
-current query... 
-(declare-const string0 String)
-
-(assert (str.contains string0 "<bad/>"))
-(assert (not (str.contains string0 "<bad/>")))
-
-
-
 
 *************************************
 Satisfiable: false
 *************************************
 
-## Warning: empty path condition
-### PCs: total:10 sat:10 unsat:0
-
-string analysis: SPC # = 1
-(string0 contains CONST_<bad/>)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
+*************************************
+Satisfiable: false
+*************************************
 
-(assert (str.contains string0 "<bad/>"))
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-
-
-
-(define-fun string0 () String
-  "<bad/>")
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 *************************************
@@ -87,22 +100,9 @@ string0 => "<bad/>"
 *************************************
 
 the depth of violation is2
-string analysis: SPC # = 1
-(string0 contains CONST_<bad/>)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-(assert (str.contains string0 "<bad/>"))
-
-
-
-
-(define-fun string0 () String
-  "<bad/>")
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 *************************************
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 644 msec
+Veritesting Dyn Time = 634 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 0
-Total Solver Time = 1 msec
+Total Solver Time = 0 msec
 Total Solver Parse Time = 0 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-644,0,644,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+634,0,634,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -196,4 +196,4 @@ instructions:       35451
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/23/26 9:24 PM
+====================================================== search finished: 6/27/26 8:38 AM

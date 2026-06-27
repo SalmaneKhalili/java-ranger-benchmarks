@@ -1,8 +1,80 @@
 
-(define-fun string0 () String
-  "")
-(define-fun bool1 () Int
-  0)
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun bool1 () Int  1)
+(define-fun string0 () String  "")
+*************************************
+Satisfiable: true
+string0 => ""
+bool1 => 1
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun bool1 () Int  1)
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+bool1 => 1
+*************************************
+
+the depth of violation is3
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun bool1 () Int  1)
+(define-fun string0 () String  "<bad/>")
+*************************************
+Satisfiable: true
+string0 => "<bad/>"
+bool1 => 1
+*************************************
+
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic12.doGet(Basic12.java:33)
+	at Main.main(Main.java:23)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic12.doGet(Basic12.java:33)
+	at Main.main(Main.java:23)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
 Returned solutions: 
 (define-fun string0 () String  "")
 (define-fun bool1 () Int  0)
@@ -12,46 +84,9 @@ string0 => ""
 bool1 => 0
 *************************************
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool1 () (_ BitVec 64))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-bool1 == CONST_0 -> true
-
-### PCs: total:6 sat:6 unsat:0
-
-string analysis: SPC # = 1
-(CONST_.concat(string0).concat(CONST_;) contains CONST_<bad/>)
-NPC constraint # = 1
-bool1 == CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-(declare-const bool1 Int)
-(assert (str.contains (str.++ (str.++ "" string0) ";") "<bad/>"))
-(assert (= bool1 0))
-
-
-
-(define-fun string0 () String
-  "<bad/>")
-(define-fun bool1 () Int
-  0)
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 (define-fun bool1 () Int  0)
@@ -62,44 +97,9 @@ bool1 => 0
 *************************************
 
 the depth of violation is3
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool1 () (_ BitVec 64))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-bool1 == CONST_0 -> true
-
-string analysis: SPC # = 1
-(CONST_.concat(string0).concat(CONST_;) contains CONST_<bad/>)
-NPC constraint # = 1
-bool1[0] == CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-(declare-const bool1 Int)
-(assert (str.contains (str.++ (str.++ "" string0) ";") "<bad/>"))
-(assert (= bool1 0))
-
-
-
-(define-fun string0 () String
-  "<bad/>")
-(define-fun bool1 () Int
-  0)
 Returned solutions: 
 (define-fun string0 () String  "<bad/>")
 (define-fun bool1 () Int  0)
@@ -141,13 +141,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 513 msec
+Veritesting Dyn Time = 491 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 36 msec
+Total Solver Queries Count = 8
+Total Solver Time = 33 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -180,7 +180,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-513,0,513,0,0,36,7,0,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+491,0,491,0,8,33,7,0,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -196,4 +196,4 @@ instructions:       6632
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/23/26 9:23 PM
+====================================================== search finished: 6/27/26 8:38 AM

@@ -1,110 +1,40 @@
-(declare-fun |CharAt(CONST_1)_2_| () (_ BitVec 64))
-(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvslt #x0000000000000006 Length_0_))
-(assert (bvsge |CharAt(CONST_5)_6_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_5)_6_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_5)_6_| #x0000000000000042)))
-(assert (bvslt #x0000000000000005 Length_0_))
-(assert (bvsge |CharAt(CONST_4)_5_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_4)_5_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_4)_5_| #x0000000000000042)))
-(assert (bvslt #x0000000000000004 Length_0_))
-(assert (bvsge |CharAt(CONST_3)_4_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_3)_4_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_3)_4_| #x0000000000000042)))
-(assert (bvslt #x0000000000000003 Length_0_))
-(assert (bvsge |CharAt(CONST_2)_3_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_2)_3_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_2)_3_| #x0000000000000042)))
-(assert (bvslt #x0000000000000002 Length_0_))
-(assert (bvsge |CharAt(CONST_1)_2_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_1)_2_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_1)_2_| #x0000000000000042)))
-(assert (bvslt #x0000000000000001 Length_0_))
-(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
-(assert (not (= |CharAt(CONST_0)_1_| #x0000000000000042)))
-(assert (bvslt #x0000000000000000 Length_0_))
-
-
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-CONST_6 < Length_0_ &&
-CharAt(CONST_5)_6_ != CONST_66 &&
-CONST_5 < Length_0_ &&
-CharAt(CONST_4)_5_ != CONST_66 &&
-CONST_4 < Length_0_ &&
-CharAt(CONST_3)_4_ != CONST_66 &&
-CONST_3 < Length_0_ &&
-CharAt(CONST_2)_3_ != CONST_66 &&
-CONST_2 < Length_0_ &&
-CharAt(CONST_1)_2_ != CONST_66 &&
-CONST_1 < Length_0_ &&
-CharAt(CONST_0)_1_ != CONST_66 &&
-CONST_0 < Length_0_ -> true
-
-### PCs: total:380 sat:380 unsat:0
-
-string analysis: SPC # = 0
-NPC constraint # = 13
-CONST_6 < Length_0_ &&
-CharAt(CONST_5)_6_ != CONST_66 &&
-CONST_5 < Length_0_ &&
-CharAt(CONST_4)_5_ != CONST_66 &&
-CONST_4 < Length_0_ &&
-CharAt(CONST_3)_4_ != CONST_66 &&
-CONST_3 < Length_0_ &&
-CharAt(CONST_2)_3_ != CONST_66 &&
-CONST_2 < Length_0_ &&
-CharAt(CONST_1)_2_ != CONST_66 &&
-CONST_1 < Length_0_ &&
-CharAt(CONST_0)_1_ != CONST_66 &&
-CONST_0 < Length_0_
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-
-(assert (< 6 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 5)) 66)))
-(assert (< 5 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 4)) 66)))
-(assert (< 4 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 3)) 66)))
-(assert (< 3 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 2)) 66)))
-(assert (< 2 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 1)) 66)))
-(assert (< 1 (str.len string0)))
-(assert (not (= (str.to_code (str.at string0 0)) 66)))
-(assert (< 0 (str.len string0)))
-
-
-
-(define-fun string0 () String
-  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A")
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A")
+(define-fun string0 () String  "\u{0}B\u{0}B")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A"
+string0 => "\u{0}B\u{0}B"
 *************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search constraint
-depth limit reached: 13
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:17)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{80}B\u{26230}B")
+*************************************
+Satisfiable: true
+string0 => "\u{80}B\u{26230}B"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{500}B\u{634}BAC")
+*************************************
+Satisfiable: true
+string0 => "\u{500}B\u{634}BAC"
+*************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -114,9 +44,25 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1004}B\u{4}B\u{1003}")
+*************************************
+Satisfiable: true
+string0 => "\u{1004}B\u{4}B\u{1003}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}B""BB")
+*************************************
+Satisfiable: true
+string0 => "\u{8}B""BB"
+*************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -126,74 +72,128 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}B\u{242c0}BB")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}B\u{242c0}BB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{2400}B\u{242c0}BBA")
+*************************************
+Satisfiable: true
+string0 => "\u{2400}B\u{242c0}BBA"
+*************************************
+
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{20000}BB\u{10432}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{20000}BB\u{10432}"
+*************************************
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 18730 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
+Returned solutions: 
+(define-fun string0 () String  "\u{2000}B\u{4}BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{2000}B\u{4}BBB"
+*************************************
 
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 789 msec
-Total Solver Parse Time = 93 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 28 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 2
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 2
-Number of High Order Regions Used = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 442
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 442
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B BBB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B BBB"
+*************************************
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-Metrics Vector:
-18730,0,18730,0,0,789,93,28,0,2,0,0,0,0,2,0,2,0,442,0,0,0,0,442,0,0,-1,-1,0.0,0,0,0
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B BBBA")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B BBBA"
+*************************************
 
-====================================================== results
-no errors detected
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== statistics
-elapsed time:       00:00:18
-states:             new=253,visited=0,backtracked=253,end=63
-search:             maxDepth=13,constraints=64
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=126
-heap:               new=464,released=701,maxLive=456,gcCycles=253
-instructions:       7988
-max memory:         240MB
-loaded code:        classes=85,methods=1830
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search finished: 6/23/26 9:23 PM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}B\u{0}BBB\u{1}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}B\u{0}BBB\u{1}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}B\u{0}BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{4}B\u{0}BBBB"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}B\u{0}BBBB")
+*************************************
+Satisfiable: true
+string0 => "\u{4}B\u{0}BBBB"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+

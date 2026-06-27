@@ -1,134 +1,134 @@
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000002710))
-(assert (not (= int0 #x00000000000186a0)))
-(assert (not (= int0 #x0000000000002710)))
-(assert (not (= int0 #x00000000000003e8)))
-(assert (not (= int0 #x0000000000000064)))
-(assert (not (= int0 #x000000000000000a)))
-(assert (not (= int0 #x0000000000000001)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 7
-int0 == CONST_10000 &&
-int0 != CONST_100000 &&
-int0 != CONST_10000 &&
-int0 != CONST_1000 &&
-int0 != CONST_100 &&
-int0 != CONST_10 &&
-int0 != CONST_1 -> false
-
-### PCs: total:70 sat:38 unsat:32
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (not (= int0 #x00000000000186a0)))
-(assert (not (= int0 #x0000000000002710)))
-(assert (not (= int0 #x00000000000003e8)))
-(assert (not (= int0 #x0000000000000064)))
-(assert (not (= int0 #x000000000000000a)))
-(assert (not (= int0 #x0000000000000001)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 6
-int0 != CONST_100000 &&
-int0 != CONST_10000 &&
-int0 != CONST_1000 &&
-int0 != CONST_100 &&
-int0 != CONST_10 &&
-int0 != CONST_1 -> true
-
-### PCs: total:71 sat:39 unsat:32
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (not (= int0 #x00000000000186a0)))
-(assert (not (= int0 #x0000000000002710)))
-(assert (not (= int0 #x00000000000003e8)))
-(assert (not (= int0 #x0000000000000064)))
-(assert (not (= int0 #x000000000000000a)))
-(assert (not (= int0 #x0000000000000001)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 6
-int0 != CONST_100000 &&
-int0 != CONST_10000 &&
-int0 != CONST_1000 &&
-int0 != CONST_100 &&
-int0 != CONST_10 &&
-int0 != CONST_1 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:72 sat:40 unsat:32
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x00000000000186a0))
-(assert (not (= int0 #x00000000000186a0)))
-(assert (not (= int0 #x0000000000002710)))
-(assert (not (= int0 #x00000000000003e8)))
-(assert (not (= int0 #x0000000000000064)))
-(assert (not (= int0 #x000000000000000a)))
-(assert (not (= int0 #x0000000000000001)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 7
-int0 == CONST_100000 &&
-int0 != CONST_100000 &&
-int0 != CONST_10000 &&
-int0 != CONST_1000 &&
-int0 != CONST_100 &&
-int0 != CONST_10 &&
-int0 != CONST_1 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:73 sat:40 unsat:33
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -142,13 +142,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 375 msec
+Veritesting Dyn Time = 325 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 81 msec
+Total Solver Queries Count = 73
+Total Solver Time = 54 msec
 Total Solver Parse Time = 19 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-375,0,375,0,0,81,19,1,0,7,0,0,0,0,7,0,7,0,33,0,0,0,0,33,0,0,-1,-1,0.0,0,0,0
+325,0,325,0,73,54,19,1,0,7,0,0,0,0,7,0,7,0,33,0,0,0,0,33,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +196,4 @@ instructions:       6198
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/23/26 9:33 PM
+====================================================== search finished: 6/27/26 8:56 AM

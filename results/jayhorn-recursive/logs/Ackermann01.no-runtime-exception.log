@@ -1,93 +1,93 @@
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  call stack:
+	at Main.main(Main.java:34)
 
 
-numeric PC: constraint # = 13
-(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((int1 - CONST_1) - CONST_1) != CONST_0 &&
-(int1 - CONST_1) != CONST_0 &&
-int1 != CONST_0 &&
-int0 != CONST_0 &&
-int1 <= CONST_23 &&
-int1 >= CONST_0 &&
-int0 <= CONST_3 &&
-int0 >= CONST_0 -> true
+====================================================== search constraint
+depth limit reached: 13
 
-### PCs: total:27169 sat:13610 unsat:13559
+====================================================== snapshot #17
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:34)
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int1 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-            #x0000000000000001)
-     #x0000000000000000)))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-          #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!1 #x0000000000000000))))
-(assert (let ((a!1 (= (bvsub (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000000)))
-  (not a!1)))
-(assert (not (= (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
-        #x0000000000000000)))
-(assert (not (= (bvsub int1 #x0000000000000001) #x0000000000000000)))
-(assert (not (= int1 #x0000000000000000)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (not (= int0 #x0000000000000000)))
-(assert (bvsle int1 #x0000000000000017))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsle int0 #x0000000000000003))
-(assert (bvsge int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.ack(Main.java:14)
+	at Main.ack(Main.java:18)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:18)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.main(Main.java:32)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-numeric PC: constraint # = 13
-(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
-((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((int1 - CONST_1) - CONST_1) != CONST_0 &&
-(int1 - CONST_1) != CONST_0 &&
-int1 != CONST_0 &&
-int0 != CONST_0 &&
-int1 <= CONST_23 &&
-int1 >= CONST_0 &&
-int0 <= CONST_3 &&
-int0 >= CONST_0 -> true
+====================================================== search constraint
+depth limit reached: 13
 
-### PCs: total:27170 sat:13611 unsat:13559
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.ack(Main.java:14)
+	at Main.ack(Main.java:18)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.ack(Main.java:20)
+	at Main.main(Main.java:32)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -126,16 +126,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 24869 msec
+Veritesting Dyn Time = 12524 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 23416 msec
-Total Solver Parse Time = 4577 msec
+Total Solver Queries Count = 27187
+Total Solver Time = 10907 msec
+Total Solver Parse Time = 5323 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 464 msec
+Total Solver Clean up Time = 318 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -165,7 +165,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-24869,0,24869,0,0,23416,4577,464,0,9,0,0,0,0,9,0,9,0,13631,0,0,0,0,13631,0,0,-1,-1,0.0,0,0,0
+12524,0,12524,0,27187,10907,5323,318,0,9,0,0,0,0,9,0,9,0,13631,0,0,0,0,13631,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
@@ -187,13 +187,13 @@ error #16: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #17: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:24
+elapsed time:       00:00:12
 states:             new=47,visited=0,backtracked=47,end=4
 search:             maxDepth=13,constraints=6
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=23
 heap:               new=736,released=48,maxLive=452,gcCycles=18
 instructions:       142109
-max memory:         471MB
+max memory:         571MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/23/26 9:23 PM
+====================================================== search finished: 6/27/26 8:37 AM

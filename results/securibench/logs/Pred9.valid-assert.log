@@ -1,8 +1,3 @@
-symbolic.string_dp=z3str3
-symbolic.max_pc_length=2147483647
-symbolic.max_pc_msec=0
-symbolic.bvlength=64
-Using floating point theory for reals in Z3.
 symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
@@ -23,27 +18,10 @@ JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/23/26 9:31 PM
-New sym int string0.length min=-2147483648, max=2147483647
-## Warning: empty path condition
-### PCs: total:1 sat:1 unsat:0
-
-string analysis: SPC # = 1
-(CONST_abc notequals string0)
-NPC constraint # = 0
+====================================================== search started: 6/27/26 9:15 AM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-(assert (not (= "abc" string0)))
-
-
-
-
-(define-fun string0 () String
-  "")
 Returned solutions: 
 (define-fun string0 () String  "")
 *************************************
@@ -51,25 +29,9 @@ Satisfiable: true
 string0 => ""
 *************************************
 
-## Warning: empty path condition
-### PCs: total:2 sat:2 unsat:0
-
-string analysis: SPC # = 1
-(CONST_abc equals string0)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-(assert (= "abc" string0))
-
-
-
-
-(define-fun string0 () String
-  "abc")
 Returned solutions: 
 (define-fun string0 () String  "abc")
 *************************************
@@ -81,26 +43,9 @@ string0 => "abc"
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-## Warning: empty path condition
-### PCs: total:3 sat:3 unsat:0
-
-string analysis: SPC # = 2
-(string0 notcontains CONST_<bad/>) && (CONST_abc equals string0)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-(assert (not (str.contains string0 "<bad/>")))
-(assert (= "abc" string0))
-
-
-
-
-(define-fun string0 () String
-  "abc")
 Returned solutions: 
 (define-fun string0 () String  "abc")
 *************************************
@@ -108,23 +53,8 @@ Satisfiable: true
 string0 => "abc"
 *************************************
 
-## Warning: empty path condition
-### PCs: total:4 sat:4 unsat:0
-
-string analysis: SPC # = 2
-(string0 contains CONST_<bad/>) && (CONST_abc equals string0)
-NPC constraint # = 0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
-
-current query... 
-(declare-const string0 String)
-
-(assert (str.contains string0 "<bad/>"))
-(assert (= "abc" string0))
-
-
-
 
 *************************************
 Satisfiable: false
@@ -142,7 +72,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 425 msec
+Veritesting Dyn Time = 410 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -181,7 +111,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-425,0,425,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
+410,0,410,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -196,4 +126,5 @@ instructions:       6460
 max memory:         240MB
 loaded code:        classes=101,methods=1983
 
-====================================================== search finished: 6/23/26 9:31 PM
+====================================================== search finished: 6/27/26 9:15 AM
+

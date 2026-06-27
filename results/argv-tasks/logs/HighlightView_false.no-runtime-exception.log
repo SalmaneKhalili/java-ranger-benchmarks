@@ -1,31 +1,27 @@
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+(define-fun bool7 () Int  0)
+(define-fun bool8 () Int  0)
+*************************************
+Satisfiable: true
+bool5 => 1
+bool7 => 0
+bool6 => 0
+bool9 => 1
+bool8 => 0
+*************************************
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== error 12
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.getHit(Main.java:67)
+	at Main.main(Main.java:93)
 
 
-numeric PC: constraint # = 7
-float1 == CONST_0.0 &&
-float10 > CONST_0.0 &&
-bool0 != CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> true
-
-### PCs: total:914 sat:668 unsat:246
+====================================================== snapshot #12
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.getHit(Main.java:67)
+	at Main.main(Main.java:93)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -35,89 +31,93 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool9 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (= bool0 #x0000000000000000))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 5
-bool0 == CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:915 sat:669 unsat:246
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool9 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-(assert (= bool0 #x0000000000000000))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (= bool9 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 6
-bool0 != CONST_0 &&
-bool0 == CONST_0 &&
-bool9 == CONST_0 &&
-bool8 == CONST_0 &&
-bool7 == CONST_0 &&
-bool6 == CONST_0 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:916 sat:669 unsat:247
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -131,16 +131,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1776 msec
+Veritesting Dyn Time = 1797 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 1087 msec
-Total Solver Parse Time = 157 msec
+Total Solver Queries Count = 928
+Total Solver Time = 1074 msec
+Total Solver Parse Time = 170 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 39 msec
+Total Solver Clean up Time = 63 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -170,7 +170,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1776,0,1776,0,0,1087,157,39,0,10,0,0,0,0,10,0,10,0,320,0,0,0,0,320,0,0,-1,-1,0.0,0,0,0
+1797,0,1797,0,928,1074,170,63,0,10,0,0,0,0,10,0,10,0,320,0,0,0,0,320,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getHit(Main.java..."
@@ -196,4 +196,4 @@ instructions:       12257
 max memory:         240MB
 loaded code:        classes=89,methods=1873
 
-====================================================== search finished: 6/23/26 9:36 PM
+====================================================== search finished: 6/27/26 9:35 AM

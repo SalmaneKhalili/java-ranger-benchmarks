@@ -1,8 +1,8 @@
      Total: 18
    Correct: 0
- Incorrect: 0
-   Unknown: 0
-Compile_err: 18
+ Incorrect: 9
+   Unknown: 9
+Compile_err: 0
    Timeout: 0
 
 Score: 0 / 18

@@ -1,123 +1,123 @@
-
-numeric PC: constraint # = 13
-((((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((int0 - CONST_1) - CONST_1) != CONST_1 &&
-(int0 - CONST_1) != CONST_1 &&
-int0 != CONST_1 &&
-int0 != CONST_0 &&
-int0 >= CONST_0 -> true
-
-### PCs: total:67 sat:46 unsat:21
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (= (bvsub (bvsub a!2 #x0000000000000001) #x0000000000000001)
-     #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!2 #x0000000000000001) #x0000000000000001)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!2 #x0000000000000001)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000001)))
-  (not a!2))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-          #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!1 #x0000000000000001))))
-(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000001)))
-  (not a!1)))
-(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-        #x0000000000000001)))
-(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000001)))
-(assert (not (= int0 #x0000000000000001)))
-(assert (not (= int0 #x0000000000000000)))
-(assert (bvsge int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-((((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_1 &&
-(((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((int0 - CONST_1) - CONST_1) != CONST_1 &&
-(int0 - CONST_1) != CONST_1 &&
-int0 != CONST_1 &&
-int0 != CONST_0 &&
-int0 >= CONST_0 -> true
-
-### PCs: total:68 sat:47 unsat:21
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.isOdd(Main.java:16)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
+	at Main.isEven(Main.java:29)
+	at Main.isOdd(Main.java:19)
 	at Main.isEven(Main.java:29)
 	at Main.isOdd(Main.java:19)
 	at Main.isEven(Main.java:29)
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 402 msec
+Veritesting Dyn Time = 14340 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 122 msec
-Total Solver Parse Time = 31 msec
+Total Solver Queries Count = 926
+Total Solver Time = 9427 msec
+Total Solver Parse Time = 8793 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1 msec
+Total Solver Clean up Time = 31 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -169,11 +169,11 @@ Number of High Order Regions Used = 0
 
 /************************ Printing Instantiation Statistics *****************
 Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 58
+Total Number of unsuccessful instantiations = 773
 Number of failed instantiations due to Field Reference = 0
 Number of failed instantiations due to SPFCases = 0
 Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 58
+Number of failed instantiations due to Other Reasons = 773
 
 
 Number of Veritested Regions Instances = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-402,0,402,0,0,122,31,1,0,6,0,0,0,0,6,0,6,0,58,0,0,0,0,58,0,0,-1,-1,0.0,0,0,0
+14340,0,14340,0,926,9427,8793,31,0,6,0,0,0,0,6,0,6,0,773,0,0,0,0,773,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=25,visited=0,backtracked=25,end=12
-search:             maxDepth=13,constraints=2
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
-heap:               new=460,released=116,maxLive=452,gcCycles=13
-instructions:       6351
-max memory:         240MB
+elapsed time:       00:00:14
+states:             new=311,visited=0,backtracked=311,end=155
+search:             maxDepth=156,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=155
+heap:               new=460,released=1403,maxLive=452,gcCycles=156
+instructions:       21509
+max memory:         496MB
 loaded code:        classes=85,methods=1832
 
-====================================================== search finished: 6/23/26 9:35 PM
+====================================================== search finished: 6/27/26 9:34 AM

@@ -1,17 +1,17 @@
-int3 != CONST_3 &&
-int3 != CONST_2 &&
-int3 != CONST_1 &&
-int3 != CONST_0 &&
-int0 <= CONST_0 &&
-bool2 == CONST_0 &&
-bool1 == CONST_0 &&
-int0 != CONST_4 &&
-int0 != CONST_3 &&
-int0 != CONST_2 &&
-int0 != CONST_1 &&
-int0 != CONST_0 -> true
 
-### PCs: total:1982 sat:1438 unsat:544
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:68)
+	at Main.main(Main.java:13)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -35,16 +35,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4118 msec
+Veritesting Dyn Time = 3287 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 1911 msec
-Total Solver Parse Time = 251 msec
+Total Solver Queries Count = 2090
+Total Solver Time = 1199 msec
+Total Solver Parse Time = 343 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 72 msec
+Total Solver Clean up Time = 67 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -74,7 +74,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4118,0,4118,0,0,1911,251,72,0,9,0,0,0,0,9,0,9,0,1773,0,0,0,0,1773,0,0,-1,-1,0.0,0,0,0
+3287,0,3287,0,2090,1199,343,67,0,9,0,0,0,0,9,0,9,0,1773,0,0,0,0,1773,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -187,7 +187,7 @@ error #107: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #108: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:03
 states:             new=783,visited=0,backtracked=783,end=228
 search:             maxDepth=13,constraints=128
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=391
@@ -196,4 +196,4 @@ instructions:       48270
 max memory:         240MB
 loaded code:        classes=90,methods=1873
 
-====================================================== search finished: 6/23/26 9:24 PM
+====================================================== search finished: 6/27/26 8:44 AM

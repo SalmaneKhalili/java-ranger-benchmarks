@@ -1,4 +1,4 @@
-10011,0,10011,0,0,5966,694,254,0,5,0,0,0,0,5,0,5,0,4797,0,0,0,0,4797,0,0,-1,-1,0.0,0,0,0
+7630,0,7630,0,4630,3698,689,241,0,5,0,0,0,0,5,0,5,0,4797,0,0,0,0,4797,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -187,13 +187,13 @@ error #183: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #184: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:10
+elapsed time:       00:00:07
 states:             new=2575,visited=0,backtracked=2575,end=1104
 search:             maxDepth=13,constraints=432
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1287
 heap:               new=5732,released=15210,maxLive=486,gcCycles=1903
 instructions:       486739
-max memory:         273MB
+max memory:         431MB
 loaded code:        classes=94,methods=1919
 
-====================================================== search finished: 6/23/26 9:35 PM
+====================================================== search finished: 6/27/26 8:47 AM

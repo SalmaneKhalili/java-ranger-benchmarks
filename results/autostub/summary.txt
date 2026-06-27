@@ -1,8 +1,8 @@
      Total: 244
-   Correct: 0
+   Correct: 4
  Incorrect: 0
-   Unknown: 0
-Compile_err: 244
+   Unknown: 240
+Compile_err: 0
    Timeout: 0
 
-Score: 0 / 244
+Score: 4 / 244

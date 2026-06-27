@@ -1,66 +1,105 @@
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvsge Length_0_ #x0000000000000001))
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 3
-CharAt(CONST_0)_1_ != CharAt(CONST_0)_1_ &&
-CharAt(CONST_0)_1_ < CONST_65 &&
-Length_0_ >= CONST_1 -> false
-
-### PCs: total:23 sat:10 unsat:13
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
-(assert (= |CharAt(CONST_0)_1_| |CharAt(CONST_0)_1_|))
-(assert (bvslt |CharAt(CONST_0)_1_| #x0000000000000041))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvsge Length_0_ #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 3
-CharAt(CONST_0)_1_ == CharAt(CONST_0)_1_ &&
-CharAt(CONST_0)_1_ < CONST_65 &&
-Length_0_ >= CONST_1 -> true
-
-### PCs: total:24 sat:11 unsat:13
-
-string analysis: SPC # = 0
-NPC constraint # = 3
-CharAt(CONST_0)_1_ == CharAt(CONST_0)_1_ &&
-CharAt(CONST_0)_1_ < CONST_65 &&
-Length_0_ >= CONST_1
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
+Returned solutions: 
+(define-fun string0 () String  "W")
+*************************************
+Satisfiable: true
+string0 => "W"
+*************************************
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-(assert (= (str.to_code (str.at string0 0)) (str.to_code (str.at string0 0))))
-(assert (< (str.to_code (str.at string0 0)) 65))
-(assert (>= (str.len string0) 1))
+Returned solutions: 
+(define-fun string0 () String  "W")
+*************************************
+Satisfiable: true
+string0 => "W"
+*************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-(define-fun string0 () String
-  "\u{0}")
+Returned solutions: 
+(define-fun string0 () String  "W")
+*************************************
+Satisfiable: true
+string0 => "W"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "w")
+*************************************
+Satisfiable: true
+string0 => "w"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "w")
+*************************************
+Satisfiable: true
+string0 => "w"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "w")
+*************************************
+Satisfiable: true
+string0 => "w"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
 Returned solutions: 
 (define-fun string0 () String  "\u{0}")
 *************************************
@@ -69,48 +108,9 @@ string0 => "\u{0}"
 *************************************
 
 the depth of violation is4
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
-(assert (bvslt |CharAt(CONST_0)_1_| #x0000000000000041))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvsge Length_0_ #x0000000000000001))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 2
-CharAt(CONST_0)_1_ < CONST_65 &&
-Length_0_ >= CONST_1 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 2
-CharAt(CONST_0)_1_[0] < CONST_65 &&
-Length_0_[1] >= CONST_1
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-
-(assert (< (str.to_code (str.at string0 0)) 65))
-(assert (>= (str.len string0) 1))
-
-
-
-(define-fun string0 () String
-  "\u{0}")
 Returned solutions: 
 (define-fun string0 () String  "\u{0}")
 *************************************
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 632 msec
+Veritesting Dyn Time = 568 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 64 msec
-Total Solver Parse Time = 15 msec
+Total Solver Queries Count = 25
+Total Solver Time = 51 msec
+Total Solver Parse Time = 14 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1 msec
+Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-632,0,632,0,0,64,15,1,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
+568,0,568,0,25,51,14,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       6099
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/23/26 9:23 PM
+====================================================== search finished: 6/27/26 8:38 AM

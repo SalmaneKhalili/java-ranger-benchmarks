@@ -1,116 +1,116 @@
+	at Main.main(Main.java:13)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(declare-fun bool1 () (_ BitVec 64))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (not (= int3 #x0000000000000004)))
-(assert (not (= int3 #x0000000000000003)))
-(assert (not (= int3 #x0000000000000002)))
-(assert (not (= int3 #x0000000000000001)))
-(assert (not (= int3 #x0000000000000000)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsle int0 #x0000000000000000))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (= bool2 #x0000000000000000))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-(assert (not (= int0 #x0000000000000004)))
-(assert (not (= int0 #x0000000000000003)))
-(assert (not (= int0 #x0000000000000002)))
-(assert (not (= int0 #x0000000000000001)))
-(assert (not (= int0 #x0000000000000000)))
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:46)
+	at Main.main(Main.java:13)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:130)
+	at Main.main(Main.java:13)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-numeric PC: constraint # = 13
-int3 != CONST_4 &&
-int3 != CONST_3 &&
-int3 != CONST_2 &&
-int3 != CONST_1 &&
-int3 != CONST_0 &&
-int0 <= CONST_0 &&
-bool2 == CONST_0 &&
-bool1 == CONST_0 &&
-int0 != CONST_4 &&
-int0 != CONST_3 &&
-int0 != CONST_2 &&
-int0 != CONST_1 &&
-int0 != CONST_0 -> true
+====================================================== search constraint
+depth limit reached: 13
 
-### PCs: total:21687 sat:18731 unsat:2956
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:130)
+	at Main.main(Main.java:13)
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(declare-fun bool1 () (_ BitVec 64))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (= int3 #x0000000000000004))
-(assert (not (= int3 #x0000000000000003)))
-(assert (not (= int3 #x0000000000000002)))
-(assert (not (= int3 #x0000000000000001)))
-(assert (not (= int3 #x0000000000000000)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsle int0 #x0000000000000000))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (= bool2 #x0000000000000000))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-(assert (not (= int0 #x0000000000000004)))
-(assert (not (= int0 #x0000000000000003)))
-(assert (not (= int0 #x0000000000000002)))
-(assert (not (= int0 #x0000000000000001)))
-(assert (not (= int0 #x0000000000000000)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== search constraint
+depth limit reached: 13
 
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at WBS.update(WBS.java:68)
+	at Main.main(Main.java:13)
 
-numeric PC: constraint # = 13
-int3 == CONST_4 &&
-int3 != CONST_3 &&
-int3 != CONST_2 &&
-int3 != CONST_1 &&
-int3 != CONST_0 &&
-int0 <= CONST_0 &&
-bool2 == CONST_0 &&
-bool1 == CONST_0 &&
-int0 != CONST_4 &&
-int0 != CONST_3 &&
-int0 != CONST_2 &&
-int0 != CONST_1 &&
-int0 != CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:21688 sat:18732 unsat:2956
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -134,16 +134,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 33581 msec
+Veritesting Dyn Time = 19311 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 31301 msec
-Total Solver Parse Time = 4481 msec
+Total Solver Queries Count = 21697
+Total Solver Time = 17165 msec
+Total Solver Parse Time = 2909 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1250 msec
+Total Solver Clean up Time = 1145 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -173,7 +173,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-33581,0,33581,0,0,31301,4481,1250,0,9,0,0,0,0,9,0,9,0,18996,0,0,0,0,18996,0,0,-1,-1,0.0,0,0,0
+19311,0,19311,0,21697,17165,2909,1145,0,9,0,0,0,0,9,0,9,0,18996,0,0,0,0,18996,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -187,13 +187,13 @@ error #8: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError
 error #9: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 
 ====================================================== statistics
-elapsed time:       00:00:33
+elapsed time:       00:00:19
 states:             new=8153,visited=0,backtracked=8153,end=256
 search:             maxDepth=13,constraints=4072
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4076
 heap:               new=21870,released=23828,maxLive=458,gcCycles=2080
 instructions:       447703
-max memory:         472MB
+max memory:         456MB
 loaded code:        classes=90,methods=1873
 
-====================================================== search finished: 6/23/26 9:24 PM
+====================================================== search finished: 6/27/26 8:44 AM

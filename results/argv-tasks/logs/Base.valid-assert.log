@@ -1,124 +1,124 @@
-int3 != CONST_0 &&
-int4 == CONST_10 &&
-int4 >= CONST_0 &&
-int0 == CONST_10000 &&
-int0 >= CONST_0 &&
-int4 <= CONST_64 &&
-int4 > CONST_0 &&
-int3 > CONST_0 &&
-int2 <= (int0 - int1) &&
-int2 > CONST_0 &&
-int1 <= int0 &&
-int1 >= CONST_0 &&
-int0 > CONST_0 -> true
+classPath null
 
-### PCs: total:345 sat:198 unsat:147
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int4 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (= int3 #x0000000000000000))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (= int4 #x000000000000000a))
-(assert (bvsge int4 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x0000000000002710))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsle int4 #x0000000000000040))
-(assert (bvsgt int4 #x0000000000000000))
-(assert (bvsgt int3 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsle int2 (bvsub int0 int1)))
-(assert (bvsgt int2 #x0000000000000000))
-(assert (bvsle int1 int0))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 13
-int3 == CONST_0 &&
-int4 == CONST_10 &&
-int4 >= CONST_0 &&
-int0 == CONST_10000 &&
-int0 >= CONST_0 &&
-int4 <= CONST_64 &&
-int4 > CONST_0 &&
-int3 > CONST_0 &&
-int2 <= (int0 - int1) &&
-int2 > CONST_0 &&
-int1 <= int0 &&
-int1 >= CONST_0 &&
-int0 > CONST_0 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:346 sat:198 unsat:148
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: no
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int4 () (_ BitVec 64))
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int0 #x0000000000000000))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (bvsle int4 #x0000000000000040))
-(assert (bvsgt int4 #x0000000000000000))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (bvsgt int3 #x0000000000000000))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsle int2 (bvsub int0 int1)))
-(assert (bvsgt int2 #x0000000000000000))
-(assert (bvsle int1 int0))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 2 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 9
-int0 >= CONST_0 &&
-int4 <= CONST_64 &&
-int4 > CONST_0 &&
-int3 > CONST_0 &&
-int2 <= (int0 - int1) &&
-int2 > CONST_0 &&
-int1 <= int0 &&
-int1 >= CONST_0 &&
-int0 > CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:347 sat:199 unsat:148
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 [SEVERE] JPF out of memory
 
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1437 msec
+Veritesting Dyn Time = 1254 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 871 msec
-Total Solver Parse Time = 95 msec
+Total Solver Queries Count = 411
+Total Solver Time = 707 msec
+Total Solver Parse Time = 89 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 60 msec
+Total Solver Clean up Time = 57 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1437,0,1437,0,0,871,95,60,0,11,0,0,0,0,11,0,11,0,121,0,0,0,0,121,0,0,-1,-1,0.0,0,0,0
+1254,0,1254,0,411,707,89,57,0,11,0,0,0,0,11,0,11,0,121,0,0,0,0,121,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoOutOfMemoryErrorProperty
@@ -196,4 +196,4 @@ instructions:       7983
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/23/26 9:25 PM
+====================================================== search finished: 6/27/26 8:54 AM

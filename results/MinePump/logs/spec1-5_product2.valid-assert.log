@@ -1,96 +1,96 @@
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (not (= bool7 #x0000000000000000)))
-(assert (bvsge bool5 #x0000000000000000))
-(assert (bvsle bool5 #x0000000000000001))
-(assert (not (= bool5 #x0000000000000000)))
-(assert (bvsge bool4 #x0000000000000000))
-(assert (bvsle bool4 #x0000000000000001))
-(assert (not (= bool4 #x0000000000000000)))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
-(assert (bvsge bool3 #x0000000000000000))
-(assert (bvsle bool3 #x0000000000000001))
-(assert (not (= bool3 #x0000000000000000)))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (not (= bool1 #x0000000000000000)))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (= bool2 #x0000000000000000))
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
+====================================================== search started: 6/27/26 8:39 AM
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 8
-bool7 != CONST_0 &&
-bool5 != CONST_0 &&
-bool4 != CONST_0 &&
-bool6 == CONST_0 &&
-bool3 != CONST_0 &&
-bool1 != CONST_0 &&
-bool0 != CONST_0 &&
-bool2 == CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-string analysis: SPC # = 0
-NPC constraint # = 8
-bool7[1] != CONST_0 &&
-bool5[1] != CONST_0 &&
-bool4[1] != CONST_0 &&
-bool6[0] == CONST_0 &&
-bool3[1] != CONST_0 &&
-bool1[1] != CONST_0 &&
-bool0[1] != CONST_0 &&
-bool2[0] == CONST_0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is9
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const bool3 Int)
-(declare-const bool2 Int)
-(declare-const bool5 Int)
-(declare-const bool4 Int)
-(declare-const bool7 Int)
-(declare-const bool6 Int)
-(declare-const bool1 Int)
-(declare-const bool0 Int)
-
-(assert (not (= bool7 0)))
-(assert (not (= bool5 0)))
-(assert (not (= bool4 0)))
-(assert (= bool6 0))
-(assert (not (= bool3 0)))
-(assert (not (= bool1 0)))
-(assert (not (= bool0 0)))
-(assert (= bool2 0))
-
-
-
-(define-fun bool0 () Int
-  1)
-(define-fun bool1 () Int
-  1)
-(define-fun bool3 () Int
-  1)
-(define-fun bool4 () Int
-  1)
-(define-fun bool5 () Int
-  1)
-(define-fun bool7 () Int
-  1)
-(define-fun bool2 () Int
-  0)
-(define-fun bool6 () Int
-  0)
 Returned solutions: 
 (define-fun bool0 () Int  1)
 (define-fun bool1 () Int  1)
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 456 msec
+Veritesting Dyn Time = 452 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 71 msec
+Total Solver Queries Count = 21
+Total Solver Time = 57 msec
 Total Solver Parse Time = 17 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1 msec
+Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-456,0,456,0,0,71,17,1,0,5,0,0,0,0,5,0,5,0,18,0,0,0,0,18,0,0,-1,-1,0.0,0,0,0
+452,0,452,0,21,57,17,0,0,5,0,0,0,0,5,0,5,0,18,0,0,0,0,18,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -196,4 +196,4 @@ instructions:       6898
 max memory:         240MB
 loaded code:        classes=94,methods=1912
 
-====================================================== search finished: 6/23/26 9:25 PM
+====================================================== search finished: 6/27/26 8:39 AM

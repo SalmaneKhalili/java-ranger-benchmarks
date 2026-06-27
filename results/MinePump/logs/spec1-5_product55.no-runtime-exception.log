@@ -1,61 +1,61 @@
-Using floating point for reals: yes
+bool5 => 1
+bool4 => 0
+bool7 => 1
+bool6 => 1
+bool8 => 1
+bool1 => 0
+bool0 => 0
+*************************************
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool7 () (_ BitVec 64))
-(declare-fun bool6 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun bool4 () (_ BitVec 64))
-(declare-fun bool3 () (_ BitVec 64))
-(declare-fun bool5 () (_ BitVec 64))
-(declare-fun bool1 () (_ BitVec 64))
-(declare-fun bool0 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (= bool7 #x0000000000000000))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (= bool6 #x0000000000000000))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (not (= bool8 #x0000000000000000)))
-(assert (bvsge bool4 #x0000000000000000))
-(assert (bvsle bool4 #x0000000000000001))
-(assert (= bool4 #x0000000000000000))
-(assert (bvsge bool3 #x0000000000000000))
-(assert (bvsle bool3 #x0000000000000001))
-(assert (= bool3 #x0000000000000000))
-(assert (bvsge bool5 #x0000000000000000))
-(assert (bvsle bool5 #x0000000000000001))
-(assert (not (= bool5 #x0000000000000000)))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (= bool1 #x0000000000000000))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (= bool0 #x0000000000000000))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (not (= bool2 #x0000000000000000)))
+====================================================== error 74
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Actions.Specification1(Actions.java:69)
+	at Actions.timeShift(Actions.java:48)
+	at Main.randomSequenceOfActions(Main.java:50)
+	at Main.main(Main.java:16)
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== snapshot #74
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Actions.Specification1(Actions.java:69)
+	at Actions.timeShift(Actions.java:48)
+	at Main.randomSequenceOfActions(Main.java:50)
+	at Main.main(Main.java:16)
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 9
-bool7 == CONST_0 &&
-bool6 == CONST_0 &&
-bool8 != CONST_0 &&
-bool4 == CONST_0 &&
-bool3 == CONST_0 &&
-bool5 != CONST_0 &&
-bool1 == CONST_0 &&
-bool0 == CONST_0 &&
-bool2 != CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:4674 sat:3690 unsat:984
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -69,16 +69,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 9583 msec
+Veritesting Dyn Time = 6905 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 7265 msec
-Total Solver Parse Time = 1613 msec
+Total Solver Queries Count = 4748
+Total Solver Time = 4480 msec
+Total Solver Parse Time = 1188 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 271 msec
+Total Solver Clean up Time = 261 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -108,7 +108,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-9583,0,9583,0,0,7265,1613,271,0,5,0,0,0,0,5,0,5,0,5043,0,0,0,0,5043,0,0,-1,-1,0.0,0,0,0
+6905,0,6905,0,4748,4480,1188,261,0,5,0,0,0,0,5,0,5,0,5043,0,0,0,0,5043,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -187,13 +187,13 @@ error #73: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #74: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:09
+elapsed time:       00:00:06
 states:             new=2707,visited=0,backtracked=2707,end=1280
 search:             maxDepth=13,constraints=432
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1353
 heap:               new=4068,released=17418,maxLive=486,gcCycles=2073
 instructions:       365849
-max memory:         294MB
+max memory:         439MB
 loaded code:        classes=94,methods=1919
 
-====================================================== search finished: 6/23/26 9:35 PM
+====================================================== search finished: 6/27/26 8:47 AM

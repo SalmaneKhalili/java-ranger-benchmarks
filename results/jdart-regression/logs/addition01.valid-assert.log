@@ -1,117 +1,125 @@
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvslt int0 #x0000000000002710))
-(assert (bvsge int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-((((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((int1 - CONST_1) - CONST_1) != CONST_0 &&
-(int1 - CONST_1) != CONST_0 &&
-int1 != CONST_0 &&
-int1 < CONST_10000 &&
-int1 >= CONST_0 &&
-int0 < CONST_10000 &&
-int0 >= CONST_0 -> true
-
-### PCs: total:57 sat:41 unsat:16
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int1 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (= a!2 #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000000)))
-  (not a!2))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-          #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!1 #x0000000000000000))))
-(assert (let ((a!1 (= (bvsub (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000000)))
-  (not a!1)))
-(assert (not (= (bvsub (bvsub int1 #x0000000000000001) #x0000000000000001)
-        #x0000000000000000)))
-(assert (not (= (bvsub int1 #x0000000000000001) #x0000000000000000)))
-(assert (not (= int1 #x0000000000000000)))
-(assert (bvslt int1 #x0000000000002710))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvslt int0 #x0000000000002710))
-(assert (bvsge int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-((((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_0 &&
-(((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((((int1 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-(((int1 - CONST_1) - CONST_1) - CONST_1) != CONST_0 &&
-((int1 - CONST_1) - CONST_1) != CONST_0 &&
-(int1 - CONST_1) != CONST_0 &&
-int1 != CONST_0 &&
-int1 < CONST_10000 &&
-int1 >= CONST_0 &&
-int0 < CONST_10000 &&
-int0 >= CONST_0 -> true
-
-### PCs: total:58 sat:42 unsat:16
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.addition(Main.java:21)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
+	at Main.addition(Main.java:30)
 	at Main.addition(Main.java:30)
 	at Main.addition(Main.java:30)
 	at Main.addition(Main.java:30)
@@ -121,14 +129,6 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.addition(Main.java:30)
 	at Main.addition(Main.java:30)
 	at Main.main(Main.java:46)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 503 msec
+Veritesting Dyn Time = 262874 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 177 msec
-Total Solver Parse Time = 30 msec
+Total Solver Queries Count = 913
+Total Solver Time = 258195 msec
+Total Solver Parse Time = 11656 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 5 msec
+Total Solver Clean up Time = 13358 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -169,11 +169,11 @@ Number of High Order Regions Used = 0
 
 /************************ Printing Instantiation Statistics *****************
 Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 53
+Total Number of unsuccessful instantiations = 764
 Number of failed instantiations due to Field Reference = 0
 Number of failed instantiations due to SPFCases = 0
 Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 53
+Number of failed instantiations due to Other Reasons = 764
 
 
 Number of Veritested Regions Instances = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-503,0,503,0,0,177,30,5,0,7,0,0,0,0,7,0,7,0,53,0,0,0,0,53,0,0,-1,-1,0.0,0,0,0
+262874,0,262874,0,913,258195,11656,13358,0,7,0,0,0,0,7,0,7,0,764,0,0,0,0,764,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
-no errors detected
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.addition(Main.ja..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=25,visited=0,backtracked=25,end=12
-search:             maxDepth=13,constraints=2
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
-heap:               new=464,released=120,maxLive=452,gcCycles=14
-instructions:       6355
-max memory:         240MB
-loaded code:        classes=85,methods=1831
+elapsed time:       00:04:22
+states:             new=309,visited=0,backtracked=153,end=153
+search:             maxDepth=156,constraints=1
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=155
+heap:               new=480,released=1389,maxLive=452,gcCycles=155
+instructions:       21952
+max memory:         496MB
+loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/23/26 9:22 PM
+====================================================== search finished: 6/27/26 8:41 AM

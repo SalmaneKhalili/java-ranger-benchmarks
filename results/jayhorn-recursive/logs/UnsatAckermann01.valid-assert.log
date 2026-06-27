@@ -1,114 +1,88 @@
-(assert (bvslt int0 #x0000000000000002))
-(assert (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-   #x0000000000000000))
-(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (= int1 #x0000000000000000))
-(assert (not (= int0 #x0000000000000000)))
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
+====================================================== search started: 6/27/26 10:53 AM
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 5
-int0 < CONST_2 &&
-((int0 - CONST_1) - CONST_1) == CONST_0 &&
-(int0 - CONST_1) != CONST_0 &&
-int1 == CONST_0 &&
-int0 != CONST_0 -> false
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:17 sat:12 unsat:5
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int0 #x0000000000000002))
-(assert (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-   #x0000000000000000))
-(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (= int1 #x0000000000000000))
-(assert (not (= int0 #x0000000000000000)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 5
-int0 >= CONST_2 &&
-((int0 - CONST_1) - CONST_1) == CONST_0 &&
-(int0 - CONST_1) != CONST_0 &&
-int1 == CONST_0 &&
-int0 != CONST_0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:18 sat:13 unsat:5
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 the depth of violation is5
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-   #x0000000000000000))
-(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000000)))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (= int1 #x0000000000000000))
-(assert (not (= int0 #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-((int0 - CONST_1) - CONST_1) == CONST_0 &&
-(int0 - CONST_1) != CONST_0 &&
-int1 == CONST_0 &&
-int0 != CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 4
-((int0[2] - CONST_1) - CONST_1) == CONST_0 &&
-(int0[2] - CONST_1) != CONST_0 &&
-int1[0] == CONST_0 &&
-int0[2] != CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-(declare-const int1 Int)
-
-(assert (= ( -  ( -  int0 1) 1) 0))
-(assert (not (= ( -  int0 1) 0)))
-(assert (= int1 0))
-(assert (not (= int0 0)))
-
-
-
-(define-fun int1 () Int
-  0)
-(define-fun int0 () Int
-  2)
 Returned solutions: 
 (define-fun int1 () Int  0)
 (define-fun int0 () Int  2)
@@ -142,13 +116,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 385 msec
+Veritesting Dyn Time = 415 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 51 msec
+Total Solver Queries Count = 19
+Total Solver Time = 42 msec
 Total Solver Parse Time = 12 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -181,7 +155,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-385,0,385,0,0,51,12,0,0,3,0,0,0,0,3,0,3,0,15,0,0,0,0,15,0,0,-1,-1,0.0,0,0,0
+415,0,415,0,19,42,12,0,0,3,0,0,0,0,3,0,3,0,15,0,0,0,0,15,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
@@ -196,4 +170,5 @@ instructions:       6165
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/23/26 10:23 PM
+====================================================== search finished: 6/27/26 10:53 AM
+

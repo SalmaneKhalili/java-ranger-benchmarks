@@ -1,100 +1,100 @@
-(assert (bvsle int6 #x000000007fffffff))
-(assert (= int6 #x000000000000000b))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (= int2 #x000000000000000b))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (= int1 #x000000000000000c))
-(assert (not (= int1 #x000000000000000b)))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (= int0 #x000000000000000b))
-(assert (bvsge int5 #xffffffff80000000))
-(assert (bvsle int5 #x000000007fffffff))
-(assert (= int5 #x000000000000000b))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (= int4 #x000000000000000b))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (= int3 #x000000000000000b))
 
+====================================================== search constraint
+depth limit reached: 13
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at SENP.encodeWithBuf(SENP.java:242)
+	at SENP.encodeWithPacket2(SENP.java:378)
+	at SENP.encodePacket(SENP.java:308)
+	at SENPDriver.mainProcess(SENPDriver.java:52)
+	at Main.main(Main.java:17)
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 10
-int8 == CONST_11 &&
-int7 == CONST_11 &&
-int6 == CONST_11 &&
-int2 == CONST_11 &&
-int1 == CONST_12 &&
-int1 != CONST_11 &&
-int0 == CONST_11 &&
-int5 == CONST_11 &&
-int4 == CONST_11 &&
-int3 == CONST_11 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-string analysis: SPC # = 0
-NPC constraint # = 10
-int8[11] == CONST_11 &&
-int7[11] == CONST_11 &&
-int6[11] == CONST_11 &&
-int2[11] == CONST_11 &&
-int1[12] == CONST_12 &&
-int1[12] != CONST_11 &&
-int0[11] == CONST_11 &&
-int5[11] == CONST_11 &&
-int4[11] == CONST_11 &&
-int3[11] == CONST_11
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is11
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-(declare-const int2 Int)
-(declare-const int1 Int)
-(declare-const int4 Int)
-(declare-const int3 Int)
-(declare-const int6 Int)
-(declare-const int5 Int)
-(declare-const int8 Int)
-(declare-const int7 Int)
-
-(assert (= int8 11))
-(assert (= int7 11))
-(assert (= int6 11))
-(assert (= int2 11))
-(assert (= int1 12))
-(assert (not (= int1 11)))
-(assert (= int0 11))
-(assert (= int5 11))
-(assert (= int4 11))
-(assert (= int3 11))
-
-
-
-(define-fun int3 () Int
-  11)
-(define-fun int4 () Int
-  11)
-(define-fun int5 () Int
-  11)
-(define-fun int0 () Int
-  11)
-(define-fun int1 () Int
-  12)
-(define-fun int2 () Int
-  11)
-(define-fun int6 () Int
-  11)
-(define-fun int7 () Int
-  11)
-(define-fun int8 () Int
-  11)
 Returned solutions: 
 (define-fun int3 () Int  11)
 (define-fun int4 () Int  11)
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2116 msec
+Veritesting Dyn Time = 1623 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 1293 msec
-Total Solver Parse Time = 208 msec
+Total Solver Queries Count = 1161
+Total Solver Time = 709 msec
+Total Solver Parse Time = 207 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 44 msec
+Total Solver Clean up Time = 40 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2116,0,2116,0,0,1293,208,44,0,8,0,0,0,0,8,0,8,0,787,0,0,0,0,787,0,0,-1,-1,0.0,0,0,0
+1623,0,1623,0,1161,709,207,40,0,8,0,0,0,0,8,0,8,0,787,0,0,0,0,787,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
 
 ====================================================== statistics
-elapsed time:       00:00:02
+elapsed time:       00:00:01
 states:             new=208,visited=0,backtracked=197,end=35
 search:             maxDepth=13,constraints=84
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=108
 heap:               new=4391,released=6592,maxLive=595,gcCycles=207
 instructions:       559994
-max memory:         429MB
+max memory:         303MB
 loaded code:        classes=95,methods=2144
 
-====================================================== search finished: 6/23/26 9:29 PM
+====================================================== search finished: 6/27/26 10:51 AM

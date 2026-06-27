@@ -1,3 +1,4 @@
+symbolic.min_int=-2147483648
 symbolic.min_long=-9223372036854775808
 symbolic.min_short=-32768
 symbolic.min_byte=-128
@@ -17,94 +18,19 @@ JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/23/26 9:27 PM
-New sym int int0 min=-2147483648, max=2147483647
+====================================================== search started: 6/27/26 8:42 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int0 #x0000000000000005))
-
-
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-int0 >= CONST_5 -> true
-
-### PCs: total:1 sat:1 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvslt int0 #x0000000000000005))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-int0 < CONST_5 -> true
-
-### PCs: total:2 sat:2 unsat:0
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
 the depth of violation is2
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvslt int0 #x0000000000000005))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-int0 < CONST_5 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 1
-int0[0] < CONST_5
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-
-(assert (< int0 5))
-
-
-
-(define-fun int0 () Int
-  4)
 Returned solutions: 
 (define-fun int0 () Int  4)
 *************************************
@@ -142,14 +68,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 417 msec
+Veritesting Dyn Time = 384 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 34 msec
-Total Solver Parse Time = 7 msec
+Total Solver Queries Count = 3
+Total Solver Time = 31 msec
+Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -181,7 +107,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-417,0,417,0,0,34,7,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+384,0,384,0,3,31,6,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.f(Main.java:39) ..."
@@ -196,4 +122,5 @@ instructions:       6086
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/23/26 9:27 PM
+====================================================== search finished: 6/27/26 8:42 AM
+

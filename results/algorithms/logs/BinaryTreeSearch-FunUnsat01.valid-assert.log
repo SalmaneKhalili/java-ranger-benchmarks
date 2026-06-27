@@ -1,110 +1,110 @@
-CONST_3 < int0 &&
-int1 < int2 &&
-int2 >= CONST_0 &&
-CONST_2 < int0 &&
-int1 >= CONST_0 &&
-CONST_1 < int0 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:36 sat:36 unsat:0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$BinaryTree.insert(Main.java:69)
+	at Main.main(Main.java:112)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$BinaryTree.insert(Main.java:76)
+	at Main.main(Main.java:112)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:111)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$BinaryTree.search(Main.java:93)
+	at Main.main(Main.java:115)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
 the depth of violation is12
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int1 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int3 () (_ BitVec 64))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (= int1 #x0000000000000000))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge #x0000000000000004 int0))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (bvslt int2 int3))
-(assert (bvslt int1 int3))
-(assert (bvsge int3 #x0000000000000000))
-(assert (bvslt #x0000000000000003 int0))
-(assert (bvslt int1 int2))
-(assert (bvsge int2 #x0000000000000000))
-(assert (bvslt #x0000000000000002 int0))
-(assert (bvsge int1 #x0000000000000000))
-(assert (bvslt #x0000000000000001 int0))
-
-
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 11
-int1 == CONST_0 &&
-CONST_4 >= int0 &&
-int2 < int3 &&
-int1 < int3 &&
-int3 >= CONST_0 &&
-CONST_3 < int0 &&
-int1 < int2 &&
-int2 >= CONST_0 &&
-CONST_2 < int0 &&
-int1 >= CONST_0 &&
-CONST_1 < int0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 11
-int1[0] == CONST_0 &&
-CONST_4 >= int0[4] &&
-int2[2] < int3[3] &&
-int1[0] < int3[3] &&
-int3[3] >= CONST_0 &&
-CONST_3 < int0[4] &&
-int1[0] < int2[2] &&
-int2[2] >= CONST_0 &&
-CONST_2 < int0[4] &&
-int1[0] >= CONST_0 &&
-CONST_1 < int0[4]
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const int0 Int)
-(declare-const int2 Int)
-(declare-const int1 Int)
-(declare-const int3 Int)
-
-(assert (= int1 0))
-(assert (>= 4 int0))
-(assert (< int2 int3))
-(assert (< int1 int3))
-(assert (>= int3 0))
-(assert (< 3 int0))
-(assert (< int1 int2))
-(assert (>= int2 0))
-(assert (< 2 int0))
-(assert (>= int1 0))
-(assert (< 1 int0))
-
-
-
-(define-fun int0 () Int
-  4)
-(define-fun int3 () Int
-  2)
-(define-fun int2 () Int
-  1)
-(define-fun int1 () Int
-  0)
 Returned solutions: 
 (define-fun int0 () Int  4)
 (define-fun int3 () Int  2)
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 484 msec
+Veritesting Dyn Time = 447 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 112 msec
-Total Solver Parse Time = 20 msec
+Total Solver Queries Count = 37
+Total Solver Time = 90 msec
+Total Solver Parse Time = 18 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 5 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-484,0,484,0,0,112,20,5,0,5,0,0,0,0,5,0,5,0,36,0,0,0,0,36,0,0,-1,-1,0.0,0,0,0
+447,0,447,0,37,90,18,5,0,5,0,0,0,0,5,0,5,0,36,0,0,0,0,36,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -196,4 +196,4 @@ instructions:       6428
 max memory:         240MB
 loaded code:        classes=91,methods=1876
 
-====================================================== search finished: 6/23/26 10:33 PM
+====================================================== search finished: 6/27/26 9:28 AM

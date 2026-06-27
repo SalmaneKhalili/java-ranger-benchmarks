@@ -1,134 +1,134 @@
-(declare-fun bool6 () (_ BitVec 64))
-(declare-fun bool5 () (_ BitVec 64))
-(declare-fun bool4 () (_ BitVec 64))
-(declare-fun bool3 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(declare-fun bool1 () (_ BitVec 64))
-(declare-fun bool0 () (_ BitVec 64))
-(assert (bvsge bool12 #x0000000000000000))
-(assert (bvsle bool12 #x0000000000000001))
-(assert (not (= bool12 #x0000000000000000)))
-(assert (bvsge bool11 #x0000000000000000))
-(assert (bvsle bool11 #x0000000000000001))
-(assert (not (= bool11 #x0000000000000000)))
-(assert (bvsge bool10 #x0000000000000000))
-(assert (bvsle bool10 #x0000000000000001))
-(assert (not (= bool10 #x0000000000000000)))
-(assert (bvsge bool9 #x0000000000000000))
-(assert (bvsle bool9 #x0000000000000001))
-(assert (not (= bool9 #x0000000000000000)))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (not (= bool8 #x0000000000000000)))
-(assert (bvsge bool7 #x0000000000000000))
-(assert (bvsle bool7 #x0000000000000001))
-(assert (not (= bool7 #x0000000000000000)))
-(assert (bvsge bool6 #x0000000000000000))
-(assert (bvsle bool6 #x0000000000000001))
-(assert (not (= bool6 #x0000000000000000)))
-(assert (bvsge bool5 #x0000000000000000))
-(assert (bvsle bool5 #x0000000000000001))
-(assert (not (= bool5 #x0000000000000000)))
-(assert (bvsge bool4 #x0000000000000000))
-(assert (bvsle bool4 #x0000000000000001))
-(assert (not (= bool4 #x0000000000000000)))
-(assert (bvsge bool3 #x0000000000000000))
-(assert (bvsle bool3 #x0000000000000001))
-(assert (not (= bool3 #x0000000000000000)))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (not (= bool2 #x0000000000000000)))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (not (= bool1 #x0000000000000000)))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
+bool100 => 1
+bool1 => 1
+bool0 => 1
+bool23 => 1
+bool22 => 1
+bool21 => 1
+bool20 => 1
+bool27 => 1
+bool26 => 1
+bool25 => 1
+bool24 => 1
+bool114 => 1
+bool115 => 1
+bool112 => 1
+bool113 => 1
+bool118 => 1
+bool119 => 1
+bool116 => 1
+bool117 => 1
+bool29 => 1
+bool28 => 1
+bool110 => 1
+bool111 => 1
+bool34 => 1
+bool33 => 1
+bool32 => 1
+bool31 => 1
+bool38 => 1
+bool37 => 1
+bool36 => 1
+bool35 => 1
+bool30 => 1
+bool39 => 1
+bool45 => 1
+bool44 => 1
+bool43 => 1
+bool42 => 1
+bool49 => 1
+bool48 => 1
+bool47 => 1
+bool46 => 1
+bool41 => 1
+bool40 => 1
+bool56 => 1
+bool55 => 1
+bool54 => 1
+bool53 => 1
+bool59 => 1
+bool58 => 1
+bool57 => 1
+bool52 => 1
+bool51 => 1
+bool50 => 1
+bool147 => 1
+bool148 => 1
+bool145 => 1
+bool146 => 1
+bool149 => 1
+bool140 => 1
+bool143 => 1
+bool144 => 1
+bool141 => 1
+bool142 => 1
+bool67 => 1
+bool66 => 1
+bool65 => 1
+bool64 => 1
+bool69 => 1
+bool68 => 1
+bool63 => 1
+bool62 => 1
+bool61 => 1
+bool60 => 1
+bool150 => 1
+bool151 => 1
+bool154 => 0
+bool152 => 1
+bool153 => 1
+bool78 => 1
+bool77 => 1
+bool76 => 1
+bool75 => 1
+bool79 => 1
+bool70 => 1
+bool74 => 1
+bool73 => 1
+bool72 => 1
+bool71 => 1
+bool125 => 1
+bool126 => 1
+bool123 => 1
+bool124 => 1
+bool129 => 1
+bool127 => 1
+bool128 => 1
+bool121 => 1
+bool122 => 1
+bool120 => 1
+bool89 => 1
+bool88 => 1
+bool87 => 1
+bool86 => 1
+bool81 => 1
+bool80 => 1
+bool85 => 1
+bool84 => 1
+bool83 => 1
+bool82 => 1
+bool136 => 1
+bool137 => 1
+bool134 => 1
+bool135 => 1
+bool138 => 1
+bool139 => 1
+bool132 => 1
+bool133 => 1
+bool130 => 1
+bool131 => 1
+*************************************
 
 
-Solving time of z3 bitvector is 1 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:35)
 
 
-numeric PC: constraint # = 13
-bool12 != CONST_0 &&
-bool11 != CONST_0 &&
-bool10 != CONST_0 &&
-bool9 != CONST_0 &&
-bool8 != CONST_0 &&
-bool7 != CONST_0 &&
-bool6 != CONST_0 &&
-bool5 != CONST_0 &&
-bool4 != CONST_0 &&
-bool3 != CONST_0 &&
-bool2 != CONST_0 &&
-bool1 != CONST_0 &&
-bool0 != CONST_0 -> true
-
-### PCs: total:26 sat:26 unsat:0
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
+====================================================== snapshot #1
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at Main.main(Main.java:30)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-no live threads
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+	at Main.main(Main.java:35)
 
 
 ====================================================== VeritestingListener report:
@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 408 msec
+Veritesting Dyn Time = 3536 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 103 msec
-Total Solver Parse Time = 23 msec
+Total Solver Queries Count = 313
+Total Solver Time = 2923 msec
+Total Solver Parse Time = 430 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 2 msec
+Total Solver Clean up Time = 204 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -169,11 +169,11 @@ Number of High Order Regions Used = 0
 
 /************************ Printing Instantiation Statistics *****************
 Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 37
+Total Number of unsuccessful instantiations = 312
 Number of failed instantiations due to Field Reference = 0
 Number of failed instantiations due to SPFCases = 0
 Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 37
+Number of failed instantiations due to Other Reasons = 312
 
 
 Number of Veritested Regions Instances = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-408,0,408,0,0,103,23,2,0,1,0,0,0,0,1,0,1,0,37,0,0,0,0,37,0,0,-1,-1,0.0,0,0,0
+3536,0,3536,0,313,2923,430,204,0,1,0,0,0,0,1,0,1,0,312,0,0,0,0,312,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
-no errors detected
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:3..."
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=25,visited=0,backtracked=25,end=12
-search:             maxDepth=13,constraints=2
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
-heap:               new=510,released=164,maxLive=454,gcCycles=25
-instructions:       8203
-max memory:         240MB
-loaded code:        classes=85,methods=1830
+elapsed time:       00:00:03
+states:             new=157,visited=0,backtracked=1,end=0
+search:             maxDepth=156,constraints=1
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=155
+heap:               new=1098,released=628,maxLive=454,gcCycles=156
+instructions:       35167
+max memory:         303MB
+loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/23/26 9:22 PM
+====================================================== search finished: 6/27/26 8:37 AM

@@ -1,81 +1,25 @@
-(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvslt #x0000000000000001 Length_0_))
-(assert (bvsge Length_0_ #x0000000000000001))
-(assert (bvsge #x0000000000000001 Length_0_))
-(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
-(assert (bvsgt |CharAt(CONST_0)_1_| #x0000000000000009))
-(assert (bvslt #x0000000000000000 Length_0_))
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic37.doGet(Basic37.java:32)
+	at Main.main(Main.java:23)
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-
-numeric PC: constraint # = 5
-CONST_1 < Length_0_ &&
-Length_0_ >= CONST_1 &&
-CONST_1 >= Length_0_ &&
-CharAt(CONST_0)_1_ > CONST_9 &&
-CONST_0 < Length_0_ -> false
-
-### PCs: total:1583 sat:1274 unsat:309
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_0_ () (_ BitVec 64))
-(declare-fun |CharAt(CONST_0)_1_| () (_ BitVec 64))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvsge Length_0_ #x0000000000000001))
-(assert (bvsge #x0000000000000001 Length_0_))
-(assert (bvsge |CharAt(CONST_0)_1_| #x0000000000000000))
-(assert (bvsle |CharAt(CONST_0)_1_| #x000000000000ffff))
-(assert (bvsgt |CharAt(CONST_0)_1_| #x0000000000000009))
-(assert (bvslt #x0000000000000000 Length_0_))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-Length_0_ >= CONST_1 &&
-CONST_1 >= Length_0_ &&
-CharAt(CONST_0)_1_ > CONST_9 &&
-CONST_0 < Length_0_ -> true
-
-### PCs: total:1584 sat:1275 unsat:309
-
-string analysis: SPC # = 1
-(.substring[(string0)(CONST_2)(CONST_0)] contains CONST_<bad/>)
-NPC constraint # = 4
-Length_0_ >= CONST_1 &&
-CONST_1 >= Length_0_ &&
-CharAt(CONST_0)_1_ > CONST_9 &&
-CONST_0 < Length_0_
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-(declare-const string0 String)
-
-(assert (str.contains (str.substr string0 0 (- 2 0)) "<bad/>"))
-(assert (>= (str.len string0) 1))
-(assert (>= 1 (str.len string0)))
-(assert (> (str.to_code (str.at string0 0)) 9))
-(assert (< 0 (str.len string0)))
-
-
-
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{9}")
 *************************************
-Satisfiable: false
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{9}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -86,114 +30,170 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}"
+*************************************
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvsge #x0000000000000000 Length_0_))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}"
+*************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 1
-CONST_0 >= Length_0_ -> true
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-### PCs: total:1585 sat:1276 unsat:309
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}"
+*************************************
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun Length_0_ () (_ BitVec 64))
-(assert (bvsge Length_0_ #x0000000000000000))
-(assert (bvsle Length_0_ #x000000000000007d))
-(assert (bvslt #x0000000000000000 Length_0_))
-(assert (bvsge #x0000000000000000 Length_0_))
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}"
+*************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{1ffff}\u{9}\u{9}\u{2bffd}")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{1ffff}\u{9}\u{9}\u{2bffd}"
+*************************************
 
-numeric PC: constraint # = 2
-CONST_0 < Length_0_ &&
-CONST_0 >= Length_0_ -> false
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-### PCs: total:1586 sat:1276 unsat:310
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{1ffff}\u{9}\u{9}\u{2bffd}A")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{1ffff}\u{9}\u{9}\u{2bffd}A"
+*************************************
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1fff7}\u{9}\u{9}\u{4db1}\u{1ffff}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1fff7}\u{9}\u{9}\u{4db1}\u{1ffff}"
+*************************************
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 33462 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 2862 msec
-Total Solver Parse Time = 240 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 115 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{4db1}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{4db1}\u{0}"
+*************************************
 
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 9
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 9
-Number of High Order Regions Used = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 1164
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 1164
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1efef}\u{9}\u{9}\u{1c7e5}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1efef}\u{9}\u{9}\u{1c7e5}\u{0}"
+*************************************
 
-Metrics Vector:
-33462,0,33462,0,0,2862,240,115,0,9,0,0,0,0,9,0,9,0,1164,0,0,0,0,1164,0,0,-1,-1,0.0,0,0,0
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-====================================================== results
-no errors detected
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{2bf0f}\u{9}\u{9}\u{40c}\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{2bf0f}\u{9}\u{9}\u{40c}\u{9}"
+*************************************
 
-====================================================== statistics
-elapsed time:       00:00:33
-states:             new=695,visited=0,backtracked=695,end=86
-search:             maxDepth=13,constraints=232
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=347
-heap:               new=1409,released=2294,maxLive=536,gcCycles=609
-instructions:       25837
-max memory:         240MB
-loaded code:        classes=102,methods=1996
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search finished: 6/23/26 9:26 PM
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1fdff}\u{9}\u{9}\u{2637b}\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1fdff}\u{9}\u{9}\u{2637b}\u{9}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{7002}\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{7002}\u{9}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+

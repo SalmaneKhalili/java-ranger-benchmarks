@@ -1,108 +1,10 @@
-
-Solving time of z3 bitvector is 2 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-int7 <= int6 &&
-CONST_6 < int0 &&
-int6 <= int5 &&
-CONST_5 < int0 &&
-int5 <= int4 &&
-CONST_4 < int0 &&
-int4 <= int3 &&
-CONST_3 < int0 &&
-int3 <= int2 &&
-CONST_2 < int0 &&
-int2 <= int1 &&
-CONST_1 < int0 &&
-CONST_0 < int0 -> true
-
-### PCs: total:489 sat:477 unsat:12
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int7 () (_ BitVec 64))
-(declare-fun int6 () (_ BitVec 64))
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int5 () (_ BitVec 64))
-(declare-fun int4 () (_ BitVec 64))
-(declare-fun int3 () (_ BitVec 64))
-(declare-fun int2 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int7 #xffffffff80000000))
-(assert (bvsle int7 #x000000007fffffff))
-(assert (bvsge int6 #xffffffff80000000))
-(assert (bvsle int6 #x000000007fffffff))
-(assert (bvsgt int7 int6))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvslt #x0000000000000006 int0))
-(assert (bvsge int5 #xffffffff80000000))
-(assert (bvsle int5 #x000000007fffffff))
-(assert (bvsle int6 int5))
-(assert (bvslt #x0000000000000005 int0))
-(assert (bvsge int4 #xffffffff80000000))
-(assert (bvsle int4 #x000000007fffffff))
-(assert (bvsle int5 int4))
-(assert (bvslt #x0000000000000004 int0))
-(assert (bvsge int3 #xffffffff80000000))
-(assert (bvsle int3 #x000000007fffffff))
-(assert (bvsle int4 int3))
-(assert (bvslt #x0000000000000003 int0))
-(assert (bvsge int2 #xffffffff80000000))
-(assert (bvsle int2 #x000000007fffffff))
-(assert (bvsle int3 int2))
-(assert (bvslt #x0000000000000002 int0))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsle int2 int1))
-(assert (bvslt #x0000000000000001 int0))
-(assert (bvslt #x0000000000000000 int0))
-
-
-Solving time of z3 bitvector is 2 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 13
-int7 > int6 &&
-CONST_6 < int0 &&
-int6 <= int5 &&
-CONST_5 < int0 &&
-int5 <= int4 &&
-CONST_4 < int0 &&
-int4 <= int3 &&
-CONST_3 < int0 &&
-int3 <= int2 &&
-CONST_2 < int0 &&
-int2 <= int1 &&
-CONST_1 < int0 &&
-CONST_0 < int0 -> true
-
-### PCs: total:490 sat:478 unsat:12
-
-
-====================================================== search constraint
-depth limit reached: 13
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main$List.insert(Main.java:56)
-	at Main.main(Main.java:70)
-
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
 
 ====================================================== search constraint
-depth limit reached: 13
+depth limit reached: 156
 
 ====================================================== snapshot 
 no live threads
@@ -131,69 +33,167 @@ classPath null
 classPath null
 
 
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+====================================================== search constraint
+depth limit reached: 156
 
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 1965 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
-
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 1560 msec
-Total Solver Parse Time = 99 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 168 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
-
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 2
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 2
-Number of High Order Regions Used = 0
-
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 539
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 539
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+====================================================== search constraint
+depth limit reached: 156
 
-Metrics Vector:
-1965,0,1965,0,0,1560,99,168,0,2,0,0,0,0,2,0,2,0,539,0,0,0,0,539,0,0,-1,-1,0.0,0,0,0
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
 
-====================================================== results
-no errors detected
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== statistics
-elapsed time:       00:00:01
-states:             new=295,visited=0,backtracked=295,end=62
-search:             maxDepth=13,constraints=104
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=147
-heap:               new=809,released=1137,maxLive=462,gcCycles=295
-instructions:       12031
-max memory:         240MB
-loaded code:        classes=86,methods=1833
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search finished: 6/23/26 10:39 PM
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 156
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main$List.insert(Main.java:57)
+	at Main$List.insert(Main.java:57)
+	at Main.main(Main.java:70)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 156
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:70)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 156
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$List.insert(Main.java:56)
+	at Main.main(Main.java:70)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 156
+
+====================================================== snapshot 
+no live threads
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+

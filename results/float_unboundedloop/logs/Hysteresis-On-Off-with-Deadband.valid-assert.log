@@ -1,3 +1,65 @@
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:31)
+
+^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
@@ -40,71 +102,9 @@ classPath null
 classPath null
 
 the depth of violation is5
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun bool3 () (_ BitVec 64))
-(declare-fun bool2 () (_ BitVec 64))
-(declare-fun bool1 () (_ BitVec 64))
-(declare-fun bool0 () (_ BitVec 64))
-(assert (bvsge bool3 #x0000000000000000))
-(assert (bvsle bool3 #x0000000000000001))
-(assert (= bool3 #x0000000000000000))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (not (= bool2 #x0000000000000000)))
-(assert (bvsge bool1 #x0000000000000000))
-(assert (bvsle bool1 #x0000000000000001))
-(assert (not (= bool1 #x0000000000000000)))
-(assert (bvsge bool0 #x0000000000000000))
-(assert (bvsle bool0 #x0000000000000001))
-(assert (not (= bool0 #x0000000000000000)))
-
-
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 4
-bool3 == CONST_0 &&
-bool2 != CONST_0 &&
-bool1 != CONST_0 &&
-bool0 != CONST_0 -> true
-
-string analysis: SPC # = 0
-NPC constraint # = 4
-bool3[0] == CONST_0 &&
-bool2[1] != CONST_0 &&
-bool1[1] != CONST_0 &&
-bool0[1] != CONST_0
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
-current query... 
-
-(declare-const bool3 Int)
-(declare-const bool2 Int)
-(declare-const bool1 Int)
-(declare-const bool0 Int)
-
-(assert (= bool3 0))
-(assert (not (= bool2 0)))
-(assert (not (= bool1 0)))
-(assert (not (= bool0 0)))
-
-
-
-(define-fun bool0 () Int
-  1)
-(define-fun bool1 () Int
-  1)
-(define-fun bool2 () Int
-  1)
-(define-fun bool3 () Int
-  0)
 Returned solutions: 
 (define-fun bool0 () Int  1)
 (define-fun bool1 () Int  1)
@@ -142,14 +142,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 495 msec
+Veritesting Dyn Time = 485 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 100 msec
-Total Solver Parse Time = 22 msec
+Total Solver Queries Count = 27
+Total Solver Time = 87 msec
+Total Solver Parse Time = 26 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 2 msec
 PCSatSolverCount = 0
@@ -181,7 +181,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-495,0,495,0,0,100,22,2,0,1,0,0,0,0,1,0,1,0,34,0,0,0,0,34,0,0,-1,-1,0.0,0,0,0
+485,0,485,0,27,87,26,2,0,1,0,0,0,0,1,0,1,0,34,0,0,0,0,34,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:4..."
@@ -196,4 +196,4 @@ instructions:       6632
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/23/26 9:23 PM
+====================================================== search finished: 6/27/26 8:38 AM

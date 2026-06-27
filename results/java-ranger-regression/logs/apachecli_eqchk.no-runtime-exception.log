@@ -1,199 +1,199 @@
-
-Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char7)]).concat(CONST_, ).concat(.valueof[(char7)])]
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun char7 () (_ BitVec 64))
-(declare-fun char6 () (_ BitVec 64))
-(declare-fun char5 () (_ BitVec 64))
-(declare-fun char4 () (_ BitVec 64))
-(declare-fun char3 () (_ BitVec 64))
-(declare-fun char2 () (_ BitVec 64))
-(declare-fun char1 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun char0 () (_ BitVec 64))
-(assert (bvsge char7 #x0000000000000000))
-(assert (bvsle char7 #x000000000000ffff))
-(assert (= char7 char7))
-(assert (not (= char7 #x000000000000002d)))
-(assert (bvsge char6 #x0000000000000000))
-(assert (bvsle char6 #x000000000000ffff))
-(assert (not (= char6 #x000000000000002d)))
-(assert (bvsge char5 #x0000000000000000))
-(assert (bvsle char5 #x000000000000ffff))
-(assert (not (= char5 #x000000000000002d)))
-(assert (bvsge char4 #x0000000000000000))
-(assert (bvsle char4 #x000000000000ffff))
-(assert (not (= char4 #x000000000000002d)))
-(assert (bvsge char3 #x0000000000000000))
-(assert (bvsle char3 #x000000000000ffff))
-(assert (not (= char3 #x000000000000002d)))
-(assert (bvsge char2 #x0000000000000000))
-(assert (bvsle char2 #x000000000000ffff))
-(assert (not (= char2 #x000000000000002d)))
-(assert (bvsge char1 #x0000000000000000))
-(assert (bvsle char1 #x000000000000ffff))
-(assert (not (= char1 #x000000000000002d)))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge char0 #x0000000000000000))
-(assert (bvsle char0 #x000000000000ffff))
-(assert (not (= char0 #x000000000000002d)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 10
-char7 == char7 &&
-char7 != CONST_45 &&
-char6 != CONST_45 &&
-char5 != CONST_45 &&
-char4 != CONST_45 &&
-char3 != CONST_45 &&
-char2 != CONST_45 &&
-char1 != CONST_45 &&
-bool8 == CONST_0 &&
-char0 != CONST_45 -> true
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:29177 sat:16324 unsat:12853
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun char7 () (_ BitVec 64))
-(declare-fun char6 () (_ BitVec 64))
-(declare-fun char5 () (_ BitVec 64))
-(declare-fun char4 () (_ BitVec 64))
-(declare-fun char3 () (_ BitVec 64))
-(declare-fun char2 () (_ BitVec 64))
-(declare-fun char1 () (_ BitVec 64))
-(declare-fun bool8 () (_ BitVec 64))
-(declare-fun char0 () (_ BitVec 64))
-(assert (bvsge char7 #x0000000000000000))
-(assert (bvsle char7 #x000000000000ffff))
-(assert (not (= char7 char7)))
-(assert (not (= char7 #x000000000000002d)))
-(assert (bvsge char6 #x0000000000000000))
-(assert (bvsle char6 #x000000000000ffff))
-(assert (not (= char6 #x000000000000002d)))
-(assert (bvsge char5 #x0000000000000000))
-(assert (bvsle char5 #x000000000000ffff))
-(assert (not (= char5 #x000000000000002d)))
-(assert (bvsge char4 #x0000000000000000))
-(assert (bvsle char4 #x000000000000ffff))
-(assert (not (= char4 #x000000000000002d)))
-(assert (bvsge char3 #x0000000000000000))
-(assert (bvsle char3 #x000000000000ffff))
-(assert (not (= char3 #x000000000000002d)))
-(assert (bvsge char2 #x0000000000000000))
-(assert (bvsle char2 #x000000000000ffff))
-(assert (not (= char2 #x000000000000002d)))
-(assert (bvsge char1 #x0000000000000000))
-(assert (bvsle char1 #x000000000000ffff))
-(assert (not (= char1 #x000000000000002d)))
-(assert (bvsge bool8 #x0000000000000000))
-(assert (bvsle bool8 #x0000000000000001))
-(assert (= bool8 #x0000000000000000))
-(assert (bvsge char0 #x0000000000000000))
-(assert (bvsle char0 #x000000000000ffff))
-(assert (not (= char0 #x000000000000002d)))
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+a	
+b	
+c	
+d	
+e	
+f	
+g	
+h	
+i	
+j	
+k	
+l	
+m	
+n	
+o	
+p	
+q	
+r	
+s	
+t	
+u	
+v	
+w	
+x	
+y	
+z	
+A	
+B	
+C	
+D	
+E	
+F	
+G	
+H	
+I	
+J	
+K	
+L	
+Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char3)]).concat(CONST_, ).concat(.valueof[(char3)])]
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char4)]).concat(CONST_, ).concat(.valueof[(char4)])]
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 10
-char7 != char7 &&
-char7 != CONST_45 &&
-char6 != CONST_45 &&
-char5 != CONST_45 &&
-char4 != CONST_45 &&
-char3 != CONST_45 &&
-char2 != CONST_45 &&
-char1 != CONST_45 &&
-bool8 == CONST_0 &&
-char0 != CONST_45 -> false
+Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char5)]).concat(CONST_, ).concat(.valueof[(char5)])]
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:29178 sat:16324 unsat:12854
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== VeritestingListener report:
-Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Exception Statistics *****************
-Static Analysis exceptions count = 0
-Instantiation Time exceptions count = 0
-Unknown phases exception count = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Time Decomposition Statistics *****************
-static analysis time = 0 msec
-Veritesting Dyn Time = 36758 msec
-Veritesting fix-point Time = 0 msec
-GoTo rewrite instances = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 28330 msec
-Total Solver Parse Time = 3352 msec
-Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 1064 msec
-PCSatSolverCount = 0
-PCSatSolverTime = 0 msec
-Constant Propagation Time for PC sat. checks = 0
-Array SPF Case count = 0
-If-removed count = 0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Region Statistics *****************
-Number of Distinct Veritested Regions = 0
-Number of Distinct Un-Veritested Symbolic Regions = 13
-Number of Distinct Failed Regions for Field Reference = 0
-Number of Distinct Failed Regions for SPFCases = 0
-Number of Distinct Failed Regions for missing method summaries = 0
-Number of Distinct Failed Regions for Other Reasons = 13
-Number of High Order Regions Used = 0
+a	
+b	
+c	
+d	
+e	
+f	
+g	
+h	
+i	
+j	
+k	
+l	
+m	
+n	
+o	
+p	
+q	
+r	
+s	
+t	
+u	
+v	
+w	
+x	
+y	
+z	
+A	
+B	
+C	
+D	
+E	
+F	
+G	
+H	
+I	
+J	
+K	
+L	
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-/************************ Printing Instantiation Statistics *****************
-Number of successful instantiations = 0
-Total Number of unsuccessful instantiations = 17035
-Number of failed instantiations due to Field Reference = 0
-Number of failed instantiations due to SPFCases = 0
-Number of failed instantiations due to missing method summaries = 0
-Number of failed instantiations due to Other Reasons = 17035
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Number of Veritested Regions Instances = 0
-Printing keys of regions that were instantiated at least once
-Finished printing keys of regions that were instantiated at least once
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Metrics Vector:
-36758,0,36758,0,0,28330,3352,1064,0,13,0,0,0,0,13,0,13,0,17035,0,0,0,0,17035,0,0,-1,-1,0.0,0,0,0
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== results
-no errors detected
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== statistics
-elapsed time:       00:00:36
-states:             new=2447,visited=0,backtracked=2447,end=712
-search:             maxDepth=13,constraints=674
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1223
-heap:               new=333120,released=411961,maxLive=685,gcCycles=2318
-instructions:       19323725
-max memory:         499MB
-loaded code:        classes=107,methods=2316
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search finished: 6/23/26 9:26 PM

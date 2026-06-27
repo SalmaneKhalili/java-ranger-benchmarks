@@ -1,199 +1,199 @@
-                                 #x0000000000000013))
-                  #x0000000000000001))
-      (a!2 (bvadd (bvmul #x000000000000000c
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  (bvmul #x00000000000000eb
-                         (bvsdiv (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013)))))
-(let ((a!3 (bvadd (bvsdiv (bvashr (bvshl a!1 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000013)
-                  (bvashr (bvshl a!2 #x0000000000000020) #x0000000000000020))))
-(let ((a!4 (bvmul #x0000000000000319
-                  (bvsrem (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!6 (bvmul #x0000000000000319
-                  (bvsdiv (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!7 (bvadd (bvmul #x000000000000000c
-                         (bvashr (bvshl a!3 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000005))
-      (a!10 (bvadd (bvmul #x000000000000001d
-                          (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020))
-                   #x0000000000000001)))
-(let ((a!5 (bvsdiv (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!8 (bvshl (bvadd a!6
-                         (bvashr (bvshl a!7 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000020)))
-(let ((a!9 (bvashr (bvshl (bvadd a!5 (bvashr a!8 #x0000000000000020))
-                          #x0000000000000020)
-                   #x0000000000000020)))
-(let ((a!11 (bvshl (bvadd (bvsdiv a!9 #x0000000000000018)
-                          (bvashr (bvshl a!10 #x0000000000000020)
-                                  #x0000000000000020))
-                   #x0000000000000020)))
-  (= (bvsrem (bvashr a!11 #x0000000000000020) #x0000000000000007)
-     #x0000000000000003))))))))
-(assert (let ((a!1 (bvadd (bvmul #x0000000000000007
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  #x0000000000000001))
-      (a!2 (bvadd (bvmul #x000000000000000c
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  (bvmul #x00000000000000eb
-                         (bvsdiv (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013)))))
-(let ((a!3 (bvadd (bvsdiv (bvashr (bvshl a!1 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000013)
-                  (bvashr (bvshl a!2 #x0000000000000020) #x0000000000000020))))
-(let ((a!4 (bvmul #x0000000000000319
-                  (bvsrem (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!6 (bvmul #x0000000000000319
-                  (bvsdiv (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!7 (bvadd (bvmul #x000000000000000c
-                         (bvashr (bvshl a!3 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000005))
-      (a!10 (bvadd (bvmul #x000000000000001d
-                          (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020))
-                   #x0000000000000001)))
-(let ((a!5 (bvsdiv (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!8 (bvshl (bvadd a!6
-                         (bvashr (bvshl a!7 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000020)))
-(let ((a!9 (bvashr (bvshl (bvadd a!5 (bvashr a!8 #x0000000000000020))
-                          #x0000000000000020)
-                   #x0000000000000020)))
-(let ((a!11 (bvshl (bvadd (bvsdiv a!9 #x0000000000000018)
-                          (bvashr (bvshl a!10 #x0000000000000020)
-                                  #x0000000000000020))
-                   #x0000000000000020)))
-  (not (= (bvsrem (bvashr a!11 #x0000000000000020) #x0000000000000007)
-          #x0000000000000000)))))))))
-(assert (bvsge bool4 #x0000000000000000))
-(assert (bvsle bool4 #x0000000000000001))
-(assert (= bool4 #x0000000000000000))
-(assert (let ((a!1 (bvadd (bvmul #x0000000000000007
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  #x0000000000000001))
-      (a!2 (bvadd (bvmul #x000000000000000c
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  (bvmul #x00000000000000eb
-                         (bvsdiv (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013)))))
-(let ((a!3 (bvadd (bvsdiv (bvashr (bvshl a!1 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000013)
-                  (bvashr (bvshl a!2 #x0000000000000020) #x0000000000000020))))
-(let ((a!4 (bvmul #x0000000000000319
-                  (bvsrem (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!7 (bvmul #x0000000000000319
-                  (bvsdiv (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!8 (bvadd (bvmul #x000000000000000c
-                         (bvashr (bvshl a!3 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000005)))
-(let ((a!5 (bvsrem (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!6 (bvsdiv (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!9 (bvshl (bvadd a!7
-                         (bvashr (bvshl a!8 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000020)))
-(let ((a!10 (bvashr (bvshl (bvadd a!6 (bvashr a!9 #x0000000000000020))
-                           #x0000000000000020)
-                    #x0000000000000020)))
-(let ((a!11 (bvshl (bvadd a!5
-                          (bvmul #x0000000000000438
-                                 (bvsrem a!10 #x0000000000000018)))
-                   #x0000000000000020)))
-  (bvsge (bvashr a!11 #x0000000000000020) #x0000000000004195))))))))
-(assert (bvsge bool3 #x0000000000000000))
-(assert (bvsle bool3 #x0000000000000001))
-(assert (not (= bool3 #x0000000000000000)))
-(assert (bvsge bool2 #x0000000000000000))
-(assert (bvsle bool2 #x0000000000000001))
-(assert (= bool2 #x0000000000000000))
-(assert (let ((a!1 (bvadd (bvmul #x0000000000000007
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  #x0000000000000001))
-      (a!2 (bvadd (bvmul #x000000000000000c
-                         (bvsrem (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013))
-                  (bvmul #x00000000000000eb
-                         (bvsdiv (bvsub int0 #x0000000000000001)
-                                 #x0000000000000013)))))
-(let ((a!3 (bvadd (bvsdiv (bvashr (bvshl a!1 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000013)
-                  (bvashr (bvshl a!2 #x0000000000000020) #x0000000000000020))))
-(let ((a!4 (bvmul #x0000000000000319
-                  (bvsrem (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!7 (bvmul #x0000000000000319
-                  (bvsdiv (bvashr (bvshl a!3 #x0000000000000020)
-                                  #x0000000000000020)
-                          #x0000000000000438)))
-      (a!8 (bvadd (bvmul #x000000000000000c
-                         (bvashr (bvshl a!3 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000005)))
-(let ((a!5 (bvsrem (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!6 (bvsdiv (bvashr (bvshl (bvadd a!4 #x00000000000000cc)
-                                  #x0000000000000020)
-                           #x0000000000000020)
-                   #x0000000000000438))
-      (a!9 (bvshl (bvadd a!7
-                         (bvashr (bvshl a!8 #x0000000000000020)
-                                 #x0000000000000020))
-                  #x0000000000000020)))
-(let ((a!10 (bvashr (bvshl (bvadd a!6 (bvashr a!9 #x0000000000000020))
-                           #x0000000000000020)
-                    #x0000000000000020)))
-(let ((a!11 (bvshl (bvadd a!5
-                          (bvmul #x0000000000000438
-                                 (bvsrem a!10 #x0000000000000018)))
-                   #x0000000000000020)))
-  (bvslt (bvashr a!11 #x0000000000000020) #x0000000000004bf0))))))))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (bvsle int1 #x000000000000000c))
-(assert (bvsgt int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+
+====================================================== snapshot 
+no live threads
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 

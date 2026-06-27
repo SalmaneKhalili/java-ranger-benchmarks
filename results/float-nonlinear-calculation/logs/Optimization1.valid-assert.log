@@ -1,121 +1,25 @@
-    (fp.isNaN double1)))
-(assert (fp.lt (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x8000000000000)
-               (fp.mul roundNearestTiesToEven
-                       double0
-                       (fp.sub roundNearestTiesToEven
-                               (fp #b0 #b01111111111 #x0000000000000)
-                               double1)))
-       (_ +zero 11 53)))
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-10000.0
+symbolic.max_double=10000.0
+* running veritesting with SPFCases and Early Returns.
+search depth = 13
+JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
 
 
-Solving time of z3 bitvector is 22871 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== system under test
+Main.main()
 
-
-numeric PC: constraint # = 1
-(CONST_1.5 - (double0 * (CONST_1.0 - double1))) < CONST_0.0 -> true
-
-### PCs: total:1 sat:1 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double0)))
-(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double1)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x8000000000000)
-               (fp.mul roundNearestTiesToEven
-                       double0
-                       (fp.sub roundNearestTiesToEven
-                               (fp #b0 #b01111111111 #x0000000000000)
-                               double1)))))
-
-
-Solving time of z3 bitvector is 16674 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-CONST_0.0 == (CONST_1.5 - (double0 * (CONST_1.0 - double1))) -> true
-
-### PCs: total:2 sat:2 unsat:0
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double0)))
-(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double1)))
-(assert (fp.gt (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x8000000000000)
-               (fp.mul roundNearestTiesToEven
-                       double0
-                       (fp.sub roundNearestTiesToEven
-                               (fp #b0 #b01111111111 #x0000000000000)
-                               double1)))
-       (_ +zero 11 53)))
-
-
-Solving time of z3 bitvector is 6706 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-(CONST_1.5 - (double0 * (CONST_1.0 - double1))) > CONST_0.0 -> true
-
-### PCs: total:3 sat:3 unsat:0
-
+====================================================== search started: 6/27/26 8:40 AM
 the depth of violation is2
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun double0 () (_ FloatingPoint 11 53))
-(declare-fun double1 () (_ FloatingPoint 11 53))
-(assert (or (and (fp.geq double0 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double0 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double0)))
-(assert (or (and (fp.geq double1 (fp #b1 #b10000001100 #x3880000000000))
-         (fp.leq double1 (fp #b0 #b10000001100 #x3880000000000)))
-    (fp.isNaN double1)))
-(assert (fp.eq (_ +zero 11 53)
-       (fp.sub roundNearestTiesToEven
-               (fp #b0 #b01111111111 #x8000000000000)
-               (fp.mul roundNearestTiesToEven
-                       double0
-                       (fp.sub roundNearestTiesToEven
-                               (fp #b0 #b01111111111 #x0000000000000)
-                               double1)))))
-
-
-Solving time of z3 bitvector is 141696 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 1
-CONST_0.0 == (CONST_1.5 - (double0 * (CONST_1.0 - double1))) -> true
-
 
 ====================================================== error 1
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
@@ -142,16 +46,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 188412 msec
+Veritesting Dyn Time = 210387 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 46394 msec
-Total Solver Parse Time = 8 msec
+Total Solver Queries Count = 4
+Total Solver Time = 52414 msec
+Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 105 msec
+Total Solver Clean up Time = 133 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,13 +85,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-188412,0,188412,0,0,46394,8,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+210387,0,210387,0,4,52414,10,133,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Optimization.beale(Op..."
 
 ====================================================== statistics
-elapsed time:       00:03:08
+elapsed time:       00:03:30
 states:             new=3,visited=0,backtracked=1,end=1
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -196,4 +100,5 @@ instructions:       6102
 max memory:         240MB
 loaded code:        classes=90,methods=1879
 
-====================================================== search finished: 6/23/26 9:28 PM
+====================================================== search finished: 6/27/26 8:44 AM
+

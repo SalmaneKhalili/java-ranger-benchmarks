@@ -1,104 +1,104 @@
-((int0 - CONST_1) - CONST_1) != CONST_1 &&
-(int0 - CONST_1) != CONST_1 &&
-int0 != CONST_1 &&
-int0 != CONST_0 &&
-int0 >= CONST_0 -> true
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-### PCs: total:67 sat:46 unsat:21
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (= (bvsub (bvsub a!2 #x0000000000000001) #x0000000000000001)
-     #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!2 #x0000000000000001) #x0000000000000001)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (bvsub (bvsub (bvsub (bvsub a!1 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!2 #x0000000000000001)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-(let ((a!2 (= (bvsub (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000001)))
-  (not a!2))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub (bvsub a!1 #x0000000000000001) #x0000000000000001)
-          #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= (bvsub a!1 #x0000000000000001) #x0000000000000001))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub (bvsub int0 #x0000000000000001)
-                                #x0000000000000001)
-                         #x0000000000000001)
-                  #x0000000000000001)))
-  (not (= a!1 #x0000000000000001))))
-(assert (let ((a!1 (= (bvsub (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-                     #x0000000000000001)
-              #x0000000000000001)))
-  (not a!1)))
-(assert (not (= (bvsub (bvsub int0 #x0000000000000001) #x0000000000000001)
-        #x0000000000000001)))
-(assert (not (= (bvsub int0 #x0000000000000001) #x0000000000000001)))
-(assert (not (= int0 #x0000000000000001)))
-(assert (not (= int0 #x0000000000000000)))
-(assert (bvsge int0 #x0000000000000000))
+the depth of violation is12
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int0 () Int  9)
+*************************************
+Satisfiable: true
+int0 => 9
+*************************************
 
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+====================================================== error 10
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:43)
 
 
-numeric PC: constraint # = 13
-((((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) == CONST_1 &&
-(((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((((int0 - CONST_1) - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-(((int0 - CONST_1) - CONST_1) - CONST_1) != CONST_1 &&
-((int0 - CONST_1) - CONST_1) != CONST_1 &&
-(int0 - CONST_1) != CONST_1 &&
-int0 != CONST_1 &&
-int0 != CONST_0 &&
-int0 >= CONST_0 -> true
+====================================================== snapshot #10
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:43)
 
-### PCs: total:68 sat:47 unsat:21
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+the depth of violation is13
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun int0 () Int  10)
+*************************************
+Satisfiable: true
+int0 => 10
+*************************************
+
+
+====================================================== error 11
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.main(Main.java:43)
+
+
+====================================================== snapshot #11
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:43)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot #11
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:43)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== search constraint
@@ -132,14 +132,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 643 msec
+Veritesting Dyn Time = 612 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 113 msec
-Total Solver Parse Time = 33 msec
+Total Solver Queries Count = 79
+Total Solver Time = 76 msec
+Total Solver Parse Time = 36 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
@@ -171,7 +171,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-643,0,643,0,0,113,33,1,0,6,0,0,0,0,6,0,6,0,58,0,0,0,0,58,0,0,-1,-1,0.0,0,0,0
+612,0,612,0,79,76,36,1,0,6,0,0,0,0,6,0,6,0,58,0,0,0,0,58,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:4..."
@@ -196,4 +196,4 @@ instructions:       6648
 max memory:         240MB
 loaded code:        classes=89,methods=1873
 
-====================================================== search finished: 6/23/26 10:33 PM
+====================================================== search finished: 6/27/26 11:03 AM

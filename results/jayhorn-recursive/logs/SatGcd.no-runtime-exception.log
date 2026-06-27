@@ -1,40 +1,4 @@
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (= a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(assert (bvsgt (bvsub (bvsub int0 int1) int1)
-       (bvsub int1 (bvsub (bvsub int0 int1) int1))))
-(assert (let ((a!1 (= (bvsub (bvsub int0 int1) int1)
-              (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!1)))
-(assert (bvsle (bvsub (bvsub int0 int1) int1) int1))
-(assert (not (= (bvsub (bvsub int0 int1) int1) int1)))
-(assert (bvsgt (bvsub int0 int1) int1))
-(assert (not (= (bvsub int0 int1) int1)))
-(assert (bvsgt int0 int1))
-(assert (not (= int0 int1)))
-(assert (bvsgt int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 1017 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 12
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) < CONST_1 &&
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) == (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) > (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) != (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) <= int1 &&
-((int0 - int1) - int1) != int1 &&
-(int0 - int1) > int1 &&
-(int0 - int1) != int1 &&
-int0 > int1 &&
-int0 != int1 &&
-int1 > CONST_0 &&
-int0 > CONST_0 -> false
-
-### PCs: total:110 sat:76 unsat:34
+	at Main.main(Main.java:36)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -44,113 +8,28 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (bvsle a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(let ((a!2 (= a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!2))))
-(assert (bvsgt (bvsub (bvsub int0 int1) int1)
-       (bvsub int1 (bvsub (bvsub int0 int1) int1))))
-(assert (let ((a!1 (= (bvsub (bvsub int0 int1) int1)
-              (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!1)))
-(assert (bvsle (bvsub (bvsub int0 int1) int1) int1))
-(assert (not (= (bvsub (bvsub int0 int1) int1) int1)))
-(assert (bvsgt (bvsub int0 int1) int1))
-(assert (not (= (bvsub int0 int1) int1)))
-(assert (bvsgt int0 int1))
-(assert (not (= int0 int1)))
-(assert (bvsgt int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+====================================================== search constraint
+depth limit reached: 13
 
-
-Solving time of z3 bitvector is 23 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 12
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) <= (int1 - ((int0 - int1) - int1)) &&
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) != (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) > (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) != (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) <= int1 &&
-((int0 - int1) - int1) != int1 &&
-(int0 - int1) > int1 &&
-(int0 - int1) != int1 &&
-int0 > int1 &&
-int0 != int1 &&
-int1 > CONST_0 &&
-int0 > CONST_0 -> true
-
-### PCs: total:111 sat:77 unsat:34
-
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (bvsgt a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(let ((a!2 (= a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!2))))
-(assert (bvsgt (bvsub (bvsub int0 int1) int1)
-       (bvsub int1 (bvsub (bvsub int0 int1) int1))))
-(assert (let ((a!1 (= (bvsub (bvsub int0 int1) int1)
-              (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!1)))
-(assert (bvsle (bvsub (bvsub int0 int1) int1) int1))
-(assert (not (= (bvsub (bvsub int0 int1) int1) int1)))
-(assert (bvsgt (bvsub int0 int1) int1))
-(assert (not (= (bvsub int0 int1) int1)))
-(assert (bvsgt int0 int1))
-(assert (not (= int0 int1)))
-(assert (bvsgt int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
-
-
-Solving time of z3 bitvector is 21 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-numeric PC: constraint # = 12
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) > (int1 - ((int0 - int1) - int1)) &&
-(((int0 - int1) - int1) - (int1 - ((int0 - int1) - int1))) != (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) > (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) != (int1 - ((int0 - int1) - int1)) &&
-((int0 - int1) - int1) <= int1 &&
-((int0 - int1) - int1) != int1 &&
-(int0 - int1) > int1 &&
-(int0 - int1) != int1 &&
-int0 > int1 &&
-int0 != int1 &&
-int1 > CONST_0 &&
-int0 > CONST_0 -> true
-
-### PCs: total:112 sat:78 unsat:34
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -160,40 +39,161 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-Z3bitvector using 64-bit bitvectors.
-Allowed [min,max] values: [-9223372036854775808,9223372036854775807].
-Using floating point for reals: yes
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-(declare-fun int0 () (_ BitVec 64))
-(declare-fun int1 () (_ BitVec 64))
-(assert (bvsge int0 #xffffffff80000000))
-(assert (bvsle int0 #x000000007fffffff))
-(assert (bvsge int1 #xffffffff80000000))
-(assert (bvsle int1 #x000000007fffffff))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(let ((a!2 (bvsub a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (bvsle a!2 #x0000000000000000))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (bvsgt a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(assert (let ((a!1 (bvsub (bvsub (bvsub int0 int1) int1)
-                  (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-(let ((a!2 (= a!1 (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!2))))
-(assert (bvsgt (bvsub (bvsub int0 int1) int1)
-       (bvsub int1 (bvsub (bvsub int0 int1) int1))))
-(assert (let ((a!1 (= (bvsub (bvsub int0 int1) int1)
-              (bvsub int1 (bvsub (bvsub int0 int1) int1)))))
-  (not a!1)))
-(assert (bvsle (bvsub (bvsub int0 int1) int1) int1))
-(assert (not (= (bvsub (bvsub int0 int1) int1) int1)))
-(assert (bvsgt (bvsub int0 int1) int1))
-(assert (not (= (bvsub int0 int1) int1)))
-(assert (bvsgt int0 int1))
-(assert (not (= int0 int1)))
-(assert (bvsgt int1 #x0000000000000000))
-(assert (bvsgt int0 #x0000000000000000))
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 

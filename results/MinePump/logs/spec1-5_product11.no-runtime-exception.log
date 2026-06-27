@@ -1,21 +1,21 @@
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-Solving time of z3 bitvector is 0 ms
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-numeric PC: constraint # = 9
-bool7 == CONST_0 &&
-bool6 == CONST_0 &&
-bool8 != CONST_0 &&
-bool4 == CONST_0 &&
-bool3 == CONST_0 &&
-bool5 != CONST_0 &&
-bool1 == CONST_0 &&
-bool0 == CONST_0 &&
-bool2 != CONST_0 -> true
-
-### PCs: total:4370 sat:3450 unsat:920
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 
 ====================================================== VeritestingListener report:
@@ -29,16 +29,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 9558 msec
+Veritesting Dyn Time = 6876 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
-Total Solver Queries Count = 0
-Total Solver Time = 6514 msec
-Total Solver Parse Time = 1158 msec
+Total Solver Queries Count = 4484
+Total Solver Time = 4205 msec
+Total Solver Parse Time = 1184 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 261 msec
+Total Solver Clean up Time = 234 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -68,7 +68,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-9558,0,9558,0,0,6514,1158,261,0,5,0,0,0,0,5,0,5,0,4715,0,0,0,0,4715,0,0,-1,-1,0.0,0,0,0
+6876,0,6876,0,4484,4205,1184,234,0,5,0,0,0,0,5,0,5,0,4715,0,0,0,0,4715,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -187,13 +187,13 @@ error #113: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #114: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:09
+elapsed time:       00:00:06
 states:             new=2531,visited=0,backtracked=2531,end=1152
 search:             maxDepth=13,constraints=416
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1265
 heap:               new=4580,released=15754,maxLive=486,gcCycles=1910
 instructions:       277695
-max memory:         306MB
+max memory:         303MB
 loaded code:        classes=94,methods=1913
 
-====================================================== search finished: 6/23/26 9:23 PM
+====================================================== search finished: 6/27/26 8:38 AM
