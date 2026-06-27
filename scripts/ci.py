@@ -398,7 +398,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
         classpath = f"{jpf_symbc_classes}:{classes_dir}"
 
         compile_proc = subprocess.run(
-            ["javac", "--release", "8", "-g", "-cp", classpath, "-d", classes_dir] + java_files,
+            ["javac", "-source", "8", "-target", "8", "-g", "-cp", classpath, "-d", classes_dir] + java_files,
             capture_output=True, text=True, timeout=120,
         )
         if compile_proc.returncode != 0:
