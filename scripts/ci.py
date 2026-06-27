@@ -409,7 +409,8 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
             return result
 
         iter_timeout = max(int(timeout / len(DEPTH_LIMITS)), 1)
-        verdict = None
+        best_verdict = None
+        best_output = ""
         all_output = ""
         persistent_log = os.path.join(log_dir, f"{result.name}.log")
         result.logfile = persistent_log
@@ -462,67 +463,76 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
 
             if no_errors and not depth_reached:
                 result.actual = "true"
-                verdict = "CORRECT"
+                best_verdict = "CORRECT"
+                best_output = jpf_output
                 break
             elif no_errors and depth_reached:
-                verdict = "SAFE_DEPTH_REACHED"
-                # Continue to next depth
+                if best_verdict != "CORRECT":
+                    best_verdict = "SAFE_DEPTH_REACHED"
+                    best_output = jpf_output
+                if timed_out:
+                    break
             else:
                 # Check for UNSAFE
                 if property_mode == "assertion":
                     if re.search(r'gov\.nasa\.jpf\.vm\.NoUncaughtExceptionsProperty.*AssertionError', jpf_output):
                         result.actual = "false"
-                        verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        best_verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        best_output = jpf_output
                         break
                     else:
-                        verdict = "UNKNOWN"
-                        break
+                        if best_verdict is None:
+                            best_verdict = "UNKNOWN"
+                            best_output = jpf_output
+                        if timed_out:
+                            result.error = f"timeout after {iter_timeout}s at depth={depth_limit}"
+                            break
                 elif property_mode == "runtime_exception":
                     if re.search(r'java\.lang\.\w*Exception', jpf_output):
                         result.actual = "false"
-                        verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        best_verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+                        best_output = jpf_output
                         break
                     else:
-                        verdict = "UNKNOWN"
-                        break
+                        if best_verdict is None:
+                            best_verdict = "UNKNOWN"
+                            best_output = jpf_output
+                        if timed_out:
+                            result.error = f"timeout after {iter_timeout}s at depth={depth_limit}"
+                            break
                 else:
-                    verdict = "UNKNOWN"
-                    break
+                    if best_verdict is None:
+                        best_verdict = "UNKNOWN"
+                        best_output = jpf_output
+                    if timed_out:
+                        result.error = f"timeout after {iter_timeout}s at depth={depth_limit}"
+                        break
 
-            if timed_out:
-                verdict = "UNKNOWN"
-                result.error = f"timeout after {iter_timeout}s at depth={depth_limit}"
-                break
-
-        # Write persistent log
+        # Write persistent log using best_output
         try:
-            lines = all_output.splitlines()
+            lines = best_output.splitlines()
             if len(lines) > 200:
-                all_output = "\n".join(lines[-200:])
+                best_output = "\n".join(lines[-200:])
             with open(persistent_log, "w") as f:
-                f.write(all_output)
+                f.write(best_output)
         except OSError:
             pass
 
-        if verdict is None:
-            verdict = "UNKNOWN"
+        if best_verdict is None:
+            best_verdict = "UNKNOWN"
 
-        if verdict == "SAFE_DEPTH_REACHED":
-            # All depths exhausted, treat as SAFE
+        if best_verdict == "SAFE_DEPTH_REACHED":
             result.actual = "true"
-            if result.actual == result.expected:
-                result.verdict = "CORRECT"
-            else:
-                result.verdict = "INCORRECT"
-        elif verdict == "CORRECT":
+            result.verdict = "CORRECT" if result.actual == result.expected else "INCORRECT"
+        elif best_verdict == "CORRECT":
             result.verdict = "CORRECT"
-        elif verdict == "INCORRECT":
+        elif best_verdict == "INCORRECT":
             result.verdict = "INCORRECT"
         else:
             result.verdict = "UNKNOWN"
 
         if result.verdict != "CORRECT" and not result.error:
-            result.error = extract_error(all_output)
+            result.error = extract_error(best_output)
 
     finally:
         shutil.rmtree(tmp_dir, ignore_errors=True)
