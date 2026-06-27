@@ -20,7 +20,6 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-rparen.
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -49,39 +48,11 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-rparen.
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
+error, "".
 Match
 
 ====================================================== search constraint
-depth limit reached: 21
+depth limit reached: 13
 
 ====================================================== snapshot 
 no live threads
@@ -99,12 +70,13 @@ classPath null
 
 
 ====================================================== search constraint
-depth limit reached: 21
+depth limit reached: 13
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at PrintTokens2.getToken(PrintTokens2.java:284)
+	at PrintTokens2.isTokenEnd(PrintTokens2.java:411)
+	at PrintTokens2.getToken(PrintTokens2.java:316)
 	at PrintTokens2.mainProcess(PrintTokens2.java:36)
 	at Main.main(Main.java:16)
 
@@ -124,60 +96,16 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-lsquare.
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
 
 ====================================================== search constraint
-depth limit reached: 21
+depth limit reached: 13
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at TokenStream.EOFStream(TokenStream.java:29)
-	at PrintTokens2.isEndToken(PrintTokens2.java:44)
-	at PrintTokens2.mainProcess(PrintTokens2.java:38)
-	at Main.main(Main.java:16)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at PrintTokens2.isSpecSymbol(PrintTokens2.java:447)
-	at PrintTokens2.getToken(PrintTokens2.java:304)
+	at TokenStream.read(TokenStream.java:20)
+	at PrintTokens2.getChar(PrintTokens2.java:470)
+	at PrintTokens2.getToken(PrintTokens2.java:315)
 	at PrintTokens2.mainProcess(PrintTokens2.java:36)
 	at Main.main(Main.java:16)
 
@@ -189,11 +117,83 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== search constraint
+depth limit reached: 13
 
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at TokenStream.read(TokenStream.java:20)
+	at PrintTokens2.getChar(PrintTokens2.java:470)
+	at PrintTokens2.getToken(PrintTokens2.java:315)
+	at PrintTokens2.mainProcess(PrintTokens2.java:36)
+	at Main.main(Main.java:16)
+
+
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
+
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
+
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 14966 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 17662
+Total Solver Time = 13161 msec
+Total Solver Parse Time = 3503 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 614 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 34
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 34
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 11605
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 11605
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+14966,0,14966,0,17662,13161,3503,614,0,34,0,0,0,0,34,0,34,0,11605,0,0,0,0,11605,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:14
+states:             new=2775,visited=0,backtracked=2775,end=312
+search:             maxDepth=13,constraints=1216
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1387
+heap:               new=4321,released=7809,maxLive=490,gcCycles=2431
+instructions:       1494650
+max memory:         700MB
+loaded code:        classes=97,methods=1937
+
+====================================================== search finished: 6/27/26 10:15 PM

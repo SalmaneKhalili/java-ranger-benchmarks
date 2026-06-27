@@ -1,5 +1,3 @@
-Satisfiable: true
-string0 => "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -10,10 +8,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}"
+string0 => "\u{1ffff}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -24,10 +22,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}"
+string0 => "\u{1ffff}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -38,10 +36,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ef7f}\u{9}\u{0}\u{9}\u{2310}"
+string0 => "\u{1ffff}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -52,38 +50,28 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}\u{9}\u{1bfff}")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{0}\u{9}\u{1bfff}"
+string0 => "\u{1ffff}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}\u{9}\u{1bfff}A")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{0}\u{9}\u{1bfff}A"
+string0 => "\u{1ffff}"
 *************************************
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.util.StringTokenizer.scanToken(StringTokenizer.java:272)
-	at java.util.StringTokenizer.nextToken(StringTokenizer.java:351)
-	at java.util.StringTokenizer.nextElement(StringTokenizer.java:407)
-	at securibench.micro.basic.Basic39.doGet(Basic39.java:32)
-	at Main.main(Main.java:23)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -93,10 +81,38 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{ffff}\u{9}\u{0}\u{9}")
+(define-fun string0 () String  "\u{1ffff}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{ffff}\u{9}\u{0}\u{9}"
+string0 => "\u{1ffff}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1ffff}")
+*************************************
+Satisfiable: true
+string0 => "\u{1ffff}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{1ffff}")
+*************************************
+Satisfiable: true
+string0 => "\u{1ffff}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -114,86 +130,70 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
 
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{ff9f}\u{9}\u{0}\u{0}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{ff9f}\u{9}\u{0}\u{0}"
-*************************************
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
 
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{ff9f}\u{9}\u{0}\u{0}A")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{ff9f}\u{9}\u{0}\u{0}A"
-*************************************
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 33159 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 1586
+Total Solver Time = 2387 msec
+Total Solver Parse Time = 260 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 109 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 9
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 9
+Number of High Order Regions Used = 0
 
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1efdf}\u{9}\u{0}\u{0}\u{104c0}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1efdf}\u{9}\u{0}\u{0}\u{104c0}"
-*************************************
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 1164
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 1164
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
 
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1cfdf}\u{9}\u{0}\u{0}\u{6}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1cfdf}\u{9}\u{0}\u{0}\u{6}"
-*************************************
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+Metrics Vector:
+33159,0,33159,0,1586,2387,260,109,0,9,0,0,0,0,9,0,9,0,1164,0,0,0,0,1164,0,0,-1,-1,0.0,0,0,0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== results
+no errors detected
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
+====================================================== statistics
+elapsed time:       00:00:33
+states:             new=695,visited=0,backtracked=695,end=86
+search:             maxDepth=13,constraints=232
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=347
+heap:               new=1669,released=2466,maxLive=538,gcCycles=609
+instructions:       26441
+max memory:         240MB
+loaded code:        classes=102,methods=1996
 
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{9}\u{0}\u{6}\u{0}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{9}\u{0}\u{6}\u{0}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbef}\u{9}\u{0}\u{8}\u{9}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1fbef}\u{9}\u{0}\u{8}\u{9}"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
+====================================================== search finished: 6/27/26 8:43 PM

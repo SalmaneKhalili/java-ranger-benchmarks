@@ -1,17 +1,7 @@
-(define-fun string0 () String  "\u{0}BB\u{0}\u{0}@B\u{0}\u{8}")
+(define-fun string0 () String  "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}A")
 *************************************
 Satisfiable: true
-string0 => "\u{0}BB\u{0}\u{0}@B\u{0}\u{8}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  " BB\u{100} \u{1}B\u{8601}B")
-*************************************
-Satisfiable: true
-string0 => " BB\u{100} \u{1}B\u{8601}B"
+string0 => "\u{100}\u{210}\u{1a420}\u{1e3f4}\u{10140}A"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -26,20 +16,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}B")
+(define-fun string0 () String  "\u{1040}\u{0}\u{8000}\u{5}\u{2009}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}B"
+string0 => "\u{1040}\u{0}\u{8000}\u{5}\u{2009}\u{0}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}BA")
+(define-fun string0 () String  "\u{104}\u{0}\u{0}\u{1}\u{10}B")
 *************************************
 Satisfiable: true
-string0 => "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}BA"
+string0 => "\u{104}\u{0}\u{0}\u{1}\u{10}B"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -54,53 +44,25 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{c}BB\u{4}\u{0}(B\u{10008}B@")
+(define-fun string0 () String  "\u{200}\u{4000}\u{178b7}\u{c322}@B")
 *************************************
 Satisfiable: true
-string0 => "\u{c}BB\u{4}\u{0}(B\u{10008}B@"
+string0 => "\u{200}\u{4000}\u{178b7}\u{c322}@B"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "4BB\u{0}\u{0}\u{462c}B\u{0}BB")
+(define-fun string0 () String  "\u{200}\u{4000}\u{178b7}\u{c322}@BA")
 *************************************
 Satisfiable: true
-string0 => "4BB\u{0}\u{0}\u{462c}B\u{0}BB"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  ",BB\u{16040}\u{20460}\u{5}B\u{3141}BB")
-*************************************
-Satisfiable: true
-string0 => ",BB\u{16040}\u{20460}\u{5}B\u{3141}BB"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  ",BB\u{16040}\u{20460}\u{5}B\u{3141}BBA")
-*************************************
-Satisfiable: true
-string0 => ",BB\u{16040}\u{20460}\u{5}B\u{3141}BBA"
+string0 => "\u{200}\u{4000}\u{178b7}\u{c322}@BA"
 *************************************
 
 
 ====================================================== search constraint
-depth limit reached: 21
+depth limit reached: 13
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
@@ -119,25 +81,25 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}")
+(define-fun string0 () String  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}"
+string0 => "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}A")
+(define-fun string0 () String  "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A")
 *************************************
 Satisfiable: true
-string0 => "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}A"
+string0 => "\u{0}\u{1000}\u{100}\u{0}\u{0}\u{0}A"
 *************************************
 
 
 ====================================================== search constraint
-depth limit reached: 21
+depth limit reached: 13
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
@@ -156,25 +118,9 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}")
-*************************************
-Satisfiable: true
-string0 => "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}A")
-*************************************
-Satisfiable: true
-string0 => "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}A"
-*************************************
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -184,16 +130,70 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
 
-Returned solutions: 
-(define-fun string0 () String  "\u{4}BB\u{200}\u{10}\u{c70c}B\u{4020}\u{c09}\u{2}")
-*************************************
-Satisfiable: true
-string0 => "\u{4}BB\u{200}\u{10}\u{c70c}B\u{4020}\u{c09}\u{2}"
-*************************************
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
 
+
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 18804 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
+
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 380
+Total Solver Time = 520 msec
+Total Solver Parse Time = 79 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 24 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
+
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 2
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 2
+Number of High Order Regions Used = 0
+
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 442
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 442
+
+
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
+
+Metrics Vector:
+18804,0,18804,0,380,520,79,24,0,2,0,0,0,0,2,0,2,0,442,0,0,0,0,442,0,0,-1,-1,0.0,0,0,0
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:18
+states:             new=253,visited=0,backtracked=253,end=63
+search:             maxDepth=13,constraints=64
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=126
+heap:               new=464,released=701,maxLive=456,gcCycles=253
+instructions:       7988
+max memory:         240MB
+loaded code:        classes=85,methods=1830
+
+====================================================== search finished: 6/27/26 8:13 PM
