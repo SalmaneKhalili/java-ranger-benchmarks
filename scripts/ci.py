@@ -57,6 +57,7 @@ veritestingMode=5
 recursiveDepth=200
 singlePathOptimization=true
 symbolic.fp={fp}
+search.min_free=0
 listener=.symbc.VeritestingListener""".format(
     classpath=classpath, fp=str(fp_enabled).lower(),
     depth_limit=depth_limit)
@@ -429,7 +430,7 @@ def run_benchmark(yml_path, jr_dir, sv_bench_dir, output_dir, suite, log_dir,
             start_ns = time.time_ns()
             try:
                 jpf_proc = subprocess.run(
-                    ["java", "-Xmx1024m", "-ea",
+                    ["java", "-Xmx4096m", "-ea",
                      f"-Djava.library.path={jpf_symbc_lib}",
                      "-jar", jpf_core_jar, jpf_config_path],
                      cwd=jr_dir, capture_output=True, text=True,
