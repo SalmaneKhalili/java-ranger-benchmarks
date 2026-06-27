@@ -1,3 +1,43 @@
+g	
+h	
+i	
+j	
+k	
+l	
+m	
+n	
+o	
+p	
+q	
+r	
+s	
+t	
+u	
+v	
+w	
+x	
+y	
+z	
+A	
+B	
+C	
+D	
+E	
+F	
+G	
+H	
+I	
+J	
+K	
+L	
+Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char7)]).concat(CONST_, ).concat(.valueof[(char7)])]
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 a	
 b	
@@ -37,22 +77,6 @@ I
 J	
 K	
 L	
-Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char6)]).concat(CONST_, ).concat(.valueof[(char6)])]
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-Symbolic Exp [ CONST_char array entry mismatch .concat(.valueof[(char7)]).concat(CONST_, ).concat(.valueof[(char7)])]
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-no live threads
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -77,24 +101,6 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Parser.parse(Parser.java:165)
-	at Parser.parse(Parser.java:97)
-	at CLI.execute(CLI.java:71)
-	at CLI.mainProcess(CLI.java:61)
-	at Main.runCLI(Main.java:6)
-	at Main.testFunction(Main.java:18)
-	at TestCLI.SPFWrapper(TestCLI.java:32)
-	at TestCLI.testHarness(TestCLI.java:16)
-	at TestCLI.runTest(TestCLI.java:50)
-	at Main.main(Main.java:13)
-
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -107,23 +113,9 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Parser.parse(Parser.java:158)
-	at Parser.parse(Parser.java:97)
-	at CLI.execute(CLI.java:71)
-	at CLI.mainProcess(CLI.java:61)
-	at Main.runCLI(Main.java:6)
-	at Main.testFunction(Main.java:18)
-	at TestCLI.SPFWrapper(TestCLI.java:32)
-	at TestCLI.testHarness(TestCLI.java:16)
-	at TestCLI.runTest(TestCLI.java:50)
-	at Main.main(Main.java:13)
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -141,23 +133,13 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Parser.parse(Parser.java:158)
-	at Parser.parse(Parser.java:97)
-	at CLI.execute(CLI.java:71)
-	at CLI.mainProcess(CLI.java:61)
-	at Main.runCLI(Main.java:6)
-	at Main.testFunction(Main.java:18)
-	at TestCLI.SPFWrapper(TestCLI.java:32)
-	at TestCLI.testHarness(TestCLI.java:16)
-	at TestCLI.runTest(TestCLI.java:50)
-	at Main.main(Main.java:13)
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -167,27 +149,45 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== search constraint
-depth limit reached: 21
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Options.shortOptsContain(Options.java:257)
-	at Options.hasOption(Options.java:338)
-	at Parser.processArgs(Parser.java:351)
-	at Parser.processOption(Parser.java:439)
-	at Parser.parse(Parser.java:183)
-	at Parser.parse(Parser.java:97)
-	at CLI.execute(CLI.java:71)
-	at CLI.mainProcess(CLI.java:61)
-	at Main.runCLI(Main.java:6)
-	at Main.testFunction(Main.java:18)
-	at TestCLI.SPFWrapper(TestCLI.java:32)
-	at TestCLI.testHarness(TestCLI.java:16)
-	at TestCLI.runTest(TestCLI.java:50)
-	at Main.main(Main.java:13)
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 

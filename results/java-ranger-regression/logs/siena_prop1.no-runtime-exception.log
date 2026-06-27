@@ -1,5 +1,4 @@
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+	at Main.main(Main.java:17)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -9,17 +8,18 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== search constraint
+depth limit reached: 21
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at SENP.encodeWithBuf(SENP.java:237)
+	at SENP.encodeWithPacket2(SENP.java:386)
+	at SENP.encodePacket(SENP.java:308)
+	at SENPDriver.mainProcess(SENPDriver.java:52)
+	at Main.main(Main.java:17)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 

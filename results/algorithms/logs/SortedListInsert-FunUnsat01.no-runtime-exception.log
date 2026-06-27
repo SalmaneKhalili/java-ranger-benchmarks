@@ -107,16 +107,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4024 msec
+Veritesting Dyn Time = 3883 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 1004
-Total Solver Time = 2687 msec
-Total Solver Parse Time = 154 msec
+Total Solver Time = 2572 msec
+Total Solver Parse Time = 157 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 371 msec
+Total Solver Clean up Time = 345 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -146,7 +146,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4024,0,4024,0,1004,2687,154,371,0,4,0,0,0,0,4,0,4,0,1020,0,0,0,0,1020,0,0,-1,-1,0.0,0,0,0
+3883,0,3883,0,1004,2572,157,345,0,4,0,0,0,0,4,0,4,0,1020,0,0,0,0,1020,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
@@ -187,7 +187,7 @@ error #35: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #36: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:7..."
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:03
 states:             new=537,visited=0,backtracked=537,end=72
 search:             maxDepth=13,constraints=196
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=268
@@ -196,4 +196,4 @@ instructions:       17227
 max memory:         240MB
 loaded code:        classes=91,methods=1974
 
-====================================================== search finished: 6/27/26 10:33 AM
+====================================================== search finished: 6/27/26 11:54 AM

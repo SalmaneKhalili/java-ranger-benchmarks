@@ -1,48 +1,8 @@
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 156
 
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
 	at Main$List.insert(Main.java:56)
-	at Main$List.insert(Main.java:57)
-	at Main$List.insert(Main.java:57)
-	at Main$List.insert(Main.java:57)
 	at Main$List.insert(Main.java:57)
 	at Main$List.insert(Main.java:57)
 	at Main$List.insert(Main.java:57)
@@ -156,6 +116,46 @@ depth limit reached: 156
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
 	at Main.main(Main.java:70)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 

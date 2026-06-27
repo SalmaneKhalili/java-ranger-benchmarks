@@ -1,8 +1,8 @@
      Total: 103
-   Correct: 26
- Incorrect: 29
-   Unknown: 48
+   Correct: 32
+ Incorrect: 24
+   Unknown: 47
 Compile_err: 0
    Timeout: 0
 
-Score: 26 / 103
+Score: 32 / 103

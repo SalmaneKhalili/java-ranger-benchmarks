@@ -12,13 +12,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev acbe7be40c79cab7dd1da4224ca4cbc2ef7c82ff) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:39 AM
+====================================================== search started: 6/27/26 9:57 AM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -68,7 +68,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 400 msec
+Veritesting Dyn Time = 391 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -107,7 +107,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-400,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+391,0,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -122,5 +122,5 @@ instructions:       6115
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/27/26 8:39 AM
+====================================================== search finished: 6/27/26 9:57 AM
 

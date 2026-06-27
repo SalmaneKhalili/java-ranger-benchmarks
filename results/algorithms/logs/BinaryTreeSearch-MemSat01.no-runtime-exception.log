@@ -1,5 +1,10 @@
-	at Main.main(Main.java:117)
 
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+no live threads
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -15,8 +20,16 @@ depth limit reached: 21
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at Main$BinaryTree.search(Main.java:93)
+	at Main$BinaryTree.search(Main.java:95)
 	at Main.main(Main.java:117)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -75,99 +88,6 @@ depth limit reached: 21
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at Main$BinaryTree.search(Main.java:93)
-	at Main.main(Main.java:117)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:110)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:110)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.main(Main.java:110)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
 	at Main$BinaryTree.insert(Main.java:76)
 	at Main.main(Main.java:110)
 
@@ -183,12 +103,92 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:110)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:110)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main$BinaryTree.search(Main.java:93)
+	at Main.main(Main.java:117)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
 
 ====================================================== search constraint
 depth limit reached: 21
 
 ====================================================== snapshot 
 no live threads
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null

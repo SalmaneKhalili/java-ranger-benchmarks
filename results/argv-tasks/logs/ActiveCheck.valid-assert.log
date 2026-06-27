@@ -1,4 +1,82 @@
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.start(Main.java:55)
+	at Main.main(Main.java:59)
+
 
 ====================================================== search constraint
 depth limit reached: 21
@@ -26,17 +104,7 @@ depth limit reached: 21
 ====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at Main.start(Main.java:48)
-	at Main.main(Main.java:59)
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:48)
+	at Main.start(Main.java:31)
 	at Main.main(Main.java:59)
 
 ^_^ running jitAnalysis ^_^
@@ -53,6 +121,28 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 	at Main.start(Main.java:52)
 	at Main.main(Main.java:59)
 
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.start(Main.java:31)
+	at Main.main(Main.java:59)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -72,6 +162,16 @@ classPath null
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.start(Main.java:54)
+	at Main.main(Main.java:59)
 
 
 ====================================================== search constraint
@@ -88,112 +188,12 @@ thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false
 depth limit reached: 21
 
 ====================================================== snapshot 
-no live threads
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
-	at Main.start(Main.java:55)
+	at Main.start(Main.java:54)
 	at Main.main(Main.java:59)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:48)
-	at Main.main(Main.java:59)
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:48)
-	at Main.main(Main.java:59)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:52)
-	at Main.main(Main.java:59)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:55)
-	at Main.main(Main.java:59)
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-no live threads
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:55)
-	at Main.main(Main.java:59)
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.start(Main.java:48)
-	at Main.main(Main.java:59)
 

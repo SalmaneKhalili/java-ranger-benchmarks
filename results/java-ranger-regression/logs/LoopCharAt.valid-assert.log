@@ -1,11 +1,17 @@
+(define-fun string0 () String  "\u{0}BB\u{0}\u{0}@B\u{0}\u{8}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}BB\u{0}\u{0}@B\u{0}\u{8}"
+*************************************
+
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}B\u{0}B")
+(define-fun string0 () String  " BB\u{100} \u{1}B\u{8601}B")
 *************************************
 Satisfiable: true
-string0 => "\u{0}B\u{0}B"
+string0 => " BB\u{100} \u{1}B\u{8601}B"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -20,20 +26,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{80}B\u{26230}B")
+(define-fun string0 () String  "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}B")
 *************************************
 Satisfiable: true
-string0 => "\u{80}B\u{26230}B"
+string0 => "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}B"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{500}B\u{634}BAC")
+(define-fun string0 () String  "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}BA")
 *************************************
 Satisfiable: true
-string0 => "\u{500}B\u{634}BAC"
+string0 => "\u{120}BB\u{0}\u{10328}\u{4}B\u{2201}BA"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -48,20 +54,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{1004}B\u{4}B\u{1003}")
+(define-fun string0 () String  "\u{c}BB\u{4}\u{0}(B\u{10008}B@")
 *************************************
 Satisfiable: true
-string0 => "\u{1004}B\u{4}B\u{1003}"
+string0 => "\u{c}BB\u{4}\u{0}(B\u{10008}B@"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{8}B""BB")
+(define-fun string0 () String  "4BB\u{0}\u{0}\u{462c}B\u{0}BB")
 *************************************
 Satisfiable: true
-string0 => "\u{8}B""BB"
+string0 => "4BB\u{0}\u{0}\u{462c}B\u{0}BB"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -76,20 +82,98 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{2400}B\u{242c0}BB")
+(define-fun string0 () String  ",BB\u{16040}\u{20460}\u{5}B\u{3141}BB")
 *************************************
 Satisfiable: true
-string0 => "\u{2400}B\u{242c0}BB"
+string0 => ",BB\u{16040}\u{20460}\u{5}B\u{3141}BB"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{2400}B\u{242c0}BBA")
+(define-fun string0 () String  ",BB\u{16040}\u{20460}\u{5}B\u{3141}BBA")
 *************************************
 Satisfiable: true
-string0 => "\u{2400}B\u{242c0}BBA"
+string0 => ",BB\u{16040}\u{20460}\u{5}B\u{3141}BBA"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}")
+*************************************
+Satisfiable: true
+string0 => "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}A")
+*************************************
+Satisfiable: true
+string0 => "\u{4}BB\u{11020}\u{0}\u{3186}B!B\u{10}A"
+*************************************
+
+
+====================================================== search constraint
+depth limit reached: 21
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:17)
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}")
+*************************************
+Satisfiable: true
+string0 => "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}A")
+*************************************
+Satisfiable: true
+string0 => "\u{20c0}BB0\u{0}\u{1161c}B\u{22a01}\u{2748c}A"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -104,94 +188,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}B\u{20000}BB\u{10432}")
+(define-fun string0 () String  "\u{4}BB\u{200}\u{10}\u{c70c}B\u{4020}\u{c09}\u{2}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}B\u{20000}BB\u{10432}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{2000}B\u{4}BBB")
-*************************************
-Satisfiable: true
-string0 => "\u{2000}B\u{4}BBB"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}B BBB")
-*************************************
-Satisfiable: true
-string0 => "\u{0}B BBB"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}B BBBA")
-*************************************
-Satisfiable: true
-string0 => "\u{0}B BBBA"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}B\u{0}BBB\u{1}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}B\u{0}BBB\u{1}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{4}B\u{0}BBBB")
-*************************************
-Satisfiable: true
-string0 => "\u{4}B\u{0}BBBB"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{4}B\u{0}BBBB")
-*************************************
-Satisfiable: true
-string0 => "\u{4}B\u{0}BBBB"
+string0 => "\u{4}BB\u{200}\u{10}\u{c70c}B\u{4020}\u{c09}\u{2}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

@@ -1,8 +1,8 @@
      Total: 80
-   Correct: 28
- Incorrect: 10
-   Unknown: 42
+   Correct: 31
+ Incorrect: 9
+   Unknown: 40
 Compile_err: 0
    Timeout: 0
 
-Score: 28 / 80
+Score: 31 / 80

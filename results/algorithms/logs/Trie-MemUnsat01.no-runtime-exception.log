@@ -12,13 +12,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev acbe7be40c79cab7dd1da4224ca4cbc2ef7c82ff) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 10:46 AM
+====================================================== search started: 6/27/26 12:07 PM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -89,13 +89,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 406 msec
+Veritesting Dyn Time = 416 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 4
-Total Solver Time = 36 msec
+Total Solver Time = 33 msec
 Total Solver Parse Time = 6 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -128,7 +128,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-406,0,406,0,4,36,6,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+416,0,416,0,4,33,6,0,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -144,5 +144,5 @@ instructions:       6937
 max memory:         240MB
 loaded code:        classes=94,methods=1905
 
-====================================================== search finished: 6/27/26 10:46 AM
+====================================================== search finished: 6/27/26 12:07 PM
 

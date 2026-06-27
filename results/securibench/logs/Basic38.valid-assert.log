@@ -1,7 +1,7 @@
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{0}\u{9}\u{2}")
+(define-fun string0 () String  "\u{1}\u{1ff7f}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{0}\u{9}\u{2}"
+string0 => "\u{1}\u{1ff7f}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -12,24 +12,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{0}\u{9}\u{2}")
+(define-fun string0 () String  "\u{1}\u{1ff7f}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{0}\u{9}\u{2}"
-*************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{0}\u{9}\u{2}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{0}\u{9}\u{2}"
+string0 => "\u{1}\u{1ff7f}\u{9}\u{0}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -51,20 +37,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{27fff}\u{0}\u{9}\u{9}")
+(define-fun string0 () String  "\u{0}\u{1feff}\u{9}\u{9}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{27fff}\u{0}\u{9}\u{9}"
+string0 => "\u{0}\u{1feff}\u{9}\u{9}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{27fff}\u{0}\u{9}\u{9}A")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}A")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{27fff}\u{0}\u{9}\u{9}A"
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}A"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -79,20 +65,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{ffff}\u{4}\u{9}\u{9}\u{1fbcd}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{ffff}\u{4}\u{9}\u{9}\u{1fbcd}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1e170}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fdff}\u{4}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{4}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1fdff}\u{4}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{4}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -107,20 +93,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{0}\u{9}\u{9}\u{9}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{9}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{0}\u{9}\u{9}\u{9}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{9}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -135,10 +121,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -149,10 +135,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -163,10 +149,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -177,10 +163,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -191,9 +177,23 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}")
+(define-fun string0 () String  "\u{0}\u{17fff}\u{9}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1b7ff}\u{0}\u{9}\u{9}\u{0}"
+string0 => "\u{0}\u{17fff}\u{9}\u{9}\u{0}"
 *************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 

@@ -1,5 +1,126 @@
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.addition(Main.java:18)
+	at Main.main(Main.java:33)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -9,191 +130,70 @@ classPath null
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== VeritestingListener report:
+Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Exception Statistics *****************
+Static Analysis exceptions count = 0
+Instantiation Time exceptions count = 0
+Unknown phases exception count = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Time Decomposition Statistics *****************
+static analysis time = 0 msec
+Veritesting Dyn Time = 285381 msec
+Veritesting fix-point Time = 0 msec
+GoTo rewrite instances = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Solver Statistics *****************
+Total Solver Queries Count = 916
+Total Solver Time = 280786 msec
+Total Solver Parse Time = 11620 msec
+Region Summary Parse Time = 0 msec
+Total Solver Clean up Time = 15426 msec
+PCSatSolverCount = 0
+PCSatSolverTime = 0 msec
+Constant Propagation Time for PC sat. checks = 0
+Array SPF Case count = 0
+If-removed count = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Region Statistics *****************
+Number of Distinct Veritested Regions = 0
+Number of Distinct Un-Veritested Symbolic Regions = 7
+Number of Distinct Failed Regions for Field Reference = 0
+Number of Distinct Failed Regions for SPFCases = 0
+Number of Distinct Failed Regions for missing method summaries = 0
+Number of Distinct Failed Regions for Other Reasons = 7
+Number of High Order Regions Used = 0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+/************************ Printing Instantiation Statistics *****************
+Number of successful instantiations = 0
+Total Number of unsuccessful instantiations = 768
+Number of failed instantiations due to Field Reference = 0
+Number of failed instantiations due to SPFCases = 0
+Number of failed instantiations due to missing method summaries = 0
+Number of failed instantiations due to Other Reasons = 768
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+Number of Veritested Regions Instances = 0
+Printing keys of regions that were instantiated at least once
+Finished printing keys of regions that were instantiated at least once
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+Metrics Vector:
+285381,0,285381,0,916,280786,11620,15426,0,7,0,0,0,0,7,0,7,0,768,0,0,0,0,768,0,0,-1,-1,0.0,0,0,0
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== results
+no errors detected
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
+====================================================== statistics
+elapsed time:       00:04:45
+states:             new=311,visited=0,backtracked=311,end=155
+search:             maxDepth=156,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=155
+heap:               new=464,released=1407,maxLive=452,gcCycles=157
+instructions:       21184
+max memory:         1109MB
+loaded code:        classes=85,methods=1831
 
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
+====================================================== search finished: 6/27/26 10:05 AM

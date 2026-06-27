@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>float_unboundedloop — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>float_unboundedloop</h1>
+  <p>JR: experimentalnan@acbe7be | Date: 2026-06-27 10:10:36 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=ab322d2917418fc9fba04e615e814f0737ffbf5d">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=ab322d2917418fc9fba04e615e814f0737ffbf5d">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13,21,156 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">60</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">56<span class="pct">(93.3%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">0</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">4</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>Adjustable-Inner-Count-Halving.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>3.728395</td><td></td></tr>
+<tr><td>Adjustable-Inner-Count-Halving.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>6.506486</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:3...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:3...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:3...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:3...&quot; | error #2: g</span></td></tr>
+<tr><td>Alternating-Step-Schedule.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.605695</td><td></td></tr>
+<tr><td>Alternating-Step-Schedule.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.577642</td><td></td></tr>
+<tr><td>Batch-Conveyor-Counter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.811623</td><td></td></tr>
+<tr><td>Batch-Conveyor-Counter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.857024</td><td></td></tr>
+<tr><td>Bounded-Proportional-Update.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.846196</td><td></td></tr>
+<tr><td>Bounded-Proportional-Update.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.720197</td><td></td></tr>
+<tr><td>Bounded-Reset-Linear-Growth.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.316970</td><td></td></tr>
+<tr><td>Bounded-Reset-Linear-Growth.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.529201</td><td></td></tr>
+<tr><td>Clamped-Triangular-Drift.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.989858</td><td></td></tr>
+<tr><td>Clamped-Triangular-Drift.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.755831</td><td></td></tr>
+<tr><td>Cyclic-Preset-Inner-ABC.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.567851</td><td></td></tr>
+<tr><td>Cyclic-Preset-Inner-ABC.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.429702</td><td></td></tr>
+<tr><td>Fixed-Block-Accumulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.640994</td><td></td></tr>
+<tr><td>Fixed-Block-Accumulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.624181</td><td></td></tr>
+<tr><td>Hysteresis-On-Off-with-Deadband.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.722234</td><td></td></tr>
+<tr><td>Hysteresis-On-Off-with-Deadband.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.701863</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:47) |  at Main.main(Main.java:47) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>Inner-Retry-Until-OK.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.847002</td><td></td></tr>
+<tr><td>Inner-Retry-Until-OK.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.885715</td><td></td></tr>
+<tr><td>Leak-and-Refill.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.756802</td><td></td></tr>
+<tr><td>Leak-and-Refill.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>4.269872</td><td></td></tr>
+<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.799459</td><td></td></tr>
+<tr><td>Mixed-Phase-AddHalve-with-Slack-Box.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.813242</td><td></td></tr>
+<tr><td>Nested-Drain-Then-Step.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.608908</td><td></td></tr>
+<tr><td>Nested-Drain-Then-Step.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.728169</td><td></td></tr>
+<tr><td>Nested-MinStep-Regulator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.958329</td><td></td></tr>
+<tr><td>Nested-MinStep-Regulator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.810990</td><td></td></tr>
+<tr><td>Nested-PingPong-with-Caps.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.767030</td><td></td></tr>
+<tr><td>Nested-PingPong-with-Caps.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.556476</td><td></td></tr>
+<tr><td>Nested-Saturation-Then-Reset.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.871429</td><td></td></tr>
+<tr><td>Nested-Saturation-Then-Reset.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.531250</td><td></td></tr>
+<tr><td>Nested-Windowed-Add-Remove.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.612871</td><td></td></tr>
+<tr><td>Nested-Windowed-Add-Remove.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.580305</td><td></td></tr>
+<tr><td>Producer-Consumer-Level.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.013474</td><td></td></tr>
+<tr><td>Producer-Consumer-Level.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.851443</td><td></td></tr>
+<tr><td>Ramp-and-Hold.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.585720</td><td></td></tr>
+<tr><td>Ramp-and-Hold.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.779037</td><td></td></tr>
+<tr><td>Safe-Accumulator-with-Bounded-Noise.valid-assert</td><td>true</td><td class="status-unknown">unknown</td><td>300.022907</td><td><span class="error-text" title="!!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null | ^_^ running jitAnalysis ^_^ | !!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null">!!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null | ^_^ running jitAnalysis ^_^ | !!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null</span></td></tr>
+<tr><td>Safe-Accumulator-with-Bounded-Noise.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.020753</td><td><span class="error-text" title="!!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null | ^_^ running jitAnalysis ^_^ | !!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null">!!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null | ^_^ running jitAnalysis ^_^ | !!!!!!!! Aborting Veritesting !!!!!!!!!!!! | classPath null</span></td></tr>
+<tr><td>Saturating-Integrator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.779758</td><td></td></tr>
+<tr><td>Saturating-Integrator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.616651</td><td></td></tr>
+<tr><td>Slew-Rate-Limiter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.774747</td><td></td></tr>
+<tr><td>Slew-Rate-Limiter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.853618</td><td></td></tr>
+<tr><td>Switched-Linear-Plant.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.217699</td><td></td></tr>
+<tr><td>Switched-Linear-Plant.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.805502</td><td></td></tr>
+<tr><td>Two-Band-Piecewise-Linear-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.791296</td><td></td></tr>
+<tr><td>Two-Band-Piecewise-Linear-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.814379</td><td></td></tr>
+<tr><td>Two-Counter-Lexicographic-Small.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.834531</td><td></td></tr>
+<tr><td>Two-Counter-Lexicographic-Small.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.835307</td><td></td></tr>
+<tr><td>Two-Level-Nested-Scheduler.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.316062</td><td></td></tr>
+<tr><td>Two-Level-Nested-Scheduler.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.555039</td><td></td></tr>
+<tr><td>Two-State-FP-Oscillator.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.937796</td><td></td></tr>
+<tr><td>Two-State-FP-Oscillator.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.826893</td><td></td></tr>
+<tr><td>Two-Var-Nested-Handshake.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.483838</td><td></td></tr>
+<tr><td>Two-Var-Nested-Handshake.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.556450</td><td></td></tr>
+<tr><td>Two-Variable_Averaging_Filter.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.839477</td><td></td></tr>
+<tr><td>Two-Variable_Averaging_Filter.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.571258</td><td></td></tr>
+<tr><td>Unbounded-Outer-Inner-Safety-Gate.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.571332</td><td></td></tr>
+<tr><td>Unbounded-Outer-Inner-Safety-Gate.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.641554</td><td></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

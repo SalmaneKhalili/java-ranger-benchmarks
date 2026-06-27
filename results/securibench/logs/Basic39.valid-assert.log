@@ -1,21 +1,4 @@
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{9}\u{9}\u{1e17e}\u{0}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{9}\u{9}\u{1e17e}\u{0}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1fbff}\u{9}\u{9}\u{1e17e}\u{0}A")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1fbff}\u{9}\u{9}\u{1e17e}\u{0}A"
+string0 => "\u{0}\u{1ffff}\u{9}\u{4}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
@@ -30,62 +13,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{16f5e}\u{6}\u{5006}")
+(define-fun string0 () String  "\u{0}\u{1fdff}\u{9}\u{9}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{16f5e}\u{6}\u{5006}"
+string0 => "\u{0}\u{1fdff}\u{9}\u{9}"
 *************************************
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{16f5e}\u{0}\u{2}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{16f5e}\u{0}\u{2}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
 *************************************
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1fd6b}\u{8}\u{7}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1fd6b}\u{8}\u{7}"
-*************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1ffff}\u{2}\u{9}")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1ffff}\u{2}\u{9}"
-*************************************
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.util.StringTokenizer.scanToken(StringTokenizer.java:275)
-	at java.util.StringTokenizer.nextToken(StringTokenizer.java:351)
-	at java.util.StringTokenizer.nextElement(StringTokenizer.java:407)
-	at securibench.micro.basic.Basic39.doGet(Basic39.java:32)
-	at Main.main(Main.java:23)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -99,34 +41,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{17b5f}\u{0}\u{48a0}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{17b5f}\u{0}\u{48a0}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
 *************************************
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{1d6bf}\u{8}\u{2643b}A")
-*************************************
-Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{1d6bf}\u{8}\u{2643b}A"
-*************************************
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at java.util.StringTokenizer.scanToken(StringTokenizer.java:272)
-	at java.util.StringTokenizer.nextToken(StringTokenizer.java:351)
-	at java.util.StringTokenizer.nextElement(StringTokenizer.java:407)
-	at securibench.micro.basic.Basic39.doGet(Basic39.java:32)
-	at Main.main(Main.java:23)
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -136,59 +55,140 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{2e13e}\u{5}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{2e13e}\u{5}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
-
-
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
-	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
-	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:27)
-	at securibench.micro.basic.Basic39.doGet(Basic39.java:32)
-	at Main.main(Main.java:23)
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
 Returned solutions: 
-(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{9}\u{2e13e}\u{5}")
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
 *************************************
 Satisfiable: true
-string0 => "\u{0}\u{1ffff}\u{9}\u{9}\u{2e13e}\u{5}"
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
 *************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
 
-====================================================== search constraint
-depth limit reached: 21
-
-====================================================== snapshot 
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:37)
-	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
-	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:27)
-	at securibench.micro.basic.Basic39.doGet(Basic39.java:32)
-	at Main.main(Main.java:23)
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
+*************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+*************************************
+Satisfiable: false
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffef}\u{9}\u{4}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffef}\u{9}\u{4}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1ffff}\u{9}\u{0}AB")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1ffff}\u{9}\u{0}AB"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{4}\u{1fbff}\u{9}\u{4}\u{15bbe}")
+*************************************
+Satisfiable: true
+string0 => "\u{4}\u{1fbff}\u{9}\u{4}\u{15bbe}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{8}\u{1faff}\u{9}\u{4}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{8}\u{1faff}\u{9}\u{4}\u{0}"
+*************************************
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1efff}\u{9}\u{0}\u{0}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1efff}\u{9}\u{0}\u{0}"
+*************************************
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Calling Z3str3
+
+Returned solutions: 
+(define-fun string0 () String  "\u{0}\u{1fdff}\u{9}\u{0}\u{9}")
+*************************************
+Satisfiable: true
+string0 => "\u{0}\u{1fdff}\u{9}\u{0}\u{9}"
+*************************************
 
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 

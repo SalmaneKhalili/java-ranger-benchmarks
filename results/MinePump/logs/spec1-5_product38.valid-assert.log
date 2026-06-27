@@ -12,13 +12,13 @@ symbolic.min_double=-10000.0
 symbolic.max_double=10000.0
 * running veritesting with SPFCases and Early Returns.
 search depth = 13
-JavaPathfinder core system v8.0 (rev 9a662f9b2ea17bf559466827ca64a543ace59730) - (C) 2005-2014 United States Government. All rights reserved.
+JavaPathfinder core system v8.0 (rev acbe7be40c79cab7dd1da4224ca4cbc2ef7c82ff) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:43 AM
+====================================================== search started: 6/27/26 10:00 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -102,14 +102,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 443 msec
+Veritesting Dyn Time = 438 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 11
-Total Solver Time = 41 msec
-Total Solver Parse Time = 10 msec
+Total Solver Time = 39 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -141,7 +141,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-443,0,443,0,11,41,10,0,0,5,0,0,0,0,5,0,5,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
+438,0,438,0,11,39,9,0,0,5,0,0,0,0,5,0,5,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
@@ -156,5 +156,5 @@ instructions:       6503
 max memory:         240MB
 loaded code:        classes=94,methods=1916
 
-====================================================== search finished: 6/27/26 8:43 AM
+====================================================== search finished: 6/27/26 10:00 AM
 

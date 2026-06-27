@@ -141,13 +141,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 496 msec
+Veritesting Dyn Time = 493 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 8
-Total Solver Time = 34 msec
+Total Solver Time = 33 msec
 Total Solver Parse Time = 7 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -180,7 +180,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-496,0,496,0,8,34,7,0,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
+493,0,493,0,8,33,7,0,0,2,0,0,0,0,2,0,2,0,5,0,0,0,0,5,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -196,4 +196,4 @@ instructions:       6850
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/27/26 9:13 AM
+====================================================== search finished: 6/27/26 10:31 AM
