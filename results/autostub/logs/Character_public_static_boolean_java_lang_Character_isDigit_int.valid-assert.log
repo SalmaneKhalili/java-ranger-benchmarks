@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:13 PM
+====================================================== search started: 6/28/26 4:03 AM
 the depth of violation is2
 
 ====================================================== error 1
@@ -44,7 +44,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 264 msec
+Veritesting Dyn Time = 248 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -83,7 +83,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-264,0,264,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+248,0,248,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.NullPointerException: Calling 'intValue(..."
@@ -98,5 +98,5 @@ instructions:       6057
 max memory:         240MB
 loaded code:        classes=89,methods=1860
 
-====================================================== search finished: 6/27/26 8:13 PM
+====================================================== search finished: 6/28/26 4:03 AM
 

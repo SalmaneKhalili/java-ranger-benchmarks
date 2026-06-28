@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:18 PM
+====================================================== search started: 6/28/26 4:08 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -45,16 +45,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4830 msec
+Veritesting Dyn Time = 5503 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 10
-Total Solver Time = 4548 msec
-Total Solver Parse Time = 13 msec
+Total Solver Time = 5220 msec
+Total Solver Parse Time = 11 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 176 msec
+Total Solver Clean up Time = 190 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -84,13 +84,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4830,0,4830,0,10,4548,13,176,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+5503,0,5503,0,10,5220,11,190,0,1,0,0,0,0,1,0,1,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:05
 states:             new=5,visited=0,backtracked=5,end=2
 search:             maxDepth=3,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=3
@@ -99,5 +99,5 @@ instructions:       6099
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/27/26 8:18 PM
+====================================================== search finished: 6/28/26 4:08 AM
 

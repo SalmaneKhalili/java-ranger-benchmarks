@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>java-ranger-regression — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>java-ranger-regression</h1>
+  <p>JR: experimentalnan@f7f74d0 | Date: 2026-06-28 06:37:42 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=b2208c2f40419a5507f306d1625b8cd55a9ec2da">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=b2208c2f40419a5507f306d1625b8cd55a9ec2da">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13,21,156 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">81</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">70<span class="pct">(86.4%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">2</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">9</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>LoopCharAt.valid-assert</td><td>false</td><td class="status-incorrect">incorrect</td><td>300.012477</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>TCAS_prop1.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>2.401588</td><td></td></tr>
+<tr><td>TCAS_prop1.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>12.368114</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.mainProcess(Main...&quot; | error #2: g</span></td></tr>
+<tr><td>TCAS_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>9.866325</td><td></td></tr>
+<tr><td>TCAS_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>10.080771</td><td></td></tr>
+<tr><td>TCAS_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>9.843180</td><td></td></tr>
+<tr><td>TCAS_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>9.760285</td><td></td></tr>
+<tr><td>WBS_prop1.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.686029</td><td></td></tr>
+<tr><td>WBS_prop1.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>5.221554</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+<tr><td>WBS_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>3.394082</td><td></td></tr>
+<tr><td>WBS_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>3.395879</td><td></td></tr>
+<tr><td>WBS_prop3.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.683309</td><td></td></tr>
+<tr><td>WBS_prop3.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>4.940410</td><td><span class="error-text" title="/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #3: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #4: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at ">/************************ Printing Exception Statistics ***************** | error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty &quot;java.lang.AssertionError  at Main.main(Main.java:1...&quot; | error #2: g</span></td></tr>
+<tr><td>WBS_prop4.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>3.267363</td><td></td></tr>
+<tr><td>WBS_prop4.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.063111</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>Alarm_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.024608</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.025579</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop10.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.023060</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop10.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.023700</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.023695</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.025446</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.024965</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.026780</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop4.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.024816</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop4.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.025759</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop5.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.025627</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop5.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.025597</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop6.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.025740</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop6.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.023615</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop8.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.022553</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop8.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.024709</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop9.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.023113</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>Alarm_prop9.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.025144</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>apachecli_eqchk.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.065679</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>apachecli_eqchk.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.065732</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>Infusion_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.750486</td><td></td></tr>
+<tr><td>Infusion_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.787811</td><td></td></tr>
+<tr><td>Infusion_prop10.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.784666</td><td></td></tr>
+<tr><td>Infusion_prop10.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.788802</td><td></td></tr>
+<tr><td>Infusion_prop11.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.796731</td><td></td></tr>
+<tr><td>Infusion_prop11.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.800550</td><td></td></tr>
+<tr><td>Infusion_prop12.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.772789</td><td></td></tr>
+<tr><td>Infusion_prop12.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.797484</td><td></td></tr>
+<tr><td>Infusion_prop13.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.799264</td><td></td></tr>
+<tr><td>Infusion_prop13.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.787735</td><td></td></tr>
+<tr><td>Infusion_prop2.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.761379</td><td></td></tr>
+<tr><td>Infusion_prop2.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.795900</td><td></td></tr>
+<tr><td>Infusion_prop3.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.765848</td><td></td></tr>
+<tr><td>Infusion_prop3.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.778294</td><td></td></tr>
+<tr><td>Infusion_prop4.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.768198</td><td></td></tr>
+<tr><td>Infusion_prop4.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.777494</td><td></td></tr>
+<tr><td>Infusion_prop5.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.798391</td><td></td></tr>
+<tr><td>Infusion_prop5.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.793863</td><td></td></tr>
+<tr><td>Infusion_prop6.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.776044</td><td></td></tr>
+<tr><td>Infusion_prop6.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.769068</td><td></td></tr>
+<tr><td>Infusion_prop7.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.774403</td><td></td></tr>
+<tr><td>Infusion_prop7.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.775477</td><td></td></tr>
+<tr><td>Infusion_prop8.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.757686</td><td></td></tr>
+<tr><td>Infusion_prop8.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.767345</td><td></td></tr>
+<tr><td>Infusion_prop9.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.788326</td><td></td></tr>
+<tr><td>Infusion_prop9.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.789222</td><td></td></tr>
+<tr><td>nanoxml_prop1.valid-assert</td><td>true</td><td class="status-unknown">unknown</td><td>0.714566</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOException: IntReader EOF">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOE</span></td></tr>
+<tr><td>nanoxml_prop1.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.749120</td><td></td></tr>
+<tr><td>nanoxml_prop2.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.695935</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOException: IntReader EOF">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOE</span></td></tr>
+<tr><td>nanoxml_prop2.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.689023</td><td></td></tr>
+<tr><td>nanoxml_prop3.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.753696</td><td><span class="error-text" title="java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOException: IntReader EOF">java.io.IOException: IntReader EOF |  at IntReader.read(IntReader.java:23) |  at java.io.FilterReader.read(FilterReader.java:65) |  at java.io.PushbackReader.read(PushbackReader.java:90) | java.io.IOE</span></td></tr>
+<tr><td>nanoxml_prop3.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.692732</td><td></td></tr>
+<tr><td>printtokens_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.038451</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>printtokens_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.034651</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>printtokens_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.677779</td><td></td></tr>
+<tr><td>printtokens_prop2.no-runtime-exception</td><td>true</td><td class="status-incorrect">incorrect</td><td>0.727693</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.checkEquality(Main.java:27) |  at Main.main(Main.java:20) | [SEVERE] JPF exception, terminating: exception during propertyViolated() notification">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.checkEquality(Main.java:27) |  at Main.main(Main.java:20) | [SEVERE] JPF exception, terminating: exception during pro</span></td></tr>
+<tr><td>replace5_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>63.072093</td><td></td></tr>
+<tr><td>replace5_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>87.336359</td><td></td></tr>
+<tr><td>replace5_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.694068</td><td></td></tr>
+<tr><td>replace5_prop2.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.081705</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>schedule_eqchk.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>4.044166</td><td></td></tr>
+<tr><td>schedule_eqchk.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>4.185449</td><td></td></tr>
+<tr><td>siena_prop1.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.046154</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>siena_prop1.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.053184</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>siena_prop2.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>2.094713</td><td></td></tr>
+<tr><td>siena_prop2.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.062914</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

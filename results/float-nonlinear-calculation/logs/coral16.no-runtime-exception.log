@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:53 PM
+====================================================== search started: 6/28/26 4:42 AM
 
 java.lang.RuntimeException: ## Error: Math.tan not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.tan(ProblemGeneral.java:161)

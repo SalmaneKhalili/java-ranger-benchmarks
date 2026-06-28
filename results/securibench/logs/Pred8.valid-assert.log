@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:52 PM
+====================================================== search started: 6/28/26 4:42 AM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -101,7 +101,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 464 msec
+Veritesting Dyn Time = 467 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -140,7 +140,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-464,0,464,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
+467,0,467,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -155,5 +155,5 @@ instructions:       6485
 max memory:         240MB
 loaded code:        classes=107,methods=2033
 
-====================================================== search finished: 6/27/26 8:52 PM
+====================================================== search finished: 6/28/26 4:43 AM
 

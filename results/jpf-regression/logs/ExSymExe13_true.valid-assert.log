@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:13 PM
+====================================================== search started: 6/28/26 4:03 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -68,16 +68,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 319 msec
+Veritesting Dyn Time = 349 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 8
-Total Solver Time = 48 msec
-Total Solver Parse Time = 8 msec
+Total Solver Time = 66 msec
+Total Solver Parse Time = 11 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 0 msec
+Total Solver Clean up Time = 1 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -107,7 +107,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-319,0,319,0,8,48,8,0,0,3,0,0,0,0,3,0,3,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
+349,0,349,0,8,66,11,1,0,3,0,0,0,0,3,0,3,0,8,0,0,0,0,8,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -122,5 +122,5 @@ instructions:       6105
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/27/26 8:13 PM
+====================================================== search finished: 6/28/26 4:03 AM
 

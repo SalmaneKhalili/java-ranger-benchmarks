@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:17 PM
+====================================================== search started: 6/28/26 4:07 AM
 x >0
 x >0
 
@@ -33,16 +33,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 4743 msec
+Veritesting Dyn Time = 5452 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 17
-Total Solver Time = 4470 msec
-Total Solver Parse Time = 14 msec
+Total Solver Time = 5169 msec
+Total Solver Parse Time = 15 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 88 msec
+Total Solver Clean up Time = 105 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -72,13 +72,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-4743,0,4743,0,17,4470,14,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+5452,0,5452,0,17,5169,15,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:04
+elapsed time:       00:00:05
 states:             new=12,visited=0,backtracked=12,end=3
 search:             maxDepth=4,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
@@ -87,5 +87,5 @@ instructions:       6117
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 6/27/26 8:17 PM
+====================================================== search finished: 6/28/26 4:07 AM
 

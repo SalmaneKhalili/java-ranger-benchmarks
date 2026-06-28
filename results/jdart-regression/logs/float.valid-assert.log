@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/27/26 8:22 PM
+====================================================== search started: 6/28/26 4:10 AM
 the depth of violation is3
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -52,16 +52,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 2839 msec
+Veritesting Dyn Time = 2279 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 7
-Total Solver Time = 2387 msec
-Total Solver Parse Time = 11 msec
+Total Solver Time = 1929 msec
+Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 42 msec
+Total Solver Clean up Time = 38 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -91,7 +91,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-2839,0,2839,0,7,2387,11,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+2279,0,2279,0,7,1929,8,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -106,5 +106,5 @@ instructions:       6101
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/27/26 8:22 PM
+====================================================== search finished: 6/28/26 4:10 AM
 
