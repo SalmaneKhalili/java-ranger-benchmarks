@@ -86,16 +86,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 151384 msec
+Veritesting Dyn Time = 142742 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 7483
-Total Solver Time = 146862 msec
-Total Solver Parse Time = 7943 msec
+Total Solver Time = 138981 msec
+Total Solver Parse Time = 6544 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 15553 msec
+Total Solver Clean up Time = 13709 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -125,7 +125,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-151384,0,151384,0,7483,146862,7943,15553,0,3,0,0,0,0,3,0,3,0,3849,0,0,0,0,3849,0,0,-1,-1,0.0,0,0,0
+142742,0,142742,0,7483,138981,6544,13709,0,3,0,0,0,0,3,0,3,0,3849,0,0,0,0,3849,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -187,13 +187,13 @@ error #56: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #57: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
 
 ====================================================== statistics
-elapsed time:       00:02:31
+elapsed time:       00:02:22
 states:             new=137,visited=0,backtracked=137,end=1
 search:             maxDepth=13,constraints=22
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=68
 heap:               new=1372,released=17,maxLive=452,gcCycles=57
 instructions:       37563
-max memory:         1088MB
+max memory:         298MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/28/26 6:54 AM
+====================================================== search finished: 6/29/26 7:01 AM

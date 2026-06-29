@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/28/26 4:14 AM
+====================================================== search started: 6/29/26 4:21 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -71,16 +71,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 69030 msec
+Veritesting Dyn Time = 82875 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 34
-Total Solver Time = 68749 msec
-Total Solver Parse Time = 28 msec
+Total Solver Time = 82583 msec
+Total Solver Parse Time = 31 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 488 msec
+Total Solver Clean up Time = 576 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -110,13 +110,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-69030,0,69030,0,34,68749,28,488,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
+82875,0,82875,0,34,82583,31,576,0,6,0,0,0,0,6,0,6,0,10,0,0,0,0,10,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:01:09
+elapsed time:       00:01:22
 states:             new=18,visited=0,backtracked=18,end=3
 search:             maxDepth=12,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=11
@@ -125,5 +125,5 @@ instructions:       6141
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/28/26 4:15 AM
+====================================================== search finished: 6/29/26 4:23 AM
 

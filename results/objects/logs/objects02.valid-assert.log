@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/28/26 4:02 AM
+====================================================== search started: 6/29/26 4:09 AM
 the depth of violation is1
 
 ====================================================== error 1
@@ -44,7 +44,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 260 msec
+Veritesting Dyn Time = 231 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -83,7 +83,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-260,0,260,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+231,0,231,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.ClassNotFoundException: class not found:..."
@@ -98,5 +98,5 @@ instructions:       5982
 max memory:         240MB
 loaded code:        classes=89,methods=1668
 
-====================================================== search finished: 6/28/26 4:02 AM
+====================================================== search finished: 6/29/26 4:09 AM
 

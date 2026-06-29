@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jpf-regression — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>jpf-regression</h1>
+  <p>JR: experimentalnan@f7f74d0 | Date: 2026-06-29 04:16:05 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=afc89b1e749ef1d70e0dd991c4b12afacf475aa3">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=afc89b1e749ef1d70e0dd991c4b12afacf475aa3">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13,21,156 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">208</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">153<span class="pct">(73.6%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">3</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">52</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>ExDarko_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.633072</td><td></td></tr>
+<tr><td>ExDarko_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.684357</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.boxed(Main.java:46) |  at Main.main(Main.java:33) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.boxed(Main.java:46) |  at Main.main(Main.java:33) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExDarko_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.530662</td><td></td></tr>
+<tr><td>ExDarko_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.731087</td><td></td></tr>
+<tr><td>ExException_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.637042</td><td></td></tr>
+<tr><td>ExException_false.no-runtime-exception</td><td>false</td><td class="status-correct">correct</td><td>0.650126</td><td></td></tr>
+<tr><td>ExException_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.568567</td><td></td></tr>
+<tr><td>ExException_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.555031</td><td></td></tr>
+<tr><td>ExGenSymExe_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.480563</td><td></td></tr>
+<tr><td>ExGenSymExe_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.489718</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main$Node.swapNode(Main.java:64) |  at Main.main(Main.java:36) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main$Node.swapNode(Main.java:64) |  at Main.main(Main.java:36) | /************************ Printing Exception Statistics *</span></td></tr>
+<tr><td>ExGenSymExe_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.491083</td><td></td></tr>
+<tr><td>ExGenSymExe_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.500063</td><td></td></tr>
+<tr><td>ExLazy_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.637816</td><td></td></tr>
+<tr><td>ExLazy_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.628253</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:36) |  at Main.main(Main.java:41) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:36) |  at Main.main(Main.java:41) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExLazy_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.549033</td><td></td></tr>
+<tr><td>ExLazy_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.554703</td><td></td></tr>
+<tr><td>ExMIT_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.624810</td><td></td></tr>
+<tr><td>ExMIT_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.624570</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.foo(Main.java:36) |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.foo(Main.java:36) |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics ***********</span></td></tr>
+<tr><td>ExMIT_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.563478</td><td></td></tr>
+<tr><td>ExMIT_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.562087</td><td></td></tr>
+<tr><td>ExSymExe10_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.647227</td><td></td></tr>
+<tr><td>ExSymExe10_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.644040</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:55) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:55) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe10_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.531324</td><td></td></tr>
+<tr><td>ExSymExe10_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.544067</td><td></td></tr>
+<tr><td>ExSymExe11_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.500022</td><td></td></tr>
+<tr><td>ExSymExe11_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.492581</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe11_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.542478</td><td></td></tr>
+<tr><td>ExSymExe11_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.543038</td><td></td></tr>
+<tr><td>ExSymExe12_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.646006</td><td></td></tr>
+<tr><td>ExSymExe12_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.651900</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:58) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:58) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe12_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.567515</td><td></td></tr>
+<tr><td>ExSymExe12_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.573347</td><td></td></tr>
+<tr><td>ExSymExe13_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.649302</td><td></td></tr>
+<tr><td>ExSymExe13_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.682642</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:58) |  at Main.main(Main.java:40) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:58) |  at Main.main(Main.java:40) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe13_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.555705</td><td></td></tr>
+<tr><td>ExSymExe13_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.553573</td><td></td></tr>
+<tr><td>ExSymExe14_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.664514</td><td></td></tr>
+<tr><td>ExSymExe14_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.639048</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:40) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:40) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe14_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.539220</td><td></td></tr>
+<tr><td>ExSymExe14_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.557436</td><td></td></tr>
+<tr><td>ExSymExe15_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.637095</td><td></td></tr>
+<tr><td>ExSymExe15_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.633429</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe15_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.579130</td><td></td></tr>
+<tr><td>ExSymExe15_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.588834</td><td></td></tr>
+<tr><td>ExSymExe16_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.486249</td><td></td></tr>
+<tr><td>ExSymExe16_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.494173</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe16_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.480818</td><td></td></tr>
+<tr><td>ExSymExe16_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.485904</td><td></td></tr>
+<tr><td>ExSymExe17_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.490444</td><td></td></tr>
+<tr><td>ExSymExe17_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.494701</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe17_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.473693</td><td></td></tr>
+<tr><td>ExSymExe17_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.498669</td><td></td></tr>
+<tr><td>ExSymExe18_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.552836</td><td></td></tr>
+<tr><td>ExSymExe18_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.528310</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:55) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:55) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe18_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.486867</td><td></td></tr>
+<tr><td>ExSymExe18_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.486751</td><td></td></tr>
+<tr><td>ExSymExe19_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.639928</td><td></td></tr>
+<tr><td>ExSymExe19_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.652499</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe19_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>1.701300</td><td></td></tr>
+<tr><td>ExSymExe19_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>1.731773</td><td></td></tr>
+<tr><td>ExSymExe1_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.975484</td><td></td></tr>
+<tr><td>ExSymExe1_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>1.066434</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe1_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.500233</td><td></td></tr>
+<tr><td>ExSymExe1_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.485863</td><td></td></tr>
+<tr><td>ExSymExe20_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>10.141579</td><td></td></tr>
+<tr><td>ExSymExe20_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>10.049625</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:61) |  at Main.main(Main.java:43) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:61) |  at Main.main(Main.java:43) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe20_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.468789</td><td></td></tr>
+<tr><td>ExSymExe20_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.492303</td><td></td></tr>
+<tr><td>ExSymExe21_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>1.003394</td><td></td></tr>
+<tr><td>ExSymExe21_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>1.334581</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:38) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:54) |  at Main.main(Main.java:38) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe21_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.471059</td><td></td></tr>
+<tr><td>ExSymExe21_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.502691</td><td></td></tr>
+<tr><td>ExSymExe25_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.635120</td><td></td></tr>
+<tr><td>ExSymExe25_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.662704</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:50) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:50) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe25_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.481081</td><td></td></tr>
+<tr><td>ExSymExe25_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.469721</td><td></td></tr>
+<tr><td>ExSymExe26_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>1.157902</td><td></td></tr>
+<tr><td>ExSymExe26_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>1.163858</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:38) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe26_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.471999</td><td></td></tr>
+<tr><td>ExSymExe26_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.472110</td><td></td></tr>
+<tr><td>ExSymExe27_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.631443</td><td></td></tr>
+<tr><td>ExSymExe27_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.643294</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:47) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:47) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe27_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.468276</td><td></td></tr>
+<tr><td>ExSymExe27_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.475006</td><td></td></tr>
+<tr><td>ExSymExe28_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.641424</td><td></td></tr>
+<tr><td>ExSymExe28_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.630201</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:46) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:46) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe28_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.472081</td><td></td></tr>
+<tr><td>ExSymExe28_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.476947</td><td></td></tr>
+<tr><td>ExSymExe29_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>1.613937</td><td></td></tr>
+<tr><td>ExSymExe29_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>2.148448</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:46) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:46) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe29_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.475406</td><td></td></tr>
+<tr><td>ExSymExe29_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.494634</td><td></td></tr>
+<tr><td>ExSymExe2_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.987628</td><td></td></tr>
+<tr><td>ExSymExe2_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.978142</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe2_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.492207</td><td></td></tr>
+<tr><td>ExSymExe2_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.478390</td><td></td></tr>
+<tr><td>ExSymExe3_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.647946</td><td></td></tr>
+<tr><td>ExSymExe3_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.647275</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:49) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:49) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe3_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.478470</td><td></td></tr>
+<tr><td>ExSymExe3_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.487251</td><td></td></tr>
+<tr><td>ExSymExe4_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>1.456639</td><td></td></tr>
+<tr><td>ExSymExe4_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>1.446966</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe4_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.483810</td><td></td></tr>
+<tr><td>ExSymExe4_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.482103</td><td></td></tr>
+<tr><td>ExSymExe5_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.624202</td><td></td></tr>
+<tr><td>ExSymExe5_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.650732</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:49) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:49) |  at Main.main(Main.java:35) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExe5_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.494395</td><td></td></tr>
+<tr><td>ExSymExe5_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.474655</td><td></td></tr>
+<tr><td>ExSymExe6_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.534152</td><td></td></tr>
+<tr><td>ExSymExe6_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.559271</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:48) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:48) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe6_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.487172</td><td></td></tr>
+<tr><td>ExSymExe6_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.471847</td><td></td></tr>
+<tr><td>ExSymExe7_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.849765</td><td></td></tr>
+<tr><td>ExSymExe7_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.854783</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:51) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe7_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.686794</td><td></td></tr>
+<tr><td>ExSymExe7_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.705424</td><td></td></tr>
+<tr><td>ExSymExe8_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>1.016510</td><td></td></tr>
+<tr><td>ExSymExe8_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.998834</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:50) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:50) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe8_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.488077</td><td></td></tr>
+<tr><td>ExSymExe8_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.497791</td><td></td></tr>
+<tr><td>ExSymExe9_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.496347</td><td></td></tr>
+<tr><td>ExSymExe9_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.478532</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:52) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExe9_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.479352</td><td></td></tr>
+<tr><td>ExSymExe9_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.484768</td><td></td></tr>
+<tr><td>ExSymExeArrays_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.484459</td><td></td></tr>
+<tr><td>ExSymExeArrays_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.487265</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:44) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:44) |  at Main.main(Main.java:37) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeArrays_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.486154</td><td></td></tr>
+<tr><td>ExSymExeArrays_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.465735</td><td></td></tr>
+<tr><td>ExSymExeBool_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.493524</td><td></td></tr>
+<tr><td>ExSymExeBool_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.497007</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:44) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:44) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeBool_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.467322</td><td></td></tr>
+<tr><td>ExSymExeBool_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.478180</td><td></td></tr>
+<tr><td>ExSymExeComplexMath_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.486562</td><td></td></tr>
+<tr><td>ExSymExeComplexMath_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.497080</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test2(Main.java:46) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test2(Main.java:46) |  at Main.main(Main.java:39) | /************************ Printing Exception Statistics *********</span></td></tr>
+<tr><td>ExSymExeComplexMath_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.488705</td><td></td></tr>
+<tr><td>ExSymExeComplexMath_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.496338</td><td></td></tr>
+<tr><td>ExSymExeD2I_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.510300</td><td></td></tr>
+<tr><td>ExSymExeD2I_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.479564</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:41) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:41) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeD2I_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>5.381560</td><td></td></tr>
+<tr><td>ExSymExeD2I_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>5.158096</td><td></td></tr>
+<tr><td>ExSymExeD2L_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>9.035685</td><td></td></tr>
+<tr><td>ExSymExeD2L_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>9.029624</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:42) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:42) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeD2L_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>5.099918</td><td></td></tr>
+<tr><td>ExSymExeD2L_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>5.156266</td><td></td></tr>
+<tr><td>ExSymExeF2I_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.477142</td><td></td></tr>
+<tr><td>ExSymExeF2I_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.491762</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:41) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:41) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeF2I_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>6.294032</td><td></td></tr>
+<tr><td>ExSymExeF2I_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>6.312259</td><td></td></tr>
+<tr><td>ExSymExeF2L_false.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>2.916472</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:160) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
+<tr><td>ExSymExeF2L_false.no-runtime-exception</td><td>true</td><td class="status-incorrect">incorrect</td><td>2.871729</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:160) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslat">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.BinaryRealExpression cannot be cast to gov.nasa.jpf.sym</span></td></tr>
+<tr><td>ExSymExeF2L_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>5.835830</td><td></td></tr>
+<tr><td>ExSymExeF2L_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>5.753106</td><td></td></tr>
+<tr><td>ExSymExeFNEG_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.626121</td><td></td></tr>
+<tr><td>ExSymExeFNEG_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.665873</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:42) |  at Main.main(Main.java:34) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:42) |  at Main.main(Main.java:34) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExeFNEG_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.550504</td><td></td></tr>
+<tr><td>ExSymExeFNEG_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.582311</td><td></td></tr>
+<tr><td>ExSymExeGetStatic_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.492312</td><td></td></tr>
+<tr><td>ExSymExeGetStatic_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.487687</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at SNode.swap(Main.java:44) |  at Main.main(Main.java:32) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at SNode.swap(Main.java:44) |  at Main.main(Main.java:32) | /************************ Printing Exception Statistics *********</span></td></tr>
+<tr><td>ExSymExeGetStatic_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.482553</td><td></td></tr>
+<tr><td>ExSymExeGetStatic_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.490116</td><td></td></tr>
+<tr><td>ExSymExeI2D_false.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>1.413715</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:160) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
+<tr><td>ExSymExeI2D_false.no-runtime-exception</td><td>true</td><td class="status-incorrect">incorrect</td><td>1.401565</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numeric.IntegerExpression |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator$IntermediateConstraint.&lt;init&gt;(NumericConstraintTranslator.java:160) |  at edu.ucsb.cs.vlab.translate.smtlib.generic.NumericConstraintTranslator.lambda$createConstraint$2(NumericConstraintTranslator.java:">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.ClassCastException: gov.nasa.jpf.symbc.numeric.SymbolicReal cannot be cast to gov.nasa.jpf.symbc.numer</span></td></tr>
+<tr><td>ExSymExeI2D_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>5.873388</td><td></td></tr>
+<tr><td>ExSymExeI2D_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>5.821488</td><td></td></tr>
+<tr><td>ExSymExeI2F_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.484442</td><td></td></tr>
+<tr><td>ExSymExeI2F_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.480188</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:40) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:40) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeI2F_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.539848</td><td></td></tr>
+<tr><td>ExSymExeI2F_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.558067</td><td></td></tr>
+<tr><td>ExSymExeLCMP_false.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.628791</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.AssertionError |  at gov.nasa.jpf.symbc.witness.Edge.serializeEdge(Edge.java:94) |  at gov.nasa.jpf.symbc.witness.Edge.serializeAllEdges(Edge.java:114) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.AssertionError |  at gov.nasa.jpf.symbc.witness.Edge.serializeEdge(Edge.java:94) |  at gov.nasa.jpf.sy</span></td></tr>
+<tr><td>ExSymExeLCMP_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.656512</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.AssertionError |  at gov.nasa.jpf.symbc.witness.Edge.serializeEdge(Edge.java:94) |  at gov.nasa.jpf.symbc.witness.Edge.serializeAllEdges(Edge.java:114) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.AssertionError |  at gov.nasa.jpf.symbc.witness.Edge.serializeEdge(Edge.java:94) |  at gov.nasa.jpf.sy</span></td></tr>
+<tr><td>ExSymExeLCMP_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.544074</td><td></td></tr>
+<tr><td>ExSymExeLCMP_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.557864</td><td></td></tr>
+<tr><td>ExSymExeLongBytecodes_false.valid-assert</td><td>false</td><td class="status-unknown">unknown</td><td>0.611694</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) |  at java.lang.Integer.parseInt(Integer.java:583) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.</span></td></tr>
+<tr><td>ExSymExeLongBytecodes_false.no-runtime-exception</td><td>true</td><td class="status-incorrect">incorrect</td><td>0.629170</td><td><span class="error-text" title="[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) |  at java.lang.Integer.parseInt(Integer.java:583) | gov.nasa.jpf.JPFListenerException: exception during propertyViolated() notification">[SEVERE] JPF exception, terminating: exception during propertyViolated() notification | java.lang.NumberFormatException: For input string: &quot;-9223372036854775800&quot; |  at java.lang.NumberFormatException.</span></td></tr>
+<tr><td>ExSymExeLongBytecodes_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.566607</td><td></td></tr>
+<tr><td>ExSymExeLongBytecodes_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.576919</td><td></td></tr>
+<tr><td>ExSymExeResearch_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.655130</td><td></td></tr>
+<tr><td>ExSymExeResearch_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.666157</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:36) |  at Main.main(Main.java:36) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:36) |  at Main.main(Main.java:36) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>ExSymExeResearch_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.561037</td><td></td></tr>
+<tr><td>ExSymExeResearch_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.605535</td><td></td></tr>
+<tr><td>ExSymExeSimple_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.566511</td><td></td></tr>
+<tr><td>ExSymExeSimple_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.538615</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main$Node.test(Main.java:36) |  at Main.main(Main.java:46) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main$Node.test(Main.java:36) |  at Main.main(Main.java:46) | /************************ Printing Exception Statistics *****</span></td></tr>
+<tr><td>ExSymExeSimple_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.559672</td><td></td></tr>
+<tr><td>ExSymExeSimple_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.547328</td><td></td></tr>
+<tr><td>ExSymExeSuzette_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.651172</td><td></td></tr>
+<tr><td>ExSymExeSuzette_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.640204</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:43) |  at Main.main(Main.java:65) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:43) |  at Main.main(Main.java:65) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeSuzette_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.540120</td><td></td></tr>
+<tr><td>ExSymExeSuzette_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.543215</td><td></td></tr>
+<tr><td>ExSymExeSwitch_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.635851</td><td></td></tr>
+<tr><td>ExSymExeSwitch_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.637545</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:56) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeSwitch_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.529572</td><td></td></tr>
+<tr><td>ExSymExeSwitch_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.543737</td><td></td></tr>
+<tr><td>ExSymExeTestAssignments_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.637377</td><td></td></tr>
+<tr><td>ExSymExeTestAssignments_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.622894</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:39) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:39) |  at Main.main(Main.java:34) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeTestAssignments_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.524922</td><td></td></tr>
+<tr><td>ExSymExeTestAssignments_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.537697</td><td></td></tr>
+<tr><td>ExSymExeTestClassFields_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.630749</td><td></td></tr>
+<tr><td>ExSymExeTestClassFields_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.629064</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:40) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:40) |  at Main.main(Main.java:35) | /************************ Printing Exception Statistics **********</span></td></tr>
+<tr><td>ExSymExeTestClassFields_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.543058</td><td></td></tr>
+<tr><td>ExSymExeTestClassFields_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.569781</td><td></td></tr>
+<tr><td>ExSymExe_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.481424</td><td></td></tr>
+<tr><td>ExSymExe_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.492833</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:103) |  at Main.main(Main.java:36) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.test(Main.java:103) |  at Main.main(Main.java:36) | /************************ Printing Exception Statistics *********</span></td></tr>
+<tr><td>ExSymExe_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.482426</td><td></td></tr>
+<tr><td>ExSymExe_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.471703</td><td></td></tr>
+<tr><td>TestLazy_false.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.624663</td><td></td></tr>
+<tr><td>TestLazy_false.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>0.648174</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.f(Main.java:39) |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics *****************">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.f(Main.java:39) |  at Main.main(Main.java:31) | /************************ Printing Exception Statistics *************</span></td></tr>
+<tr><td>TestLazy_true.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.552061</td><td></td></tr>
+<tr><td>TestLazy_true.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.543261</td><td></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

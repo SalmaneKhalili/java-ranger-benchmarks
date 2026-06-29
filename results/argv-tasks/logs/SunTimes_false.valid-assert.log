@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/28/26 6:19 AM
+====================================================== search started: 6/29/26 6:23 AM
 the depth of violation is6
 
 ====================================================== error 1
@@ -46,16 +46,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 8385 msec
+Veritesting Dyn Time = 6740 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 14
-Total Solver Time = 7673 msec
-Total Solver Parse Time = 16 msec
+Total Solver Time = 6136 msec
+Total Solver Parse Time = 15 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 222 msec
+Total Solver Clean up Time = 173 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -85,13 +85,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-8385,0,8385,0,14,7673,16,222,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+6740,0,6740,0,14,6136,15,173,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
 
 ====================================================== statistics
-elapsed time:       00:00:08
+elapsed time:       00:00:06
 states:             new=6,visited=0,backtracked=0,end=0
 search:             maxDepth=6,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
@@ -100,5 +100,5 @@ instructions:       6134
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/28/26 6:19 AM
+====================================================== search finished: 6/29/26 6:23 AM
 

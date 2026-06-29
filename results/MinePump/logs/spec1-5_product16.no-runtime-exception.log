@@ -193,7 +193,7 @@ search:             maxDepth=13,constraints=416
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1199
 heap:               new=6628,released=13258,maxLive=486,gcCycles=1728
 instructions:       373659
-max memory:         442MB
+max memory:         300MB
 loaded code:        classes=94,methods=1914
 
-====================================================== search finished: 6/28/26 4:05 AM
+====================================================== search finished: 6/29/26 4:12 AM
