@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 4:09 AM
+====================================================== search started: 6/30/26 3:53 AM
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
 
@@ -86,7 +86,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 454 msec
+Veritesting Dyn Time = 448 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -125,7 +125,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-454,0,454,0,4,10,3,0,0,2,0,0,0,0,2,0,2,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
+448,0,448,0,4,10,3,0,0,2,0,0,0,0,2,0,2,0,2,0,0,0,0,2,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -140,5 +140,5 @@ instructions:       6061
 max memory:         240MB
 loaded code:        classes=85,methods=1830
 
-====================================================== search finished: 6/29/26 4:09 AM
+====================================================== search finished: 6/30/26 3:53 AM
 

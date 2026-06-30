@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 4:11 AM
+====================================================== search started: 6/30/26 3:54 AM
 Testing ExSymExe21
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
@@ -68,16 +68,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 753 msec
+Veritesting Dyn Time = 699 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 5
-Total Solver Time = 338 msec
+Total Solver Time = 304 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 46 msec
+Total Solver Clean up Time = 38 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -107,7 +107,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-753,0,753,0,5,338,8,46,0,2,0,0,0,0,2,0,2,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
+699,0,699,0,5,304,8,38,0,2,0,0,0,0,2,0,2,0,3,0,0,0,0,3,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:5..."
@@ -122,5 +122,5 @@ instructions:       6127
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/29/26 4:11 AM
+====================================================== search finished: 6/30/26 3:54 AM
 

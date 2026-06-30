@@ -142,16 +142,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 49742 msec
+Veritesting Dyn Time = 47460 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 20958
-Total Solver Time = 47328 msec
-Total Solver Parse Time = 4572 msec
+Total Solver Time = 45330 msec
+Total Solver Parse Time = 4039 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 3985 msec
+Total Solver Clean up Time = 3526 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -181,19 +181,19 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-49742,0,49742,0,20958,47328,4572,3985,0,5,0,0,0,0,5,0,5,0,18623,0,0,0,0,18623,0,0,-1,-1,0.0,0,0,0
+47460,0,47460,0,20958,45330,4039,3526,0,5,0,0,0,0,5,0,5,0,18623,0,0,0,0,18623,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:49
+elapsed time:       00:00:47
 states:             new=8145,visited=0,backtracked=8145,end=201
 search:             maxDepth=13,constraints=4052
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4072
 heap:               new=1130,released=6275,maxLive=483,gcCycles=8145
 instructions:       158041
-max memory:         420MB
+max memory:         421MB
 loaded code:        classes=89,methods=1843
 
-====================================================== search finished: 6/29/26 4:25 AM
+====================================================== search finished: 6/30/26 4:08 AM

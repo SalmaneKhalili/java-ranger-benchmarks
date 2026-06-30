@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 6:15 AM
+====================================================== search started: 6/30/26 5:59 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -85,14 +85,14 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 398 msec
+Veritesting Dyn Time = 449 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 9
-Total Solver Time = 37 msec
-Total Solver Parse Time = 6 msec
+Total Solver Time = 44 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
 PCSatSolverCount = 0
@@ -124,7 +124,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-398,0,398,0,9,37,6,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
+449,0,449,0,9,44,9,0,0,2,0,0,0,0,2,0,2,0,6,0,0,0,0,6,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.checkEquality(Ma..."
@@ -139,5 +139,5 @@ instructions:       9278
 max memory:         240MB
 loaded code:        classes=96,methods=1941
 
-====================================================== search finished: 6/29/26 6:15 AM
+====================================================== search finished: 6/30/26 5:59 AM
 

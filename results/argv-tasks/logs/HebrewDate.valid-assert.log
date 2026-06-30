@@ -3,6 +3,14 @@
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
 
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
+^_^ running jitAnalysis ^_^
+!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
+classPath null
+
 
 ====================================================== search constraint
 depth limit reached: 13
@@ -145,14 +153,6 @@ depth limit reached: 13
 
 ====================================================== snapshot 
 no live threads
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null

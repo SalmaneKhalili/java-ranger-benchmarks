@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 4:10 AM
+====================================================== search started: 6/30/26 3:54 AM
 
 java.lang.RuntimeException: ERROR: symbolic method not handled: capacity
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleSymbolicStrings(SymbolicStringHandler.java:384)

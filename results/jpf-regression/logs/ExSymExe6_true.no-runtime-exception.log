@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 4:12 AM
+====================================================== search started: 6/30/26 3:55 AM
 Testing ExSymExe6
 branch FOO1
 branch BOO1
@@ -34,7 +34,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 230 msec
+Veritesting Dyn Time = 227 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -73,7 +73,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-230,0,230,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+227,0,227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
@@ -88,5 +88,5 @@ instructions:       6030
 max memory:         240MB
 loaded code:        classes=81,methods=1621
 
-====================================================== search finished: 6/29/26 4:12 AM
+====================================================== search finished: 6/30/26 3:55 AM
 

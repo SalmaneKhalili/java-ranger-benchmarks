@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 4:24 AM
+====================================================== search started: 6/30/26 4:08 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -88,13 +88,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 422 msec
+Veritesting Dyn Time = 406 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 7
-Total Solver Time = 40 msec
+Total Solver Time = 41 msec
 Total Solver Parse Time = 8 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 0 msec
@@ -127,7 +127,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-422,0,422,0,7,40,8,0,0,3,0,0,0,0,3,0,3,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
+406,0,406,0,7,41,8,0,0,3,0,0,0,0,3,0,3,0,9,0,0,0,0,9,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:1..."
@@ -142,5 +142,5 @@ instructions:       6079
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 6/29/26 4:24 AM
+====================================================== search finished: 6/30/26 4:08 AM
 

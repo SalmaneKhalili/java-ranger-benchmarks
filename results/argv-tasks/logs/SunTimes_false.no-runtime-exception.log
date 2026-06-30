@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/29/26 6:23 AM
+====================================================== search started: 6/30/26 6:07 AM
 the depth of violation is6
 
 ====================================================== error 1
@@ -61,16 +61,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 21489 msec
+Veritesting Dyn Time = 22464 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 51
-Total Solver Time = 19777 msec
-Total Solver Parse Time = 32 msec
+Total Solver Time = 20683 msec
+Total Solver Parse Time = 33 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 705 msec
+Total Solver Clean up Time = 741 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -100,14 +100,14 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-21489,0,21489,0,51,19777,32,705,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+22464,0,22464,0,51,20683,33,741,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
 error #2: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.getSunTrueLongit..."
 
 ====================================================== statistics
-elapsed time:       00:00:21
+elapsed time:       00:00:22
 states:             new=16,visited=0,backtracked=16,end=8
 search:             maxDepth=6,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=6
@@ -116,5 +116,5 @@ instructions:       6300
 max memory:         240MB
 loaded code:        classes=89,methods=1872
 
-====================================================== search finished: 6/29/26 6:24 AM
+====================================================== search finished: 6/30/26 6:08 AM
 
