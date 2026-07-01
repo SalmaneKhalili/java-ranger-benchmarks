@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 4:30 AM
+====================================================== search started: 7/1/26 4:43 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -86,7 +86,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 876 msec
+Veritesting Dyn Time = 772 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -125,7 +125,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-876,0,876,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
+772,0,772,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
@@ -137,8 +137,8 @@ search:             maxDepth=6,constraints=0
 choice generators:  thread=5 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=4), data=1
 heap:               new=15575,released=15036,maxLive=9549,gcCycles=6
 instructions:       219560
-max memory:         240MB
+max memory:         303MB
 loaded code:        classes=112,methods=2132
 
-====================================================== search finished: 6/30/26 4:30 AM
+====================================================== search finished: 7/1/26 4:43 AM
 

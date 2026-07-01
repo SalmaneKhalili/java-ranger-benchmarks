@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 4:03 AM
+====================================================== search started: 7/1/26 4:16 AM
 -------- In main!
 the depth of violation is5
 
@@ -49,16 +49,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 9483 msec
+Veritesting Dyn Time = 7560 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 7
-Total Solver Time = 6900 msec
-Total Solver Parse Time = 11 msec
+Total Solver Time = 5511 msec
+Total Solver Parse Time = 9 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 56 msec
+Total Solver Clean up Time = 44 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -88,13 +88,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-9483,0,9483,0,7,6900,11,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+7560,0,7560,0,7,5511,9,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.bar(Main.java:32..."
 
 ====================================================== statistics
-elapsed time:       00:00:09
+elapsed time:       00:00:07
 states:             new=5,visited=0,backtracked=0,end=0
 search:             maxDepth=5,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=4
@@ -103,5 +103,5 @@ instructions:       6089
 max memory:         240MB
 loaded code:        classes=89,methods=1873
 
-====================================================== search finished: 6/30/26 4:03 AM
+====================================================== search finished: 7/1/26 4:16 AM
 

@@ -187,7 +187,7 @@ error #362: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #363: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Actions.Specification..."
 
 ====================================================== statistics
-elapsed time:       00:00:08
+elapsed time:       00:00:09
 states:             new=1805,visited=0,backtracked=1805,end=540
 search:             maxDepth=13,constraints=256
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=902
@@ -196,4 +196,4 @@ instructions:       444302
 max memory:         240MB
 loaded code:        classes=94,methods=1914
 
-====================================================== search finished: 6/30/26 3:56 AM
+====================================================== search finished: 7/1/26 4:10 AM

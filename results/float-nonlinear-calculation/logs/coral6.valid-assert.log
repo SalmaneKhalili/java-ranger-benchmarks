@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 4:40 AM
+====================================================== search started: 7/1/26 4:52 AM
 
 java.lang.RuntimeException: ## Error: Math.cos not supported
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemGeneral.cos(ProblemGeneral.java:135)

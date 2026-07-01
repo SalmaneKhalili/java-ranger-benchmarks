@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 3:54 AM
+====================================================== search started: 7/1/26 4:08 AM
 
 java.lang.ClassCastException: gov.nasa.jpf.symbc.string.SymbolicStringBuilder cannot be cast to gov.nasa.jpf.symbc.string.StringExpression
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleCharAt(SymbolicStringHandler.java:726)

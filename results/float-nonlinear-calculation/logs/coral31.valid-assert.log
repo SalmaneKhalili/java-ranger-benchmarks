@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 4:38 AM
+====================================================== search started: 7/1/26 4:50 AM
 the depth of violation is4
 
 ====================================================== error 1
@@ -46,13 +46,13 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 9864 msec
+Veritesting Dyn Time = 10006 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 13
-Total Solver Time = 8286 msec
+Total Solver Time = 8389 msec
 Total Solver Parse Time = 15 msec
 Region Summary Parse Time = 0 msec
 Total Solver Clean up Time = 125 msec
@@ -85,13 +85,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-9864,0,9864,0,13,8286,15,125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+10006,0,10006,0,13,8389,15,125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at JPFBenchmark.benchmar..."
 
 ====================================================== statistics
-elapsed time:       00:00:09
+elapsed time:       00:00:10
 states:             new=13,visited=0,backtracked=9,end=3
 search:             maxDepth=4,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=6
@@ -100,5 +100,5 @@ instructions:       6110
 max memory:         240MB
 loaded code:        classes=90,methods=1947
 
-====================================================== search finished: 6/30/26 4:38 AM
+====================================================== search finished: 7/1/26 4:50 AM
 

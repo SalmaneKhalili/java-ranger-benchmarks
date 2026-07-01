@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 3:53 AM
+====================================================== search started: 7/1/26 4:07 AM
 
 java.lang.RuntimeException: ERROR: Type not handled in Symbolic Type ValueOf: java.lang.Character
 	at gov.nasa.jpf.symbc.bytecode.SymbolicStringHandler.handleValueOf(SymbolicStringHandler.java:1777)

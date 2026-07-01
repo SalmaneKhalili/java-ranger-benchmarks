@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 5:27 AM
+====================================================== search started: 7/1/26 5:41 AM
 
 ====================================================== VeritestingListener report:
 Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
@@ -31,16 +31,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 244081 msec
+Veritesting Dyn Time = 219093 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 1599
-Total Solver Time = 243567 msec
-Total Solver Parse Time = 625 msec
+Total Solver Time = 218615 msec
+Total Solver Parse Time = 560 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 20840 msec
+Total Solver Clean up Time = 19753 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -70,13 +70,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-244081,0,244081,0,1599,243567,625,20840,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+219093,0,219093,0,1599,218615,560,19753,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:04:04
+elapsed time:       00:03:39
 states:             new=418,visited=0,backtracked=418,end=216
 search:             maxDepth=10,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=139
@@ -85,5 +85,5 @@ instructions:       20935
 max memory:         240MB
 loaded code:        classes=86,methods=1931
 
-====================================================== search finished: 6/30/26 5:32 AM
+====================================================== search finished: 7/1/26 5:44 AM
 

@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 6/30/26 4:39 AM
+====================================================== search started: 7/1/26 4:51 AM
 
 java.lang.ClassCastException: com.microsoft.z3.FPExpr cannot be cast to com.microsoft.z3.ArithExpr
 	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3BitVector.power(ProblemZ3BitVector.java:1439)
