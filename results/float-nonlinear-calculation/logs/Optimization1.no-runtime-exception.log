@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 7/1/26 4:13 AM
+====================================================== search started: 7/2/26 3:53 AM
 the depth of violation is2
 
 ====================================================== error 1
@@ -46,16 +46,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 212369 msec
+Veritesting Dyn Time = 185661 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 4
-Total Solver Time = 50828 msec
+Total Solver Time = 44638 msec
 Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 113 msec
+Total Solver Clean up Time = 110 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -85,13 +85,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-212369,0,212369,0,4,50828,10,113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+185661,0,185661,0,4,44638,10,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Optimization.beale(Op..."
 
 ====================================================== statistics
-elapsed time:       00:03:32
+elapsed time:       00:03:05
 states:             new=4,visited=0,backtracked=4,end=2
 search:             maxDepth=2,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
@@ -100,5 +100,5 @@ instructions:       6107
 max memory:         240MB
 loaded code:        classes=90,methods=1879
 
-====================================================== search finished: 7/1/26 4:16 AM
+====================================================== search finished: 7/2/26 3:56 AM
 

@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 7/1/26 5:19 AM
+====================================================== search started: 7/2/26 4:58 AM
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null
@@ -49,10 +49,6 @@ classPath null
 classPath null
 
 Upper bound of Hotspot generator smaller than the lower bound. Swapping the values.
-^_^ running jitAnalysis ^_^
-!!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
-classPath null
-
 ^_^ running jitAnalysis ^_^
 !!!!!!!! Aborting Veritesting !!!!!!!!!!!! 
 classPath null

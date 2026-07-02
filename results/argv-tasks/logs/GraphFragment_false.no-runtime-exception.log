@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 7/1/26 5:04 AM
+====================================================== search started: 7/2/26 4:42 AM
 the depth of violation is3
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Calling Z3str3
@@ -106,29 +106,6 @@ java.lang.AssertionError
 
 
 ====================================================== snapshot #4
-thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
-  call stack:
-	at Main.updateAngles(Main.java:41)
-	at Main.main(Main.java:49)
-
-the depth of violation is3
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-Calling Z3str3
-
-Returned solutions: 
-*************************************
-Satisfiable: true
-*************************************
-
-
-====================================================== error 5
-gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
-java.lang.AssertionError
-	at Main.updateAngles(Main.java:41)
-	at Main.main(Main.java:49)
-
-
-====================================================== snapshot #5
 thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
   call stack:
 	at Main.updateAngles(Main.java:41)

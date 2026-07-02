@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 7/1/26 6:20 AM
+====================================================== search started: 7/2/26 6:01 AM
 
 ====================================================== VeritestingListener report:
 Encountered Veritesting Regions in veriRegions (i.e., VeriTestingMain.veriRegions size) = 0
@@ -31,16 +31,16 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 8054 msec
+Veritesting Dyn Time = 7867 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
 /************************ Printing Solver Statistics *****************
 Total Solver Queries Count = 12
-Total Solver Time = 7775 msec
-Total Solver Parse Time = 11 msec
+Total Solver Time = 7586 msec
+Total Solver Parse Time = 10 msec
 Region Summary Parse Time = 0 msec
-Total Solver Clean up Time = 50 msec
+Total Solver Clean up Time = 48 msec
 PCSatSolverCount = 0
 PCSatSolverTime = 0 msec
 Constant Propagation Time for PC sat. checks = 0
@@ -70,13 +70,13 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-8054,0,8054,0,12,7775,11,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+7867,0,7867,0,12,7586,10,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:08
+elapsed time:       00:00:07
 states:             new=10,visited=0,backtracked=10,end=5
 search:             maxDepth=4,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=5
@@ -85,5 +85,5 @@ instructions:       6303
 max memory:         240MB
 loaded code:        classes=85,methods=1831
 
-====================================================== search finished: 7/1/26 6:20 AM
+====================================================== search finished: 7/2/26 6:01 AM
 

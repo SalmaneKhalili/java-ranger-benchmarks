@@ -18,7 +18,7 @@ JavaPathfinder core system v8.0 (rev f7f74d0453e19966b90222b69a016ca508597063) -
 ====================================================== system under test
 Main.main()
 
-====================================================== search started: 7/1/26 5:36 AM
+====================================================== search started: 7/2/26 5:15 AM
 
 java.lang.RuntimeException: ## Error: SYMBOLIC DREM not supported
 	at gov.nasa.jpf.symbc.bytecode.DREM.execute(DREM.java:70)

@@ -1,8 +1,8 @@
      Total: 32
-   Correct: 19
- Incorrect: 1
+   Correct: 18
+ Incorrect: 2
    Unknown: 12
 Compile_err: 0
    Timeout: 0
 
-Score: 19 / 32
+Score: 18 / 32

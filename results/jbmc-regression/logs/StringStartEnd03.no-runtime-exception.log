@@ -131,7 +131,7 @@ Unknown phases exception count = 0
 
 /************************ Printing Time Decomposition Statistics *****************
 static analysis time = 0 msec
-Veritesting Dyn Time = 1068 msec
+Veritesting Dyn Time = 823 msec
 Veritesting fix-point Time = 0 msec
 GoTo rewrite instances = 0
 
@@ -170,7 +170,7 @@ Printing keys of regions that were instantiated at least once
 Finished printing keys of regions that were instantiated at least once
 
 Metrics Vector:
-1068,0,1068,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
+823,0,823,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,0.0,0,0,0
 
 ====================================================== results
 error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
@@ -187,7 +187,7 @@ error #11: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErro
 error #12: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.main(Main.java:2..."
 
 ====================================================== statistics
-elapsed time:       00:00:01
+elapsed time:       00:00:00
 states:             new=31,visited=0,backtracked=31,end=4
 search:             maxDepth=5,constraints=0
 choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=15
@@ -196,4 +196,4 @@ instructions:       6870
 max memory:         240MB
 loaded code:        classes=89,methods=1871
 
-====================================================== search finished: 7/1/26 4:15 AM
+====================================================== search finished: 7/2/26 3:55 AM

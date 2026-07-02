@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jayhorn-recursive — Java Ranger Benchmarks</title>
+<style>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #333; }
+.header { background: #2c3e50; color: white; padding: 24px 40px; }
+.header h1 { margin: 0; font-size: 1.6em; }
+.header p { margin: 4px 0 0; opacity: 0.8; font-size: 0.85em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.nav { margin: 16px 0; }
+.nav a { color: #3498db; text-decoration: none; margin-right: 20px; font-size: 0.9em; }
+.nav a:hover { text-decoration: underline; }
+h2 { font-size: 1.15em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin: 24px 0 12px; }
+pre.config { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+.summary-cards { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; }
+.card { background: white; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin: 0 0 6px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.card .number { font-size: 1.8em; font-weight: bold; }
+.card .number.correct { color: #2ecc71; }
+.card .number.incorrect { color: #e74c3c; }
+.card .number.unknown { color: #f39c12; }
+.card .number.total { color: #3498db; }
+.card .pct { font-size: 0.55em; font-weight: normal; color: #999; margin-left: 4px; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; font-size: 0.9em; }
+th { background: #3498db; color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 8px 12px; border-bottom: 1px solid #eef; }
+tr:hover { background: #f8f9ff; }
+.status-correct { color: #2ecc71; font-weight: bold; }
+.status-incorrect { color: #e74c3c; font-weight: bold; }
+.status-unknown { color: #f39c12; font-weight: bold; }
+.error-text { font-size: 0.85em; color: #666; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle; }
+.footer { text-align: center; padding: 30px; color: #999; font-size: 0.85em; }
+.index-table th:nth-child(2), .index-table td:nth-child(2),
+.index-table th:nth-child(3), .index-table td:nth-child(3),
+.index-table th:nth-child(4), .index-table td:nth-child(4),
+.index-table th:nth-child(5), .index-table td:nth-child(5),
+.index-table th:nth-child(6), .index-table td:nth-child(6) { text-align: center; }
+.index-table a { color: #3498db; text-decoration: none; font-weight: 600; }
+.index-table a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>jayhorn-recursive</h1>
+  <p>JR: experimentalnan@f7f74d0 | Date: 2026-07-02 06:45:16 </p>
+</div>
+<div class="container">
+<div class="nav">
+  <a href="../index.html?v=b769bf802609eddc4c8b626f2fc03f24d62acbd9">&larr; Back to overview</a>
+  <a href="../failure-analysis.html?v=b769bf802609eddc4c8b626f2fc03f24d62acbd9">Failure Analysis</a>
+</div>
+
+<h2>Config</h2>
+<pre class="config">+target=Main +symbolic.dp=z3bitvector +symbolic.min_int=-2147483648 +symbolic.max_int=2147483647 +symbolic.min_double=-10000.0 +symbolic.max_double=10000.0 +symbolic.min_float=-10000.0 +symbolic.max_float=10000.0 +symbolic.bvlength=64 +search.depth_limit=13,21,156 +symbolic.strings=true +symbolic.string_dp=z3str3 +symbolic.string_dp_timeout_ms=3000 +symbolic.lazy=on +symbolic.jrarrays=true +veritestingMode=5 +recursiveDepth=200 +singlePathOptimization=true +symbolic.fp=true +listener=.symbc.VeritestingListener</pre>
+
+<h2>Summary</h2>
+<div class="summary-cards">
+  <div class="card">
+    <h3>Total</h3>
+    <div class="number total">46</div>
+  </div>
+  <div class="card">
+    <h3>Correct</h3>
+    <div class="number correct">34<span class="pct">(73.9%)</span></div>
+  </div>
+  <div class="card">
+    <h3>Incorrect</h3>
+    <div class="number incorrect">0</div>
+  </div>
+  <div class="card">
+    <h3>Unknown</h3>
+    <div class="number unknown">12</div>
+  </div>
+</div>
+
+<h2>Results</h2>
+<table>
+  <tr><th>Benchmark</th><th>Expected</th><th>Status</th><th>Time (s)</th><th>Error</th></tr>
+  <tr><td>Ackermann01.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.702854</td><td></td></tr>
+<tr><td>Ackermann01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.058157</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>Addition.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>284.420747</td><td></td></tr>
+<tr><td>Addition.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>291.488959</td><td></td></tr>
+<tr><td>InfiniteLoop.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.668030</td><td></td></tr>
+<tr><td>InfiniteLoop.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.116373</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>SatAckermann01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.046310</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAckermann01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.048191</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAckermann02.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.048414</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAckermann02.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.040129</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAckermann03.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.061163</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAckermann03.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.060766</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatAddition01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.012080</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatAddition01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.017701</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatEvenOdd01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>18.740067</td><td></td></tr>
+<tr><td>SatEvenOdd01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>14.322365</td><td></td></tr>
+<tr><td>SatFibonacci01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.031709</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatFibonacci01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.034160</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatFibonacci02.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>0.521732</td><td></td></tr>
+<tr><td>SatFibonacci02.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>0.526218</td><td></td></tr>
+<tr><td>SatFibonacci03.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.032487</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatFibonacci03.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.031191</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatGcd.valid-assert</td><td>true</td><td class="status-unknown">unknown</td><td>300.044666</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>SatGcd.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.033099</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>SatHanoi01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.037689</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatHanoi01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.037674</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatMccarthy91.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.007727</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatMccarthy91.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.006167</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+<tr><td>SatMultCommutative01.valid-assert</td><td>true</td><td class="status-correct">correct</td><td>300.113352</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatMultCommutative01.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.016221</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>SatPrimes01.valid-assert</td><td>true</td><td class="status-unknown">unknown</td><td>300.014183</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>SatPrimes01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.014718</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>UnsatAckermann01.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.668382</td><td></td></tr>
+<tr><td>UnsatAckermann01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.073334</td><td><span class="error-text" title="timeout after 300s at depth=13">timeout</span></td></tr>
+<tr><td>UnsatAddition01.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.677468</td><td></td></tr>
+<tr><td>UnsatAddition01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.017472</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>UnsatAddition02.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>28.652282</td><td></td></tr>
+<tr><td>UnsatAddition02.no-runtime-exception</td><td>true</td><td class="status-correct">correct</td><td>300.021158</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>UnsatEvenOdd01.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.671225</td><td></td></tr>
+<tr><td>UnsatEvenOdd01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>20.273944</td><td><span class="error-text" title="gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:43) |  at Main.main(Main.java:43) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty">gov.nasa.jpf.vm.NoUncaughtExceptionsProperty | java.lang.AssertionError |  at Main.main(Main.java:43) |  at Main.main(Main.java:43) | gov.nasa.jpf.vm.NoUncaughtExceptionsProperty</span></td></tr>
+<tr><td>UnsatFibonacci01.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.742196</td><td></td></tr>
+<tr><td>UnsatFibonacci01.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.033960</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>UnsatFibonacci02.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.966018</td><td></td></tr>
+<tr><td>UnsatFibonacci02.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.030901</td><td><span class="error-text" title="timeout after 300s at depth=156">timeout</span></td></tr>
+<tr><td>UnsatMccarthy91.valid-assert</td><td>false</td><td class="status-correct">correct</td><td>0.666234</td><td></td></tr>
+<tr><td>UnsatMccarthy91.no-runtime-exception</td><td>true</td><td class="status-unknown">unknown</td><td>300.009043</td><td><span class="error-text" title="timeout after 300s at depth=21">timeout</span></td></tr>
+
+</table>
+</div>
+<div class="footer">
+  Generated by java-ranger-benchmarks CI
+</div>
+</body>
+</html>

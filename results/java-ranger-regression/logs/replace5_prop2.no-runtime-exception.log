@@ -187,13 +187,13 @@ error #396: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionErr
 error #397: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.checkEquality(Ma..."
 
 ====================================================== statistics
-elapsed time:       00:00:09
+elapsed time:       00:00:08
 states:             new=1184,visited=0,backtracked=1184,end=2
 search:             maxDepth=13,constraints=325
 choice generators:  thread=2 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=1), data=591
 heap:               new=16619,released=146,maxLive=478,gcCycles=787
 instructions:       2265920
-max memory:         333MB
+max memory:         320MB
 loaded code:        classes=91,methods=1897
 
-====================================================== search finished: 7/1/26 6:18 AM
+====================================================== search finished: 7/2/26 5:59 AM
